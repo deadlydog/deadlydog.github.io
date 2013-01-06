@@ -1,0 +1,173 @@
+/* CSS for DansKingom.com */
+
+/* How links should look */
+a, a:link
+{
+	text-decoration:none;
+	color:#3044D1;
+	font-weight:bold;
+}
+
+/* How visited links should look */
+a:visited
+{
+	color:#CC0000;
+	font-weight:normal
+}
+
+/* How links should look when hovered over */
+a:hover
+{	
+	text-decoration:underline;
+}
+
+body
+{
+	font-family::sans-serif;
+	background:#808080 url(../Images/Theme/Background.gif) repeat-x;
+	margin:auto;
+	padding:0.25em;
+	color:#333333;
+	width:980px;
+}
+
+/* Page Title */
+h1
+{
+	font-size:24pt;
+	font-weight:600;
+	color:#444444;
+	display:block;
+	padding-top:0em;
+	padding-bottom:0.2em;
+	margin:0em;
+}
+
+/* Section */
+h2
+{
+	font-size:20pt;
+	font-weight:600;
+	color:#666666;
+	display:block;
+	padding-top:0.3em;
+	padding-bottom:0em;
+	margin:0em;
+}
+
+/* Sub Section */
+h3
+{
+	font-size:16pt;
+	font-weight:600;
+	color:#666666;
+	display:block;
+	padding-top:0.75em;
+	padding-bottom:0em;
+	margin:0em;
+}
+
+#Title
+{	
+	margin:0.25em 0em -1.9em 0em;
+	color:#0000CC;
+	font-family:Geneva, Arial, Helvetica, sans-serif;
+	text-decoration:none;
+}
+
+#Title img
+{
+	border:1px solid #333333;
+}
+
+#Title a, #Title a:visited, #Title a:hover
+{
+	color:#444444;
+	text-decoration:none;
+}
+
+#Menu
+{
+	margin:0em;
+	padding:0em;
+}
+
+#Menu ul
+{
+	margin:0em;
+	padding:0.25em;
+}
+
+#Menu li
+{
+	display:inline;
+	list-style-image:none;
+	list-style-position:outside;
+	list-style-type:none;			/* Don't show bullets */
+	margin:0em;
+	padding:0em;
+}
+
+#Menu a
+{
+	background-color:#999999;
+	border:1px solid #333333;
+	margin-left:0.25em;
+	padding:0.25em;
+	text-decoration:none;
+	color:#FFFFFF;
+	font-size:1.1em;
+	font-weight:normal;
+}
+
+#Menu a:hover
+{
+	background-color:#666666;
+}
+
+#Menu a.SelectedTab
+{
+	background-color:#FFFFFF;
+	color:#333333;
+	border-bottom:1px solid #FFFFFF;
+}
+
+#ContentWrapper
+{
+	margin:0em;
+	padding:0em;
+}
+
+#Content
+{
+	float:left;
+	width:842px;
+	margin:0em;
+	padding:0.5em;
+	border:1px solid #333333;
+	background-color:#FFFFFF;
+	min-height:582px;
+}
+
+#Content table
+{
+	border-width:1px; border-style:solid; border-color:#FFFFFF;
+}
+
+#GoogleAds
+{
+	float:right;
+}
+
+#Footer
+{
+	margin:0.5em;
+	padding-top:0.25em;
+	text-align:center;
+	font-size:0.8em;
+}
+
+.Clear
+{
+	clear:both;
+}
