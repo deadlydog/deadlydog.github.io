@@ -28,8 +28,8 @@ and arrow game where you must hit a target with an arrow where the pitch of your
 how much power the arrow is fired with. This game was programmed in C# and simply uses GDI+ for the graphics, so DirectX does not need to be installed to play it. 
 It uses PD (Pure Data) to get the player's voice input from a microphone and to detect their pitch, and then transfers this information to the C# code using 
 OSC (Open Sound Control).</p>
-
-<p>Screenshot and downloads for Daniel Schroeder's Pitch Games to be posted soon</p>
+<center><img src="Images/Pitch Games.jpg" /></center>
+<p>Download the <a href="Games/Pitch Games Source Code.zip">Source Code</a>.</p>
 
 <a name="OceanExplorer"></a>
 <h2>Ocean Explorer (2007)</h2>
@@ -39,7 +39,7 @@ There are 5 levels, but I still have to add music and sounds to the game.  It is
 executable if you like and check it out.  <b>To play the game, simply go into the "bin\release" folder and run "Assignment.exe"</b>.  There are also instructions for how to run 
 the game from the source code in Visual Studio 2005 in the "How To Run Game.txt" file.</p>
 <center><img src="Images/Ocean Explorer.jpg" /></center>
-<p>Download the <a href="Games/Ocean Explorer.zip">Executable</a> or the <a href="Games/Ocean Explorer Source Code.zip">Source Code</a></p>
+<p>Download the <a href="Games/Ocean Explorer.zip">Executable</a> or the <a href="Games/Ocean Explorer Source Code.zip">Source Code</a>.</p>
 
 <a name="Blasteroid"></a>
 <h2>Blasteroid (2005)</h2>
@@ -50,7 +50,7 @@ Download it and check it out. If you don't want to 'install' the game, you can j
 the fonts may not display correctly.  Most of the graphics and sound effects were made by me, but the music and some of the graphics are from 3rd party sources. 
 You will need at least DirectX 8.1 to play this one. You can also download the C++ source code to check out my code if you want.</p>
 <center><img src="Images/Blasteroid.jpg" /></center>
-<p>Download the <a href="Games/Blasteroid Installer.exe">Installer</a>, the <a href="Games/Blasteroid.zip">Executable</a>, or the <a href="Games/Blasteroid Source Code.zip">Source Code</a></p>
+<p>Download the <a href="Games/Blasteroid Installer.exe">Installer</a>, the <a href="Games/Blasteroid.zip">Executable</a>, or the <a href="Games/Blasteroid Source Code.zip">Source Code</a>.</p>
 
 <a name="Connex"></a>
 <h2>Connex (2003)</h2>
@@ -61,7 +61,7 @@ and color so it looks sort of lame, but hey it works. If you want to see the cod
 not code the Game Engines myself though, I used the ones from Andre LaMothe's "Tricks of the Windows Game Programming Gurus" book. 
 Also, all of the sounds and music for this game were from 3rd party sources as well.</p>
 <center><img src="Images/Connex.jpg" /></center>
-<p>Download the <a href="Games/Connex.zip">Executable</a> or the <a href="Games/Connex Source Code.zip">Source Code</a></p>
+<p>Download the <a href="Games/Connex.zip">Executable</a> or the <a href="Games/Connex Source Code.zip">Source Code</a>.</p>
 
 </div>
 
