@@ -39,7 +39,7 @@ will be displayed.</p>
 
 <p>For example, I have my own webserver so all I had to do was put my Photo Gallery file in my "My Pictures" 
 folder and point my webserver to the Photo Gallery file, and presto. My entire "My Pictures" collection is 
-available online. If you do this, you may want to make sure there aren't any "incrmininating" pictures 
+available online. If you do this, you may want to make sure there aren't any "incriminating" pictures 
 in there, since the Photo Gallery will display all pictures within that directory and all sub-directories :-)</p>
 
 <h3>Features</h3>
