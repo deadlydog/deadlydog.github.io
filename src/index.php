@@ -19,11 +19,9 @@
     </a>
 </span>
 
-<p>I live in Regina, Saskatchewan, Canada with my wonderful wife Vanessa Schroeder, our son Noah, our dog Molly, and our bunny Liddle. 
-I completed my Masters degree in Computer Science at the University of Regina in 2009, and am now the Team Lead for the DevOps team at iQmetrix. 
+<p>I live in Regina, Saskatchewan, Canada with my wonderful wife Vanessa Schroeder, our son Noah, our 2 dogs. 
+I completed my Masters degree in Computer Science at the University of Regina in 2009, and now work at iQmetrix. 
 I enjoy creating video games and websites, and have a passion for programming.</p>
-
-<p>Hello Azure!!!!</p>
 
 <p>If you want to get in contact with me you can <a href="mailto:deadlydog@hotmail.com?subject=DansKingdom.com">email me</a></p>
 
