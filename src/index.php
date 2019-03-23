@@ -23,6 +23,8 @@
 I completed my Masters degree in Computer Science at the University of Regina in 2009, and am now the Team Lead for the DevOps team at iQmetrix. 
 I enjoy creating video games and websites, and have a passion for programming.</p>
 
+<p>Hello Azure!!!!</p>
+
 <p>If you want to get in contact with me you can <a href="mailto:deadlydog@hotmail.com?subject=DansKingdom.com">email me</a></p>
 
 <p>You can also <a href="http://blog.danskingdom.com">check out my blog</a> or <a href="http://www.twitter.com/deadlydog">message me on twitter</a>.</p>
