@@ -22,7 +22,7 @@ url: https://deadlydog.github.io
 twitter_username: deadlydog
 github_username: deadlydog
 
-minimal_mistakes_skin: default
+minimal_mistakes_skin: default # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum" "sunrise"
 search: true
 
 # Build settings
