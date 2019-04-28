@@ -2,6 +2,8 @@
 
 This repository was initially cloned off of [Minimal Mistakes GitHub Pages Starter](https://github.com/mmistakes/mm-github-pages-starter), and then updated with my content and configuration.
 
+We currently use the [Minimal Mistakes theme](https://github.com/mmistakes/minimal-mistakes). View [the documentation](https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/).
+
 ## Running Jekyll locally
 
 ### Prerequisites
