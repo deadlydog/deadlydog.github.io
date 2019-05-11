@@ -3,7 +3,6 @@ id: 286
 title: Why I Chose WordPress Over Geeks With Blogs, And Moving From WordPress.com To A GoDaddy Hosted Solution
 date: 2013-05-17T17:56:25-06:00
 author: deadlydog
-layout: post
 guid: http://dans-blog.azurewebsites.net/?p=286
 permalink: /why-i-chose-wordpress-over-geeks-with-blogs-and-moving-from-wordpress-com-to-a-godaddy-hosted-solution/
 categories:

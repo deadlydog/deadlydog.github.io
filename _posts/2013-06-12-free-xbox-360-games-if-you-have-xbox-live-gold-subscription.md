@@ -3,7 +3,6 @@ id: 326
 title: Free Xbox 360 Games If You Have Xbox Live Gold Subscription
 date: 2013-06-12T11:03:18-06:00
 author: deadlydog
-layout: post
 guid: http://dans-blog.azurewebsites.net/?p=326
 permalink: /free-xbox-360-games-if-you-have-xbox-live-gold-subscription/
 categories:
@@ -36,7 +35,7 @@ An [Xbox Live Gold subscription](http://www.xbox.com/en-CA/Live?xr=shellnav) is 
 
 I remember reading somewhere that they would only be releasing the 2 free games a month until the [Xbox One](http://en.wikipedia.org/wiki/Xbox_One) comes out in November 2013, but I can’t find that source now, so I’m not sure if that’s true or not.
 
-If your dad is a gamer this tidbit could be your poor-man’s father’s day gift to him 😛 
+If your dad is a gamer this tidbit could be your poor-man’s father’s day gift to him 😛
 
 It has also been brought to my attention that [Sony has been offering something similar for PS+ subscribers for over a year now](http://us.playstation.com/psn/playstation-plus/), where they get free games each month for PS3, PSP, and PS Vita.&#160; The difference is that you need to be a PS+ subscriber in order to play the free games, where with the Xbox once you download the game it is yours regardless of if you discontinue your Xbox Live Gold subscription.
 

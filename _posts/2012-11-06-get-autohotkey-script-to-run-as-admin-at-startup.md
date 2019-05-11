@@ -3,7 +3,6 @@ id: 127
 title: Get AutoHotkey Script To Run As Admin At Startup
 date: 2012-11-06T14:16:00-06:00
 author: deadlydog
-layout: post
 guid: https://deadlydog.wordpress.com/?p=127
 permalink: /get-autohotkey-script-to-run-as-admin-at-startup/
 jabber_published:

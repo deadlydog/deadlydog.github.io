@@ -3,7 +3,6 @@ id: 556
 title: PowerShell Functions To Convert, Remove, and Delete IIS Web Applications
 date: 2013-10-23T14:56:22-06:00
 author: deadlydog
-layout: post
 guid: http://dans-blog.azurewebsites.net/?p=556
 permalink: /powershell-functions-to-convert-remove-and-delete-iis-web-applications/
 categories:
@@ -31,8 +30,8 @@ I recently refactored some of our PowerShell scripts that we use to publish and 
 I’ll blast you with the first file’s code and explain it below (ApplicationServiceUtilities.ps1).
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:0f688c6b-7e25-4296-ae09-fcc9ca2656b5" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal> 
-  
+  <pre style=white-space:normal>
+
   <pre class="brush: powershell; pad-line-numbers: true; title: ; notranslate" title="">
 # Turn on Strict Mode to help catch syntax-related errors.
 # 	This must come after a script's/function's param section.
@@ -47,12 +46,12 @@ $AddApplicationServiceInformationTypeScriptBlock = {
     # Create a class to hold an IIS Application Service's Information.
     Add-Type -TypeDefinition "
         using System;
-    
+
         public class ApplicationServiceInformation
         {
             // The name of the Website in IIS.
             public string Website { get; set;}
-        
+
             // The path to the Application, relative to the Website root.
             public string ApplicationPath { get; set; }
 
@@ -106,7 +105,7 @@ function ConvertTo-ApplicationServices
 
         # Import the WebAdministration module to make sure we have access to the required cmdlets and the IIS: drive.
         Import-Module WebAdministration 4&gt; $null	# Don't write the verbose output.
-	
+
 	    # Create all of the Web Applications, making sure to first try and remove them in case they already exist (in order to avoid a PS error).
 	    foreach ($appInfo in [PSCustomObject[]]$ApplicationServicesInfo)
         {
@@ -117,7 +116,7 @@ function ConvertTo-ApplicationServices
 
             # If this application should not be converted, continue onto the next one in the list.
             if (!$appInfo.ConvertToApplication) { Write-Verbose "Skipping publish of '$fullPath'"; continue }
-		
+
 		    Write-Verbose "Checking if we need to remove '$fullPath' before converting it..."
 		    if (Get-WebApplication -Site "$website" -Name "$applicationPath")
 		    {
@@ -171,7 +170,7 @@ function Remove-ApplicationServices
             $website = $appInfo.Website
             $applicationPath = $appInfo.ApplicationPath
 		    $fullPath = Join-Path $website $applicationPath
-		
+
 		    Write-Verbose "Checking if we need to remove '$fullPath'..."
 		    if (Get-WebApplication -Site "$website" -Name "$applicationPath")
 		    {
@@ -215,7 +214,7 @@ function Delete-ApplicationServices
         [switch] $OnlyDeleteIfNotConvertedToApplication,
         [switch] $DeleteEmptyParentDirectories
     )
-    
+
     $block = {
 	    param([ApplicationServiceInformation[]] $ApplicationServicesInfo)
         $VerbosePreference = $Using:VerbosePreference
@@ -231,7 +230,7 @@ function Delete-ApplicationServices
             $applicationPath = $appInfo.ApplicationPath
 		    $fullPath = Join-Path $website $applicationPath
             $iisSitesDirectory = "IIS:\Sites\"
-		
+
 		    Write-Verbose "Checking if we need to remove '$fullPath'..."
 		    if (Get-WebApplication -Site "$website" -Name "$applicationPath")
 		    {
@@ -241,7 +240,7 @@ function Delete-ApplicationServices
 			    Write-Verbose "Removing '$fullPath'..."
 			    Remove-WebApplication -Site "$website" -Name "$applicationPath"
 		    }
-            
+
             Write-Verbose "Deleting the directory '$fullPath'..."
             Remove-Item -Path "$iisSitesDirectory$fullPath" -Recurse -Force
 
@@ -279,9 +278,9 @@ There is one extra property on this class that I found I needed, but you may be 
 
 Below the class declaration are our functions to perform the actual work:
 
-  * ConvertTo-ApplicationServices: Converts the files to an application using the ConvertTo-WebApplication cmdlet. 
-  * Remove-ApplicationServices: Converts the application back to regular files using the Remove-WebApplication cmdlet. 
-  * Delete-ApplicationServices: First removes any applications, and then deletes the files from disk. 
+  * ConvertTo-ApplicationServices: Converts the files to an application using the ConvertTo-WebApplication cmdlet.
+  * Remove-ApplicationServices: Converts the application back to regular files using the Remove-WebApplication cmdlet.
+  * Delete-ApplicationServices: First removes any applications, and then deletes the files from disk.
 
 The Delete-ApplicationServices function includes an couple additional switches.&#160; The **$OnlyDeleteIfNotConvertedToApplication** switch can be used as a bit of a safety net to ensure that you only delete files for application services that are not currently running as a web application (i.e. the web application has already been removed).&#160; If this switch is omitted, the web application will be removed and the files deleted.&#160; The **$DeleteEmptyParentDirectories** switch that may be used to remove parent directories once the application files have been deleted. This is useful for us because we version our services, so they are all placed in a directory corresponding to a version number. e.g. \Website\[VersionNumber]\App1 and \Website\[VersionNumber]\App2. This switch allows the [VersionNumber] directory to be deleted automatically once the App1 and App2 directories have been deleted.
 
@@ -290,8 +289,8 @@ Note that I don’t have a function to copy files to the server (i.e. publish th
 My 2nd file (ApplicationServiceLibrary.ps1) is optional and is really just a collection of functions used to return the ApplicationServiceInformation instances that I require as an array, depending on which projects I want to convert/remove/delete.
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:02e2763d-e5bb-4db8-80a9-68dafada546e" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal> 
-  
+  <pre style=white-space:normal>
+
   <pre class="brush: powershell; title: ; notranslate" title="">
 # Get the directory that this script is in.
 $THIS_SCRIPTS_DIRECTORY = Split-Path $script:MyInvocation.MyCommand.Path
@@ -312,7 +311,7 @@ function Get-AllApplicationServiceInformation([string] $Release)
     $appServiceInfo += Get-PublicApiApplicationServiceInformation -Release $Release
     $appServiceInfo += Get-IntraApplicationServiceInformation -Release $Release
 
-    return $appServiceInfo    
+    return $appServiceInfo
 }
 
 function Get-RqApplicationServiceInformation([string] $Release)
@@ -349,8 +348,8 @@ One other thing you may notice is that my Get-*ApplicationServiceInformation fun
 Lastly, to make things nice and easy, I create ConvertTo, Remove, and Delete scripts for each of our projects, as well as a scripts to do all of the projects at once.&#160; Here’s an example of what one of these scripts would look like:
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:670e59ec-5546-48f0-bbb6-f0b678f78e40" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal> 
-  
+  <pre style=white-space:normal>
+
   <pre class="brush: powershell; title: ; notranslate" title="">
 param
 (
@@ -380,8 +379,8 @@ So this sample script creates all of the web applications for our Rq product and
 If I need to remove the services for a bunch of versions, here is an example of how I can just create a quick script that calls my Remove Services script for each version that needs to be removed:
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:1fefa83a-f405-447b-9621-6aa81b09d20f" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal> 
-  
+  <pre style=white-space:normal>
+
   <pre class="brush: powershell; title: ; notranslate" title="">
 # Get the directory that this script is in.
 $thisScriptsDirectory = Split-Path $script:MyInvocation.MyCommand.Path

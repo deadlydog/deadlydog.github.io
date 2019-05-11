@@ -3,7 +3,6 @@ id: 333
 title: 'PowerShell ISE: Multi-line Comment and Uncomment Done Right, and other ISE GUI must haves'
 date: 2013-06-19T17:42:07-06:00
 author: deadlydog
-layout: post
 guid: http://dans-blog.azurewebsites.net/?p=333
 permalink: /powershell-ise-multiline-comment-and-uncomment-done-right-and-other-ise-gui-must-haves/
 categories:
@@ -27,8 +26,8 @@ tags:
 I’ve written some code that you can add to your ISE profile that adds keyboard shortcuts to quickly comment and uncomment lines in PowerShell ISE.&#160; So you can quickly turn this:
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:5d350a70-cbe6-463e-a3ff-77edd19c556e" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal> 
-  
+  <pre style=white-space:normal>
+
   <pre class="brush: powershell; title: ; notranslate" title="">
 This is some
 	code and here is
@@ -39,8 +38,8 @@ some more code.
 into this:
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:1daa462a-e68d-4520-9f23-31ddf6dc6b7c" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal> 
-  
+  <pre style=white-space:normal>
+
   <pre class="brush: powershell; title: ; notranslate" title="">
 #This is some
 #	code and here is
@@ -60,18 +59,18 @@ I’ve only been writing PowerShell (PS) for about 6 months now, and have a love
 
 Anyways, as a PS newb one of the first things I did was go look for a nice editor to work in; <u>intellisense was a must</u>.&#160; First I tried PowerShell ISE v3 since it comes with Windows out of the box, but was quickly turned off at how featureless the GUI is.&#160; Here’s a quick list of lacking UI components that immediately turned me off of ISE’s Script Pane:
 
-  1. No keyboard shortcut to quickly comment/uncomment code ([go up-vote to get this added](https://connect.microsoft.com/PowerShell/feedback/details/711231/ise-v3-need-to-be-able-to-comment-a-series-of-lines-in-a-block-of-code)). 
-  2. No “Save All Files” keyboard shortcut ([go up-vote to get this added](https://connect.microsoft.com/PowerShell/feedback/details/790577/windows-powershell-ise-implement-a-save-all-files-feature-and-tie-it-to-ctrl-shift-s)). 
-  3. No ability to automatically reopen files that were open when I closed ISE; there’s the Recent Documents menu, but that’s an extra 10 clicks every time I open ISE ([go up-vote to get this added](https://connect.microsoft.com/PowerShell/feedback/details/790578/windows-powershell-ise-add-ability-to-save-load-session-state)). 
-  4. Can not split the tab windows to show two files side by side ([go up-vote to get this added](https://connect.microsoft.com/PowerShell/feedback/details/790581/windows-powershell-ise-add-ability-to-show-multiple-editors-side-by-side)). 
-  5. Can not drag a tab out of ISE to show it on another monitor ([go up-vote to get this added](https://connect.microsoft.com/PowerShell/feedback/details/698161/powershell-ise-pane-breakout-for-multi-monitor-use)). 
-  6. Can not enter tabs on the end of lines; I do this all of the time to line up my comments placed on the end of the code line. I’m guessing this is “by design” though to allow the tab-completion to work (I show a workaround for this [in this post](http://dans-blog.azurewebsites.net/add-ability-to-add-tabs-to-the-end-of-a-line-in-windows-powershell-ise/)). 
-  7. Find/Replace window does not have an option to wrap around the end of the file; it will only search down or up depending on if the Search Up checkbox is checked ([go up-vote to get this added](https://connect.microsoft.com/PowerShell/feedback/details/790583/windows-powershell-ise-add-wrap-around-option-to-find-replace-dialogues)). 
-  8. Can’t simply use Ctrl+F3 to search for the current/selected word/text; you have to use the actual Find window ([go up-vote to get this added](https://connect.microsoft.com/PowerShell/feedback/details/790584/windows-powershell-ise-add-keyboard-shortcuts-for-finding-text-in-a-file)). 
-  9. When you perform an undo/redo, the caret and view don’t jump to the text being undone/redone, so if the text being changed is outside of the viewable area you can’t see what is being changed ([up-vote to get this fixed](https://connect.microsoft.com/PowerShell/feedback/details/790586/windows-powershell-ise-caret-and-view-do-not-jump-to-text-being-undone-redone)). 
- 10. &#160; Can not re-arrange tabs; you have to close and reopen them if you want to change their order ([go up-vote to get this added](https://connect.microsoft.com/PowerShell/feedback/details/790585/windows-powershell-ise-add-ability-to-rearrange-tabs)). 
- 11. &#160; The intellisense sometimes becomes intermittent or stops all together and you have to restart ISE ([go up-vote to get this fixed](https://connect.microsoft.com/PowerShell/feedback/details/772736/powershell-ise-v3-rtm-intellisense-does-not-show-up-consistently)). 
- 12. &#160; Double-clicking a cmdlet or variable name does not select the entire cmdlet/variable name; e.g. doesn’t fully select “Get-Help” or “$variable” ([go up-vote to get this added](https://connect.microsoft.com/PowerShell/feedback/details/790661/windows-powershell-ise-double-click-should-select-entire-cmdlet-variable-name)). 
+  1. No keyboard shortcut to quickly comment/uncomment code ([go up-vote to get this added](https://connect.microsoft.com/PowerShell/feedback/details/711231/ise-v3-need-to-be-able-to-comment-a-series-of-lines-in-a-block-of-code)).
+  2. No “Save All Files” keyboard shortcut ([go up-vote to get this added](https://connect.microsoft.com/PowerShell/feedback/details/790577/windows-powershell-ise-implement-a-save-all-files-feature-and-tie-it-to-ctrl-shift-s)).
+  3. No ability to automatically reopen files that were open when I closed ISE; there’s the Recent Documents menu, but that’s an extra 10 clicks every time I open ISE ([go up-vote to get this added](https://connect.microsoft.com/PowerShell/feedback/details/790578/windows-powershell-ise-add-ability-to-save-load-session-state)).
+  4. Can not split the tab windows to show two files side by side ([go up-vote to get this added](https://connect.microsoft.com/PowerShell/feedback/details/790581/windows-powershell-ise-add-ability-to-show-multiple-editors-side-by-side)).
+  5. Can not drag a tab out of ISE to show it on another monitor ([go up-vote to get this added](https://connect.microsoft.com/PowerShell/feedback/details/698161/powershell-ise-pane-breakout-for-multi-monitor-use)).
+  6. Can not enter tabs on the end of lines; I do this all of the time to line up my comments placed on the end of the code line. I’m guessing this is “by design” though to allow the tab-completion to work (I show a workaround for this [in this post](http://dans-blog.azurewebsites.net/add-ability-to-add-tabs-to-the-end-of-a-line-in-windows-powershell-ise/)).
+  7. Find/Replace window does not have an option to wrap around the end of the file; it will only search down or up depending on if the Search Up checkbox is checked ([go up-vote to get this added](https://connect.microsoft.com/PowerShell/feedback/details/790583/windows-powershell-ise-add-wrap-around-option-to-find-replace-dialogues)).
+  8. Can’t simply use Ctrl+F3 to search for the current/selected word/text; you have to use the actual Find window ([go up-vote to get this added](https://connect.microsoft.com/PowerShell/feedback/details/790584/windows-powershell-ise-add-keyboard-shortcuts-for-finding-text-in-a-file)).
+  9. When you perform an undo/redo, the caret and view don’t jump to the text being undone/redone, so if the text being changed is outside of the viewable area you can’t see what is being changed ([up-vote to get this fixed](https://connect.microsoft.com/PowerShell/feedback/details/790586/windows-powershell-ise-caret-and-view-do-not-jump-to-text-being-undone-redone)).
+ 10. &#160; Can not re-arrange tabs; you have to close and reopen them if you want to change their order ([go up-vote to get this added](https://connect.microsoft.com/PowerShell/feedback/details/790585/windows-powershell-ise-add-ability-to-rearrange-tabs)).
+ 11. &#160; The intellisense sometimes becomes intermittent or stops all together and you have to restart ISE ([go up-vote to get this fixed](https://connect.microsoft.com/PowerShell/feedback/details/772736/powershell-ise-v3-rtm-intellisense-does-not-show-up-consistently)).
+ 12. &#160; Double-clicking a cmdlet or variable name does not select the entire cmdlet/variable name; e.g. doesn’t fully select “Get-Help” or “$variable” ([go up-vote to get this added](https://connect.microsoft.com/PowerShell/feedback/details/790661/windows-powershell-ise-double-click-should-select-entire-cmdlet-variable-name)).
 
 It took me all of 5 minutes to say “ISE is not a mature enough editor for me”; I guess I’ve been spoiled by working in Visual Studio for so many years.&#160; So I went and found [PowerGUI](http://powergui.org/index.jspa), which was pretty good and I liked it quite a bit at first.&#160; It’s been a while since I’ve used it so honestly I can’t remember all of the reasons why I decided to switch away from it.&#160; I remember one problem of having to constantly start a new PS session in order to pick up changes to functions that I made (I think they had a button for that at least), as well as intellisense not being reliable, and having problems with debugging.&#160; Anyways, I decided to switch to [PowerShellPlus](http://www.idera.com/productssolutions/freetools/powershellplus) and was much happier with it.&#160; It still wasn’t perfect; I still had problems with intellisense and debugging, but I was still happy.&#160; I especially liked that I could search for and download other people’s script easily from it, which is great for learning.&#160; As I kept using it though, it kept taking longer and longer to load.&#160; After about 3 months I found myself waiting about a minute for it to open, and then once it was open, another 15 seconds or so to open all of my previously open tabs; and I have an SSD.&#160; So I thought I would give ISE another shot, mainly because it is already installed by default and I now know that I can customize it somewhat with the add-ons.
 
@@ -91,19 +90,19 @@ So of course before writing my own multiline comment/uncomment code I went searc
 
 Here are the problems with their solutions:
 
-  1. If you only have part of a line selected, it places the comment character at the beginning of your selection, not at the beginning of the line (undesirable, both). 
-  2. If you don’t have any text selected, nothing gets commented out (undesirable, both). 
-  3. If you have any blank lines selected in your multiline selection, it removes them (unacceptable, PowerShellPack only). 
-  4. It uses block comments (i.e. <# … #>)! (unacceptable (block comments are the devil), Clatonh’s solution only) I’m not sure if the PowerShellPack problems are because it was written for PS v2 and I’m using v3 on Windows 8, but either way that was unacceptable for me. 
+  1. If you only have part of a line selected, it places the comment character at the beginning of your selection, not at the beginning of the line (undesirable, both).
+  2. If you don’t have any text selected, nothing gets commented out (undesirable, both).
+  3. If you have any blank lines selected in your multiline selection, it removes them (unacceptable, PowerShellPack only).
+  4. It uses block comments (i.e. <# … #>)! (unacceptable (block comments are the devil), Clatonh’s solution only) I’m not sure if the PowerShellPack problems are because it was written for PS v2 and I’m using v3 on Windows 8, but either way that was unacceptable for me.
 
 You might be wondering why #4 is on my list and why I hate block comments so much.&#160; Block comments themselves aren’t _entirely_ a bad idea; the problem is that 99% of editors (including PS ISE) don’t handle nested block comments properly.&#160; For example, if I comment out 3 lines in a function using block comments, and then later go and comment out the entire function using block comments, I’ll get a compiler error (or in PS’s case, a run-time error); this is because the first closing “#>” tag will be considered the closing tag for both the 1st and 2nd opening “<#” tags; so everything between the 1st and 2nd closing “#>” tag won’t actually be commented out.&#160; Because of this it is just easier to avoid block comments all together, even for that paragraph of comment text you are about to write (you do comment your code, right?).
 
 **<u>My Solution:</u>**
 
-  1. Uses single line comments (no block comments!). 
-  2. Places the comment character at the beginning of the line, even if you have middle of line selected. 
-  3. Comments out the line that the caret is on if no text is selected. 
-  4. Preserves blank lines, and doesn’t comment them out. 
+  1. Uses single line comments (no block comments!).
+  2. Places the comment character at the beginning of the line, even if you have middle of line selected.
+  3. Comments out the line that the caret is on if no text is selected.
+  4. Preserves blank lines, and doesn’t comment them out.
 
 
 
@@ -113,11 +112,11 @@ Before I give you the code, we are going to want to add it to your PowerShell **
 
 <u>To edit your PowerShell ISE profile:</u>
 
-  1. Open **Windows PowerShell ISE** (not Windows PowerShell, as we want to edit the ISE profile instead of the regular PowerShell profile). 
+  1. Open **Windows PowerShell ISE** (not Windows PowerShell, as we want to edit the ISE profile instead of the regular PowerShell profile).
   2. In the Command window type: **psedit $profile
-        
-      
-** If you get an error that it cannot find the path, then first type the following to create the file before trying #2 again: **New-Item $profile –ItemType File –Force** 
+
+
+** If you get an error that it cannot find the path, then first type the following to create the file before trying #2 again: **New-Item $profile –ItemType File –Force**
 
 And now that you have your PowerShell ISE profile file open for editing, here’s the code to append to it in order to get the comment/uncomment commands and keyboard shortcuts (or keep reading and get ALL the code from further down).&#160; You will then need to restart PowerShell ISE for the new commands to show up and work.&#160; I’ll mention too that I’ve only tested this on Windows 8 with PowerShell v3.0.
 
@@ -128,8 +127,8 @@ And now that you have your PowerShell ISE profile file open for editing, here’
 </div>
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:82ea387e-6fc6-4b8f-8b45-0fa739aea0be" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal> 
-  
+  <pre style=white-space:normal>
+
   <pre class="brush: powershell; pad-line-numbers: true; title: ; notranslate" title="">
 # Define our constant variables.
 [string]$NEW_LINE_STRING = "`r`n"
@@ -140,7 +139,7 @@ function Select-EntireLinesInIseSelectedTextAndReturnFirstAndLastSelectedLineNum
 &lt;#
     .SYNOPSIS
     Exands the selected text to make sure the entire lines are selected.
-    Returns $null if we can't determine with certainty which lines to select and the 
+    Returns $null if we can't determine with certainty which lines to select and the
 
     .DESCRIPTION
     Exands the selected text to make sure the entire lines are selected.
@@ -330,19 +329,19 @@ function CommentOrUncommentIseSelectedLines([bool]$CommentLines = $false, [bool]
         # If the line is not blank, add a comment character to the start of it.
         [string]$lineText = $_
         if ([string]::IsNullOrWhiteSpace($lineText)) { $newSelectedTextArray += $lineText }
-        else 
+        else
         {
             # If we should be commenting the lines out, add a comment character to the start of the line.
-            if ($CommentLines) 
+            if ($CommentLines)
             { $newSelectedTextArray += "$COMMENT_STRING$lineText" }
             # Else we should be uncommenting, so remove a comment character from the start of the line if it exists.
-            else 
+            else
             {
                 # If the line begins with a comment, remove one (and only one) comment character.
                 if ($lineText.StartsWith($COMMENT_STRING))
                 {
                     $lineText = $lineText.Substring($COMMENT_STRING.Length)
-                } 
+                }
                 $newSelectedTextArray += $lineText
             }
         }
@@ -450,8 +449,8 @@ As you can see by the code at the bottom, the keyboard shortcut to comment lines
 If you’re still reading then you deserve to know about the edge case bug with my implementation.&#160; If you actually read through the functions’ documentation in the code you will see this mentioned there as well.
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:d91d2e85-b69d-4773-bd6d-48fb9f6ad4b4" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal> 
-  
+  <pre style=white-space:normal>
+
   <pre class="brush: plain; title: ; notranslate" title="">
 Edge Case:
     - When the selected text occurs multiple times in the document, directly above or below the selected text.
@@ -482,8 +481,8 @@ Ok, so I mentioned a couple other must-have ISE add-ons above.&#160; Here’s th
 </div>
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:86dcfab3-093a-4c30-91e5-7242127eda3e" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal> 
-  
+  <pre style=white-space:normal>
+
   <pre class="brush: powershell; pad-line-numbers: true; title: ; notranslate" title="">
 #==========================================================
 # Functions used by the script.
@@ -512,25 +511,25 @@ function Export-ISEState
 &lt;#
 .SYNOPSIS
     Stores the opened files in a serialized xml so that later the same set can be opened
- 
+
 .DESCRIPTION
     Creates an xml file with all PowerShell tabs and file information
-   
+
 .PARAMETER fileName
     The name of the project to create a new version from. This will also be the name of the new project, but with a different version
- 
+
 .EXAMPLE
     Stores current state into c:\temp\files.isexml
     Export-ISEState c:\temp\files.isexml
 #&gt;
- 
+
     Param
     (
         [Parameter(Position=0, Mandatory=$true)]
         [ValidateNotNullOrEmpty()]
         [string]$fileName
     )
-   
+
     # We are exporting a "tree" worth of information like this:
     #
     #  SelectedTabDisplayName: PowerShellTab 1
@@ -550,11 +549,11 @@ function Export-ISEState
     #  and contents(for untitled files) inside each tab in a couple of ArrayList.
     #  We will use Hashtables to group the information.
     $tabs=new-object collections.arraylist
-   
+
     # before getting file information, save all untitled files to make sure their latest
     # text is on disk
     Save-AllISEFiles
- 
+
     foreach ($tab in $psISE.PowerShellTabs)
     {
         $files=new-object collections.arraylist
@@ -563,7 +562,7 @@ function Export-ISEState
         {
             # $null = will avoid $files.Add from showing in the output
             $null = $files.Add($file.FullPath)
-           
+
             if($file.IsUntitled)
             {
                 # untitled files are not yet on disk so we will save the file contents inside the xml
@@ -573,65 +572,65 @@ function Export-ISEState
             else
             {
                 # titled files get their content from disk
-                $null = $filesContents.Add($null)  
+                $null = $filesContents.Add($null)
             }
         }
         $simpleTab=new-object collections.hashtable
-       
+
         # The DisplayName of a PowerShellTab can only be change with scripting
-        # we want to maintain the chosen name       
+        # we want to maintain the chosen name
         $simpleTab["DisplayName"]=$tab.DisplayName
-       
+
         # $files and $filesContents is the information gathered in the foreach $file above
         $simpleTab["Files"]=$files
         $simpleTab["FilesContents"]=$filesContents
-       
+
         # add to the list of tabs
         $null = $tabs.Add($simpleTab)
-       
+
     }
-   
+
     # tabsToSerialize will be a hashtable with all the information we want
     # it is the "root" of the information to be serialized in the hashtable we store...
     $tabToSerialize=new-object collections.hashtable
-   
+
     # the $tabs information gathered in the foreach $tab above...
     $tabToSerialize["TabInformation"] = $tabs
-   
+
     # ...and the selected tab and file.
     $tabToSerialize["SelectedTabDisplayName"] = $psISE.CurrentPowerShellTab.DisplayName
     $tabToSerialize["SelectedFilePath"] = $psISE.CurrentFile.FullPath
-   
+
     # now we just export it to $fileName
     $tabToSerialize | export-clixml -path $fileName
 }
- 
- 
+
+
 function Import-ISEState
 {
 &lt;#
 .SYNOPSIS
     Reads a file with ISE state information about which files to open and opens them
- 
+
 .DESCRIPTION
     Reads a file created by Export-ISEState with the PowerShell tabs and files to open
-   
+
 .PARAMETER fileName
     The name of the file created with Export-ISEState
- 
+
 .EXAMPLE
     Restores current state from c:\temp\files.isexml
     Import-ISEState c:\temp\files.isexml
 #&gt;
- 
+
     Param
     (
         [Parameter(Position=0, Mandatory=$true)]
         [ValidateNotNullOrEmpty()]
         [string]$fileName
     )
-   
-   
+
+
     # currentTabs is used to keep track of the tabs currently opened.
     # If "PowerShellTab 1" is opened and $fileName contains files for it, we
     # want to open them in "PowerShellTab 1"
@@ -640,13 +639,13 @@ function Import-ISEState
     {
         $currentTabs[$tab.DisplayName]=$tab
     }
-   
+
     $tabs=import-cliXml -path $fileName
- 
-    # those will keep track of selected tab and files   
+
+    # those will keep track of selected tab and files
     $selectedTab=$null
     $selectedFile=$null
- 
+
     foreach ($tab in $tabs.TabInformation)
     {
         $newTab=$currentTabs[$tab.DisplayName]
@@ -656,13 +655,13 @@ function Import-ISEState
             $newTab.DisplayName=$tab.DisplayName
         }
         #newTab now has a brand new or a previouslly existing PowerShell tab with the same name as the one in the file
-       
+
         # if the tab is the selected tab save it for later selection
         if($newTab.DisplayName -eq $tabs.SelectedTabDisplayName)
         {
             $selectedTab=$newTab
         }
-       
+
         # currentUntitledFileContents keeps track of the contents for untitled files
         # if you already have the content in one of your untitled files
         # there is no reason to add the same content again
@@ -676,13 +675,13 @@ function Import-ISEState
                 $currentUntitledFileContents[$newTabFile.Editor.Text]=$newTabFile
             }
         }
-       
+
         # since we will want both file and fileContents we need to use a for instead of a foreach
         for($i=0;$i -lt $tab.Files.Count;$i++)
         {
             $file = $tab.Files[$i]
             $fileContents = $tab.FilesContents[$i]
- 
+
             #fileContents will be $null for titled files
             if($fileContents -eq $null)
             {
@@ -693,27 +692,27 @@ function Import-ISEState
             {
                 #see if the content is already present in $newTab
                 $newFile=$currentUntitledFileContents[$fileContents]
-               
+
                 if($newFile -eq $null)
                 {
                     # the overload of Add taking no arguments creates a new untitled file
                     # The number for untitled files is determined by the application so we
                     # don't try to keep the untitled number, we just create a new untitled.
                     $newFile = $newTab.Files.Add()
-               
+
                     # and here we restore the contents
                     $newFile.Editor.Text=$fileContents
                 }
             }
-       
-            # if the file is the selected file in the selected tab save it for later selection   
+
+            # if the file is the selected file in the selected tab save it for later selection
             if(($selectedTab -eq $newTab) -and ($tabs.SelectedFilePath -eq $file))
             {
                 $selectedFile = $newFile
             }
         }
     }
-   
+
     #finally we selected the PowerShellTab that was selected and the file that was selected on it.
     $psISE.PowerShellTabs.SetSelectedPowerShellTab($selectedTab)
     if($selectedFile -ne $null)
@@ -731,7 +730,7 @@ function Select-EntireLinesInIseSelectedTextAndReturnFirstAndLastSelectedLineNum
 &lt;#
     .SYNOPSIS
     Exands the selected text to make sure the entire lines are selected.
-    Returns $null if we can't determine with certainty which lines to select and the 
+    Returns $null if we can't determine with certainty which lines to select and the
 
     .DESCRIPTION
     Exands the selected text to make sure the entire lines are selected.
@@ -921,19 +920,19 @@ function CommentOrUncommentIseSelectedLines([bool]$CommentLines = $false, [bool]
         # If the line is not blank, add a comment character to the start of it.
         [string]$lineText = $_
         if ([string]::IsNullOrWhiteSpace($lineText)) { $newSelectedTextArray += $lineText }
-        else 
+        else
         {
             # If we should be commenting the lines out, add a comment character to the start of the line.
-            if ($CommentLines) 
+            if ($CommentLines)
             { $newSelectedTextArray += "$COMMENT_STRING$lineText" }
             # Else we should be uncommenting, so remove a comment character from the start of the line if it exists.
-            else 
+            else
             {
                 # If the line begins with a comment, remove one (and only one) comment character.
                 if ($lineText.StartsWith($COMMENT_STRING))
                 {
                     $lineText = $lineText.Substring($COMMENT_STRING.Length)
-                } 
+                }
                 $newSelectedTextArray += $lineText
             }
         }

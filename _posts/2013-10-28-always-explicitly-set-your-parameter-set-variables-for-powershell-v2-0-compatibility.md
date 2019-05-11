@@ -3,7 +3,6 @@ id: 585
 title: Always Explicitly Set Your Parameter Set Variables For PowerShell v2.0 Compatibility
 date: 2013-10-28T11:25:32-06:00
 author: deadlydog
-layout: post
 guid: http://dans-blog.azurewebsites.net/?p=585
 permalink: /always-explicitly-set-your-parameter-set-variables-for-powershell-v2-0-compatibility/
 categories:
@@ -29,8 +28,8 @@ You could just be lazy and not use parameter sets and allow all 3 parameters to 
 The problem I ran into was in my [Invoke-MsBuild module that I put on CodePlex](https://invokemsbuild.codeplex.com/), I had a [switch]$PassThru parameter that was part of a parameter set.&#160; Within the module I had:
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:c6d3d3e9-1ba8-4be8-9dbe-86cfd66e5426" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal> 
-  
+  <pre style=white-space:normal>
+
   <pre class="brush: powershell; pad-line-numbers: true; title: ; notranslate" title="">
 if ($PassThru) { do something... }
 else { do something else... }
@@ -40,14 +39,14 @@ else { do something else... }
 This worked great for me during my testing since I was using PowerShell v3.0.&#160; The problem arose once I released my code to the public; I received an issue from a user who was getting the following error message:
 
 > Invoke-MsBuild : Unexpect error occured while building "<path>\my.csproj": The variable &#8216;$PassThru&#8217; cannot be retrieved because it has not been set.
-      
->   
+
+>
 > At build.ps1:84 char:25
-> 
+>
 >   * $result = Invoke-MsBuild <<<< -Path "<path>\my.csproj" -BuildLogDirectoryPath "$scriptPath" -Pa
-        
->       
->     rams "/property:Configuration=Release" 
+
+>
+>     rams "/property:Configuration=Release"
 
 After some investigation I determined the problem was that they were using PowerShell v2.0, and that my script uses Strict Mode.&#160; I use **Set-StrictMode -Version Latest** in all of my scripts to help me catch any syntax related errors and to make sure my scripts will in fact do what I intend them to do.&#160; While you could simply not use strict mode and **you** wouldn’t have a problem, I don’t recommend that; if others are going to call your cmdlet (or you call it from a different script), there’s a good chance they may have Strict Mode turned on and your cmdlet may break for them.
 
@@ -60,8 +59,8 @@ You absolutely SHOULD use parameter sets whenever you can and it makes sense, an
 Here is an example of how to detect if a variable is not defined in the Private scope and set its default value.&#160; We specify the scope in case a variable with the same name exists outside of the cmdlet in the global scope or an inherited scope.
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:e0601121-7f1b-40d4-beee-28b01bda9812" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal> 
-  
+  <pre style=white-space:normal>
+
   <pre class="brush: powershell; gutter: false; pad-line-numbers: true; title: ; notranslate" title="">
 # Default the ParameterSet variables that may not have been set depending on which parameter set is being used. This is required for PowerShell v2.0 compatibility.
 if (!(Test-Path Variable:Private:SomeStringParameter)) { $SomeStringParameter = $null }
@@ -75,14 +74,14 @@ If you prefer, instead of setting a default value for the parameter you could ju
 Another approach rather than checking if a parameter is defined or not, is to [check which Parameter Set Name is being used](http://blogs.msdn.com/b/powershell/archive/2008/12/23/powershell-v2-parametersets.aspx); this will implicitly let you know which parameters are defined.
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:6fdb500d-cbe9-4ed3-bdb0-e5a912bb08c3" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal> 
-  
+  <pre style=white-space:normal>
+
   <pre class="brush: powershell; gutter: false; pad-line-numbers: true; title: ; notranslate" title="">
 switch ($PsCmdlet.ParameterSetName)
 {
 	"SomeParameterSetName"  { Write-Host "You supplied the Some variable."; break}
 	"OtherParameterSetName"  { Write-Host "You supplied the Other variable."; break}
-} 
+}
 </pre>
 </div>
 

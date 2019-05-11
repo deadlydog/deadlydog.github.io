@@ -3,7 +3,6 @@ id: 175
 title: Force your ClickOnce app to update without prompting user – Now on NuGet!
 date: 2013-03-08T14:26:10-06:00
 author: deadlydog
-layout: post
 guid: https://deadlydog.wordpress.com/?p=175
 permalink: /force-your-clickonce-app-to-update-without-prompting-user-now-on-nuget/
 jabber_published:

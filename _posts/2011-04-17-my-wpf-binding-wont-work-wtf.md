@@ -3,7 +3,6 @@ id: 16
 title: 'My WPF Binding won&#8217;t work. WTF!'
 date: 2011-04-17T22:48:00-06:00
 author: deadlydog
-layout: post
 guid: https://deadlydog.wordpress.com/?p=16
 permalink: /my-wpf-binding-wont-work-wtf/
 jabber_published:

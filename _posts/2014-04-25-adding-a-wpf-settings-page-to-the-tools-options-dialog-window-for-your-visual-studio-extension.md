@@ -3,7 +3,6 @@ id: 755
 title: Adding a WPF Settings Page To The Tools Options Dialog Window For Your Visual Studio Extension
 date: 2014-04-25T13:14:44-06:00
 author: deadlydog
-layout: post
 guid: http://dans-blog.azurewebsites.net/?p=755
 permalink: /adding-a-wpf-settings-page-to-the-tools-options-dialog-window-for-your-visual-studio-extension/
 categories:
@@ -32,8 +31,8 @@ The steps to create a Custom WPF settings page are the same as for [creating a C
 Here’s a sample of what the Settings class might look like:
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:9ccd71b5-bac2-47a0-a6c4-cdd8d446b350" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal> 
-  
+  <pre style=white-space:normal>
+
   <pre class="brush: csharp; pad-line-numbers: true; title: ; notranslate" title="">
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -101,8 +100,8 @@ namespace VS_DiffAllFiles.Settings
 And what the code-behind for the User Control might look like:
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:15417659-0796-46d5-a068-2536ad677f2f" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal> 
-  
+  <pre style=white-space:normal>
+
   <pre class="brush: csharp; title: ; notranslate" title="">
 using System;
 using System.Diagnostics;
@@ -139,7 +138,7 @@ namespace VS_DiffAllFiles.Settings
 		private void UserControl_LostKeyboardFocus(object sender, KeyboardFocusChangedEventArgs e)
 		{
 			// Find all TextBoxes in this control force the Text bindings to fire to make sure all changes have been saved.
-			// This is required because if the user changes some text, then clicks on the Options Window's OK button, it closes 
+			// This is required because if the user changes some text, then clicks on the Options Window's OK button, it closes
 			// the window before the TextBox's Text bindings fire, so the new value will not be saved.
 			foreach (var textBox in DiffAllFilesHelper.FindVisualChildren&lt;TextBox&gt;(sender as UserControl))
 			{
@@ -157,17 +156,17 @@ namespace VS_DiffAllFiles.Settings
 And here’s the corresponding xaml for the UserControl:
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:73b44df9-db5b-484e-beb4-4e39f5cdfaa4" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal> 
-  
+  <pre style=white-space:normal>
+
   <pre class="brush: xml; title: ; notranslate" title="">
 &lt;UserControl x:Class="VS_DiffAllFiles.Settings.DiffAllFilesSettingsPageControl"
 						 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
 						 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-						 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+						 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
 						 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
 						 xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
 						 xmlns:QC="clr-namespace:QuickConverter;assembly=QuickConverter"
-						 mc:Ignorable="d" 
+						 mc:Ignorable="d"
 						 d:DesignHeight="350" d:DesignWidth="400" LostKeyboardFocus="UserControl_LostKeyboardFocus"&gt;
 	&lt;UserControl.Resources&gt;
 	&lt;/UserControl.Resources&gt;
@@ -193,8 +192,8 @@ One problem I found was that when using a TextBox on my Settings Page UserContro
 To solve this problem I added a LostKeyboardFocus event to the UserControl, and in that event I find all TextBox controls on the UserControl and force their bindings to update.&#160; You can see the code for this in the snippets above.&#160; The one piece of code that’s not shown is the FindVisualChildren<TextBox> method, so here it is:
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:db9edb78-e2b5-4cb1-8c36-65221a8819bb" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal> 
-  
+  <pre style=white-space:normal>
+
   <pre class="brush: csharp; title: ; notranslate" title="">
 /// &lt;summary&gt;
 /// Recursively finds the visual children of the given control.

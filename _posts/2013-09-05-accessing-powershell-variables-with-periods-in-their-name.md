@@ -3,7 +3,6 @@ id: 374
 title: Accessing PowerShell Properties and Variables with Periods (and other special characters) in their Name
 date: 2013-09-05T13:09:32-06:00
 author: deadlydog
-layout: post
 guid: http://dans-blog.azurewebsites.net/?p=374
 permalink: /accessing-powershell-variables-with-periods-in-their-name/
 categories:
@@ -23,8 +22,8 @@ tags:
 If your PowerShell variable name contains special characters, wrap it in curly braces to get/set its value.&#160; If your PowerShell property name contains special characters, wrap it in double quotes:
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:ad32e0da-8e49-4395-8ab6-470fe0ba9cc9" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal> 
-  
+  <pre style=white-space:normal>
+
   <pre class="brush: powershell; pad-line-numbers: true; title: ; notranslate" title="">
 # Variable name with special characters
 $VariableName.That.Contains.Periods			# This will NOT work.
@@ -56,8 +55,8 @@ $SomeObject.'$APropertynameWithSpecialCharacters'	# This will NOT work.
 I was recently working on a powershell script to get the values of some entries in the registry.&#160; This is simple enough:
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:55c80560-3850-4ff1-b769-85f2746c8b84" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal> 
-  
+  <pre style=white-space:normal>
+
   <pre class="brush: powershell; pad-line-numbers: true; title: ; notranslate" title="">
 Get-ItemProperty -Path 'HKCU:\Software\Microsoft\VisualStudio\11.0_Config\TeamFoundation\SourceControl\Checkin Policies' -Name 'TF.iQmetrix.CheckinPolicies'
 </pre>
@@ -66,8 +65,8 @@ Get-ItemProperty -Path 'HKCU:\Software\Microsoft\VisualStudio\11.0_Config\TeamFo
 If we run this command, this is what we get back:
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:ed4fd505-e592-4fa4-8d58-021890a84d38" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal> 
-  
+  <pre style=white-space:normal>
+
   <pre class="brush: plain; title: ; notranslate" title="">
 TF.iQmetrix.CheckinPolicies : C:\Users\Dan Schroeder\AppData\Local\Microsoft\VisualStudio\11.0\Extensions\mwlu1noz.4t5\TF.iQmetrix.CheckinPolicies.dll
 PSPath                      : Microsoft.PowerShell.Core\Registry::HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\11.0_Config\TeamFoundation\SourceControl\Checkin Policies
@@ -81,8 +80,8 @@ PSProvider                  : Microsoft.PowerShell.Core\Registry
 So the actual value I’m after is stored in the “TF.iQmetrix.CheckinPolicies” property of the object returned by Get-ItemProperty; notice that this property name has periods in it.&#160; So let’s store this object in a variable to make it easier to access it’s properties, and do a quick Get-Member on it just to show some more details:
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:1c35b055-99ea-4e3c-8150-9370a026d21f" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal> 
-  
+  <pre style=white-space:normal>
+
   <pre class="brush: powershell; title: ; notranslate" title="">
 $RegistryEntry = Get-ItemProperty -Path 'HKCU:\Software\Microsoft\VisualStudio\11.0_Config\TeamFoundation\SourceControl\Checkin Policies' -Name 'TF.iQmetrix.CheckinPolicies'
 $RegistryEntry | Get-Member
@@ -92,23 +91,23 @@ $RegistryEntry | Get-Member
 And this is what Get-Member shows us:
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:81b5dca5-dcf8-4bbc-9dd2-730cbc50cf85" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal> 
-  
+  <pre style=white-space:normal>
+
   <pre class="brush: plain; title: ; notranslate" title="">
    TypeName: System.Management.Automation.PSCustomObject
 
-Name                        MemberType   Definition                                                                                                                                                          
-----                        ----------   ----------                                                                                                                                                          
-Equals                      Method       bool Equals(System.Object obj)                                                                                                                                      
-GetHashCode                 Method       int GetHashCode()                                                                                                                                                   
-GetType                     Method       type GetType()                                                                                                                                                      
-ToString                    Method       string ToString()                                                                                                                                                   
-PSChildName                 NoteProperty System.String PSChildName=Checkin Policies                                                                                                                          
-PSDrive                     NoteProperty System.Management.Automation.PSDriveInfo PSDrive=HKCU                                                                                                               
-PSParentPath                NoteProperty System.String PSParentPath=Microsoft.PowerShell.Core\Registry::HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\11.0_Config\TeamFoundation\SourceControl           
+Name                        MemberType   Definition
+----                        ----------   ----------
+Equals                      Method       bool Equals(System.Object obj)
+GetHashCode                 Method       int GetHashCode()
+GetType                     Method       type GetType()
+ToString                    Method       string ToString()
+PSChildName                 NoteProperty System.String PSChildName=Checkin Policies
+PSDrive                     NoteProperty System.Management.Automation.PSDriveInfo PSDrive=HKCU
+PSParentPath                NoteProperty System.String PSParentPath=Microsoft.PowerShell.Core\Registry::HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\11.0_Config\TeamFoundation\SourceControl
 PSPath                      NoteProperty System.String PSPath=Microsoft.PowerShell.Core\Registry::HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\11.0_Config\TeamFoundation\SourceControl\Checkin Policies
-PSProvider                  NoteProperty System.Management.Automation.ProviderInfo PSProvider=Microsoft.PowerShell.Core\Registry                                                                             
-TF.iQmetrix.CheckinPolicies NoteProperty System.String TF.iQmetrix.CheckinPolicies=C:\Users\Dan Schroeder\AppData\Local\Microsoft\VisualStudio\11.0\Extensions\mwlu1noz.4t5\TF.iQmetrix.CheckinPolicies.dll 
+PSProvider                  NoteProperty System.Management.Automation.ProviderInfo PSProvider=Microsoft.PowerShell.Core\Registry
+TF.iQmetrix.CheckinPolicies NoteProperty System.String TF.iQmetrix.CheckinPolicies=C:\Users\Dan Schroeder\AppData\Local\Microsoft\VisualStudio\11.0\Extensions\mwlu1noz.4t5\TF.iQmetrix.CheckinPolicies.dll
 </pre>
 </div>
 
@@ -121,8 +120,8 @@ So in PowerShell ISE I type “$RegistryEntry.” and intellisense pops up showi
 So I try and display the value of that property to the console using:
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:6f57a12a-00a3-4b05-b47e-d34234f380f5" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal> 
-  
+  <pre style=white-space:normal>
+
   <pre class="brush: powershell; title: ; notranslate" title="">
 $RegistryEntry = Get-ItemProperty -Path 'HKCU:\Software\Microsoft\VisualStudio\11.0_Config\TeamFoundation\SourceControl\Checkin Policies' -Name 'TF.iQmetrix.CheckinPolicies'
 $RegistryEntry.TF.iQmetrix.CheckinPolicies
@@ -136,8 +135,8 @@ While PowerShell ISE does color-code the line “$RegistryEntry.TF.iQmetrix.Chec
 I did some Googling and looked on StackOverflow, but couldn’t a solution to this problem.&#160; I found slightly related [posts involving environmental variables with periods in their name](http://stackoverflow.com/questions/9984065/cannot-resolve-environment-variables-in-powershell-with-periods-in-them), but that solution did not work in this case.&#160; So after some random trial-and-error I stumbled onto the solution.&#160; You have to wrap the property name in curly braces:
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:ce3091d6-423c-44e2-ba48-064f99fc0dd9" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal> 
-  
+  <pre style=white-space:normal>
+
   <pre class="brush: powershell; title: ; notranslate" title="">
 $RegistryEntry.TF.iQmetrix.CheckinPolicies		# This is WRONG. Nothing will be returned.
 $RegistryEntry.{TF.iQmetrix.CheckinPolicies}	# This is RIGHT. The property's value will returned.
@@ -149,8 +148,8 @@ $RegistryEntry.{TF.iQmetrix.CheckinPolicies}	# This is RIGHT. The property's val
 I later refactored my script to store the “TF.iQmetrix.CheckinPolicies” name in a variable and found that I couldn’t use the curly braces anymore.&#160; After more trial-and-error I discovered that using parentheses instead works:
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:20716b83-d944-4b87-98df-292f161a9467" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal> 
-  
+  <pre style=white-space:normal>
+
   <pre class="brush: powershell; title: ; notranslate" title="">
 $EntryName = 'TF.iQmetrix.CheckinPolicies'
 

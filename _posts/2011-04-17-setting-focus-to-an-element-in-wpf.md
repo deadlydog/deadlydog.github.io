@@ -3,7 +3,6 @@ id: 10
 title: Setting focus to an element in WPF
 date: 2011-04-17T22:44:00-06:00
 author: deadlydog
-layout: post
 guid: https://deadlydog.wordpress.com/?p=10
 permalink: /setting-focus-to-an-element-in-wpf/
 jabber_published:
@@ -19,7 +18,7 @@ tags:
 ---
 So if you are trying to set focus to a WPF element, but are unable to.&#160; Here is a quick checklist to go through:
 
-&#8211; is the control you are trying to set focus to Enabled, Visible, Loaded, and Focusable.&#160; If any of these properties are false, you cannot set focus to the element. 
+&#8211; is the control you are trying to set focus to Enabled, Visible, Loaded, and Focusable.&#160; If any of these properties are false, you cannot set focus to the element.
 
 If you are using Binding to set these properties, make sure the binding is firing before you are trying to set the focus.
 

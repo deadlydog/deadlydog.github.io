@@ -3,7 +3,6 @@ id: 602
 title: Problems Caused By Installing Windows 8.1 Update
 date: 2013-11-08T15:37:20-06:00
 author: deadlydog
-layout: post
 guid: http://dans-blog.azurewebsites.net/?p=602
 permalink: /problems-caused-by-installing-windows-8-1-update/
 categories:

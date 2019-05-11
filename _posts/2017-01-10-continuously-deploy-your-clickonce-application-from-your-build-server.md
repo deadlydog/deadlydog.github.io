@@ -3,7 +3,6 @@ id: 899
 title: Continuously Deploy Your ClickOnce Application From Your Build Server
 date: 2017-01-10T02:13:33-06:00
 author: deadlydog
-layout: post
 guid: http://dans-blog.azurewebsites.net/?p=899
 permalink: /continuously-deploy-your-clickonce-application-from-your-build-server/
 categories:
@@ -20,15 +19,15 @@ tags:
 ---
 ClickOnce applications are a great and easy way to distribute your applications to many users, and have the advantage of offering automatic application updates out-of-the-box. Even though ClickOnce applications are super easy to deploy from Visual Studio (literally 3 clicks, just click Build –> Publish –> Finish), you may still want to have your build system publish the updates for various reasons, such as:
 
-  1. You don’t want you (or your team members) to have to remember to manually publish a new version all the time; even if it is very quick and easy. 
-  2. If you are signing your ClickOnce application (to make your app more secure and avoid annoying Windows security warnings during every update), your team members may not have the certificate installed, or you may not want them to know the certificate password. 
-  3. All of the other benefits of deploying automatically from a build server; you can be sure the project was built in Release mode, all unit tests have run and passed, you are only publishing a new version of the application from a specific branch (e.g. master), etc. 
+  1. You don’t want you (or your team members) to have to remember to manually publish a new version all the time; even if it is very quick and easy.
+  2. If you are signing your ClickOnce application (to make your app more secure and avoid annoying Windows security warnings during every update), your team members may not have the certificate installed, or you may not want them to know the certificate password.
+  3. All of the other benefits of deploying automatically from a build server; you can be sure the project was built in Release mode, all unit tests have run and passed, you are only publishing a new version of the application from a specific branch (e.g. master), etc.
 
 In this post I’m going to show how to continuously deploy your ClickOnce application using Visual Studio Team Services (VSTS), but you can adopt what’s shown here to work on any build system, such as Team City or Jenkins.
 
 &#160;
 
-### 
+###
 
 ### Step 1 – Configure and publish your ClickOnce application manually
 
@@ -109,8 +108,8 @@ That’s it! Now if you launch another build it should create new artifacts with
 The ClickOnce application version number may be different than your assembly version number, or perhaps you don’t update your product’s version number on every publish; it’s easy to forget. I typically like to use <a href="http://semver.org/" target="_blank">semantic versioning</a> for my projects, which only involves the first 3 version parts. This leaves the last version part, the Revision number, available for me to set as I please. I will typically use the ClickOnce Revision in my application’s displayed version number. This makes it easy to tell which actual release a client has installed in the event that the product version was not updated between releases. The code to do it is fairly simple.
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:e407b4b7-b7a6-4431-aa04-8b7e1110b834" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal> 
-  
+  <pre style=white-space:normal>
+
   <pre class="brush: csharp; pad-line-numbers: true; title: ; notranslate" title="">
 public Version ApplicationVersion = new Version("1.11.2");
 

@@ -3,7 +3,6 @@ id: 731
 title: 'Saving And Loading A C# Object&rsquo;s Data To An Xml, Json, Or Binary File'
 date: 2014-03-14T15:53:35-06:00
 author: deadlydog
-layout: post
 guid: http://dans-blog.azurewebsites.net/?p=731
 permalink: /saving-and-loading-a-c-objects-data-to-an-xml-json-or-binary-file/
 categories:
@@ -40,8 +39,8 @@ The follow code (without examples of how to use it) [is also available here](htt
   * Use the **[NonSerialized]** attribute to exclude a variable from being written to the file; there is no way to prevent an auto-property from being serialized besides making it use a backing variable and putting the [NonSerialized] attribute on that.
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:b11cb8df-99d0-49ca-b5bd-5147e6683a42" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal> 
-  
+  <pre style=white-space:normal>
+
   <pre class="brush: csharp; pad-line-numbers: true; title: ; notranslate" title="">
 /// &lt;summary&gt;
 /// Functions for performing common binary Serialization operations.
@@ -92,8 +91,8 @@ public static class BinarySerialization
 And here is an example of how to use it:
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:a4c84087-8308-457d-8298-89423a0307d7" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal> 
-  
+  <pre style=white-space:normal>
+
   <pre class="brush: csharp; title: ; notranslate" title="">
 [Serializable]
 public class Person
@@ -136,8 +135,8 @@ List&lt;Person&gt; people = BinarySerialization.ReadFromBinaryFile&lt;List&lt;Pe
   * Use the **[XmlIgnore]** attribute to exclude a public property or variable from being written to the file.
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:94d8336a-1e98-4394-a260-d2271f82e547" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal> 
-  
+  <pre style=white-space:normal>
+
   <pre class="brush: csharp; title: ; notranslate" title="">
 /// &lt;summary&gt;
 /// Functions for performing common XML Serialization operations.
@@ -204,8 +203,8 @@ public static class XmlSerialization
 And here is an example of how to use it:
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:6480431c-d8ac-4f5f-8612-2ffe93f2c3ff" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal> 
-  
+  <pre style=white-space:normal>
+
   <pre class="brush: csharp; title: ; notranslate" title="">
 public class Person
 {
@@ -246,8 +245,8 @@ List&lt;Person&gt; people = XmlSerialization.ReadFromXmlFile&lt;List&lt;Person&g
   * Use the **[JsonIgnore]** attribute to exclude a public property or variable from being written to the file.
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:024b40ba-51fa-498e-b151-08725060151e" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal> 
-  
+  <pre style=white-space:normal>
+
   <pre class="brush: csharp; title: ; notranslate" title="">
 /// &lt;summary&gt;
 /// Functions for performing common Json Serialization operations.
@@ -313,8 +312,8 @@ public static class JsonSerialization
 And here is an example of how to use it:
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:428a32e0-1b79-435d-9616-4dc42cd1259b" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal> 
-  
+  <pre style=white-space:normal>
+
   <pre class="brush: csharp; title: ; notranslate" title="">
 public class Person
 {
@@ -360,8 +359,8 @@ The caveats to be aware of are the same between the Newtonsoft.Json and JavaScri
 Be aware that the JavaScriptSerializer is in the System.Web.Extensions assembly, but in the System.Web.Script.Serialization namespace.&#160; Here is the code from the Newtonsoft.Json code snippet that needs to be replaced in order to use the JavaScriptSerializer:
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:446bb8dd-02bb-4ba1-96eb-c598c8847b78" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal> 
-  
+  <pre style=white-space:normal>
+
   <pre class="brush: csharp; title: ; notranslate" title="">
 // In WriteFromJsonFile&lt;T&gt;() function replace:
 var contentsToWriteToFile = Newtonsoft.Json.JsonConvert.SerializeObject(objectToWrite);

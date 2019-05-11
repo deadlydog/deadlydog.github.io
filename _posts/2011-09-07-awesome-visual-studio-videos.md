@@ -3,7 +3,6 @@ id: 69
 title: Awesome Visual Studio Videos
 date: 2011-09-07T23:39:00-06:00
 author: deadlydog
-layout: post
 guid: https://deadlydog.wordpress.com/?p=69
 permalink: /awesome-visual-studio-videos/
 jabber_published:

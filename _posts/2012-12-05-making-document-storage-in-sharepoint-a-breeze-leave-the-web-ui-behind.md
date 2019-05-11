@@ -3,7 +3,6 @@ id: 153
 title: Making document storage in Sharepoint a breeze (leave the Web UI behind)
 date: 2012-12-05T16:12:52-06:00
 author: deadlydog
-layout: post
 guid: https://deadlydog.wordpress.com/?p=153
 permalink: /making-document-storage-in-sharepoint-a-breeze-leave-the-web-ui-behind/
 jabber_published:

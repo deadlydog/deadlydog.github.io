@@ -3,7 +3,6 @@ id: 572
 title: PowerShell Code To Ensure Client Is Using At Least The Minimum Required PowerShell Version
 date: 2013-10-25T11:48:31-06:00
 author: deadlydog
-layout: post
 guid: http://dans-blog.azurewebsites.net/?p=572
 permalink: /ensure-client-is-using-at-least-the-minimum-required-powershell-version/
 categories:
@@ -17,8 +16,8 @@ tags:
 <strike>Here’s some simple code that will throw an exception if the client running your script is not using the version of PowerShell (or greater) that is required; just change the **$REQUIRED\_POWERSHELL\_VERSION** variable value to the minimum version that the script requires.</strike>
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:b77ad9cb-8830-4443-9d5b-7bc3a9463724" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal> 
-  
+  <pre style=white-space:normal>
+
   <pre class="brush: powershell; gutter: false; pad-line-numbers: true; title: ; notranslate" title="">
 # Throw an exception if client is not using the minimum required PowerShell version.
 $REQUIRED_POWERSHELL_VERSION = 3.0	# The minimum Major.Minor PowerShell version that is required for the script to run.
@@ -33,8 +32,8 @@ if ($REQUIRED_POWERSHELL_VERSION -gt $POWERSHELL_VERSION)
 Thanks to Robin M for pointing out that PowerShell has [the built-in #Requires statement](http://technet.microsoft.com/en-us/library/hh847765.aspx) for this purpose, so you do not need to use the code above. Instead, simply place the following code anywhere in your script to enforce the desired PowerShell version required to run the script:
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:3dfcb0e0-e4f8-4326-ae25-83f0b5f7766f" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal> 
-  
+  <pre style=white-space:normal>
+
   <pre class="brush: powershell; gutter: false; pad-line-numbers: true; title: ; notranslate" title="">
 #Requires -Version 3.0
 </pre>

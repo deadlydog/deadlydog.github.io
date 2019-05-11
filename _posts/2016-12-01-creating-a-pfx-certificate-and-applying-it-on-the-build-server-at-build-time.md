@@ -3,7 +3,6 @@ id: 897
 title: Creating A .PFX Certificate And Applying It On The Build Server At Build Time
 date: 2016-12-01T02:46:41-06:00
 author: deadlydog
-layout: post
 guid: http://dans-blog.azurewebsites.net/?p=897
 permalink: /creating-a-pfx-certificate-and-applying-it-on-the-build-server-at-build-time/
 categories:
@@ -21,7 +20,7 @@ There are many project types that require a .pfx file in order to build and/or p
 
 > Error APPX0108: The certificate specified has expired. For more information about renewing certificates, see <http://go.microsoft.com/fwlink/?LinkID=241478>.
 
-> error MSB4018: The “ResolveKeySource” task failed unexpectedly.   
+> error MSB4018: The “ResolveKeySource” task failed unexpectedly.
 > System.InvalidOperationException: Showing a modal dialog box or form when the application is not running in UserInteractive mode is not a valid operation. Specify the ServiceNotification or DefaultDesktopOnly style to display a notification from a service application.
 
 > Cannot import the following key file: companyname.pfx. The key file may be password protected.
@@ -36,13 +35,13 @@ If your .pfx file has expired, you need to remove the current pfx file and add a
 
 ### Creating a new .pfx file for a UWP application
 
-To create a new password protected .pfx file in a UWP application, 
+To create a new password protected .pfx file in a UWP application,
 
 1. open the _Package.appxmanifest_ file that resides in the root of the project and
 
 2. go to the _Packaging_ tab.
 
-3. In here, click the _Choose Certificate…_ button. 
+3. In here, click the _Choose Certificate…_ button.
 
 4. In the _Configure Certificate…_ dropdown, choose an existing certificate that you have, or create a new test certificate and provide a password for it. This should create the certificate and add the new .pfx file to your project’s root.
 
@@ -52,13 +51,13 @@ To create a new password protected .pfx file in a UWP application,
 
 ### Creating a new .pfx file for a ClickOnce application
 
-Creating a pfx file for a ClickOnce application is similar, but instead you want to 
+Creating a pfx file for a ClickOnce application is similar, but instead you want to
 
-1. open up the project’s _Properties_ window (by right-clicking on the project) and 
+1. open up the project’s _Properties_ window (by right-clicking on the project) and
 
-2. go to the _Signing_ tab. 
+2. go to the _Signing_ tab.
 
-3. Check off the box to _Sign the ClickOnce manifests_ and then 
+3. Check off the box to _Sign the ClickOnce manifests_ and then
 
 4. choose the certificate you want to use, or create your own password-protected test certificate.
 
@@ -73,8 +72,8 @@ Now that the project has a pfx certificate, we will need to update our build ser
 Before building the solution, we will want to apply the certificate using this PowerShell script, _Import-PfxCertificate.ps1_:
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:1e82feb1-f2e7-4c1c-83d9-bbe27b475f7f" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal> 
-  
+  <pre style=white-space:normal>
+
   <pre class="brush: powershell; pad-line-numbers: true; title: ; notranslate" title="">
 param($PfxFilePath, $Password)
 

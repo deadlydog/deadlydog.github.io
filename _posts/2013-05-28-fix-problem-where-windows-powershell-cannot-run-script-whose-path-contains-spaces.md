@@ -3,7 +3,6 @@ id: 310
 title: Fix Problem Where Windows PowerShell Cannot Run Script Whose Path Contains Spaces
 date: 2013-05-28T12:58:25-06:00
 author: deadlydog
-layout: post
 guid: http://dans-blog.azurewebsites.net/?p=310
 permalink: /fix-problem-where-windows-powershell-cannot-run-script-whose-path-contains-spaces/
 categories:
@@ -76,7 +75,7 @@ The trick is that you have to put “& “ before the script path to actually ru
 
 ## Run script path with spaces from File Explorer
 
-So when we are in the PowerShell console we can manually type the path enclosed in double quotes, but what do we do when simply trying to run the file from File Explorer (i.e. Windows Explorer in Windows 7 and previous) by double clicking it?&#160; 
+So when we are in the PowerShell console we can manually type the path enclosed in double quotes, but what do we do when simply trying to run the file from File Explorer (i.e. Windows Explorer in Windows 7 and previous) by double clicking it?&#160;
 
 **The answer:** Edit the registry to pass the file path to powershell.exe with the path enclosed in quotes.
 
@@ -93,8 +92,8 @@ but we want it to look like this:
 So if you want to go manually edit that key by hand you can, or you can simply download the registry script below and then double click the .reg file to have it update the registry key value for you (choose Yes when asked if you want to continue).
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:be029cc3-84d6-4665-b3e8-b0f73437eb88" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal> 
-  
+  <pre style=white-space:normal>
+
   <pre class="brush: plain; gutter: false; pad-line-numbers: true; title: ; notranslate" title="">
 Windows Registry Editor Version 5.00
 
@@ -112,7 +111,7 @@ Windows Registry Editor Version 5.00
 
 IMHO this seems like a bug with the PowerShell installer (and Windows since PowerShell is built into Windows 7 and up), so please go [up-vote the bug I submitted to get this fixed](https://connect.microsoft.com/PowerShell/feedback/details/788806/powershell-script-cannot-be-ran-outside-of-console-if-path-contains-spaces).
 
-So now you can run your PowerShell scripts from File Explorer regardless of whether their path contains spaces or not <img class="wlEmoticon wlEmoticon-smile" style="border-top-style: none; border-left-style: none; border-bottom-style: none; border-right-style: none" alt="Smile" src="http://dans-blog.azurewebsites.net/wp-content/uploads/2013/05/wlEmoticon-smile.png" />.&#160; For those interested, t[his is the post](http://superuser.com/questions/445925/how-to-add-item-to-right-click-menu-when-not-selecting-a-folder-or-file) that got me thinking about using the registry to fix this problem. 
+So now you can run your PowerShell scripts from File Explorer regardless of whether their path contains spaces or not <img class="wlEmoticon wlEmoticon-smile" style="border-top-style: none; border-left-style: none; border-bottom-style: none; border-right-style: none" alt="Smile" src="http://dans-blog.azurewebsites.net/wp-content/uploads/2013/05/wlEmoticon-smile.png" />.&#160; For those interested, t[his is the post](http://superuser.com/questions/445925/how-to-add-item-to-right-click-menu-when-not-selecting-a-folder-or-file) that got me thinking about using the registry to fix this problem.
 
 &#160;
 
@@ -129,8 +128,8 @@ So to keep the PowerShell console window open after the script completes, we jus
 And here is the .reg script with the –NoExit switch included:
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:94269297-b2fd-4114-a6e1-a3092ee9b03a" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal> 
-  
+  <pre style=white-space:normal>
+
   <pre class="brush: plain; gutter: false; title: ; notranslate" title="">
 Windows Registry Editor Version 5.00
 

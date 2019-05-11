@@ -3,7 +3,6 @@ id: 19
 title: Adding ValueChanged events to Dependency Objects in WPF
 date: 2011-04-17T22:56:00-06:00
 author: deadlydog
-layout: post
 guid: https://deadlydog.wordpress.com/?p=19
 permalink: /adding-valuechanged-events-to-dependency-objects-in-wpf/
 jabber_published:
@@ -30,7 +29,7 @@ Method 1 &#8211; Use static event hanlders, like so:
 }
 
 <span style="color:blue;">public</span> <span style="color:blue;">static</span> <span style="color:blue;">readonly</span> DependencyProperty SelectedIDProperty =
-	DependencyProperty.Register(<span>"SelectedID"</span>, <span style="color:blue;">typeof</span>(<span style="color:blue;">int</span>), <span style="color:blue;">typeof</span>(SelectorBase), 
+	DependencyProperty.Register(<span>"SelectedID"</span>, <span style="color:blue;">typeof</span>(<span style="color:blue;">int</span>), <span style="color:blue;">typeof</span>(SelectorBase),
 <span style="font-size:11pt;font-family:&#039;color:blue;line-height:115%;"><span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; </span></span><span style="color:blue;">new</span> PropertyMetadata(0, <span style="color:blue;">new</span> PropertyChangedCallback(OnSelectedIDChanged)));
 
 <span style="color:blue;">private</span> <span style="color:blue;">static</span> <span style="color:blue;">void</span> OnSelectedIDChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)

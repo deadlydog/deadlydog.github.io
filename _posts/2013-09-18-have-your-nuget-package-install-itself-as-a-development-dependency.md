@@ -3,7 +3,6 @@ id: 474
 title: Have Your NuGet Package Install Itself As A Development Dependency
 date: 2013-09-18T17:30:26-06:00
 author: deadlydog
-layout: post
 guid: http://dans-blog.azurewebsites.net/?p=474
 permalink: /have-your-nuget-package-install-itself-as-a-development-dependency/
 categories:
@@ -50,7 +49,7 @@ function Set-PackageToBeDevelopmentDependency($PackageId, $ProjectDirectoryPath)
     function Get-XmlNamespaceManager($XmlDocument, [string]$NamespaceURI = "")
     {
         # If a Namespace URI was not given, use the Xml document's default namespace.
-	    if ([string]::IsNullOrEmpty($NamespaceURI)) { $NamespaceURI = $XmlDocument.DocumentElement.NamespaceURI }	
+	    if ([string]::IsNullOrEmpty($NamespaceURI)) { $NamespaceURI = $XmlDocument.DocumentElement.NamespaceURI }
 
 	    # In order for SelectSingleNode() to actually work, we need to use the fully qualified node path along with an Xml Namespace Manager, so set them up.
 	    [System.Xml.XmlNamespaceManager]$xmlNsManager = New-Object System.Xml.XmlNamespaceManager($XmlDocument.NameTable)

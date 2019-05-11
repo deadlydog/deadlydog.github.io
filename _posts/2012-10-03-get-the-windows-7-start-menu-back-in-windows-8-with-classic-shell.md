@@ -3,7 +3,6 @@ id: 108
 title: Get the Windows 7 Start Menu Back in Windows 8 with Classic Shell
 date: 2012-10-03T14:13:00-06:00
 author: deadlydog
-layout: post
 guid: https://deadlydog.wordpress.com/?p=108
 permalink: /get-the-windows-7-start-menu-back-in-windows-8-with-classic-shell/
 jabber_published:

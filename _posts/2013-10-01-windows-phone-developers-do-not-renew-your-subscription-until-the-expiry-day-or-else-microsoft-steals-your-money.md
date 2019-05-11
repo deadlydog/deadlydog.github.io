@@ -3,7 +3,6 @@ id: 513
 title: 'Windows Phone Developers: Do not renew your subscription until the expiry DAY or else Microsoft steals your money'
 date: 2013-10-01T17:36:46-06:00
 author: deadlydog
-layout: post
 guid: http://dans-blog.azurewebsites.net/?p=513
 permalink: /windows-phone-developers-do-not-renew-your-subscription-until-the-expiry-day-or-else-microsoft-steals-your-money/
 categories:
@@ -33,56 +32,56 @@ After this happened I started up a support request chat with MS to have them ext
       </p>
     </td>
   </tr>
-  
+
   <tr>
     <td>
       <p>
         <b>Chat start time</b>
       </p>
     </td>
-    
+
     <td>
       <p>
         Oct 1, 2013 6:16:27 PM EST
       </p>
     </td>
   </tr>
-  
+
   <tr>
     <td>
       <p>
         <b>Chat end time</b>
       </p>
     </td>
-    
+
     <td>
       <p>
         Oct 1, 2013 6:40:49 PM EST
       </p>
     </td>
   </tr>
-  
+
   <tr>
     <td>
       <p>
         <b>Duration (actual chatting time)</b>
       </p>
     </td>
-    
+
     <td>
       <p>
         00:24:21
       </p>
     </td>
   </tr>
-  
+
   <tr>
     <td>
       <p>
         <b>Operator</b>
       </p>
     </td>
-    
+
     <td>
       <p>
         Adrian
@@ -99,7 +98,7 @@ After this happened I started up a support request chat with MS to have them ext
       </p>
     </td>
   </tr>
-  
+
   <tr>
     <td>
       <p>

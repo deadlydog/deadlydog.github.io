@@ -3,7 +3,6 @@ id: 99
 title: SQL Server script commands to check if object exists and drop it
 date: 2012-09-14T14:03:00-06:00
 author: deadlydog
-layout: post
 guid: https://deadlydog.wordpress.com/?p=99
 permalink: /sql-server-script-commands-to-check-if-object-exists-and-drop-it/
 jabber_published:
@@ -21,15 +20,15 @@ tags:
 Over the past couple years I’ve been keeping track of common SQL Server script commands that I use so I don’t have to constantly Google them.&#160; Most of them are how to check if a SQL Server object exists before dropping it.&#160; I thought others might find these useful to have them all in one place, so here you go:
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:8a021f85-751a-472b-8bac-979cc265f448" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal> 
-  
+  <pre style=white-space:normal>
+
   <pre class="brush: sql; pad-line-numbers: true; title: ; notranslate" title="">
 --===============================
 -- Create a new table and add keys and constraints
 --===============================
 IF NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'TableName' AND TABLE_SCHEMA='dbo')
 BEGIN
-	CREATE TABLE [dbo].[TableName] 
+	CREATE TABLE [dbo].[TableName]
 	(
 		[ColumnName1] INT NOT NULL, -- To have a field auto-increment add IDENTITY(1,1)
 		[ColumnName2] INT NULL,
@@ -39,29 +38,29 @@ BEGIN
 	-- Add the table's primary key
 	ALTER TABLE [dbo].[TableName] ADD CONSTRAINT [PK_TableName] PRIMARY KEY NONCLUSTERED
 	(
-		[ColumnName1], 
+		[ColumnName1],
 		[ColumnName2]
 	)
-	
+
 	-- Add a foreign key constraint
 	ALTER TABLE [dbo].[TableName] WITH CHECK ADD CONSTRAINT [FK_Name] FOREIGN KEY
 	(
-		[ColumnName1], 
+		[ColumnName1],
 		[ColumnName2]
 	)
-	REFERENCES [dbo].[Table2Name] 
+	REFERENCES [dbo].[Table2Name]
 	(
-		[OtherColumnName1], 
+		[OtherColumnName1],
 		[OtherColumnName2]
 	)
-	
+
 	-- Add indexes on columns that are often used for retrieval
 	CREATE INDEX IN_ColumnNames ON [dbo].[TableName]
 	(
 		[ColumnName2],
 		[ColumnName3]
 	)
-	
+
 	-- Add a check constraint
 	ALTER TABLE [dbo].[TableName] WITH CHECK ADD CONSTRAINT [CH_Name] CHECK (([ColumnName] &gt;= 0.0000))
 END
@@ -73,10 +72,10 @@ IF NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.COLUMNS where TABLE_SCHEMA='dbo'
 	AND TABLE_NAME = 'TableName' AND COLUMN_NAME = 'ColumnName')
 BEGIN
 	ALTER TABLE [dbo].[TableName] ADD [ColumnName] INT NOT NULL DEFAULT(0)
-	
+
 	-- Add a description extended property to the column to specify what its purpose is.
-	EXEC sys.sp_addextendedproperty @name=N'MS_Description', 
-		@value = N'Add column comments here, describing what this column is for.' , 
+	EXEC sys.sp_addextendedproperty @name=N'MS_Description',
+		@value = N'Add column comments here, describing what this column is for.' ,
 		@level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',
 		@level1name = N'TableName', @level2type=N'COLUMN',
 		@level2name = N'ColumnName'
@@ -109,7 +108,7 @@ BEGIN
 	IF EXISTS (SELECT * FROM sys.fn_listExtendedProperty(N'MS_Description', N'SCHEMA', N'dbo', N'Table',
 				N'TableName', N'COLUMN', N'ColumnName'))
 	BEGIN
-		EXEC sys.sp_dropextendedproperty @name=N'MS_Description', 
+		EXEC sys.sp_dropextendedproperty @name=N'MS_Description',
 			@level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',
 			@level1name = N'TableName', @level2type=N'COLUMN',
 			@level2name = N'ColumnName'
@@ -159,7 +158,7 @@ END
 --===============================
 DECLARE @ConstraintName VARCHAR(100)
 SET @ConstraintName = (SELECT TOP 1 s.name FROM sys.sysobjects s JOIN sys.syscolumns c ON s.parent_obj=c.id
-						WHERE s.xtype='d' AND c.cdefault=s.id 
+						WHERE s.xtype='d' AND c.cdefault=s.id
 						AND parent_obj = OBJECT_ID('TableName') AND c.name ='ColumnName')
 
 IF @ConstraintName IS NOT NULL
@@ -171,7 +170,7 @@ END
 -- Example of how to drop dynamically named Unique constraint
 --===============================
 DECLARE @ConstraintName VARCHAR(100)
-SET @ConstraintName = (SELECT TOP 1 CONSTRAINT_NAME FROM INFORMATION_SCHEMA.TABLE_CONSTRAINTS 
+SET @ConstraintName = (SELECT TOP 1 CONSTRAINT_NAME FROM INFORMATION_SCHEMA.TABLE_CONSTRAINTS
 						WHERE CONSTRAINT_TYPE='UNIQUE' AND TABLE_SCHEMA='dbo'
 						AND TABLE_NAME = 'TableName' AND CONSTRAINT_NAME LIKE 'FirstPartOfConstraintName%')
 
@@ -198,7 +197,7 @@ END
 --===============================
 -- Drop a UDF
 --===============================
-IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.ROUTINES WHERE ROUTINE_TYPE='FUNCTION' AND ROUTINE_SCHEMA='dbo' AND 
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.ROUTINES WHERE ROUTINE_TYPE='FUNCTION' AND ROUTINE_SCHEMA='dbo' AND
 		ROUTINE_NAME = 'UDFName')
 BEGIN
 	EXEC('DROP FUNCTION [dbo].[UDFName]')

@@ -3,7 +3,6 @@ id: 767
 title: Browser Extensions To Expand GitHub Code Pages To Fill The Full Width Of Your Browser
 date: 2014-05-27T14:26:46-06:00
 author: deadlydog
-layout: post
 guid: http://dans-blog.azurewebsites.net/?p=767
 permalink: /browser-extensions-to-expand-github-code-pages-to-fill-the-full-width-of-your-browser/
 categories:
@@ -20,7 +19,7 @@ tags:
   - View
   - Width
 ---
-### 
+###
 
 ### The problem
 

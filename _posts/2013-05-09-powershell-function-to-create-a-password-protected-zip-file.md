@@ -3,7 +3,6 @@ id: 231
 title: PowerShell function to create a password protected zip file
 date: 2013-05-09T17:42:14-06:00
 author: deadlydog
-layout: post
 guid: https://deadlydog.wordpress.com/?p=231
 permalink: /powershell-function-to-create-a-password-protected-zip-file/
 jabber_published:
@@ -25,8 +24,8 @@ Here is the function I wrote that uses 7zip to perform the zip, since 7zip suppo
 <font color="#ff0000">Updated function to support multiple compression types: 7z, zip, gzip, bzip2, tar, iso, and udf.</font>
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:0e7fa6f5-ab5f-4223-ae37-9a4950d2e189" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal> 
-  
+  <pre style=white-space:normal>
+
   <pre class="brush: powershell; pad-line-numbers: true; title: ; notranslate" title="">
 function Write-ZipUsing7Zip([string]$FilesToZip, [string]$ZipOutputFilePath, [string]$Password, [ValidateSet('7z','zip','gzip','bzip2','tar','iso','udf')][string]$CompressionType = 'zip', [switch]$HideWindow)
 {
@@ -35,27 +34,27 @@ function Write-ZipUsing7Zip([string]$FilesToZip, [string]$ZipOutputFilePath, [st
 	$pathTo64Bit7Zip = "C:\Program Files\7-Zip\7z.exe"
 	$THIS_SCRIPTS_DIRECTORY = Split-Path $script:MyInvocation.MyCommand.Path
 	$pathToStandAloneExe = Join-Path $THIS_SCRIPTS_DIRECTORY "7za.exe"
-	if (Test-Path $pathTo64Bit7Zip) { $pathTo7ZipExe = $pathTo64Bit7Zip } 
+	if (Test-Path $pathTo64Bit7Zip) { $pathTo7ZipExe = $pathTo64Bit7Zip }
 	elseif (Test-Path $pathTo32Bit7Zip) { $pathTo7ZipExe = $pathTo32Bit7Zip }
 	elseif (Test-Path $pathToStandAloneExe) { $pathTo7ZipExe = $pathToStandAloneExe }
 	else { throw "Could not find the 7-zip executable." }
-	
+
 	# Delete the destination zip file if it already exists (i.e. overwrite it).
 	if (Test-Path $ZipOutputFilePath) { Remove-Item $ZipOutputFilePath -Force }
-	
+
 	$windowStyle = "Normal"
 	if ($HideWindow) { $windowStyle = "Hidden" }
-	
+
 	# Create the arguments to use to zip up the files.
 	# Command-line argument syntax can be found at: http://www.dotnetperls.com/7-zip-examples
 	$arguments = "a -t$CompressionType ""$ZipOutputFilePath"" ""$FilesToZip"" -mx9"
 	if (!([string]::IsNullOrEmpty($Password))) { $arguments += " -p$Password" }
-	
+
 	# Zip up the files.
 	$p = Start-Process $pathTo7ZipExe -ArgumentList $arguments -Wait -PassThru -WindowStyle $windowStyle
 
 	# If the files were not zipped successfully.
-	if (!(($p.HasExited -eq $true) -and ($p.ExitCode -eq 0))) 
+	if (!(($p.HasExited -eq $true) -and ($p.ExitCode -eq 0)))
 	{
 		throw "There was a problem creating the zip file '$ZipFilePath'."
 	}
@@ -72,8 +71,8 @@ function Write-ZipUsing7Zip([string]$FilesToZip, [string]$ZipOutputFilePath, [st
 And here’s some examples of how to call the function:
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:6d42504d-899b-47fc-876b-7fdf51177012" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal> 
-  
+  <pre style=white-space:normal>
+
   <pre class="brush: powershell; title: ; notranslate" title="">
 Write-ZipUsing7Zip -FilesToZip "C:\SomeFolder" -ZipOutputFilePath "C:\SomeFolder.zip" -Password "password123"
 Write-ZipUsing7Zip "C:\Folder\*.txt" "C:\FoldersTxtFiles.zip" -HideWindow

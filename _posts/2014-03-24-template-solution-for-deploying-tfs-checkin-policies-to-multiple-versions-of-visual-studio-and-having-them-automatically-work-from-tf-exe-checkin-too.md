@@ -3,7 +3,6 @@ id: 741
 title: 'Template Solution For Deploying TFS Checkin Policies To Multiple Versions Of Visual Studio And Having Them Automatically Work From &ldquo;TF.exe Checkin&rdquo; Too'
 date: 2014-03-24T10:55:05-06:00
 author: deadlydog
-layout: post
 guid: http://dans-blog.azurewebsites.net/?p=741
 permalink: /template-solution-for-deploying-tfs-checkin-policies-to-multiple-versions-of-visual-studio-and-having-them-automatically-work-from-tf-exe-checkin-too/
 categories:
@@ -32,7 +31,7 @@ Let’s get right to it by giving you the source code.&#160; You can [get it fro
 
 ### Explanation of source code and adding new checkin policies
 
-If you open the Visual Studio (VS) solution the first thing you will likely notice is that there are 5 projects.&#160; CheckinPolicies.VS2012 simply references all of the files in CheckinPolicies.VS2013 as links (i.e. shortcut files); this is because we need to compile the CheckinPolicies.VS2012 project using TFS 2012 assemblies, and the CheckinPolicies.VS2013 project using TFS2013 assemblies, but want both projects to have all of the same checkin policies.&#160; So the projects contain all of the same files; just a few of their references are different.&#160; A copy of the references that are different between the two projects are stored in the project’s “Dependencies” folder; these are the Team Foundation assemblies that are specific to VS 2012 and 2013.&#160; Having these assemblies stored in the solution allows us to still build the VS 2012 checkin policies, even if you (or a colleague) only has VS 2013 installed. 
+If you open the Visual Studio (VS) solution the first thing you will likely notice is that there are 5 projects.&#160; CheckinPolicies.VS2012 simply references all of the files in CheckinPolicies.VS2013 as links (i.e. shortcut files); this is because we need to compile the CheckinPolicies.VS2012 project using TFS 2012 assemblies, and the CheckinPolicies.VS2013 project using TFS2013 assemblies, but want both projects to have all of the same checkin policies.&#160; So the projects contain all of the same files; just a few of their references are different.&#160; A copy of the references that are different between the two projects are stored in the project’s “Dependencies” folder; these are the Team Foundation assemblies that are specific to VS 2012 and 2013.&#160; Having these assemblies stored in the solution allows us to still build the VS 2012 checkin policies, even if you (or a colleague) only has VS 2013 installed.
 
 **Update:** To avoid having multiple CheckinPolicy.VS* projects, we could use [the msbuild targets technique that P. Kelly shows on his blog](http://blogs.msdn.com/b/phkelley/archive/2013/08/12/checkin-policy-multitargeting.aspx). However, I believe we would still need multiple deployment projects, as described below, in order to have the checkin policies work outside of Visual Studio.
 
@@ -40,8 +39,8 @@ The other projects are CheckinPolicyDeployment.VS2012 and CheckinPolicyDeploymen
 
 Basically everything is ready to go.&#160; Just start adding new checkin policy classes to the CheckinPolicy.VS2013 project, and then also add them to the CheckinPolicy.VS2012 project as a link.&#160; You can add a file as a link in 2 different ways in the Solution Explorer:
 
-  1. Right-click on the CheckinPolicies.VS2012 project and choose **Add -> Existing Item…**, and then navigate to the new class file that you added to the CheckinPolicy.VS2013 project.&#160; Instead of clicking the Add button though, click the little down arrow on the side of the Add button and then choose **Add As Link**. 
-  2. Drag and drop the file from the CheckinPolicy.VS2013 project to the CheckinPolicy.VS2012 project, but while releasing the left mouse button to drop the file, hold down the **Alt** key; this will change the operation from adding a copy of the file to that project, to adding a shortcut file that links back to the original file. 
+  1. Right-click on the CheckinPolicies.VS2012 project and choose **Add -> Existing Item…**, and then navigate to the new class file that you added to the CheckinPolicy.VS2013 project.&#160; Instead of clicking the Add button though, click the little down arrow on the side of the Add button and then choose **Add As Link**.
+  2. Drag and drop the file from the CheckinPolicy.VS2013 project to the CheckinPolicy.VS2012 project, but while releasing the left mouse button to drop the file, hold down the **Alt** key; this will change the operation from adding a copy of the file to that project, to adding a shortcut file that links back to the original file.
 
 There is a **DummyCheckinPolicy.cs** file in the CheckinPolicies.VS2013 project that shows you an example of how to create a new checkin policy.&#160; Basically you just need to create a new public, serializable class that extends the CheckinPolicyBase class.&#160; The actual logic for your checkin policy to perform goes in the Evaluate() function. If there is a policy violation in the code that is trying to be checked in, just add a new PolicyFailure instance to the **failures** list with the message that you want the user to see.
 
@@ -49,7 +48,7 @@ There is a **DummyCheckinPolicy.cs** file in the CheckinPolicies.VS2013 project 
 
 ### Building a new version of your checkin policies
 
-Once you are ready to deploy your policies, you will want to update the version number in the **source.extension.vsixmanifest** file in both the CheckinPolicyDeployment.VS2012 and CheckinPolicyDeployment.VS2013 projects.&#160; Since these projects will both contain the same policies, I recommend giving them the same version number as well.&#160; Once you have updated the version number, build the solution in Release mode.&#160; From there you will find the new VSIX files at "CheckinPolicyDeployment.VS2012\bin\Release\TFS Checkin Policies VS2012.vsix" and "CheckinPolicyDeployment.VS2013\bin\Release\TFS Checkin Policies VS2013.vsix".&#160; You can then distribute them to your team; I recommend [setting up an internal VS Extension Gallery](http://blogs.msdn.com/b/visualstudio/archive/2011/10/03/private-extension-galleries-for-the-enterprise.aspx), but the poor-man’s solution is to just email the vsix file out to everyone on your team.</ol> 
+Once you are ready to deploy your policies, you will want to update the version number in the **source.extension.vsixmanifest** file in both the CheckinPolicyDeployment.VS2012 and CheckinPolicyDeployment.VS2013 projects.&#160; Since these projects will both contain the same policies, I recommend giving them the same version number as well.&#160; Once you have updated the version number, build the solution in Release mode.&#160; From there you will find the new VSIX files at "CheckinPolicyDeployment.VS2012\bin\Release\TFS Checkin Policies VS2012.vsix" and "CheckinPolicyDeployment.VS2013\bin\Release\TFS Checkin Policies VS2013.vsix".&#160; You can then distribute them to your team; I recommend [setting up an internal VS Extension Gallery](http://blogs.msdn.com/b/visualstudio/archive/2011/10/03/private-extension-galleries-for-the-enterprise.aspx), but the poor-man’s solution is to just email the vsix file out to everyone on your team.</ol>
 
 
 
@@ -60,8 +59,8 @@ This is already hooked up and working in the template solution, so nothing needs
 Here is the VSPackage class code to hook up the events and call our UpdateCheckinPoliciesInRegistry() function:
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:d3ac8eba-c91b-4c1b-abe8-471e98e10a13" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal> 
-  
+  <pre style=white-space:normal>
+
   <pre class="brush: csharp; pad-line-numbers: true; title: ; notranslate" title="">
 /// &lt;summary&gt;
 /// This is the class that implements the package exposed by this assembly.
@@ -69,8 +68,8 @@ Here is the VSPackage class code to hook up the events and call our UpdateChecki
 /// The minimum requirement for a class to be considered a valid package for Visual Studio
 /// is to implement the IVsPackage interface and register itself with the shell.
 /// This package uses the helper classes defined inside the Managed Package Framework (MPF)
-/// to do it: it derives from the Package class that provides the implementation of the 
-/// IVsPackage interface and uses the registration attributes defined in the framework to 
+/// to do it: it derives from the Package class that provides the implementation of the
+/// IVsPackage interface and uses the registration attributes defined in the framework to
 /// register itself and its components with the shell.
 /// &lt;/summary&gt;
 // This attribute tells the PkgDef creation utility (CreatePkgDef.exe) that this class is
@@ -158,8 +157,8 @@ All of the attributes on the class are put there by default, except for the “[
 You might have noticed that this class is abstract.&#160; This is because the VS 2012 and VS 2013 classed need to have a unique ID attribute, so the actual VSPackage class just inherits from this one.&#160; Here is what the VS 2013 one looks like:
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:85de8469-8a51-4b97-9918-d7b9d080d4d6" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal> 
-  
+  <pre style=white-space:normal>
+
   <pre class="brush: csharp; title: ; notranslate" title="">
 [Guid(GuidList.guidCheckinPolicyDeployment_VS2013PkgString)]
 public sealed class CheckinPolicyDeployment_VS2013Package : CheckinPolicyDeploymentShared.CheckinPolicyDeploymentPackage
@@ -172,8 +171,8 @@ The UpdateCheckinPoliciesInRegistry() function checks to see if the appropriate 
 The one variable to note here is the **customCheckinPolicyEntryName**. This corresponds to the registry key name that I’ve specified in the RegistryKeyToAdd.pkgdef file, so if you change it be sure to change it in both places.&#160; This is what the RegistryKeyToAdd.pkgdef file contains:
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:126f5fe7-740e-4b8a-a0cc-129168467d2d" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal> 
-  
+  <pre style=white-space:normal>
+
   <pre class="brush: plain; gutter: false; title: ; notranslate" title="">
 // We use "\..\" in the value because the projects that include this file place it in a "FilesFromShared" folder, and we want it to look for the dll in the root directory.
 [$RootKey$\TeamFoundation\SourceControl\Checkin Policies]
@@ -184,8 +183,8 @@ The one variable to note here is the **customCheckinPolicyEntryName**. This corr
 And here are the contents of the UpdateCheckinPolicyInRegistry.ps1 PowerShell file.&#160; This is basically just a refactored version of the script I posted on my old blog post:
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:7caa97b6-afa4-4503-8159-2fc9af991b75" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal> 
-  
+  <pre style=white-space:normal>
+
   <pre class="brush: powershell; title: ; notranslate" title="">
 # This script copies the required registry value so that the checkin policies will work when doing a TFS checkin from the command line.
 param

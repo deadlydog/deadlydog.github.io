@@ -3,7 +3,6 @@ id: 55
 title: Setting up keyboard shortcuts to build solutions in MSBuild
 date: 2011-06-01T13:32:00-06:00
 author: deadlydog
-layout: post
 guid: https://deadlydog.wordpress.com/?p=55
 permalink: /setting-up-keyboard-shortcuts-to-build-solutions-in-msbuild/
 jabber_published:
@@ -38,30 +37,30 @@ Below I outline how I&#8217;ve setup my system to build my solution files in MSB
 In my office we have both a Client solution and a Server solution, so I have the script setup to build the client solution with WindowsKey+C and the server solution with WindowsKey+S. We also work in multiple branches, so I have global variables near the top of the script that I can set to true to quickly switch between Development, QA, and Release branches.<span>&#160; </span>I also have WindowsKey+U configured to open the code directory and WindowsKey+Q to open the database directory.<span>&#160; </span>Obviously you can change the keyboard mappings to your liking; these are just the ones that I prefer.<span>&#160; </span>As a side note here, just be aware that these will override the default windows key shortcuts; so in my case WindowsKey+U no longer opens up the Windows Ease of Access Center window.
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:369ffdc3-cb6b-45dd-8120-244ba384d3d7" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal> 
-  
+  <pre style=white-space:normal>
+
   <pre class="brush: bash; title: ; notranslate" title="">
 ; IMPORTANT INFO ABOUT GETTING STARTED: Lines that start with a
 ; semicolon, such as this one, are comments.  They are not executed.
- 
+
 ; This script has a special filename and path because it is automatically
 ; launched when you run the program directly.  Also, any text file whose
 ; name ends in .ahk is associated with the program, which means that it
 ; can be launched simply by double-clicking it.  You can have as many .ahk
 ; files as you want, located in any folder.  You can also run more than
 ; one ahk file simultaneously and each will get its own tray icon.
- 
+
 ; Make it so only one instance of this script can run at a time (and reload the script if another instance of it tries to run)
 #SingleInstance force
- 
+
 ;==========================================================
 ; Global Variables - Path settings, customization, etc.
 ;==========================================================
- 
+
 ; Set one of these to &quot;true&quot; to build from the Staging or Release branches, otherwise we'll use the development branch.
 _UsingTFSStagingBranch := false
 _UsingTFSReleaseCandidate := false
- 
+
 ; Specify the Code Folder containing the Solution files to build
 if (_UsingTFSReleaseCandidate == true)
 {
@@ -78,74 +77,74 @@ else
     ; The directory of the current build's Code folder
     _CodeFolder := &quot;C:\dev\TFS\RQ4TeamProject\Dev\RQ4\Core\&quot;
 }
- 
+
 ; Path to the database folder
 _DatabaseFolder := &quot;C:\dev&quot;
- 
+
 ; The path to the Visual Studio Command Prompt link
 _VSCommandPromptPath := &quot;C:\Visual Studio Command Prompt (2010).lnk&quot;
 _VSCommandPromptWindowName := &quot;Administrator: Visual Studio Command Prompt (2010)&quot;
- 
+
 ; The position I want the MS Build window to move to when opened
 _MSBuildWindowPositionX := 400
 _MSBuildWindowPositionY := 270
- 
+
 ; The MSBuild command to use
 _MSBuildCommand := &quot;msbuild&quot; ; /verbosity:minimal&quot;
- 
- 
+
+
 ;==========================================================
 ; WindowsKey+C - Build the Client.sln
 ;==========================================================
 #c UP::
- 
+
 ; Make sure the keys have been released before continuing to avoid accidental commands
 KeyWait LWin
 ;KeyWait c
- 
+
 ;BuildSolution(_CodeFolder . &quot;RQ4.Client.sln&quot;)
 BuildSolution(&quot;RQ4.Client.sln&quot;)
- 
+
 return
- 
+
 ;==========================================================
 ; WindowsKey+S - Build the Server.sln
 ;==========================================================
 #s UP::
- 
+
 ; Make sure the keys have been released before continuing to avoid accidental commands
 KeyWait LWin
 ;KeyWait s
- 
+
 BuildSolution(&quot;RQ4.Server.sln&quot;)
- 
+
 return
- 
+
 ;==========================================================
 ; WindowsKey+B - Build the Server.sln then Client.sln
 ;==========================================================
 #b UP::
- 
+
 ; Make sure the keys have been released before continuing to avoid accidental commands
 KeyWait LWin
 ;KeyWait b
- 
+
 BuildSolution(&quot;RQ4.Server.sln&quot;)
 BuildSolution(&quot;RQ4.Client.sln&quot;)
- 
+
 return
- 
+
 ;==========================================================
 ; WindowsKey+U - Open the Code folder
 ;==========================================================
 #u UP::Run %_CodeFolder%
- 
+
 ;==========================================================
 ; WindowsKey+Q - Open the Database folder
 ;==========================================================
 #q UP::Run %_DatabaseFolder%
- 
- 
+
+
 ;==========================================================
 ; Functions
 ;==========================================================
@@ -153,7 +152,7 @@ BuildSolution(solutionPath)
 {
     ; Let this function know that all variables except the passed in parameters are global variables.
     global
- 
+
     ; If the Visual Studio Command Prompt is already open
     if WinExist(_VSCommandPromptWindowName)
     {
@@ -165,35 +164,35 @@ BuildSolution(solutionPath)
     {
         ; So open the Visual Studio 2008 Command Prompt
         Run %_VSCommandPromptPath%
-         
+
         ; Make sure this window is in focus before sending commands
         WinWaitActive, %_VSCommandPromptWindowName%
-         
+
         ; If the window wasn't opened for some reason
         if Not WinExist(_VSCommandPromptWindowName)
         {
             ; Display an error message that the VS Command Prompt couldn't be opened
             MsgBox, There was a problem opening %_VSCommandPromptPath%
-         
+
             ; Exit, returning failure
             return false
         }
     }
- 
+
     ; Make sure this window is in focus before sending commands
     WinWaitActive, %_VSCommandPromptWindowName%
- 
+
     ; Move the window to the position I like it to be
     WinMove, _MSBuildWindowPositionX, _MSBuildWindowPositionY
- 
+
     ; Set it to the correct directory
     SendInput cd %_CodeFolder% {Enter}
- 
+
     ;MsgBox %solutionPath%  ; Message box to display the Solution Path for debugging purposes
-     
+
     ; Build the solution file
     SendInput %_MSBuildCommand% %solutionPath% {Enter}
-     
+
     ; Return success
     return true
 }

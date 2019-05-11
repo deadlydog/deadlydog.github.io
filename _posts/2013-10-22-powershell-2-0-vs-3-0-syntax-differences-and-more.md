@@ -3,7 +3,6 @@ id: 552
 title: PowerShell 2.0 vs. 3.0 Syntax Differences And More
 date: 2013-10-22T11:23:21-06:00
 author: deadlydog
-layout: post
 guid: http://dans-blog.azurewebsites.net/?p=552
 permalink: /powershell-2-0-vs-3-0-syntax-differences-and-more/
 categories:
@@ -29,8 +28,8 @@ Before we get to the differences, here are some things you may want to know rela
 All PS versions:
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:eec700ae-ff7f-4e9e-ad8d-012446939105" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal> 
-  
+  <pre style=white-space:normal>
+
   <pre class="brush: powershell; gutter: false; title: ; notranslate" title="">
 $PSVersionTable.PSVersion
 </pre>
@@ -43,8 +42,8 @@ $PSVersionTable.PSVersion
 All PS versions:&#160; use **PowerShell.exe –Version [version]** to start a new PowerShell session, where [version] is the PowerShell version that you want the session to use, then run your script in this new session.&#160; Shorthand is **PowerShell –v [version]**
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:d546ad77-ce58-4f54-9f22-e63596597160" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal> 
-  
+  <pre style=white-space:normal>
+
   <pre class="brush: powershell; gutter: false; title: ; notranslate" title="">
 PowerShell.exe -Version 2.0
 </pre>
@@ -63,8 +62,8 @@ Note: [You can’t run PowerShell ISE in an older version of PowerShell](http://
 PS v2.0:
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:ff48c6ee-b013-4ef8-9f64-6757f820d050" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal> 
-  
+  <pre style=white-space:normal>
+
   <pre class="brush: powershell; gutter: false; title: ; notranslate" title="">
 Get-Service | Where { $_.Status -eq ‘running’ }
 </pre>
@@ -73,8 +72,8 @@ Get-Service | Where { $_.Status -eq ‘running’ }
 PS v3.0:
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:b17453c9-40a0-4f73-b82d-d36b53f174cd" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal> 
-  
+  <pre style=white-space:normal>
+
   <pre class="brush: powershell; gutter: false; title: ; notranslate" title="">
 Get-Service | Where Status -eq ‘running
 </pre>
@@ -91,8 +90,8 @@ PS V2.0 Error Message:
 PS v2.0:
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:16fa1db7-05da-4367-a9c3-ef5736a85fe5" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal> 
-  
+  <pre style=white-space:normal>
+
   <pre class="brush: powershell; gutter: false; pad-line-numbers: true; title: ; notranslate" title="">
 $class = "win32_bios"
 Invoke-Command -cn dc3 {param($class) gwmi -class $class} -ArgumentList $class
@@ -102,8 +101,8 @@ Invoke-Command -cn dc3 {param($class) gwmi -class $class} -ArgumentList $class
 PS v3.0:
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:4095dffb-ddad-4b1b-aae7-61c3840f06d8" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal> 
-  
+  <pre style=white-space:normal>
+
   <pre class="brush: powershell; gutter: false; pad-line-numbers: true; title: ; notranslate" title="">
 $class = "win32_bios"
 Invoke-Command -cn dc3 {gwmi -class $Using:class}
@@ -119,8 +118,8 @@ PS v2.0: Validation only available on cmdlet/function/script parameters.
 PS v3.0: Validation available on cmdlet/function/script parameters, and on variables.
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:502387f4-4082-48ac-b095-7108c174e4f2" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal> 
-  
+  <pre style=white-space:normal>
+
   <pre class="brush: powershell; gutter: false; pad-line-numbers: true; title: ; notranslate" title="">
 [ValidateRange(1,5)][int]$someLocalVariable = 1
 </pre>
@@ -146,8 +145,8 @@ NOTE: The All (*), Warning (3), Verbose (4) and Debug (5) redirection operators 
 PS v2.0: Could only redirect Success and Error output.
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:dc481368-8bf5-445e-ade4-14bfbffa902f" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal> 
-  
+  <pre style=white-space:normal>
+
   <pre class="brush: powershell; gutter: false; title: ; notranslate" title="">
 # Sends errors (2) and success output (1) to the success output stream.
 Get-Process none, Powershell 2&gt;&1
@@ -157,8 +156,8 @@ Get-Process none, Powershell 2&gt;&1
 PS v3.0: Can also redirect Warning, Verbose, Debug, and All output.
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:0c1b5ff4-2985-4831-98d5-56afcf879d46" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal> 
-  
+  <pre style=white-space:normal>
+
   <pre class="brush: powershell; gutter: false; title: ; notranslate" title="">
 # Function to generate each kind of output.
 function Test-Output { Get-Process PowerShell, none; Write-Warning "Test!"; Write-Verbose "Test Verbose"; Write-Debug "Test Debug"}
@@ -176,8 +175,8 @@ Test-Output *&gt; Test-Output.txt
 PS v2.0 will throw an error if you try and access a parameter set parameter that has not been defined.&#160; The solution is to give it a default value when it is not defined. Specify the Private scope in case a variable with the same name exists in the global scope or an inherited scope:
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:19b50216-fb40-4017-a0cb-231a296bc9ac" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal> 
-  
+  <pre style=white-space:normal>
+
   <pre class="brush: powershell; gutter: false; pad-line-numbers: true; title: ; notranslate" title="">
 # Default the ParameterSet variables that may not have been set depending on which parameter set is being used. This is required for PowerShell v2.0 compatibility.
 if (!(Test-Path Variable:Private:SomeStringParameter)) { $SomeStringParameter = $null }
@@ -197,8 +196,8 @@ PS v2.0 Error Message:
 PS v2.0:
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:dfe8d41b-0e0a-4926-a4b2-740e2ef610b7" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal> 
-  
+  <pre style=white-space:normal>
+
   <pre class="brush: powershell; gutter: false; pad-line-numbers: true; title: ; notranslate" title="">
 [parameter(Position=1,Mandatory=$true)] [string] $SomeParameter
 </pre>
@@ -207,8 +206,8 @@ PS v2.0:
 PS v3.0:
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:84c42572-dc4c-42cd-9829-7d46d110fd47" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal> 
-  
+  <pre style=white-space:normal>
+
   <pre class="brush: powershell; gutter: false; title: ; notranslate" title="">
 [parameter(Position=1,Mandatory)] [string] $SomeParameter
 </pre>
@@ -225,8 +224,8 @@ PS v2.0 Error Message:
 PS v2.0:
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:5c520c9f-453f-485c-a5b8-9ddc7f77c3e4" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal> 
-  
+  <pre style=white-space:normal>
+
   <pre class="brush: powershell; pad-line-numbers: true; title: ; notranslate" title="">
 [string]::IsNullOrEmpty($SomeString)
 </pre>
@@ -235,8 +234,8 @@ PS v2.0:
 PS v3.0:
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:695d97aa-84f5-479b-a67c-49399b3ae7e8" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal> 
-  
+  <pre style=white-space:normal>
+
   <pre class="brush: powershell; title: ; notranslate" title="">
 [string]::IsNullOrWhiteSpace($SomeString)
 </pre>
@@ -249,8 +248,8 @@ PS v2.0 Error Message:
 PS v2.0 compatible version of IsNullOrWhitespace function:
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:efffa5d2-21a2-40cb-be39-c471c04ab806" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal> 
-  
+  <pre style=white-space:normal>
+
   <pre class="brush: powershell; title: ; notranslate" title="">
 # PowerShell v2.0 compatible version of [string]::IsNullOrWhitespace.
 function StringIsNullOrWhitespace([string] $string)
@@ -268,8 +267,8 @@ function StringIsNullOrWhitespace([string] $string)
 PS v2.0:
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:327b97a7-30e4-4d77-bd2b-4f906c496c21" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal> 
-  
+  <pre style=white-space:normal>
+
   <pre class="brush: powershell; title: ; notranslate" title="">
 Get-ChildItem -Path $somePath | Where-Object { $_.PSIsContainer }	# Get directories only.
 Get-ChildItem -Path $somePath | Where-Object { !$_.PSIsContainer }	# Get files only.
@@ -279,8 +278,8 @@ Get-ChildItem -Path $somePath | Where-Object { !$_.PSIsContainer }	# Get files o
 PS v3.0:
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:d7803f09-1d3d-455e-a365-50ea3926564f" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal> 
-  
+  <pre style=white-space:normal>
+
   <pre class="brush: powershell; gutter: false; pad-line-numbers: true; title: ; notranslate" title="">
 Get-ChildItem -Path $somePath -Directory
 Get-ChildItem -Path $somePath -File

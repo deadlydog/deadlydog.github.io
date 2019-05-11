@@ -3,7 +3,6 @@ id: 325
 title: Create and publish your NuGet package in one click with the New-NuGetPackage PowerShell script
 date: 2013-06-07T14:54:04-06:00
 author: deadlydog
-layout: post
 guid: http://dans-blog.azurewebsites.net/?p=325
 permalink: /create-and-publish-your-nuget-package-in-one-click-with-the-new-nugetpackage-powershell-script/
 categories:
@@ -26,9 +25,9 @@ I’ve spent a good chunk of time investigating how nuget.exe works and creating
 
 Here’s a list of some of the script’s features:
 
-  * Create the .nupkg package file and optionally push the package to the NuGet Gallery (or a custom gallery). 
-  * Can be ran from Windows Explorer (i.e. double-click it) or called via PowerShell if you want to be able to pass in specific parameters or suppress prompts. 
-  * Can prompt user for version number and release notes (prompts are prefilled with previous version number and release notes) or can suppress all prompts. 
+  * Create the .nupkg package file and optionally push the package to the NuGet Gallery (or a custom gallery).
+  * Can be ran from Windows Explorer (i.e. double-click it) or called via PowerShell if you want to be able to pass in specific parameters or suppress prompts.
+  * Can prompt user for version number and release notes (prompts are prefilled with previous version number and release notes) or can suppress all prompts.
 
 This makes packing and pushing your NuGet packages quick and easy, whether doing it manually or integrating it into your build system.&#160; Creating NuGet packages wasn’t overly complicated before, but this makes it even simpler and less tedious.
 
@@ -43,8 +42,8 @@ This makes packing and pushing your NuGet packages quick and easy, whether doing
 During my investigation I compiled a list of what happens when doing “nuget spec” and “nuget pack” against the various different file types (e.g. dll vs. project vs. nuspec).&#160; Someone else may find this information useful, so here it is:
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:d1994009-f7ca-4489-a2ad-b8857adc884d" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal> 
-  
+  <pre style=white-space:normal>
+
   <pre class="brush: plain; pad-line-numbers: true; title: ; notranslate" title="">
 Spec a Project or DLL directly (e.g. "nuget spec PathToFile"):
 - Creates a partial .nuspec; still has placeholder info for some fields (e.g. Id, Dependencies).

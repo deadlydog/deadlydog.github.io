@@ -3,7 +3,6 @@ id: 627
 title: Get AutoHotkey To Interact With Admin Windows Without Running AHK Script As Admin
 date: 2013-11-21T11:22:37-06:00
 author: deadlydog
-layout: post
 guid: http://dans-blog.azurewebsites.net/?p=627
 permalink: /get-autohotkey-to-interact-with-admin-windows-without-running-ahk-script-as-admin/
 categories:
@@ -25,8 +24,8 @@ A while back I posted about [AutoHotkey not being able to interact with Windows 
 
 ### Problems with running your AHK script as admin
 
-  1. You may have to deal with the annoying UAC prompt every time you launch your script. 
-  2. Any programs the script launches also receive administrative privileges. 
+  1. You may have to deal with the annoying UAC prompt every time you launch your script.
+  2. Any programs the script launches also receive administrative privileges.
 
 #1 is only a problem if you haven’t set your AHK script to run as admin on startup as I showed in [my other blog post](http://dans-blog.azurewebsites.net/get-autohotkey-script-to-run-as-admin-at-startup/) (i.e. you are still manually launching your script) or you haven’t changed your UAC settings to never prompt you with notifications (which some companies restrict) (see screenshot to the right).
 
@@ -40,20 +39,20 @@ Today I stumbled across [this post](http://www.autohotkey.com/board/topic/70449-
 
 Running his script is pretty straight forward:
 
-  1. Download and unzip his EnableUIAccess.zip file.  
-  
+  1. Download and unzip his EnableUIAccess.zip file.
+
     <div id="scid:fb3a1972-4489-4e52-abe7-25a00bb07fdf:66ce9452-5565-493c-8936-2b942ceddc7a" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
       <p>
         <a href="http://dans-blog.azurewebsites.net/wp-content/uploads/2014/06/EnableUIAccess2.zip" target="_blank">You can also get it here</a>
       </p>
     </div>
 
-  2. Double-click the EnableUIAccess.ahk script to run it, and it will automatically prompt you. 
-  3. Read the disclaimer and click OK. 
-  4. On the **Select Source File** prompt choose the C:\Program Files\AutoHotkey\AutoHotkey.exe file.&#160; This was already selected by default for me. (Might be Program Files (x86) if you have 32-bit AHK installed on 64-bit Windows) 
-  5. On the **Select Destination File** prompt choose the same C:\Program Files\AutoHotkey\AutoHotkey.exe file again.&#160; Again, this was already selected by default for me. 
-  6. Click Yes to replace the existing file. 
-  7. Click Yes when prompted to Run With UI Access. 
+  2. Double-click the EnableUIAccess.ahk script to run it, and it will automatically prompt you.
+  3. Read the disclaimer and click OK.
+  4. On the **Select Source File** prompt choose the C:\Program Files\AutoHotkey\AutoHotkey.exe file.&#160; This was already selected by default for me. (Might be Program Files (x86) if you have 32-bit AHK installed on 64-bit Windows)
+  5. On the **Select Destination File** prompt choose the same C:\Program Files\AutoHotkey\AutoHotkey.exe file again.&#160; Again, this was already selected by default for me.
+  6. Click Yes to replace the existing file.
+  7. Click Yes when prompted to Run With UI Access.
 
 That’s it.&#160; (Re)Start your AHK scripts and they should now be able to interact with Windows 8 windows and applications running as admin 🙂
 

@@ -3,7 +3,6 @@ id: 73
 title: 'Parallel MSBuild FTW &#8211; Build faster in parallel'
 date: 2012-03-31T02:09:00-06:00
 author: deadlydog
-layout: post
 guid: https://deadlydog.wordpress.com/?p=73
 permalink: /parallel-msbuild-ftw-build-faster-in-parallel/
 jabber_published:
@@ -36,127 +35,127 @@ The poster boasts compile time improvements up to 59%, but the performance boost
     <td class="xl69" style="vertical-align: bottom; padding-top: 1px; padding-left: 1px; padding-right: 1px" height="20" width="94" align="center">
       <strong># of Processes</strong>
     </td>
-    
+
     <td class="xl69" style="vertical-align: bottom; padding-top: 1px; padding-left: 1px; padding-right: 1px" width="52" align="center">
       <strong>1st Run</strong>
     </td>
-    
+
     <td class="xl69" style="vertical-align: bottom; padding-top: 1px; padding-left: 1px; padding-right: 1px" width="57" align="center">
       <strong>2nd Run</strong>
     </td>
-    
+
     <td class="xl69" style="vertical-align: bottom; padding-top: 1px; padding-left: 1px; padding-right: 1px" width="54" align="center">
       <strong>3rd Run</strong>
     </td>
-    
+
     <td class="xl69" style="vertical-align: bottom; padding-top: 1px; padding-left: 1px; padding-right: 1px" width="49" align="center">
       <strong>Avg</strong>
     </td>
-    
+
     <td class="xl69" style="vertical-align: bottom; padding-top: 1px; padding-left: 1px; padding-right: 1px" width="86" align="center">
       <strong>Performance</strong>
     </td>
   </tr>
-  
+
   <tr style="height: 15pt">
     <td class="xl68" style="vertical-align: bottom; padding-top: 1px; padding-left: 1px; padding-right: 1px" height="20" align="right">
       <strong>1</strong>
     </td>
-    
+
     <td style="vertical-align: bottom; padding-top: 1px; padding-left: 1px; padding-right: 1px" align="right">
       192
     </td>
-    
+
     <td style="vertical-align: bottom; padding-top: 1px; padding-left: 1px; padding-right: 1px" align="right">
       195
     </td>
-    
+
     <td style="vertical-align: bottom; padding-top: 1px; padding-left: 1px; padding-right: 1px" align="right">
       200
     </td>
-    
+
     <td style="vertical-align: bottom; padding-top: 1px; padding-left: 1px; padding-right: 1px" align="right">
       195.67
     </td>
-    
+
     <td class="xl65" style="vertical-align: bottom; padding-top: 1px; padding-left: 1px; padding-right: 1px" align="right">
       100%
     </td>
   </tr>
-  
+
   <tr style="height: 15pt">
     <td class="xl68" style="vertical-align: bottom; padding-top: 1px; padding-left: 1px; padding-right: 1px" height="20" align="right">
       <strong>2</strong>
     </td>
-    
+
     <td style="vertical-align: bottom; padding-top: 1px; padding-left: 1px; padding-right: 1px" align="right">
       155
     </td>
-    
+
     <td style="vertical-align: bottom; padding-top: 1px; padding-left: 1px; padding-right: 1px" align="right">
       156
     </td>
-    
+
     <td style="vertical-align: bottom; padding-top: 1px; padding-left: 1px; padding-right: 1px" align="right">
       156
     </td>
-    
+
     <td style="vertical-align: bottom; padding-top: 1px; padding-left: 1px; padding-right: 1px" align="right">
       155.67
     </td>
-    
+
     <td class="xl66" style="vertical-align: bottom; padding-top: 1px; padding-left: 1px; padding-right: 1px" align="right">
       79.56%
     </td>
   </tr>
-  
+
   <tr style="height: 15pt">
     <td class="xl68" style="vertical-align: bottom; padding-top: 1px; padding-left: 1px; padding-right: 1px" height="20" align="right">
       <strong>4</strong>
     </td>
-    
+
     <td style="vertical-align: bottom; padding-top: 1px; padding-left: 1px; padding-right: 1px" align="right">
       146
     </td>
-    
+
     <td style="vertical-align: bottom; padding-top: 1px; padding-left: 1px; padding-right: 1px" align="right">
       149
     </td>
-    
+
     <td style="vertical-align: bottom; padding-top: 1px; padding-left: 1px; padding-right: 1px" align="right">
       146
     </td>
-    
+
     <td class="xl67" style="vertical-align: bottom; padding-top: 1px; padding-left: 1px; padding-right: 1px" align="right">
       147.00
     </td>
-    
+
     <td class="xl66" style="vertical-align: bottom; padding-top: 1px; padding-left: 1px; padding-right: 1px" align="right">
       75.13%
     </td>
   </tr>
-  
+
   <tr style="height: 15pt">
     <td class="xl68" style="vertical-align: bottom; padding-top: 1px; padding-left: 1px; padding-right: 1px" height="20" align="right">
       <strong>8</strong>
     </td>
-    
+
     <td style="vertical-align: bottom; padding-top: 1px; padding-left: 1px; padding-right: 1px" align="right">
       136
     </td>
-    
+
     <td style="vertical-align: bottom; padding-top: 1px; padding-left: 1px; padding-right: 1px" align="right">
       136
     </td>
-    
+
     <td style="vertical-align: bottom; padding-top: 1px; padding-left: 1px; padding-right: 1px" align="right">
       138
     </td>
-    
+
     <td style="vertical-align: bottom; padding-top: 1px; padding-left: 1px; padding-right: 1px" align="right">
       136.67
     </td>
-    
+
     <td class="xl66" style="vertical-align: bottom; padding-top: 1px; padding-left: 1px; padding-right: 1px" align="right">
       69.85%
     </td>
@@ -172,11 +171,11 @@ The poster also has [a follow-up post](http://www.hanselman.com/blog/HackParalle
 Happy building!
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:704233d6-752d-4986-a88f-b810d349e9c4" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal> 
-  
+  <pre style=white-space:normal>
+
   <pre class="brush: bash; gutter: false; title: ; notranslate" title="">
 :: Calculate how many Processes to use to do the build.
-SET NumberOfProcessesToUseForBuild=1 
+SET NumberOfProcessesToUseForBuild=1
 SET BuildInParallel=false
 if %NUMBER_OF_PROCESSORS% GTR 2 (
                 SET NumberOfProcessesToUseForBuild=2

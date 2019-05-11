@@ -3,7 +3,6 @@ id: 905
 title: 'Strongly sign your Visual Studio extension&rsquo;s 3rd party assemblies to avoid assembly-loading errors at runtime'
 date: 2017-06-12T02:21:50-06:00
 author: deadlydog
-layout: post
 guid: http://dans-blog.azurewebsites.net/?p=905
 permalink: /strongly-sign-your-visual-studio-extensions-3rd-party-assemblies-to-avoid-assembly-loading-errors-at-runtime/
 categories:
@@ -18,8 +17,8 @@ tags:
 When trying to create a Visual Studio 2017 version of my [Diff All Files Visual Studio extension](https://github.com/deadlydog/VS.DiffAllFiles), I was encountering a runtime error indicating that a module could not be loaded in one of the 3rd party libraries I was referencing (LibGit2Sharp):
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:95d134a5-b96f-4319-ba98-1b1ec52a6c6f" class="wlWriterEditableSmartContent" style="margin: 0px; padding: 0px; float: none; display: inline;">
-  <pre style=white-space:normal> 
-  
+  <pre style=white-space:normal>
+
   <pre class="brush: plain; title: ; notranslate" title="">
 System.TypeInitializationException occurred
   HResult=0x80131534
@@ -41,8 +40,8 @@ DllNotFoundException: Unable to load DLL 'git2-a5cf255': The specified module co
 By using the [Assembly Binding Log Viewer](https://docs.microsoft.com/en-us/dotnet/framework/tools/fuslogvw-exe-assembly-binding-log-viewer), a.k.a. fuslogvw.exe, and being sure to run it “as administrator” so I could modify the settings, I was able to see this error at runtime when it tried to load my extension:
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:a60d995f-cfe8-4fca-b98b-bcc7fe5ed61d" class="wlWriterEditableSmartContent" style="margin: 0px; padding: 0px; float: none; display: inline;">
-  <pre style=white-space:normal> 
-  
+  <pre style=white-space:normal>
+
   <pre class="brush: plain; title: ; notranslate" title="">
 LOG: Binding succeeds. Returns assembly from C:\USERS\DAN.SCHROEDER\APPDATA\LOCAL\MICROSOFT\VISUALSTUDIO\15.0_B920D444EXP\EXTENSIONS\DANSKINGDOM\DIFF ALL FILES FOR VS2017\1.0\LibGit2Sharp.dll.
 LOG: Assembly is loaded in LoadFrom load context.
@@ -58,8 +57,8 @@ WRN: See whitepaper http://go.microsoft.com/fwlink/?LinkId=109270 for more infor
 My extension was using the LibGit2Sharp v0.23.1.0 version, but here it said there was already v0.22.0.0 of that assembly loaded in the app domain. Looking at some of the other logs in the Assembly Binding Log Viewer from when Visual Studio was running, I could see that the [GitHub Extension for Visual Studio](https://visualstudio.github.com/) that I had installed was loading the 0.22.0.0 version into the app domain before my extension had been initiated. So the problem was that Visual Studio had already loaded an older version of the assembly that my extension depended on, so my extension was using that older version instead of the intended version. The solution to this problem was for me to give a new strong name to the LibGit2Sharp.dll that I included with my extension, so that both assemblies could be loaded into the app domain without conflicting with one another. To do this, I ran the following batch script against the LibGit2Sharp.dll file in the packages directory (replacing $(SolutionDirectory) with the path to my solution):
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:1c8c6a79-4b38-48c6-a55a-5d3a7c05df13" class="wlWriterEditableSmartContent" style="margin: 0px; padding: 0px; float: none; display: inline;">
-  <pre style=white-space:normal> 
-  
+  <pre style=white-space:normal>
+
   <pre class="brush: bash; pad-line-numbers: true; title: ; notranslate" title="">
 :: Strongly sign the LibGit2Sharp.dll, as VS Extensions want strongly signed assemblies and we want to avoid runtime version conflicts.
 :: http://www.codeproject.com/Tips/341645/Referenced-assembly-does-not-have-a-strong-name

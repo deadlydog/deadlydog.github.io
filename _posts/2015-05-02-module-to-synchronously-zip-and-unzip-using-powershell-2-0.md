@@ -3,7 +3,6 @@ id: 856
 title: Module to Synchronously Zip and Unzip using PowerShell 2.0
 date: 2015-05-02T16:04:48-06:00
 author: deadlydog
-layout: post
 guid: http://dans-blog.azurewebsites.net/?p=856
 permalink: /module-to-synchronously-zip-and-unzip-using-powershell-2-0/
 categories:
@@ -31,8 +30,8 @@ This module allows you to add files and directories to a new or existing zip fil
 Here is an example of how to call the 2 public module functions, Compress-ZipFile (i.e. Zip) and Expand-ZipFile (i.e. Unzip):
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:c477b44f-4315-4191-9e58-69985c245cc6" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal> 
-  
+  <pre style=white-space:normal>
+
   <pre class="brush: powershell; pad-line-numbers: true; title: ; notranslate" title="">
 # If you place the psm1 file in the global PowerShell Modules directory then you could reference it just by name, not by the entire file path like we do here (assumes psm1 file is in same directory as your script).
 $THIS_SCRIPTS_DIRECTORY_PATH = Split-Path $script:MyInvocation.MyCommand.Path
@@ -63,8 +62,8 @@ Expand-ZipFile -ZipFilePath $zipFilePath -DestinationDirectoryPath $destinationD
 And here is the Synchronous-ZipAndUnzip.psm1 module code itself:
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:29c2a72f-020f-4b64-894f-d46367ef93ae" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal> 
-  
+  <pre style=white-space:normal>
+
   <pre class="brush: powershell; title: ; notranslate" title="">
 #Requires -Version 2.0
 
@@ -88,12 +87,12 @@ function MoveDirectoryIntoZipFile($parentInZipFileShell, $pathOfItemToCopy)
 	if ($parentInZipFileShell.IsFolder)
 	{ $parentInZipFileShell = $parentInZipFileShell.GetFolder }
 	$itemToCopyShell = $parentInZipFileShell.ParseName($nameOfItemToCopy)
-	
+
 	# If this item does not exist in the Zip file yet, or it is a file, move it over.
 	if ($itemToCopyShell -eq $null -or !$itemToCopyShell.IsFolder)
 	{
 		$parentInZipFileShell.MoveHere($pathOfItemToCopy)
-		
+
 		# Wait for the file to be moved before continuing, to avoid erros about the zip file being locked or a file not being found.
 		while (Test-Path -Path $pathOfItemToCopy)
 		{ Start-Sleep -Milliseconds 10 }
@@ -117,7 +116,7 @@ function MoveFilesOutOfZipFileItems($shellItems, $directoryToMoveFilesToShell, $
 	{
 		# If this is a directory, recursively call this function to iterate over all files/directories within it.
 		if ($shellItem.IsFolder)
-		{ 
+		{
 			$totalItems += MoveFilesOutOfZipFileItems -shellItems $shellItem.GetFolder.Items() -directoryToMoveFilesTo $directoryToMoveFilesToShell -fileNameToMatch $fileNameToMatch
 		}
 		# Else this is a file.
@@ -128,7 +127,7 @@ function MoveFilesOutOfZipFileItems($shellItems, $directoryToMoveFilesToShell, $
 			{
 				$directoryToMoveFilesToShell.MoveHere($shellItem)
 			}
-		}			
+		}
 	}
 }
 
@@ -139,19 +138,19 @@ function Expand-ZipFile
 	(
 		[parameter(Position=1,Mandatory=$true)]
 		[ValidateScript({(Test-Path -Path $_ -PathType Leaf) -and $_.EndsWith('.zip', [StringComparison]::OrdinalIgnoreCase)})]
-		[string]$ZipFilePath, 
-		
+		[string]$ZipFilePath,
+
 		[parameter(Position=2,Mandatory=$false)]
-		[string]$DestinationDirectoryPath, 
-		
+		[string]$DestinationDirectoryPath,
+
 		[Alias(&quot;Force&quot;)]
 		[switch]$OverwriteWithoutPrompting
 	)
-	
+
 	BEGIN { }
 	END { }
 	PROCESS
-	{	
+	{
 		# If a Destination Directory was not given, create one in the same directory as the Zip file, with the same name as the Zip file.
 		if ($DestinationDirectoryPath -eq $null -or $DestinationDirectoryPath.Trim() -eq [string]::Empty)
 		{
@@ -159,9 +158,9 @@ function Expand-ZipFile
 			$zipFileNameWithoutExtension = [System.IO.Path]::GetFileNameWithoutExtension($ZipFilePath)
 			$DestinationDirectoryPath = Join-Path -Path $zipFileDirectoryPath -ChildPath $zipFileNameWithoutExtension
 		}
-		
+
 		# If the directory to unzip the files to does not exist yet, create it.
-		if (!(Test-Path -Path $DestinationDirectoryPath -PathType Container)) 
+		if (!(Test-Path -Path $DestinationDirectoryPath -PathType Container))
 		{ New-Item -Path $DestinationDirectoryPath -ItemType Container &gt; $null }
 
 		# Flags and values found at: https://msdn.microsoft.com/en-us/library/windows/desktop/bb759795%28v=vs.85%29.aspx
@@ -179,13 +178,13 @@ function Expand-ZipFile
 	    $shell = New-Object -ComObject Shell.Application
 		$destinationDirectoryShell = $shell.NameSpace($DestinationDirectoryPath)
 	    $zipShell = $shell.NameSpace($ZipFilePath)
-		
+
 		# Start copying the Zip files into the destination directory, using the flags specified by the user. This is an asynchronous operation.
 	    $destinationDirectoryShell.CopyHere($zipShell.Items(), $copyFlags)
 
 		# Get the number of files and directories in the Zip file.
 		$numberOfItemsInZipFile = GetNumberOfItemsInZipFileItems -shellItems $zipShell.Items()
-		
+
 		# The Copy (i.e. unzip) operation is asynchronous, so wait until it is complete before continuing. That is, sleep until the Destination Directory has the same number of files as the Zip file.
 		while ((Get-ChildItem -Path $DestinationDirectoryPath -Recurse -Force).Count -lt $numberOfItemsInZipFile)
 		{ Start-Sleep -Milliseconds 100 }
@@ -199,15 +198,15 @@ function Compress-ZipFile
 	(
 		[parameter(Position=1,Mandatory=$true)]
 		[ValidateScript({Test-Path -Path $_})]
-		[string]$FileOrDirectoryPathToAddToZipFile, 
-	
+		[string]$FileOrDirectoryPathToAddToZipFile,
+
 		[parameter(Position=2,Mandatory=$false)]
 		[string]$ZipFilePath,
-		
+
 		[Alias(&quot;Force&quot;)]
 		[switch]$OverwriteWithoutPrompting
 	)
-	
+
 	BEGIN { }
 	END { }
 	PROCESS
@@ -215,11 +214,11 @@ function Compress-ZipFile
 		# If a Zip File Path was not given, create one in the same directory as the file/directory being added to the zip file, with the same name as the file/directory.
 		if ($ZipFilePath -eq $null -or $ZipFilePath.Trim() -eq [string]::Empty)
 		{ $ZipFilePath = Join-Path -Path $FileOrDirectoryPathToAddToZipFile -ChildPath '.zip' }
-		
+
 		# If the Zip file to create does not have an extension of .zip (which is required by the shell.application), add it.
 		if (!$ZipFilePath.EndsWith('.zip', [StringComparison]::OrdinalIgnoreCase))
 		{ $ZipFilePath += '.zip' }
-		
+
 		# If the Zip file to add the file to does not exist yet, create it.
 		if (!(Test-Path -Path $ZipFilePath -PathType Leaf))
 		{ New-Item -Path $ZipFilePath -ItemType File &gt; $null }
@@ -229,7 +228,7 @@ function Compress-ZipFile
 
 		# Get the number of files and directories to add to the Zip file.
 		$numberOfFilesAndDirectoriesToAddToZipFile = (Get-ChildItem -Path $FileOrDirectoryPathToAddToZipFile -Recurse -Force).Count
-		
+
 		# Get if we are adding a file or directory to the Zip file.
 		$itemToAddToZipIsAFile = Test-Path -Path $FileOrDirectoryPathToAddToZipFile -PathType Leaf
 
@@ -248,27 +247,27 @@ function Compress-ZipFile
 		{
 			$canPerformSimpleCopyIntoZipFile = $true
 		}
-		
+
 		# If we can perform a simple copy operation to get the file/directory into the Zip file.
 		if ($canPerformSimpleCopyIntoZipFile)
 		{
 			# Start copying the file/directory into the Zip file since there won't be any conflicts. This is an asynchronous operation.
 			$zipShell.CopyHere($FileOrDirectoryPathToAddToZipFile)	# Copy Flags are ignored when copying files into a zip file, so can't use them like we did with the Expand-ZipFile function.
-			
+
 			# The Copy operation is asynchronous, so wait until it is complete before continuing.
 			# Wait until we can see that the file/directory has been created.
 			while ($zipShell.ParseName($fileOrDirectoryNameToAddToZipFile) -eq $null)
 			{ Start-Sleep -Milliseconds 100 }
-			
+
 			# If we are copying a directory into the Zip file, we want to wait until all of the files/directories have been copied.
 			if (!$itemToAddToZipIsAFile)
 			{
 				# Get the number of files and directories that should be copied into the Zip file.
 				$numberOfItemsToCopyIntoZipFile = (Get-ChildItem -Path $FileOrDirectoryPathToAddToZipFile -Recurse -Force).Count
-			
+
 				# Get a handle to the new directory we created in the Zip file.
 				$newDirectoryInZipFileShell = $zipShell.ParseName($fileOrDirectoryNameToAddToZipFile)
-				
+
 				# Wait until the new directory in the Zip file has the expected number of files and directories in it.
 				while ((GetNumberOfItemsInZipFileItems -shellItems $newDirectoryInZipFileShell.GetFolder.Items()) -lt $numberOfItemsToCopyIntoZipFile)
 				{ Start-Sleep -Milliseconds 100 }
@@ -283,7 +282,7 @@ function Compress-ZipFile
 			$tempDirectoryPath = $null
 			$tempDirectoryPath = Join-Path -Path ([System.IO.Path]::GetTempPath()) -ChildPath ([System.IO.Path]::GetRandomFileName())
 			New-Item -Path $tempDirectoryPath -ItemType Container &gt; $null
-		
+
 			# If we will be moving a directory into the temp directory.
 			$numberOfItemsInZipFilesDirectory = 0
 			if ($fileOrDirectoryInZipFileShell.IsFolder)
@@ -291,11 +290,11 @@ function Compress-ZipFile
 				# Get the number of files and directories in the Zip file's directory.
 				$numberOfItemsInZipFilesDirectory = GetNumberOfItemsInZipFileItems -shellItems $fileOrDirectoryInZipFileShell.GetFolder.Items()
 			}
-		
+
 			# Start moving the file/directory out of the Zip file and into a temp directory. This is an asynchronous operation.
 			$tempDirectoryShell = $shell.NameSpace($tempDirectoryPath)
 			$tempDirectoryShell.MoveHere($fileOrDirectoryInZipFileShell)
-			
+
 			# If we are moving a directory, we need to wait until all of the files and directories in that Zip file's directory have been moved.
 			$fileOrDirectoryPathInTempDirectory = Join-Path -Path $tempDirectoryPath -ChildPath $fileOrDirectoryNameToAddToZipFile
 			if ($fileOrDirectoryInZipFileShell.IsFolder)
@@ -311,7 +310,7 @@ function Compress-ZipFile
 				while (!(Test-Path -Path $fileOrDirectoryPathInTempDirectory))
 				{ Start-Sleep -Milliseconds 100 }
 			}
-			
+
 			# We want to copy the file/directory to add to the Zip file to the same location in the temp directory, so that files/directories are merged.
 			# If we should automatically overwrite files, do it.
 			if ($OverwriteWithoutPrompting)
@@ -320,7 +319,7 @@ function Compress-ZipFile
 			else
 			{ Copy-Item -Path $FileOrDirectoryPathToAddToZipFile -Destination $tempDirectoryPath -Recurse -Confirm -ErrorAction SilentlyContinue }	# SilentlyContinue errors to avoid an error for every directory copied.
 
-			# For whatever reason the zip.MoveHere() function is not able to move empty directories into the Zip file, so we have to put dummy files into these directories 
+			# For whatever reason the zip.MoveHere() function is not able to move empty directories into the Zip file, so we have to put dummy files into these directories
 			# and then remove the dummy files from the Zip file after.
 			# If we are copying a directory into the Zip file.
 			$dummyFileNamePrefix = 'Dummy.File'
@@ -334,7 +333,7 @@ function Compress-ZipFile
 					$numberOfDummyFilesCreated++
 					New-Item -Path (Join-Path -Path $emptyDirectory.FullName -ChildPath &quot;$dummyFileNamePrefix$numberOfDummyFilesCreated&quot;) -ItemType File -Force &gt; $null
 				}
-			}		
+			}
 
 			# If we need to copy a directory back into the Zip file.
 			if ($fileOrDirectoryInZipFileShell.IsFolder)
@@ -347,7 +346,7 @@ function Compress-ZipFile
 				# Start moving the merged file back into the Zip file. This is an asynchronous operation.
 				$zipShell.MoveHere($fileOrDirectoryPathInTempDirectory)
 			}
-			
+
 			# The Move operation is asynchronous, so wait until it is complete before continuing.
 			# Sleep until all of the files have been moved into the zip file. The MoveHere() function leaves empty directories behind, so we only need to watch for files.
 			do
@@ -355,13 +354,13 @@ function Compress-ZipFile
 				Start-Sleep -Milliseconds 100
 				$files = Get-ChildItem -Path $fileOrDirectoryPathInTempDirectory -Force -Recurse | Where-Object { !$_.PSIsContainer }
 			} while ($files -ne $null)
-			
+
 			# If there are dummy files that need to be moved out of the Zip file.
 			if ($numberOfDummyFilesCreated -gt 0)
 			{
 				# Move all of the dummy files out of the supposed-to-be empty directories in the Zip file.
 				MoveFilesOutOfZipFileItems -shellItems $zipShell.items() -directoryToMoveFilesToShell $tempDirectoryShell -fileNamePrefix $dummyFileNamePrefix
-				
+
 				# The Move operation is asynchronous, so wait until it is complete before continuing.
 				# Sleep until all of the dummy files have been moved out of the zip file.
 				do
@@ -370,7 +369,7 @@ function Compress-ZipFile
 					[Object[]]$files = Get-ChildItem -Path $tempDirectoryPath -Force -Recurse | Where-Object { !$_.PSIsContainer -and $_.Name.StartsWith($dummyFileNamePrefix) }
 				} while ($files -eq $null -or $files.Count -lt $numberOfDummyFilesCreated)
 			}
-			
+
 			# Delete the temp directory that we created.
 			Remove-Item -Path $tempDirectoryPath -Force -Recurse &gt; $null
 		}

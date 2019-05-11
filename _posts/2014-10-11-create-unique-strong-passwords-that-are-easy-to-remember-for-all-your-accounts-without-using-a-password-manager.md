@@ -3,7 +3,6 @@ id: 825
 title: Create Unique Strong Passwords That Are Easy To Remember For All Your Accounts, Without Using A Password Manager
 date: 2014-10-11T15:38:51-06:00
 author: deadlydog
-layout: post
 guid: http://dans-blog.azurewebsites.net/?p=825
 permalink: /create-unique-strong-passwords-that-are-easy-to-remember-for-all-your-accounts-without-using-a-password-manager/
 categories:
@@ -45,8 +44,8 @@ The last piece to consider is that you want your salt + formula to generate a pa
 
 So the things we need are:
 
-  1. The service you are using. Let’s say you are creating an account at Google.com, so the service name is **Google**. 
-  2. A <u>strong</u> salt phrase. Let’s use: **1Qaz!&#160;&#160;** (notice it includes a number, small letter, capital letter, and symbol) 
+  1. The service you are using. Let’s say you are creating an account at Google.com, so the service name is **Google**.
+  2. A <u>strong</u> salt phrase. Let’s use: **1Qaz!&#160;&#160;** (notice it includes a number, small letter, capital letter, and symbol)
 
 <u>A Too Simple Formula Example:</u>
 
@@ -67,113 +66,113 @@ The problem with the formula above is that it’s easy for a human to recognize 
         <strong>Service Name Rule (using Google) [using StackOverflow]</strong>
       </p>
     </td>
-    
+
     <td valign="top" width="104">
       <p align="center">
         <strong>Google Password</strong>
       </p>
     </td>
-    
+
     <td valign="top" width="131">
       <p align="center">
         <strong>StackOverflow Password</strong>
       </p>
     </td>
   </tr>
-  
+
   <tr>
     <td valign="top" width="462">
       Use last 3 letters backwards (<strong>elg</strong>ooG) [<strong>wol</strong>frevOkcatS]
     </td>
-    
+
     <td valign="top" width="104">
       <strong>elg</strong>1Qaz!23>
     </td>
-    
+
     <td valign="top" width="131">
       <strong>wol</strong>1Qaz!23>
     </td>
   </tr>
-  
+
   <tr>
     <td valign="top" width="462">
       Use every 2nd letter, max 4 letters (G<strong>o</strong>o<strong>g</strong>l<strong>e</strong>) [S<strong>t</strong>a<strong>c</strong>k<strong>O</strong>v<strong>e</strong>rflow]
     </td>
-    
+
     <td valign="top" width="104">
       <strong>oge</strong>1Qaz!23>
     </td>
-    
+
     <td valign="top" width="131">
       <strong>tcOe</strong>1Qaz!23>
     </td>
   </tr>
-  
+
   <tr>
     <td valign="top" width="462">
       Use next letter of first 3 letters (G + 1 = <strong>H</strong>, o + 1 = <strong>p</strong>) [S + 1 = <strong>T</strong>, t + 1 = <strong>u</strong>, a + 1 + <strong>b</strong>]
     </td>
-    
+
     <td valign="top" width="104">
       <strong>Hpp</strong>1Qaz!23>
     </td>
-    
+
     <td valign="top" width="131">
       <strong>Tub</strong>1Qaz!23>
     </td>
   </tr>
-  
+
   <tr>
     <td valign="top" width="462">
       Use number of vowels and total length (<strong>3</strong> vowels, length of <strong>6</strong>) [<strong>4</strong> vowels, length of <strong>13</strong>]
     </td>
-    
+
     <td valign="top" width="104">
       <strong>36</strong>1Qaz!23>
     </td>
-    
+
     <td valign="top" width="131">
       <strong>413</strong>1Qaz!23>
     </td>
   </tr>
-  
+
   <tr>
     <td valign="top" width="462">
       Number of vowels in front, length at end
     </td>
-    
+
     <td valign="top" width="104">
       <strong>3</strong>1Qaz!23><strong>6</strong>
     </td>
-    
+
     <td valign="top" width="131">
       <strong>4</strong>1Qaz!23><strong>13</strong>
     </td>
   </tr>
-  
+
   <tr>
     <td valign="top" width="462">
       Number of vowels in front, length minus number of vowels at end (<strong>3</strong> vowels, 6 – 3 = <strong>3</strong>) [<strong>4</strong> vowels, 13 – 4 = <strong>9</strong>]
     </td>
-    
+
     <td valign="top" width="104">
       <strong>3</strong>1Qaz!23><strong>3</strong>
     </td>
-    
+
     <td valign="top" width="131">
       <strong>4</strong>1Qaz!23><strong>9</strong>
     </td>
   </tr>
-  
+
   <tr>
     <td valign="top" width="462">
       Number of vowels squared in front, length squared at end (3 * 3 = <strong>9</strong> and 6 * 6 = <strong>36</strong>) [4 * 4 = <strong>16</strong> and 13 * 13 = <strong>169</strong>]
     </td>
-    
+
     <td valign="top" width="104">
       <strong>9</strong>1Qaz!23><strong>36</strong>
     </td>
-    
+
     <td valign="top" width="131">
       <strong>16</strong>1Qaz!23><strong>169</strong>
     </td>
@@ -188,12 +187,12 @@ You can also see how easy it is to come up with your own unique formula. You don
 
 ### More Tips and Considerations
 
-  * In all of my examples I placed my calculated characters before or after my salt, but you could also place them in the middle of your salt, or have your formula modify the salt. 
-  * Since some services restrict the use of symbols, you may want to have another salt that does not contain symbols, or formula that does not generate symbols. When you try and login using your usual salt and it fails, try the password generated using your secondary symbol-free salt. 
-  * For extra security, include the year in your formula somehow and change your passwords every year. If you are extra paranoid, or have to change your password very frequently (e.g. for work), you can do the same thing with the month too and change your passwords monthly. An alternative to this would be to change your salt phrase or formula every year/month. 
-  * Similarly to how you may have had a different password for sites you don’t really care about, sites you do care about, and critical sites (e.g. bank websites), you could have different salts or formulas for each. 
-  * If you are weary of using this formula approach for ALL of your passwords thinking that it is too much effort, then don’t use it for ALL of your passwords. Probably 85% of the accounts you create you don’t really care about;&#160; they don’t have any sensitive information, and you could really care less if somebody hacked them. For those, you can still use a shared strong password. Just use this approach for the remaining 15% of your accounts that you do really care about. This is a much better alternative than sharing a strong password among these 15%. 
-  * Some characters are “stronger” than others. For example, symbols are typically harder to guess/crack than letters or numbers, and some symbols are stronger than other symbols (e.g. < is stronger than $). It’s best to have a mix of all types of characters for your salt, but you might want to have more symbols in your salt, or when choosing the symbols for your salt you might opt for ones not on the 0 – 9 keys (i.e. <!@#$%>^&*()). 
+  * In all of my examples I placed my calculated characters before or after my salt, but you could also place them in the middle of your salt, or have your formula modify the salt.
+  * Since some services restrict the use of symbols, you may want to have another salt that does not contain symbols, or formula that does not generate symbols. When you try and login using your usual salt and it fails, try the password generated using your secondary symbol-free salt.
+  * For extra security, include the year in your formula somehow and change your passwords every year. If you are extra paranoid, or have to change your password very frequently (e.g. for work), you can do the same thing with the month too and change your passwords monthly. An alternative to this would be to change your salt phrase or formula every year/month.
+  * Similarly to how you may have had a different password for sites you don’t really care about, sites you do care about, and critical sites (e.g. bank websites), you could have different salts or formulas for each.
+  * If you are weary of using this formula approach for ALL of your passwords thinking that it is too much effort, then don’t use it for ALL of your passwords. Probably 85% of the accounts you create you don’t really care about;&#160; they don’t have any sensitive information, and you could really care less if somebody hacked them. For those, you can still use a shared strong password. Just use this approach for the remaining 15% of your accounts that you do really care about. This is a much better alternative than sharing a strong password among these 15%.
+  * Some characters are “stronger” than others. For example, symbols are typically harder to guess/crack than letters or numbers, and some symbols are stronger than other symbols (e.g. < is stronger than $). It’s best to have a mix of all types of characters for your salt, but you might want to have more symbols in your salt, or when choosing the symbols for your salt you might opt for ones not on the 0 – 9 keys (i.e. <!@#$%>^&*()).
 
 
 
@@ -201,10 +200,10 @@ You can also see how easy it is to come up with your own unique formula. You don
 
 With a password manager you can easily have unique passwords for all of your accounts, but there are a few reasons why I like this formula approach over using password management software:
 
-  1. With password management software you are dependent on having the software installed and on hand; you can’t log into your accounts on your friend’s/co-worker’s/public PC since the password manager is not installed there. By using a formula instead, you ALWAYS know your passwords when you need them. 
-  2. Most password managers are not free, or else they are free on some platforms and not others, or they don’t support all of the platforms you use; if you want to use it on all of your devices you either can’t or you have to pay. 
-  3. Typically you need a password to access your account on the password manager. These types of “master passwords” are a bad idea. If somebody gets the “master password” for your password manager, they now have access to all of your passwords for all of your accounts. So even if you have a super strong master password that you never share with anybody, vulnerabilities like the Heartbleed bug make it possible for others to get your “master password”. 
-  4. Most password manager companies today store your passwords on their own servers in order to sync your passwords across all of your devices. This potentially makes them a large target for hackers, since if they can hack the company’s servers they get access to millions of passwords for millions of different services. 
+  1. With password management software you are dependent on having the software installed and on hand; you can’t log into your accounts on your friend’s/co-worker’s/public PC since the password manager is not installed there. By using a formula instead, you ALWAYS know your passwords when you need them.
+  2. Most password managers are not free, or else they are free on some platforms and not others, or they don’t support all of the platforms you use; if you want to use it on all of your devices you either can’t or you have to pay.
+  3. Typically you need a password to access your account on the password manager. These types of “master passwords” are a bad idea. If somebody gets the “master password” for your password manager, they now have access to all of your passwords for all of your accounts. So even if you have a super strong master password that you never share with anybody, vulnerabilities like the Heartbleed bug make it possible for others to get your “master password”.
+  4. Most password manager companies today store your passwords on their own servers in order to sync your passwords across all of your devices. This potentially makes them a large target for hackers, since if they can hack the company’s servers they get access to millions of passwords for millions of different services.
 
 
 

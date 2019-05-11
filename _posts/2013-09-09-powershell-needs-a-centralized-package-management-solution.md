@@ -3,7 +3,6 @@ id: 399
 title: PowerShell Needs A Centralized Package Management Solution
 date: 2013-09-09T14:20:06-06:00
 author: deadlydog
-layout: post
 guid: http://dans-blog.azurewebsites.net/?p=399
 permalink: /powershell-needs-a-centralized-package-management-solution/
 categories:
@@ -22,8 +21,8 @@ tags:
 
 I love PowerShell, and I love writing reusable PowerShell modules.&#160; They work great when I am writing scripts for myself.&#160; The problem comes in when I write a script that depends on some modules, and I then want to share that script with others.&#160; I basically have 2 options:
 
-  1. Track down all of the module files that the script depends on, zip them all up, and send them to the recipient along with instructions such as, “Navigate to this folder on your PC, create a new folder with this name, copy file X to this location, rinse, repeat…”. 
-  2. Track down all of the module files that the script depends on and copy-paste their contents directly into the top of the script file, so I just send the user one very large file. 
+  1. Track down all of the module files that the script depends on, zip them all up, and send them to the recipient along with instructions such as, “Navigate to this folder on your PC, create a new folder with this name, copy file X to this location, rinse, repeat…”.
+  2. Track down all of the module files that the script depends on and copy-paste their contents directly into the top of the script file, so I just send the user one very large file.
 
 Neither of these solutions are ideal.&#160; Maybe I’m missing something?&#160; In my opinion, PowerShell really needs centralized package management; something similar to [Ruby Gems](http://rubygems.org/) would be great.&#160; Basically a website where users can upload their scripts with a unique ID, and then in their PowerShell script at the top of the file just list the modules that the script depends on.&#160; If the modules are not installed on that PC yet, then they would automatically be downloaded and installed.&#160; This would make PowerShell so much more convenient, and I believe it would help drive more users to write reusable modules and avoid duplicating modules that have already been written (likely better) by others.
 

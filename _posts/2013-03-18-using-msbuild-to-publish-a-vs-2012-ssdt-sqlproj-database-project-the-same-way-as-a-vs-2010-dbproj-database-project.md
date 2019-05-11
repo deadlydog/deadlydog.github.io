@@ -3,7 +3,6 @@ id: 179
 title: Using MSBuild to publish a VS 2012 SSDT .sqlproj database project the same way as a VS 2010 .dbproj database project (using command line arguments to specify the database to publish to)
 date: 2013-03-18T14:34:13-06:00
 author: deadlydog
-layout: post
 guid: https://deadlydog.wordpress.com/?p=179
 permalink: /using-msbuild-to-publish-a-vs-2012-ssdt-sqlproj-database-project-the-same-way-as-a-vs-2010-dbproj-database-project/
 jabber_published:
@@ -38,8 +37,8 @@ We recently upgraded from VS (Visual Studio) 2010 to VS 2012, and with it had to
 So with the old .dbproj database project, you could deploy it to a database using:
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:ebed4e83-552c-46b7-8886-74e87da162e5" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal> 
-  
+  <pre style=white-space:normal>
+
   <pre class="brush: bash; gutter: false; pad-line-numbers: true; title: ; notranslate" title="">
 MSBuild /t:Deploy /p:TargetDatabase="[DbName]";TargetConnectionString="Data Source=[Db.Server];Integrated Security=True;Pooling=False" /p:DeployToDatabase="True" "[PathToBranch]Database\Database.dbproj"
 </pre>
@@ -48,8 +47,8 @@ MSBuild /t:Deploy /p:TargetDatabase="[DbName]";TargetConnectionString="Data Sour
 But with the new .sqlproj database project you have to do:
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:ba4b755f-5214-4230-8dcb-a56dcbf775c4" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal> 
-  
+  <pre style=white-space:normal>
+
   <pre class="brush: bash; gutter: false; title: ; notranslate" title="">
 MSBuild /t:Publish /p:SqlPublishProfilePath="myPublishFile.publish.xml" "[PathToBranch]Database\Database.sqlproj"
 </pre>
@@ -72,10 +71,10 @@ Instead, there is a 3rd option, which is to simply add the code below to the bot
 The code presented here is [based on this post](http://huddledmasses.org/adventures-getting-msbuild-tfs-and-sql-server-data-tools-to-work-together/), but the author has closed the comments section on that post and has not replied to my emails about the bugs in his code and example, so I thought I would share my modified and enhanced solution.
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:b71976e0-b706-4182-b536-f33c33543fe1" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal> 
-  
+  <pre style=white-space:normal>
+
   <pre class="brush: xml; pad-line-numbers: true; title: ; notranslate" title="">
-  &lt;!-- 
+  &lt;!--
 	Custom targets and properties added so that we can specify the database to publish to using command line parameters with VS 2012 .sqlproj projects, like we did with VS 2010 .dbproj projects.
 	This allows us to specify the MSBuild command-line parameters TargetDatabaseName, and TargetConnectionString when Publishing, and PublishToDatabase when Building.
 	I also stumbled across the undocumented parameter, PublishScriptFileName, which can be used to specify the generated sql script file name, just like DeployScriptFileName used to in VS 2010 .dbproj projects.
@@ -127,8 +126,8 @@ The code presented here is [based on this post](http://huddledmasses.org/adventu
 So after adding this code at the bottom of the .sqlproj file (above the </Project> tag though), you can now build and publish the database solution from the MSBuild command line using:
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:3e2ed27f-66e6-4855-9afa-b7487eb386cc" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal> 
-  
+  <pre style=white-space:normal>
+
   <pre class="brush: bash; gutter: false; title: ; notranslate" title="">
 MSBuild /t:Build /p:TargetDatabaseName="[DbName]";TargetConnectionString="Data Source=[Db.Server];Integrated Security=True;Pooling=False" /p:PublishToDatabase="True" /p:SqlPublishProfilePath="Template.publish.xml" "[PathToBranch]\Database\Database.sqlproj"
 </pre>
@@ -143,8 +142,8 @@ The PublishToDatabase parameter allows us to publish to the database immediately
 If you want to simply publish the database project without building first (generally not recommended), you can do:
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:f9225384-aff3-4afc-8a16-a1017b85f760" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal> 
-  
+  <pre style=white-space:normal>
+
   <pre class="brush: bash; gutter: false; title: ; notranslate" title="">
 MSBuild /t:Publish /p:TargetDatabaseName="[DbName]";TargetConnectionString="Data Source=[Db.Server];Integrated Security=True;Pooling=False" /p:SqlPublishProfilePath="Template.publish.xml" "[PathToBranch]\Database\Database.sqlproj"
 </pre>
@@ -161,8 +160,8 @@ While creating my solution, I also accidentally stumbled upon what seems to be a
 So now if I wanted to deploy my database project to 3 separate databases, I could do so with the following code to first Build the project, and the Publish it to the 3 databases:
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:7f8b97a8-c89b-4186-aa55-764a08e0ef94" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal> 
-  
+  <pre style=white-space:normal>
+
   <pre class="brush: bash; gutter: false; title: ; notranslate" title="">
 MSBuild /t:Build "[PathToBranch]\Database\Database.sqlproj"
 MSBuild /t:Publish /p:TargetDatabaseName="[DbName1]";TargetConnectionString="Data Source=[Db.Server];Integrated Security=True;Pooling=False" /p:PublishScriptFileName="[DbName1].sql" /p:SqlPublishProfilePath="Template.publish.xml" "[PathToBranch]\Database\Database.sqlproj"

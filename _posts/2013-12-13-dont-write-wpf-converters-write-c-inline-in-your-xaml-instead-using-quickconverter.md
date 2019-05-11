@@ -3,7 +3,6 @@ id: 686
 title: 'Don&rsquo;t Write WPF Converters; Write C# Inline In Your XAML Instead Using QuickConverter'
 date: 2013-12-13T15:09:10-06:00
 author: deadlydog
-layout: post
 guid: http://dans-blog.azurewebsites.net/?p=686
 permalink: /dont-write-wpf-converters-write-c-inline-in-your-xaml-instead-using-quickconverter/
 categories:
@@ -32,19 +31,19 @@ As a simple example, let’s do an inverse boolean converter; something that is 
 
 [This post shows the code](http://www.codeproject.com/Articles/24330/WPF-Bind-to-Opposite-Boolean-Value-Using-a-Convert) for how you would traditionally accomplish this.&#160; Basically you:
 
-1) add a new file to your project to hold your new converter class, 
+1) add a new file to your project to hold your new converter class,
 
-2) have the class implement IValueConverter, 
+2) have the class implement IValueConverter,
 
-3) add the class as a resource in your xaml file, and then finally 
+3) add the class as a resource in your xaml file, and then finally
 
 4) use it in the Converter property of the xaml control.&#160; Man, that is a lot of work to flip a bit!
 
 Just for reference, this is what step 4 might look like in the xaml:
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:dd8d182a-ba04-429f-a732-717e4f6e7c8e" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal> 
-  
+  <pre style=white-space:normal>
+
   <pre class="brush: xml; gutter: false; title: ; notranslate" title="">
 &lt;CheckBox IsEnabled="{Binding Path=ViewModel.SomeBooleanProperty, Converter={StaticResource InverseBooleanConverter}" /&gt;
 </pre>
@@ -57,8 +56,8 @@ Just for reference, this is what step 4 might look like in the xaml:
 This is what you would do using QuickConverter:
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:20a4e40b-0b74-4a89-be92-6208d47a3ffd" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal> 
-  
+  <pre style=white-space:normal>
+
   <pre class="brush: xml; gutter: false; pad-line-numbers: true; title: ; notranslate" title="">
 &lt;CheckBox IsEnabled="{qc:Binding '!$P', P={Binding Path=ViewModel.SomeBooleanProperty}}" /&gt;
 </pre>
@@ -73,8 +72,8 @@ That it! 1 step! How freaking cool is that!&#160; Basically we bind our SomeBool
 The [QuickConverter documentation page](https://quickconverter.codeplex.com/documentation) shows many more examples, such as a Visibility converter:
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:1cc1ca81-e8c3-425d-b320-27047445a102" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal> 
-  
+  <pre style=white-space:normal>
+
   <pre class="brush: csharp; gutter: false; title: ; notranslate" title="">
 Visibility="{qc:Binding '$P ? Visibility.Visible : Visibility.Collapsed', P={Binding ShowElement}}"
 </pre>
@@ -85,8 +84,8 @@ Visibility="{qc:Binding '$P ? Visibility.Visible : Visibility.Collapsed', P={Bin
 Doing a null check:
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:f6bf3617-9df8-4629-937c-9ac30cbff775" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal> 
-  
+  <pre style=white-space:normal>
+
   <pre class="brush: csharp; gutter: false; pad-line-numbers: true; title: ; notranslate" title="">
 IsEnabled="{qc:Binding '$P != null', P={Binding Path=SomeProperty}"
 </pre>
@@ -97,8 +96,8 @@ IsEnabled="{qc:Binding '$P != null', P={Binding Path=SomeProperty}"
 Checking a class instance’s property values:
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:e9d8987c-3f3a-40e8-8470-d0ed50ea6686" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal> 
-  
+  <pre style=white-space:normal>
+
   <pre class="brush: csharp; gutter: false; title: ; notranslate" title="">
 IsEnabled="{qc:Binding '$P.IsValid || $P.ForceAlways', P={Binding Path=SomeClassInstance}"
 </pre>
@@ -109,8 +108,8 @@ IsEnabled="{qc:Binding '$P.IsValid || $P.ForceAlways', P={Binding Path=SomeClass
 Doing two-way binding:
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:6c875271-4498-484a-92d9-6bbd38608db7" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal> 
-  
+  <pre style=white-space:normal>
+
   <pre class="brush: csharp; gutter: false; title: ; notranslate" title="">
 Height="{qc:Binding '$P * 10', ConvertBack='$value * 0.1', P={Binding TestWidth, Mode=TwoWay}}"
 </pre>
@@ -121,8 +120,8 @@ Height="{qc:Binding '$P * 10', ConvertBack='$value * 0.1', P={Binding TestWidth,
 Doing Multi-binding:
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:2a1db181-c052-4adc-a4e3-8ff89b6ada2a" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal> 
-  
+  <pre style=white-space:normal>
+
   <pre class="brush: csharp; gutter: false; title: ; notranslate" title="">
 Angle="{qc:MultiBinding 'Math.Atan2($P0, $P1) * 180 / 3.14159', P0={Binding ActualHeight, ElementName=rootElement}, P1={Binding ActualWidth, ElementName=rootElement}}"
 </pre>
@@ -133,8 +132,8 @@ Angle="{qc:MultiBinding 'Math.Atan2($P0, $P1) * 180 / 3.14159', P0={Binding Actu
 Declaring and using local variables in your converter expression:
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:c9450039-982e-4ee6-9104-72807e12a235" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal> 
-  
+  <pre style=white-space:normal>
+
   <pre class="brush: csharp; gutter: false; title: ; notranslate" title="">
 IsEnabled="{qc:Binding '(Loc = $P.Value, A = $P.Show) =&gt; $Loc != null &amp;&amp; $A', P={Binding Obj}}"
 </pre>
@@ -147,8 +146,8 @@ IsEnabled="{qc:Binding '(Loc = $P.Value, A = $P.Show) =&gt; $Loc != null &amp;&a
 And there is even limited support for using lambdas, which allows LINQ to be used:
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:6fd045a3-0ddb-4a89-b60b-73d43397de78" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal> 
-  
+  <pre style=white-space:normal>
+
   <pre class="brush: csharp; gutter: false; title: ; notranslate" title="">
 ItemsSource="{qc:Binding '$P.Where(( (int)i ) =&gt; (bool)($i % 2 == 0))', P={Binding Source}}"
 </pre>
@@ -165,8 +164,8 @@ As mentioned above, [Quick Converter](https://quickconverter.codeplex.com/) is [
 For example, if you want to use the Visibility converter shown above, you need to register the System.Windows assembly, since that is where the System.Windows.Visibility enum being referenced lives.&#160; You can register the System.Windows assembly with QuickConverter using this line:
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:7c4328c4-f388-4058-a0cb-959a1e1a360a" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal> 
-  
+  <pre style=white-space:normal>
+
   <pre class="brush: csharp; gutter: false; title: ; notranslate" title="">
 QuickConverter.EquationTokenizer.AddNamespace(typeof(System.Windows.Visibility));
 </pre>
@@ -177,8 +176,8 @@ In order to avoid a XamlParseException at run-time, this line needs to be execut
 So my App.xaml.cs file contains this:
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:d623e3ab-1c40-48c0-ab6d-26b0edff49dc" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal> 
-  
+  <pre style=white-space:normal>
+
   <pre class="brush: csharp; title: ; notranslate" title="">
 public partial class App : Application
 {
@@ -201,8 +200,8 @@ Here I also registered the System assembly (using “typeof(object)”) in order
 As with all controls in xaml, before you can use a you a control you must create a reference to the namespace that the control is in.&#160; So to be able to access and use QuickConverter in your xaml file, you must include it’s namespace, which can be done using:
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:c026a573-1d6f-4e80-b458-9330a7edcfa0" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal> 
-  
+  <pre style=white-space:normal>
+
   <pre class="brush: xml; gutter: false; title: ; notranslate" title="">
 xmlns:qc="clr-namespace:QuickConverter;assembly=QuickConverter"
 </pre>

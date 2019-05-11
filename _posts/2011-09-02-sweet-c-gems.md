@@ -3,7 +3,6 @@ id: 67
 title: 'Sweet C# Gems'
 date: 2011-09-02T23:38:00-06:00
 author: deadlydog
-layout: post
 guid: https://deadlydog.wordpress.com/?p=67
 permalink: /sweet-c-gems/
 jabber_published:

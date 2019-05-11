@@ -3,7 +3,6 @@ id: 61
 title: Visual Studio Tips and Tricks
 date: 2011-06-29T23:34:00-06:00
 author: deadlydog
-layout: post
 guid: https://deadlydog.wordpress.com/?p=61
 permalink: /visual-studio-tips-and-tricks/
 jabber_published:

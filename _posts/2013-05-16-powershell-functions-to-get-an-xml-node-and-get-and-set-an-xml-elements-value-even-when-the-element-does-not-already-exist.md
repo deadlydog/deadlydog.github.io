@@ -3,7 +3,6 @@ id: 281
 title: 'Powershell functions to get an xml node, and get and set an xml element&rsquo;s value, even when the element does not already exist'
 date: 2013-05-16T17:16:57-06:00
 author: deadlydog
-layout: post
 guid: http://dans-blog.azurewebsites.net/?p=281
 permalink: /powershell-functions-to-get-an-xml-node-and-get-and-set-an-xml-elements-value-even-when-the-element-does-not-already-exist/
 categories:
@@ -22,8 +21,8 @@ tags:
 I’m new to working with Xml through PowerShell and was so impressed when I discovered how easy it was to read an xml element’s value.&#160; I’m working with reading/writing .nuspec files for working with NuGet.&#160; Here’s a sample xml of a .nuspec xml file:
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:6f27e32f-131b-479d-a0ee-45ac9f59475d" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal> 
-  
+  <pre style=white-space:normal>
+
   <pre class="brush: xml; pad-line-numbers: true; title: ; notranslate" title="">
 &lt;?xml version="1.0" encoding="utf-8"?&gt;
 &lt;package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd"&gt;
@@ -50,8 +49,8 @@ I’m new to working with Xml through PowerShell and was so impressed when I dis
 In PowerShell if I want to get the version element’s value, I can just do:
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:41ae0bb7-2a98-4b2d-8272-9a6c9c6d8bb7" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal> 
-  
+  <pre style=white-space:normal>
+
   <pre class="brush: powershell; title: ; notranslate" title="">
 # Read in the file contents and return the version node's value.
 [ xml ]$fileContents = Get-Content -Path $NuSpecFilePath
@@ -64,8 +63,8 @@ return $fileContents.package.metadata.version
 Wow, that’s super easy.&#160; And if I want to update that version number, I can just do:
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:3cf516e2-54d9-4054-b6ab-8877a7034cf6" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal> 
-  
+  <pre style=white-space:normal>
+
   <pre class="brush: powershell; title: ; notranslate" title="">
 # Read in the file contents, update the version node's value, and save the file.
 [ xml ] $fileContents = Get-Content -Path $NuSpecFilePath
@@ -81,19 +80,19 @@ Holy smokes. So simple it blows my mind.&#160; So everything is great, right?&#1
 So basically you need an extra 2 lines in order to setup an XmlNamespaceManager every time you need to look for a node.&#160; This is a little painful, so instead I created this function that will get you the node if it exists, and return $null if it doesn’t:
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:4d033fed-aa0d-49a4-ac82-0d0b933bfcea" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal> 
-  
+  <pre style=white-space:normal>
+
   <pre class="brush: powershell; title: ; notranslate" title="">
 function Get-XmlNode([ xml ]$XmlDocument, [string]$NodePath, [string]$NamespaceURI = "", [string]$NodeSeparatorCharacter = '.')
 {
 	# If a Namespace URI was not given, use the Xml document's default namespace.
-	if ([string]::IsNullOrEmpty($NamespaceURI)) { $NamespaceURI = $XmlDocument.DocumentElement.NamespaceURI }	
-	
+	if ([string]::IsNullOrEmpty($NamespaceURI)) { $NamespaceURI = $XmlDocument.DocumentElement.NamespaceURI }
+
 	# In order for SelectSingleNode() to actually work, we need to use the fully qualified node path along with an Xml Namespace Manager, so set them up.
 	$xmlNsManager = New-Object System.Xml.XmlNamespaceManager($XmlDocument.NameTable)
 	$xmlNsManager.AddNamespace("ns", $NamespaceURI)
 	$fullyQualifiedNodePath = "/ns:$($NodePath.Replace($($NodeSeparatorCharacter), '/ns:'))"
-	
+
 	# Try and get the node, then return it. Returns $null if the node was not found.
 	$node = $XmlDocument.SelectSingleNode($fullyQualifiedNodePath, $xmlNsManager)
 	return $node
@@ -106,8 +105,8 @@ function Get-XmlNode([ xml ]$XmlDocument, [string]$NodePath, [string]$NamespaceU
 And you would call this function like so:
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:dddfccaa-4f4d-4596-90f4-ddf9006b7ae7" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal> 
-  
+  <pre style=white-space:normal>
+
   <pre class="brush: powershell; title: ; notranslate" title="">
 # Read in the file contents and return the version node's value.
 [ xml ]$fileContents = Get-Content -Path $NuSpecFilePath
@@ -128,14 +127,14 @@ So by default this Get-XmlNode function uses the xml’s root namespace, which i
 Later I found that I also wanted the ability to return back multiple xml nodes; that is, if multiple “version” elements were defined I wanted to get them all, not just the first one.&#160; This is simple; instead of using .SelectSingleNode() we can use .SelectNodes().&#160; In order to avoid duplicating code, I broke the code to get the Xml Namespace Manager and Fully Qualified Node Path out into their own functions.&#160; Here is the rewritten code, with the new Get-XmlNodes function:
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:8b5955e6-e281-457a-8df0-b2aca9ba40d1" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal> 
-  
+  <pre style=white-space:normal>
+
   <pre class="brush: powershell; pad-line-numbers: true; title: ; notranslate" title="">
 function Get-XmlNamespaceManager([ xml ]$XmlDocument, [string]$NamespaceURI = "")
 {
     # If a Namespace URI was not given, use the Xml document's default namespace.
-	if ([string]::IsNullOrEmpty($NamespaceURI)) { $NamespaceURI = $XmlDocument.DocumentElement.NamespaceURI }	
-	
+	if ([string]::IsNullOrEmpty($NamespaceURI)) { $NamespaceURI = $XmlDocument.DocumentElement.NamespaceURI }
+
 	# In order for SelectSingleNode() to actually work, we need to use the fully qualified node path along with an Xml Namespace Manager, so set them up.
 	[System.Xml.XmlNamespaceManager]$xmlNsManager = New-Object System.Xml.XmlNamespaceManager($XmlDocument.NameTable)
 	$xmlNsManager.AddNamespace("ns", $NamespaceURI)
@@ -151,7 +150,7 @@ function Get-XmlNode([ xml ]$XmlDocument, [string]$NodePath, [string]$NamespaceU
 {
 	$xmlNsManager = Get-XmlNamespaceManager -XmlDocument $XmlDocument -NamespaceURI $NamespaceURI
 	[string]$fullyQualifiedNodePath = Get-FullyQualifiedXmlNodePath -NodePath $NodePath -NodeSeparatorCharacter $NodeSeparatorCharacter
-	
+
 	# Try and get the node, then return it. Returns $null if the node was not found.
 	$node = $XmlDocument.SelectSingleNode($fullyQualifiedNodePath, $xmlNsManager)
 	return $node
@@ -176,26 +175,26 @@ Note the comma in the return statement of the Get-XmlNamespaceManager function.&
 So once I had this, I decided that I might as well make functions for easily getting and setting the text values of an xml element, which is what is provided here:
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:c273612b-310d-4496-a773-7a8feb780e4f" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal> 
-  
+  <pre style=white-space:normal>
+
   <pre class="brush: powershell; title: ; notranslate" title="">
 function Get-XmlElementsTextValue([ xml ]$XmlDocument, [string]$ElementPath, [string]$NamespaceURI = "", [string]$NodeSeparatorCharacter = '.')
 {
-	# Try and get the node.	
+	# Try and get the node.
 	$node = Get-XmlNode -XmlDocument $XmlDocument -NodePath $ElementPath -NamespaceURI $NamespaceURI -NodeSeparatorCharacter $NodeSeparatorCharacter
-	
+
 	# If the node already exists, return its value, otherwise return null.
 	if ($node) { return $node.InnerText } else { return $null }
 }
 
 function Set-XmlElementsTextValue([ xml ]$XmlDocument, [string]$ElementPath, [string]$TextValue, [string]$NamespaceURI = "", [string]$NodeSeparatorCharacter = '.')
 {
-	# Try and get the node.	
+	# Try and get the node.
 	$node = Get-XmlNode -XmlDocument $XmlDocument -NodePath $ElementPath -NamespaceURI $NamespaceURI -NodeSeparatorCharacter $NodeSeparatorCharacter
-	
+
 	# If the node already exists, update its value.
 	if ($node)
-	{ 
+	{
 		$node.InnerText = $TextValue
 	}
 	# Else the node doesn't exist yet, so create it with the given value.
@@ -203,14 +202,14 @@ function Set-XmlElementsTextValue([ xml ]$XmlDocument, [string]$ElementPath, [st
 	{
 		# Create the new element with the given value.
 		$elementName = $ElementPath.SubString($ElementPath.LastIndexOf($NodeSeparatorCharacter) + 1)
- 		$element = $XmlDocument.CreateElement($elementName, $XmlDocument.DocumentElement.NamespaceURI)		
+ 		$element = $XmlDocument.CreateElement($elementName, $XmlDocument.DocumentElement.NamespaceURI)
 		$textNode = $XmlDocument.CreateTextNode($TextValue)
 		$element.AppendChild($textNode) &gt; $null
-		
+
 		# Try and get the parent node.
 		$parentNodePath = $ElementPath.SubString(0, $ElementPath.LastIndexOf($NodeSeparatorCharacter))
 		$parentNode = Get-XmlNode -XmlDocument $XmlDocument -NodePath $parentNodePath -NamespaceURI $NamespaceURI -NodeSeparatorCharacter $NodeSeparatorCharacter
-		
+
 		if ($parentNode)
 		{
 			$parentNode.AppendChild($element) &gt; $null
@@ -231,8 +230,8 @@ The Get-XmlElementsTextValue function is pretty straight forward; return the val
 Here’s an example of calling Get-XmlElementsTextValue:
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:5bedc9c7-664d-47de-abee-d2955a57dbb3" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal> 
-  
+  <pre style=white-space:normal>
+
   <pre class="brush: powershell; title: ; notranslate" title="">
 # Read in the file contents and return the version element's value.
 [ xml ]$fileContents = Get-Content -Path $NuSpecFilePath
@@ -245,8 +244,8 @@ return Get-XmlElementsTextValue -XmlDocument $fileContents -ElementPath "package
 And an example of calling Set-XmlElementsTextValue:
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:9cf4a8b5-149a-44e6-83c8-af0706d63fe7" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal> 
-  
+  <pre style=white-space:normal>
+
   <pre class="brush: powershell; pad-line-numbers: true; title: ; notranslate" title="">
 # Read in the file contents, update the version element's value, and save the file.
 [ xml ]$fileContents = Get-Content -Path $NuSpecFilePath
@@ -264,26 +263,26 @@ Note that these 2 functions depend on the Get-XmlNode function provided above.
 I have had multiple people ask me for similar functions for getting and setting an element&#8217;s Attribute value as well, so here are the corresponding functions for that:
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:8b5955e6-e281-457a-8df0-b2aca9ba40d1" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal> 
-  
+  <pre style=white-space:normal>
+
   <pre class="brush: powershell; pad-line-numbers: true; title: ; notranslate" title="">
 function Get-XmlElementsAttributeValue([ xml ]$XmlDocument, [string]$ElementPath, [string]$AttributeName, [string]$NamespaceURI = "", [string]$NodeSeparatorCharacter = '.')
 {
-	# Try and get the node. 
+	# Try and get the node.
 	$node = Get-XmlNode -XmlDocument $XmlDocument -NodePath $ElementPath -NamespaceURI $NamespaceURI -NodeSeparatorCharacter $NodeSeparatorCharacter
-	
+
 	# If the node and attribute already exist, return the attribute's value, otherwise return null.
 	if ($node -and $node.$AttributeName) { return $node.$AttributeName } else { return $null }
 }
 
 function Set-XmlElementsAttributeValue([ xml ]$XmlDocument, [string]$ElementPath, [string]$AttributeName, [string]$AttributeValue, [string]$NamespaceURI = "", [string]$NodeSeparatorCharacter = '.')
 {
-	# Try and get the node. 
+	# Try and get the node.
 	$node = Get-XmlNode -XmlDocument $XmlDocument -NodePath $ElementPath -NamespaceURI $NamespaceURI -NodeSeparatorCharacter $NodeSeparatorCharacter
-	
+
 	# If the node already exists, create/update its attribute's value.
 	if ($node)
-	{ 
+	{
 		$attribute = $XmlDocument.CreateNode([System.Xml.XmlNodeType]::Attribute, $AttributeName, $NamespaceURI)
 		$attribute.Value = $AttributeValue
 		$node.Attributes.SetNamedItem($attribute) &gt; $null
@@ -295,11 +294,11 @@ function Set-XmlElementsAttributeValue([ xml ]$XmlDocument, [string]$ElementPath
 		$elementName = $ElementPath.SubString($ElementPath.LastIndexOf($NodeSeparatorCharacter) + 1)
 		$element = $XmlDocument.CreateElement($elementName, $XmlDocument.DocumentElement.NamespaceURI)
 		$element.SetAttribute($AttributeName, $NamespaceURI, $AttributeValue) &gt; $null
-		
+
 		# Try and get the parent node.
 		$parentNodePath = $ElementPath.SubString(0, $ElementPath.LastIndexOf($NodeSeparatorCharacter))
 		$parentNode = Get-XmlNode -XmlDocument $XmlDocument -NodePath $parentNodePath -NamespaceURI $NamespaceURI -NodeSeparatorCharacter $NodeSeparatorCharacter
-		
+
 		if ($parentNode)
 		{
 			$parentNode.AppendChild($element) &gt; $null

@@ -3,7 +3,6 @@ id: 59
 title: Making solutions with lots of projects load and build faster in Visual Studio
 date: 2011-06-01T23:32:00-06:00
 author: deadlydog
-layout: post
 guid: https://deadlydog.wordpress.com/?p=59
 permalink: /making-solutions-with-lots-of-projects-load-and-build-faster-in-visual-studio/
 jabber_published:

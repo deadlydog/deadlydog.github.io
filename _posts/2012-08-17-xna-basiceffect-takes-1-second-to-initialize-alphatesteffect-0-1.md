@@ -3,7 +3,6 @@ id: 93
 title: XNA BasicEffect takes ~1 second to initialize, AlphaTestEffect ~0.1
 date: 2012-08-17T13:47:00-06:00
 author: deadlydog
-layout: post
 guid: https://deadlydog.wordpress.com/?p=93
 permalink: /xna-basiceffect-takes-1-second-to-initialize-alphatesteffect-0-1/
 jabber_published:

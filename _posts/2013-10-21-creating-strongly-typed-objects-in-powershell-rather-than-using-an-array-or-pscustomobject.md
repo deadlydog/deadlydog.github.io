@@ -3,7 +3,6 @@ id: 548
 title: Creating Strongly Typed Objects In PowerShell, Rather Than Using An Array Or PSCustomObject
 date: 2013-10-21T14:20:17-06:00
 author: deadlydog
-layout: post
 guid: http://dans-blog.azurewebsites.net/?p=548
 permalink: /creating-strongly-typed-objects-in-powershell-rather-than-using-an-array-or-pscustomobject/
 categories:
@@ -28,8 +27,8 @@ Right now I’m working on refactoring some existing code into some general func
 So initially the code I wrote just used an array to hold the 3 properties of each application service:
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:b3bb5f05-399d-47b2-8023-882c6cf90c21" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal> 
-  
+  <pre style=white-space:normal>
+
   <pre class="brush: powershell; pad-line-numbers: true; title: ; notranslate" title="">
 # Store app service info as an array of arrays.
 $AppServices = @(
@@ -61,8 +60,8 @@ Another option that I didn’t consider when I originally wrote the script was t
 So I thought let’s use a PSCustomObject instead, as that way the client does not have to worry about the order of the information; as long as their PSCustomObject has Website, ApplicationPath, and ApplicationPool properties then we’ll be able to process it.&#160; So I had this:
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:fb1b994a-747b-466d-a19a-ce3cae0ba948" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal> 
-  
+  <pre style=white-space:normal>
+
   <pre class="brush: powershell; title: ; notranslate" title="">
 [PSCustomObject[]] $applicationServicesInfo = @(
 	[PSCustomObject]@{Website = "MyWebsite"; ApplicationPath = "$Version/Reporting.Services"; ApplicationPool = "Services .NET4"},
@@ -95,19 +94,19 @@ I liked this better as the properties are explicitly named, so there’s no gues
 I frequently read other PowerShell blog posts and recently [stumbled across this one](http://blogs.technet.com/b/heyscriptingguy/archive/2013/10/19/weekend-scripter-use-powershell-and-pinvoke-to-remove-stubborn-files.aspx).&#160; In the article he mentions creating a new compiled type by passing a string to the [Add-Type cmdlet](http://technet.microsoft.com/en-us/library/hh849914.aspx); essentially writing C# code in his PowerShell script to create a new class.&#160; I knew that you could use Add-Type to import other assemblies, but never realized that you could use it to import an assembly that doesn’t actually exist (i.e. a string in your PowerShell script).&#160; This is freaking amazing! So here is what my new solution looks like:
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:a9c9738d-d96d-4e84-b30a-0b3b4a84cc03" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal> 
-  
+  <pre style=white-space:normal>
+
   <pre class="brush: powershell; title: ; notranslate" title="">
 try {	# Wrap in a try-catch in case we try to add this type twice.
 # Create a class to hold an IIS Application Service's Information.
 Add-Type -TypeDefinition @"
 	using System;
-	
+
 	public class ApplicationServiceInformation
 	{
 		// The name of the Website in IIS.
 		public string Website { get; set;}
-		
+
 		// The path to the Application, relative to the Website root.
 		public string ApplicationPath { get; set; }
 
@@ -132,7 +131,7 @@ $anotherService = New-Object ApplicationServiceInformation
 $anotherService.Website = "MyWebsite"
 $anotherService.ApplicationPath = "$Version/Payment.Services"
 $anotherService.ApplicationPool = "Services .NET4"
-	
+
 [ApplicationServiceInformation[]] $applicationServicesInfo = @(
 	(New-Object ApplicationServiceInformation("MyWebsite", "$Version/Reporting.Services", "Services .NET4")),
 	(New-Object ApplicationServiceInformation -Property @{Website = "MyWebsite"; ApplicationPath = "$Version/Core.Services"; ApplicationPool = "Services .NET4}),
@@ -161,8 +160,8 @@ I first create a simple container class to hold the application service informat
 As you can see from the snippets above and below, there are several different ways that we can initialize a new instance of our ApplicationServiceInformation class:
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:46119ce9-6231-4efe-992b-a1e8c4545501" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal> 
-  
+  <pre style=white-space:normal>
+
   <pre class="brush: powershell; title: ; notranslate" title="">
 $service1 = New-Object ApplicationServiceInformation("Explicit Constructor", "Core.Services", ".NET4")
 
@@ -181,8 +180,8 @@ $service4.ApplicationPool = "Services .NET4"
 
 ### Caveats
 
-  * Note that I wrapped the call to Add-Type in a Try-Catch block.&#160; This is to prevent PowerShell from throwing an error if the type tries to get added twice.&#160; It’s sort of a hacky workaround, [but there aren’t many good alternatives](http://stackoverflow.com/questions/16552801/how-do-i-conditionally-add-a-class-with-add-type-typedefinition-if-it-isnt-add), since you cannot unload an assembly. 
-  * This means that while developing if you make any changes to the class, <u>you’ll have to restart your PowerShell session for the changes to be applied</u>, since the Add-Type cmdlet will only work properly the first time that it is called in a session. 
+  * Note that I wrapped the call to Add-Type in a Try-Catch block.&#160; This is to prevent PowerShell from throwing an error if the type tries to get added twice.&#160; It’s sort of a hacky workaround, [but there aren’t many good alternatives](http://stackoverflow.com/questions/16552801/how-do-i-conditionally-add-a-class-with-add-type-typedefinition-if-it-isnt-add), since you cannot unload an assembly.
+  * This means that while developing if you make any changes to the class, <u>you’ll have to restart your PowerShell session for the changes to be applied</u>, since the Add-Type cmdlet will only work properly the first time that it is called in a session.
 
 I hope you found something in here useful.
 

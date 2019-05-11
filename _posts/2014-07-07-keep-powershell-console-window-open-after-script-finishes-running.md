@@ -3,7 +3,6 @@ id: 790
 title: Keep PowerShell Console Window Open After Script Finishes Running
 date: 2014-07-07T15:57:14-06:00
 author: deadlydog
-layout: post
 guid: http://dans-blog.azurewebsites.net/?p=790
 permalink: /keep-powershell-console-window-open-after-script-finishes-running/
 categories:
@@ -27,7 +26,7 @@ When running a script by double-clicking it, or by right-clicking it and choosin
 Open a PowerShell console and manually run the script from the command line. I show how to do this a bit [in this post](http://dans-blog.azurewebsites.net/fix-problem-where-windows-powershell-cannot-run-script-whose-path-contains-spaces/), as the PowerShell syntax to run a script from the command-line is not straight-forward if you’ve never done it before.
 
 The other way is to launch the PowerShell process from the Run box (Windows Key + R) or command prompt using the **-NoExit** switch and passing in the path to the PowerShell file.
-  
+
 For example: **PowerShell -NoExit &#8220;C:\SomeFolder\MyPowerShellScript.ps1&#8221;**
 
 ### 2. Per-script solution
