@@ -101,7 +101,7 @@ defaults:
       comments: true
       share: true
       related: true
-      toc: true
+      toc: false
       toc_label: Post Sections
       toc_icon: stream
       classes: wide
@@ -112,7 +112,7 @@ defaults:
     values:
       layout: single
       author_profile: true
-      toc: true
+      toc: false
       toc_label: Post Sections
       toc_icon: stream
       classes: wide
