@@ -30,3 +30,12 @@ To ensure that the GitHub Pages and other gems are up-to-date, periodically run 
 Simply modify the `Gemfile` with the new gem to use, and then run `bundle install` to have it install the new gems.
 
 Typically themes are installed from gems, and then you update the `_config.yml` file to specify the new theme to use.
+
+## Customization's I've made to the theme
+
+Anywhere that I make custom changes, I try to put `Dan's Customizations` in comments, so doing a search of the repo for `Dan` should find all places I've changed / overwritten code.
+This doesn't include the `_config.yml` though, as we're expected to set custom settings in there.
+
+Here's a list of places I've changed code:
+
+- `assets/css/main.scss` file: Adjusted font sizes a bit.
