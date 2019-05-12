@@ -13,7 +13,7 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Daniel Schroeder's (aka deadlydog) Programming Blog
+title: Daniel Schroeder's Programming Blog
 email: deadlydog@hotmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Sharing my tips, tricks, and code to help other developers be more productive.
@@ -62,7 +62,7 @@ plugins:
 author:
   name   : "Daniel Schroeder"
   avatar : "/assets/images/bio-photo.jpg"
-  bio    : "Developer and family man. Loves C#, .NET, PowerShell, AutoHotkey. Automate Everything!"
+  bio    : "aka deadlydog. Developer and family man. Loves C#, .NET, PowerShell, AutoHotkey. Automate Everything!"
   links:
     # - label: "Website"
     #   icon: "fas fa-fw fa-link"
