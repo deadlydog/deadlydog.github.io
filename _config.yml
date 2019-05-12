@@ -101,6 +101,9 @@ defaults:
       comments: true
       share: true
       related: true
+      toc: true
+      toc_label: Post Sections
+      toc_icon: stream
   # _pages
   - scope:
       path: "_pages"
@@ -108,6 +111,9 @@ defaults:
     values:
       layout: single
       author_profile: true
+      toc: true
+      toc_label: Post Sections
+      toc_icon: stream
 
 category_archive:
   type: liquid
