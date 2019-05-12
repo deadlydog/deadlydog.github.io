@@ -2,7 +2,6 @@
 id: 99
 title: SQL Server script commands to check if object exists and drop it
 date: 2012-09-14T14:03:00-06:00
-author: deadlydog
 guid: https://deadlydog.wordpress.com/?p=99
 permalink: /sql-server-script-commands-to-check-if-object-exists-and-drop-it/
 jabber_published:

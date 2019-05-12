@@ -2,7 +2,6 @@
 id: 627
 title: Get AutoHotkey To Interact With Admin Windows Without Running AHK Script As Admin
 date: 2013-11-21T11:22:37-06:00
-author: deadlydog
 guid: http://dans-blog.azurewebsites.net/?p=627
 permalink: /get-autohotkey-to-interact-with-admin-windows-without-running-ahk-script-as-admin/
 categories:

@@ -2,7 +2,6 @@
 id: 385
 title: Getting Custom TFS Checkin Policies To Work When Committing From The Command Line (i.e. tf checkin)
 date: 2013-09-06T15:28:08-06:00
-author: deadlydog
 guid: http://dans-blog.azurewebsites.net/?p=385
 permalink: /getting-custom-tfs-checkin-policies-to-work-when-committing-from-the-command-line-i-e-tf-checkin/
 categories:

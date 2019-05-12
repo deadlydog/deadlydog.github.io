@@ -2,7 +2,6 @@
 id: 539
 title: PowerShell Functions To Delete Old Files And Empty Directories
 date: 2013-10-15T17:38:12-06:00
-author: deadlydog
 guid: http://dans-blog.azurewebsites.net/?p=539
 permalink: /powershell-functions-to-delete-old-files-and-empty-directories/
 categories:

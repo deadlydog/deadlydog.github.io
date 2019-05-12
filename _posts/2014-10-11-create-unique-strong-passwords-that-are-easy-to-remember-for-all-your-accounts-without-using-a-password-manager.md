@@ -2,7 +2,6 @@
 id: 825
 title: Create Unique Strong Passwords That Are Easy To Remember For All Your Accounts, Without Using A Password Manager
 date: 2014-10-11T15:38:51-06:00
-author: deadlydog
 guid: http://dans-blog.azurewebsites.net/?p=825
 permalink: /create-unique-strong-passwords-that-are-easy-to-remember-for-all-your-accounts-without-using-a-password-manager/
 categories:

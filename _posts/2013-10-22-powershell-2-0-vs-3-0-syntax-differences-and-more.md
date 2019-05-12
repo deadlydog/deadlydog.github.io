@@ -2,7 +2,6 @@
 id: 552
 title: PowerShell 2.0 vs. 3.0 Syntax Differences And More
 date: 2013-10-22T11:23:21-06:00
-author: deadlydog
 guid: http://dans-blog.azurewebsites.net/?p=552
 permalink: /powershell-2-0-vs-3-0-syntax-differences-and-more/
 categories:

@@ -2,7 +2,6 @@
 id: 897
 title: Creating A .PFX Certificate And Applying It On The Build Server At Build Time
 date: 2016-12-01T02:46:41-06:00
-author: deadlydog
 guid: http://dans-blog.azurewebsites.net/?p=897
 permalink: /creating-a-pfx-certificate-and-applying-it-on-the-build-server-at-build-time/
 categories:

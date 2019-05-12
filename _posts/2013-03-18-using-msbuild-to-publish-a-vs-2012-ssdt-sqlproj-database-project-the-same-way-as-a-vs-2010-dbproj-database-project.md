@@ -2,7 +2,6 @@
 id: 179
 title: Using MSBuild to publish a VS 2012 SSDT .sqlproj database project the same way as a VS 2010 .dbproj database project (using command line arguments to specify the database to publish to)
 date: 2013-03-18T14:34:13-06:00
-author: deadlydog
 guid: https://deadlydog.wordpress.com/?p=179
 permalink: /using-msbuild-to-publish-a-vs-2012-ssdt-sqlproj-database-project-the-same-way-as-a-vs-2010-dbproj-database-project/
 jabber_published:

@@ -2,7 +2,6 @@
 id: 333
 title: 'PowerShell ISE: Multi-line Comment and Uncomment Done Right, and other ISE GUI must haves'
 date: 2013-06-19T17:42:07-06:00
-author: deadlydog
 guid: http://dans-blog.azurewebsites.net/?p=333
 permalink: /powershell-ise-multiline-comment-and-uncomment-done-right-and-other-ise-gui-must-haves/
 categories:

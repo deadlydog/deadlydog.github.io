@@ -2,7 +2,6 @@
 id: 720
 title: If You Like Using Macros or AutoHotkey, You Might Want To Try The Enterpad AHK Keyboard
 date: 2014-02-12T21:24:09-06:00
-author: deadlydog
 guid: http://dans-blog.azurewebsites.net/?p=720
 permalink: /if-you-like-using-macros-or-autohotkey-you-might-want-to-try-the-enterpad-ahk-keyboard/
 categories:

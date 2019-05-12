@@ -2,7 +2,6 @@
 id: 63
 title: TFS Power Tools Features And How To Run Them From Visual Studio
 date: 2011-07-11T23:35:00-06:00
-author: deadlydog
 guid: https://deadlydog.wordpress.com/?p=63
 permalink: /tfs-power-tools-features-and-how-to-run-them-from-visual-studio/
 jabber_published:

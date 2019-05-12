@@ -2,7 +2,6 @@
 id: 491
 title: Launch Visual Studio Checkin Window With A Keystroke
 date: 2013-09-27T11:18:30-06:00
-author: deadlydog
 guid: http://dans-blog.azurewebsites.net/?p=491
 permalink: /launch-visual-studio-checkin-window-with-a-keystroke/
 categories:

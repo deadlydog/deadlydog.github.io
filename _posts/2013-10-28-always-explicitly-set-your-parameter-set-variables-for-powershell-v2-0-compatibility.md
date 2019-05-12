@@ -2,7 +2,6 @@
 id: 585
 title: Always Explicitly Set Your Parameter Set Variables For PowerShell v2.0 Compatibility
 date: 2013-10-28T11:25:32-06:00
-author: deadlydog
 guid: http://dans-blog.azurewebsites.net/?p=585
 permalink: /always-explicitly-set-your-parameter-set-variables-for-powershell-v2-0-compatibility/
 categories:

@@ -2,7 +2,6 @@
 id: 822
 title: Find Largest (Or Smallest) Files In A Directory Or Drive With PowerShell
 date: 2014-09-08T16:38:38-06:00
-author: deadlydog
 guid: http://dans-blog.azurewebsites.net/?p=822
 permalink: /find-largest-or-smallest-files-in-a-directory-or-drive-with-powershell/
 categories:

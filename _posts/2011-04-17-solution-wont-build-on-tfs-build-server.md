@@ -2,7 +2,6 @@
 id: 22
 title: 'Solution won&#8217;t build on TFS Build Server'
 date: 2011-04-17T22:58:00-06:00
-author: deadlydog
 guid: https://deadlydog.wordpress.com/?p=22
 permalink: /solution-wont-build-on-tfs-build-server/
 jabber_published:

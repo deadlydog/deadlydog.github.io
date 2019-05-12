@@ -2,7 +2,6 @@
 id: 130
 title: Migrating My GWB Blog Over To WordPress
 date: 2012-11-20T16:49:45-06:00
-author: deadlydog
 guid: https://deadlydog.wordpress.com/?p=130
 permalink: /migrating-my-gwb-blog-over-to-wordpress/
 jabber_published:

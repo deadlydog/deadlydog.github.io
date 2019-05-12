@@ -2,7 +2,6 @@
 id: 112
 title: Stop YOUR emails from starting those company-wide Reply All email threads
 date: 2012-10-11T14:15:00-06:00
-author: deadlydog
 guid: https://deadlydog.wordpress.com/?p=112
 permalink: /stop-your-emails-from-starting-those-company-wide-reply-all-email-threads/
 jabber_published:

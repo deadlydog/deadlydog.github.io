@@ -2,7 +2,6 @@
 id: 727
 title: '&ldquo;Agent lost communication with Team Foundation Server&rdquo; TFS Build Server Error'
 date: 2014-03-12T11:26:51-06:00
-author: deadlydog
 guid: http://dans-blog.azurewebsites.net/?p=727
 permalink: /agent-lost-communication-with-team-foundation-server-build-server-error/
 categories:

@@ -2,7 +2,6 @@
 id: 564
 title: PowerShell Script To Get Path Lengths
 date: 2013-10-24T17:14:59-06:00
-author: deadlydog
 guid: http://dans-blog.azurewebsites.net/?p=564
 permalink: /powershell-script-to-check-path-lengths/
 categories:

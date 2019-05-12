@@ -2,7 +2,6 @@
 id: 34
 title: 'Awesome VS 2010 extensions I can&#8217;t live without'
 date: 2011-05-03T23:15:00-06:00
-author: deadlydog
 guid: https://deadlydog.wordpress.com/?p=34
 permalink: /awesome-vs-2010-extensions-i-cant-live-without/
 jabber_published:

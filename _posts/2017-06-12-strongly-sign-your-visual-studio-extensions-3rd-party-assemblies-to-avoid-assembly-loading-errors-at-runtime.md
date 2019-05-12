@@ -2,7 +2,6 @@
 id: 905
 title: 'Strongly sign your Visual Studio extension&rsquo;s 3rd party assemblies to avoid assembly-loading errors at runtime'
 date: 2017-06-12T02:21:50-06:00
-author: deadlydog
 guid: http://dans-blog.azurewebsites.net/?p=905
 permalink: /strongly-sign-your-visual-studio-extensions-3rd-party-assemblies-to-avoid-assembly-loading-errors-at-runtime/
 categories:

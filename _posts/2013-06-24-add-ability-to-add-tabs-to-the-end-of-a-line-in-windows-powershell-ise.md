@@ -2,7 +2,6 @@
 id: 363
 title: Add ability to add tabs to the end of a line in Windows PowerShell ISE
 date: 2013-06-24T16:06:52-06:00
-author: deadlydog
 guid: http://dans-blog.azurewebsites.net/?p=363
 permalink: /add-ability-to-add-tabs-to-the-end-of-a-line-in-windows-powershell-ise/
 categories:

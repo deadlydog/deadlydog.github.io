@@ -2,7 +2,6 @@
 id: 165
 title: Too Many AutoHotkey Shortcuts To Remember? There’s An App For That!
 date: 2013-01-19T15:59:22-06:00
-author: deadlydog
 guid: https://deadlydog.wordpress.com/?p=165
 permalink: /too-many-autohotkey-shortcuts-to-remember-theres-an-app-for-that/
 jabber_published:

@@ -2,7 +2,6 @@
 id: 572
 title: PowerShell Code To Ensure Client Is Using At Least The Minimum Required PowerShell Version
 date: 2013-10-25T11:48:31-06:00
-author: deadlydog
 guid: http://dans-blog.azurewebsites.net/?p=572
 permalink: /ensure-client-is-using-at-least-the-minimum-required-powershell-version/
 categories:

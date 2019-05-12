@@ -2,7 +2,6 @@
 id: 899
 title: Continuously Deploy Your ClickOnce Application From Your Build Server
 date: 2017-01-10T02:13:33-06:00
-author: deadlydog
 guid: http://dans-blog.azurewebsites.net/?p=899
 permalink: /continuously-deploy-your-clickonce-application-from-your-build-server/
 categories:

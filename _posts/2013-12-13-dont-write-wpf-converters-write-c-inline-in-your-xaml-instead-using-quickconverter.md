@@ -2,7 +2,6 @@
 id: 686
 title: 'Don&rsquo;t Write WPF Converters; Write C# Inline In Your XAML Instead Using QuickConverter'
 date: 2013-12-13T15:09:10-06:00
-author: deadlydog
 guid: http://dans-blog.azurewebsites.net/?p=686
 permalink: /dont-write-wpf-converters-write-c-inline-in-your-xaml-instead-using-quickconverter/
 categories:

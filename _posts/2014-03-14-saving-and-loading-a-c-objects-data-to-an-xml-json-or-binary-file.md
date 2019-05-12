@@ -2,7 +2,6 @@
 id: 731
 title: 'Saving And Loading A C# Object&rsquo;s Data To An Xml, Json, Or Binary File'
 date: 2014-03-14T15:53:35-06:00
-author: deadlydog
 guid: http://dans-blog.azurewebsites.net/?p=731
 permalink: /saving-and-loading-a-c-objects-data-to-an-xml-json-or-binary-file/
 categories:

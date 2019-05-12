@@ -2,7 +2,6 @@
 id: 790
 title: Keep PowerShell Console Window Open After Script Finishes Running
 date: 2014-07-07T15:57:14-06:00
-author: deadlydog
 guid: http://dans-blog.azurewebsites.net/?p=790
 permalink: /keep-powershell-console-window-open-after-script-finishes-running/
 categories:

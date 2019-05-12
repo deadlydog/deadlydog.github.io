@@ -2,7 +2,6 @@
 id: 76
 title: VS 11 Beta merge tool is awesome, except for resolving conflicts
 date: 2012-04-05T23:48:00-06:00
-author: deadlydog
 guid: https://deadlydog.wordpress.com/?p=76
 permalink: /vs-11-beta-merge-tool-is-awesome-except-for-resolving-conflicts/
 jabber_published:

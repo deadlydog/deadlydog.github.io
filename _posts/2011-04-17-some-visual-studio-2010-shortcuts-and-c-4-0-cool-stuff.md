@@ -2,7 +2,6 @@
 id: 12
 title: 'Some Visual Studio 2010 Shortcuts and C# 4.0 Cool Stuff'
 date: 2011-04-17T22:40:00-06:00
-author: deadlydog
 guid: https://deadlydog.wordpress.com/?p=12
 permalink: /some-visual-studio-2010-shortcuts-and-c-4-0-cool-stuff/
 jabber_published:

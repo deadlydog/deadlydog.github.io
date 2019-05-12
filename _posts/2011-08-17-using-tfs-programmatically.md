@@ -2,7 +2,6 @@
 id: 65
 title: Using TFS Programmatically
 date: 2011-08-17T23:37:00-06:00
-author: deadlydog
 guid: https://deadlydog.wordpress.com/?p=65
 permalink: /using-tfs-programmatically/
 jabber_published:

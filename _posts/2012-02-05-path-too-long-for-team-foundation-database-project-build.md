@@ -2,7 +2,6 @@
 id: 71
 title: Path Too Long for Team Foundation Database Project Build
 date: 2012-02-05T23:46:00-06:00
-author: deadlydog
 guid: https://deadlydog.wordpress.com/?p=71
 permalink: /path-too-long-for-team-foundation-database-project-build/
 jabber_published:

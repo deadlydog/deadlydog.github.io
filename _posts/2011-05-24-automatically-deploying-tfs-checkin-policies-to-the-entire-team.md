@@ -2,7 +2,6 @@
 id: 37
 title: Automatically deploying TFS Checkin Policies to the entire team
 date: 2011-05-24T23:19:00-06:00
-author: deadlydog
 guid: https://deadlydog.wordpress.com/?p=37
 permalink: /automatically-deploying-tfs-checkin-policies-to-the-entire-team/
 jabber_published:

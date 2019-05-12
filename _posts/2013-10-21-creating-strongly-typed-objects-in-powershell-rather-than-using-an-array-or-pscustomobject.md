@@ -2,7 +2,6 @@
 id: 548
 title: Creating Strongly Typed Objects In PowerShell, Rather Than Using An Array Or PSCustomObject
 date: 2013-10-21T14:20:17-06:00
-author: deadlydog
 guid: http://dans-blog.azurewebsites.net/?p=548
 permalink: /creating-strongly-typed-objects-in-powershell-rather-than-using-an-array-or-pscustomobject/
 categories:
