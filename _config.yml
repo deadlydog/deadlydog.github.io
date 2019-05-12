@@ -104,6 +104,7 @@ defaults:
       toc: true
       toc_label: Post Sections
       toc_icon: stream
+      classes: wide
   # _pages
   - scope:
       path: "_pages"
@@ -114,6 +115,7 @@ defaults:
       toc: true
       toc_label: Post Sections
       toc_icon: stream
+      classes: wide
 
 category_archive:
   type: liquid
