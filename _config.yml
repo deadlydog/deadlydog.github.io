@@ -23,7 +23,7 @@ twitter_username: deadlydog
 github_username: deadlydog
 
 minimal_mistakes_skin: default # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum" "sunrise"
-search: true
+search: true # Show the search link on the site.
 
 # Build settings
 markdown: kramdown
