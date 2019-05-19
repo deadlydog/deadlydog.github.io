@@ -39,6 +39,8 @@ Simply modify the `Gemfile` with the new gem to use, and then run `bundle instal
 
 Typically themes are installed from gems, and then you update the `_config.yml` file to specify the new theme to use.
 
+Currently with the MinimalMistakes theme we are not installing it from a gem, but are instead using the remote theme method instead.
+
 ## Customization's I've made to the theme / site
 
 Anywhere that I make custom code changes, I try to put `Dan's Customizations` in comments, so doing a search of the repo for `Dan` should find all places I've changed / overwritten code.
