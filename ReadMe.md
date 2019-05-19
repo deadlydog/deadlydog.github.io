@@ -33,9 +33,19 @@ Typically themes are installed from gems, and then you update the `_config.yml` 
 
 ## Customization's I've made to the theme
 
-Anywhere that I make custom changes, I try to put `Dan's Customizations` in comments, so doing a search of the repo for `Dan` should find all places I've changed / overwritten code.
+Anywhere that I make custom code changes, I try to put `Dan's Customizations` in comments, so doing a search of the repo for `Dan` should find all places I've changed / overwritten code.
 This doesn't include the `_config.yml` though, as we're expected to set custom settings in there.
 
 Here's a list of places I've changed code:
 
 - `assets/css/main.scss` file: Adjusted font sizes a bit.
+- `_config.yml` file.
+
+Here's a list of files I've added or changed:
+
+- Everything in the `_posts` and `_drafts` directories.
+- The `_pages\About.md` page.
+- Everything in the `_assets\Posts` and `_assets\Site` directories.
+- The `favicon.ico` image.
+- The `.vscode` directory.
+- The `ReadMe.md` file.
