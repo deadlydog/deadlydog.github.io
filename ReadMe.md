@@ -1,14 +1,14 @@
 # Daniel Schroeder's Programming Blog
 
-This repository was initially cloned off of [Minimal Mistakes GitHub Pages Starter](https://github.com/mmistakes/mm-github-pages-starter), and then updated with my content and configuration.
+This repository was initially cloned off of [Minimal Mistakes GitHub Pages Starter][MinimalMistakesGitHubPagesStarterRepoUrl], and then updated with my content and configuration.
 
-We currently use the [Minimal Mistakes theme](https://github.com/mmistakes/minimal-mistakes). View [the documentation](https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/).
+We currently use the [Minimal Mistakes theme][MinimalMistakesThemeGitHubRepoUrl]. View [the documentation][MinimalMistakesThemeDocumentationUrl].
 
 ## Running Jekyll locally
 
 ### Prerequisites
 
-1. Install [Ruby](https://rubyinstaller.org/downloads/), as well as have it install MSYS2 after installation.
+1. Install [Ruby][RubyInstallerDownloadPageUrl], as well as have it install MSYS2 after installation.
    - Use `ruby -v` to see which version is installed.
 1. Install the Jekyll gem using `gem install jekyll bundler`
    - Use `jekyll -v` to see which version of jekyll is installed.
@@ -24,6 +24,14 @@ Jekyll typically runs locally at http://127.0.0.1:4000/.
 ### Keeping up to date
 
 To ensure that the GitHub Pages and other gems are up-to-date, periodically run `bundle update` to update all gems.
+
+To use a newer version of the theme, update the `_config.yml` file and change the line:
+
+```yml
+remote_theme: mmistakes/minimal-mistakes@[tag|commit|branch]
+```
+
+to use a newer tag/commit from [the theme repo][MinimalMistakesThemeGitHubRepoUrl].
 
 ### Installing new gems and themes
 
@@ -54,3 +62,8 @@ Here's a list of files I've added or changed:
 
 The site was migrated from WordPress to Jekyll in April 2019, and before WordPress it was hosted in GeeksWithBlogs.
 This is why the posts before 2019 have additional front matter on them; the tool to export them from WordPress to Jekyll added it.
+
+[MinimalMistakesGitHubPagesStarterRepoUrl]: https://github.com/mmistakes/mm-github-pages-starter
+[MinimalMistakesThemeGitHubRepoUrl]: https://github.com/mmistakes/minimal-mistakes
+[MinimalMistakesThemeDocumentationUrl]: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
+[RubyInstallerDownloadPageUrl]: https://rubyinstaller.org/downloads/
