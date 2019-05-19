@@ -22,7 +22,7 @@ This module allows you to add files and directories to a new or existing zip fil
 
 <div id="scid:fb3a1972-4489-4e52-abe7-25a00bb07fdf:d850b5ec-6308-4584-b05a-0e1180a676d6" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
   <p>
-    You can <a href="http://dans-blog.azurewebsites.net/wp-content/uploads/2015/05/Synchronous-ZipAndUnzip.zip" target="_blank">download the PowerShell module zip here</a> or get it from <a href="https://gist.github.com/deadlydog/4d3d98ca10c5c6b62e29f7e793850305">the gist here</a>.
+    You can <a href="/assets/Posts/2015/05/Synchronous-ZipAndUnzip.zip" target="_blank">download the PowerShell module zip here</a> or get it from <a href="https://gist.github.com/deadlydog/4d3d98ca10c5c6b62e29f7e793850305">the gist here</a>.
   </p>
 </div>
 

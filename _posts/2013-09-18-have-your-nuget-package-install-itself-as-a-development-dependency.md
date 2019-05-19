@@ -113,7 +113,7 @@ Set-PackageToBeDevelopmentDependency -PackageId $package.Id -ProjectDirectoryPat
 
 <div class="wlWriterEditableSmartContent" id="scid:fb3a1972-4489-4e52-abe7-25a00bb07fdf:c59cbb6d-6406-432e-8277-d43f188acaeb" style="float: none; margin: 0px; display: inline; padding: 0px;">
   <p>
-    <a href="http://dans-blog.azurewebsites.net/wp-content/uploads/2013/09/Install.zip" target="_blank">Download File</a>
+    <a href="/assets/Posts/2013/09/Install.zip" target="_blank">Download File</a>
   </p>
 </div>
 

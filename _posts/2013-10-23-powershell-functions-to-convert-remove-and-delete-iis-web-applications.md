@@ -22,7 +22,7 @@ I recently refactored some of our PowerShell scripts that we use to publish and 
 
 <div id="scid:fb3a1972-4489-4e52-abe7-25a00bb07fdf:591aa368-3c81-42fb-a66a-5b47ecc8ad72" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
   <p>
-    <a href="http://dans-blog.azurewebsites.net/wp-content/uploads/2013/10/ApplicationServiceScripts2.zip" target="_blank">Download this article&#8217;s code here.</a>
+    <a href="/assets/Posts/2013/10/ApplicationServiceScripts2.zip" target="_blank">Download this article&#8217;s code here.</a>
   </p>
 </div>
 

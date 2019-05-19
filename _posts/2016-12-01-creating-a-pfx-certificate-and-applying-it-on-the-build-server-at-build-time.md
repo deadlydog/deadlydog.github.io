@@ -44,7 +44,7 @@ To create a new password protected .pfx file in a UWP application,
 
 4. In the _Configure Certificate…_ dropdown, choose an existing certificate that you have, or create a new test certificate and provide a password for it. This should create the certificate and add the new .pfx file to your project’s root.
 
-[<img title="Create Pfx Certificate In UWP App" style="border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; padding-top: 0px; padding-left: 0px; border-left: 0px; display: inline; padding-right: 0px" border="0" alt="Create Pfx Certificate In UWP App" src="http://dans-blog.azurewebsites.net/wp-content/uploads/2016/12/Create-Pfx-Certificate-In-UWP-App_thumb.png" width="600" height="232" />](http://dans-blog.azurewebsites.net/wp-content/uploads/2016/12/Create-Pfx-Certificate-In-UWP-App.png)
+[<img title="Create Pfx Certificate In UWP App" style="border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; padding-top: 0px; padding-left: 0px; border-left: 0px; display: inline; padding-right: 0px" border="0" alt="Create Pfx Certificate In UWP App" src="/assets/Posts/2016/12/Create-Pfx-Certificate-In-UWP-App_thumb.png" width="600" height="232" />](/assets/Posts/2016/12/Create-Pfx-Certificate-In-UWP-App.png)
 
 &#160;
 
@@ -60,7 +60,7 @@ Creating a pfx file for a ClickOnce application is similar, but instead you want
 
 4. choose the certificate you want to use, or create your own password-protected test certificate.
 
-[<img title="Create Pfx Certificate In ClickOnce App" style="border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; padding-top: 0px; padding-left: 0px; border-left: 0px; display: inline; padding-right: 0px" border="0" alt="Create Pfx Certificate In ClickOnce App" src="http://dans-blog.azurewebsites.net/wp-content/uploads/2016/12/Create-Pfx-Certificate-In-ClickOnce-App_thumb.png" width="600" height="252" />](http://dans-blog.azurewebsites.net/wp-content/uploads/2016/12/Create-Pfx-Certificate-In-ClickOnce-App.png)
+[<img title="Create Pfx Certificate In ClickOnce App" style="border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; padding-top: 0px; padding-left: 0px; border-left: 0px; display: inline; padding-right: 0px" border="0" alt="Create Pfx Certificate In ClickOnce App" src="/assets/Posts/2016/12/Create-Pfx-Certificate-In-ClickOnce-App_thumb.png" width="600" height="252" />](/assets/Posts/2016/12/Create-Pfx-Certificate-In-ClickOnce-App.png)
 
 &#160;
 
@@ -95,7 +95,7 @@ To do this you will need to save this _Import-PfxCertificate.ps1_ file in your v
 
 Here I am using VSTS (Visual Studio Team Services), but the same steps should generally apply to any build system (e.g. TeamCity). I have created a new build step called _Apply Store Certificate_ that calls the Import-PfxCertificate.ps1 PowerShell script. This step is set to occur before the _Build solution_ step, and provides the required parameters to the script; the path to the .pfx file and the certificates password (as a hidden variable that I configured in the build system). Notice that I also set the _Working folder_ that the script will run from to the directory that the .pfx resides in, so that the script will be able to resolve the absolute file path.
 
-[<img title="VSTS Build Pfx Certificate Step" style="border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; padding-top: 0px; padding-left: 0px; border-left: 0px; display: inline; padding-right: 0px" border="0" alt="VSTS Build Pfx Certificate Step" src="http://dans-blog.azurewebsites.net/wp-content/uploads/2016/12/VSTS-Build-Pfx-Certificate-Step_thumb.png" width="600" height="240" />](http://dans-blog.azurewebsites.net/wp-content/uploads/2016/12/VSTS-Build-Pfx-Certificate-Step.png)
+[<img title="VSTS Build Pfx Certificate Step" style="border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; padding-top: 0px; padding-left: 0px; border-left: 0px; display: inline; padding-right: 0px" border="0" alt="VSTS Build Pfx Certificate Step" src="/assets/Posts/2016/12/VSTS-Build-Pfx-Certificate-Step_thumb.png" width="600" height="240" />](/assets/Posts/2016/12/VSTS-Build-Pfx-Certificate-Step.png)
 
 Your build system should now be able to apply the certificate before building the solution, avoiding the certificate errors and hopefully resulting in a successful build.
 

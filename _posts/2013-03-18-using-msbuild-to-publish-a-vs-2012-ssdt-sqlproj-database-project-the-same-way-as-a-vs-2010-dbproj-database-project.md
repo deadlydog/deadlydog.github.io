@@ -116,7 +116,7 @@ The code presented here is [based on this post](http://huddledmasses.org/adventu
 
 <div id="scid:fb3a1972-4489-4e52-abe7-25a00bb07fdf:fd8b0e8d-f40e-4c6f-846e-511003fc9d0a" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
   <p>
-    <a href="http://dans-blog.azurewebsites.net/wp-content/uploads/2013/11/MsBuildTargetsToPublishSqlProjFromCommandLine.txt" target="_blank">Download the code to avoid website copy-paste formatting problems (right-click this, choose Save Link/Target As&#8230;)</a>
+    <a href="/assets/Posts/2013/11/MsBuildTargetsToPublishSqlProjFromCommandLine.txt" target="_blank">Download the code to avoid website copy-paste formatting problems (right-click this, choose Save Link/Target As&#8230;)</a>
   </p>
 </div>
 

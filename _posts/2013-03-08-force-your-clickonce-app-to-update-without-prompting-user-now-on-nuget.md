@@ -23,11 +23,11 @@ A while ago [I blogged about a powershell script I made](http://dans-blog.azurew
 
 There was a bit of setup to get this to work.  You had to make sure the powershell script was in the proper directory and add a post-build event to your project.  I’m happy to announce that I’ve significantly updated the powershell script with more features and bug fixes, and **you can now install it from Nuget, which will handle all of the setup for you**.  So now making sure that your end-users are always using the latest version of your application is as easy as adding the [AutoUpdateProjectsMinimumRequiredClickOnceVersion NuGet package](https://nuget.org/packages/AutoUpdateProjectsMinimumRequiredClickOnceVersion) to your ClickOnce project.
 
-[<img style="background-image: none; padding-top: 0; padding-left: 0; display: inline; padding-right: 0; border-width: 0;" title="ManageNuget" alt="ManageNuget" src="http://dans-blog.azurewebsites.net/wp-content/uploads/2013/03/managenuget_thumb.png" width="484" height="222" border="0" />](http://dans-blog.azurewebsites.net/wp-content/uploads/2013/03/managenuget.png)
+[<img style="background-image: none; padding-top: 0; padding-left: 0; display: inline; padding-right: 0; border-width: 0;" title="ManageNuget" alt="ManageNuget" src="/assets/Posts/2013/03/managenuget_thumb.png" width="484" height="222" border="0" />](/assets/Posts/2013/03/managenuget.png)
 
-[<img style="background-image: none; padding-top: 0; padding-left: 0; display: inline; padding-right: 0; border-width: 0;" title="Install" alt="Install" src="http://dans-blog.azurewebsites.net/wp-content/uploads/2013/03/install_thumb.png" width="600" height="148" border="0" />](http://dans-blog.azurewebsites.net/wp-content/uploads/2013/03/install.png)
+[<img style="background-image: none; padding-top: 0; padding-left: 0; display: inline; padding-right: 0; border-width: 0;" title="Install" alt="Install" src="/assets/Posts/2013/03/install_thumb.png" width="600" height="148" border="0" />](/assets/Posts/2013/03/install.png)
 
-[<img style="background-image: none; padding-top: 0; padding-left: 0; display: inline; padding-right: 0; border-width: 0;" title="FileAdded" alt="FileAdded" src="http://dans-blog.azurewebsites.net/wp-content/uploads/2013/03/fileadded_thumb.png" width="349" height="270" border="0" />](http://dans-blog.azurewebsites.net/wp-content/uploads/2013/03/fileadded.png)
+[<img style="background-image: none; padding-top: 0; padding-left: 0; display: inline; padding-right: 0; border-width: 0;" title="FileAdded" alt="FileAdded" src="/assets/Posts/2013/03/fileadded_thumb.png" width="349" height="270" border="0" />](/assets/Posts/2013/03/fileadded.png)
 
 As you can see in the last screenshot, it adds a new “PostBuildScripts” folder to your project that contains the powershell script that is ran from the project’s post-build event.
 

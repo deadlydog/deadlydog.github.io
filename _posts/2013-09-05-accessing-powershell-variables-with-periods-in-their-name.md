@@ -114,7 +114,7 @@ TF.iQmetrix.CheckinPolicies NoteProperty System.String TF.iQmetrix.CheckinPolici
 
 So in PowerShell ISE I type “$RegistryEntry.” and intellisense pops up showing me that TF.iQmetrix.CheckinPolicies is indeed a property on this object that I can access.
 
-[<img title="PowerShell ISE Intellisense" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-top-width: 0px" border="0" alt="PowerShell ISE Intellisense" src="http://dans-blog.azurewebsites.net/wp-content/uploads/2013/09/PowerShell-ISE-Intellisense_thumb.png" width="600" height="210" />](http://dans-blog.azurewebsites.net/wp-content/uploads/2013/09/PowerShell-ISE-Intellisense.png)
+[<img title="PowerShell ISE Intellisense" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-top-width: 0px" border="0" alt="PowerShell ISE Intellisense" src="/assets/Posts/2013/09/PowerShell-ISE-Intellisense_thumb.png" width="600" height="210" />](/assets/Posts/2013/09/PowerShell-ISE-Intellisense.png)
 
 So I try and display the value of that property to the console using:
 
@@ -127,7 +127,7 @@ $RegistryEntry.TF.iQmetrix.CheckinPolicies
 </pre>
 </div>
 
-But nothing is displayed <img class="wlEmoticon wlEmoticon-sadsmile" style="border-top-style: none; border-left-style: none; border-bottom-style: none; border-right-style: none" alt="Sad smile" src="http://dans-blog.azurewebsites.net/wp-content/uploads/2013/09/wlEmoticon-sadsmile.png" />
+But nothing is displayed <img class="wlEmoticon wlEmoticon-sadsmile" style="border-top-style: none; border-left-style: none; border-bottom-style: none; border-right-style: none" alt="Sad smile" src="/assets/Posts/2013/09/wlEmoticon-sadsmile.png" />
 
 While PowerShell ISE does color-code the line “$RegistryEntry.TF.iQmetrix.CheckinPolicies” to have the object color different than the property color, if you just look at it in plain text, something clearly looks off about it.&#160; How does PowerShell know that the property name is “TF.iQmetrix.CheckinPolicies”, and not that “TF” is a property with an “iQmetrix” property on it, with a “CheckinPolicies” property on that.&#160; Well, it doesn’t.
 

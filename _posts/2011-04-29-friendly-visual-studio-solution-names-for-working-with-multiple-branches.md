@@ -32,11 +32,11 @@ tags:
 </p>
 
 <p class="MsoNormal">
-      <a href="http://dans-blog.azurewebsites.net/wp-content/uploads/2012/11/windowtitle1.png"><img style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" title="WindowTitle1" alt="WindowTitle1" src="http://dans-blog.azurewebsites.net/wp-content/uploads/2012/11/windowtitle1_thumb.png" width="362" height="64" border="0" /></a>
+      <a href="/assets/Posts/2012/11/windowtitle1.png"><img style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" title="WindowTitle1" alt="WindowTitle1" src="/assets/Posts/2012/11/windowtitle1_thumb.png" width="362" height="64" border="0" /></a>
 </p>
 
 <p class="MsoNormal">
-  <a href="http://dans-blog.azurewebsites.net/wp-content/uploads/2012/11/windowtitle2.png"><img style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" title="WindowTitle2" alt="WindowTitle2" src="http://dans-blog.azurewebsites.net/wp-content/uploads/2012/11/windowtitle2_thumb.png" width="381" height="67" border="0" /></a>
+  <a href="/assets/Posts/2012/11/windowtitle2.png"><img style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" title="WindowTitle2" alt="WindowTitle2" src="/assets/Posts/2012/11/windowtitle2_thumb.png" width="381" height="67" border="0" /></a>
 </p>
 
 <p class="MsoNormal">

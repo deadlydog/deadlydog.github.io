@@ -91,7 +91,7 @@ You can copy and paste the text into a file with a .reg extension, or just
 
 <div class="wlWriterEditableSmartContent" id="scid:fb3a1972-4489-4e52-abe7-25a00bb07fdf:607599ef-0541-44ef-ab33-1f27db68044b" style="float: none; margin: 0px; display: inline; padding: 0px;">
   <p>
-    <a href="http://dans-blog.azurewebsites.net/wp-content/uploads/2014/07/FixRunPowerShellScriptWithSpacesInPathProblemAndLeaveConsoleOpenWhenScriptCompletes.zip" target="_blank">download it here.</a>
+    <a href="/assets/Posts/2014/07/FixRunPowerShellScriptWithSpacesInPathProblemAndLeaveConsoleOpenWhenScriptCompletes.zip" target="_blank">download it here.</a>
   </p>
 </div>
 

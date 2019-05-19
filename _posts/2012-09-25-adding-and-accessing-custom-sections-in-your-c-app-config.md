@@ -26,7 +26,7 @@ Due to the popularity of this post, I have created a sample solution that shows 
 
 <div id="scid:fb3a1972-4489-4e52-abe7-25a00bb07fdf:8ba5bc7e-2d9b-44b3-81f5-b3f88338cfa7" class="wlWriterEditableSmartContent" style="float: none; margin: 0px; display: inline; padding: 0px;">
   <p>
-    <a href="http://dans-blog.azurewebsites.net/wp-content/uploads/2014/02/AppConfigExample1.zip" target="_blank">Download the source code example.</a>
+    <a href="/assets/Posts/2014/02/AppConfigExample1.zip" target="_blank">Download the source code example.</a>
   </p>
 </div>
 

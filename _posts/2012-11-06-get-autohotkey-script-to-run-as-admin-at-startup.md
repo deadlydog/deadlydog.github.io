@@ -26,33 +26,33 @@ So here is a Windows 8, UAC-friendly method to automatically launch your AHK scr
 
 1. Open the Task Scheduler (also known as “Schedule tasks” in Windows 8 Settings).
 
-[<img title="Open Task Scheduler" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-top-width: 0px" border="0" alt="Open Task Scheduler" src="http://dans-blog.azurewebsites.net/wp-content/uploads/2012/11/open-task-scheduler_thumb.png" width="409" height="556" />](http://dans-blog.azurewebsites.net/wp-content/uploads/2012/11/open-task-scheduler.png)
+[<img title="Open Task Scheduler" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-top-width: 0px" border="0" alt="Open Task Scheduler" src="/assets/Posts/2012/11/open-task-scheduler_thumb.png" width="409" height="556" />](/assets/Posts/2012/11/open-task-scheduler.png)
 
 2. Create a new Basic Task.
 
 3. Give it a name and description (something like “launch AutoHotkey script at login”), and then specify to have it run “When I log on”.&#160; Then specify that you want it to “Start a program”, and then point it towards your AutoHotkey script.&#160; Before you finish the wizard, check off “Open the Properties dialog for this task when I click Finish”.
 
-[<img title="Create Basic Task in Task Scheduler" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-top-width: 0px" border="0" alt="Create Basic Task in Task Scheduler" src="http://dans-blog.azurewebsites.net/wp-content/uploads/2012/11/create-basic-task-in-task-scheduler_thumb1.png" width="766" height="534" />](http://dans-blog.azurewebsites.net/wp-content/uploads/2012/11/create-basic-task-in-task-scheduler1.png)
+[<img title="Create Basic Task in Task Scheduler" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-top-width: 0px" border="0" alt="Create Basic Task in Task Scheduler" src="/assets/Posts/2012/11/create-basic-task-in-task-scheduler_thumb1.png" width="766" height="534" />](/assets/Posts/2012/11/create-basic-task-in-task-scheduler1.png)
 
 4. When that Properties dialog opens up, go to the Conditions tab and make sure none of the checkboxes under the Power category are checked off; this will ensure the script still launches if you are on a laptop and not plugged into AC power.
 
-[<img title="Basic Task Conditions" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-top-width: 0px" border="0" alt="Basic Task Conditions" src="http://dans-blog.azurewebsites.net/wp-content/uploads/2012/11/basic-task-conditions_thumb1.png" width="677" height="511" />](http://dans-blog.azurewebsites.net/wp-content/uploads/2012/11/basic-task-conditions1.png)
+[<img title="Basic Task Conditions" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-top-width: 0px" border="0" alt="Basic Task Conditions" src="/assets/Posts/2012/11/basic-task-conditions_thumb1.png" width="677" height="511" />](/assets/Posts/2012/11/basic-task-conditions1.png)
 
 5. **Now here is the important part**; To have your script “Run as admin”, on the General tab check off “Run with highest privileges”.
 
-[<img title="Run Scheduled Task as Admin_thumb[3]" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-top-width: 0px" border="0" alt="Run Scheduled Task as Admin_thumb[3]" src="http://dans-blog.azurewebsites.net/wp-content/uploads/2012/11/run-scheduled-task-as-admin_thumb3_thumb.png" width="650" height="491" />](http://dans-blog.azurewebsites.net/wp-content/uploads/2012/11/run-scheduled-task-as-admin_thumb3.png)
+[<img title="Run Scheduled Task as Admin_thumb[3]" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-top-width: 0px" border="0" alt="Run Scheduled Task as Admin_thumb[3]" src="/assets/Posts/2012/11/run-scheduled-task-as-admin_thumb3_thumb.png" width="650" height="491" />](/assets/Posts/2012/11/run-scheduled-task-as-admin_thumb3.png)
 
-Now your AHK script should start automatically as soon as you log into Windows; even when UAC is enabled <img class="wlEmoticon wlEmoticon-smile" style="border-top-style: none; border-bottom-style: none; border-right-style: none; border-left-style: none" alt="Smile" src="http://dans-blog.azurewebsites.net/wp-content/uploads/2012/11/wlemoticon-smile2.png" />
+Now your AHK script should start automatically as soon as you log into Windows; even when UAC is enabled <img class="wlEmoticon wlEmoticon-smile" style="border-top-style: none; border-bottom-style: none; border-right-style: none; border-left-style: none" alt="Smile" src="/assets/Posts/2012/11/wlemoticon-smile2.png" />
 
 6. If your AHK script uses an **#Include** statement to include other files, you may get an error similar to this one when your task runs:
 
 “#Include file … cannot be opened. The program will exit.”
 
-[<img title="AHK Cannot Open Include File" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-top-width: 0px" border="0" alt="AHK Cannot Open Include File" src="http://dans-blog.azurewebsites.net/wp-content/uploads/2012/11/ahk-cannot-open-include-file_thumb.png" width="441" height="226" />](http://dans-blog.azurewebsites.net/wp-content/uploads/2012/11/ahk-cannot-open-include-file.png)
+[<img title="AHK Cannot Open Include File" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-top-width: 0px" border="0" alt="AHK Cannot Open Include File" src="/assets/Posts/2012/11/ahk-cannot-open-include-file_thumb.png" width="441" height="226" />](/assets/Posts/2012/11/ahk-cannot-open-include-file.png)
 
 The solution to this is to tell your AHK script to start in the same directory as the file that you want to include.&#160; So you will need to edit your scheduled task’s Action to specify the Start In directory.
 
-[<img title="Task Scheduler Start In Directory" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-top-width: 0px" border="0" alt="Task Scheduler Start In Directory" src="http://dans-blog.azurewebsites.net/wp-content/uploads/2012/11/task-scheduler-start-in-directory_thumb.png" width="1095" height="504" />](http://dans-blog.azurewebsites.net/wp-content/uploads/2012/11/task-scheduler-start-in-directory.png)
+[<img title="Task Scheduler Start In Directory" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-top-width: 0px" border="0" alt="Task Scheduler Start In Directory" src="/assets/Posts/2012/11/task-scheduler-start-in-directory_thumb.png" width="1095" height="504" />](/assets/Posts/2012/11/task-scheduler-start-in-directory.png)
 
 Happy coding!
 

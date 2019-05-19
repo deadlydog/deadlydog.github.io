@@ -42,8 +42,8 @@ If you install the extension and a code page doesn’t expand it’s width to fi
 
 And to give you an idea of what the result looks like, here are 2 screenshots; one without the extension installed (top, notice some text goes out of view), and one with it (bottom).
 
-[<img title="WithoutFullWidth" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-top-width: 0px" border="0" alt="WithoutFullWidth" src="http://dans-blog.azurewebsites.net/wp-content/uploads/2014/05/WithoutFullWidth_thumb.png" width="600" height="327" />](http://dans-blog.azurewebsites.net/wp-content/uploads/2014/05/WithoutFullWidth.png)
+[<img title="WithoutFullWidth" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-top-width: 0px" border="0" alt="WithoutFullWidth" src="/assets/Posts/2014/05/WithoutFullWidth_thumb.png" width="600" height="327" />](/assets/Posts/2014/05/WithoutFullWidth.png)
 
-[<img title="WithFullWidth" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-top-width: 0px" border="0" alt="WithFullWidth" src="http://dans-blog.azurewebsites.net/wp-content/uploads/2014/05/WithFullWidth_thumb.png" width="600" height="327" />](http://dans-blog.azurewebsites.net/wp-content/uploads/2014/05/WithFullWidth.png)
+[<img title="WithFullWidth" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-top-width: 0px" border="0" alt="WithFullWidth" src="/assets/Posts/2014/05/WithFullWidth_thumb.png" width="600" height="327" />](/assets/Posts/2014/05/WithFullWidth.png)
 
 Happy coding!

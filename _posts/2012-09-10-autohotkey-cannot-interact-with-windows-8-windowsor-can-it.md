@@ -36,6 +36,6 @@ If you do need your AHK script to run as admin and plan on manually double-click
 
 ==</ EDIT >==
 
-[<img title="image" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-top-width: 0px" border="0" alt="image" src="http://dans-blog.azurewebsites.net/wp-content/uploads/2012/11/image_thumb.png" width="651" height="438" />](http://deadlydog.files.wordpress.com/2012/11/image.png)
+[<img title="image" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-top-width: 0px" border="0" alt="image" src="/assets/Posts/2012/11/image_thumb.png" width="651" height="438" />](http://deadlydog.files.wordpress.com/2012/11/image.png)
 
 Happy coding!

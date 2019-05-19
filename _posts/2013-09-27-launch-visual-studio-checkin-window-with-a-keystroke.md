@@ -34,13 +34,13 @@ A few weeks ago I blogged about [how you can get custom TFS checkin policies to 
 ### Steps To Launch VS Checkin Window With A Shortcut Key
 
   1. Right click on your desktop and choose **New** –> **Shortcut** to create a new shortcut file.
-    [<img title="CreateShortcutOnDesktop" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-top-width: 0px" border="0" alt="CreateShortcutOnDesktop" src="http://dans-blog.azurewebsites.net/wp-content/uploads/2013/09/CreateShortcutOnDesktop_thumb1.png" width="482" height="444" />](http://dans-blog.azurewebsites.net/wp-content/uploads/2013/09/CreateShortcutOnDesktop1.png)
+    [<img title="CreateShortcutOnDesktop" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-top-width: 0px" border="0" alt="CreateShortcutOnDesktop" src="/assets/Posts/2013/09/CreateShortcutOnDesktop_thumb1.png" width="482" height="444" />](/assets/Posts/2013/09/CreateShortcutOnDesktop1.png)
   2. Have the shortcut point to the TF executable. This can be found at **"C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE\TF.exe"**.
-    [**<img title="PathToTfExeForShortcut" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-top-width: 0px" border="0" alt="PathToTfExeForShortcut" src="http://dans-blog.azurewebsites.net/wp-content/uploads/2013/09/PathToTfExeForShortcut_thumb.png" width="600" height="446" />**](http://dans-blog.azurewebsites.net/wp-content/uploads/2013/09/PathToTfExeForShortcut.png)
+    [**<img title="PathToTfExeForShortcut" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-top-width: 0px" border="0" alt="PathToTfExeForShortcut" src="/assets/Posts/2013/09/PathToTfExeForShortcut_thumb.png" width="600" height="446" />**](/assets/Posts/2013/09/PathToTfExeForShortcut.png)
     </li>
 
       * Enter the name for your shortcut file, such as VS Checkin.
-        [<img title="NameShortcut" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-top-width: 0px" border="0" alt="NameShortcut" src="http://dans-blog.azurewebsites.net/wp-content/uploads/2013/09/NameShortcut_thumb.png" width="600" height="446" />](http://dans-blog.azurewebsites.net/wp-content/uploads/2013/09/NameShortcut.png)
+        [<img title="NameShortcut" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-top-width: 0px" border="0" alt="NameShortcut" src="/assets/Posts/2013/09/NameShortcut_thumb.png" width="600" height="446" />](/assets/Posts/2013/09/NameShortcut.png)
         </li>
 
           * Now that the shortcut has been created on your desktop, right-click on it and go the the properties (or use alt+enter). You will want to: </ol>
@@ -48,7 +48,7 @@ A few weeks ago I blogged about [how you can get custom TFS checkin policies to 
           * add **checkin** to the very end of the Target,
           * change the Start In directory to a directory you have mapped in your TFS workspace,
           * and assign it a Shortcut Key.&#160;
-            [<img title="CheckinShortcutPropertiesToChange" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-top-width: 0px" border="0" alt="CheckinShortcutPropertiesToChange" src="http://dans-blog.azurewebsites.net/wp-content/uploads/2013/10/CheckinShortcutPropertiesToChange_thumb.png" width="599" height="662" />](http://dans-blog.azurewebsites.net/wp-content/uploads/2013/10/CheckinShortcutPropertiesToChange.png)
+            [<img title="CheckinShortcutPropertiesToChange" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-top-width: 0px" border="0" alt="CheckinShortcutPropertiesToChange" src="/assets/Posts/2013/10/CheckinShortcutPropertiesToChange_thumb.png" width="599" height="662" />](/assets/Posts/2013/10/CheckinShortcutPropertiesToChange.png)
 
         &#160;
 
@@ -56,7 +56,7 @@ A few weeks ago I blogged about [how you can get custom TFS checkin policies to 
 
         That’s it.&#160; Go ahead and try your shortcut key.&#160; I’ll wait.&#160; You should see something like this:
 
-        [<img title="VsCheckinWindow" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-top-width: 0px" border="0" alt="VsCheckinWindow" src="http://dans-blog.azurewebsites.net/wp-content/uploads/2013/09/VsCheckinWindow_thumb.png" width="600" height="376" />](http://dans-blog.azurewebsites.net/wp-content/uploads/2013/09/VsCheckinWindow.png)
+        [<img title="VsCheckinWindow" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-top-width: 0px" border="0" alt="VsCheckinWindow" src="/assets/Posts/2013/09/VsCheckinWindow_thumb.png" width="600" height="376" />](/assets/Posts/2013/09/VsCheckinWindow.png)
 
         Notice that it pops both a command prompt window and the actual checkin window.&#160; If you don’t have any pending changes, then the command prompt window will simply open and close.
 

@@ -28,7 +28,7 @@ I love PowerShell, and when prompting users for input I often prefer to use GUI 
 
 <div id="scid:fb3a1972-4489-4e52-abe7-25a00bb07fdf:22398b0d-6f34-47d0-aab1-7e10ea30eb8b" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
   <p>
-    <a href="http://dans-blog.azurewebsites.net/wp-content/uploads/2014/07/PowerShellGuiFunctions.zip" target="_blank">Download a file containing the code for the functions and examples shown here</a>
+    <a href="/assets/Posts/2014/07/PowerShellGuiFunctions.zip" target="_blank">Download a file containing the code for the functions and examples shown here</a>
   </p>
 </div>
 
@@ -61,7 +61,7 @@ else { Write-Host "You clicked $buttonClicked" }
 </pre>
 </div>
 
-[<img title="Message Box Example" style="border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; padding-top: 0px; padding-left: 0px; border-left: 0px; display: inline; padding-right: 0px" border="0" alt="Message Box Example" src="http://dans-blog.azurewebsites.net/wp-content/uploads/2014/07/Message-Box-Example_thumb.png" width="249" height="165" />](http://dans-blog.azurewebsites.net/wp-content/uploads/2014/07/Message-Box-Example.png)
+[<img title="Message Box Example" style="border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; padding-top: 0px; padding-left: 0px; border-left: 0px; display: inline; padding-right: 0px" border="0" alt="Message Box Example" src="/assets/Posts/2014/07/Message-Box-Example_thumb.png" width="249" height="165" />](/assets/Posts/2014/07/Message-Box-Example.png)
 
 &#160;
 
@@ -95,7 +95,7 @@ else { Write-Host "You entered $textEntered" }
 </pre>
 </div>
 
-[<img title="Input Box Example" style="border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; padding-top: 0px; padding-left: 0px; border-left: 0px; display: inline; padding-right: 0px" border="0" alt="Input Box Example" src="http://dans-blog.azurewebsites.net/wp-content/uploads/2014/07/Input-Box-Example_thumb.png" width="416" height="181" />](http://dans-blog.azurewebsites.net/wp-content/uploads/2014/07/Input-Box-Example.png)
+[<img title="Input Box Example" style="border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; padding-top: 0px; padding-left: 0px; border-left: 0px; display: inline; padding-right: 0px" border="0" alt="Input Box Example" src="/assets/Posts/2014/07/Input-Box-Example_thumb.png" width="416" height="181" />](/assets/Posts/2014/07/Input-Box-Example.png)
 
 &#160;
 
@@ -135,7 +135,7 @@ else { "You did not select a file." }
 </pre>
 </div>
 
-[<img title="Select Text File Example" style="border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; padding-top: 0px; padding-left: 0px; border-left: 0px; display: inline; padding-right: 0px" border="0" alt="Select Text File Example" src="http://dans-blog.azurewebsites.net/wp-content/uploads/2014/07/Select-Text-File-Example_thumb.png" width="495" height="368" />](http://dans-blog.azurewebsites.net/wp-content/uploads/2014/07/Select-Text-File-Example.png)
+[<img title="Select Text File Example" style="border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; padding-top: 0px; padding-left: 0px; border-left: 0px; display: inline; padding-right: 0px" border="0" alt="Select Text File Example" src="/assets/Posts/2014/07/Select-Text-File-Example_thumb.png" width="495" height="368" />](/assets/Posts/2014/07/Select-Text-File-Example.png)
 
 &#160;
 
@@ -174,7 +174,7 @@ else { "You did not select a directory." }
 </pre>
 </div>
 
-[<img title="Browse For Folder" style="border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; padding-top: 0px; padding-left: 0px; border-left: 0px; display: inline; padding-right: 0px" border="0" alt="Browse For Folder" src="http://dans-blog.azurewebsites.net/wp-content/uploads/2014/07/Browse-For-Folder_thumb.png" width="327" height="377" />](http://dans-blog.azurewebsites.net/wp-content/uploads/2014/07/Browse-For-Folder.png)
+[<img title="Browse For Folder" style="border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; padding-top: 0px; padding-left: 0px; border-left: 0px; display: inline; padding-right: 0px" border="0" alt="Browse For Folder" src="/assets/Posts/2014/07/Browse-For-Folder_thumb.png" width="327" height="377" />](/assets/Posts/2014/07/Browse-For-Folder.png)
 
 &#160;
 
@@ -312,7 +312,7 @@ else { Write-Host "You entered the following text: $multiLineText" }
 </pre>
 </div>
 
-[<img title="Multi Line Example" style="border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; padding-top: 0px; padding-left: 0px; border-left: 0px; display: inline; padding-right: 0px" border="0" alt="Multi Line Example" src="http://dans-blog.azurewebsites.net/wp-content/uploads/2014/07/Multi-Line-Example_thumb.png" width="600" height="322" />](http://dans-blog.azurewebsites.net/wp-content/uploads/2014/07/Multi-Line-Example.png)
+[<img title="Multi Line Example" style="border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; padding-top: 0px; padding-left: 0px; border-left: 0px; display: inline; padding-right: 0px" border="0" alt="Multi Line Example" src="/assets/Posts/2014/07/Multi-Line-Example_thumb.png" width="600" height="322" />](/assets/Posts/2014/07/Multi-Line-Example.png)
 
 &#160;
 

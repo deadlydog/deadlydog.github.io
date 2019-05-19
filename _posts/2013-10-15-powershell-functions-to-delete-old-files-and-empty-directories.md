@@ -62,7 +62,7 @@ function Remove-FilesNotModifiedAfterDate([parameter(Mandatory)][ValidateScript(
 
 <div id="scid:fb3a1972-4489-4e52-abe7-25a00bb07fdf:c2c16c8f-2fb3-43c5-9185-f9386261beae" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
   <p>
-    <a href="http://dans-blog.azurewebsites.net/wp-content/uploads/2014/01/Remove-FilesOlderThan.zip" target="_blank">Download File</a>
+    <a href="/assets/Posts/2014/01/Remove-FilesOlderThan.zip" target="_blank">Download File</a>
   </p>
 </div>
 
@@ -151,7 +151,7 @@ function Remove-FilesNotModifiedAfterDate([parameter(Mandatory=$true)][ValidateS
 
 <div id="scid:fb3a1972-4489-4e52-abe7-25a00bb07fdf:b8e621ed-daea-4ac4-b565-fb8f9cd997e6" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
   <p>
-    <a href="http://dans-blog.azurewebsites.net/wp-content/uploads/2014/01/Remove-FilesOlderThanPSv2.zip" target="_blank">Download PSv2 File</a>
+    <a href="/assets/Posts/2014/01/Remove-FilesOlderThanPSv2.zip" target="_blank">Download PSv2 File</a>
   </p>
 </div>
 

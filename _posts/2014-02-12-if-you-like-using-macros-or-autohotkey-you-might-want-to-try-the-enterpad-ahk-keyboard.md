@@ -20,7 +20,7 @@ If you follow my blog then you already know I’m a huge fan of [AutoHotkey](htt
 
 The Enterpad AHK keyboard is a physical device with 120 different touch spots on it, each of which can be used to trigger a different AHK macro/script.&#160; Here’s a picture of it:
 
-[<img title="" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-top-width: 0px" border="0" alt="" src="http://dans-blog.azurewebsites.net/wp-content/uploads/2014/02/enterpad_application_desktop_english_e2_thumb.jpg" width="600" height="376" />](http://dans-blog.azurewebsites.net/wp-content/uploads/2014/02/enterpad_application_desktop_english_e2.jpg)
+[<img title="" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-top-width: 0px" border="0" alt="" src="/assets/Posts/2014/02/enterpad_application_desktop_english_e2_thumb.jpg" width="600" height="376" />](/assets/Posts/2014/02/enterpad_application_desktop_english_e2.jpg)
 
 While macro keyboards/controllers are nothing new, there are a number of things that separate the Enterpad AHK keyboard from your typical macro keyboard:
 

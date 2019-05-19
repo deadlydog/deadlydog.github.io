@@ -17,7 +17,7 @@ tags:
   - UAC
   - Windows
 ---
-A while back I posted about [AutoHotkey not being able to interact with Windows 8 windows and other applications that were Ran As Admin](http://dans-blog.azurewebsites.net/autohotkey-cannot-interact-with-windows-8-windowsor-can-it/).&#160; My solution was to run your [AutoHotkey](http://www.autohotkey.com/) (AHK) script as admin as well, and I also showed how to have your AHK script start automatically with Windows, but not as an admin.&#160; Afterwards I followed that up with a post about how to [get your AHK script to run as admin on startup](http://dans-blog.azurewebsites.net/get-autohotkey-script-to-run-as-admin-at-startup/), so life was much better, but still not perfect.[<img title="UAC Never Notify" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; float: right; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-top-width: 0px" border="0" alt="UAC Never Notify" src="http://dans-blog.azurewebsites.net/wp-content/uploads/2013/11/UAC-Never-Notify_thumb1.png" width="307" align="right" height="271" />](http://dans-blog.azurewebsites.net/wp-content/uploads/2013/11/UAC-Never-Notify1.png)
+A while back I posted about [AutoHotkey not being able to interact with Windows 8 windows and other applications that were Ran As Admin](http://dans-blog.azurewebsites.net/autohotkey-cannot-interact-with-windows-8-windowsor-can-it/).&#160; My solution was to run your [AutoHotkey](http://www.autohotkey.com/) (AHK) script as admin as well, and I also showed how to have your AHK script start automatically with Windows, but not as an admin.&#160; Afterwards I followed that up with a post about how to [get your AHK script to run as admin on startup](http://dans-blog.azurewebsites.net/get-autohotkey-script-to-run-as-admin-at-startup/), so life was much better, but still not perfect.[<img title="UAC Never Notify" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; float: right; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-top-width: 0px" border="0" alt="UAC Never Notify" src="/assets/Posts/2013/11/UAC-Never-Notify_thumb1.png" width="307" align="right" height="271" />](/assets/Posts/2013/11/UAC-Never-Notify1.png)
 
 &#160;
 
@@ -42,7 +42,7 @@ Running his script is pretty straight forward:
 
     <div id="scid:fb3a1972-4489-4e52-abe7-25a00bb07fdf:66ce9452-5565-493c-8936-2b942ceddc7a" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
       <p>
-        <a href="http://dans-blog.azurewebsites.net/wp-content/uploads/2014/06/EnableUIAccess2.zip" target="_blank">You can also get it here</a>
+        <a href="/assets/Posts/2014/06/EnableUIAccess2.zip" target="_blank">You can also get it here</a>
       </p>
     </div>
 

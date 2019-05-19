@@ -37,13 +37,13 @@ Just change ‘C:\SomeFolder’ to the folder/drive that you want scanned, and i
 
 Here is a screenshot of the resulting GridView:
 
-[<img title="FilesSortedBySize" style="border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; padding-top: 0px; padding-left: 0px; border-left: 0px; display: inline; padding-right: 0px" border="0" alt="FilesSortedBySize" src="http://dans-blog.azurewebsites.net/wp-content/uploads/2014/09/FilesSortedBySize_thumb.png" width="600" height="490" />](http://dans-blog.azurewebsites.net/wp-content/uploads/2014/09/FilesSortedBySize.png)
+[<img title="FilesSortedBySize" style="border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; padding-top: 0px; padding-left: 0px; border-left: 0px; display: inline; padding-right: 0px" border="0" alt="FilesSortedBySize" src="/assets/Posts/2014/09/FilesSortedBySize_thumb.png" width="600" height="490" />](/assets/Posts/2014/09/FilesSortedBySize.png)
 
 &#160;
 
 And again with filtering applied (i.e. the .bak at the top to only show backup files):
 
-[<img title="FilesSortedBySizeAndFiltered" style="border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; padding-top: 0px; padding-left: 0px; border-left: 0px; display: inline; padding-right: 0px" border="0" alt="FilesSortedBySizeAndFiltered" src="http://dans-blog.azurewebsites.net/wp-content/uploads/2014/09/FilesSortedBySizeAndFiltered_thumb.png" width="600" height="491" />](http://dans-blog.azurewebsites.net/wp-content/uploads/2014/09/FilesSortedBySizeAndFiltered.png)
+[<img title="FilesSortedBySizeAndFiltered" style="border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; padding-top: 0px; padding-left: 0px; border-left: 0px; display: inline; padding-right: 0px" border="0" alt="FilesSortedBySizeAndFiltered" src="/assets/Posts/2014/09/FilesSortedBySizeAndFiltered_thumb.png" width="600" height="491" />](/assets/Posts/2014/09/FilesSortedBySizeAndFiltered.png)
 
 All done with PowerShell; no external tools required.
 

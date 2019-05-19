@@ -34,7 +34,7 @@ Most people will likely find the “Run script path with spaces from File Explor
 
 The default Windows action when you double click on a PowerShell script is to open it in an editor, rather than to actually run the script.&#160; If this bugs you, it’s easy enough to fix.&#160; Just right-click on the script, go to “Open with” –> “Choose default program…”, and then select Windows PowerShell, making sure the “Use this app for all .ps1 files” option is checked (this might be called “Always use the selected program to open this kind of file” or something else depending on which version of Windows you are using).
 
-[<img title="ChooseDefaultPowerShellApplication" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-top-width: 0px" border="0" alt="ChooseDefaultPowerShellApplication" src="http://dans-blog.azurewebsites.net/wp-content/uploads/2013/05/ChooseDefaultPowerShellApplication_thumb.png" width="600" height="309" />](http://dans-blog.azurewebsites.net/wp-content/uploads/2013/05/ChooseDefaultPowerShellApplication.png)&#160;&#160;&#160;&#160; [<img title="MakeWindowsPowerShellDefaultApplication" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-top-width: 0px" border="0" alt="MakeWindowsPowerShellDefaultApplication" src="http://dans-blog.azurewebsites.net/wp-content/uploads/2013/05/MakeWindowsPowerShellDefaultApplication_thumb.png" width="312" height="309" />](http://dans-blog.azurewebsites.net/wp-content/uploads/2013/05/MakeWindowsPowerShellDefaultApplication.png)
+[<img title="ChooseDefaultPowerShellApplication" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-top-width: 0px" border="0" alt="ChooseDefaultPowerShellApplication" src="/assets/Posts/2013/05/ChooseDefaultPowerShellApplication_thumb.png" width="600" height="309" />](/assets/Posts/2013/05/ChooseDefaultPowerShellApplication.png)&#160;&#160;&#160;&#160; [<img title="MakeWindowsPowerShellDefaultApplication" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-top-width: 0px" border="0" alt="MakeWindowsPowerShellDefaultApplication" src="/assets/Posts/2013/05/MakeWindowsPowerShellDefaultApplication_thumb.png" width="312" height="309" />](/assets/Posts/2013/05/MakeWindowsPowerShellDefaultApplication.png)
 
 If you don’t mind opening in an editor as the default action, then to run the script you can just right-click on the script and choose “Open with” –> “Windows PowerShell”.&#160; This is probably how 90% of people run their PowerShell scripts; power uses might run their scripts directly from the PowerShell command prompt.
 
@@ -44,7 +44,7 @@ If you don’t mind opening in an editor as the default action, then to run the 
 
 So the problem that the 90% of people are likely to encounter is that as soon as the script path has a space in it (either in the filename itself or in the directory path the file resides in), they will see the powershell console flash some red text at them for about 1/10th of a second before it closes, and they will be wondering why the script did not run; or worse, they won’t know that it didn’t run (see the “Keep PowerShell Console Open” section below).&#160; If they are lucky enough to press Print Screen at the right moment, or decide to open up a PowerShell console and run from there, they might see an error message similar to this:
 
-[<img title="Powershell Invalid Path Error Message" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; float: right; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-top-width: 0px" border="0" alt="Powershell Invalid Path Error Message" align="right" src="http://dans-blog.azurewebsites.net/wp-content/uploads/2013/05/Powershell-Invalid-Path-Error-Message_thumb.png" width="600" height="96" />](http://dans-blog.azurewebsites.net/wp-content/uploads/2013/05/Powershell-Invalid-Path-Error-Message.png)
+[<img title="Powershell Invalid Path Error Message" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; float: right; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-top-width: 0px" border="0" alt="Powershell Invalid Path Error Message" align="right" src="/assets/Posts/2013/05/Powershell-Invalid-Path-Error-Message_thumb.png" width="600" height="96" />](/assets/Posts/2013/05/Powershell-Invalid-Path-Error-Message.png)
 
 “The term ‘C:\My’ is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.”
 
@@ -60,15 +60,15 @@ So the typical work around for this is to open a PowerShell console and run the 
   <strong>Windows 8 Pro Tip:</strong> You can open the PowerShell console at your current directory in File Explorer by choosing File –> Open Windows PowerShell.
 </p>
 
-[<img title="Open Powershell From File Explorer" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; float: right; padding-top: 0px; padding-left: 0px; margin: 0px 0px 0px 25px; display: inline; padding-right: 0px; border-top-width: 0px" border="0" alt="Open Powershell From File Explorer" align="right" src="http://dans-blog.azurewebsites.net/wp-content/uploads/2013/05/Open-Powershell-From-File-Explorer_thumb.png" width="600" height="347" />](http://dans-blog.azurewebsites.net/wp-content/uploads/2013/05/Open-Powershell-From-File-Explorer.png)
+[<img title="Open Powershell From File Explorer" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; float: right; padding-top: 0px; padding-left: 0px; margin: 0px 0px 0px 25px; display: inline; padding-right: 0px; border-top-width: 0px" border="0" alt="Open Powershell From File Explorer" align="right" src="/assets/Posts/2013/05/Open-Powershell-From-File-Explorer_thumb.png" width="600" height="347" />](/assets/Posts/2013/05/Open-Powershell-From-File-Explorer.png)
 
 If you simply try to run the script by enclosing the path to the script in double quotes you will just see the path spit back at you in the console, instead of actually running the script.
 
-[<img title="Try to run script with spaces the wrong way" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-top-width: 0px" border="0" alt="Try to run script with spaces the wrong way" src="http://dans-blog.azurewebsites.net/wp-content/uploads/2013/05/Try-to-run-script-with-spaces-the-wrong-way_thumb.png" width="600" height="163" />](http://dans-blog.azurewebsites.net/wp-content/uploads/2013/05/Try-to-run-script-with-spaces-the-wrong-way.png)
+[<img title="Try to run script with spaces the wrong way" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-top-width: 0px" border="0" alt="Try to run script with spaces the wrong way" src="/assets/Posts/2013/05/Try-to-run-script-with-spaces-the-wrong-way_thumb.png" width="600" height="163" />](/assets/Posts/2013/05/Try-to-run-script-with-spaces-the-wrong-way.png)
 
 The trick is that you have to put “& “ before the script path to actually run the script.&#160; Also, if you are trying to run a script from the current directory without using the full path, you will need to put “.\” before the relative script filename.
 
-[<img title="Run PowerShell script the right way" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-top-width: 0px" border="0" alt="Run PowerShell script the right way" src="http://dans-blog.azurewebsites.net/wp-content/uploads/2013/05/Run-PowerShell-script-the-right-way_thumb.png" width="600" height="165" />](http://dans-blog.azurewebsites.net/wp-content/uploads/2013/05/Run-PowerShell-script-the-right-way.png)
+[<img title="Run PowerShell script the right way" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-top-width: 0px" border="0" alt="Run PowerShell script the right way" src="/assets/Posts/2013/05/Run-PowerShell-script-the-right-way_thumb.png" width="600" height="165" />](/assets/Posts/2013/05/Run-PowerShell-script-the-right-way.png)
 
 ##### &#160;
 
@@ -104,13 +104,13 @@ Windows Registry Editor Version 5.00
 
 <div id="scid:fb3a1972-4489-4e52-abe7-25a00bb07fdf:4b67d617-163b-4eab-893d-590ef905aa2e" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
   <p>
-    <a href="http://dans-blog.azurewebsites.net/wp-content/uploads/2013/09/FixRunPowerShellScriptWithSpacesInPathProblem.zip" target="_blank">Download Registry Script</a>
+    <a href="/assets/Posts/2013/09/FixRunPowerShellScriptWithSpacesInPathProblem.zip" target="_blank">Download Registry Script</a>
   </p>
 </div>
 
 IMHO this seems like a bug with the PowerShell installer (and Windows since PowerShell is built into Windows 7 and up), so please go [up-vote the bug I submitted to get this fixed](https://connect.microsoft.com/PowerShell/feedback/details/788806/powershell-script-cannot-be-ran-outside-of-console-if-path-contains-spaces).
 
-So now you can run your PowerShell scripts from File Explorer regardless of whether their path contains spaces or not <img class="wlEmoticon wlEmoticon-smile" style="border-top-style: none; border-left-style: none; border-bottom-style: none; border-right-style: none" alt="Smile" src="http://dans-blog.azurewebsites.net/wp-content/uploads/2013/05/wlEmoticon-smile.png" />.&#160; For those interested, t[his is the post](http://superuser.com/questions/445925/how-to-add-item-to-right-click-menu-when-not-selecting-a-folder-or-file) that got me thinking about using the registry to fix this problem.
+So now you can run your PowerShell scripts from File Explorer regardless of whether their path contains spaces or not <img class="wlEmoticon wlEmoticon-smile" style="border-top-style: none; border-left-style: none; border-bottom-style: none; border-right-style: none" alt="Smile" src="/assets/Posts/2013/05/wlEmoticon-smile.png" />.&#160; For those interested, t[his is the post](http://superuser.com/questions/445925/how-to-add-item-to-right-click-menu-when-not-selecting-a-folder-or-file) that got me thinking about using the registry to fix this problem.
 
 &#160;
 
@@ -139,7 +139,7 @@ Windows Registry Editor Version 5.00
 
 <div id="scid:fb3a1972-4489-4e52-abe7-25a00bb07fdf:ce1b2d90-4d4e-4142-9a47-c685f5ecdb7f" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
   <p>
-    <a href="http://dans-blog.azurewebsites.net/wp-content/uploads/2013/09/FixRunPowerShellScriptWithSpacesInPathProblemAndLeaveConsoleOpenWhenScriptCompletes.zip" target="_blank">Download Registry Script</a>
+    <a href="/assets/Posts/2013/09/FixRunPowerShellScriptWithSpacesInPathProblemAndLeaveConsoleOpenWhenScriptCompletes.zip" target="_blank">Download Registry Script</a>
   </p>
 </div>
 

@@ -42,13 +42,13 @@ On your build server you will want to configure a new vanilla build that builds 
 
 The first difference is that you will need to provide the “/target:Publish” argument to MSBuild when it builds your project. Here is what this looks like in VSTS:
 
-<a href="http://dans-blog.azurewebsites.net/wp-content/uploads/2017/01/Build-MSBuildPublishTarget.png" target="_blank"><img src="http://dans-blog.azurewebsites.net/wp-content/uploads/2017/01/Build-MSBuildPublishTarget.png" /></a>
+<a href="/assets/Posts/2017/01/Build-MSBuildPublishTarget.png" target="_blank"><img src="/assets/Posts/2017/01/Build-MSBuildPublishTarget.png" /></a>
 
 This will cause MSBuild to build the required artifacts into an “app.publish” directory. e.g. bin\Debug\app.publish.
 
 The next difference is that you will want to copy that “app.publish” directory to your build artifacts directory. To do this, you will need to add a Copy Files step into your build process that copies the “app.publish” directory from the ClickOnce project’s bin directory to where the build artifacts are expected to be. You will want to do this before the step that publishes your build artifacts. Here is what this looks like in VSTS:
 
-<a href="http://dans-blog.azurewebsites.net/wp-content/uploads/2017/01/Build-CopyFilesToArtifactsDirectory.png" target="_blank"><img src="http://dans-blog.azurewebsites.net/wp-content/uploads/2017/01/Build-CopyFilesToArtifactsDirectory.png" /></a>
+<a href="/assets/Posts/2017/01/Build-CopyFilesToArtifactsDirectory.png" target="_blank"><img src="/assets/Posts/2017/01/Build-CopyFilesToArtifactsDirectory.png" /></a>
 
 So we copy the files into the build artifacts directory, and then the Publish Build Artifacts step at the end will copy those files to wherever you’ve specified; in my case it’s a network share.
 
@@ -56,7 +56,7 @@ If you like you can now run the build and see if it succeeds. If the build fails
 
 For completeness sake, this is what my Publish Build Artifacts step looks like in VSTS, and you’ll also notice the “Import-PfxCertificate.ps1” step before the MSBuild step as well:
 
-<a href="http://dans-blog.azurewebsites.net/wp-content/uploads/2017/01/Build-PublishBuildArtifacts.png" target="_blank"><img src="http://dans-blog.azurewebsites.net/wp-content/uploads/2017/01/Build-PublishBuildArtifacts.png" /></a>
+<a href="/assets/Posts/2017/01/Build-PublishBuildArtifacts.png" target="_blank"><img src="/assets/Posts/2017/01/Build-PublishBuildArtifacts.png" /></a>
 
 So we now have the ClickOnce artifacts being generated and stored in the appropriate directory. If you wanted, you could publish the build artifacts to the ClickOnce application’s final destination right now (instead of a file share as I’ve done here), but I’m going to follow best practices and separate the application “build” and “deployment” portions into their respective subsystems, as you may want separate control over when a build gets published, or maybe you don’t want to publish EVERY build; only some of them.
 
@@ -72,7 +72,7 @@ Now that we have the build artifacts safely stored, we can publish them to the C
 
 So instead I removed that default step and added a simple “Copy Files” step, and then configured it to grab the files from the file share that the build published the artifacts to, and set the destination to where the ClickOnce application was publishing to when I would do a manual publish from within Visual Studio. Here is what that step looks like in VSTS:
 
-<a href="http://dans-blog.azurewebsites.net/wp-content/uploads/2017/01/Release-PublishBuildArtifacts.png" target="_blank"><img src="http://dans-blog.azurewebsites.net/wp-content/uploads/2017/01/Release-PublishBuildArtifacts.png" /></a>
+<a href="/assets/Posts/2017/01/Release-PublishBuildArtifacts.png" target="_blank"><img src="/assets/Posts/2017/01/Release-PublishBuildArtifacts.png" /></a>
 
 You should be able to run this release definition and see that it is able to post a new version of your ClickOnce application. Hooray! I setup my releases to automatically publish on every build, but you can configure yours however you like.
 
@@ -88,7 +88,7 @@ The ClickOnce version is defined in your project file (.csproj/.vbproj) (as the 
 
 In order for the build system to access this Set-ProjectFilesClickOnceVersion.ps1 script you will need to check it into source control. Also, you need to make sure you add this build step before the MSBuild step. Here is what this step looks like in VSTS:
 
-<a href="http://dans-blog.azurewebsites.net/wp-content/uploads/2017/01/Build-SetProjectFilesClickOnceVersion.png" target="_blank"><img src="http://dans-blog.azurewebsites.net/wp-content/uploads/2017/01/Build-SetProjectFilesClickOnceVersion.png" width="660" height="255" /></a>
+<a href="/assets/Posts/2017/01/Build-SetProjectFilesClickOnceVersion.png" target="_blank"><img src="/assets/Posts/2017/01/Build-SetProjectFilesClickOnceVersion.png" width="660" height="255" /></a>
 
 The Script Filename points to the location of the Set-ProjectFilesClickOnceVersion.ps1 script in my repository. Also note that I set the Working Folder to the directory that contains the .csproj project file. This is necessary since we are dealing with relative paths, not absolute ones.
 

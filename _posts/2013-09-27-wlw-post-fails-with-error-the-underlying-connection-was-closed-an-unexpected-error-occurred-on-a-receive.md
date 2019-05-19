@@ -28,7 +28,7 @@ The underlying connection was closed. An unexpected error occurred on a receive.
 
 &#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-
 
-[<img title="WLWNetworkConnectionError" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-top-width: 0px" border="0" alt="WLWNetworkConnectionError" src="http://dans-blog.azurewebsites.net/wp-content/uploads/2013/09/WLWNetworkConnectionError_thumb.png" width="368" height="247" />](http://dans-blog.azurewebsites.net/wp-content/uploads/2013/09/WLWNetworkConnectionError.png)
+[<img title="WLWNetworkConnectionError" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-top-width: 0px" border="0" alt="WLWNetworkConnectionError" src="/assets/Posts/2013/09/WLWNetworkConnectionError_thumb.png" width="368" height="247" />](/assets/Posts/2013/09/WLWNetworkConnectionError.png)
 
 &#160;
 

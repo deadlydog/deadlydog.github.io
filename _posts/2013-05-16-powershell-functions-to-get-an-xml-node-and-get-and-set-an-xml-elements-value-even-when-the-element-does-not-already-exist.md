@@ -315,7 +315,7 @@ function Set-XmlElementsAttributeValue([ xml ]$XmlDocument, [string]$ElementPath
 
 <div id="scid:fb3a1972-4489-4e52-abe7-25a00bb07fdf:186577a3-bb06-480a-8b8e-c8dfe0e42e51" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
   <p>
-    Rather than copy-pasting, you can <a href="http://dans-blog.azurewebsites.net/wp-content/uploads/2014/01/PowerShellFunctionsToGetAndSetXml.zip" target="_blank">download all of the functions shown here.</a>
+    Rather than copy-pasting, you can <a href="/assets/Posts/2014/01/PowerShellFunctionsToGetAndSetXml.zip" target="_blank">download all of the functions shown here.</a>
   </p>
 </div>
 

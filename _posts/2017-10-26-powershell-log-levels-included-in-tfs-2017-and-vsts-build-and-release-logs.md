@@ -68,7 +68,7 @@ C:\Builds\_work\_temp\c0558237-7d53-43ca-97bf-90ed03b8247f.ps1 : Error
 </pre>
 </div>
 
-<a href="http://dans-blog.azurewebsites.net/wp-content/uploads/2017/10/PowerShellConsoleOutput.png" target="_blank"><img src="http://dans-blog.azurewebsites.net/wp-content/uploads/2017/10/PowerShellConsoleOutput.png" /></a>
+<a href="/assets/Posts/2017/10/PowerShellConsoleOutput.png" target="_blank"><img src="/assets/Posts/2017/10/PowerShellConsoleOutput.png" /></a>
 
 The more detailed information written to the log files was:
 
@@ -107,7 +107,7 @@ At D:\a\_temp\3b089729-e7c5-484d-aa58-256b33f12e01.ps1:12 char:1
 </pre>
 </div>
 
-<a href="http://dans-blog.azurewebsites.net/wp-content/uploads/2017/10/PowerShellLogOutput.png" target="_blank"><img src="http://dans-blog.azurewebsites.net/wp-content/uploads/2017/10/PowerShellLogOutput.png" /></a>
+<a href="/assets/Posts/2017/10/PowerShellLogOutput.png" target="_blank"><img src="/assets/Posts/2017/10/PowerShellLogOutput.png" /></a>
 
 One thing to note is that while the **throw** statements are not shown in the real-time console output, they do show up in the detailed logs that are available once the task step completes.
 

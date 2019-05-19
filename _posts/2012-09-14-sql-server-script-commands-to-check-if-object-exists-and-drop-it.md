@@ -231,7 +231,7 @@ END
 
 <div id="scid:fb3a1972-4489-4e52-abe7-25a00bb07fdf:5f0777e4-9ea5-4606-8ccf-b706b9810e74" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
   <p>
-    <a href="http://dans-blog.azurewebsites.net/wp-content/uploads/2013/09/Common-SQL-Changescript-Code.zip" target="_blank">Download Code Snippet</a>
+    <a href="/assets/Posts/2013/09/Common-SQL-Changescript-Code.zip" target="_blank">Download Code Snippet</a>
   </p>
 </div>
 

@@ -54,7 +54,7 @@ Feel free to skip the Preamble and get right to the good stuff.
 
 ## Preamble
 
-I’ve only been writing PowerShell (PS) for about 6 months now, and have a love-hate relationship with it.&#160; It is simply a wonderful tool…once you understand how it works and have learnt some of the nuances.&#160; I’ve gotten hung up for hours on end with things that should be simple, but aren’t.&#160; For example, if you have an array of strings, but the array actually only contains a single string, when you go to iterate over the array instead of giving you the string it will iterator over the characters in the string….but if you have multiple strings in your array then everything works fine (btw the trick is you have to explicitly cast your array to a string array when iterating over it).&#160; This is only one small example, but I’ve found I’ve hit many little Gotcha’s like this since I started with PS.&#160; So PS is a great tool, but has a deceptively steep learning curve in my opinion; it’s easy to get started with it, especially if you have a .Net background, but there are many small roadblocks that just shouldn’t be there.&#160; Luckily, we have [Stack Overflow](http://stackoverflow.com/) <img class="wlEmoticon wlEmoticon-smile" style="border-top-style: none; border-left-style: none; border-bottom-style: none; border-right-style: none" alt="Smile" src="http://dans-blog.azurewebsites.net/wp-content/uploads/2013/06/wlEmoticon-smile.png" />
+I’ve only been writing PowerShell (PS) for about 6 months now, and have a love-hate relationship with it.&#160; It is simply a wonderful tool…once you understand how it works and have learnt some of the nuances.&#160; I’ve gotten hung up for hours on end with things that should be simple, but aren’t.&#160; For example, if you have an array of strings, but the array actually only contains a single string, when you go to iterate over the array instead of giving you the string it will iterator over the characters in the string….but if you have multiple strings in your array then everything works fine (btw the trick is you have to explicitly cast your array to a string array when iterating over it).&#160; This is only one small example, but I’ve found I’ve hit many little Gotcha’s like this since I started with PS.&#160; So PS is a great tool, but has a deceptively steep learning curve in my opinion; it’s easy to get started with it, especially if you have a .Net background, but there are many small roadblocks that just shouldn’t be there.&#160; Luckily, we have [Stack Overflow](http://stackoverflow.com/) <img class="wlEmoticon wlEmoticon-smile" style="border-top-style: none; border-left-style: none; border-bottom-style: none; border-right-style: none" alt="Smile" src="/assets/Posts/2013/06/wlEmoticon-smile.png" />
 
 Anyways, as a PS newb one of the first things I did was go look for a nice editor to work in; <u>intellisense was a must</u>.&#160; First I tried PowerShell ISE v3 since it comes with Windows out of the box, but was quickly turned off at how featureless the GUI is.&#160; Here’s a quick list of lacking UI components that immediately turned me off of ISE’s Script Pane:
 
@@ -121,7 +121,7 @@ And now that you have your PowerShell ISE profile file open for editing, here’
 
 <div id="scid:fb3a1972-4489-4e52-abe7-25a00bb07fdf:58862c22-befe-4b77-bb11-5c61d2cc7aa1" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
   <p>
-    <a href="http://dans-blog.azurewebsites.net/wp-content/uploads/2013/09/CommentSelectedLines.zip" target="_blank">Download The Code</a>
+    <a href="/assets/Posts/2013/09/CommentSelectedLines.zip" target="_blank">Download The Code</a>
   </p>
 </div>
 
@@ -475,7 +475,7 @@ Ok, so I mentioned a couple other must-have ISE add-ons above.&#160; Here’s th
 
 <div id="scid:fb3a1972-4489-4e52-abe7-25a00bb07fdf:671096ee-632f-4329-af4d-3a4c79a23e5c" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
   <p>
-    <a href="http://dans-blog.azurewebsites.net/wp-content/uploads/2013/09/CommentSelectedLinesPlusOthers.zip" target="_blank">Download The Code</a>
+    <a href="/assets/Posts/2013/09/CommentSelectedLinesPlusOthers.zip" target="_blank">Download The Code</a>
   </p>
 </div>
 

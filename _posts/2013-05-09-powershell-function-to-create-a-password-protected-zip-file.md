@@ -63,7 +63,7 @@ function Write-ZipUsing7Zip([string]$FilesToZip, [string]$ZipOutputFilePath, [st
 
 <div id="scid:fb3a1972-4489-4e52-abe7-25a00bb07fdf:11b1cbeb-7517-4cc0-bac6-5a118e3bf5ed" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
   <p>
-    <a href="http://dans-blog.azurewebsites.net/wp-content/uploads/2013/09/Write-ZipUsing7Zip.zip" target="_blank">Download the function script</a>
+    <a href="/assets/Posts/2013/09/Write-ZipUsing7Zip.zip" target="_blank">Download the function script</a>
   </p>
 </div>
 

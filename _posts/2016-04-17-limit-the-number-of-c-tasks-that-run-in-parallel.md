@@ -251,7 +251,7 @@ public static void DoSomethingALotWithActionsThrottled()
 
 
 <p>
-  And if you don’t believe me that this works, you can <a href="http://dans-blog.azurewebsites.net/wp-content/uploads/2016/04/LimitNumberOfSimultaneousTasksExample.zip">take a look at this sample project and run the code for yourself</a>.
+  And if you don’t believe me that this works, you can <a href="/assets/Posts/2016/04/LimitNumberOfSimultaneousTasksExample.zip">take a look at this sample project and run the code for yourself</a>.
 </p>
 
 
