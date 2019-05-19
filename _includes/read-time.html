@@ -14,3 +14,18 @@
 {% else %}
 {{ words | divided_by:words_per_minute }} {{ site.data.ui-text[site.locale].minute_read | default: "minute read" }}
 {% endif %}
+
+<!-- Dan's Customizations START -->
+<!-- While it would be more proper to have the post/page date separate from the reading time and just include the
+	customization everywhere that this file is referenced, that would lead to having to customize more files in
+	the theme, and would make future theme updates more likely to break, since every time we customize a file
+	we override the entire file. So to keep things simple, and because I want the date displayed everywhere
+	that the reading time is, I'm just going to include the customization here. -->
+<span style="float: right">
+	{% if post.date %}
+	{{ post.date | date: "%B %-d, %Y" }}
+	{% else %}
+	{{ page.date | date: "%B %-d, %Y" }}
+	{% endif %}
+</span>
+<!-- Dan's Customizations END -->

@@ -33,6 +33,8 @@ remote_theme: mmistakes/minimal-mistakes@[tag|commit|branch]
 
 to use a newer tag/commit from [the theme repo][MinimalMistakesThemeGitHubRepoUrl].
 
+Additionally, since we are overriding some files (see the Customizations section below), you may also need to update those files with newer versions if they have been changed in theme updates.
+
 ### Installing new gems and themes
 
 Simply modify the `Gemfile` with the new gem to use, and then run `bundle install` to have it install the new gems.
@@ -41,7 +43,7 @@ Typically themes are installed from gems, and then you update the `_config.yml` 
 
 Currently with the MinimalMistakes theme we are not installing it from a gem, but are instead using the remote theme method instead.
 
-## Customization's I've made to the theme / site
+## Customizations I've made to the theme / site
 
 Anywhere that I make custom code changes, I try to put `Dan's Customizations` in comments, so doing a search of the repo for `Dan` should find all places I've changed / overwritten code.
 This doesn't include the `_config.yml` though, as we're expected to set custom settings in there.
@@ -49,7 +51,7 @@ This doesn't include the `_config.yml` though, as we're expected to set custom s
 Here's a list of places I've changed code:
 
 - `assets/css/main.scss`: Adjusted font sizes a bit.
-- `_includes/archive-single.html`: Added post date in with the reading time.
+- `_includes/read-time.html`: Added post/page date in with the reading time.
 - `_config.yml` file.
 
 Here's a list of files I've added or changed:
