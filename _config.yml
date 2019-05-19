@@ -17,7 +17,7 @@ title: Daniel Schroeder's Programming Blog
 email: deadlydog@hotmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Sharing my tips, tricks, and code to help other developers be more productive.
-baseurl: /DansBlog.Jekyll
+baseurl: 
 url: https://deadlydog.github.io
 twitter_username: deadlydog
 github_username: deadlydog
