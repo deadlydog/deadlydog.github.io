@@ -48,7 +48,8 @@ This doesn't include the `_config.yml` though, as we're expected to set custom s
 
 Here's a list of places I've changed code:
 
-- `assets/css/main.scss` file: Adjusted font sizes a bit.
+- `assets/css/main.scss`: Adjusted font sizes a bit.
+- `_includes/archive-single.html`: Added post date in with the reading time.
 - `_config.yml` file.
 
 Here's a list of files I've added or changed:
