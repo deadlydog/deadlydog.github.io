@@ -50,7 +50,8 @@ This doesn't include the `_config.yml` though, as we're expected to set custom s
 
 Here's a list of places I've changed code:
 
-- `assets/css/main.scss`: Adjusted font sizes a bit.
+- `assets/css/main.scss`: Adjusted font sizes a bit, and added class used in the masthead.html.
+- `_includes/masthead.html`: Added site description below site title.
 - `_includes/read-time.html`: Added post/page date in with the reading time.
 - `_config.yml` file.
 

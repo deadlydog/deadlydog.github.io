@@ -7,6 +7,7 @@
 //========== Dan's Customizations START ==========
 
 // These sizes are unchanged, but they must be pre-defined so we can reference them in our changes below.
+// Values were taken from `_sass/minimal-mistakes/_variables.scss
 $type-size-1 : 2.441em; // ~39.056px
 $type-size-2 : 1.953em; // ~31.248px
 $type-size-3 : 1.563em; // ~25.008px
@@ -25,6 +26,14 @@ $type-size-8 : 0.625em; // ~10px
 .toc {
 	font-size: $type-size-4;
 }
+
+// Create some new styles for our site description customization, which is referenced in masthead.html.
+.DansSiteDescription {
+	margin: 0;
+	padding: 0;
+	font-size: $type-size-6;
+}
+
 //========== Dan's Customizations END ==========
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin

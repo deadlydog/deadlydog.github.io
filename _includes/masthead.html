@@ -11,7 +11,16 @@
 				{% unless logo_path == empty %}
 				<a class="site-logo" href="{{ '/' | relative_url }}"><img src="{{ logo_path | relative_url }}" alt=""></a>
 				{% endunless %}
-				<a class="site-title" href="{{ '/' | relative_url }}">{{ site.masthead_title | default: site.title }}</a>
+
+				<!--========== Dan's Customizations START ==========-->
+				<div>
+					<!-- This "<a" line was here already and not modified. -->
+					<a class="site-title" href="{{ '/' | relative_url }}">{{ site.masthead_title | default: site.title }}</a>
+
+					<span class="DansSiteDescription">{{ site.description }}</span>
+				</div>
+				<!--========== Dan's Customizations END ==========-->
+
 				<ul class="visible-links">
 					{%- for link in site.data.navigation.main -%}
 					{%- if link.url contains '://' -%}
