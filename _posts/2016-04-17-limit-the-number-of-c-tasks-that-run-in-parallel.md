@@ -5,7 +5,7 @@ date: 2016-04-17T02:46:32-06:00
 guid: http://dans-blog.azurewebsites.net/?p=875
 permalink: /limit-the-number-of-c-tasks-that-run-in-parallel/
 categories:
-  - 'C#'
+  - C#
 tags:
   - 'C# Task Thread Throttle Limit Maximum Simultaneous Concurrent Parallel'
 ---

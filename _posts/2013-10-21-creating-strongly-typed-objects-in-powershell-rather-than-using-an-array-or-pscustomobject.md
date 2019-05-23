@@ -9,7 +9,7 @@ categories:
 tags:
   - Add-Type
   - array
-  - 'C#'
+  - C#
   - object
   - PowerShell
   - PSCustomObject

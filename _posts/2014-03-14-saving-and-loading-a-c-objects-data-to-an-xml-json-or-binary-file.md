@@ -5,7 +5,7 @@ date: 2014-03-14T15:53:35-06:00
 guid: http://dans-blog.azurewebsites.net/?p=731
 permalink: /saving-and-loading-a-c-objects-data-to-an-xml-json-or-binary-file/
 categories:
-  - 'C#'
+  - C#
   - Json
   - XML
 tags:

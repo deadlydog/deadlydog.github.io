@@ -8,10 +8,10 @@ jabber_published:
   - "1353355941"
 categories:
   - .NET
-  - 'C#'
+  - C#
 tags:
   - app.config
-  - 'C#'
+  - C#
   - configuration
   - CSharp
   - section

@@ -7,11 +7,11 @@ permalink: /some-visual-studio-2010-shortcuts-and-c-4-0-cool-stuff/
 jabber_published:
   - "1353105779"
 categories:
-  - 'C#'
+  - C#
   - Shortcuts
   - Visual Studio
 tags:
-  - 'C#'
+  - C#
   - features
   - keyboard shortcuts
   - shortcuts

@@ -9,7 +9,7 @@ jabber_published:
 categories:
   - WPF
 tags:
-  - 'C#'
+  - C#
   - focus
   - setting focus
   - snoop

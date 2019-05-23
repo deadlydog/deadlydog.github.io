@@ -9,7 +9,7 @@ jabber_published:
 categories:
   - WPF
 tags:
-  - 'C#'
+  - C#
   - Dependency Object
   - memory leak
   - Value Changed
