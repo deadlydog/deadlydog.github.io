@@ -22,13 +22,19 @@ url: https://deadlydog.github.io
 twitter_username: deadlydog
 github_username: deadlydog
 
+remote_theme: mmistakes/minimal-mistakes@26c1989 # Specify the branch, tag, or commit so that if they breaks the theme with updates, it won't affect our site. Remove the '@' and everything after it to use the tip of the master branch.
 minimal_mistakes_skin: default # "air", "aqua", "contrast", "dark", "default", "dirt", "neon", "mint", "plum", "sunrise"
 search: true # Show the search link on the site.
 
 # Build settings
 markdown: kramdown
-remote_theme: mmistakes/minimal-mistakes@26c1989 # Specify the branch, tag, or commit so that if they breaks the theme with updates, it won't affect our site. Remove the '@' and everything after it to use the tip of the master branch.
 github: [metadata] # Added this to avoid the "No GitHub API authentication could be found. Some fields may be missing or have incorrect data." warning when starting Jekyll.
+
+# Uncomment to show line numbers in code blocks by default.
+# kramdown:
+#   syntax_highlighter_opts:
+#     block:
+#       line_numbers: true
 
 # Outputting
 permalink: /:title/
