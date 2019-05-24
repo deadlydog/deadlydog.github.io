@@ -35,6 +35,12 @@ github: [metadata] # Added this to avoid the "No GitHub API authentication could
 #   syntax_highlighter_opts:
 #     block:
 #       line_numbers: true
+#
+# The alternative to enabling line numbers by default is to use this syntax with the `linenos` keyword in your posts:
+# {% highlight javascript linenos %}
+#   function some(code) { /*goes here*/ }
+#   let x = 21;
+# {% endhighlight %}
 
 # Outputting
 permalink: /:title/
