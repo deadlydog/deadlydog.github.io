@@ -59,9 +59,9 @@ One other minor thing to note is that it is called “deploying” the database 
 
 We use TFS at my organization and while making new builds for our Test environment, we have the build process deploy the database solution to our various Test databases. This would mean that for us I would either need to:
 
-1 &#8211; create a new [DbName].publish.xml file for each database, check it into source control, and update the build template to know about the new file, or
+1 - create a new [DbName].publish.xml file for each database, check it into source control, and update the build template to know about the new file, or
 
-2 &#8211; update the file contents of our myPublishFile.publish.xml file dynamically during the build to replace the Database Name and Server in the file before publishing to the database (i.e. read in file contents, replace string, write file contents back to file, publish to DB, repeat).
+2 - update the file contents of our myPublishFile.publish.xml file dynamically during the build to replace the Database Name and Server in the file before publishing to the database (i.e. read in file contents, replace string, write file contents back to file, publish to DB, repeat).
 
 Option 1 means more work every time I want to add a new Test database to publish to. Option 2 is better, but still means having to update my TF Build template and create a new activity to read/write the new contents to the file.
 

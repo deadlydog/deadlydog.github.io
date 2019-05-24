@@ -24,7 +24,7 @@ tags:
 </p>
 
 <p class="MsoNormal">
-  Friendly Name: “{solutionName} &#8211; {branchName}”
+  Friendly Name: “{solutionName} - {branchName}”
 </p>
 
 <p class="MsoNormal">
@@ -52,7 +52,7 @@ tags:
 </p>
 
 <p class="MsoNormal">
-  Friendly Name: “{solutionName} &#8211; {dir1}{dir2}{dir3}”
+  Friendly Name: “{solutionName} - {dir1}{dir2}{dir3}”
 </p>
 
 <p class="MsoNormal">
@@ -75,6 +75,6 @@ Branch Name Pattern: “{branchDirectoryName} Branch”
 
 Git Branch Name Pattern: “{git:head} Branch”
 
-Main Window Title Pattern: “{solutionFileName} &#8211; {dir1}{dir2}{branchDirectoryName} ({sln:activeConfig}|{sln:activePlatform})”
+Main Window Title Pattern: “{solutionFileName} - {dir1}{dir2}{branchDirectoryName} ({sln:activeConfig}|{sln:activePlatform})”
 
-Solution Explorer Window Title Pattern: “ &#8211; {solutionFileName} • {vsc:branchName}”
+Solution Explorer Window Title Pattern: “ - {solutionFileName} • {vsc:branchName}”

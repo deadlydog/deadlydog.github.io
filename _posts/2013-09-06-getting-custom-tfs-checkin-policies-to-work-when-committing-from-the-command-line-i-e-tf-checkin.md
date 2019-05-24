@@ -18,13 +18,13 @@ tags:
   - TF
   - TFS
 ---
-**Update** &#8211; I show how to have your checkin policies automatically update the registry keys shown in this blog post [on this newer blog post](http://dans-blog.azurewebsites.net/template-solution-for-deploying-tfs-checkin-policies-to-multiple-versions-of-visual-studio-and-having-them-automatically-work-from-tf-exe-checkin-too/). If you are not the person creating the checkin policies though, then you will still need to use the technique shown in this post.
+**Update** - I show how to have your checkin policies automatically update the registry keys shown in this blog post [on this newer blog post](http://dans-blog.azurewebsites.net/template-solution-for-deploying-tfs-checkin-policies-to-multiple-versions-of-visual-studio-and-having-them-automatically-work-from-tf-exe-checkin-too/). If you are not the person creating the checkin policies though, then you will still need to use the technique shown in this post.
 
 I frequently check code into TFS from the command line, instead of from Visual Studio (VS), for a number of reasons:
 
   1. I prefer the VS 2010 style of checkin window over the VS 2012 one, and the 2010 style window is still displayed when checking in from the command line.
   2. I use [AutoHotkey](http://www.autohotkey.com/) to pop the checkin window via a keyboard shortcut, so I don’t need to have VS open to check files in (or navigate to the pending changes window within VS).
-    &#8211; Aside: Just add this one line to your AutoHotkey script for this functionality. This sets the hotkey to Ctrl+Windows+C to pop the checkin window, but feel free to change it to something else.
+    - Aside: Just add this one line to your AutoHotkey script for this functionality. This sets the hotkey to Ctrl+Windows+C to pop the checkin window, but feel free to change it to something else.
 
     <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:2fa17e29-533b-491c-9f08-74cd4c0f23bf" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
       <pre style=white-space:normal>

@@ -18,7 +18,7 @@ tags:
 ---
 You may be wondering which is the best way to hookup a DependencyProperty&#8217;s Callback event handler to handle Value Changed events. The two methods to consider are:
 
-Method 1 &#8211; Use static event handlers, like so:
+Method 1 - Use static event handlers, like so:
 
 ```csharp
 public virtual int SelectedID
@@ -37,7 +37,7 @@ private static void OnSelectedIDChanged(DependencyObject d, DependencyPropertyCh
 }
 ```
 
-Method 2 &#8211; Hookup event handler at initialize, and remove it during Dispose(), like so:
+Method 2 - Hookup event handler at initialize, and remove it during Dispose(), like so:
 
 ```csharp
 // Constructor

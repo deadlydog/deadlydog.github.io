@@ -16,7 +16,7 @@ tags:
   - Profile
   - Run As Admin
 ---
-Aside &#8211; This post has received many tangential questions in the comments. Your best bet at getting an answer to those questions is to check [Stack Overflow](https://stackoverflow.com) and/or post your question there.
+Aside - This post has received many tangential questions in the comments. Your best bet at getting an answer to those questions is to check [Stack Overflow](https://stackoverflow.com) and/or post your question there.
 
 A while ago in [one of my older posts](http://dans-blog.azurewebsites.net/getting-custom-tfs-checkin-policies-to-work-when-committing-from-the-command-line-i-e-tf-checkin/) I included a little gem that I think deserves it’s own dedicated post; calling PowerShell scripts from a batch file.
 

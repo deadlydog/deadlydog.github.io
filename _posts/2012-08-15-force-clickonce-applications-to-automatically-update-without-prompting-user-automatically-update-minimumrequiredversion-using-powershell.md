@@ -1,6 +1,6 @@
 ---
 id: 82
-title: 'Force ClickOnce applications to automatically update without prompting user &#8211; Automatically update MinimumRequiredVersion using PowerShell'
+title: 'Force ClickOnce applications to automatically update without prompting user - Automatically update MinimumRequiredVersion using PowerShell'
 date: 2012-08-15T13:28:00-06:00
 guid: https://deadlydog.wordpress.com/?p=82
 permalink: /force-clickonce-applications-to-automatically-update-without-prompting-user-automatically-update-minimumrequiredversion-using-powershell/

@@ -17,13 +17,13 @@ tags:
 ---
 At one point or another I&#8217;m sure we&#8217;ve all been confused as to why our binding won&#8217;t work. Here&#8217;s a couple things to keep in mind:
 
-&#8211; have you set the DataContext to be the class containing the property you are binding to? This can be done in XAML or in the code-behind. For example, put "this.DataContext = this" in the code-behind file&#8217;s constructor.
+- have you set the DataContext to be the class containing the property you are binding to? This can be done in XAML or in the code-behind. For example, put "this.DataContext = this" in the code-behind file&#8217;s constructor.
 
-&#8211; is the property you&#8217;re binding to public? Also, it must be a property (with get; set; accessors), not a field (i.e. class variable).
+- is the property you&#8217;re binding to public? Also, it must be a property (with get; set; accessors), not a field (i.e. class variable).
 
-&#8211; if you are using two way binding, do you have both a Get and Set accessor on the propery?
+- if you are using two way binding, do you have both a Get and Set accessor on the propery?
 
-&#8211; if you are trying to set bindings on a usercontrol that you are placing on your form, you may have to set the DataContext in that control, or reference the property dynamically using something like:
+- if you are trying to set bindings on a usercontrol that you are placing on your form, you may have to set the DataContext in that control, or reference the property dynamically using something like:
 
 <p class="MsoNormal" style="margin-bottom:0;line-height:normal;">
   <span style="font-size:10pt;font-family:consolas;color:blue;"><</span><span style="font-size:10pt;font-family:consolas;">controls<span style="color:blue;">:</span>CashCalculator</span>

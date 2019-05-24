@@ -257,7 +257,7 @@ $fileContents.Save($NuSpecFilePath)
 
 Note that these 2 functions depend on the Get-XmlNode function provided above.
 
-<font color="#00ff00"><Update2 &#8211; January 7, 2016></font>
+<font color="#00ff00"><Update2 - January 7, 2016></font>
 
 I have had multiple people ask me for similar functions for getting and setting an element&#8217;s Attribute value as well, so here are the corresponding functions for that:
 

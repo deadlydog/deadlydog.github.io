@@ -17,11 +17,11 @@ tags:
 ---
 So if you are trying to set focus to a WPF element, but are unable to. Here is a quick checklist to go through:
 
-&#8211; is the control you are trying to set focus to Enabled, Visible, Loaded, and Focusable. If any of these properties are false, you cannot set focus to the element.
+- is the control you are trying to set focus to Enabled, Visible, Loaded, and Focusable. If any of these properties are false, you cannot set focus to the element.
 
 If you are using Binding to set these properties, make sure the binding is firing before you are trying to set the focus.
 
-&#8211; does the control that already has focus allow focus to be taken away? If the control that currently has focus overrides the PreviewLostFocus event, it can set e.Handled to true to prevent other controls from stealing focus from it.
+- does the control that already has focus allow focus to be taken away? If the control that currently has focus overrides the PreviewLostFocus event, it can set e.Handled to true to prevent other controls from stealing focus from it.
 
 If all of these conditions seem to be met, but you still cannot seem to set the focus to a control, is another operation moving focus from your control to another control after you set focus to your control? From a dispatcher perhaps?
 

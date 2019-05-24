@@ -18,16 +18,16 @@ tags:
 ---
 With the ability to extend Visual Studio 2010, lots of great extensions have popped up. These not only increase productivity, but make the whole coding experience much nicer. To find and install extensions, in Visual Studio just go to Tools -> Extension Manager. Here&#8217;s a list of my favorites:
 
-&#8211; [PowerCommands for Visual Studio 2010](http://visualstudiogallery.msdn.microsoft.com/e5f41ad9-4edc-4912-bca3-91147db95b99/) &#8211; tons of features.
+- [PowerCommands for Visual Studio 2010](http://visualstudiogallery.msdn.microsoft.com/e5f41ad9-4edc-4912-bca3-91147db95b99/) - tons of features.
 
-&#8211; [Productivity Power Tools](http://visualstudiogallery.msdn.microsoft.com/d0d33361-18e2-46c0-8ff2-4adea1e34fef/) &#8211; tons of features.
+- [Productivity Power Tools](http://visualstudiogallery.msdn.microsoft.com/d0d33361-18e2-46c0-8ff2-4adea1e34fef/) - tons of features.
 
-&#8211; Regex Editor &#8211; Quickly test your regular expressions to make sure they match all of your cases, and save them for future use. Also provides some common regex&#8217;s by default. Automatically pops up as soon as you type "Regex r = new ".
+- Regex Editor - Quickly test your regular expressions to make sure they match all of your cases, and save them for future use. Also provides some common regex&#8217;s by default. Automatically pops up as soon as you type "Regex r = new ".
 
-&#8211; Search Work Items for TFS 2010 &#8211; If you&#8217;re using TFS this one is a must have; it allows you to easily do a text search on all work items.
+- Search Work Items for TFS 2010 - If you&#8217;re using TFS this one is a must have; it allows you to easily do a text search on all work items.
 
-&#8211; [Snippet Designer](http://snippetdesigner.codeplex.com/) &#8211; If you create snippets, this provides a great GUI; much better than writing out all of the xml.
+- [Snippet Designer](http://snippetdesigner.codeplex.com/) - If you create snippets, this provides a great GUI; much better than writing out all of the xml.
 
-&#8211; [Spell Checker](http://visualstudiogallery.msdn.microsoft.com/7c8341f1-ebac-40c8-92c2-476db8d523ce) &#8211; Simple spell checker. Great for fixing spelling mistakes in comments. Automatically knows to ignore variable names, etc.
+- [Spell Checker](http://visualstudiogallery.msdn.microsoft.com/7c8341f1-ebac-40c8-92c2-476db8d523ce) - Simple spell checker. Great for fixing spelling mistakes in comments. Automatically knows to ignore variable names, etc.
 
-&#8211; [VSCommands 2010](http://vscommands.com/features/) &#8211; tons of features.
+- [VSCommands 2010](http://vscommands.com/features/) - tons of features.

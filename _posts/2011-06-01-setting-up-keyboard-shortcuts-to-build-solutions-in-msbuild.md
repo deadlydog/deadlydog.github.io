@@ -23,7 +23,7 @@ If you want to be able to right-click on a solution file and build it in MSBuild
 
 Below I outline how I&#8217;ve setup my system to build my solution files in MSBuild with a quick keystroke. Setup only takes a few minutes and requires [AutoHotkey](http://www.autohotkey.com/) to be installed (it&#8217;s free and awesome).
 
-<u>**Step 1**</u> &#8211; Install [AutoHotkey](http://www.autohotkey.com/).
+<u>**Step 1**</u> - Install [AutoHotkey](http://www.autohotkey.com/).
 
 <u>**Step 2**</u> – Create a shortcut to the Visual Studio Command Prompt (2010), move it directly to the C: drive, and make sure it is called “Visual Studio Command Prompt (2010)” (it is referenced at this location with this name by the AutoHotkey script in the following steps, but can be changed if needed).
 

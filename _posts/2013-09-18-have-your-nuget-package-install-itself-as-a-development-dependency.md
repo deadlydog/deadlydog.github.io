@@ -28,7 +28,7 @@ So this was better, but still kinda sucked because it required users to do this 
 
 ### The Fix
 
-**Update** &#8211; As of NuGet 2.8 there is a built-in way to do the fix below. [See this post for more info](http://stackoverflow.com/a/24216882/602585).
+**Update** - As of NuGet 2.8 there is a built-in way to do the fix below. [See this post for more info](http://stackoverflow.com/a/24216882/602585).
 
 The nice thing about NuGet packages is that you can define PowerShell scripts that can run when users install and uninstall your packages, as is [documented near the bottom of this page](http://docs.nuget.org/docs/creating-packages/creating-and-publishing-a-package).  I’ve created a PowerShell script that will automatically go in and adjust the project’s packages.config file to mark your package as a development dependency.  This means there is no extra work for the user to do.
 
