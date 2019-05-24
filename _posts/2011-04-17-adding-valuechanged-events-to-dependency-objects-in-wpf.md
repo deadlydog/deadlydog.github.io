@@ -37,8 +37,6 @@ private static void OnSelectedIDChanged(DependencyObject d, DependencyPropertyCh
 }
 ```
 
-
-
 Method 2 &#8211; Hookup event handler at initialize, and remove it during Dispose(), like so:
 
 ```csharp
