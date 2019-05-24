@@ -3,6 +3,7 @@
 - Go through and update all posts to use proper markdown and get rid of html. Will go through posts oldest to newest.
   - Last processed page: 2011-04-17-adding-valuechanged-events-to-dependency-objects-in-wpf.md
 - Fix up all build errors and warnings.
+- Remove unnecessary front matter attributes from all posts. e.g. `jabber_published`
 - Add Google Analytics integration.
 - Add advertisements.
 - Add comment support.
