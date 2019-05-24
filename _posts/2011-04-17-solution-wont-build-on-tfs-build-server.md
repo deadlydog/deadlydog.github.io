@@ -1,6 +1,6 @@
 ---
 id: 22
-title: 'Solution won&#8217;t build on TFS Build Server'
+title: 'Solution won't build on TFS Build Server'
 date: 2011-04-17T22:58:00-06:00
 guid: https://deadlydog.wordpress.com/?p=22
 permalink: /solution-wont-build-on-tfs-build-server/
@@ -16,18 +16,18 @@ tags:
   - solution
   - TFS
 ---
-So if you are able to build (compile) the solution on your local machine, but it won&#8217;t build on the TFS build server and you are getting an error message similar to:
+So if you are able to build (compile) the solution on your local machine, but it won't build on the TFS build server and you are getting an error message similar to:
 
 1 error(s), 1 warning(s)
 $/TeamProject/Dev/RQ4/FBs/4.1.4_eSec/RQ4.Client.sln - 1 error(s), 1 warning(s), View Log File
-IntegrationfrmGetIntegrationAuthorization.xaml.cs (1138): The type or namespace name &#8216;BillingFields&#8217; could not be found (are you missing a using directive or an assembly reference?)
+IntegrationfrmGetIntegrationAuthorization.xaml.cs (1138): The type or namespace name &#8216;BillingFields' could not be found (are you missing a using directive or an assembly reference?)
 C:WindowsMicrosoft.NETFramework64v4.0.30319Microsoft.Common.targets (1360): Could not resolve this reference. Could not locate the assembly "IQ.Core.Resources, Version=4.1.2.0, Culture=neutral, processorArchitecture=MSIL". Check to make sure the assembly exists on disk. If this reference is required by your code, you may get compilation errors.
 
 Then the problem is likely one of the following:
 
 
 
-1 - The project/dll being reference is set to "Specific Version", so open the reference&#8217;s properties and change it to "Any Version".
+1 - The project/dll being reference is set to "Specific Version", so open the reference's properties and change it to "Any Version".
 
 
 
@@ -35,4 +35,4 @@ Then the problem is likely one of the following:
 
 
 
-3 - The path to the refenced project/dll is too long. Windows/.NET has a limitation where the reference path cannot be more than 260 characters, and the directory it&#8217;s in cannot be more than 248 characters. So the work around for this is usually to rename your build definition to something shorter, or if you just added a new project/namespace to the project, to shorten its name so the path stays under the limit.
+3 - The path to the refenced project/dll is too long. Windows/.NET has a limitation where the reference path cannot be more than 260 characters, and the directory it's in cannot be more than 248 characters. So the work around for this is usually to rename your build definition to something shorter, or if you just added a new project/namespace to the project, to shorten its name so the path stays under the limit.

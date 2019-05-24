@@ -13,10 +13,10 @@ tags:
   - tips and tricks
   - visual studio
 ---
-Just found a few websites that show some Visual Studio tips that I haven&#8217;t seen before, so I thought I&#8217;d share:
+Just found a few websites that show some Visual Studio tips that I haven't seen before, so I thought I'd share:
 
 1 - [Tips and Tricks for the Visual Studio .NET IDE](http://www.codeproject.com/KB/tips/VSnetIDETipsAndTricks.aspx)
 
 2 - [Essential Visual Studio Tips & Tricks that Every Developer Should Know](http://stephenwalther.com/blog/archive/2008/10/21/essential-visual-studio-tips-amp-tricks-that-every-developer-should-know.aspx)
 
-3 - [Channel 9&#8217;s Visual Studio Toolbox](http://channel9.msdn.com/Shows/Visual-Studio-Toolbox) - weekly series dedicated to showing all the cool stuff that Visual Studio can do and how to be more productive with it.
+3 - [Channel 9's Visual Studio Toolbox](http://channel9.msdn.com/Shows/Visual-Studio-Toolbox) - weekly series dedicated to showing all the cool stuff that Visual Studio can do and how to be more productive with it.

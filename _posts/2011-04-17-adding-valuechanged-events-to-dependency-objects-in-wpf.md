@@ -16,7 +16,7 @@ tags:
   - ValueChanged
   - WPF
 ---
-You may be wondering which is the best way to hookup a DependencyProperty&#8217;s Callback event handler to handle Value Changed events. The two methods to consider are:
+You may be wondering which is the best way to hookup a DependencyProperty's Callback event handler to handle Value Changed events. The two methods to consider are:
 
 Method 1 - Use static event handlers, like so:
 
@@ -81,8 +81,8 @@ private void SelectedID_ValueChanged(object sender, EventArgs e)
 }
 ```
 
-So the advantage to using method 1 is that we have access to the property&#8217;s old and new values, we <a href="http://social.msdn.microsoft.com/Forums/en-US/wpf/thread/6f18c879-6ea4-4473-b316-30c4fd5f43b5" target="_blank">don&#8217;t have to worry about memory leaks</a> (since the event handler is static), and if we create 100 instances of the control we still only have one static event handler in memory, instead of 100 local ones. The disadvantage to method 1 is that these event handlers are going to exist in memory for the entire lifetime of the app, even if the view/control they are on is never referenced.
+So the advantage to using method 1 is that we have access to the property's old and new values, we <a href="http://social.msdn.microsoft.com/Forums/en-US/wpf/thread/6f18c879-6ea4-4473-b316-30c4fd5f43b5" target="_blank">don't have to worry about memory leaks</a> (since the event handler is static), and if we create 100 instances of the control we still only have one static event handler in memory, instead of 100 local ones. The disadvantage to method 1 is that these event handlers are going to exist in memory for the entire lifetime of the app, even if the view/control they are on is never referenced.
 
-The advantage to using method 2 is that the event handlers only exist in memory if the view/control they are on is actually open. The disadvantage is that we don&#8217;t have access to the property&#8217;s old value, and the developer has to remember to properly unhook the event in order to avoid a memory leak.
+The advantage to using method 2 is that the event handlers only exist in memory if the view/control they are on is actually open. The disadvantage is that we don't have access to the property's old value, and the developer has to remember to properly unhook the event in order to avoid a memory leak.
 
 So method 1 is best suited to items that are used in many places (such as custom controls that may be plastered all of the place), while method 2 is best suited for views where there is likely to never be more than a few instances open at any given time, or in places that may not be accessed at all (e.g. a settings menu that is rarely accessed).
