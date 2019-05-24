@@ -68,7 +68,14 @@ Here's a list of files I've added or changed:
 
 ### Supported code language highlighters
 
-See [this page][JekyllRogueSyntaxHighlighterLanguagesUrl] for the list of supported languages when writing code blocks.
+By default Jekyll uses `Rouge` for syntax highlighting of code blocks.
+See [this page][JekyllRogueSyntaxHighlighterSupportedLanguagesUrl] for the list of supported languages.
+e.g. `csharp`, `css`, `html`, `http`, `ini`, `json`, `liquid`, `markdown`, `powershell`, `sql`, `xml`, `yaml`, and many more.
+
+### Supported Kramdown options
+
+By default Jekyll uses `Kramdown` for markdown processing.
+See [this page][JekyllKramdownOptionsDocumentationUrl] for the list of supported options that may be used in `_config.yml`.
 
 ### Site history
 
@@ -79,4 +86,5 @@ This is why the posts before 2019 have additional front matter on them; the tool
 [MinimalMistakesThemeGitHubRepoUrl]: https://github.com/mmistakes/minimal-mistakes
 [MinimalMistakesThemeDocumentationUrl]: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
 [RubyInstallerDownloadPageUrl]: https://rubyinstaller.org/downloads/
-[JekyllRogueSyntaxHighlighterLanguagesUrl]: https://simpleit.rocks/ruby/jekyll/what-are-the-supported-language-highlighters-in-jekyll/
+[JekyllRogueSyntaxHighlighterSupportedLanguagesUrl]: https://simpleit.rocks/ruby/jekyll/what-are-the-supported-language-highlighters-in-jekyll/
+[JekyllKramdownOptionsDocumentationUrl]: https://kramdown.gettalong.org/options.html
