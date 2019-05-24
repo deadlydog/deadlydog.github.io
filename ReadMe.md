@@ -66,6 +66,12 @@ Here's a list of files I've added or changed:
 
 ## Additional Info
 
+### Supported code language highlighters
+
+See [this page][JekyllRogueSyntaxHighlighterLanguagesUrl] for the list of supported languages when writing code blocks.
+
+### Site history
+
 The site was migrated from WordPress to Jekyll in April 2019, and before WordPress it was hosted in GeeksWithBlogs.
 This is why the posts before 2019 have additional front matter on them; the tool to export them from WordPress to Jekyll added it.
 
@@ -73,3 +79,4 @@ This is why the posts before 2019 have additional front matter on them; the tool
 [MinimalMistakesThemeGitHubRepoUrl]: https://github.com/mmistakes/minimal-mistakes
 [MinimalMistakesThemeDocumentationUrl]: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
 [RubyInstallerDownloadPageUrl]: https://rubyinstaller.org/downloads/
+[JekyllRogueSyntaxHighlighterLanguagesUrl]: https://simpleit.rocks/ruby/jekyll/what-are-the-supported-language-highlighters-in-jekyll/
