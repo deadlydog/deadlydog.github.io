@@ -16,6 +16,7 @@ We currently use the [Minimal Mistakes theme][MinimalMistakesThemeGitHubRepoUrl]
 ### Run Jekyll locally
 
 To run Jekyll locally, from the site directory run `bundle exec jekyll serve`.
+Include the `--incremental` (or `-I`) parameter to do faster incremental builds.
 
 If you've written a draft post in the `_drafts` directory and want it to show up on the site, use `jekyll serve --draft` to start Jekyll.
 
