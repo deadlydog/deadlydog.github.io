@@ -4,6 +4,7 @@
   - Last processed page: 2011-04-17-adding-valuechanged-events-to-dependency-objects-in-wpf.md
 - Fix up all build errors and warnings.
 - Remove unnecessary front matter attributes from all posts. e.g. `jabber_published`
+- Maybe add `Email` option to my bio links.
 - Add Google Analytics integration.
 - Add advertisements.
 - Add comment support.
