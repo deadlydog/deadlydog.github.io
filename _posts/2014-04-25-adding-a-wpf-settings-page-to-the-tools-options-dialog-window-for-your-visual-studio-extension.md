@@ -17,15 +17,15 @@ tags:
   - Windows Forms
   - WPF
 ---
-I recently created my first Visual Studio extension, [Diff All Files](http://visualstudiogallery.msdn.microsoft.com/d8d61cc9-6660-41af-b8d0-0f8403b4b39c), which allows you to quickly compare the changes to all files in a TFS changeset, shelveset, or pending changes (Git support coming soon). One of the first challenges I faced when I started the project was where to display my extension&#8217;s settings to the user, and where to save them.&#160; My first instinct was to create a new Menu item to launch a page with all of the settings to display, since the wizard you go through to create the project has an option to automatically add a new Menu item the Tools menu.&#160; After some Googling though, I found the more acceptable solution is to create a new section within the Tools -> Options window for your extension, as this will also allow the user to [import and export your extension’s settings](http://msdn.microsoft.com/en-us/library/bb166176.aspx).
+I recently created my first Visual Studio extension, [Diff All Files](http://visualstudiogallery.msdn.microsoft.com/d8d61cc9-6660-41af-b8d0-0f8403b4b39c), which allows you to quickly compare the changes to all files in a TFS changeset, shelveset, or pending changes (Git support coming soon). One of the first challenges I faced when I started the project was where to display my extension&#8217;s settings to the user, and where to save them. My first instinct was to create a new Menu item to launch a page with all of the settings to display, since the wizard you go through to create the project has an option to automatically add a new Menu item the Tools menu. After some Googling though, I found the more acceptable solution is to create a new section within the Tools -> Options window for your extension, as this will also allow the user to [import and export your extension’s settings](http://msdn.microsoft.com/en-us/library/bb166176.aspx).
 
 ### Adding a grid or custom Windows Forms settings page
 
-Luckily I found this [Stack Overflow answer that shows a Visual Basic example of how to do this](http://stackoverflow.com/a/6247183/602585), and links to [the MSDN page that also shows how to do this in C#](http://msdn.microsoft.com/en-us/library/bb166195.aspx).&#160; The MSDN page is a great resource, and it shows you everything you need to create your settings page as either a Grid Page, or a Custom Page using Windows Forms (FYI: when it says to add a UserControl, it means a System.Windows.Forms.UserControl, not a System.Windows.Controls.UserControl).&#160; My extension’s settings page needed to have buttons on it to perform some operations, which is something the Grid Page doesn’t support, so I had to make a Custom Page.&#160; I first made it using Windows Forms as the page shows, but it quickly reminded me how out-dated Windows Forms is (no binding!), and my settings page would have to be a fixed width and height, rather than expanding to the size of the users Options dialog window, which I didn’t like.
+Luckily I found this [Stack Overflow answer that shows a Visual Basic example of how to do this](http://stackoverflow.com/a/6247183/602585), and links to [the MSDN page that also shows how to do this in C#](http://msdn.microsoft.com/en-us/library/bb166195.aspx). The MSDN page is a great resource, and it shows you everything you need to create your settings page as either a Grid Page, or a Custom Page using Windows Forms (FYI: when it says to add a UserControl, it means a System.Windows.Forms.UserControl, not a System.Windows.Controls.UserControl). My extension’s settings page needed to have buttons on it to perform some operations, which is something the Grid Page doesn’t support, so I had to make a Custom P160; I first made it using Windows Forms as the page shows, but it quickly reminded me how out-dated Windows Forms is (no binding!), and my settings page would have to be a fixed width and height, rather than expanding to the size of the users Options dialog window, which I didn’t like.
 
 ### Adding a custom WPF settings page
 
-The steps to create a Custom WPF settings page are the same as for [creating a Custom Windows Forms Page](http://msdn.microsoft.com/en-us/library/bb166195.aspx), except instead having your settings control inherit from System.Forms.DialogPage (steps 1 and 2 on that page), it needs to inherit from **Microsoft.VisualStudio.Shell.UIElementDialogPage**.&#160; And when you create your User Control for the settings page’s UI, it will be a WPF System.Windows.Controls.UserControl.&#160; Also, instead of overriding the Window method of the DialogPage class, you will override the Child method of the UIElementDialogPage class.
+The steps to create a Custom WPF settings page are the same as for [creating a Custom Windows Forms Page](http://msdn.microsoft.com/en-us/library/bb166195.aspx), except instead having your settings control inherit from System.Forms.DialogPage (steps 1 and 2 on that page), it needs to inherit from **Microsoft.VisualStudio.Shell.UIElementDialogPage**. And when you create your User Control for the settings page’s UI, it will be a WPF System.Windows.Controls.UserContro0; Also, instead of overriding the Window method of the DialogPage class, you will override the Child method of the UIElementDialogPage class.
 
 Here’s a sample of what the Settings class might look like:
 
@@ -94,7 +94,7 @@ namespace VS_DiffAllFiles.Settings
 </pre>
 </div>
 
-&#160;
+
 
 And what the code-behind for the User Control might look like:
 
@@ -150,7 +150,7 @@ namespace VS_DiffAllFiles.Settings
 </pre>
 </div>
 
-&#160;
+
 
 And here’s the corresponding xaml for the UserControl:
 
@@ -186,9 +186,9 @@ This is a complete, but very simple example. If you want a more detailed example
 
 ### A minor problem
 
-One problem I found was that when using a TextBox on my Settings Page UserControl, if I edited text in a TextBox and then hit the OK button on the Options dialog to close the window, the new text would not actually get applied.&#160; This was because the window would get closed before the TextBox bindings had a chance to fire; so if I instead clicked out of the TextBox before clicking the OK button, everything worked correctly.&#160; I know you can change the binding’s UpdateSourceTrigger to PropertyChanged, but I perform some additional logic when some of my textbox text is changed, and I didn’t want that logic firing after every key press while the user typed in the TextBox.
+One problem I found was that when using a TextBox on my Settings Page UserControl, if I edited text in a TextBox and then hit the OK button on the Options dialog to close the window, the new text would not actually get applied. This was because the window would get closed before the TextBox bindings had a chance to fire; so if I instead clicked out of the TextBox before clicking the OK button, everything worked correctly. I know you can change the binding’s UpdateSourceTrigger to PropertyChanged, but I perform some additional logic when some of my textbox text is changed, and I didn’t want that logic firing after every key press while the user typed in the TextBox.
 
-To solve this problem I added a LostKeyboardFocus event to the UserControl, and in that event I find all TextBox controls on the UserControl and force their bindings to update.&#160; You can see the code for this in the snippets above.&#160; The one piece of code that’s not shown is the FindVisualChildren<TextBox> method, so here it is:
+To solve this problem I added a LostKeyboardFocus event to the UserControl, and in that event I find all TextBox controls on the UserControl and force their bindings to update. You can see the code for this in the snippets above. The one piece of code that’s not shown is the FindVisualChildren<TextBox> method, so here it is:
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:db9edb78-e2b5-4cb1-8c36-65221a8819bb" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
   <pre style=white-space:normal>
@@ -221,8 +221,8 @@ public static IEnumerable&lt;T&gt; FindVisualChildren&lt;T&gt;(DependencyObject 
 </pre>
 </div>
 
-&#160;
 
-And that’s it.&#160; Now you know how to make a nice Settings Page for your Visual Studio extension using WPF, instead of the archaic Windows Forms.
+
+And that’s i0; Now you know how to make a nice Settings Page for your Visual Studio extension using WPF, instead of the archaic Windows Forms.
 
 Happy coding!

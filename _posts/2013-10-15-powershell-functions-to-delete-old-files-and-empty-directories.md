@@ -19,7 +19,7 @@ tags:
   - Remove
   - Time
 ---
-I thought I’d share some PowerShell (PS) functions that I wrote for some clean-up scripts at work.&#160; I use these functions to delete files older than a certain date. Note that these functions require PS v3.0; slower PS v2.0 compatible functions are given at the end of this article.
+I thought I’d share some PowerShell (PS) functions that I wrote for some clean-up scripts at work. I use these functions to delete files older than a certain date. Note that these functions require PS v3.0; slower PS v2.0 compatible functions are given at the end of this article.
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:1ae951c3-9a90-495d-b4ae-fc601ee7a3dc" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
   <pre style=white-space:normal>
@@ -68,9 +68,9 @@ function Remove-FilesNotModifiedAfterDate([parameter(Mandatory)][ValidateScript(
 
 The **Remove-EmptyDirectories** function removes all empty directories under the given path, and optionally (via the DeletePathIfEmpty switch) the path directory itself if it is empty after cleaning up the other directories. It also takes a couple parameters that may be specified if you only want to delete the empty directories that were created before a certain date, or that haven’t been written to since a certain date.
 
-The **Remove-FilesCreatedBeforeDate** and **Remove-FilesNotModifiedAfterDate** functions are very similar to each other.&#160; They delete all files under the given path whose Created Date or Last Written To Date, respectfully, is less than the given DateTime.&#160; They then call the Remove-EmptyDirectories function with the provided date to clean up any left over empty directories.
+The **Remove-FilesCreatedBeforeDate** and **Remove-FilesNotModifiedAfterDate** functions are very similar to each other. They delete all files under the given path whose Created Date or Last Written To Date, respectfully, is less than the given DateTime. They then call the Remove-EmptyDirectories function with the provided date to clean up any left over empty directories.
 
-To call the last 2 functions, just provide the path to the file/directory that you want it to delete if older than the given date-time.&#160; Here are some examples of calling all the functions:
+To call the last 2 functions, just provide the path to the file/directory that you want it to delete if older than the given date-time. Here are some examples of calling all the functions:
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:0c7dde8c-4381-4077-936d-b33119373a95" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
   <pre style=white-space:normal>
@@ -102,13 +102,13 @@ Remove-FilesCreatedBeforeDate -Path "C:\SomePath\Temp" -DateTime (Get-Date) -Del
 
 Notice that I am using Get-Date to get the current date and time, and then **subtracting** the specified amount of time from it in order to get a date-time relative to the current time; you can use any valid DateTime though, such as a hard-coded date of January 1st, 2014 3PM.
 
-I use these functions in some scripts that we run nightly via a scheduled task in Windows.&#160; Hopefully you find them useful too.
+I use these functions in some scripts that we run nightly via a scheduled task in Windows. Hopefully you find them useful too.
 
-&#160;
+
 
 ### PowerShell v2.0 Compatible Functions
 
-As promised, here are the slower PS v2.0 compatible functions.&#160; The main difference is that they use $_.PSIsContainer in the Where-Object clause rather than using the –File / –Directory Get-ChildItem switches.&#160; The Measure-Command cmdlet shows that using the switches is about 3x faster than using the where clause, but since we are talking about milliseconds here you likely won’t notice the difference unless you are traversing a large file tree (which I happen to be for my scripts that we use to clean up TFS builds).
+As promised, here are the slower PS v2.0 compatible functions. The main difference is that they use $_.PSIsContainer in the Where-Object clause rather than using the –File / –Directory Get-ChildItem switches. The Measure-Command cmdlet shows that using the switches is about 3x faster than using the where clause, but since we are talking about milliseconds here you likely won’t notice the difference unless you are traversing a large file tree (which I happen to be for my scripts that we use to clean up TFS builds).
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:6a0118b4-0589-49cd-b423-a0f24369b872" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
   <pre style=white-space:normal>

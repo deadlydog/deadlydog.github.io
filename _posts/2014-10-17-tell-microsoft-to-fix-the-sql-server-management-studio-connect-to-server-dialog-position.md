@@ -31,7 +31,7 @@ Several bugs have been reported for this, and apparently MS thinks it is not rea
 
 Why they admit that it is a problem and close it as “Won’t Fix” instead of just leaving it open with a low priority is beyond me.
 
-What’s even more surprising though is that these issues currently have less than 10 upvotes!&#160; Let’s fix that. Like many people, I use SSMS daily, and this is easily my biggest beef with it, especially since the fix is so simple (literally 3 clicks on a Windows Forms or WPF app).
+What’s even more surprising though is that these issues currently have less than 10 upvotes! Let’s fix that. Like many people, I use SSMS daily, and this is easily my biggest beef with it, especially since the fix is so simple (literally 3 clicks on a Windows Forms or WPF app).
 
 Please go to the following 3 Connect bugs **<u>and up-vote them</u>** so MS reconsiders fixing this.
 
@@ -41,7 +41,7 @@ Please go to the following 3 Connect bugs **<u>and up-vote them</u>** so MS reco
 
 3. [https://connect.microsoft.com/SQLServer/feedback/details/389165/sql-server-management-studio-gets-confused-dealing-with-multiple-displays](https://connect.microsoft.com/SQLServer/feedback/details/389165/sql-server-management-studio-gets-confused-dealing-with-multiple-displays "https://connect.microsoft.com/SQLServer/feedback/details/389165/sql-server-management-studio-gets-confused-dealing-with-multiple-displays")
 
-&#160;
+
 
 Here’s a screenshot of the problem. Here my secondary monitors are above my primary one, but the same problem occurs even if all monitors are horizontal to one another.
 

@@ -39,7 +39,7 @@ Here is a screenshot of the resulting GridView:
 
 [<img title="FilesSortedBySize" style="border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; padding-top: 0px; padding-left: 0px; border-left: 0px; display: inline; padding-right: 0px" border="0" alt="FilesSortedBySize" src="/assets/Posts/2014/09/FilesSortedBySize_thumb.png" width="600" height="490" />](/assets/Posts/2014/09/FilesSortedBySize.png)
 
-&#160;
+
 
 And again with filtering applied (i.e. the .bak at the top to only show backup files):
 

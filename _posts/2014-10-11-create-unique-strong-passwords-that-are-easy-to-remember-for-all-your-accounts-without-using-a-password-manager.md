@@ -19,11 +19,11 @@ We’ve all heard the warnings that we should use a strong password to prevent o
 
 A strong password is simply a password that meets a set of requirements, such as being at least X characters long and includes numbers and/or small letters and/or capital letters and/or symbols. Many websites and services enforce that a strong password be used.
 
-If you don’t use a strong password, it’s likely that your password can be brute force hacked almost instantly.&#160; [Check how secure your passwords are here](https://howsecureismypassword.net/).
+If you don’t use a strong password, it’s likely that your password can be brute force hacked almost instantly. [Check how secure your passwords are here](https://howsecureismypassword.net/).
 
 If you do use a strong password, it’s very likely that you use the same strong password (or set of strong passwords) for all of the services you use, simply because having to remember lots of passwords and which one is for which service is hard. This is very bad practice though, since if somebody gets your password they can access all of your services. There’s a lot of ways for somebody to get your password; from simply guessing it to software vulnerabilities like [the Heartbleed bug](http://heartbleed.com/), so you should try and always use a unique password for each service.
 
-&#160;
+
 
 ### The Solution
 
@@ -35,16 +35,16 @@ The key to creating a unique password for each service that you use is to includ
 
 The key to creating a strong password is to use a common strong phrase (or “salt” in security-speak) in all of your generated passwords.
 
-The last piece to consider is that you want your salt + formula to generate a password that is not too short or too long.&#160; Longer passwords are always more secure, but many services have different min and max length requirements, so I find that aiming for about 12 characters satisfies most services while still generating a nice strong password.
+The last piece to consider is that you want your salt + formula to generate a password that is not too short or too long. Longer passwords are always more secure, but many services have different min and max length requirements, so I find that aiming for about 12 characters satisfies most services while still generating a nice strong password.
 
-&#160;
+
 
 ### Examples
 
 So the things we need are:
 
   1. The service you are using. Let’s say you are creating an account at Google.com, so the service name is **Google**.
-  2. A <u>strong</u> salt phrase. Let’s use: **1Qaz!&#160;&#160;** (notice it includes a number, small letter, capital letter, and symbol)
+  2. A <u>strong</u> salt phrase. Let’s use: **1Qaz!** (notice it includes a number, small letter, capital letter, and symbol)
 
 <u>A Too Simple Formula Example:</u>
 
@@ -182,7 +182,7 @@ You can see that once we introduce scrambling letters in the service name, or us
 
 You can also see how easy it is to come up with your own unique formula. You don’t have to stick to the rules I’ve shown here (counting vowels and length). Maybe instead of counting the number of vowels, you count the number of letters that the Service name has in common with your name. For example, my name is Daniel, so “Google” shares one letter in common with my name (the “l”), and “StackOverflow” shares 3 (“ael”). Maybe instead of squaring the numbers you multiply or add them. Maybe instead of using the numbers in your password, you use the symbols on the respective numbers. If you don’t like doing math, then avoid using math in your formula; it shouldn’t be a long or tedious process for you to calculate your password. Be creative and come up with your own formula that is fast and easy for you, and/or mix the components together in different ways.
 
-&#160;
+
 
 ### More Tips and Considerations
 
@@ -190,7 +190,7 @@ You can also see how easy it is to come up with your own unique formula. You don
   * Since some services restrict the use of symbols, you may want to have another salt that does not contain symbols, or formula that does not generate symbols. When you try and login using your usual salt and it fails, try the password generated using your secondary symbol-free salt.
   * For extra security, include the year in your formula somehow and change your passwords every year. If you are extra paranoid, or have to change your password very frequently (e.g. for work), you can do the same thing with the month too and change your passwords monthly. An alternative to this would be to change your salt phrase or formula every year/month.
   * Similarly to how you may have had a different password for sites you don’t really care about, sites you do care about, and critical sites (e.g. bank websites), you could have different salts or formulas for each.
-  * If you are weary of using this formula approach for ALL of your passwords thinking that it is too much effort, then don’t use it for ALL of your passwords. Probably 85% of the accounts you create you don’t really care about;&#160; they don’t have any sensitive information, and you could really care less if somebody hacked them. For those, you can still use a shared strong password. Just use this approach for the remaining 15% of your accounts that you do really care about. This is a much better alternative than sharing a strong password among these 15%.
+  * If you are weary of using this formula approach for ALL of your passwords thinking that it is too much effort, then don’t use it for ALL of your passwords. Probably 85% of the accounts you create you don’t really care about; they don’t have any sensitive information, and you could really care less if somebody hacked them. For those, you can still use a shared strong password. Just use this approach for the remaining 15% of your accounts that you do really care about. This is a much better alternative than sharing a strong password among these 15%.
   * Some characters are “stronger” than others. For example, symbols are typically harder to guess/crack than letters or numbers, and some symbols are stronger than other symbols (e.g. < is stronger than $). It’s best to have a mix of all types of characters for your salt, but you might want to have more symbols in your salt, or when choosing the symbols for your salt you might opt for ones not on the 0 – 9 keys (i.e. <!@#$%>^&*()).
 
 

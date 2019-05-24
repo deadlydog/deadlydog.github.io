@@ -17,7 +17,7 @@ tags:
   - SelectSingleNode
   - XML
 ---
-I’m new to working with Xml through PowerShell and was so impressed when I discovered how easy it was to read an xml element’s value.&#160; I’m working with reading/writing .nuspec files for working with NuGet.&#160; Here’s a sample xml of a .nuspec xml file:
+I’m new to working with Xml through PowerShell and was so impressed when I discovered how easy it was to read an xml element’s value. I’m working with reading/writing .nuspec files for working with NuGet. Here’s a sample xml of a .nuspec xml file:
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:6f27e32f-131b-479d-a0ee-45ac9f59475d" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
   <pre style=white-space:normal>
@@ -43,7 +43,7 @@ I’m new to working with Xml through PowerShell and was so impressed when I dis
 </pre>
 </div>
 
-&#160;
+
 
 In PowerShell if I want to get the version element’s value, I can just do:
 
@@ -57,9 +57,9 @@ return $fileContents.package.metadata.version
 </pre>
 </div>
 
-&#160;
 
-Wow, that’s super easy.&#160; And if I want to update that version number, I can just do:
+
+Wow, that’s super easy. And if I want to update that version number, I can just do:
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:3cf516e2-54d9-4054-b6ab-8877a7034cf6" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
   <pre style=white-space:normal>
@@ -72,11 +72,11 @@ $fileContents.Save($NuSpecFilePath)
 </pre>
 </div>
 
-&#160;
 
-Holy smokes. So simple it blows my mind.&#160; So everything is great, right?&#160; Well, it is until you try and read or write to an element that doesn’t exist.&#160; If the <version> element is not in the xml, when I try and read from it or write to it, I get an error such as “Error: Property ‘version’ cannot be found on this object. Make sure that it exists.”.&#160; You would think that checking if an element exists would be straight-forward and easy right? Well, it almost is.&#160; There’s a [SelectSingleNode() function](http://msdn.microsoft.com/en-us/library/system.xml.xmlnode.selectsinglenode.aspx) that we can use to look for the element, but what I realized after a couple hours of banging my head on the wall and [stumbling across this stack overflow post](http://stackoverflow.com/questions/1766254/selectsinglenode-always-returns-null), is that in order for this function to work properly, you really need to use the overloaded method that also takes an XmlNamespaceManager; otherwise the SelectSingleNode() function always returns null.
 
-So basically you need an extra 2 lines in order to setup an XmlNamespaceManager every time you need to look for a node.&#160; This is a little painful, so instead I created this function that will get you the node if it exists, and return $null if it doesn’t:
+Holy smokes. So simple it blows my mind. So everything is great, right? Well, it is until you try and read or write to an element that doesn’t exist. If the <version> element is not in the xml, when I try and read from it or write to it, I get an error such as “Error: Property ‘version’ cannot be found on this object. Make sure that it exists.”. You would think that checking if an element exists would be straight-forward and easy right? Well, it almost is. There’s a [SelectSingleNode() function](http://msdn.microsoft.com/en-us/library/system.xml.xmlnode.selectsinglenode.aspx) that we can use to look for the element, but what I realized after a couple hours of banging my head on the wall and [stumbling across this stack overflow post](http://stackoverflow.com/questions/1766254/selectsinglenode-always-returns-null), is that in order for this function to work properly, you really need to use the overloaded method that also takes an XmlNamespaceManager; otherwise the SelectSingleNode() function always returns null.
+
+So basically you need an extra 2 lines in order to setup an XmlNamespaceManager every time you need to look for a node. This is a little painful, so instead I created this function that will get you the node if it exists, and return $null if it doesn’t:
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:4d033fed-aa0d-49a4-ac82-0d0b933bfcea" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
   <pre style=white-space:normal>
@@ -99,7 +99,7 @@ function Get-XmlNode([ xml ]$XmlDocument, [string]$NodePath, [string]$NamespaceU
 </pre>
 </div>
 
-&#160;
+
 
 And you would call this function like so:
 
@@ -115,15 +115,15 @@ return $fileContents.package.metadata.version
 </pre>
 </div>
 
-&#160;
+
 
 So if the node doesn’t exist (i.e. is $null), I return $null instead of trying to access the non-existent element.
 
-So by default this Get-XmlNode function uses the xml’s root namespace, which is what we want 95% of the time.&#160; It also takes a NodeSeparatorCharacter that defaults to a period.&#160; While Googling for answers I saw that many people use the the syntax “$fileContents/package/metadata/version” instead of “$fileContents.package.metadata.version”.&#160; I prefer the dot notation, but for those who like the slash just override the NodeSeparatorCharacter with a slash.
+So by default this Get-XmlNode function uses the xml’s root namespace, which is what we want 95% of the time. It also takes a NodeSeparatorCharacter that defaults to a period. While Googling for answers I saw that many people use the the syntax “$fileContents/package/metadata/version” instead of “$fileContents.package.metadata.version”. I prefer the dot notation, but for those who like the slash just override the NodeSeparatorCharacter with a slash.
 
 <font color="#00ff00"><Update></font>
 
-Later I found that I also wanted the ability to return back multiple xml nodes; that is, if multiple “version” elements were defined I wanted to get them all, not just the first one.&#160; This is simple; instead of using .SelectSingleNode() we can use .SelectNodes().&#160; In order to avoid duplicating code, I broke the code to get the Xml Namespace Manager and Fully Qualified Node Path out into their own functions.&#160; Here is the rewritten code, with the new Get-XmlNodes function:
+Later I found that I also wanted the ability to return back multiple xml nodes; that is, if multiple “version” elements were defined I wanted to get them all, not just the first one. This is simple; instead of using .SelectSingleNode() we can use .SelectNodes(). In order to avoid duplicating code, I broke the code to get the Xml Namespace Manager and Fully Qualified Node Path out into their own functions. Here is the rewritten code, with the new Get-XmlNodes function:
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:8b5955e6-e281-457a-8df0-b2aca9ba40d1" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
   <pre style=white-space:normal>
@@ -167,7 +167,7 @@ function Get-XmlNodes([ xml ]$XmlDocument, [string]$NodePath, [string]$Namespace
 </pre>
 </div>
 
-Note the comma in the return statement of the Get-XmlNamespaceManager function.&#160; It took me a while to discover [why things broke without it](http://stackoverflow.com/questions/17498320/powershell-changes-return-objects-type).
+Note the comma in the return statement of the Get-XmlNamespaceManager function. It took me a while to discover [why things broke without it](http://stackoverflow.com/questions/17498320/powershell-changes-return-objects-type).
 
 <font color="#00ff00"></Update></font>
 
@@ -222,9 +222,9 @@ function Set-XmlElementsTextValue([ xml ]$XmlDocument, [string]$ElementPath, [st
 </pre>
 </div>
 
-&#160;
 
-The Get-XmlElementsTextValue function is pretty straight forward; return the value if it exists, otherwise return null.&#160; The Set-XmlElementsTextValue is a little more involved because if the element does not exist already, we need to create the new element and attach it as a child to the parent element.
+
+The Get-XmlElementsTextValue function is pretty straight forward; return the value if it exists, otherwise return null. The Set-XmlElementsTextValue is a little more involved because if the element does not exist already, we need to create the new element and attach it as a child to the parent element.
 
 Here’s an example of calling Get-XmlElementsTextValue:
 
@@ -238,7 +238,7 @@ return Get-XmlElementsTextValue -XmlDocument $fileContents -ElementPath "package
 </pre>
 </div>
 
-&#160;
+
 
 And an example of calling Set-XmlElementsTextValue:
 
@@ -253,7 +253,7 @@ $fileContents.Save($NuSpecFilePath)
 </pre>
 </div>
 
-&#160;
+
 
 Note that these 2 functions depend on the Get-XmlNode function provided above.
 
@@ -319,4 +319,4 @@ function Set-XmlElementsAttributeValue([ xml ]$XmlDocument, [string]$ElementPath
   </p>
 </div>
 
-I hope you find this useful and that it saves you some time.&#160; Happy coding!
+I hope you find this useful and that it saves you some time. Happy coding!

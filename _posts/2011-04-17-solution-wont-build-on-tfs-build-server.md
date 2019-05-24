@@ -25,14 +25,14 @@ C:WindowsMicrosoft.NETFramework64v4.0.30319Microsoft.Common.targets (1360): Coul
 
 Then the problem is likely one of the following:
 
-&#160;
+
 
 1 &#8211; The project/dll being reference is set to "Specific Version", so open the reference&#8217;s properties and change it to "Any Version".
 
-&#160;
 
-2 &#8211; The project is not set to be built under the specific configuration.&#160; Right click on the solution in the Solution Explorer, and choose Configuration Manager.&#160; All projects should be set to be build (i.e. have a checkmark), and all of their platforms should be set to the same value.&#160; Change the Active Solution Platform to the platform you use and ensure that all projects are still set to always build.
 
-&#160;
+2 &#8211; The project is not set to be built under the specific configuration. Right click on the solution in the Solution Explorer, and choose Configuration Manager. All projects should be set to be build (i.e. have a checkmark), and all of their platforms should be set to the same value. Change the Active Solution Platform to the platform you use and ensure that all projects are still set to always build.
 
-3 &#8211; The path to the refenced project/dll is too long.&#160; Windows/.NET has a limitation where the reference path cannot be more than 260 characters, and the directory it&#8217;s in cannot be more than 248 characters.&#160; So the work around for this is usually to rename your build definition to something shorter, or if you just added a new project/namespace to the project, to shorten its name so the path stays under the limit.
+
+
+3 &#8211; The path to the refenced project/dll is too long. Windows/.NET has a limitation where the reference path cannot be more than 260 characters, and the directory it&#8217;s in cannot be more than 248 characters. So the work around for this is usually to rename your build definition to something shorter, or if you just added a new project/namespace to the project, to shorten its name so the path stays under the limit.

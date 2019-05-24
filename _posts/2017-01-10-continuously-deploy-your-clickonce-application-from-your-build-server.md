@@ -24,7 +24,7 @@ ClickOnce applications are a great and easy way to distribute your applications 
 
 In this post I’m going to show how to continuously deploy your ClickOnce application using Visual Studio Team Services (VSTS), but you can adopt what’s shown here to work on any build system, such as Team City or Jenkins.
 
-&#160;
+
 
 ###
 
@@ -34,7 +34,7 @@ Before we can publish a new version of the application from the build server, we
 
 Basically you should have your project in a state where you can easily publish a new version manually, and it is configured the way that you want (includes the necessary files, has the destination to publish to specified, specifies if the application is only available online or not, etc.). Once you’ve published your project manually and confirmed that it’s configured the way you like, we can move onto the next step.
 
-&#160;
+
 
 ### Step 2 – Setup the build on your build server
 
@@ -62,7 +62,7 @@ So we now have the ClickOnce artifacts being generated and stored in the appropr
 
 Hopefully at this point you are able to create a successful build, but we’re not done yet.
 
-&#160;
+
 
 ### Step 3 – Publish the build artifacts to the ClickOnce application’s destination
 
@@ -80,7 +80,7 @@ If you make changes and commit them, the build should create new artifacts, and 
 
 You may be wondering why we need another build step to update the ClickOnce version. Part of the build artifacts that are created are a .application manifest file, and a directory that contains the applications files, both of which have the ClickOnce version in them. Can’t we just modify the directory name and .application manifest file to increment the old version number? This was my initial thought, but the .application manifest file contains a cryptography hash to ensure that nobody has tampered with it, meaning that it needs to contain the proper version number at the time that it is generated.
 
-&#160;
+
 
 ### Step 4 – One more build step to update the ClickOnce version
 
@@ -100,7 +100,7 @@ The last argument I have included is the UpdateMinimumRequiredVersionToCurrentVe
 
 That’s it! Now if you launch another build it should create new artifacts with a larger ClickOnce version number, and once published your application should update to the new version.
 
-&#160;
+
 
 ### Bonus – Displaying the ClickOnce version in your application
 
@@ -126,6 +126,6 @@ private void MainWindow_Loaded(object sender, RoutedEventArgs e)
 
 <a href="https://gist.github.com/deadlydog/17292d3cd5e6f81409025d843184078e" target="_blank">Here</a> I hard-code the product version that I want displayed in my application in a variable called ApplicationVersion. When the WPF application is launched, I obtain the ClickOnce Revision and append it onto the end of the version number. I then display the version in my application’s window title, but you might want to show it somewhere else, such as in an About window. If you want, you could even display both the full application version and full ClickOnce version.
 
-&#160;
+
 
 I hope this blog has helped you further your automation-foo. Happy coding!

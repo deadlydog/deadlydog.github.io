@@ -26,11 +26,11 @@ There are many project types that require a .pfx file in order to build and/or p
 
 These errors will often occur when you are still using the temporary file that was generated automatically when the project was created in Visual Studio, or when using a .pfx file that is password protected.
 
-If your .pfx file is password protected, we can import the certificate at build time, as shown further below. The nice thing about this approach is it does not require you (or one of your company admins) to manually install the certificate on every build server, <a href="http://stackoverflow.com/questions/1056997/team-foundation-server-build-with-password-protected-codesigning-fails" target="_blank">as</a> <a href="http://stackoverflow.com/questions/4025316/signing-assemblies-with-pfx-files-in-msbuild-team-build-and-tfs" target="_blank">many</a> <a href="http://stackoverflow.com/questions/2815366/cannot-import-the-keyfile-blah-pfx-error-the-keyfile-may-be-password-protec" target="_blank">other</a>&#160;<a href="http://chamindac.blogspot.ca/2014/02/tfs-build-with-password-protected-pfx.html" target="_blank">sites</a> <a href="https://blogs.msdn.microsoft.com/nagarajp/2005/11/08/using-password-protected-signing-keys-in-teambuild/" target="_blank">suggest</a>. This way you don’t have to bother your admin or get unexpected broken builds when a new build server is added to the pool.
+If your .pfx file is password protected, we can import the certificate at build time, as shown further below. The nice thing about this approach is it does not require you (or one of your company admins) to manually install the certificate on every build server, <a href="http://stackoverflow.com/questions/1056997/team-foundation-server-build-with-password-protected-codesigning-fails" target="_blank">as</a> <a href="http://stackoverflow.com/questions/4025316/signing-assemblies-with-pfx-files-in-msbuild-team-build-and-tfs" target="_blank">many</a> <a href="http://stackoverflow.com/questions/2815366/cannot-import-the-keyfile-blah-pfx-error-the-keyfile-may-be-password-protec" target="_blank">other</a><a href="http://chamindac.blogspot.ca/2014/02/tfs-build-with-password-protected-pfx.html" target="_blank">sites</a> <a href="https://blogs.msdn.microsoft.com/nagarajp/2005/11/08/using-password-protected-signing-keys-in-teambuild/" target="_blank">suggest</a>. This way you don’t have to bother your admin or get unexpected broken builds when a new build server is added to the pool.
 
 If your .pfx file has expired, you need to remove the current pfx file and add a new (password-protected) one in its place.
 
-&#160;
+
 
 ### Creating a new .pfx file for a UWP application
 
@@ -46,7 +46,7 @@ To create a new password protected .pfx file in a UWP application,
 
 [<img title="Create Pfx Certificate In UWP App" style="border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; padding-top: 0px; padding-left: 0px; border-left: 0px; display: inline; padding-right: 0px" border="0" alt="Create Pfx Certificate In UWP App" src="/assets/Posts/2016/12/Create-Pfx-Certificate-In-UWP-App_thumb.png" width="600" height="232" />](/assets/Posts/2016/12/Create-Pfx-Certificate-In-UWP-App.png)
 
-&#160;
+
 
 ### Creating a new .pfx file for a ClickOnce application
 
@@ -62,7 +62,7 @@ Creating a pfx file for a ClickOnce application is similar, but instead you want
 
 [<img title="Create Pfx Certificate In ClickOnce App" style="border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; padding-top: 0px; padding-left: 0px; border-left: 0px; display: inline; padding-right: 0px" border="0" alt="Create Pfx Certificate In ClickOnce App" src="/assets/Posts/2016/12/Create-Pfx-Certificate-In-ClickOnce-App_thumb.png" width="600" height="252" />](/assets/Posts/2016/12/Create-Pfx-Certificate-In-ClickOnce-App.png)
 
-&#160;
+
 
 ### Applying the .pfx file before building on the build server
 

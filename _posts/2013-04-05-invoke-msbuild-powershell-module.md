@@ -15,9 +15,9 @@ tags:
   - PowerShell
   - script
 ---
-<font color="#ff0000">Update:</font> I’ve moved this project to it’s own new home at <https://invokemsbuild.codeplex.com>.&#160; All updates will be made there.
+<font color="#ff0000">Update:</font> I’ve moved this project to it’s own new home at <https://invokemsbuild.codeplex.com>. All updates will be made there.
 
-I’ve spent a little while creating a powershell module that can be used to call MsBuild.&#160; It returns whether the build succeeded or not, and runs through the Visual Studio command prompt if possible, since some projects can’t be built by calling msbuild directly (e.g. XNA projects).&#160; It also provides several other parameters to do things like show the window performing the build, automatically open the build log if the build fails, etc.
+I’ve spent a little while creating a powershell module that can be used to call MsBuild. It returns whether the build succeeded or not, and runs through the Visual Studio command prompt if possible, since some projects can’t be built by calling msbuild directly (e.g. XNA projects). It also provides several other parameters to do things like show the window performing the build, automatically open the build log if the build fails, etc.
 
 Here is the script (<strike>copy-paste the code into a file called Invoke-MsBuild.psm1</strike> [go download the updated version](https://invokemsbuild.codeplex.com/releases/)):
 
@@ -358,7 +358,7 @@ Export-ModuleMember -Function Invoke-MsBuild
 </pre>
 </div>
 
-&#160;
+
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:4a605e81-b8b3-436d-8b7d-a74e33ff0206" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
   <pre style=white-space:normal>
@@ -370,10 +370,10 @@ Invoke-MsBuild -Path "[Path to .sln file]" -MsBuildParameters "/target:Clean;Bui
 </pre>
 </div>
 
-&#160;
+
 
 And here’s an example of how to use it (assuming you saved it to a file called “Invoke-MsBuild.psm1”:
 
 If you have any suggestions, please comment.
 
-Feel free to use this in your own scripts.&#160; Happy coding!
+Feel free to use this in your own scripts. Happy coding!

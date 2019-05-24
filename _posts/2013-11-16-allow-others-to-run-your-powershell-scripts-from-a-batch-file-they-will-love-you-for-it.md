@@ -22,7 +22,7 @@ A while ago in [one of my older posts](http://dans-blog.azurewebsites.net/gettin
 
 ### Why call my PowerShell script from a batch file?
 
-When I am writing a script for other people to use (in my organization, or for the general public) or even for myself sometimes, I will often include a simple batch file (i.e. \*.bat or \*.cmd file) that just simply calls my PowerShell script and then exits.&#160; I do this because even though PowerShell is awesome, not everybody knows what it is or how to use it; non-technical folks obviously, but even many of the technical folks in our organization have never used PowerShell.
+When I am writing a script for other people to use (in my organization, or for the general public) or even for myself sometimes, I will often include a simple batch file (i.e. \*.bat or \*.cmd file) that just simply calls my PowerShell script and then exits. I do this because even though PowerShell is awesome, not everybody knows what it is or how to use it; non-technical folks obviously, but even many of the technical folks in our organization have never used PowerShell.
 
 Let’s list the problems with sending somebody the PowerShell script alone; The first two points below are hurdles that **every** user stumbles over the first time they encounter PowerShell (they are there for security purposes):
 
@@ -31,7 +31,7 @@ Let’s list the problems with sending somebody the PowerShell script alone; The
   3. My script may require admin privileges in order to run correctly, and it can be tricky to run a PowerShell script as admin without going into a PowerShell console and running the script from there, which a lot of people won’t know how to do.
   4. A potential problem that could affect PowerShell Pros is that it’s possible for them to have variables or other settings set in their PowerShell profile that could cause my script to not perform correctly; this is pretty unlikely, but still a possibility.
 
-So imagine you’ve written a PowerShell script that you want your grandma to run (or an HR employee, or an executive, or your teenage daughter, etc.). Do you think they’re going to be able to do it?&#160; Maybe, maybe not.
+So imagine you’ve written a PowerShell script that you want your grandma to run (or an HR employee, or an executive, or your teenage daughter, etc.). Do you think they’re going to be able to do it? Maybe, maybe not.
 
 <span style="text-decoration: underline">You should be kind to your users and provide a batch file to call your PowerShell script</span>.
 
@@ -39,7 +39,7 @@ The beauty of batch file scripts is that by default the script is ran when it is
 
 ### Ok, I see your point. So how do I call my PowerShell script from a batch file?
 
-First, <span style="text-decoration: underline">the code I provide assumes that the batch file and PowerShell script are in the same directory</span>.&#160; So if you have a PowerShell script called “MyPowerShellScript.ps1” and a batch file called “RunMyPowerShellScript.cmd”, this is what the batch file would contain:
+First, <span style="text-decoration: underline">the code I provide assumes that the batch file and PowerShell script are in the same directory</span>. So if you have a PowerShell script called “MyPowerShellScript.ps1” and a batch file called “RunMyPowerShellScript.cmd”, this is what the batch file would contain:
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:d77181f4-7d28-49aa-b2f5-2c829994a44a" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
   <pre style=white-space:normal>
@@ -52,9 +52,9 @@ PowerShell -NoProfile -ExecutionPolicy Bypass -Command "& '%PowerShellScriptPath
 </pre>
 </div>
 
-Line 1 just prevents the contents of the batch file from being printed to the command prompt (so it’s optional).&#160; Line 2 gets the directory that the batch file is in.&#160; Line 3 just appends the PowerShell script filename to the script directory to get the full path to the PowerShell script file, so this is the only line you would need to modify; <span style="text-decoration: underline">replace MyPowerShellScript.ps1 with your PowerShell script’s filename</span>.&#160; The 4th line is the one that actually calls the PowerShell script and contains the magic.
+Line 1 just prevents the contents of the batch file from being printed to the command prompt (so it’s optional). Line 2 gets the directory that the batch file is in. Line 3 just appends the PowerShell script filename to the script directory to get the full path to the PowerShell script file, so this is the only line you would need to modify; <span style="text-decoration: underline">replace MyPowerShellScript.ps1 with your PowerShell script’s filename</span>. The 4th line is the one that actually calls the PowerShell script and contains the magic.
 
-The **–NoProfile** switch solves problem #4 above, and the **–ExecutionPolicy Bypass** argument solves problem #2.&#160; But that still leaves problem #3 above, right?
+The **–NoProfile** switch solves problem #4 above, and the **–ExecutionPolicy Bypass** argument solves problem #2. But that still leaves problem #3 above, right?
 
 ### Call your PowerShell script from a batch file with Administrative permissions (i.e. Run As Admin)
 
@@ -73,7 +73,7 @@ PowerShell -NoProfile -ExecutionPolicy Bypass -Command "& {Start-Process PowerSh
 
 We can’t call the PowerShell script as admin from the command prompt, but we can from PowerShell; so we essentially start a new PowerShell session, and then have that session call the PowerShell script using the **–Verb RunAs** argument to specify that the script should be run as an administrator.
 
-And voila, that’s it.&#160; Now all anybody has to do to run your PowerShell script is double-click the batch file; something that even your grandma can do (well, hopefully).&#160; So will your users really love you for this; well, no.&#160; Instead they just won’t be cursing you for sending them a script that they can’t figure out how to run.&#160; It’s one of those things that nobody notices until it doesn’t work.
+And voila, that’s it. Now all anybody has to do to run your PowerShell script is double-click the batch file; something that even your grandma can do (well, hopefully). So will your users really love you for this; well, no. Instead they just won’t be cursing you for sending them a script that they can’t figure out how to run. It’s one of those things that nobody notices until it doesn’t work.
 
 So take the extra 10 seconds to create a batch file and copy/paste the above text into it; it’ll save you time in the long run when you don’t have to repeat to all your users the specific instructions they need to follow to run your PowerShell script.
 
@@ -97,9 +97,9 @@ if ($Host.Name -eq "ConsoleHost")
 </pre>
 </div>
 
-This will prompt the user for keyboard input before closing the PowerShell console window.&#160; This is useful because it allows users to read any errors that your PowerShell script may have thrown before the window closes, or even just so they can see the “Everything completed successfully” message that your script spits out so they know that it ran correctly.&#160; Related side note: you can [change your PC to always leave the PowerShell console window open](http://dans-blog.azurewebsites.net/fix-problem-where-windows-powershell-cannot-run-script-whose-path-contains-spaces/) after running a script, if that is your preference.
+This will prompt the user for keyboard input before closing the PowerShell console window. This is useful because it allows users to read any errors that your PowerShell script may have thrown before the window closes, or even just so they can see the “Everything completed successfully” message that your script spits out so they know that it ran correctly. Related side note: you can [change your PC to always leave the PowerShell console window open](http://dans-blog.azurewebsites.net/fix-problem-where-windows-powershell-cannot-run-script-whose-path-contains-spaces/) after running a script, if that is your preference.
 
-I hope you find this useful.&#160; Feel free to leave comments.
+I hope you find this useful. Feel free to leave comments.
 
 Happy coding!
 

@@ -22,13 +22,13 @@ tags:
   - Write
   - XML
 ---
-I love creating tools, particularly ones for myself and other developers to use.&#160; A common situation that I run into is needing to save the user’s settings to a file so that I can load them up the next time the tool is ran.&#160; I find that the easiest way to accomplish this is to create a Settings class to hold all of the user’s settings, and then use serialization to save and load the class instance to/from a file.&#160; I mention a Settings class here, but you can use this technique to save any object (or list of objects) to a file.
+I love creating tools, particularly ones for myself and other developers to use. A common situation that I run into is needing to save the user’s settings to a file so that I can load them up the next time the tool is ra0; I find that the easiest way to accomplish this is to create a Settings class to hold all of the user’s settings, and then use serialization to save and load the class instance to/from a f160; I mention a Settings class here, but you can use this technique to save any object (or list of objects) to a file.
 
-There are tons of different formats that you may want to save your object instances as, but the big three are Binary, XML, and Json.&#160; Each of these formats have their pros and cons, which I won’t go into.&#160; Below I present functions that can be used to save and load any object instance to / from a file, as well as the different aspects to be aware of when using each method.
+There are tons of different formats that you may want to save your object instances as, but the big three are Binary, XML, and Json. Each of these formats have their pros and cons, which I won’t go int0; Below I present functions that can be used to save and load any object instance to / from a file, as well as the different aspects to be aware of when using each method.
 
 The follow code (without examples of how to use it) [is also available here](https://dansutilitylibraries.codeplex.com/SourceControl/latest#DansUtilityLibraries/DansCSharpLibrary/Serialization/BinarySerialization.cs), and can be used directly from [my NuGet Package](https://www.nuget.org/packages/DansUtilityLibraries.CSharpLibrary/).
 
-### &#160;
+###
 
 ### Writing and Reading an object to / from a Binary file
 
@@ -85,7 +85,7 @@ public static class BinarySerialization
 </pre>
 </div>
 
-&#160;
+
 
 And here is an example of how to use it:
 
@@ -124,7 +124,7 @@ List&lt;Person&gt; people = BinarySerialization.ReadFromBinaryFile&lt;List&lt;Pe
 </pre>
 </div>
 
-&#160;
+
 
 ### Writing and Reading an object to / from an XML file (Using System.Xml.Serialization.XmlSerializer in the System.Xml assembly)
 
@@ -197,7 +197,7 @@ public static class XmlSerialization
 </pre>
 </div>
 
-&#160;
+
 
 And here is an example of how to use it:
 
@@ -234,7 +234,7 @@ List&lt;Person&gt; people = XmlSerialization.ReadFromXmlFile&lt;List&lt;Person&g
 </pre>
 </div>
 
-&#160;
+
 
 ### Writing and Reading an object to / from a Json file (using the [Newtonsoft.Json](http://james.newtonking.com/json) assembly in the [Json.NET NuGet package](http://www.nuget.org/packages/Newtonsoft.Json/))
 
@@ -343,19 +343,19 @@ List&lt;Person&gt; people = JsonSerialization.ReadFromJsonFile&lt;List&lt;Person
 </pre>
 </div>
 
-&#160;
+
 
 As you can see, the Json example is almost identical to the Xml example, with the exception of using the [JsonIgnore] attribute instead of [XmlIgnore].
 
-&#160;
+
 
 ### Writing and Reading an object to / from a Json file (using the [JavaScriptSerializer](http://msdn.microsoft.com/en-us/library/system.web.script.serialization.javascriptserializer%28v=vs.110%29.aspx) in the System.Web.Extensions assembly)
 
-There are many Json serialization libraries out there.&#160; I mentioned the Newtonsoft.Json one because it is very popular, and I am also mentioning this JavaScriptSerializer one because it is built into the .Net framework.&#160; The catch with this one though is that it requires the Full .Net 4.0 framework, not just the .Net Framework 4.0 Client Profile.
+There are many Json serialization libraries out there. I mentioned the Newtonsoft.Json one because it is very popular, and I am also mentioning this JavaScriptSerializer one because it is built into the .Net framework. The catch with this one though is that it requires the Full .Net 4.0 framework, not just the .Net Framework 4.0 Client Profile.
 
 The caveats to be aware of are the same between the Newtonsoft.Json and JavaScriptSerializer libraries, except instead of using [JsonIgnore] you would use **[ScriptIgnore]**.
 
-Be aware that the JavaScriptSerializer is in the System.Web.Extensions assembly, but in the System.Web.Script.Serialization namespace.&#160; Here is the code from the Newtonsoft.Json code snippet that needs to be replaced in order to use the JavaScriptSerializer:
+Be aware that the JavaScriptSerializer is in the System.Web.Extensions assembly, but in the System.Web.Script.Serialization namespace. Here is the code from the Newtonsoft.Json code snippet that needs to be replaced in order to use the JavaScriptSerializer:
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:446bb8dd-02bb-4ba1-96eb-c598c8847b78" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
   <pre style=white-space:normal>
@@ -373,6 +373,6 @@ return new System.Web.Script.Serialization.JavaScriptSerializer().Deserialize&lt
 </pre>
 </div>
 
-&#160;
+
 
 Happy Coding!

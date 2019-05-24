@@ -24,7 +24,7 @@ tags:
 
 <font color="#c0504d">Updated Dec 5, 2013 to release COM object from Read-FolderBrowserDialog function.</font>
 
-I love PowerShell, and when prompting users for input I often prefer to use GUI controls rather than have them enter everything into the console, as some things like browsing for files or folders or entering multi-line text aren’t very pleasing to do directly in the PowerShell prompt window.&#160; So I thought I’d share some PowerShell code that I often use for these purposes.&#160; Below I give the code for creating each type of GUI control from a function, an example of calling the function, and a screen shot of what the resulting GUI control looks like.
+I love PowerShell, and when prompting users for input I often prefer to use GUI controls rather than have them enter everything into the console, as some things like browsing for files or folders or entering multi-line text aren’t very pleasing to do directly in the PowerShell prompt windo0; So I thought I’d share some PowerShell code that I often use for these purpo160; Below I give the code for creating each type of GUI control from a function, an example of calling the function, and a screen shot of what the resulting GUI control looks like.
 
 <div id="scid:fb3a1972-4489-4e52-abe7-25a00bb07fdf:22398b0d-6f34-47d0-aab1-7e10ea30eb8b" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
   <p>
@@ -63,7 +63,7 @@ else { Write-Host "You clicked $buttonClicked" }
 
 [<img title="Message Box Example" style="border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; padding-top: 0px; padding-left: 0px; border-left: 0px; display: inline; padding-right: 0px" border="0" alt="Message Box Example" src="/assets/Posts/2014/07/Message-Box-Example_thumb.png" width="249" height="165" />](/assets/Posts/2014/07/Message-Box-Example.png)
 
-&#160;
+
 
 <u>**Prompt for single-line user input**</u>
 
@@ -97,7 +97,7 @@ else { Write-Host "You entered $textEntered" }
 
 [<img title="Input Box Example" style="border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; padding-top: 0px; padding-left: 0px; border-left: 0px; display: inline; padding-right: 0px" border="0" alt="Input Box Example" src="/assets/Posts/2014/07/Input-Box-Example_thumb.png" width="416" height="181" />](/assets/Posts/2014/07/Input-Box-Example.png)
 
-&#160;
+
 
 **<u>Prompt for a file</u>** (based on [a post the Scripting Guy made](http://blogs.technet.com/b/heyscriptingguy/archive/2009/09/01/hey-scripting-guy-september-1.aspx))
 
@@ -137,7 +137,7 @@ else { "You did not select a file." }
 
 [<img title="Select Text File Example" style="border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; padding-top: 0px; padding-left: 0px; border-left: 0px; display: inline; padding-right: 0px" border="0" alt="Select Text File Example" src="/assets/Posts/2014/07/Select-Text-File-Example_thumb.png" width="495" height="368" />](/assets/Posts/2014/07/Select-Text-File-Example.png)
 
-&#160;
+
 
 **<u>Prompt for a directory</u>** (based on [this post](http://forums.anandtech.com/showthread.php?t=2314443), as using System.Windows.Forms.FolderBrowserDialog may hang depending on system configuration and running from the console vs. PS ISE)
 
@@ -176,7 +176,7 @@ else { "You did not select a directory." }
 
 [<img title="Browse For Folder" style="border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; padding-top: 0px; padding-left: 0px; border-left: 0px; display: inline; padding-right: 0px" border="0" alt="Browse For Folder" src="/assets/Posts/2014/07/Browse-For-Folder_thumb.png" width="327" height="377" />](/assets/Posts/2014/07/Browse-For-Folder.png)
 
-&#160;
+
 
 **<u>Prompt for multi-line user input</u>** (based on [code shown in this TechNet article](http://technet.microsoft.com/en-us/library/ff730941.aspx))
 
@@ -314,7 +314,7 @@ else { Write-Host "You entered the following text: $multiLineText" }
 
 [<img title="Multi Line Example" style="border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; padding-top: 0px; padding-left: 0px; border-left: 0px; display: inline; padding-right: 0px" border="0" alt="Multi Line Example" src="/assets/Posts/2014/07/Multi-Line-Example_thumb.png" width="600" height="322" />](/assets/Posts/2014/07/Multi-Line-Example.png)
 
-&#160;
+
 
 All of these but the multi-line input box just use existing Windows Forms / Visual Basic controls.
 

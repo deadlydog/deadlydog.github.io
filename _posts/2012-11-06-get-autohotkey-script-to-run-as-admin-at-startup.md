@@ -20,9 +20,9 @@ tags:
 ---
 **<Update>**Before you go running your script as an admin, see if [this less obtrusive fix](http://dans-blog.azurewebsites.net/get-autohotkey-to-interact-with-admin-windows-without-running-ahk-script-as-admin/) will solve your problems.**</Update>**
 
-A few weeks back I posted [some problems with running AutoHotkey (AHK) in Windows 8, and that the solution was to run your AHK script as admin](http://dans-blog.azurewebsites.net/?p=97).&#160; I also showed how to have the script start automatically when you logged into Windows.&#160; What I didn’t realize at the time though was that the method only worked for launching my AHK script as an admin because I had disabled UAC in the registry (which prevents most Metro apps from working in Windows 8, and likely isn’t acceptable for most people).
+A few weeks back I posted [some problems with running AutoHotkey (AHK) in Windows 8, and that the solution was to run your AHK script as admin](http://dans-blog.azurewebsites.net/?p=97). I also showed how to have the script start automatically when you logged into Windows. What I didn’t realize at the time though was that the method only worked for launching my AHK script as an admin because I had disabled UAC in the registry (which prevents most Metro apps from working in Windows 8, and likely isn’t acceptable for most people).
 
-So here is a Windows 8, UAC-friendly method to automatically launch your AHK scripts as admin at startup (also works in previous versions of Windows).&#160; The trick is to use the Task Scheduler:
+So here is a Windows 8, UAC-friendly method to automatically launch your AHK scripts as admin at startup (also works in previous versions of Windows). The trick is to use the Task Scheduler:
 
 1. Open the Task Scheduler (also known as “Schedule tasks” in Windows 8 Settings).
 
@@ -30,7 +30,7 @@ So here is a Windows 8, UAC-friendly method to automatically launch your AHK scr
 
 2. Create a new Basic Task.
 
-3. Give it a name and description (something like “launch AutoHotkey script at login”), and then specify to have it run “When I log on”.&#160; Then specify that you want it to “Start a program”, and then point it towards your AutoHotkey script.&#160; Before you finish the wizard, check off “Open the Properties dialog for this task when I click Finish”.
+3. Give it a name and description (something like “launch AutoHotkey script at login”), and then specify to have it run “When I log on”. Then specify that you want it to “Start a program”, and then point it towards your AutoHotkey script. Before you finish the wizard, check off “Open the Properties dialog for this task when I click Finish”.
 
 [<img title="Create Basic Task in Task Scheduler" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-top-width: 0px" border="0" alt="Create Basic Task in Task Scheduler" src="/assets/Posts/2012/11/create-basic-task-in-task-scheduler_thumb1.png" width="766" height="534" />](/assets/Posts/2012/11/create-basic-task-in-task-scheduler1.png)
 
@@ -50,7 +50,7 @@ Now your AHK script should start automatically as soon as you log into Windows; 
 
 [<img title="AHK Cannot Open Include File" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-top-width: 0px" border="0" alt="AHK Cannot Open Include File" src="/assets/Posts/2012/11/ahk-cannot-open-include-file_thumb.png" width="441" height="226" />](/assets/Posts/2012/11/ahk-cannot-open-include-file.png)
 
-The solution to this is to tell your AHK script to start in the same directory as the file that you want to include.&#160; So you will need to edit your scheduled task’s Action to specify the Start In directory.
+The solution to this is to tell your AHK script to start in the same directory as the file that you want to include. So you will need to edit your scheduled task’s Action to specify the Start In directory.
 
 [<img title="Task Scheduler Start In Directory" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-top-width: 0px" border="0" alt="Task Scheduler Start In Directory" src="/assets/Posts/2012/11/task-scheduler-start-in-directory_thumb.png" width="1095" height="504" />](/assets/Posts/2012/11/task-scheduler-start-in-directory.png)
 
@@ -58,9 +58,9 @@ Happy coding!
 
 ==< EDIT >==
 
-What I failed to realize earlier was that by default the Task Scheduler runs it’s programs in non-interactive mode, so they may run as the correct user, **but in a different user session**.&#160; Since most AHK scripts are interactive (i.e. they respond to user input), this means that your script may not work exactly as it should all of the time.&#160; For example, my AHK scripts were not able to launch ClickOnce applications.
+What I failed to realize earlier was that by default the Task Scheduler runs it’s programs in non-interactive mode, so they may run as the correct user, **but in a different user session**. Since most AHK scripts are interactive (i.e. they respond to user input), this means that your script may not work exactly as it should all of the time. For example, my AHK scripts were not able to launch ClickOnce applications.
 
-The fix is to create your Scheduled Task in interactive mode.&#160; Unfortunately you cannot do this through the GUI; it must be done through the command line.&#160; So if you open up a command prompt you can use the following command to create a new interactive scheduled task:
+The fix is to create your Scheduled Task in interactive mode. Unfortunately you cannot do this through the GUI; it must be done through the command line. So if you open up a command prompt you can use the following command to create a new interactive scheduled task:
 
 > schtasks /Create /RU "\[Domain\]\[Username\]" /SC ONLOGON /TN "[Task Name]" /TR "[Path to program to run]" /IT /V1
 
@@ -68,7 +68,7 @@ for example:
 
 > schtasks /Create /RU "Dan Schroeder" /SC ONLOGON /TN "Launch AHK Command Picker" /TR "D:AHKStuffAHKCommandPicker.ahk" /IT /V1
 
-The /IT switch is what tells it to create the task in Interactive mode.&#160; The /V1 switch actually specifies to create the task as a Windows XP/2000/Server 2003 compatible task, and has the added benefit of making the task run as admin by default with the Start In directory specified as the directory holding the file to run (i.e. steps 5 and 6 above; you will still need to do step 4 though).
+The /IT switch is what tells it to create the task in Interactive mode. The /V1 switch actually specifies to create the task as a Windows XP/2000/Server 2003 compatible task, and has the added benefit of making the task run as admin by default with the Start In directory specified as the directory holding the file to run (i.e. steps 5 and 6 above; you will still need to do step 4 though).
 
 If you already have your Scheduled Task created, you can simply make it interactive with the command:
 

@@ -23,11 +23,11 @@ Example to use 4 cores/processes (If you just pass in “/m” it will use all C
 
 MSBuild /m:4 /p:BuildInParallel=true "C:devClient.sln"
 
-Obviously this trick will only be useful on PCs with multi-core CPUs (which we should all have by now) and solutions with multiple projects; So there’s no point using it for solutions that only contain one project.&#160; Also, testing shows that using multiple processes does not speed up Team Foundation Database deployments either in case you’re curious <img class="wlEmoticon wlEmoticon-winkingsmile" style="border-top-style: none; border-left-style: none; border-bottom-style: none; border-right-style: none" alt="Winking smile" src="http://geekswithblogs.net/images/geekswithblogs_net/deadlydog/Windows-Live-Writer/a6e410381ef2_A142/wlEmoticon-winkingsmile_2.png" />
+Obviously this trick will only be useful on PCs with multi-core CPUs (which we should all have by now) and solutions with multiple projects; So there’s no point using it for solutions that only contain one project. Also, testing shows that using multiple processes does not speed up Team Foundation Database deployments either in case you’re curious <img class="wlEmoticon wlEmoticon-winkingsmile" style="border-top-style: none; border-left-style: none; border-bottom-style: none; border-right-style: none" alt="Winking smile" src="http://geekswithblogs.net/images/geekswithblogs_net/deadlydog/Windows-Live-Writer/a6e410381ef2_A142/wlEmoticon-winkingsmile_2.png" />
 
 Also, I found that if I didn’t explicitly use “/p:BuildInParallel=true” I would get many build errors (even though the [MSDN documentation](http://msdn.microsoft.com/en-us/library/bb651793.aspx) says that it is true by default).
 
-The poster boasts compile time improvements up to 59%, but the performance boost you see will vary depending on the solution and its project dependencies.&#160; I tested with building a solution at my office, and here are my results (runs are in seconds):
+The poster boasts compile time improvements up to 59%, but the performance boost you see will vary depending on the solution and its project dependencies. I tested with building a solution at my office, and here are my results (runs are in seconds):
 
 <table style="border-collapse: collapse" cellspacing="0" cellpadding="0" width="394" border="0">
   <colgroup> <col style="width: 71pt" width="95" /> <col style="width: 39pt" width="52" /> <col style="width: 43pt" width="57" /> <col style="width: 41pt" width="54" /> <col style="width: 37pt" width="49" /> <col style="width: 65pt" width="87" /></colgroup> <tr style="height: 15pt">
@@ -161,11 +161,11 @@ The poster boasts compile time improvements up to 59%, but the performance boost
   </tr>
 </table>
 
-&#160;
 
-So I updated all of our build scripts to build using 2 cores (~20% speed boost), since that gives us the biggest bang for our buck on our solution without bogging down a machine, and developers may sometimes compile more than 1 solution at a time.&#160; I’ve put the any-PC-safe batch script code at the bottom of this post.
 
-The poster also has [a follow-up post](http://www.hanselman.com/blog/HackParallelMSBuildsFromWithinTheVisualStudioIDE.aspx) showing how to add a button and keyboard shortcut to the Visual Studio IDE to have VS build in parallel as well (so you don’t **have** to use a build script); if you do this make sure you use the .Net 4.0 MSBuild, not the 3.5 one that he shows in the screenshot.&#160; While this did work for me, I found it left an MSBuild.exe process always hanging around afterwards for some reason, so watch out (batch file doesn’t have this problem though).&#160; Also, you do get build output, but it may not be the same that you’re used to, and it doesn’t say “Build succeeded” in the status bar when completed, so I chose to not make this my default Visual Studio build option, but you may still want to.
+So I updated all of our build scripts to build using 2 cores (~20% speed boost), since that gives us the biggest bang for our buck on our solution without bogging down a machine, and developers may sometimes compile more than 1 solution at a time. I’ve put the any-PC-safe batch script code at the bottom of this post.
+
+The poster also has [a follow-up post](http://www.hanselman.com/blog/HackParallelMSBuildsFromWithinTheVisualStudioIDE.aspx) showing how to add a button and keyboard shortcut to the Visual Studio IDE to have VS build in parallel as well (so you don’t **have** to use a build script); if you do this make sure you use the .Net 4.0 MSBuild, not the 3.5 one that he shows in the screenshot. While this did work for me, I found it left an MSBuild.exe process always hanging around afterwards for some reason, so watch out (batch file doesn’t have this problem though). Also, you do get build output, but it may not be the same that you’re used to, and it doesn’t say “Build succeeded” in the status bar when completed, so I chose to not make this my default Visual Studio build option, but you may still want to.
 
 Happy building!
 

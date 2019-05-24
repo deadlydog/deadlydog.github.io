@@ -18,7 +18,7 @@ tags:
   - syntax
   - Version
 ---
-I’m fortunate enough to work for [a great company](http://www.iqmetrix.com/) that tries to stay ahead of the curve and use newer technologies.&#160; This means that when I’m writing my PowerShell (PS) scripts I typically don’t have to worry about only using PS v2.0 compatible syntax and cmdlets, as all of our PCs have v3.0 (soon to have v4.0).&#160; This is great, until I release these scripts (or snippets from the scripts) for the general public to use; I have to keep in mind that many other people are still stuck running older versions of Windows, or not allowed to upgrade PowerShell.&#160; So to help myself release PS v2.0 compatible scripts to the general public, I’m going to use this as a living document of the differences between PowerShell 2.0 and 3.0 that I encounter (so it will continue to grow over time; read as, bookmark it).&#160; Of course there are other sites that have some of this info, but I’m going to try and compile a list of the ones that are relevant to me, in a nice simple format.
+I’m fortunate enough to work for [a great company](http://www.iqmetrix.com/) that tries to stay ahead of the curve and use newer technologies. This means that when I’m writing my PowerShell (PS) scripts I typically don’t have to worry about only using PS v2.0 compatible syntax and cmdlets, as all of our PCs have v3.0 (soon to have v4.0). This is great, until I release these scripts (or snippets from the scripts) for the general public to use; I have to keep in mind that many other people are still stuck running older versions of Windows, or not allowed to upgrade PowerShell. So to help myself release PS v2.0 compatible scripts to the general public, I’m going to use this as a living document of the differences between PowerShell 2.0 and 3.0 that I encounter (so it will continue to grow over time; read as, bookmark it). Of course there are other sites that have some of this info, but I’m going to try and compile a list of the ones that are relevant to me, in a nice simple format.
 
 Before we get to the differences, here are some things you may want to know relating to PowerShell versions.
 
@@ -34,11 +34,11 @@ $PSVersionTable.PSVersion
 </pre>
 </div>
 
-&#160;
+
 
 ### How to run/test your script against an older version of PowerShell ([source](http://technet.microsoft.com/en-us/library/hh847899.aspx))
 
-All PS versions:&#160; use **PowerShell.exe –Version [version]** to start a new PowerShell session, where [version] is the PowerShell version that you want the session to use, then run your script in this new session.&#160; Shorthand is **PowerShell –v [version]**
+All PS versions: use **PowerShell.exe –Version [version]** to start a new PowerShell session, where [version] is the PowerShell version that you want the session to use, then run your script in this new session. Shorthand is **PowerShell –v [version]**
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:d546ad77-ce58-4f54-9f22-e63596597160" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
   <pre style=white-space:normal>
@@ -50,11 +50,11 @@ PowerShell.exe -Version 2.0
 
 Note: [You can’t run PowerShell ISE in an older version of PowerShell](http://stackoverflow.com/questions/18919862/start-powershell-ise-with-the-2-0-runtime); only the Windows PowerShell console.
 
-&#160;
+
 
 # PowerShell v2 and v3 Differences:
 
-&#160;
+
 
 ### Where-Object no longer requires braces ([source](http://blogs.technet.com/b/heyscriptingguy/archive/2012/08/20/my-five-favorite-powershell-3-0-tips-and-tricks.aspx))
 
@@ -82,7 +82,7 @@ PS V2.0 Error Message:
 
 > <font style="background-color: #ffffff">Where : Cannot bind parameter ‘FilterScript’. Cannot convert the “[PropertyName]” value of the type “[Type]” to type “System.Management.Automation.ScriptBlock”.</font>
 
-&#160;
+
 
 ### Using local variables in remote sessions ([source](http://blogs.technet.com/b/heyscriptingguy/archive/2012/08/20/my-five-favorite-powershell-3-0-tips-and-tricks.aspx))
 
@@ -108,7 +108,7 @@ Invoke-Command -cn dc3 {gwmi -class $Using:class}
 </pre>
 </div>
 
-&#160;
+
 
 ### Variable validation attributes ([source](http://blogs.technet.com/b/heyscriptingguy/archive/2012/08/20/my-five-favorite-powershell-3-0-tips-and-tricks.aspx))
 
@@ -124,7 +124,7 @@ PS v3.0: Validation available on cmdlet/function/script parameters, and on varia
 </pre>
 </div>
 
-&#160;
+
 
 ### Stream redirection ([source](http://technet.microsoft.com/en-us/library/hh847746.aspx))
 
@@ -139,7 +139,7 @@ PS v3.0: Validation available on cmdlet/function/script parameters, and on varia
 NOTE: The All (*), Warning (3), Verbose (4) and Debug (5) redirection operators were introduced
        in Windows PowerShell 3.0. They do not work in earlier versions of Windows PowerShell.</pre>
 
-&#160;
+
 
 PS v2.0: Could only redirect Success and Error output.
 
@@ -167,11 +167,11 @@ Test-Output *&gt; Test-Output.txt
 </pre>
 </div>
 
-&#160;
+
 
 ### Explicitly set parameter set variable values when not defined ([source](http://dans-blog.azurewebsites.net/always-explicitly-set-your-parameter-set-variables-for-powershell-v2-0-compatibility/))
 
-PS v2.0 will throw an error if you try and access a parameter set parameter that has not been defined.&#160; The solution is to give it a default value when it is not defined. Specify the Private scope in case a variable with the same name exists in the global scope or an inherited scope:
+PS v2.0 will throw an error if you try and access a parameter set parameter that has not been defined. The solution is to give it a default value when it is not defined. Specify the Private scope in case a variable with the same name exists in the global scope or an inherited scope:
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:19b50216-fb40-4017-a0cb-231a296bc9ac" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
   <pre style=white-space:normal>
@@ -188,7 +188,7 @@ PS v2.0 Error Message:
 
 > The variable ‘$[VariableName]’ cannot be retrieved because it has not been set.
 
-&#160;
+
 
 ### Parameter attributes require the equals sign
 
@@ -216,7 +216,7 @@ PS v2.0 Error Message:
 
 > <font style="background-color: #ffffff">The “=” operator is missing after a named argument.</font>
 
-&#160;
+
 
 ### Cannot use String.IsNullOrWhitespace (or any other post .Net 3.5 functionality)
 
@@ -259,7 +259,7 @@ function StringIsNullOrWhitespace([string] $string)
 </pre>
 </div>
 
-&#160;
+
 
 ### Get-ChildItem cmdlet’s –Directory and –File switches were introduced in PS v3.0
 
@@ -285,9 +285,9 @@ Get-ChildItem -Path $somePath -File
 </pre>
 </div>
 
-&#160;
 
-&#160;
+
+
 
 ### Other Links
 

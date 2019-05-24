@@ -16,9 +16,9 @@ tags:
   - PowerShell
   - Zip
 ---
-There are [a few different ways to create zip files in powershell](http://stackoverflow.com/questions/1153126/how-to-create-a-zip-archive-with-powershell), but not many that allow you to create one that is password protected.&#160; I found [this post that shows how to do it using 7zip](http://community.spiceworks.com/topic/263947-powershell-7-zip-password-protected-zip), so I thought I would share my modified solution.
+There are [a few different ways to create zip files in powershell](http://stackoverflow.com/questions/1153126/how-to-create-a-zip-archive-with-powershell), but not many that allow you to create one that is password protected. I found [this post that shows how to do it using 7zip](http://community.spiceworks.com/topic/263947-powershell-7-zip-password-protected-zip), so I thought I would share my modified solution.
 
-Here is the function I wrote that uses 7zip to perform the zip, since 7zip supports using a password to zip the files.&#160; This script looks for the 7zip executable (7z.exe) in the default install locations, and if not found it will use the stand-alone 7zip executable (7za.exe) if it is in the same directory as the powershell script.
+Here is the function I wrote that uses 7zip to perform the zip, since 7zip supports using a password to zip the files. This script looks for the 7zip executable (7z.exe) in the default install locations, and if not found it will use the stand-alone 7zip executable (7za.exe) if it is in the same directory as the powershell script.
 
 <font color="#ff0000">Updated function to support multiple compression types: 7z, zip, gzip, bzip2, tar, iso, and udf.</font>
 
@@ -78,7 +78,7 @@ Write-ZipUsing7Zip "C:\Folder\*.txt" "C:\FoldersTxtFiles.zip" -HideWindow
 </pre>
 </div>
 
-&#160;
+
 
 I hope you find this useful.
 

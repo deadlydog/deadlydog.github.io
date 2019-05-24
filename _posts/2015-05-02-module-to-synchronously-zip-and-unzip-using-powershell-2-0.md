@@ -14,11 +14,11 @@ tags:
   - Unzip
   - Zip
 ---
-If you search for ways to zip and unzip files using PowerShell, you will find that there a lot of different methods.&#160; Some people [invoke .Net 4.5 assembly methods](http://stackoverflow.com/a/13302548/602585), others call a 3rd party executable (I’ve shown how to do this in [one of my other posts](http://dans-blog.azurewebsites.net/powershell-function-to-create-a-password-protected-zip-file/)).&#160; For my needs this time around I required a method that didn’t involve [using 3rd party tools](http://stackoverflow.com/a/1153144/602585), and wanted my PowerShell script to work on any Windows OS, not just ones that had .Net 4.5 installed (which isn’t available for older OSs like Windows XP).
+If you search for ways to zip and unzip files using PowerShell, you will find that there a lot of different methods. Some people [invoke .Net 4.5 assembly methods](http://stackoverflow.com/a/13302548/602585), others call a 3rd party executable (I’ve shown how to do this in [one of my other posts](http://dans-blog.azurewebsites.net/powershell-function-to-create-a-password-protected-zip-file/)). For my needs this time around I required a method that didn’t involve [using 3rd party tools](http://stackoverflow.com/a/1153144/602585), and wanted my PowerShell script to work on any Windows OS, not just ones that had .Net 4.5 installed (which isn’t available for older OSs like Windows XP).
 
-I quickly found what I was after; you can [use the OS native Application.Shell object](http://serverfault.com/a/201604).&#160; This is what Windows/File Explorer uses behind the scenes when you copy/cut/paste a file.&#160; The problem though was that the operations all happen asynchronously, so there was no way for me to determine when the Zip operation actually completed.&#160; This was a problem, as I wanted my PowerShell script to copy the zip file to a network location once all of the files had been zipped up, and perform other operations on files once they were unzipped from a different zip file, and if I’m zipping/unzipping many MB or GBs or data, the operation might take several minutes.&#160; Most examples I found online worked around this by just putting a Start-Sleep –Seconds 10 after the call to create or extract the Zip files.&#160; That’s a super simple solution, and it works, but I wasn’t always sure how large the directory that I wanted to zip/unzip was going to be, and didn’t want to have my script sleep for 5 minutes when the zip/unzip operation sometimes only takes half a second.&#160; This is what led to me creating the following PowerShell module below.
+I quickly found what I was after; you can [use the OS native Application.Shell object](http://serverfault.com/a/201604). This is what Windows/File Explorer uses behind the scenes when you copy/cut/paste a file. The problem though was that the operations all happen asynchronously, so there was no way for me to determine when the Zip operation actually completed. This was a problem, as I wanted my PowerShell script to copy the zip file to a network location once all of the files had been zipped up, and perform other operations on files once they were unzipped from a different zip file, and if I’m zipping/unzipping many MB or GBs or data, the operation might take several minutes. Most examples I found online worked around this by just putting a Start-Sleep –Seconds 10 after the call to create or extract the Zip files. That’s a super simple solution, and it works, but I wasn’t always sure how large the directory that I wanted to zip/unzip was going to be, and didn’t want to have my script sleep for 5 minutes when the zip/unzip operation sometimes only takes half a second. This is what led to me creating the following PowerShell module below.
 
-This module allows you to add files and directories to a new or existing zip file, as well as to extract the contents of a zip file.&#160; Also, it will block script execution until the zip/unzip operation completes.
+This module allows you to add files and directories to a new or existing zip file, as well as to extract the contents of a zip file. Also, it will block script execution until the zip/unzip operation completes.
 
 <div id="scid:fb3a1972-4489-4e52-abe7-25a00bb07fdf:d850b5ec-6308-4584-b05a-0e1180a676d6" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
   <p>
@@ -56,7 +56,7 @@ Expand-ZipFile -ZipFilePath $zipFilePath -DestinationDirectoryPath $destinationD
 </pre>
 </div>
 
-&#160;
+
 
 And here is the Synchronous-ZipAndUnzip.psm1 module code itself:
 
@@ -381,7 +381,7 @@ Export-ModuleMember -Function Compress-ZipFile
 </pre>
 </div>
 
-&#160;
+
 
 Of course if you don’t want to reference an external module you could always just copy paste the functions from the module directly into your script and call the functions that way.
 

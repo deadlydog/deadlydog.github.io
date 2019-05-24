@@ -39,7 +39,7 @@ A list of some shortcus and new features to VS 2010 and C# 4.0:
     <span style="font-size:11pt;font-family:calibri;">Alt + Mouse Left Drag for box selection instead of line selection, then just start typing; you can also use Alt+Shift+Arrow Keys to do box selection with the keyboard. <br /></span>
   </li>
   <li style="margin-bottom:0;vertical-align:middle;margin-top:0;">
-    <span style="font-size:11pt;font-family:calibri;">Alt+Arrow Keys to move current line up/down.&#160; Can also select multiple lines and use Alt+Up/Down to move the whole selection up/down.</span>
+    <span style="font-size:11pt;font-family:calibri;">Alt+Arrow Keys to move current line up/down. Can also select multiple lines and use Alt+Up/Down to move the whole selection up/down.</span>
   </li>
   <li style="margin-bottom:0;vertical-align:middle;margin-top:0;">
     <span style="font-size:11pt;font-family:calibri;">In NavigateTo search window (Ctrl + Comma) use capitals to search for camel casing (i.e. CE to find displayCustomerEmails) and a space to do an "and" search (i.e. "email customer" would find displayCustomerEmails).</span>
@@ -75,7 +75,7 @@ A list of some shortcus and new features to VS 2010 and C# 4.0:
     <span style="font-size:11pt;font-family:calibri;">VS => Options => Debugging => Output Window => Data Binding to give more info about errors.</span>
   </li>
   <li style="margin-bottom:0;vertical-align:middle;margin-top:0;">
-    <span style="font-size:11pt;font-family:calibri;">Using System.Threading.Tasks for parallel processing.<span>&#160; </span>Parallel.For() and .ForEach</span>
+    <span style="font-size:11pt;font-family:calibri;">Using System.Threading.Tasks for parallel processing.<span> </span>Parallel.For() and .ForEach</span>
   </li>
   <li style="margin-bottom:0;vertical-align:middle;margin-top:0;">
     <span style="font-size:11pt;font-family:calibri;">PLINQ => myCollection.InParallel().Where(x => …..);</span>
@@ -96,7 +96,7 @@ A list of some shortcus and new features to VS 2010 and C# 4.0:
     Ctrl+] to move back and forth between a functions opening and closing braces (i.e. "{" and "}"). This appears to also work in XAML!
   </li>
   <li style="margin-bottom:0;vertical-align:middle;margin-top:0;">
-    <span><font face="Calibri"><span style="font-size:10.5pt;"><span style="font-size:11pt;font-family:calibri;">Alt+Arrow Keys to move current line up/down.&#160; Can also select multiple lines and use Alt+Up/Down to move the whole selection up/down.</span></span></font></span>
+    <span><font face="Calibri"><span style="font-size:10.5pt;"><span style="font-size:11pt;font-family:calibri;">Alt+Arrow Keys to move current line up/down. Can also select multiple lines and use Alt+Up/Down to move the whole selection up/down.</span></span></font></span>
   </li>
   <li style="margin-bottom:0;vertical-align:middle;margin-top:0;">
     <span><font face="Calibri"><span style="font-size:10.5pt;">Rather than selecting a whole line first, just use Ctrl+C or Ctrl+X to Copy/Cut the entire line. You can also use Shift+Delete to delete an entire line without selecting it.</span></font></span>
