@@ -18,7 +18,7 @@ tags:
 ---
 You may be wondering which is the best way to hookup a DependencyProperty&#8217;s Callback event handler to handle Value Changed events.&#160; The two methods to consider are:
 
-Method 1 &#8211; Use static event hanlders, like so:
+Method 1 &#8211; Use static event handlers, like so:
 
 <div style="color:black;background-color:white;">
   <pre><span style="color:blue;">public</span> <span style="color:blue;">virtual</span> <span style="color:blue;">int</span> SelectedID
