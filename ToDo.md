@@ -1,7 +1,7 @@
 # List of things to still do to the blog
 
 - Go through and update all posts to use proper markdown and get rid of html. Will go through posts oldest to newest.
-  - Last processed page: 2011-04-17-adding-valuechanged-events-to-dependency-objects-in-wpf.md
+  - Currently processing page: 2011-04-17-adding-valuechanged-events-to-dependency-objects-in-wpf.md
 - Fix up all build errors and warnings.
 - Remove unnecessary front matter attributes from all posts. e.g. `jabber_published`
 - Maybe add `Email` option to my bio links.
