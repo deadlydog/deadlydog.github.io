@@ -15,6 +15,7 @@ tags:
   - WPF
   - XAML
 ---
+
 At one point or another I'm sure we've all been confused as to why our binding won't work. Here's a couple things to keep in mind:
 
 - have you set the `DataContext` to be the class containing the property you are binding to? This can be done in XAML or in the code-behind. For example, put "this.DataContext = this" in the code-behind file's constructor.

@@ -16,6 +16,7 @@ tags:
   - ValueChanged
   - WPF
 ---
+
 You may be wondering which is the best way to hookup a DependencyProperty's Callback event handler to handle Value Changed events. The two methods to consider are:
 
 Method 1 - Use static event handlers, like so:
