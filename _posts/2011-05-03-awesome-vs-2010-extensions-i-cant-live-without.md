@@ -1,6 +1,6 @@
 ---
 id: 34
-title: 'Awesome VS 2010 extensions I can't live without'
+title: Awesome VS 2010 extensions I can't live without
 date: 2011-05-03T23:15:00-06:00
 guid: https://deadlydog.wordpress.com/?p=34
 permalink: /awesome-vs-2010-extensions-i-cant-live-without/
@@ -16,6 +16,7 @@ tags:
   - visual studio
   - Visual Studio Extensions
 ---
+
 With the ability to extend Visual Studio 2010, lots of great extensions have popped up. These not only increase productivity, but make the whole coding experience much nicer. To find and install extensions, in Visual Studio just go to Tools -> Extension Manager. Here's a list of my favorites:
 
 - [PowerCommands for Visual Studio 2010](http://visualstudiogallery.msdn.microsoft.com/e5f41ad9-4edc-4912-bca3-91147db95b99/) - tons of features.
