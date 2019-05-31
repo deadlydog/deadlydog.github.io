@@ -42,7 +42,7 @@ Create your AutoHotkey script...luckily, you don’t have to create it from scra
 
 In my office we have both a Client solution and a Server solution, so I have the script setup to build the client solution with WindowsKey+C and the server solution with WindowsKey+S. We also work in multiple branches, so I have global variables near the top of the script that I can set to true to quickly switch between Development, QA, and Release branches. I also have WindowsKey+U configured to open the code directory and WindowsKey+Q to open the database directory. Obviously you can change the keyboard mappings to your liking; these are just the ones that I prefer. As a side note here, just be aware that these will override the default windows key shortcuts; so in my case WindowsKey+U no longer opens up the Windows Ease of Access Center window.
 
-```shell
+```csharp
 ; IMPORTANT INFO ABOUT GETTING STARTED: Lines that start with a
 ; semicolon, such as this one, are comments.  They are not executed.
 
