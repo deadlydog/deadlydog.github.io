@@ -40,9 +40,9 @@ To create a new password protected .pfx file in a UWP application,
 
 2. go to the _Packaging_ tab.
 
-3. In here, click the _Choose Certificate…_ button.
+3. In here, click the _Choose Certificate..._ button.
 
-4. In the _Configure Certificate…_ dropdown, choose an existing certificate that you have, or create a new test certificate and provide a password for it. This should create the certificate and add the new .pfx file to your project’s root.
+4. In the _Configure Certificate..._ dropdown, choose an existing certificate that you have, or create a new test certificate and provide a password for it. This should create the certificate and add the new .pfx file to your project’s root.
 
 [<img title="Create Pfx Certificate In UWP App" style="border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; padding-top: 0px; padding-left: 0px; border-left: 0px; display: inline; padding-right: 0px" border="0" alt="Create Pfx Certificate In UWP App" src="/assets/Posts/2016/12/Create-Pfx-Certificate-In-UWP-App_thumb.png" width="600" height="232" />](/assets/Posts/2016/12/Create-Pfx-Certificate-In-UWP-App.png)
 

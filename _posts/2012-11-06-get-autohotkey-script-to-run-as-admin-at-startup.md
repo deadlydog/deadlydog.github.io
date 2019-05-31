@@ -46,7 +46,7 @@ Now your AHK script should start automatically as soon as you log into Windows; 
 
 6. If your AHK script uses an **#Include** statement to include other files, you may get an error similar to this one when your task runs:
 
-“#Include file … cannot be opened. The program will exit.”
+“#Include file ... cannot be opened. The program will exit.”
 
 [<img title="AHK Cannot Open Include File" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-top-width: 0px" border="0" alt="AHK Cannot Open Include File" src="/assets/Posts/2012/11/ahk-cannot-open-include-file_thumb.png" width="441" height="226" />](/assets/Posts/2012/11/ahk-cannot-open-include-file.png)
 
