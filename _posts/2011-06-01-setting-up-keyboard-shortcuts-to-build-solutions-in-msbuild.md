@@ -17,28 +17,32 @@ tags:
   - keyboard shortcuts
   - MSBuild
 ---
+
 One of the greatest benefits of building your solution flies in MSBuild (vs in Visual Studio directly) is that it doesn't lock up the Visual Studio UI, which can be a huge pain if you have a large solution that takes several minutes (or longer) to build. Building your solution in MSBuild leaves you free to inspect code in Visual Studio while your solution is building. The only problem is that to do this you have to open a command prompt and type the command + path every time to build.
 
-If you want to be able to right-click on a solution file and build it in MSBuild from the Windows Explorer context menu, check out [MSBuildShellExtension](http://msbuildshellex.codeplex.com/) (it's free). Being able to build right from Windows Explorer (without having to even open Visual Studio) is cool and may be enough to passify you, but I wanted to be able to build my solution file at anytime from anywhere on my PC with a keyboard shortcut.
+If you want to be able to right-click on a solution file and build it in MSBuild from the Windows Explorer context menu, check out [MSBuildShellExtension](http://msbuildshellex.codeplex.com/) (it's free). Being able to build right from Windows Explorer (without having to even open Visual Studio) is cool and may be enough to pacify you, but I wanted to be able to build my solution file at anytime from anywhere on my PC with a keyboard shortcut.
 
 Below I outline how I've setup my system to build my solution files in MSBuild with a quick keystroke. Setup only takes a few minutes and requires [AutoHotkey](http://www.autohotkey.com/) to be installed (it's free and awesome).
 
-<u>**Step 1**</u> - Install [AutoHotkey](http://www.autohotkey.com/).
+## Step 1
 
-<u>**Step 2**</u> – Create a shortcut to the Visual Studio Command Prompt (2010), move it directly to the C: drive, and make sure it is called “Visual Studio Command Prompt (2010)” (it is referenced at this location with this name by the AutoHotkey script in the following steps, but can be changed if needed).
+Install [AutoHotkey](http://www.autohotkey.com/).
 
-[<img title="VS2010CommandPrompt" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-top-width: 0px" border="0" alt="VS2010CommandPrompt" src="/assets/Posts/2012/11/vs2010commandprompt_thumb.png" width="897" height="674" />](/assets/Posts/2012/11/vs2010commandprompt.png)
+## Step 2
 
-[<img title="CDrive" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-top-width: 0px" border="0" alt="CDrive" src="/assets/Posts/2012/11/cdrive_thumb.png" width="823" height="440" />](/assets/Posts/2012/11/cdrive.png)
+Create a shortcut to the Visual Studio Command Prompt (2010), move it directly to the C: drive, and make sure it is called “Visual Studio Command Prompt (2010)” (it is referenced at this location with this name by the AutoHotkey script in the following steps, but can be changed if needed).
 
-<u>**Step 3**</u> – Create your AutoHotkey script……luckily, you don’t have to create it from scratch; you can use mine as your template and just adjust it to your liking ![](http://geekswithblogs.net/Providers/BlogEntryEditor/FCKeditor/editor/images/smiley/msn/regular_smile.gif). <span>So copy and paste the script in the textbox below into a new text file, and then save it with the extension ".ahk", which is the AutoHotkey script extension (so you can just call it "AutoHotkeyScript.ahk" for example). You will need to modify the code directory paths and solution file names in the script to match yours to build your solutions, but I've commented the script fairly thoroughly so it's easy to see what it's doing. <br /></span>
+![VS2010CommandPrompt](/assets/Posts/2012/11/vs2010commandprompt.png)
 
-In my office we have both a Client solution and a Server solution, so I have the script setup to build the client solution with WindowsKey+C and the server solution with WindowsKey+S. We also work in multiple branches, so I have global variables near the top of the script that I can set to true to quickly switch between Development, QA, and Release branches.<span> </span>I also have WindowsKey+U configured to open the code directory and WindowsKey+Q to open the database directory.<span> </span>Obviously you can change the keyboard mappings to your liking; these are just the ones that I prefer.<span> </span>As a side note here, just be aware that these will override the default windows key shortcuts; so in my case WindowsKey+U no longer opens up the Windows Ease of Access Center window.
+![CDrive](/assets/Posts/2012/11/cdrive.png)
 
-<div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:369ffdc3-cb6b-45dd-8120-244ba384d3d7" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal>
+## Step 3
 
-  <pre class="brush: bash; title: ; notranslate" title="">
+Create your AutoHotkey script...luckily, you don’t have to create it from scratch; you can use mine as your template and just adjust it to your liking 😊. So copy and paste the script in the textbox below into a new text file, and then save it with the extension ".ahk", which is the AutoHotkey script extension (so you can just call it "AutoHotkeyScript.ahk" for example). You will need to modify the code directory paths and solution file names in the script to match yours to build your solutions, but I've commented the script fairly thoroughly so it's easy to see what it's doing.
+
+In my office we have both a Client solution and a Server solution, so I have the script setup to build the client solution with WindowsKey+C and the server solution with WindowsKey+S. We also work in multiple branches, so I have global variables near the top of the script that I can set to true to quickly switch between Development, QA, and Release branches. I also have WindowsKey+U configured to open the code directory and WindowsKey+Q to open the database directory. Obviously you can change the keyboard mappings to your liking; these are just the ones that I prefer. As a side note here, just be aware that these will override the default windows key shortcuts; so in my case WindowsKey+U no longer opens up the Windows Ease of Access Center window.
+
+```shell
 ; IMPORTANT INFO ABOUT GETTING STARTED: Lines that start with a
 ; semicolon, such as this one, are comments.  They are not executed.
 
@@ -195,33 +199,31 @@ BuildSolution(solutionPath)
     ; Return success
     return true
 }
-</pre>
-</div>
+```
 
-<u>**Step 4**</u> – Have your AutoHotkey script automatically start when you login to Windows, so that you don’t have to manually launch it all the time.<span></span>
+## Step 4
 
-<u>Method 1:</u>
+Have your AutoHotkey script automatically start when you login to Windows, so that you don’t have to manually launch it all the time.
 
-This method is the easiest, but I discovered it after Method 2 (below). Simply open up the Windows Start Menu, navigate to the Startup folder within All Programs, right-click on it and choose Open All Users. Then simply paste a shortcut to your AutoHotkey script in this folder. That's it; the script will now launch whenever any user logs into Windows. If you only want the script to run when **you** log into Windows (no other users), then just choose Open instead of Open All Users when right-clicking on the Startup folder.
+### Method 1
 
-[<img title="index" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-top-width: 0px" border="0" alt="index" src="/assets/Posts/2012/11/index_thumb.png" width="422" height="561" />](/assets/Posts/2012/11/index.png)[<img title="index2" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-top-width: 0px" border="0" alt="index2" src="/assets/Posts/2012/11/index2_thumb.png" width="709" height="518" />](/assets/Posts/2012/11/index2.png)
+This method is the easiest, but I discovered it after Method 2 (below). Simply open up the Windows Start Menu, navigate to the Startup folder within All Programs, right-click on it and choose Open All Users. Then simply paste a shortcut to your AutoHotkey script in this folder. That's it; the script will now launch whenever any user logs into Windows. If you only want the script to run when __you__ log into Windows (no other users), then just choose Open instead of Open All Users when right-clicking on the Startup folder.
 
-<span></span>
+![Open startup directory](/assets/Posts/2012/11/index.png)
+![Paste shortcut into directory](/assets/Posts/2012/11/index2.png)
 
-<span><u>Method 2:</u></span>
+### Method 2
 
-Open the Windows Task Scheduler and create a new Basic Task.<span> </span>Give it a name and description (something like “launch AutoHotkey script at login”), and then specify to have it run “When I log on”.<span> </span>Then specify that you want it to “Start a program”, and then point it towards the AutoHotkey script you created in Step 3.<span> </span>Before you finish the wizard, check off “Open the Properties dialog for this task when I click Finish”.<span> </span>When that Properties dialog opens up, go to the Conditions tab and make sure none of the checkboxes under the Power category are checked off; this will ensure the script still launches if you are on a laptop and not plugged into AC power. If you need your script to “Run as admin”, then on the General tab check off “Run with highest privileges”; this may be required for your script to perform certain actions the require admin privileges, so you can check it off just to be safe.
+Open the Windows Task Scheduler and create a new Basic Task. Give it a name and description (something like “launch AutoHotkey script at login”), and then specify to have it run “When I log on”. Then specify that you want it to “Start a program”, and then point it towards the AutoHotkey script you created in Step 3. Before you finish the wizard, check off “Open the Properties dialog for this task when I click Finish”. When that Properties dialog opens up, go to the Conditions tab and make sure none of the checkboxes under the Power category are checked off; this will ensure the script still launches if you are on a laptop and not plugged into AC power. If you need your script to “Run as admin”, then on the General tab check off “Run with highest privileges”; this may be required for your script to perform certain actions the require admin privileges, so you can check it off just to be safe.
 
-[<img title="Open Task Scheduler(1)" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-top-width: 0px" border="0" alt="Open Task Scheduler(1)" src="/assets/Posts/2012/11/open-task-scheduler1_thumb.png" width="379" height="516" />](/assets/Posts/2012/11/open-task-scheduler1.png)
+![Open Task Scheduler](/assets/Posts/2012/11/open-task-scheduler1.png)
 
-[<img title="Create Basic Task in Task Scheduler" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-top-width: 0px" border="0" alt="Create Basic Task in Task Scheduler" src="/assets/Posts/2012/11/create-basic-task-in-task-scheduler_thumb.png" width="707" height="493" />](/assets/Posts/2012/11/create-basic-task-in-task-scheduler.png)
+![Create Basic Task in Task Scheduler](/assets/Posts/2012/11/create-basic-task-in-task-scheduler.png)
 
+![Basic Task Conditions](/assets/Posts/2012/11/basic-task-conditions.png)
 
+![Run Scheduled Task as Admin](/assets/Posts/2012/11/run-scheduled-task-as-admin_2.png)
 
-[<img title="Basic Task Conditions" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-top-width: 0px" border="0" alt="Basic Task Conditions" src="/assets/Posts/2012/11/basic-task-conditions_thumb.png" width="748" height="566" />](/assets/Posts/2012/11/basic-task-conditions.png)
-
-[<img title="Run Scheduled Task as Admin_2" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-top-width: 0px" border="0" alt="Run Scheduled Task as Admin_2" src="/assets/Posts/2012/11/run-scheduled-task-as-admin_2_thumb.png" width="750" height="567" />](/assets/Posts/2012/11/run-scheduled-task-as-admin_2.png)
-
-And that's it. Now you can build your solution file in MSBuild with a quick keystroke from anywhere on your computer. I have chosen to use the Windows Key for my shortcut keys, but you don't have to; you can use whatever keyboard shortcut you want. And feel free to modify the script I provided to do whatever else you want; AutoHotkey is very powerful and can be used for so many things, so be sure to [checkout their website](http://www.autohotkey.com/) for more examples of scripts and what it can do. For example lots of people use it to automatically spell-correct as they type, or to automatically expand abbreviations (so I could type DS and hit tab, and have it expand to Daniel Schroeder, or type MyAddress and have it put my address in).
+And that's it. Now you can build your solution file in MSBuild with a quick keystroke from anywhere on your computer. I have chosen to use the Windows Key for my shortcut keys, but you don't have to; you can use whatever keyboard shortcut you want. And feel free to modify the script I provided to do whatever else you want; AutoHotkey is very powerful and can be used for so many things, so be sure to [checkout their website](http://www.autohotkey.com) for more examples of scripts and what it can do. For example lots of people use it to automatically spell-correct as they type, or to automatically expand abbreviations (so I could type DS and hit tab, and have it expand to Daniel Schroeder, or type MyAddress and have it put my address in).
 
 Happy Coding!
