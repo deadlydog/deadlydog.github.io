@@ -11,6 +11,4 @@ tags:
   - standard
 ---
 
-# Heading
-
 Your regular markdown goes here. It also supports HTML :)
