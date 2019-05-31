@@ -60,7 +60,7 @@ In my office we have both a Client solution and a Server solution, so I have the
 ; Global Variables - Path settings, customization, etc.
 ;==========================================================
 
-; Set one of these to &quot;true&quot; to build from the Staging or Release branches, otherwise we'll use the development branch.
+; Set one of these to "true" to build from the Staging or Release branches, otherwise we'll use the development branch.
 _UsingTFSStagingBranch := false
 _UsingTFSReleaseCandidate := false
 
@@ -68,32 +68,32 @@ _UsingTFSReleaseCandidate := false
 if (_UsingTFSReleaseCandidate == true)
 {
     ; The directory of the current build's Code folder
-    _CodeFolder := &quot;C:\dev\TFS\RQ4TeamProject\Release\RQ4\4.2.0\&quot;
+    _CodeFolder := "C:\dev\TFS\RQ4TeamProject\Release\RQ4\4.2.0\"
 }
 else if (_UsingTFSStagingBranch == true)
 {
     ; The directory of the current build's Code folder
-    _CodeFolder := &quot;C:\dev\TFS\RQ4TeamProject\Staging\RQ4\&quot;
+    _CodeFolder := "C:\dev\TFS\RQ4TeamProject\Staging\RQ4\"
 }
 else
 {
     ; The directory of the current build's Code folder
-    _CodeFolder := &quot;C:\dev\TFS\RQ4TeamProject\Dev\RQ4\Core\&quot;
+    _CodeFolder := "C:\dev\TFS\RQ4TeamProject\Dev\RQ4\Core\"
 }
 
 ; Path to the database folder
-_DatabaseFolder := &quot;C:\dev&quot;
+_DatabaseFolder := "C:\dev"
 
 ; The path to the Visual Studio Command Prompt link
-_VSCommandPromptPath := &quot;C:\Visual Studio Command Prompt (2010).lnk&quot;
-_VSCommandPromptWindowName := &quot;Administrator: Visual Studio Command Prompt (2010)&quot;
+_VSCommandPromptPath := "C:\Visual Studio Command Prompt (2010).lnk"
+_VSCommandPromptWindowName := "Administrator: Visual Studio Command Prompt (2010)"
 
 ; The position I want the MS Build window to move to when opened
 _MSBuildWindowPositionX := 400
 _MSBuildWindowPositionY := 270
 
 ; The MSBuild command to use
-_MSBuildCommand := &quot;msbuild&quot; ; /verbosity:minimal&quot;
+_MSBuildCommand := "msbuild" ; /verbosity:minimal"
 
 
 ;==========================================================
@@ -105,8 +105,8 @@ _MSBuildCommand := &quot;msbuild&quot; ; /verbosity:minimal&quot;
 KeyWait LWin
 ;KeyWait c
 
-;BuildSolution(_CodeFolder . &quot;RQ4.Client.sln&quot;)
-BuildSolution(&quot;RQ4.Client.sln&quot;)
+;BuildSolution(_CodeFolder . "RQ4.Client.sln")
+BuildSolution("RQ4.Client.sln")
 
 return
 
@@ -119,7 +119,7 @@ return
 KeyWait LWin
 ;KeyWait s
 
-BuildSolution(&quot;RQ4.Server.sln&quot;)
+BuildSolution("RQ4.Server.sln")
 
 return
 
@@ -132,8 +132,8 @@ return
 KeyWait LWin
 ;KeyWait b
 
-BuildSolution(&quot;RQ4.Server.sln&quot;)
-BuildSolution(&quot;RQ4.Client.sln&quot;)
+BuildSolution("RQ4.Server.sln")
+BuildSolution("RQ4.Client.sln")
 
 return
 

@@ -33,7 +33,7 @@ While macro keyboards/controllers are nothing new, there are a number of things 
 
       <pre class="brush: as3; pad-line-numbers: true; title: ; notranslate" title="">
 001:
-MsgBox, &quot;You pressed touch spot #1.&quot;
+MsgBox, "You pressed touch spot #1."
 Return
 </pre>
     </div>

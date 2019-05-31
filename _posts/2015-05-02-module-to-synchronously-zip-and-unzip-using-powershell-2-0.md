@@ -40,10 +40,10 @@ $SynchronousZipAndUnzipModulePath = Join-Path $THIS_SCRIPTS_DIRECTORY_PATH 'Sync
 Import-Module -Name $SynchronousZipAndUnzipModulePath
 
 # Variables used to test the functions.
-$zipFilePath = &quot;C:\Temp\ZipFile.zip&quot;
-$filePath = &quot;C:\Test.txt&quot;
-$directoryPath = &quot;C:\Test\ZipMeUp&quot;
-$destinationDirectoryPath = &quot;C:\Temp\UnzippedContents&quot;
+$zipFilePath = "C:\Temp\ZipFile.zip"
+$filePath = "C:\Test.txt"
+$directoryPath = "C:\Test\ZipMeUp"
+$destinationDirectoryPath = "C:\Temp\UnzippedContents"
 
 # Create a new Zip file that contains only Test.txt.
 Compress-ZipFile -ZipFilePath $zipFilePath -FileOrDirectoryPathToAddToZipFile $filePath -OverwriteWithoutPrompting
@@ -142,7 +142,7 @@ function Expand-ZipFile
 		[parameter(Position=2,Mandatory=$false)]
 		[string]$DestinationDirectoryPath,
 
-		[Alias(&quot;Force&quot;)]
+		[Alias("Force")]
 		[switch]$OverwriteWithoutPrompting
 	)
 
@@ -202,7 +202,7 @@ function Compress-ZipFile
 		[parameter(Position=2,Mandatory=$false)]
 		[string]$ZipFilePath,
 
-		[Alias(&quot;Force&quot;)]
+		[Alias("Force")]
 		[switch]$OverwriteWithoutPrompting
 	)
 
@@ -330,7 +330,7 @@ function Compress-ZipFile
 				foreach ($emptyDirectory in $emptyDirectories)
 				{
 					$numberOfDummyFilesCreated++
-					New-Item -Path (Join-Path -Path $emptyDirectory.FullName -ChildPath &quot;$dummyFileNamePrefix$numberOfDummyFilesCreated&quot;) -ItemType File -Force &gt; $null
+					New-Item -Path (Join-Path -Path $emptyDirectory.FullName -ChildPath "$dummyFileNamePrefix$numberOfDummyFilesCreated") -ItemType File -Force &gt; $null
 				}
 			}
 
