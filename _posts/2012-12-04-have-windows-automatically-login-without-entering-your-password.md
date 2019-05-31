@@ -15,7 +15,7 @@ tags:
 ---
 If you are like me and don&#8217;t want to have to enter your password each time Windows loads, you can have Windows start up without prompting you to enter a user name or password. The simple (and BAD) way to do this is to simply not have a password on your user account, but that’s a big security risk and will allow people to easily remote desktop into your computer.
 
-So, first set a password on your windows account if you don’t already have on0; Then select **Run&#8230;** from the start menu (or use Windows Key + R to open the Run window) and type **control userpasswords2**, which will open the user accounts application.
+So, first set a password on your windows account if you don’t already have on0; Then select **R...0;** from the start menu (or use Windows Key + R to open the Run window) and type **control userpasswords2**, which will open the user accounts application.
 
 [<img title="image" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="image" src="/assets/Posts/2012/12/image_thumb.png" width="417" height="218" />](/assets/Posts/2012/12/image.png)
 

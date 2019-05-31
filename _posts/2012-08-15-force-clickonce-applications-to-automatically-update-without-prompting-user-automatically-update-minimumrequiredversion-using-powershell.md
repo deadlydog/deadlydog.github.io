@@ -19,7 +19,7 @@ Today I was thinking about using a ClickOnce application in my build process.  
 
 “If your application is an installed application, you can force updates by using the MinimumRequiredVersion attribute. If you publish your application using Visual Studio, you can set this property from the Updates Dialog.”
 
-Just for clarification, the dialog he mentions can be found in Visual Studio in Project Properties->Publish->Updates&#8230;  Ok, great.  This will allow the prompt to be suppressed, which is also useful if you don’t want to allow users to skip updates.
+Just for clarification, the dialog he mentions can be found in Visual Studio in Project Properties->Publish->Updates...  Ok, great.  This will allow the prompt to be suppressed, which is also useful if you don’t want to allow users to skip updates.
 
 There is still a problem however.  **Every time I publish a new version of the tool I have to remember to go in and update the MinimumRequiredVersion**.  If I forget to do this and then publish another release, the prompt will be back and will ruin my automated builds.
 
