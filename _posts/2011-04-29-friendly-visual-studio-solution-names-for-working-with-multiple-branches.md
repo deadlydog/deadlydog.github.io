@@ -15,66 +15,39 @@ tags:
   - visual studio
   - VSCommands
 ---
-<p class="MsoNormal">
-  If you have the latest version of the Visual Studio 2010 extension <a href="http://vscommands.com/">VSCommands</a> you can give your solutions friendly names that display in the window’s title bar.  This is nice when you are working in different branches, so that you can differentiate which solution you are actually looking at.  I wrote the following regex to put the Branch Name after the Solution name, so for example if you have the client solution open in both Dev and Release, one will be called “Client.sln – Dev” and the other “Client.sln – Release”.
-</p>
 
-<p class="MsoNormal">
-  To use this, in Visual Studio go to Tools -> Options -> VSCommands 2010-> IDE Enhancements and then paste in the following (without the quotes):
-</p>
+If you have the latest version of the Visual Studio 2010 extension [VSCommands](http://vscommands.com) you can give your solutions friendly names that display in the window’s title bar.  This is nice when you are working in different branches, so that you can differentiate which solution you are actually looking at.  I wrote the following regex to put the Branch Name after the Solution name, so for example if you have the client solution open in both Dev and Release, one will be called “Client.sln – Dev” and the other “Client.sln – Release”.
 
-<p class="MsoNormal">
-  Friendly Name: “{solutionName} - {branchName}”
-</p>
+To use this, in Visual Studio go to Tools -> Options -> VSCommands 2010-> IDE Enhancements and then paste in the following:
 
-<p class="MsoNormal">
-  Friendly Name – Solution Path Regex: &#8220;.*\(?<branchName>.*)\(?<solutionName>.*(?:.sln))&#8221;
-</p>
+Friendly Name: `{solutionName} - {branchName}`
 
-<p class="MsoNormal">
-      <a href="/assets/Posts/2012/11/windowtitle1.png"><img style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" title="WindowTitle1" alt="WindowTitle1" src="/assets/Posts/2012/11/windowtitle1_thumb.png" width="362" height="64" border="0" /></a>
-</p>
+Friendly Name – Solution Path Regex: `.*\(?<branchName>.*)\(?<solutionName>.*(?:.sln))`
 
-<p class="MsoNormal">
-  <a href="/assets/Posts/2012/11/windowtitle2.png"><img style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" title="WindowTitle2" alt="WindowTitle2" src="/assets/Posts/2012/11/windowtitle2_thumb.png" width="381" height="67" border="0" /></a>
-</p>
+![Window title 1](/assets/Posts/2012/11/windowtitle1.png)
 
-<p class="MsoNormal">
-  Happy coding!
-</p>
+![Window title 2](/assets/Posts/2012/11/windowtitle2.png)
 
-<p class="MsoNormal">
-  <strong>&#8212; Update &#8212;</strong>
-</p>
+Happy coding!
 
-<p class="MsoNormal">
-  Here is the new regex that I prefer to use instead now which shows the directories that the solution is sitting in:
-</p>
+### -- Update --
 
-<p class="MsoNormal">
-  Friendly Name: “{solutionName} - {dir1}{dir2}{dir3}”
-</p>
+Here is the new regex that I prefer to use instead now which shows the directories that the solution is sitting in:
 
-<p class="MsoNormal">
-  Regex: “.*\(?<dir1>.*)\(?<dir2>.*)\(?<dir3>.*)\(?<solutionName>.*(.sln)Z)”
-</p>
+Friendly Name: `{solutionName} - {dir1}{dir2}{dir3}`
 
-<p class="MsoNormal">
-  <strong>&#8212; Update 2 for VS 2012 &#8212;</strong>
-</p>
+Regex: `.*\(?<dir1>.*)\(?<dir2>.*)\(?<dir3>.*)\(?<solutionName>.*(.sln)Z)`
 
-<p class="MsoNormal">
-  These are the settings that I like to use for VS Commands 11 for VS 2012:
-</p>
+### -- Update 2 for VS 2012 --
 
-<p class="MsoNormal">
-  Branch Name Regex: “.*\(?<dir1>.*)\(?<dir2>.*)\(?<branchDirectoryName>.*)\(?<solutionFileName>.*(.sln)Z)”
-</p>
+These are the settings that I like to use for VS Commands 11 for VS 2012:
 
-Branch Name Pattern: “{branchDirectoryName} Branch”
+Branch Name Regex: `.*\(?<dir1>.*)\(?<dir2>.*)\(?<branchDirectoryName>.*)\(?<solutionFileName>.*(.sln)Z)`
 
-Git Branch Name Pattern: “{git:head} Branch”
+Branch Name Pattern: `{branchDirectoryName} Branch`
 
-Main Window Title Pattern: “{solutionFileName} - {dir1}{dir2}{branchDirectoryName} ({sln:activeConfig}|{sln:activePlatform})”
+Git Branch Name Pattern: `{git:head} Branch`
 
-Solution Explorer Window Title Pattern: “ - {solutionFileName} • {vsc:branchName}”
+Main Window Title Pattern: `{solutionFileName} - {dir1}{dir2}{branchDirectoryName} ({sln:activeConfig}|{sln:activePlatform})`
+
+Solution Explorer Window Title Pattern: `" - {solutionFileName} • {vsc:branchName}"` (without the quotes)
