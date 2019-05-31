@@ -37,7 +37,7 @@ else { do something else... }
 
 This worked great for me during my testing since I was using PowerShell v3.0. The problem arose once I released my code to the public; I received an issue from a user who was getting the following error message:
 
-> Invoke-MsBuild : Unexpect error occured while building "<path>\my.csproj": The variable &#8216;$PassThru&#8217; cannot be retrieved because it has not been set.
+> Invoke-MsBuild : Unexpect error occured while building "<path>\my.csproj": The variable &#8216;$PassThru' cannot be retrieved because it has not been set.
 
 >
 > At build.ps1:84 char:25

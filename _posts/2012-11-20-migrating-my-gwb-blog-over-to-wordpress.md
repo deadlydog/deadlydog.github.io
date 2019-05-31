@@ -18,7 +18,7 @@ tags:
 ---
 Geeks With Blogs has been good to me, but there are too many tempting things about Word Press for me to stay with GWB. Particularly their statistics features, and also I like that I can apply specific tags to my posts to make them easier to find in Google (and I never was able to get categories working on GWB).
 
-The one thing I don&#8217;t like about WordPress is I can&#8217;t seem to find a theme that stretches the Content area to take up the rest of the space on wide resolutions.....hopefully I&#8217;ll be able to overcome that obstacle soon though.
+The one thing I don't like about WordPress is I can't seem to find a theme that stretches the Content area to take up the rest of the space on wide resolutions.....hopefully I'll be able to overcome that obstacle soon though.
 
 For those who are curious as to how I actually moved all of my posts across, I ended up just using Live Writer to open my GWB posts, and then just changed it to publish to my WordPress blog. This was fairly painless, but with my 27 posts it took probably about 2 hours of manual effort to do. Most of the time WordPress was automatically able to copy the images over, but sometimes I had to save the pics from my GWB posts and then re-add them in Live Writer to my WordPress post. I found another developers automated solution (in alpha mode), but opted to do it manually since I wanted to manually specify Categories and Tags on each post anyways. The one thing I still have left to do is move the worthwhile comments across from the GWB posts to the new WordPress posts.
 

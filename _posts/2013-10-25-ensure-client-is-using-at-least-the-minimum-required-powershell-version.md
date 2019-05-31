@@ -40,7 +40,7 @@ Thanks to Robin M for pointing out that PowerShell has [the built-in #Requires s
 
 If the user does not have the minimum required version of PowerShell installed, they will see an error message like this:
 
-> The script &#8216;foo.ps1&#8217; cannot be run because it contained a "#requires" statement at line 1 for Windows PowerShell version 3.0 which is incompatible with the installed Windows PowerShell version of 2.0.
+> The script &#8216;foo.ps1' cannot be run because it contained a "#requires" statement at line 1 for Windows PowerShell version 3.0 which is incompatible with the installed Windows PowerShell version of 2.0.
 
 } UPDATE &#8212;
 

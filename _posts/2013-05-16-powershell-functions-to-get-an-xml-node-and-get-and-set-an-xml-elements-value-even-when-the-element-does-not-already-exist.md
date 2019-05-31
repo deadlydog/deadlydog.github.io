@@ -259,7 +259,7 @@ Note that these 2 functions depend on the Get-XmlNode function provided above.
 
 <font color="#00ff00"><Update2 - January 7, 2016></font>
 
-I have had multiple people ask me for similar functions for getting and setting an element&#8217;s Attribute value as well, so here are the corresponding functions for that:
+I have had multiple people ask me for similar functions for getting and setting an element's Attribute value as well, so here are the corresponding functions for that:
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:8b5955e6-e281-457a-8df0-b2aca9ba40d1" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
   <pre style=white-space:normal>

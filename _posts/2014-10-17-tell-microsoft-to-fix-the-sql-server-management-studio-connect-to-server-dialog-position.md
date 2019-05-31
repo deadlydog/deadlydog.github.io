@@ -27,7 +27,7 @@ If you use Sql Server Management Studio (SSMS) with multiple monitors, you likel
 
 Several bugs have been reported for this, and apparently MS thinks it is not really an issue since they have decided to close all of the bugs related to it as “Won’t Fix”. Here’s a quote:
 
-> We took a look at this bug and triaged it against several others and unfortunately, it did not meet the bar to be fixed and we are closing it as &#8216;won&#8217;t fix&#8217;.
+> We took a look at this bug and triaged it against several others and unfortunately, it did not meet the bar to be fixed and we are closing it as &#8216;won't fix'.
 
 Why they admit that it is a problem and close it as “Won’t Fix” instead of just leaving it open with a low priority is beyond me.
 

@@ -24,7 +24,7 @@ Get-ChildItem -Path 'C:\SomeFolder' -Recurse -Force -File | Select-Object -Prope
 </pre>
 </div>
 
-If you are still only running PowerShell 2.0, it will complain that it doesn&#8217;t know what the -File switch is, so here&#8217;s the PowerShell 2.0 compatible version (which is a bit slower):
+If you are still only running PowerShell 2.0, it will complain that it doesn't know what the -File switch is, so here's the PowerShell 2.0 compatible version (which is a bit slower):
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:5775a5a4-bc2a-4a22-8fbf-d45ffc0aae87" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
   <pre class="brush: powershell; pad-line-numbers: true; title: ; notranslate" title="">
