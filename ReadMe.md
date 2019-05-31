@@ -73,6 +73,8 @@ By default Jekyll uses `Rouge` for syntax highlighting of code blocks.
 See [this page][JekyllRogueSyntaxHighlighterSupportedLanguagesUrl] for the list of supported languages.
 e.g. `csharp`, `css`, `html`, `http`, `ini`, `json`, `liquid`, `markdown`, `powershell`, `sql`, `xml`, `yaml`, and many more.
 
+We may want to look at [replacing `Rouge` with `Pygments`][HowToUsePygmentsSyntaxHighlighterWithJekyll] to get [support for more languages][JekyllPygmentsSyntaxHighlighterSupportedLanguagesUrl], like AutoHotkey and batch files.
+
 ### Supported Kramdown options
 
 By default Jekyll uses `Kramdown` for markdown processing.
@@ -89,3 +91,5 @@ This is why the posts before 2019 have additional front matter on them; the tool
 [RubyInstallerDownloadPageUrl]: https://rubyinstaller.org/downloads/
 [JekyllRogueSyntaxHighlighterSupportedLanguagesUrl]: https://simpleit.rocks/ruby/jekyll/what-are-the-supported-language-highlighters-in-jekyll/
 [JekyllKramdownOptionsDocumentationUrl]: https://kramdown.gettalong.org/options.html
+[HowToUsePygmentsSyntaxHighlighterWithJekyll]: https://lyk6756.github.io/2016/11/22/use_pygments.html
+[JekyllPygmentsSyntaxHighlighterSupportedLanguagesUrl]: https://haisum.github.io/2014/11/07/jekyll-pygments-supported-highlighters/
