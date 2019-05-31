@@ -13,6 +13,7 @@ tags:
   - TFS
   - WIT
 ---
+
 I recently discovered [this post](http://blogs.msdn.com/b/jongallant/archive/2011/07/18/how-to-programmatically-modify-a-tfs-query-with-c.aspx) which shows how you can programmatically update queries in TFS, which is great for when you make a WIT (Work Item Template) change that will affect tons of queries.
 
 That post then led me [to this one](http://geekswithblogs.net/TarunArora/archive/2011/07/10/tfs-2010-sdk-get-projects-iterations-area-path-queries-and.aspx) which is great as well. In fact, [Tarun Arora](http://geekswithblogs.net/TarunArora/Default.aspx) has tons of great posts relating to TFS. Rock on!
