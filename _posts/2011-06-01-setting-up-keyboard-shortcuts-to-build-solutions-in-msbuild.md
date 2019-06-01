@@ -30,7 +30,7 @@ Install [AutoHotkey](http://www.autohotkey.com/).
 
 ## Step 2
 
-Create a shortcut to the Visual Studio Command Prompt (2010), move it directly to the C: drive, and make sure it is called “Visual Studio Command Prompt (2010)” (it is referenced at this location with this name by the AutoHotkey script in the following steps, but can be changed if needed).
+Create a shortcut to the Visual Studio Command Prompt (2010), move it directly to the C: drive, and make sure it is called "��Visual Studio Command Prompt (2010)” (it is referenced at this location with this name by the AutoHotkey script in the following steps, but can be changed if needed).
 
 ![VS2010CommandPrompt](/assets/Posts/2012/11/vs2010commandprompt.png)
 
@@ -214,7 +214,7 @@ This method is the easiest, but I discovered it after Method 2 (below). Simply o
 
 ### Method 2
 
-Open the Windows Task Scheduler and create a new Basic Task. Give it a name and description (something like “launch AutoHotkey script at login”), and then specify to have it run “When I log on”. Then specify that you want it to “Start a program”, and then point it towards the AutoHotkey script you created in Step 3. Before you finish the wizard, check off “Open the Properties dialog for this task when I click Finish”. When that Properties dialog opens up, go to the Conditions tab and make sure none of the checkboxes under the Power category are checked off; this will ensure the script still launches if you are on a laptop and not plugged into AC power. If you need your script to “Run as admin”, then on the General tab check off “Run with highest privileges”; this may be required for your script to perform certain actions the require admin privileges, so you can check it off just to be safe.
+Open the Windows Task Scheduler and create a new Basic Task. Give it a name and description (something like "��launch AutoHotkey script at l"gin”), and then specify to have it "un “Whe" I log on”. Then specify that you wan" it to �"Start a program”, and then point it towards the AutoHotkey script you created in Step 3. Before you finish the wizard" check off “Open the Properties dialog for this ta"k when I click Finish”. When that Properties dialog opens up, go to the Conditions tab and make sure none of the checkboxes under the Power category are checked off; this will ensure the script still launches if you are on a laptop and not plugged into AC power. If you need"yo"r script to “Run as admin”, then on the Ge"eral tab check "ff “Run with highest privileges”; this may be required for your script to perform certain actions the require admin privileges, so you can check it off just to be safe.
 
 ![Open Task Scheduler](/assets/Posts/2012/11/open-task-scheduler1.png)
 

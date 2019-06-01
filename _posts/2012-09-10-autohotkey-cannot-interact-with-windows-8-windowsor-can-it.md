@@ -27,7 +27,7 @@ First, if you want to have your AHK script (or any program for that matter) run 
 
 > C:\Users\[User Name]\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
 
-Note that you will need to replace "[User Name]" with your username, and that “AppData” is a hidden folder so you’ll need to turn on viewing hidden folders to see it (you can also type “shell:startup” in the Windows Explorer path to jump directly to this folder). So by placing that shortcut there Windows will automatically run your script when you log on. Now, to get it to run as an administrator by default, right-click on the shortcut and go to Properties. Under the Shortcut tab, click on the “Advanced...” button and check off “Run as administrator”. That’s it. Now when you log onto Windows your script will automatically start up, running as an administrator; allowing it to interact with any application and window like you had expected it to in the first place.
+Note that you will need to replace "[User Name]" with your username, and that "AppData" is a hidden folder so you’ll need to turn on viewing hidden folders to see it (you can also type "shell:startup" in the Windows Explorer path to jump directly to this folder). So by placing that shortcut there Windows will automatically run your script when you log on. Now, to get it to run as an administrator by default, right-click on the shortcut and go to Properties. Under the Shortcut tab, click on the "Advanced..." button and check off "Run as administrator". That’s it. Now when you log onto Windows your script will automatically start up, running as an administrator; allowing it to interact with any application and window like you had expected it to in the first place.
 
 ==< EDIT >==
 

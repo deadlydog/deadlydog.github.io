@@ -68,7 +68,7 @@ if (!(Test-Path Variable:Private:SomeSwitchParameter)) { $SomeSwitchParameter = 
 </pre>
 </div>
 
-If you prefer, instead of setting a default value for the parameter you could just check if it is defined first when using it in your script. I like this approach however, because I can put this code right after my cmdlet parameters so I’m modifying all of my parameter set properties in one place, and I don’t have to remember to check if the variable is defined later when writing the body of my cmdlet; otherwise I’m likely to forget to do the “is defined” check, and will likely miss the problem since I do most of my testing in PowerShell v3.0.
+If you prefer, instead of setting a default value for the parameter you could just check if it is defined first when using it in your script. I like this approach however, because I can put this code right after my cmdlet parameters so I’m modifying all of my parameter set properties in one place, and I don’t have to remember to check if the variable is defined later when writing the body of my cmdlet; otherwise I’m likely to forget to do the "is defined" check, and will likely miss the problem since I do most of my testing in PowerShell v3.0.
 
 Another approach rather than checking if a parameter is defined or not, is to [check which Parameter Set Name is being used](http://blogs.msdn.com/b/powershell/archive/2008/12/23/powershell-v2-parametersets.aspx); this will implicitly let you know which parameters are defined.
 

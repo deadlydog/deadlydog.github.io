@@ -16,7 +16,7 @@ tags:
   - VSCommands
 ---
 
-If you have the latest version of the Visual Studio 2010 extension [VSCommands](http://vscommands.com) you can give your solutions friendly names that display in the window’s title bar.  This is nice when you are working in different branches, so that you can differentiate which solution you are actually looking at.  I wrote the following regex to put the Branch Name after the Solution name, so for example if you have the client solution open in both Dev and Release, one will be called “Client.sln – Dev” and the other “Client.sln – Release”.
+If you have the latest version of the Visual Studio 2010 extension [VSCommands](http://vscommands.com) you can give your solutions friendly names that display in the window’s title bar.  This is nice when you are working in different branches, so that you can differentiate which solution you are actually looking at.  I wrote the following regex to put the Branch Name after the Solution name, so for example if you have the client solution open in both Dev and Release, one will be called "Client.sln – Dev" and the other "Client.sln – Release".
 
 To use this, in Visual Studio go to Tools -> Options -> VSCommands 2010-> IDE Enhancements and then paste in the following:
 

@@ -30,7 +30,7 @@ Let’s get right to it by giving you the source code. You can [get it from the 
 
 ### Explanation of source code and adding new checkin policies
 
-If you open the Visual Studio (VS) solution the first thing you will likely notice is that there are 5 projects. CheckinPolicies.VS2012 simply references all of the files in CheckinPolicies.VS2013 as links (i.e. shortcut files); this is because we need to compile the CheckinPolicies.VS2012 project using TFS 2012 assemblies, and the CheckinPolicies.VS2013 project using TFS2013 assemblies, but want both projects to have all of the same checkin policies. So the projects contain all of the same files; just a few of their references are different. A copy of the references that are different between the two projects are stored in the project’s “Dependencies” folder; these are the Team Foundation assemblies that are specific to VS 2012 and 2013. Having these assemblies stored in the solution allows us to still build the VS 2012 checkin policies, even if you (or a colleague) only has VS 2013 installed.
+If you open the Visual Studio (VS) solution the first thing you will likely notice is that there are 5 projects. CheckinPolicies.VS2012 simply references all of the files in CheckinPolicies.VS2013 as links (i.e. shortcut files); this is because we need to compile the CheckinPolicies.VS2012 project using TFS 2012 assemblies, and the CheckinPolicies.VS2013 project using TFS2013 assemblies, but want both projects to have all of the same checkin policies. So the projects contain all of the same files; just a few of their references are different. A copy of the references that are different between the two projects are stored in the project’s "Dependencies" folder; these are the Team Foundation assemblies that are specific to VS 2012 and 2013. Having these assemblies stored in the solution allows us to still build the VS 2012 checkin policies, even if you (or a colleague) only has VS 2013 installed.
 
 **Update:** To avoid having multiple CheckinPolicy.VS* projects, we could use [the msbuild targets technique that P. Kelly shows on his blog](http://blogs.msdn.com/b/phkelley/archive/2013/08/12/checkin-policy-multitargeting.aspx). However, I believe we would still need multiple deployment projects, as described below, in order to have the checkin policies work outside of Visual Studio.
 
@@ -53,7 +53,7 @@ Once you are ready to deploy your policies, you will want to update the version 
 
 ### Having the policies automatically work outside of Visual Studio
 
-This is already hooked up and working in the template solution, so nothing needs to be changed there, but I will explain how it works here. A while back I blogged about [how to get your Team Foundation Server (TFS) checkin polices to still work when checking code in from the command line](http://dans-blog.azurewebsites.net/getting-custom-tfs-checkin-policies-to-work-when-committing-from-the-command-line-i-e-tf-checkin/) via the “tf checkin” command; by default when installing your checkin policies via a VSIX package (the MS recommended approach) you can only get them to work in Visual Studio. I hated that I would need to manually run the script I provided each time the checkin policies were updated, so I posted [a question on Stack Overflow about how to run a script automatically after the VSIX package installs the extension](http://stackoverflow.com/questions/18647866/run-script-during-after-vsix-install). So it turns out that you can’t do that, but what you can do is use a VSPackage instead, which still uses VSIX to deploy the extension, but then also allows us to hook into Visual Studio events to run our script when VS starts up or exits.
+This is already hooked up and working in the template solution, so nothing needs to be changed there, but I will explain how it works here. A while back I blogged about [how to get your Team Foundation Server (TFS) checkin polices to still work when checking code in from the command line](http://dans-blog.azurewebsites.net/getting-custom-tfs-checkin-policies-to-work-when-committing-from-the-command-line-i-e-tf-checkin/) via the "tf checkin" command; by default when installing your checkin policies via a VSIX package (the MS recommended approach) you can only get them to work in Visual Studio. I hated that I would need to manually run the script I provided each time the checkin policies were updated, so I posted [a question on Stack Overflow about how to run a script automatically after the VSIX package installs the extension](http://stackoverflow.com/questions/18647866/run-script-during-after-vsix-install). So it turns out that you can’t do that, but what you can do is use a VSPackage instead, which still uses VSIX to deploy the extension, but then also allows us to hook into Visual Studio events to run our script when VS starts up or exits.
 
 Here is the VSPackage class code to hook up the events and call our UpdateCheckinPoliciesInRegistry() function:
 
@@ -151,7 +151,7 @@ public abstract class CheckinPolicyDeploymentPackage : Package
 </pre>
 </div>
 
-All of the attributes on the class are put there by default, except for the “[ProvideAutoLoad("ADFC4E64-0397-11D1-9F4E-00A0C911004F")]” one; this attribute is the one that actually allows the Initialize() function to get called when Visual Studio starts. You can see in the Initialize method that we hook up an event so that the UpdateCheckinPoliciesInRegistry() function gets called when VS is closed, and we also call that function from Initialize(), which is called when VS starts up.
+All of the attributes on the class are put there by default, except for the "[ProvideAutoLoad("ADFC4E64-0397-11D1-9F4E-00A0C911004F")]" one; this attribute is the one that actually allows the Initialize() function to get called when Visual Studio starts. You can see in the Initialize method that we hook up an event so that the UpdateCheckinPoliciesInRegistry() function gets called when VS is closed, and we also call that function from Initialize(), which is called when VS starts up.
 
 You might have noticed that this class is abstract. This is because the VS 2012 and VS 2013 classed need to have a unique ID attribute, so the actual VSPackage class just inherits from this one. Here is what the VS 2013 one looks like:
 
@@ -165,7 +165,7 @@ public sealed class CheckinPolicyDeployment_VS2013Package : CheckinPolicyDeploym
 </pre>
 </div>
 
-The UpdateCheckinPoliciesInRegistry() function checks to see if the appropriate registry key has been updated to allow the checkin policies to run from the “tf checkin” command prompt command. If they have, then it simply exits, otherwise it calls a PowerShell script to set the keys for us. A PowerShell script is used because modifying the registry requires admin permissions, and we can easily run a new PowerShell process as admin (assuming the logged in user is an admin on their local machine, which is the case for everyone in our company).
+The UpdateCheckinPoliciesInRegistry() function checks to see if the appropriate registry key has been updated to allow the checkin policies to run from the "tf checkin" command prompt command. If they have, then it simply exits, otherwise it calls a PowerShell script to set the keys for us. A PowerShell script is used because modifying the registry requires admin permissions, and we can easily run a new PowerShell process as admin (assuming the logged in user is an admin on their local machine, which is the case for everyone in our company).
 
 The one variable to note here is the **customCheckinPolicyEntryName**. This corresponds to the registry key name that I’ve specified in the RegistryKeyToAdd.pkgdef file, so if you change it be sure to change it in both places. This is what the RegistryKeyToAdd.pkgdef file contains:
 
@@ -227,7 +227,7 @@ Start-Process -FilePath PowerShell -Verb RunAs -ArgumentList "-NoProfile -Execut
 
 While I could have just used a much smaller PowerShell script that simply set a given registry key to a given value, I chose to have some code duplication between the C# code and this script so that this script can still be used as a stand-alone script if needed.
 
-The slight downside to using a VSPackage is that this script still won’t get called until the user closes or opens a new instance of Visual Studio, so the checkin policies won’t work immediately from the “tf checkin” command after updating the checkin policies extension, but this still beats having to remember to manually run the script.
+The slight downside to using a VSPackage is that this script still won’t get called until the user closes or opens a new instance of Visual Studio, so the checkin policies won’t work immediately from the "tf checkin" command after updating the checkin policies extension, but this still beats having to remember to manually run the script.
 
 
 

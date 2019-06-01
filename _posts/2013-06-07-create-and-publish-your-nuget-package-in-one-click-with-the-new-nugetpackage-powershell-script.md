@@ -38,7 +38,7 @@ This makes packing and pushing your NuGet packages quick and easy, whether doing
 
 ## Additional NuGet Information
 
-During my investigation I compiled a list of what happens when doing “nuget spec” and “nuget pack” against the various different file types (e.g. dll vs. project vs. nuspec). Someone else may find this information useful, so here it is:
+During my investigation I compiled a list of what happens when doing "nuget spec" and "nuget pack" against the various different file types (e.g. dll vs. project vs. nuspec). Someone else may find this information useful, so here it is:
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:d1994009-f7ca-4489-a2ad-b8857adc884d" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
   <pre style=white-space:normal>

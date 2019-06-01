@@ -372,7 +372,7 @@ Invoke-MsBuild -Path "[Path to .sln file]" -MsBuildParameters "/target:Clean;Bui
 
 
 
-And here’s an example of how to use it (assuming you saved it to a file called “Invoke-MsBuild.psm1”:
+And here’s an example of how to use it (assuming you saved it to a file called "Invoke-MsBuild.psm1":
 
 If you have any suggestions, please comment.
 

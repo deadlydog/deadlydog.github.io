@@ -48,7 +48,7 @@ foreach ($appInfo in $AppServices )
 </pre>
 </div>
 
-There is nothing “wrong” with using an array to store the properties; it works. However, now that I am refactoring the functions to make them general purpose to be used by other people/scripts, this does have one very undesirable limitation; The properties must always be stored in the correct order in the array (i.e. Website in position 0, App Name in 1, and App Pool in 2). Since the list of app services will be passed into my functions, this would require the calling script to know to put the properties in this order. Boo.
+There is nothing "wrong" with using an array to store the properties; it works. However, now that I am refactoring the functions to make them general purpose to be used by other people/scripts, this does have one very undesirable limitation; The properties must always be stored in the correct order in the array (i.e. Website in position 0, App Name in 1, and App Pool in 2). Since the list of app services will be passed into my functions, this would require the calling script to know to put the properties in this order. Boo.
 
 Another option that I didn’t consider when I originally wrote the script was to use an associative array, but it has the same drawbacks as using a PSCustomObject discussed below.
 

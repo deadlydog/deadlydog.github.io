@@ -76,7 +76,7 @@ PSProvider                  : Microsoft.PowerShell.Core\Registry
 </pre>
 </div>
 
-So the actual value I’m after is stored in the “TF.iQmetrix.CheckinPolicies” property of the object returned by Get-ItemProperty; notice that this property name has periods in it. So let’s store this object in a variable to make it easier to access it’s properties, and do a quick Get-Member on it just to show some more details:
+So the actual value I’m after is stored in the "TF.iQmetrix.CheckinPolicies" property of the object returned by Get-ItemProperty; notice that this property name has periods in it. So let’s store this object in a variable to make it easier to access it’s properties, and do a quick Get-Member on it just to show some more details:
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:1c35b055-99ea-4e3c-8150-9370a026d21f" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
   <pre style=white-space:normal>
@@ -112,7 +112,7 @@ TF.iQmetrix.CheckinPolicies NoteProperty System.String TF.iQmetrix.CheckinPolici
 
 
 
-So in PowerShell ISE I type “$RegistryEntry.” and intellisense pops up showing me that TF.iQmetrix.CheckinPolicies is indeed a property on this object that I can access.
+So in PowerShell ISE I type "$RegistryEntry." and intellisense pops up showing me that TF.iQmetrix.CheckinPolicies is indeed a property on this object that I can access.
 
 [<img title="PowerShell ISE Intellisense" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-top-width: 0px" border="0" alt="PowerShell ISE Intellisense" src="/assets/Posts/2013/09/PowerShell-ISE-Intellisense_thumb.png" width="600" height="210" />](/assets/Posts/2013/09/PowerShell-ISE-Intellisense.png)
 
@@ -129,7 +129,7 @@ $RegistryEntry.TF.iQmetrix.CheckinPolicies
 
 But nothing is displayed <img class="wlEmoticon wlEmoticon-sadsmile" style="border-top-style: none; border-left-style: none; border-bottom-style: none; border-right-style: none" alt="Sad smile" src="/assets/Posts/2013/09/wlEmoticon-sadsmile.png" />
 
-While PowerShell ISE does color-code the line “$RegistryEntry.TF.iQmetrix.CheckinPolicies” to have the object color different than the property color, if you just look at it in plain text, something clearly looks off about it. How does PowerShell know that the property name is “TF.iQmetrix.CheckinPolicies”, and not that “TF” is a property with an “iQmetrix” property on it, with a “CheckinPolicies” property on that. Well, it doesn’t.
+While PowerShell ISE does color-code the line "$RegistryEntry.TF.iQmetrix.CheckinPolicies" to have the object color different than the property color, if you just look at it in plain text, something clearly looks off about it. How does PowerShell know that the property name is "TF.iQmetrix.CheckinPolicies", and not that "TF" is a property with an "iQmetrix" property on it, with a "CheckinPolicies" property on that. Well, it doesn’t.
 
 I did some Googling and looked on StackOverflow, but couldn’t a solution to this problem. I found slightly related [posts involving environmental variables with periods in their name](http://stackoverflow.com/questions/9984065/cannot-resolve-environment-variables-in-powershell-with-periods-in-them), but that solution did not work in this case. So after some random trial-and-error I stumbled onto the solution. You have to wrap the property name in curly braces:
 
@@ -144,7 +144,7 @@ $RegistryEntry.{TF.iQmetrix.CheckinPolicies}	# This is RIGHT. The property's val
 
 
 
-I later refactored my script to store the “TF.iQmetrix.CheckinPolicies” name in a variable and found that I couldn’t use the curly braces anymore. After more trial-and-error I discovered that using parentheses instead works:
+I later refactored my script to store the "TF.iQmetrix.CheckinPolicies" name in a variable and found that I couldn’t use the curly braces anymore. After more trial-and-error I discovered that using parentheses instead works:
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:20716b83-d944-4b87-98df-292f161a9467" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
   <pre style=white-space:normal>

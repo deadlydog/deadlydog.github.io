@@ -94,9 +94,9 @@ using System.Configuration
 </pre>
 </div>
 
-at the top of your C# files, as well as the “System.Configuration” assembly included in your project’s references.
+at the top of your C# files, as well as the "System.Configuration" assembly included in your project’s references.
 
-So this works great, but what about when we want to bring in more values than just a single string (or technically you could use this to bring in 2 strings, where the “key” could be the other string you want to store; for example, we could have stored the value of the Key as the user-friendly name of the url).
+So this works great, but what about when we want to bring in more values than just a single string (or technically you could use this to bring in 2 strings, where the "key" could be the other string you want to store; for example, we could have stored the value of the Key as the user-friendly name of the url).
 
 <span style="color: #d16349; font-size: medium;"><strong>More Advanced (and more complicated)</strong></span>
 
@@ -125,7 +125,7 @@ So let’s start by looking at the app.config:
 </pre>
 </div>
 
-The first thing to notice here is that my section is now using the type “ConnectionManagerUpdater.Data.Configuration.ConnectionManagerDataSection” (the fully qualified path to my new class I created) “, ConnectionManagerUpdater” (the name of the assembly my new class is in).  Next, you will also notice an extra layer down in the <ConnectionManagerDataSection> which is the <ConnectionManagerEndpoints> element.  This is a new collection class that I created to hold each of the Endpoint entries that are defined.  Let’s look at that code now:
+The first thing to notice here is that my section is now using the type "ConnectionManagerUpdater.Data.Configuration.ConnectionManagerDataSection" (the fully qualified path to my new class I created) ", ConnectionManagerUpdater" (the name of the assembly my new class is in).  Next, you will also notice an extra layer down in the <ConnectionManagerDataSection> which is the <ConnectionManagerEndpoints> element.  This is a new collection class that I created to hold each of the Endpoint entries that are defined.  Let’s look at that code now:
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:72b87175-c05a-4901-aeb8-e10d830c17e8" class="wlWriterEditableSmartContent" style="float: none; margin: 0px; display: inline; padding: 0px;">
   <pre class="brush: csharp; pad-line-numbers: true; title: ; notranslate" title="">
@@ -203,7 +203,7 @@ So here the first class we declare is the one that appears in the <configSection
 
 The ConnectionManagerEndpointsCollection class inherits from ConfigurationElementCollection and overrides the required fields.  The first tells it what type of Element to create when adding a new one (in our case a ConnectionManagerEndpointElement), and a function specifying what property on our ConnectionManagerEndpointElement class is the unique key, which I’ve specified to be the Name field.
 
-The last class defined is the actual meat of our elements.  It inherits from ConfigurationElement and specifies the properties of the element (which can then be set in the xml of the App.config).  The “ConfigurationProperty” attribute on each of the properties tells what we expect the name of the property to correspond to in each element in the app.config, as well as some additional information such as if that property is required and what it’s default value should be.
+The last class defined is the actual meat of our elements.  It inherits from ConfigurationElement and specifies the properties of the element (which can then be set in the xml of the App.config).  The "ConfigurationProperty" attribute on each of the properties tells what we expect the name of the property to correspond to in each element in the app.config, as well as some additional information such as if that property is required and what it’s default value should be.
 
 Finally, the code to actually access these values would look like this:
 
@@ -222,7 +222,7 @@ if (connectionManagerDataSection != null)
 </pre>
 </div>
 
-This looks very similar to what we had before in the “simple” example.  The main points of interest are that we cast the section as ConnectionManagerDataSection (which is the class we defined for our section) and then iterate over the endpoints collection using the ConnectionManagerEndpoints property we created in the ConnectionManagerDataSection class.
+This looks very similar to what we had before in the "simple" example.  The main points of interest are that we cast the section as ConnectionManagerDataSection (which is the class we defined for our section) and then iterate over the endpoints collection using the ConnectionManagerEndpoints property we created in the ConnectionManagerDataSection class.
 
 Also, some other helpful resources around using app.config that I found (and for parts that I didn’t really explain in this article) are:
 

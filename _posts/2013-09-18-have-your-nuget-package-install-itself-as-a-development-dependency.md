@@ -20,7 +20,7 @@ tags:
 
 I recently [blogged about](http://dans-blog.azurewebsites.net/automatically-create-your-projects-nuget-package-every-time-it-builds-via-nuget/) a [NuGet package I made](https://www.nuget.org/packages/CreateNewNuGetPackageFromProjectAfterEachBuild/) that allows you to easily turn your own projects into a NuGet package, making it easy to share your work with the world.  One problem I ran into with this was that if somebody used my NuGet package to create their package, their NuGet package listed my NuGet package as a dependency.  This meant that when they distributed their package to others, it would install both their package and mine.  Obviously this is undesirable, since their library has no dependency on my package; my package was meant purely to help them with the development process.
 
-Unfortunately there wasn’t much I could do about this; that is, until the release of [NuGet 2.7](https://nuget.codeplex.com/) which came out a few weeks ago.  You can see from [the release notes](http://blog.nuget.org/20130814/nuget-2.7-release-candidate.html) that they added a new **developmentDependency** attribute that can be used.  This made things a bit better because it allowed users who installed my package to go into their project’s **packages.config** file, find the element corresponding to my package, and add the _developmentDependency=”true”_ attribute to it.
+Unfortunately there wasn’t much I could do about this; that is, until the release of [NuGet 2.7](https://nuget.codeplex.com/) which came out a few weeks ago.  You can see from [the release notes](http://blog.nuget.org/20130814/nuget-2.7-release-candidate.html) that they added a new **developmentDependency** attribute that can be used.  This made things a bit better because it allowed users who installed my package to go into their project’s **packages.config** file, find the element corresponding to my package, and add the _developmentDependency="true"_ attribute to it.
 
 So this was better, but still kinda sucked because it required users to do this step manually, and most of them likely aren’t even aware of the problem or that there was a fix for it.  When users (and myself) install a package they want it to just work; which is why I created a fix for this.
 
@@ -117,7 +117,7 @@ Set-PackageToBeDevelopmentDependency -PackageId $package.Id -ProjectDirectoryPat
   </p>
 </div>
 
-And that’s it.  Basically this script will be ran after your package is installed, and it will parse the project’s packages.config xml file looking for the element with your package’s ID, and then it will add the developmentDependency=”true” attribute to that element.  And of course, if you want to add more code to the end of the file to do additional work, go ahead.
+And that’s it.  Basically this script will be ran after your package is installed, and it will parse the project’s packages.config xml file looking for the element with your package’s ID, and then it will add the developmentDependency="true" attribute to that element.  And of course, if you want to add more code to the end of the file to do additional work, go ahead.
 
 So now your users won’t have to manually edit their packages.config file, and your user’s users won’t have additional, unnecessary dependencies installed.
 

@@ -40,25 +40,25 @@ Basically you should have your project in a state where you can easily publish a
 
 On your build server you will want to configure a new vanilla build that builds your project/solution. There are a couple modifications you will need to make that are different from building a regular console app or class library project.
 
-The first difference is that you will need to provide the “/target:Publish” argument to MSBuild when it builds your project. Here is what this looks like in VSTS:
+The first difference is that you will need to provide the "/target:Publish" argument to MSBuild when it builds your project. Here is what this looks like in VSTS:
 
 <a href="/assets/Posts/2017/01/Build-MSBuildPublishTarget.png" target="_blank"><img src="/assets/Posts/2017/01/Build-MSBuildPublishTarget.png" /></a>
 
-This will cause MSBuild to build the required artifacts into an “app.publish” directory. e.g. bin\Debug\app.publish.
+This will cause MSBuild to build the required artifacts into an "app.publish" directory. e.g. bin\Debug\app.publish.
 
-The next difference is that you will want to copy that “app.publish” directory to your build artifacts directory. To do this, you will need to add a Copy Files step into your build process that copies the “app.publish” directory from the ClickOnce project’s bin directory to where the build artifacts are expected to be. You will want to do this before the step that publishes your build artifacts. Here is what this looks like in VSTS:
+The next difference is that you will want to copy that "app.publish" directory to your build artifacts directory. To do this, you will need to add a Copy Files step into your build process that copies the "app.publish" directory from the ClickOnce project’s bin directory to where the build artifacts are expected to be. You will want to do this before the step that publishes your build artifacts. Here is what this looks like in VSTS:
 
 <a href="/assets/Posts/2017/01/Build-CopyFilesToArtifactsDirectory.png" target="_blank"><img src="/assets/Posts/2017/01/Build-CopyFilesToArtifactsDirectory.png" /></a>
 
 So we copy the files into the build artifacts directory, and then the Publish Build Artifacts step at the end will copy those files to wherever you’ve specified; in my case it’s a network share.
 
-If you like you can now run the build and see if it succeeds. If the build fails with an error relating to an expired certificate or pfx file, see <a href="http://dans-blog.azurewebsites.net/creating-a-pfx-certificate-and-applying-it-on-the-build-server-at-build-time/" target="_blank">my other blog post on importing the required certificate on the build server at build-time</a>, which involves adding one more “Import-PfxCertificate.ps1” build step before the MSBuild step.
+If you like you can now run the build and see if it succeeds. If the build fails with an error relating to an expired certificate or pfx file, see <a href="http://dans-blog.azurewebsites.net/creating-a-pfx-certificate-and-applying-it-on-the-build-server-at-build-time/" target="_blank">my other blog post on importing the required certificate on the build server at build-time</a>, which involves adding one more "Import-PfxCertificate.ps1" build step before the MSBuild step.
 
-For completeness sake, this is what my Publish Build Artifacts step looks like in VSTS, and you’ll also notice the “Import-PfxCertificate.ps1” step before the MSBuild step as well:
+For completeness sake, this is what my Publish Build Artifacts step looks like in VSTS, and you’ll also notice the "Import-PfxCertificate.ps1" step before the MSBuild step as well:
 
 <a href="/assets/Posts/2017/01/Build-PublishBuildArtifacts.png" target="_blank"><img src="/assets/Posts/2017/01/Build-PublishBuildArtifacts.png" /></a>
 
-So we now have the ClickOnce artifacts being generated and stored in the appropriate directory. If you wanted, you could publish the build artifacts to the ClickOnce application’s final destination right now (instead of a file share as I’ve done here), but I’m going to follow best practices and separate the application “build” and “deployment” portions into their respective subsystems, as you may want separate control over when a build gets published, or maybe you don’t want to publish EVERY build; only some of them.
+So we now have the ClickOnce artifacts being generated and stored in the appropriate directory. If you wanted, you could publish the build artifacts to the ClickOnce application’s final destination right now (instead of a file share as I’ve done here), but I’m going to follow best practices and separate the application "build" and "deployment" portions into their respective subsystems, as you may want separate control over when a build gets published, or maybe you don’t want to publish EVERY build; only some of them.
 
 Hopefully at this point you are able to create a successful build, but we’re not done yet.
 
@@ -66,11 +66,11 @@ Hopefully at this point you are able to create a successful build, but we’re n
 
 ### Step 3 – Publish the build artifacts to the ClickOnce application’s destination
 
-Now that we have the build artifacts safely stored, we can publish them to the ClickOnce application’s destination. With VSTS this is done by using the Release subsystem. So create a new Release Definition and setup an Environment for it. By default it adds a “Copy and Publish Build Artifacts” step to the release definition. When configuring and using this default step, I received the error:
+Now that we have the build artifacts safely stored, we can publish them to the ClickOnce application’s destination. With VSTS this is done by using the Release subsystem. So create a new Release Definition and setup an Environment for it. By default it adds a "Copy and Publish Build Artifacts" step to the release definition. When configuring and using this default step, I received the error:
 
 <pre>[error]Copy and Publish Build Artifacts task is not supported within Release</pre>
 
-So instead I removed that default step and added a simple “Copy Files” step, and then configured it to grab the files from the file share that the build published the artifacts to, and set the destination to where the ClickOnce application was publishing to when I would do a manual publish from within Visual Studio. Here is what that step looks like in VSTS:
+So instead I removed that default step and added a simple "Copy Files" step, and then configured it to grab the files from the file share that the build published the artifacts to, and set the destination to where the ClickOnce application was publishing to when I would do a manual publish from within Visual Studio. Here is what that step looks like in VSTS:
 
 <a href="/assets/Posts/2017/01/Release-PublishBuildArtifacts.png" target="_blank"><img src="/assets/Posts/2017/01/Release-PublishBuildArtifacts.png" /></a>
 

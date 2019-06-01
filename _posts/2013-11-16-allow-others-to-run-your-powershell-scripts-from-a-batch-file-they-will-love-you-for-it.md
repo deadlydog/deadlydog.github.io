@@ -39,7 +39,7 @@ The beauty of batch file scripts is that by default the script is ran when it is
 
 ### Ok, I see your point. So how do I call my PowerShell script from a batch file?
 
-First, <span style="text-decoration: underline">the code I provide assumes that the batch file and PowerShell script are in the same directory</span>. So if you have a PowerShell script called “MyPowerShellScript.ps1” and a batch file called “RunMyPowerShellScript.cmd”, this is what the batch file would contain:
+First, <span style="text-decoration: underline">the code I provide assumes that the batch file and PowerShell script are in the same directory</span>. So if you have a PowerShell script called "MyPowerShellScript.ps1" and a batch file called "RunMyPowerShellScript.cmd", this is what the batch file would contain:
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:d77181f4-7d28-49aa-b2f5-2c829994a44a" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
   <pre style=white-space:normal>
@@ -97,7 +97,7 @@ if ($Host.Name -eq "ConsoleHost")
 </pre>
 </div>
 
-This will prompt the user for keyboard input before closing the PowerShell console window. This is useful because it allows users to read any errors that your PowerShell script may have thrown before the window closes, or even just so they can see the “Everything completed successfully” message that your script spits out so they know that it ran correctly. Related side note: you can [change your PC to always leave the PowerShell console window open](http://dans-blog.azurewebsites.net/fix-problem-where-windows-powershell-cannot-run-script-whose-path-contains-spaces/) after running a script, if that is your preference.
+This will prompt the user for keyboard input before closing the PowerShell console window. This is useful because it allows users to read any errors that your PowerShell script may have thrown before the window closes, or even just so they can see the "Everything completed successfully" message that your script spits out so they know that it ran correctly. Related side note: you can [change your PC to always leave the PowerShell console window open](http://dans-blog.azurewebsites.net/fix-problem-where-windows-powershell-cannot-run-script-whose-path-contains-spaces/) after running a script, if that is your preference.
 
 I hope you find this useful. Feel free to leave comments.
 

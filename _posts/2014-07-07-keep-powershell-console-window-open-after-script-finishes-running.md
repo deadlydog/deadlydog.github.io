@@ -34,7 +34,7 @@ Add a line like this to the end of your script:
 
 <div class="wlWriterEditableSmartContent" id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:261caff8-aec6-44f8-872a-48c86f3a4aa3" style="float: none; margin: 0px; display: inline; padding: 0px;">
   <pre class="brush: powershell; pad-line-numbers: true; title: ; notranslate" title="">
-Read-Host -Prompt “Press Enter to exit”
+Read-Host -Prompt "Press Enter to exit"
 </pre>
 </div>
 

@@ -36,7 +36,7 @@ DllNotFoundException: Unable to load DLL 'git2-a5cf255': The specified module co
 </pre>
 </div>
 
-By using the [Assembly Binding Log Viewer](https://docs.microsoft.com/en-us/dotnet/framework/tools/fuslogvw-exe-assembly-binding-log-viewer), a.k.a. fuslogvw.exe, and being sure to run it “as administrator” so I could modify the settings, I was able to see this error at runtime when it tried to load my extension:
+By using the [Assembly Binding Log Viewer](https://docs.microsoft.com/en-us/dotnet/framework/tools/fuslogvw-exe-assembly-binding-log-viewer), a.k.a. fuslogvw.exe, and being sure to run it "as administrator" so I could modify the settings, I was able to see this error at runtime when it tried to load my extension:
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:a60d995f-cfe8-4fca-b98b-bcc7fe5ed61d" class="wlWriterEditableSmartContent" style="margin: 0px; padding: 0px; float: none; display: inline;">
   <pre style=white-space:normal>

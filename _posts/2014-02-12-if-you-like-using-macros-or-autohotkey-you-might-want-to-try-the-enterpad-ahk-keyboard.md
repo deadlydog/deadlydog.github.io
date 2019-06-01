@@ -48,7 +48,7 @@ Return
       * Type specific text (such as your home address).
       * Click on specific buttons or areas of a window.
 
-    For example, you could have a script that opens Notepad, types “This text was written by an AHK script.”, saves the file to the desktop, and then closes Note160; Macros are useful for automating things that you do repeatedly, such as visiting specific websites, entering usernames and passwords, typing out canned responses to emails, and much more.
+    For example, you could have a script that opens Notepad, types "��This text was written by an AHK script.”, saves the file to the desktop, and then closes Note160; Macros are useful for automating things that you do repeatedly, such as visiting specific websites, entering usernames and passwords, typing out canned responses to emails, and much more.
 
     The AHK community is very large and very active. You can find a script to do almost anything you want, and when you can’t (or if you need to customize an existing script) you are very likely to get answers to any questions that you post onlin0; The Enterpad team also has [a bunch of general purpose scripts/examples available for you to use](http://cedeq.com/enterpad/en/autohotkey/useful-ahk-macros/), such having 10 custom clipboards, where button 1 copies to a custom clipboard, and button 11 pastes from it, button 2 copies to a different custom clipboard, and button 12 pastes from it, etc..
 

@@ -80,7 +80,7 @@ Get-Service | Where Status -eq ‘running
 
 PS V2.0 Error Message:
 
-> <font style="background-color: #ffffff">Where : Cannot bind parameter ‘FilterScript’. Cannot convert the “[PropertyName]” value of the type “[Type]” to type “System.Management.Automation.ScriptBlock”.</font>
+> <font style="background-color: #ffffff">Where : Cannot bind parameter ‘FilterScript’. Cannot convert the "[PropertyName]" value of the type "[Type]" to type "System.Management.Automation.ScriptBlock".</font>
 
 
 
@@ -214,7 +214,7 @@ PS v3.0:
 
 PS v2.0 Error Message:
 
-> <font style="background-color: #ffffff">The “=” operator is missing after a named argument.</font>
+> <font style="background-color: #ffffff">The "=" operator is missing after a named argument.</font>
 
 
 

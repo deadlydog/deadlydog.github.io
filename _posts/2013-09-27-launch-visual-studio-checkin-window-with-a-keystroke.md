@@ -74,7 +74,7 @@ A few weeks ago I blogged about [how you can get custom TFS checkin policies to 
 
         <u>Getting The Shortcut Off Your Desktop</u>
 
-        Above I had you create the shortcut on your desktop, but you might not want to have it clutter up your desktop. Unfortunately if you move it to some other folder you will find that the shortcut key no longer works. For some reason **I have found that for the shortcut key to work the shortcut file must either be on your desktop, or in the Start Menu**. If you are using Windows 7 you can simply drag and drop the shortcut into the Programs section of the Start Menu. For us Windows 8.0 folks the Start Menu is gone, so just manually move the shortcut to **“C:\ProgramData\Microsoft\Windows\Start Menu\Programs”**.
+        Above I had you create the shortcut on your desktop, but you might not want to have it clutter up your desktop. Unfortunately if you move it to some other folder you will find that the shortcut key no longer works. For some reason **I have found that for the shortcut key to work the shortcut file must either be on your desktop, or in the Start Menu**. If you are using Windows 7 you can simply drag and drop the shortcut into the Programs section of the Start Menu. For us Windows 8.0 folks the Start Menu is gone, so just manually move the shortcut to **"C:\ProgramData\Microsoft\Windows\Start Menu\Programs"**.
 
         You may find that after moving the shortcut file the shortcut key no longer works. You just have to go back into the Shortcut file properties, assign it a new Shortcut Key, hit Apply, and then assign the original Shortcut Key back.
 

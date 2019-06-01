@@ -19,7 +19,7 @@ There are many project types that require a .pfx file in order to build and/or p
 
 > Error APPX0108: The certificate specified has expired. For more information about renewing certificates, see <http://go.microsoft.com/fwlink/?LinkID=241478>.
 
-> error MSB4018: The “ResolveKeySource” task failed unexpectedly.
+> error MSB4018: The "ResolveKeySource" task failed unexpectedly.
 > System.InvalidOperationException: Showing a modal dialog box or form when the application is not running in UserInteractive mode is not a valid operation. Specify the ServiceNotification or DefaultDesktopOnly style to display a notification from a service application.
 
 > Cannot import the following key file: companyname.pfx. The key file may be password protected.
@@ -91,7 +91,7 @@ $store.Close()
 
 You can <a href="https://gist.github.com/deadlydog/9f87fba75d611b4f1757af7767aa2d05" target="_blank">download the Import-PfxCertificate Powershell script from here</a>.
 
-To do this you will need to save this _Import-PfxCertificate.ps1_ file in your version control repository so that the build system has access to it. In my projects I have a root _buildTools_ directory that I store these types of build scripts in. In your build system, you will need to configure a new step to run the PowerShell script before the step to actually build your solution. When you call the script you will need to pass it the path to the .pfx file (which should also be checked into source control), and the password for the .pfx file. If your build system supports using “hidden”/”private” variables, then it is recommended you use them to keep the .pfx file password a secret.
+To do this you will need to save this _Import-PfxCertificate.ps1_ file in your version control repository so that the build system has access to it. In my projects I have a root _buildTools_ directory that I store these types of build scripts in. In your build system, you will need to configure a new step to run the PowerShell script before the step to actually build your solution. When you call the script you will need to pass it the path to the .pfx file (which should also be checked into source control), and the password for the .pfx file. If your build system supports using "hidden"/"private" variables, then it is recommended you use them to keep the .pfx file password a secret.
 
 Here I am using VSTS (Visual Studio Team Services), but the same steps should generally apply to any build system (e.g. TeamCity). I have created a new build step called _Apply Store Certificate_ that calls the Import-PfxCertificate.ps1 PowerShell script. This step is set to occur before the _Build solution_ step, and provides the required parameters to the script; the path to the .pfx file and the certificates password (as a hidden variable that I configured in the build system). Notice that I also set the _Working folder_ that the script will run from to the directory that the .pfx resides in, so that the script will be able to resolve the absolute file path.
 

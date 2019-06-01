@@ -53,9 +53,9 @@ MSBuild /t:Publish /p:SqlPublishProfilePath="myPublishFile.publish.xml" "[PathTo
 </pre>
 </div>
 
-Where “myPublishFile.publish.xml” contains the database server and name to publish to.
+Where "myPublishFile.publish.xml" contains the database server and name to publish to.
 
-One other minor thing to note is that it is called “deploying” the database with .dbproj, and is called “publishing” the database with .sqlproj; so when I say Deploy or Publish, I mean the same thing.
+One other minor thing to note is that it is called "deploying" the database with .dbproj, and is called "publishing" the database with .sqlproj; so when I say Deploy or Publish, I mean the same thing.
 
 We use TFS at my organization and while making new builds for our Test environment, we have the build process deploy the database solution to our various Test databases. This would mean that for us I would either need to:
 
@@ -134,9 +134,9 @@ MSBuild /t:Build /p:TargetDatabaseName="[DbName]";TargetConnectionString="Data S
 
 Here you can see the 3 new parameters that we’ve added being used: TargetDatabaseName, TargetConnectionString, and PublishToDatabase.
 
-When the TargetDatabaseName or TargetConnectionString parameters are provided we generated a new transformed .publish.xml file, which is the same as the provided “Template.publish.xml” file, but with the database and connection string values replaced with the provided values.
+When the TargetDatabaseName or TargetConnectionString parameters are provided we generated a new transformed .publish.xml file, which is the same as the provided "Template.publish.xml" file, but with the database and connection string values replaced with the provided values.
 
-The PublishToDatabase parameter allows us to publish to the database immediately after the project is built; without this you would have to first call MSBuild to Build the database project, and then call MSBuild again to Publish it (or perhaps using “/t:Build;Publish” would work, but I didn’t test that).
+The PublishToDatabase parameter allows us to publish to the database immediately after the project is built; without this you would have to first call MSBuild to Build the database project, and then call MSBuild again to Publish it (or perhaps using "/t:Build;Publish" would work, but I didn’t test that).
 
 If you want to simply publish the database project without building first (generally not recommended), you can do:
 
@@ -169,7 +169,7 @@ MSBuild /t:Publish /p:TargetDatabaseName="[DbName3]";TargetConnectionString="Dat
 </pre>
 </div>
 
-You could also instead just call MSBuild using the Build target with the PublishToDatabase parameter (which might actually be the safer bet); whatever you prefer. I have found that once the database project is built once, as long as no changes are made to it then subsequent “builds” of the project only take a second or two since it detects that no changes have been made and skips doing the build.
+You could also instead just call MSBuild using the Build target with the PublishToDatabase parameter (which might actually be the safer bet); whatever you prefer. I have found that once the database project is built once, as long as no changes are made to it then subsequent "builds" of the project only take a second or two since it detects that no changes have been made and skips doing the build.
 
 If you have any questions or feedback, let me know.
 

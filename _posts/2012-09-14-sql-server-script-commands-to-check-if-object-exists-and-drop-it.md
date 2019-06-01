@@ -235,6 +235,6 @@ END
   </p>
 </div>
 
-You may have noticed that I wrap the actual DROP statements in an EXEC statement. This is because if you run the script once and it drops the schema object, if you try to run the script a second time SQL may complain that the schema object does not exist, and won’t allow you to run the script; sort of like failing a compile-time check. This seems stupid though since we check if the object exists before dropping it, but the “SQL compiler” doesn’t know that. So to avoid this we convert the drop statement to a string and put it in an EXEC, so that it is not evaluated until “run-time”, and since the IF EXISTS checks prevent that code from being executed if the schema object does not exist, everything works fine.
+You may have noticed that I wrap the actual DROP statements in an EXEC statement. This is because if you run the script once and it drops the schema object, if you try to run the script a second time SQL may complain that the schema object does not exist, and won’t allow you to run the script; sort of like failing a compile-time check. This seems stupid though since we check if the object exists before dropping it, but the "SQL compiler" doesn’t know that. So to avoid this we convert the drop statement to a string and put it in an EXEC, so that it is not evaluated until "run-time", and since the IF EXISTS checks prevent that code from being executed if the schema object does not exist, everything works fine.
 
 Happy coding!

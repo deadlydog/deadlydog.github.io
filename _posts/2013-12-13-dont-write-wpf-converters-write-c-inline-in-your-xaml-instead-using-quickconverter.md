@@ -190,7 +190,7 @@ public partial class App : Application
 </pre>
 </div>
 
-Here I also registered the System assembly (using “typeof(object)”) in order to make the primitive types (like bool) available.
+Here I also registered the System assembly (using "typeof(object)") in order to make the primitive types (like bool) available.
 
 
 
