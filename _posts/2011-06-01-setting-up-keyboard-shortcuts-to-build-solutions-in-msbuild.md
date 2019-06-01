@@ -30,7 +30,7 @@ Install [AutoHotkey](http://www.autohotkey.com/).
 
 ## Step 2
 
-Create a shortcut to the Visual Studio Command Prompt (2010), move it directly to the C: drive, and make sure it is called "��Visual Studio Command Prompt (2010)” (it is referenced at this location with this name by the AutoHotkey script in the following steps, but can be changed if needed).
+Create a shortcut to the Visual Studio Command Prompt (2010), move it directly to the C: drive, and make sure it is called "Visual Studio Command Prompt (2010)" (it is referenced at this location with this name by the AutoHotkey script in the following steps, but can be changed if needed).
 
 ![VS2010CommandPrompt](/assets/Posts/2012/11/vs2010commandprompt.png)
 
@@ -38,7 +38,7 @@ Create a shortcut to the Visual Studio Command Prompt (2010), move it directly t
 
 ## Step 3
 
-Create your AutoHotkey script...luckily, you don’t have to create it from scratch; you can use mine as your template and just adjust it to your liking 😊. So copy and paste the script in the textbox below into a new text file, and then save it with the extension ".ahk", which is the AutoHotkey script extension (so you can just call it "AutoHotkeyScript.ahk" for example). You will need to modify the code directory paths and solution file names in the script to match yours to build your solutions, but I've commented the script fairly thoroughly so it's easy to see what it's doing.
+Create your AutoHotkey script...luckily, you don't have to create it from scratch; you can use mine as your template and just adjust it to your liking :-) . So copy and paste the script in the textbox below into a new text file, and then save it with the extension ".ahk", which is the AutoHotkey script extension (so you can just call it "AutoHotkeyScript.ahk" for example). You will need to modify the code directory paths and solution file names in the script to match yours to build your solutions, but I've commented the script fairly thoroughly so it's easy to see what it's doing.
 
 In my office we have both a Client solution and a Server solution, so I have the script setup to build the client solution with WindowsKey+C and the server solution with WindowsKey+S. We also work in multiple branches, so I have global variables near the top of the script that I can set to true to quickly switch between Development, QA, and Release branches. I also have WindowsKey+U configured to open the code directory and WindowsKey+Q to open the database directory. Obviously you can change the keyboard mappings to your liking; these are just the ones that I prefer. As a side note here, just be aware that these will override the default windows key shortcuts; so in my case WindowsKey+U no longer opens up the Windows Ease of Access Center window.
 
@@ -203,7 +203,7 @@ BuildSolution(solutionPath)
 
 ## Step 4
 
-Have your AutoHotkey script automatically start when you login to Windows, so that you don’t have to manually launch it all the time.
+Have your AutoHotkey script automatically start when you login to Windows, so that you don't have to manually launch it all the time.
 
 ### Method 1
 
@@ -214,7 +214,7 @@ This method is the easiest, but I discovered it after Method 2 (below). Simply o
 
 ### Method 2
 
-Open the Windows Task Scheduler and create a new Basic Task. Give it a name and description (something like "��launch AutoHotkey script at l"gin”), and then specify to have it "un “Whe" I log on”. Then specify that you wan" it to �"Start a program”, and then point it towards the AutoHotkey script you created in Step 3. Before you finish the wizard" check off “Open the Properties dialog for this ta"k when I click Finish”. When that Properties dialog opens up, go to the Conditions tab and make sure none of the checkboxes under the Power category are checked off; this will ensure the script still launches if you are on a laptop and not plugged into AC power. If you need"yo"r script to “Run as admin”, then on the Ge"eral tab check "ff “Run with highest privileges”; this may be required for your script to perform certain actions the require admin privileges, so you can check it off just to be safe.
+Open the Windows Task Scheduler and create a new Basic Task. Give it a name and description (something like "launch AutoHotkey script at login"), and then specify to have it run "When I log on". Then specify that you want it to "Start a program", and then point it towards the AutoHotkey script you created in Step 3. Before you finish the wizard, check off "Open the Properties dialog for this task when I click Finish". When that Properties dialog opens up, go to the Conditions tab and make sure none of the checkboxes under the Power category are checked off; this will ensure the script still launches if you are on a laptop and not plugged into AC power. If you need your script to "Run as admin", then on the General tab check "Run with highest privileges"; this may be required for your script to perform certain actions the require admin privileges, so you can check it off just to be safe.
 
 ![Open Task Scheduler](/assets/Posts/2012/11/open-task-scheduler1.png)
 
