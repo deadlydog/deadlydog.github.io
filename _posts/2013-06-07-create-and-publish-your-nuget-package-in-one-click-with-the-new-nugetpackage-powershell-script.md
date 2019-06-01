@@ -50,26 +50,26 @@ Spec a Project or DLL directly (e.g. "nuget spec PathToFile"):
 - The generated .nuspec file is meant to still be manually updated before making a package from it.
 
 // TestProject.csproj.nuspec
-&lt;?xml version="1.0"?&gt;
-&lt;package &gt;
-  &lt;metadata&gt;
-    &lt;id&gt;C:\dev\TFS\RQ\Dev\Tools\DevOps\New-NuGetPackage\TestProject\TestProject\TestProject.csproj&lt;/id&gt;
-    &lt;version&gt;1.0.0&lt;/version&gt;
-    &lt;authors&gt;Dan Schroeder&lt;/authors&gt;
-    &lt;owners&gt;Dan Schroeder&lt;/owners&gt;
-    &lt;licenseUrl&gt;http://LICENSE_URL_HERE_OR_DELETE_THIS_LINE&lt;/licenseUrl&gt;
-    &lt;projectUrl&gt;http://PROJECT_URL_HERE_OR_DELETE_THIS_LINE&lt;/projectUrl&gt;
-    &lt;iconUrl&gt;http://ICON_URL_HERE_OR_DELETE_THIS_LINE&lt;/iconUrl&gt;
-    &lt;requireLicenseAcceptance&gt;false&lt;/requireLicenseAcceptance&gt;
-    &lt;description&gt;Package description&lt;/description&gt;
-    &lt;releaseNotes&gt;Summary of changes made in this release of the package.&lt;/releaseNotes&gt;
-    &lt;copyright&gt;Copyright 2013&lt;/copyright&gt;
-    &lt;tags&gt;Tag1 Tag2&lt;/tags&gt;
-    &lt;dependencies&gt;
-      &lt;dependency id="SampleDependency" version="1.0" /&gt;
-    &lt;/dependencies&gt;
-  &lt;/metadata&gt;
-&lt;/package&gt;
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>C:\dev\TFS\RQ\Dev\Tools\DevOps\New-NuGetPackage\TestProject\TestProject\TestProject.csproj</id>
+    <version>1.0.0</version>
+    <authors>Dan Schroeder</authors>
+    <owners>Dan Schroeder</owners>
+    <licenseUrl>http://LICENSE_URL_HERE_OR_DELETE_THIS_LINE</licenseUrl>
+    <projectUrl>http://PROJECT_URL_HERE_OR_DELETE_THIS_LINE</projectUrl>
+    <iconUrl>http://ICON_URL_HERE_OR_DELETE_THIS_LINE</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Package description</description>
+    <releaseNotes>Summary of changes made in this release of the package.</releaseNotes>
+    <copyright>Copyright 2013</copyright>
+    <tags>Tag1 Tag2</tags>
+    <dependencies>
+      <dependency id="SampleDependency" version="1.0" />
+    </dependencies>
+  </metadata>
+</package>
 =====================================================================
 Spec a DLL using "nuget spec" from the same directory:
 - Creates a partial .nuspec; still has placeholder info for some fields (e.g. Id, Dependencies).
@@ -77,26 +77,26 @@ Spec a DLL using "nuget spec" from the same directory:
 - The generated .nuspec file is meant to still be manually updated before making a package from it.
 
 // Package.nuspec
-&lt;?xml version="1.0"?&gt;
-&lt;package &gt;
-  &lt;metadata&gt;
-    &lt;id&gt;Package&lt;/id&gt;
-    &lt;version&gt;1.0.0&lt;/version&gt;
-    &lt;authors&gt;Dan Schroeder&lt;/authors&gt;
-    &lt;owners&gt;Dan Schroeder&lt;/owners&gt;
-    &lt;licenseUrl&gt;http://LICENSE_URL_HERE_OR_DELETE_THIS_LINE&lt;/licenseUrl&gt;
-    &lt;projectUrl&gt;http://PROJECT_URL_HERE_OR_DELETE_THIS_LINE&lt;/projectUrl&gt;
-    &lt;iconUrl&gt;http://ICON_URL_HERE_OR_DELETE_THIS_LINE&lt;/iconUrl&gt;
-    &lt;requireLicenseAcceptance&gt;false&lt;/requireLicenseAcceptance&gt;
-    &lt;description&gt;Package description&lt;/description&gt;
-    &lt;releaseNotes&gt;Summary of changes made in this release of the package.&lt;/releaseNotes&gt;
-    &lt;copyright&gt;Copyright 2013&lt;/copyright&gt;
-    &lt;tags&gt;Tag1 Tag2&lt;/tags&gt;
-    &lt;dependencies&gt;
-      &lt;dependency id="SampleDependency" version="1.0" /&gt;
-    &lt;/dependencies&gt;
-  &lt;/metadata&gt;
-&lt;/package&gt;
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Package</id>
+    <version>1.0.0</version>
+    <authors>Dan Schroeder</authors>
+    <owners>Dan Schroeder</owners>
+    <licenseUrl>http://LICENSE_URL_HERE_OR_DELETE_THIS_LINE</licenseUrl>
+    <projectUrl>http://PROJECT_URL_HERE_OR_DELETE_THIS_LINE</projectUrl>
+    <iconUrl>http://ICON_URL_HERE_OR_DELETE_THIS_LINE</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Package description</description>
+    <releaseNotes>Summary of changes made in this release of the package.</releaseNotes>
+    <copyright>Copyright 2013</copyright>
+    <tags>Tag1 Tag2</tags>
+    <dependencies>
+      <dependency id="SampleDependency" version="1.0" />
+    </dependencies>
+  </metadata>
+</package>
 =====================================================================
 Spec a Project using "nuget spec" from the same directory:
 - Creates a template .nuspec using the proper properties and dependencies pulled from the file.
@@ -104,24 +104,24 @@ Spec a Project using "nuget spec" from the same directory:
 - The generated .nuspec file can be used to pack with, assuming you are packing the Project and not the .nuspec directly.
 
 // TestProject.nuspec
-&lt;?xml version="1.0"?&gt;
-&lt;package &gt;
-  &lt;metadata&gt;
-    &lt;id&gt;$id$&lt;/id&gt;
-    &lt;version&gt;$version$&lt;/version&gt;
-    &lt;title&gt;$title$&lt;/title&gt;
-    &lt;authors&gt;$author$&lt;/authors&gt;
-    &lt;owners&gt;$author$&lt;/owners&gt;
-    &lt;licenseUrl&gt;http://LICENSE_URL_HERE_OR_DELETE_THIS_LINE&lt;/licenseUrl&gt;
-    &lt;projectUrl&gt;http://PROJECT_URL_HERE_OR_DELETE_THIS_LINE&lt;/projectUrl&gt;
-    &lt;iconUrl&gt;http://ICON_URL_HERE_OR_DELETE_THIS_LINE&lt;/iconUrl&gt;
-    &lt;requireLicenseAcceptance&gt;false&lt;/requireLicenseAcceptance&gt;
-    &lt;description&gt;$description$&lt;/description&gt;
-    &lt;releaseNotes&gt;Summary of changes made in this release of the package.&lt;/releaseNotes&gt;
-    &lt;copyright&gt;Copyright 2013&lt;/copyright&gt;
-    &lt;tags&gt;Tag1 Tag2&lt;/tags&gt;
-  &lt;/metadata&gt;
-&lt;/package&gt;
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>$author$</authors>
+    <owners>$author$</owners>
+    <licenseUrl>http://LICENSE_URL_HERE_OR_DELETE_THIS_LINE</licenseUrl>
+    <projectUrl>http://PROJECT_URL_HERE_OR_DELETE_THIS_LINE</projectUrl>
+    <iconUrl>http://ICON_URL_HERE_OR_DELETE_THIS_LINE</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>$description$</description>
+    <releaseNotes>Summary of changes made in this release of the package.</releaseNotes>
+    <copyright>Copyright 2013</copyright>
+    <tags>Tag1 Tag2</tags>
+  </metadata>
+</package>
 =====================================================================
 Pack a Project (without accompanying template .nuspec):
 - Does not generate a .nuspec file; just creates the .nupkg file with proper properties and dependencies pulled from project file.

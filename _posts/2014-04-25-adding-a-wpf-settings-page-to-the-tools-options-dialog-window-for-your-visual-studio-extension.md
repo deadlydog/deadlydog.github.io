@@ -46,15 +46,15 @@ namespace VS_DiffAllFiles.Settings
 	public class DiffAllFilesSettings : UIElementDialogPage, INotifyPropertyChanged
 	{
 		#region Notify Property Changed
-		/// &lt;summary&gt;
+		/// <summary>
 		/// Inherited event from INotifyPropertyChanged.
-		/// &lt;/summary&gt;
+		/// </summary>
 		public event PropertyChangedEventHandler PropertyChanged;
 
-		/// &lt;summary&gt;
+		/// <summary>
 		/// Fires the PropertyChanged event of INotifyPropertyChanged with the given property name.
-		/// &lt;/summary&gt;
-		/// &lt;param name="propertyName"&gt;The name of the property to fire the event against&lt;/param&gt;
+		/// </summary>
+		/// <param name="propertyName">The name of the property to fire the event against</param>
 		public void NotifyPropertyChanged(string propertyName)
 		{
 			if (PropertyChanged != null)
@@ -62,26 +62,26 @@ namespace VS_DiffAllFiles.Settings
 		}
 		#endregion
 
-		/// &lt;summary&gt;
+		/// <summary>
 		/// Get / Set if new files being added to source control should be compared.
-		/// &lt;/summary&gt;
+		/// </summary>
 		public bool CompareNewFiles { get { return _compareNewFiles; } set { _compareNewFiles = value; NotifyPropertyChanged("CompareNewFiles"); } }
 		private bool _compareNewFiles = false;
 
 		#region Overridden Functions
 
-		/// &lt;summary&gt;
+		/// <summary>
 		/// Gets the Windows Presentation Foundation (WPF) child element to be hosted inside the Options dialog page.
-		/// &lt;/summary&gt;
-		/// &lt;returns&gt;The WPF child element.&lt;/returns&gt;
+		/// </summary>
+		/// <returns>The WPF child element.</returns>
 		protected override System.Windows.UIElement Child
 		{
 			get { return new DiffAllFilesSettingsPageControl(this); }
 		}
 
-		/// &lt;summary&gt;
+		/// <summary>
 		/// Should be overridden to reset settings to their default values.
-		/// &lt;/summary&gt;
+		/// </summary>
 		public override void ResetSettings()
 		{
 			CompareNewFiles = false;
@@ -112,14 +112,14 @@ using System.Windows.Navigation;
 
 namespace VS_DiffAllFiles.Settings
 {
-	/// &lt;summary&gt;
+	/// <summary>
 	/// Interaction logic for DiffAllFilesSettingsPageControl.xaml
-	/// &lt;/summary&gt;
+	/// </summary>
 	public partial class DiffAllFilesSettingsPageControl : UserControl
 	{
-		/// &lt;summary&gt;
+		/// <summary>
 		/// A handle to the Settings instance that this control is bound to.
-		/// &lt;/summary&gt;
+		/// </summary>
 		private DiffAllFilesSettings _settings = null;
 
 		public DiffAllFilesSettingsPageControl(DiffAllFilesSettings settings)
@@ -139,7 +139,7 @@ namespace VS_DiffAllFiles.Settings
 			// Find all TextBoxes in this control force the Text bindings to fire to make sure all changes have been saved.
 			// This is required because if the user changes some text, then clicks on the Options Window's OK button, it closes
 			// the window before the TextBox's Text bindings fire, so the new value will not be saved.
-			foreach (var textBox in DiffAllFilesHelper.FindVisualChildren&lt;TextBox&gt;(sender as UserControl))
+			foreach (var textBox in DiffAllFilesHelper.FindVisualChildren<TextBox>(sender as UserControl))
 			{
 				var bindingExpression = textBox.GetBindingExpression(TextBox.TextProperty);
 				if (bindingExpression != null) bindingExpression.UpdateSource();
@@ -158,7 +158,7 @@ And here’s the corresponding xaml for the UserControl:
   <pre style=white-space:normal>
 
   <pre class="brush: xml; title: ; notranslate" title="">
-&lt;UserControl x:Class="VS_DiffAllFiles.Settings.DiffAllFilesSettingsPageControl"
+<UserControl x:Class="VS_DiffAllFiles.Settings.DiffAllFilesSettingsPageControl"
 						 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
 						 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 						 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
@@ -166,17 +166,17 @@ And here’s the corresponding xaml for the UserControl:
 						 xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
 						 xmlns:QC="clr-namespace:QuickConverter;assembly=QuickConverter"
 						 mc:Ignorable="d"
-						 d:DesignHeight="350" d:DesignWidth="400" LostKeyboardFocus="UserControl_LostKeyboardFocus"&gt;
-	&lt;UserControl.Resources&gt;
-	&lt;/UserControl.Resources&gt;
+						 d:DesignHeight="350" d:DesignWidth="400" LostKeyboardFocus="UserControl_LostKeyboardFocus">
+	<UserControl.Resources>
+	</UserControl.Resources>
 
-	&lt;Grid&gt;
-		&lt;StackPanel Orientation="Vertical"&gt;
-			&lt;CheckBox Content="Compare new files" IsChecked="{Binding Path=CompareNewFiles}" ToolTip="If files being added to source control should be compared." /&gt;
-			&lt;Button Content="Restore Default Settings" Click="btnRestoreDefaultSettings_Click" /&gt;
-		&lt;/StackPanel&gt;
-	&lt;/Grid&gt;
-&lt;/UserControl&gt;
+	<Grid>
+		<StackPanel Orientation="Vertical">
+			<CheckBox Content="Compare new files" IsChecked="{Binding Path=CompareNewFiles}" ToolTip="If files being added to source control should be compared." />
+			<Button Content="Restore Default Settings" Click="btnRestoreDefaultSettings_Click" />
+		</StackPanel>
+	</Grid>
+</UserControl>
 </pre>
 </div>
 
@@ -194,16 +194,16 @@ To solve this problem I added a LostKeyboardFocus event to the UserControl, and 
   <pre style=white-space:normal>
 
   <pre class="brush: csharp; title: ; notranslate" title="">
-/// &lt;summary&gt;
+/// <summary>
 /// Recursively finds the visual children of the given control.
-/// &lt;/summary&gt;
-/// &lt;typeparam name="T"&gt;The type of control to look for.&lt;/typeparam&gt;
-/// &lt;param name="dependencyObject"&gt;The dependency object.&lt;/param&gt;
-public static IEnumerable&lt;T&gt; FindVisualChildren&lt;T&gt;(DependencyObject dependencyObject) where T : DependencyObject
+/// </summary>
+/// <typeparam name="T">The type of control to look for.</typeparam>
+/// <param name="dependencyObject">The dependency object.</param>
+public static IEnumerable<T> FindVisualChildren<T>(DependencyObject dependencyObject) where T : DependencyObject
 {
 	if (dependencyObject != null)
 	{
-		for (int index = 0; index &lt; VisualTreeHelper.GetChildrenCount(dependencyObject); index++)
+		for (int index = 0; index < VisualTreeHelper.GetChildrenCount(dependencyObject); index++)
 		{
 			DependencyObject child = VisualTreeHelper.GetChild(dependencyObject, index);
 			if (child != null &amp;&amp; child is T)
@@ -211,7 +211,7 @@ public static IEnumerable&lt;T&gt; FindVisualChildren&lt;T&gt;(DependencyObject 
 				yield return (T)child;
 			}
 
-			foreach (T childOfChild in FindVisualChildren&lt;T&gt;(child))
+			foreach (T childOfChild in FindVisualChildren<T>(child))
 			{
 				yield return childOfChild;
 			}

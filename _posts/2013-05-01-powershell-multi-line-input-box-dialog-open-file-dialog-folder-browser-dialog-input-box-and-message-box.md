@@ -117,7 +117,7 @@ function Read-OpenFileDialog([string]$WindowTitle, [string]$InitialDirectory, [s
 	$openFileDialog.Filter = $Filter
 	if ($AllowMultiSelect) { $openFileDialog.MultiSelect = $true }
 	$openFileDialog.ShowHelp = $true	# Without this line the ShowDialog() function may hang depending on system configuration and running from console vs. ISE.
-	$openFileDialog.ShowDialog() &gt; $null
+	$openFileDialog.ShowDialog() > $null
 	if ($AllowMultiSelect) { return $openFileDialog.Filenames } else { return $openFileDialog.Filename }
 }
 </pre>
@@ -156,7 +156,7 @@ function Read-FolderBrowserDialog([string]$Message, [string]$InitialDirectory, [
 	$app = New-Object -ComObject Shell.Application
 	$folder = $app.BrowseForFolder(0, $Message, $browseForFolderOptions, $InitialDirectory)
 	if ($folder) { $selectedDirectory = $folder.Self.Path } else { $selectedDirectory = '' }
-	[System.Runtime.Interopservices.Marshal]::ReleaseComObject($app) &gt; $null
+	[System.Runtime.Interopservices.Marshal]::ReleaseComObject($app) > $null
 	return $selectedDirectory
 }
 </pre>
@@ -188,7 +188,7 @@ Function:
   <pre class="brush: powershell; title: ; notranslate" title="">
 function Read-MultiLineInputBoxDialog([string]$Message, [string]$WindowTitle, [string]$DefaultText)
 {
-&lt;#
+<#
 	.SYNOPSIS
 	Prompts the user with a multi-line input box and returns the text they enter, or null if they cancelled the prompt.
 
@@ -237,7 +237,7 @@ function Read-MultiLineInputBoxDialog([string]$Message, [string]$WindowTitle, [s
 	Name: Show-MultiLineInputDialog
 	Author: Daniel Schroeder (originally based on the code shown at http://technet.microsoft.com/en-us/library/ff730941.aspx)
 	Version: 1.0
-#&gt;
+#>
 	Add-Type -AssemblyName System.Drawing
 	Add-Type -AssemblyName System.Windows.Forms
 
@@ -292,7 +292,7 @@ function Read-MultiLineInputBoxDialog([string]$Message, [string]$WindowTitle, [s
 
 	# Initialize and show the form.
 	$form.Add_Shown({$form.Activate()})
-	$form.ShowDialog() &gt; $null	# Trash the text of the button that was clicked.
+	$form.ShowDialog() > $null	# Trash the text of the button that was clicked.
 
 	# Return the text that the user entered.
 	return $form.Tag

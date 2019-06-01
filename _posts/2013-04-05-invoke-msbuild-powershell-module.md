@@ -27,7 +27,7 @@ Here is the script (<strike>copy-paste the code into a file called Invoke-MsBuil
   <pre class="brush: powershell; title: ; notranslate" title="">
 function Invoke-MsBuild
 {
-&lt;#
+<#
     .SYNOPSIS
     Builds the given Visual Studio solution or project file using MSBuild.
 
@@ -139,7 +139,7 @@ http://msdn.microsoft.com/en-ca/library/vstudio/ms164311.aspx
     Name:   Invoke-MsBuild
     Author: Daniel Schroeder (originally based on the module at http://geekswithblogs.net/dwdii/archive/2011/05/27/part-2-automating-a-visual-studio-build-with-powershell.aspx)
     Version: 1.1
-#&gt;
+#>
     [CmdletBinding(DefaultParameterSetName="Wait")]
     param
     (
@@ -297,13 +297,13 @@ http://msdn.microsoft.com/en-ca/library/vstudio/ms164311.aspx
 
 function Get-VisualStudioCommandPromptPath
 {
- &lt;#
+ <#
     .SYNOPSIS
         Gets the file path to the latest Visual Studio Command Prompt. Returns $null if a path is not found.
 
     .DESCRIPTION
         Gets the file path to the latest Visual Studio Command Prompt. Returns $null if a path is not found.
-    #&gt;
+    #>
 
 # Get some environmental paths.
 $vs2010CommandPrompt = $env:VS100COMNTOOLS + "vcvarsall.bat"
@@ -326,13 +326,13 @@ return $vsCommandPrompt
 
 function Get-MsBuildPath
 {
- &lt;#
+ <#
     .SYNOPSIS
     Gets the path to the latest version of MsBuild.exe. Returns $null if a path is not found.
 
     .DESCRIPTION
     Gets the path to the latest version of MsBuild.exe. Returns $null if a path is not found.
-#&gt;
+#>
 
 # Array of valid MsBuild versions
 $Versions = @("4.0", "3.5", "2.0")

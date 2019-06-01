@@ -61,7 +61,7 @@ BEGIN
 	)
 
 	-- Add a check constraint
-	ALTER TABLE [dbo].[TableName] WITH CHECK ADD CONSTRAINT [CH_Name] CHECK (([ColumnName] &gt;= 0.0000))
+	ALTER TABLE [dbo].[TableName] WITH CHECK ADD CONSTRAINT [CH_Name] CHECK (([ColumnName] >= 0.0000))
 END
 
 --===============================

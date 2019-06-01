@@ -75,9 +75,9 @@ Function UpdateProjectsMinimumRequiredClickOnceVersion
 	if (-not([System.IO.File]::Exists($projectFilePath))) { throw "2Cannot find project file to update at the path: '$projectFilePath'" }
 
 	# Build the regular expressions to find the information we will need.
-	$rxMinimumRequiredVersionTag = New-Object System.Text.RegularExpressions.Regex "\&lt;MinimumRequiredVersion\&gt;(?&lt;Version&gt;.*?)\&lt;/MinimumRequiredVersion\&gt;", SingleLine
-	$rxApplicationVersionTag = New-Object System.Text.RegularExpressions.Regex "\&lt;ApplicationVersion\&gt;(?&lt;Version&gt;\d+\.\d+\.\d+\.).*?\&lt;/ApplicationVersion\&gt;", SingleLine
-	$rxApplicationRevisionTag = New-Object System.Text.RegularExpressions.Regex "\&lt;ApplicationRevision\&gt;(?&lt;Revision&gt;[0-9]+)\&lt;/ApplicationRevision\&gt;", SingleLine
+	$rxMinimumRequiredVersionTag = New-Object System.Text.RegularExpressions.Regex "\<MinimumRequiredVersion\>(?<Version>.*?)\</MinimumRequiredVersion\>", SingleLine
+	$rxApplicationVersionTag = New-Object System.Text.RegularExpressions.Regex "\<ApplicationVersion\>(?<Version>\d+\.\d+\.\d+\.).*?\</ApplicationVersion\>", SingleLine
+	$rxApplicationRevisionTag = New-Object System.Text.RegularExpressions.Regex "\<ApplicationRevision\>(?<Revision>[0-9]+)\</ApplicationRevision\>", SingleLine
 	$rxVersionNumber = [regex] "\d+\.\d+\.\d+\.\d+"
 
 	# Read the file contents in.
@@ -98,7 +98,7 @@ Function UpdateProjectsMinimumRequiredClickOnceVersion
 	# If we couldn't find the old Minimum Required Version, throw an error.
 	if (-not $rxVersionNumber.Match($oldMinimumRequiredVersion).Success)
 	{
-		throw "4'$projectFilePath' is not currently set to enforce a MinimumRequiredVersion. To fix this in Visual Studio go to Project Properties-&gt;Publish-&gt;Updates... and check off 'Specify a minimum required version for this application'."
+		throw "4'$projectFilePath' is not currently set to enforce a MinimumRequiredVersion. To fix this in Visual Studio go to Project Properties->Publish->Updates... and check off 'Specify a minimum required version for this application'."
 	}
 
 	# Only write to the file if it is not already up to date.
@@ -109,7 +109,7 @@ Function UpdateProjectsMinimumRequiredClickOnceVersion
 	else
 	{
 		# Update the file contents and write them back to the file.
-		$text = $rxMinimumRequiredVersionTag.Replace($text, "&lt;MinimumRequiredVersion&gt;" + $newMinimumRequiredVersion + "&lt;/MinimumRequiredVersion&gt;")
+		$text = $rxMinimumRequiredVersionTag.Replace($text, "<MinimumRequiredVersion>" + $newMinimumRequiredVersion + "</MinimumRequiredVersion>")
 		[System.IO.File]::WriteAllText($projectFilePath, $text)
 		Write "Updated Minimum Required Version of '$projectFilePath' from '$oldMinimumRequiredVersion' to '$newMinimumRequiredVersion'"
 	}

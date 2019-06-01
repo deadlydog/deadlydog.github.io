@@ -135,7 +135,7 @@ And now that you have your PowerShell ISE profile file open for editing, here’
 
 function Select-EntireLinesInIseSelectedTextAndReturnFirstAndLastSelectedLineNumbers([bool]$DoNothingWhenNotCertainOfWhichLinesToSelect = $false)
 {
-&lt;#
+<#
     .SYNOPSIS
     Exands the selected text to make sure the entire lines are selected.
     Returns $null if we can't determine with certainty which lines to select and the
@@ -163,7 +163,7 @@ function Select-EntireLinesInIseSelectedTextAndReturnFirstAndLastSelectedLineNum
 
     .OUTPUT
     PSObject. Returns a PSObject with the properties FirstLineNumber and LastLineNumber, which correspond to the first and last line numbers of the selected text.
-#&gt;
+#>
 
     # Backup all of the original info before we modify it.
     [int]$originalCaretLine = $psISE.CurrentFile.Editor.CaretLine
@@ -358,7 +358,7 @@ function CommentOrUncommentIseSelectedLines([bool]$CommentLines = $false, [bool]
 
 function Comment-IseSelectedLines([switch]$DoNothingWhenNotCertainOfWhichLinesToComment)
 {
-&lt;#
+<#
     .SYNOPSIS
     Places a comment character at the start of each line of the selected text in the current PS ISE file.
     If no text is selected, it will comment out the line that the caret is on.
@@ -384,13 +384,13 @@ function Comment-IseSelectedLines([switch]$DoNothingWhenNotCertainOfWhichLinesTo
     if the caret is on the 1st line or 2nd line when selecting the text (i.e. the text is selected bottom-to-top vs. top-to-bottom).
     - Since the lines are typically identical for this edge case to occur, you likely won't really care which 2 of the 3 lines get commented out, so it shouldn't be a big deal.
     But if it bugs you, you can provide this switch.
-#&gt;
+#>
     CommentOrUncommentIseSelectedLines -CommentLines $true -DoNothingWhenNotCertainOfWhichLinesToSelect $DoNothingWhenNotCertainOfWhichLinesToComment
 }
 
 function Uncomment-IseSelectedLines([switch]$DoNothingWhenNotCertainOfWhichLinesToUncomment)
 {
-&lt;#
+<#
     .SYNOPSIS
     Removes the comment character from the start of each line of the selected text in the current PS ISE file (if it is commented out).
     If no text is selected, it will uncomment the line that the caret is on.
@@ -416,7 +416,7 @@ function Uncomment-IseSelectedLines([switch]$DoNothingWhenNotCertainOfWhichLines
     if the caret is on the 1st line or 2nd line when selecting the text (i.e. the text is selected bottom-to-top vs. top-to-bottom).
     - Since the lines are typically identical for this edge case to occur, you likely won't really care which 2 of the 3 lines get uncommented, so it shouldn't be a big deal.
     But if it bugs you, you can provide this switch.
-#&gt;
+#>
     CommentOrUncommentIseSelectedLines -CommentLines $false -DoNothingWhenNotCertainOfWhichLinesToSelect $DoNothingWhenNotCertainOfWhichLinesToUncomment
 }
 
@@ -489,10 +489,10 @@ Ok, so I mentioned a couple other must-have ISE add-ons above. Here’s the code
 
 function Save-AllISEFiles
 {
-&lt;#
+<#
 .SYNOPSIS
     Saves all ISE Files except for untitled files. If You have multiple PowerShellTabs, saves files in all tabs.
-#&gt;
+#>
     foreach($tab in $psISE.PowerShellTabs)
     {
         foreach($file in $tab.Files)
@@ -507,7 +507,7 @@ function Save-AllISEFiles
 
 function Export-ISEState
 {
-&lt;#
+<#
 .SYNOPSIS
     Stores the opened files in a serialized xml so that later the same set can be opened
 
@@ -520,7 +520,7 @@ function Export-ISEState
 .EXAMPLE
     Stores current state into c:\temp\files.isexml
     Export-ISEState c:\temp\files.isexml
-#&gt;
+#>
 
     Param
     (
@@ -607,7 +607,7 @@ function Export-ISEState
 
 function Import-ISEState
 {
-&lt;#
+<#
 .SYNOPSIS
     Reads a file with ISE state information about which files to open and opens them
 
@@ -620,7 +620,7 @@ function Import-ISEState
 .EXAMPLE
     Restores current state from c:\temp\files.isexml
     Import-ISEState c:\temp\files.isexml
-#&gt;
+#>
 
     Param
     (
@@ -726,7 +726,7 @@ function Import-ISEState
 
 function Select-EntireLinesInIseSelectedTextAndReturnFirstAndLastSelectedLineNumbers([bool]$DoNothingWhenNotCertainOfWhichLinesToSelect = $false)
 {
-&lt;#
+<#
     .SYNOPSIS
     Exands the selected text to make sure the entire lines are selected.
     Returns $null if we can't determine with certainty which lines to select and the
@@ -754,7 +754,7 @@ function Select-EntireLinesInIseSelectedTextAndReturnFirstAndLastSelectedLineNum
 
     .OUTPUT
     PSObject. Returns a PSObject with the properties FirstLineNumber and LastLineNumber, which correspond to the first and last line numbers of the selected text.
-#&gt;
+#>
 
     # Backup all of the original info before we modify it.
     [int]$originalCaretLine = $psISE.CurrentFile.Editor.CaretLine
@@ -949,7 +949,7 @@ function CommentOrUncommentIseSelectedLines([bool]$CommentLines = $false, [bool]
 
 function Comment-IseSelectedLines([switch]$DoNothingWhenNotCertainOfWhichLinesToComment)
 {
-&lt;#
+<#
     .SYNOPSIS
     Places a comment character at the start of each line of the selected text in the current PS ISE file.
     If no text is selected, it will comment out the line that the caret is on.
@@ -975,13 +975,13 @@ function Comment-IseSelectedLines([switch]$DoNothingWhenNotCertainOfWhichLinesTo
     if the caret is on the 1st line or 2nd line when selecting the text (i.e. the text is selected bottom-to-top vs. top-to-bottom).
     - Since the lines are typically identical for this edge case to occur, you likely won't really care which 2 of the 3 lines get commented out, so it shouldn't be a big deal.
     But if it bugs you, you can provide this switch.
-#&gt;
+#>
     CommentOrUncommentIseSelectedLines -CommentLines $true -DoNothingWhenNotCertainOfWhichLinesToSelect $DoNothingWhenNotCertainOfWhichLinesToComment
 }
 
 function Uncomment-IseSelectedLines([switch]$DoNothingWhenNotCertainOfWhichLinesToUncomment)
 {
-&lt;#
+<#
     .SYNOPSIS
     Removes the comment character from the start of each line of the selected text in the current PS ISE file (if it is commented out).
     If no text is selected, it will uncomment the line that the caret is on.
@@ -1007,7 +1007,7 @@ function Uncomment-IseSelectedLines([switch]$DoNothingWhenNotCertainOfWhichLines
     if the caret is on the 1st line or 2nd line when selecting the text (i.e. the text is selected bottom-to-top vs. top-to-bottom).
     - Since the lines are typically identical for this edge case to occur, you likely won't really care which 2 of the 3 lines get uncommented, so it shouldn't be a big deal.
     But if it bugs you, you can provide this switch.
-#&gt;
+#>
     CommentOrUncommentIseSelectedLines -CommentLines $false -DoNothingWhenNotCertainOfWhichLinesToSelect $DoNothingWhenNotCertainOfWhichLinesToUncomment
 }
 

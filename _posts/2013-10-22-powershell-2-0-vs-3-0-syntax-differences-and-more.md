@@ -148,7 +148,7 @@ PS v2.0: Could only redirect Success and Error output.
 
   <pre class="brush: powershell; gutter: false; title: ; notranslate" title="">
 # Sends errors (2) and success output (1) to the success output stream.
-Get-Process none, Powershell 2&gt;&1
+Get-Process none, Powershell 2>&1
 </pre>
 </div>
 
@@ -162,7 +162,7 @@ PS v3.0: Can also redirect Warning, Verbose, Debug, and All output.
 function Test-Output { Get-Process PowerShell, none; Write-Warning "Test!"; Write-Verbose "Test Verbose"; Write-Debug "Test Debug"}
 
 # Write every output stream to a text file.
-Test-Output *&gt; Test-Output.txt
+Test-Output *> Test-Output.txt
 
 </pre>
 </div>

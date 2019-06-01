@@ -36,21 +36,21 @@ The easiest way to use the app.config is to use the built-in types, such as Name
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:7f0178f6-9661-4260-a12e-7d3181bf3cd9" class="wlWriterEditableSmartContent" style="float: none; margin: 0px; display: inline; padding: 0px;">
   <pre class="brush: xml; gutter: true; title: ; notranslate" title="">
-&lt;?xml version="1.0" encoding="utf-8" ?&gt;
-&lt;configuration&gt;
-    &lt;configSections&gt;
-        &lt;section name="ConnectionManagerDatabaseServers" type="System.Configuration.NameValueSectionHandler" /&gt;
-    &lt;/configSections&gt;
-    &lt;startup&gt;
-        &lt;supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.5" /&gt;
-    &lt;/startup&gt;
-    &lt;ConnectionManagerDatabaseServers&gt;
-        &lt;add key="localhost" value="localhost" /&gt;
-        &lt;add key="Dev" value="Dev.MyDomain.local" /&gt;
-        &lt;add key="Test" value="Test.MyDomain.local" /&gt;
-        &lt;add key="Live" value="Prod.MyDomain.com" /&gt;
-    &lt;/ConnectionManagerDatabaseServers&gt;
-&lt;/configuration&gt;
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+    <configSections>
+        <section name="ConnectionManagerDatabaseServers" type="System.Configuration.NameValueSectionHandler" />
+    </configSections>
+    <startup>
+        <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.5" />
+    </startup>
+    <ConnectionManagerDatabaseServers>
+        <add key="localhost" value="localhost" />
+        <add key="Dev" value="Dev.MyDomain.local" />
+        <add key="Test" value="Test.MyDomain.local" />
+        <add key="Live" value="Prod.MyDomain.com" />
+    </ConnectionManagerDatabaseServers>
+</configuration>
 </pre>
 </div>
 
@@ -106,22 +106,22 @@ So let’s start by looking at the app.config:
 
 <div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:049bb6de-ae35-4de6-bd81-c549c12cb5ce" class="wlWriterEditableSmartContent" style="float: none; margin: 0px; display: inline; padding: 0px;">
   <pre class="brush: xml; title: ; notranslate" title="">
-&lt;?xml version="1.0" encoding="utf-8" ?&gt;
-&lt;configuration&gt;
-    &lt;configSections&gt;
-        &lt;section name="ConnectionManagerDataSection" type="ConnectionManagerUpdater.Data.Configuration.ConnectionManagerDataSection, ConnectionManagerUpdater" /&gt;
-    &lt;/configSections&gt;
-    &lt;startup&gt;
-        &lt;supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.5" /&gt;
-    &lt;/startup&gt;
-    &lt;ConnectionManagerDataSection&gt;
-        &lt;ConnectionManagerEndpoints&gt;
-            &lt;add name="Development" address="Dev.MyDomain.local" useSSL="false" /&gt;
-            &lt;add name="Test" address="Test.MyDomain.local" useSSL="true" /&gt;
-            &lt;add name="Live" address="Prod.MyDomain.com" useSSL="true" securityGroupsAllowedToSaveChanges="ConnectionManagerUsers" /&gt;
-        &lt;/ConnectionManagerEndpoints&gt;
-    &lt;/ConnectionManagerDataSection&gt;
-&lt;/configuration&gt;
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+    <configSections>
+        <section name="ConnectionManagerDataSection" type="ConnectionManagerUpdater.Data.Configuration.ConnectionManagerDataSection, ConnectionManagerUpdater" />
+    </configSections>
+    <startup>
+        <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.5" />
+    </startup>
+    <ConnectionManagerDataSection>
+        <ConnectionManagerEndpoints>
+            <add name="Development" address="Dev.MyDomain.local" useSSL="false" />
+            <add name="Test" address="Test.MyDomain.local" useSSL="true" />
+            <add name="Live" address="Prod.MyDomain.com" useSSL="true" securityGroupsAllowedToSaveChanges="ConnectionManagerUsers" />
+        </ConnectionManagerEndpoints>
+    </ConnectionManagerDataSection>
+</configuration>
 </pre>
 </div>
 
@@ -140,9 +140,9 @@ namespace ConnectionManagerUpdater.Data.Configuration
 {
     public class ConnectionManagerDataSection : ConfigurationSection
     {
-        /// &lt;summary&gt;
+        /// <summary>
         /// The name of this section in the app.config.
-        /// &lt;/summary&gt;
+        /// </summary>
         public const string SectionName = "ConnectionManagerDataSection";
 
         private const string EndpointCollectionName = "ConnectionManagerEndpoints";
@@ -215,7 +215,7 @@ if (connectionManagerDataSection != null)
 {
     foreach (ConnectionManagerEndpointElement endpointElement in connectionManagerDataSection.ConnectionManagerEndpoints)
     {
-        var endpoint = new ConnectionManagerEndpoint() { Name = endpointElement.Name, ServerInfo = new ConnectionManagerServerInfo() { Address = endpointElement.Address, UseSSL = endpointElement.UseSSL, SecurityGroupsAllowedToSaveChanges = endpointElement.SecurityGroupsAllowedToSaveChanges.Split(',').Where(e =&gt; !string.IsNullOrWhiteSpace(e)).ToList() } };
+        var endpoint = new ConnectionManagerEndpoint() { Name = endpointElement.Name, ServerInfo = new ConnectionManagerServerInfo() { Address = endpointElement.Address, UseSSL = endpointElement.UseSSL, SecurityGroupsAllowedToSaveChanges = endpointElement.SecurityGroupsAllowedToSaveChanges.Split(',').Where(e => !string.IsNullOrWhiteSpace(e)).ToList() } };
         AddEndpoint(endpoint);
     }
 }

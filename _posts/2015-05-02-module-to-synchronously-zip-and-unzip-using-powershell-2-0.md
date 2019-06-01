@@ -160,7 +160,7 @@ function Expand-ZipFile
 
 		# If the directory to unzip the files to does not exist yet, create it.
 		if (!(Test-Path -Path $DestinationDirectoryPath -PathType Container))
-		{ New-Item -Path $DestinationDirectoryPath -ItemType Container &gt; $null }
+		{ New-Item -Path $DestinationDirectoryPath -ItemType Container > $null }
 
 		# Flags and values found at: https://msdn.microsoft.com/en-us/library/windows/desktop/bb759795%28v=vs.85%29.aspx
 		$FOF_SILENT = 0x0004
@@ -220,7 +220,7 @@ function Compress-ZipFile
 
 		# If the Zip file to add the file to does not exist yet, create it.
 		if (!(Test-Path -Path $ZipFilePath -PathType Leaf))
-		{ New-Item -Path $ZipFilePath -ItemType File &gt; $null }
+		{ New-Item -Path $ZipFilePath -ItemType File > $null }
 
 		# Get the Name of the file or directory to add to the Zip file.
 		$fileOrDirectoryNameToAddToZipFile = Split-Path -Path $FileOrDirectoryPathToAddToZipFile -Leaf
@@ -280,7 +280,7 @@ function Compress-ZipFile
 			# Create a temp directory to hold our file/directory.
 			$tempDirectoryPath = $null
 			$tempDirectoryPath = Join-Path -Path ([System.IO.Path]::GetTempPath()) -ChildPath ([System.IO.Path]::GetRandomFileName())
-			New-Item -Path $tempDirectoryPath -ItemType Container &gt; $null
+			New-Item -Path $tempDirectoryPath -ItemType Container > $null
 
 			# If we will be moving a directory into the temp directory.
 			$numberOfItemsInZipFilesDirectory = 0
@@ -330,7 +330,7 @@ function Compress-ZipFile
 				foreach ($emptyDirectory in $emptyDirectories)
 				{
 					$numberOfDummyFilesCreated++
-					New-Item -Path (Join-Path -Path $emptyDirectory.FullName -ChildPath "$dummyFileNamePrefix$numberOfDummyFilesCreated") -ItemType File -Force &gt; $null
+					New-Item -Path (Join-Path -Path $emptyDirectory.FullName -ChildPath "$dummyFileNamePrefix$numberOfDummyFilesCreated") -ItemType File -Force > $null
 				}
 			}
 
@@ -370,7 +370,7 @@ function Compress-ZipFile
 			}
 
 			# Delete the temp directory that we created.
-			Remove-Item -Path $tempDirectoryPath -Force -Recurse &gt; $null
+			Remove-Item -Path $tempDirectoryPath -Force -Recurse > $null
 		}
 	}
 }

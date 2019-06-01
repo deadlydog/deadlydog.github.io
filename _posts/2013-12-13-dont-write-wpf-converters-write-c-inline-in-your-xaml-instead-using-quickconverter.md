@@ -44,7 +44,7 @@ Just for reference, this is what step 4 might look like in the xaml:
   <pre style=white-space:normal>
 
   <pre class="brush: xml; gutter: false; title: ; notranslate" title="">
-&lt;CheckBox IsEnabled="{Binding Path=ViewModel.SomeBooleanProperty, Converter={StaticResource InverseBooleanConverter}" /&gt;
+<CheckBox IsEnabled="{Binding Path=ViewModel.SomeBooleanProperty, Converter={StaticResource InverseBooleanConverter}" />
 </pre>
 </div>
 
@@ -58,7 +58,7 @@ This is what you would do using QuickConverter:
   <pre style=white-space:normal>
 
   <pre class="brush: xml; gutter: false; pad-line-numbers: true; title: ; notranslate" title="">
-&lt;CheckBox IsEnabled="{qc:Binding '!$P', P={Binding Path=ViewModel.SomeBooleanProperty}}" /&gt;
+<CheckBox IsEnabled="{qc:Binding '!$P', P={Binding Path=ViewModel.SomeBooleanProperty}}" />
 </pre>
 </div>
 
@@ -134,7 +134,7 @@ Declaring and using local variables in your converter expression:
   <pre style=white-space:normal>
 
   <pre class="brush: csharp; gutter: false; title: ; notranslate" title="">
-IsEnabled="{qc:Binding '(Loc = $P.Value, A = $P.Show) =&gt; $Loc != null &amp;&amp; $A', P={Binding Obj}}"
+IsEnabled="{qc:Binding '(Loc = $P.Value, A = $P.Show) => $Loc != null &amp;&amp; $A', P={Binding Obj}}"
 </pre>
 </div>
 
@@ -148,7 +148,7 @@ And there is even limited support for using lambdas, which allows LINQ to be use
   <pre style=white-space:normal>
 
   <pre class="brush: csharp; gutter: false; title: ; notranslate" title="">
-ItemsSource="{qc:Binding '$P.Where(( (int)i ) =&gt; (bool)($i % 2 == 0))', P={Binding Source}}"
+ItemsSource="{qc:Binding '$P.Where(( (int)i ) => (bool)($i % 2 == 0))', P={Binding Source}}"
 </pre>
 </div>
 

@@ -25,7 +25,7 @@ System.TypeInitializationException occurred
   Source=LibGit2Sharp
   StackTrace:
    at LibGit2Sharp.Core.NativeMethods.git_repository_discover(GitBuf buf, FilePath start_path, Boolean across_fs, FilePath ceiling_dirs)
-   at LibGit2Sharp.Core.Proxy.&lt;&gt;c__DisplayClass3e.&lt;git_repository_discover&gt;b__3d(GitBuf buf)
+   at LibGit2Sharp.Core.Proxy.<>c__DisplayClass3e.<git_repository_discover>b__3d(GitBuf buf)
    at LibGit2Sharp.Core.Proxy.ConvertPath(Func`2 pathRetriever)
    at LibGit2Sharp.Core.Proxy.git_repository_discover(FilePath start_path)
    at LibGit2Sharp.Repository.Discover(String startingPath)

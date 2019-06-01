@@ -41,24 +41,24 @@ The follow code (without examples of how to use it) [is also available here](htt
   <pre style=white-space:normal>
 
   <pre class="brush: csharp; pad-line-numbers: true; title: ; notranslate" title="">
-/// &lt;summary&gt;
+/// <summary>
 /// Functions for performing common binary Serialization operations.
-/// &lt;para&gt;All properties and variables will be serialized.&lt;/para&gt;
-/// &lt;para&gt;Object type (and all child types) must be decorated with the [Serializable] attribute.&lt;/para&gt;
-/// &lt;para&gt;To prevent a variable from being serialized, decorate it with the [NonSerialized] attribute; cannot be applied to properties.&lt;/para&gt;
-/// &lt;/summary&gt;
+/// <para>All properties and variables will be serialized.</para>
+/// <para>Object type (and all child types) must be decorated with the [Serializable] attribute.</para>
+/// <para>To prevent a variable from being serialized, decorate it with the [NonSerialized] attribute; cannot be applied to properties.</para>
+/// </summary>
 public static class BinarySerialization
 {
-	/// &lt;summary&gt;
+	/// <summary>
 	/// Writes the given object instance to a binary file.
-	/// &lt;para&gt;Object type (and all child types) must be decorated with the [Serializable] attribute.&lt;/para&gt;
-	/// &lt;para&gt;To prevent a variable from being serialized, decorate it with the [NonSerialized] attribute; cannot be applied to properties.&lt;/para&gt;
-	/// &lt;/summary&gt;
-	/// &lt;typeparam name="T"&gt;The type of object being written to the XML file.&lt;/typeparam&gt;
-	/// &lt;param name="filePath"&gt;The file path to write the object instance to.&lt;/param&gt;
-	/// &lt;param name="objectToWrite"&gt;The object instance to write to the XML file.&lt;/param&gt;
-	/// &lt;param name="append"&gt;If false the file will be overwritten if it already exists. If true the contents will be appended to the file.&lt;/param&gt;
-	public static void WriteToBinaryFile&lt;T&gt;(string filePath, T objectToWrite, bool append = false)
+	/// <para>Object type (and all child types) must be decorated with the [Serializable] attribute.</para>
+	/// <para>To prevent a variable from being serialized, decorate it with the [NonSerialized] attribute; cannot be applied to properties.</para>
+	/// </summary>
+	/// <typeparam name="T">The type of object being written to the XML file.</typeparam>
+	/// <param name="filePath">The file path to write the object instance to.</param>
+	/// <param name="objectToWrite">The object instance to write to the XML file.</param>
+	/// <param name="append">If false the file will be overwritten if it already exists. If true the contents will be appended to the file.</param>
+	public static void WriteToBinaryFile<T>(string filePath, T objectToWrite, bool append = false)
 	{
 		using (Stream stream = File.Open(filePath, append ? FileMode.Append : FileMode.Create))
 		{
@@ -67,13 +67,13 @@ public static class BinarySerialization
 		}
 	}
 
-	/// &lt;summary&gt;
+	/// <summary>
 	/// Reads an object instance from a binary file.
-	/// &lt;/summary&gt;
-	/// &lt;typeparam name="T"&gt;The type of object to read from the XML.&lt;/typeparam&gt;
-	/// &lt;param name="filePath"&gt;The file path to read the object instance from.&lt;/param&gt;
-	/// &lt;returns&gt;Returns a new instance of the object read from the binary file.&lt;/returns&gt;
-	public static T ReadFromBinaryFile&lt;T&gt;(string filePath)
+	/// </summary>
+	/// <typeparam name="T">The type of object to read from the XML.</typeparam>
+	/// <param name="filePath">The file path to read the object instance from.</param>
+	/// <returns>Returns a new instance of the object read from the binary file.</returns>
+	public static T ReadFromBinaryFile<T>(string filePath)
 	{
 		using (Stream stream = File.Open(filePath, FileMode.Open))
 		{
@@ -114,13 +114,13 @@ public class Address
 
 // And then in some function.
 Person person = new Person() { Name = "Dan", Age = 30; HomeAddress = new Address() { StreetAddress = "123 My St", City = "Regina" }};
-List&lt;Person&gt; people = GetListOfPeople();
-BinarySerialization.WriteToBinaryFile&lt;Person&gt;("C:\person.bin", person);
-BinarySerialization.WriteToBinaryFile&lt;List&lt;People&gt;&gt;("C:\people.bin", people);
+List<Person> people = GetListOfPeople();
+BinarySerialization.WriteToBinaryFile<Person>("C:\person.bin", person);
+BinarySerialization.WriteToBinaryFile<List<People>>("C:\people.bin", people);
 
 // Then in some other function.
-Person person = BinarySerialization.ReadFromBinaryFile&lt;Person&gt;("C:\person.bin");
-List&lt;Person&gt; people = BinarySerialization.ReadFromBinaryFile&lt;List&lt;Person&gt;&gt;("C:\people.bin");
+Person person = BinarySerialization.ReadFromBinaryFile<Person>("C:\person.bin");
+List<Person> people = BinarySerialization.ReadFromBinaryFile<List<Person>>("C:\people.bin");
 </pre>
 </div>
 
@@ -137,25 +137,25 @@ List&lt;Person&gt; people = BinarySerialization.ReadFromBinaryFile&lt;List&lt;Pe
   <pre style=white-space:normal>
 
   <pre class="brush: csharp; title: ; notranslate" title="">
-/// &lt;summary&gt;
+/// <summary>
 /// Functions for performing common XML Serialization operations.
-/// &lt;para&gt;Only public properties and variables will be serialized.&lt;/para&gt;
-/// &lt;para&gt;Use the [XmlIgnore] attribute to prevent a property/variable from being serialized.&lt;/para&gt;
-/// &lt;para&gt;Object to be serialized must have a parameterless constructor.&lt;/para&gt;
-/// &lt;/summary&gt;
+/// <para>Only public properties and variables will be serialized.</para>
+/// <para>Use the [XmlIgnore] attribute to prevent a property/variable from being serialized.</para>
+/// <para>Object to be serialized must have a parameterless constructor.</para>
+/// </summary>
 public static class XmlSerialization
 {
-	/// &lt;summary&gt;
+	/// <summary>
 	/// Writes the given object instance to an XML file.
-	/// &lt;para&gt;Only Public properties and variables will be written to the file. These can be any type though, even other classes.&lt;/para&gt;
-	/// &lt;para&gt;If there are public properties/variables that you do not want written to the file, decorate them with the [XmlIgnore] attribute.&lt;/para&gt;
-	/// &lt;para&gt;Object type must have a parameterless constructor.&lt;/para&gt;
-	/// &lt;/summary&gt;
-	/// &lt;typeparam name="T"&gt;The type of object being written to the file.&lt;/typeparam&gt;
-	/// &lt;param name="filePath"&gt;The file path to write the object instance to.&lt;/param&gt;
-	/// &lt;param name="objectToWrite"&gt;The object instance to write to the file.&lt;/param&gt;
-	/// &lt;param name="append"&gt;If false the file will be overwritten if it already exists. If true the contents will be appended to the file.&lt;/param&gt;
-	public static void WriteToXmlFile&lt;T&gt;(string filePath, T objectToWrite, bool append = false) where T : new()
+	/// <para>Only Public properties and variables will be written to the file. These can be any type though, even other classes.</para>
+	/// <para>If there are public properties/variables that you do not want written to the file, decorate them with the [XmlIgnore] attribute.</para>
+	/// <para>Object type must have a parameterless constructor.</para>
+	/// </summary>
+	/// <typeparam name="T">The type of object being written to the file.</typeparam>
+	/// <param name="filePath">The file path to write the object instance to.</param>
+	/// <param name="objectToWrite">The object instance to write to the file.</param>
+	/// <param name="append">If false the file will be overwritten if it already exists. If true the contents will be appended to the file.</param>
+	public static void WriteToXmlFile<T>(string filePath, T objectToWrite, bool append = false) where T : new()
 	{
 		TextWriter writer = null;
 		try
@@ -171,14 +171,14 @@ public static class XmlSerialization
 		}
 	}
 
-	/// &lt;summary&gt;
+	/// <summary>
 	/// Reads an object instance from an XML file.
-	/// &lt;para&gt;Object type must have a parameterless constructor.&lt;/para&gt;
-	/// &lt;/summary&gt;
-	/// &lt;typeparam name="T"&gt;The type of object to read from the file.&lt;/typeparam&gt;
-	/// &lt;param name="filePath"&gt;The file path to read the object instance from.&lt;/param&gt;
-	/// &lt;returns&gt;Returns a new instance of the object read from the XML file.&lt;/returns&gt;
-	public static T ReadFromXmlFile&lt;T&gt;(string filePath) where T : new()
+	/// <para>Object type must have a parameterless constructor.</para>
+	/// </summary>
+	/// <typeparam name="T">The type of object to read from the file.</typeparam>
+	/// <param name="filePath">The file path to read the object instance from.</param>
+	/// <returns>Returns a new instance of the object read from the XML file.</returns>
+	public static T ReadFromXmlFile<T>(string filePath) where T : new()
 	{
 		TextReader reader = null;
 		try
@@ -224,13 +224,13 @@ public class Address
 
 // And then in some function.
 Person person = new Person() { Name = "Dan", Age = 30; HomeAddress = new Address() { StreetAddress = "123 My St", City = "Regina" }};
-List&lt;Person&gt; people = GetListOfPeople();
-XmlSerialization.WriteToXmlFile&lt;Person&gt;("C:\person.txt", person);
-XmlSerialization.WriteToXmlFile&lt;List&lt;People&gt;&gt;("C:\people.txt", people);
+List<Person> people = GetListOfPeople();
+XmlSerialization.WriteToXmlFile<Person>("C:\person.txt", person);
+XmlSerialization.WriteToXmlFile<List<People>>("C:\people.txt", people);
 
 // Then in some other function.
-Person person = XmlSerialization.ReadFromXmlFile&lt;Person&gt;("C:\person.txt");
-List&lt;Person&gt; people = XmlSerialization.ReadFromXmlFile&lt;List&lt;Person&gt;&gt;("C:\people.txt");
+Person person = XmlSerialization.ReadFromXmlFile<Person>("C:\person.txt");
+List<Person> people = XmlSerialization.ReadFromXmlFile<List<Person>>("C:\people.txt");
 </pre>
 </div>
 
@@ -247,26 +247,26 @@ List&lt;Person&gt; people = XmlSerialization.ReadFromXmlFile&lt;List&lt;Person&g
   <pre style=white-space:normal>
 
   <pre class="brush: csharp; title: ; notranslate" title="">
-/// &lt;summary&gt;
+/// <summary>
 /// Functions for performing common Json Serialization operations.
-/// &lt;para&gt;Requires the Newtonsoft.Json assembly (Json.Net package in NuGet Gallery) to be referenced in your project.&lt;/para&gt;
-/// &lt;para&gt;Only public properties and variables will be serialized.&lt;/para&gt;
-/// &lt;para&gt;Use the [JsonIgnore] attribute to ignore specific public properties or variables.&lt;/para&gt;
-/// &lt;para&gt;Object to be serialized must have a parameterless constructor.&lt;/para&gt;
-/// &lt;/summary&gt;
+/// <para>Requires the Newtonsoft.Json assembly (Json.Net package in NuGet Gallery) to be referenced in your project.</para>
+/// <para>Only public properties and variables will be serialized.</para>
+/// <para>Use the [JsonIgnore] attribute to ignore specific public properties or variables.</para>
+/// <para>Object to be serialized must have a parameterless constructor.</para>
+/// </summary>
 public static class JsonSerialization
 {
-	/// &lt;summary&gt;
+	/// <summary>
 	/// Writes the given object instance to a Json file.
-	/// &lt;para&gt;Object type must have a parameterless constructor.&lt;/para&gt;
-	/// &lt;para&gt;Only Public properties and variables will be written to the file. These can be any type though, even other classes.&lt;/para&gt;
-	/// &lt;para&gt;If there are public properties/variables that you do not want written to the file, decorate them with the [JsonIgnore] attribute.&lt;/para&gt;
-	/// &lt;/summary&gt;
-	/// &lt;typeparam name="T"&gt;The type of object being written to the file.&lt;/typeparam&gt;
-	/// &lt;param name="filePath"&gt;The file path to write the object instance to.&lt;/param&gt;
-	/// &lt;param name="objectToWrite"&gt;The object instance to write to the file.&lt;/param&gt;
-	/// &lt;param name="append"&gt;If false the file will be overwritten if it already exists. If true the contents will be appended to the file.&lt;/param&gt;
-	public static void WriteToJsonFile&lt;T&gt;(string filePath, T objectToWrite, bool append = false) where T : new()
+	/// <para>Object type must have a parameterless constructor.</para>
+	/// <para>Only Public properties and variables will be written to the file. These can be any type though, even other classes.</para>
+	/// <para>If there are public properties/variables that you do not want written to the file, decorate them with the [JsonIgnore] attribute.</para>
+	/// </summary>
+	/// <typeparam name="T">The type of object being written to the file.</typeparam>
+	/// <param name="filePath">The file path to write the object instance to.</param>
+	/// <param name="objectToWrite">The object instance to write to the file.</param>
+	/// <param name="append">If false the file will be overwritten if it already exists. If true the contents will be appended to the file.</param>
+	public static void WriteToJsonFile<T>(string filePath, T objectToWrite, bool append = false) where T : new()
 	{
 		TextWriter writer = null;
 		try
@@ -282,21 +282,21 @@ public static class JsonSerialization
 		}
 	}
 
-	/// &lt;summary&gt;
+	/// <summary>
 	/// Reads an object instance from an Json file.
-	/// &lt;para&gt;Object type must have a parameterless constructor.&lt;/para&gt;
-	/// &lt;/summary&gt;
-	/// &lt;typeparam name="T"&gt;The type of object to read from the file.&lt;/typeparam&gt;
-	/// &lt;param name="filePath"&gt;The file path to read the object instance from.&lt;/param&gt;
-	/// &lt;returns&gt;Returns a new instance of the object read from the Json file.&lt;/returns&gt;
-	public static T ReadFromJsonFile&lt;T&gt;(string filePath) where T : new()
+	/// <para>Object type must have a parameterless constructor.</para>
+	/// </summary>
+	/// <typeparam name="T">The type of object to read from the file.</typeparam>
+	/// <param name="filePath">The file path to read the object instance from.</param>
+	/// <returns>Returns a new instance of the object read from the Json file.</returns>
+	public static T ReadFromJsonFile<T>(string filePath) where T : new()
 	{
 		TextReader reader = null;
 		try
 		{
 			reader = new StreamReader(filePath);
 			var fileContents = reader.ReadToEnd();
-			return Newtonsoft.Json.JsonConvert.DeserializeObject&lt;T&gt;(fileContents);
+			return Newtonsoft.Json.JsonConvert.DeserializeObject<T>(fileContents);
 		}
 		finally
 		{
@@ -333,13 +333,13 @@ public class Address
 
 // And then in some function.
 Person person = new Person() { Name = "Dan", Age = 30; HomeAddress = new Address() { StreetAddress = "123 My St", City = "Regina" }};
-List&lt;Person&gt; people = GetListOfPeople();
-JsonSerialization.WriteToJsonFile&lt;Person&gt;("C:\person.txt", person);
-JsonSerialization.WriteToJsonFile&lt;List&lt;People&gt;&gt;("C:\people.txt", people);
+List<Person> people = GetListOfPeople();
+JsonSerialization.WriteToJsonFile<Person>("C:\person.txt", person);
+JsonSerialization.WriteToJsonFile<List<People>>("C:\people.txt", people);
 
 // Then in some other function.
-Person person = JsonSerialization.ReadFromJsonFile&lt;Person&gt;("C:\person.txt");
-List&lt;Person&gt; people = JsonSerialization.ReadFromJsonFile&lt;List&lt;Person&gt;&gt;("C:\people.txt");
+Person person = JsonSerialization.ReadFromJsonFile<Person>("C:\person.txt");
+List<Person> people = JsonSerialization.ReadFromJsonFile<List<Person>>("C:\people.txt");
 </pre>
 </div>
 
@@ -361,15 +361,15 @@ Be aware that the JavaScriptSerializer is in the System.Web.Extensions assembly,
   <pre style=white-space:normal>
 
   <pre class="brush: csharp; title: ; notranslate" title="">
-// In WriteFromJsonFile&lt;T&gt;() function replace:
+// In WriteFromJsonFile<T>() function replace:
 var contentsToWriteToFile = Newtonsoft.Json.JsonConvert.SerializeObject(objectToWrite);
 // with:
 var contentsToWriteToFile = new System.Web.Script.Serialization.JavaScriptSerializer().Serialize(objectToWrite);
 
-// In ReadFromJsonFile&lt;T&gt;() function replace:
-return Newtonsoft.Json.JsonConvert.DeserializeObject&lt;T&gt;(fileContents);
+// In ReadFromJsonFile<T>() function replace:
+return Newtonsoft.Json.JsonConvert.DeserializeObject<T>(fileContents);
 // with:
-return new System.Web.Script.Serialization.JavaScriptSerializer().Deserialize&lt;T&gt;(fileContents);
+return new System.Web.Script.Serialization.JavaScriptSerializer().Deserialize<T>(fileContents);
 </pre>
 </div>
 

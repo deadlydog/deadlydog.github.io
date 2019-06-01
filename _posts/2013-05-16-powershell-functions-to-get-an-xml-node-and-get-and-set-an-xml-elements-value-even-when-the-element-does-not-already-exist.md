@@ -23,23 +23,23 @@ I’m new to working with Xml through PowerShell and was so impressed when I dis
   <pre style=white-space:normal>
 
   <pre class="brush: xml; pad-line-numbers: true; title: ; notranslate" title="">
-&lt;?xml version="1.0" encoding="utf-8"?&gt;
-&lt;package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd"&gt;
-  &lt;metadata&gt;
-    &lt;id&gt;MyAppsId&lt;/id&gt;
-    &lt;version&gt;1.0.1&lt;/version&gt;
-    &lt;title&gt;MyApp&lt;/title&gt;
-    &lt;authors&gt;Daniel Schroeder&lt;/authors&gt;
-    &lt;owners&gt;Daniel Schroeder&lt;/owners&gt;
-    &lt;requireLicenseAcceptance&gt;false&lt;/requireLicenseAcceptance&gt;
-    &lt;description&gt;My App.&lt;/description&gt;
-    &lt;summary&gt;My App.&lt;/summary&gt;
-    &lt;tags&gt;Powershell, Application&lt;/tags&gt;
-  &lt;/metadata&gt;
-  &lt;files&gt;
-    &lt;file src="MyApp.ps1" target="content\MyApp.ps1" /&gt;
-  &lt;/files&gt;
-&lt;/package&gt;
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>MyAppsId</id>
+    <version>1.0.1</version>
+    <title>MyApp</title>
+    <authors>Daniel Schroeder</authors>
+    <owners>Daniel Schroeder</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>My App.</description>
+    <summary>My App.</summary>
+    <tags>Powershell, Application</tags>
+  </metadata>
+  <files>
+    <file src="MyApp.ps1" target="content\MyApp.ps1" />
+  </files>
+</package>
 </pre>
 </div>
 
@@ -203,7 +203,7 @@ function Set-XmlElementsTextValue([ xml ]$XmlDocument, [string]$ElementPath, [st
 		$elementName = $ElementPath.SubString($ElementPath.LastIndexOf($NodeSeparatorCharacter) + 1)
  		$element = $XmlDocument.CreateElement($elementName, $XmlDocument.DocumentElement.NamespaceURI)
 		$textNode = $XmlDocument.CreateTextNode($TextValue)
-		$element.AppendChild($textNode) &gt; $null
+		$element.AppendChild($textNode) > $null
 
 		# Try and get the parent node.
 		$parentNodePath = $ElementPath.SubString(0, $ElementPath.LastIndexOf($NodeSeparatorCharacter))
@@ -211,7 +211,7 @@ function Set-XmlElementsTextValue([ xml ]$XmlDocument, [string]$ElementPath, [st
 
 		if ($parentNode)
 		{
-			$parentNode.AppendChild($element) &gt; $null
+			$parentNode.AppendChild($element) > $null
 		}
 		else
 		{
@@ -284,7 +284,7 @@ function Set-XmlElementsAttributeValue([ xml ]$XmlDocument, [string]$ElementPath
 	{
 		$attribute = $XmlDocument.CreateNode([System.Xml.XmlNodeType]::Attribute, $AttributeName, $NamespaceURI)
 		$attribute.Value = $AttributeValue
-		$node.Attributes.SetNamedItem($attribute) &gt; $null
+		$node.Attributes.SetNamedItem($attribute) > $null
 	}
 	# Else the node doesn't exist yet, so create it with the given attribute value.
 	else
@@ -292,7 +292,7 @@ function Set-XmlElementsAttributeValue([ xml ]$XmlDocument, [string]$ElementPath
 		# Create the new element with the given value.
 		$elementName = $ElementPath.SubString($ElementPath.LastIndexOf($NodeSeparatorCharacter) + 1)
 		$element = $XmlDocument.CreateElement($elementName, $XmlDocument.DocumentElement.NamespaceURI)
-		$element.SetAttribute($AttributeName, $NamespaceURI, $AttributeValue) &gt; $null
+		$element.SetAttribute($AttributeName, $NamespaceURI, $AttributeValue) > $null
 
 		# Try and get the parent node.
 		$parentNodePath = $ElementPath.SubString(0, $ElementPath.LastIndexOf($NodeSeparatorCharacter))
@@ -300,7 +300,7 @@ function Set-XmlElementsAttributeValue([ xml ]$XmlDocument, [string]$ElementPath
 
 		if ($parentNode)
 		{
-			$parentNode.AppendChild($element) &gt; $null
+			$parentNode.AppendChild($element) > $null
 		}
 		else
 		{

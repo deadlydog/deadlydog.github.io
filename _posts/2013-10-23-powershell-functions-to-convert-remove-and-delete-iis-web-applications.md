@@ -78,7 +78,7 @@ $AddApplicationServiceInformationTypeScriptBlock = {
 # Add the ApplicationServiceInformation class to this PowerShell session.
 & $AddApplicationServiceInformationTypeScriptBlock
 
-&lt;#
+<#
     .SYNOPSIS
     Converts the given files to application services on the given Server.
 
@@ -87,7 +87,7 @@ $AddApplicationServiceInformationTypeScriptBlock = {
 
     .PARAMETER ApplicationServicesInfo
     The [ApplicationServiceInformation[]] containing the files to convert to application services.
-#&gt;
+#>
 function ConvertTo-ApplicationServices
 {
     [CmdletBinding()]
@@ -103,7 +103,7 @@ function ConvertTo-ApplicationServices
 	    Write-Verbose "Converting To Application Services..."
 
         # Import the WebAdministration module to make sure we have access to the required cmdlets and the IIS: drive.
-        Import-Module WebAdministration 4&gt; $null	# Don't write the verbose output.
+        Import-Module WebAdministration 4> $null	# Don't write the verbose output.
 
 	    # Create all of the Web Applications, making sure to first try and remove them in case they already exist (in order to avoid a PS error).
 	    foreach ($appInfo in [PSCustomObject[]]$ApplicationServicesInfo)
@@ -136,7 +136,7 @@ function ConvertTo-ApplicationServices
     Remove-PSSession -Session $session
 }
 
-&lt;#
+<#
     .SYNOPSIS
     Removes the given application services from the given Server.
 
@@ -145,7 +145,7 @@ function ConvertTo-ApplicationServices
 
     .PARAMETER ApplicationServicesInfo
     The [ApplicationServiceInformation[]] containing the applications to remove.
-#&gt;
+#>
 function Remove-ApplicationServices
 {
     [CmdletBinding()]
@@ -161,7 +161,7 @@ function Remove-ApplicationServices
 	    Write-Verbose "Removing Application Services..."
 
         # Import the WebAdministration module to make sure we have access to the required cmdlets and the IIS: drive.
-        Import-Module WebAdministration 4&gt; $null	# Don't write the verbose output.
+        Import-Module WebAdministration 4> $null	# Don't write the verbose output.
 
 	    # Remove all of the Web Applications, making sure they exist first (in order to avoid a PS error).
 	    foreach ($appInfo in [ApplicationServiceInformation[]]$ApplicationServicesInfo)
@@ -187,7 +187,7 @@ function Remove-ApplicationServices
     Remove-PSSession -Session $session
 }
 
-&lt;#
+<#
     .SYNOPSIS
     Removes the given application services from the given Server and deletes all associated files.
 
@@ -202,7 +202,7 @@ function Remove-ApplicationServices
 
     .PARAMETER DeleteEmptyParentDirectories
     If this switch is supplied, after the application services folder has been removed, it will recursively check parent folders and remove them if they are empty, until the Website root is reached.
-#&gt;
+#>
 function Delete-ApplicationServices
 {
     [CmdletBinding()]
@@ -220,7 +220,7 @@ function Delete-ApplicationServices
 	    Write-Verbose "Deleting Application Services..."
 
         # Import the WebAdministration module to make sure we have access to the required cmdlets and the IIS: drive.
-        Import-Module WebAdministration 4&gt; $null	# Don't write the verbose output.
+        Import-Module WebAdministration 4> $null	# Don't write the verbose output.
 
 	    # Remove all of the Web Applications and delete their files from disk.
 	    foreach ($appInfo in [ApplicationServiceInformation[]]$ApplicationServicesInfo)

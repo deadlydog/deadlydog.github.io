@@ -80,7 +80,7 @@ function Set-PackageToBeDevelopmentDependency($PackageId, $ProjectDirectoryPath)
     {
         Write-Debug "Found packages.config file at '$packagesConfigFilePath'."
 
-        # Load the packages.config xml document and grab all of the &lt;package&gt; elements.
+        # Load the packages.config xml document and grab all of the <package> elements.
         $xmlFile = New-Object System.Xml.XmlDocument
         $xmlFile.Load($packagesConfigFilePath)
         $packageElements = Get-XmlNodes -XmlDocument $xmlFile -NodePath "packages.package"
@@ -89,7 +89,7 @@ function Set-PackageToBeDevelopmentDependency($PackageId, $ProjectDirectoryPath)
 
         if (!($packageElements))
         {
-            Write-Debug "Could not find any &lt;package&gt; elements in the packages.config xml file '$packagesConfigFilePath'."
+            Write-Debug "Could not find any <package> elements in the packages.config xml file '$packagesConfigFilePath'."
             return
         }
 
@@ -129,36 +129,36 @@ As promised, here is a sample .nuspec file for those of you that are not familia
 
 <div class="wlWriterEditableSmartContent" id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:79e24873-4c96-40f7-8bed-e1937aba585e" style="float: none; margin: 0px; display: inline; padding: 0px;">
   <pre class="brush: xml; title: ; notranslate" title="">
-&lt;?xml version="1.0" encoding="utf-8"?&gt;
-&lt;package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd"&gt;
-  &lt;metadata&gt;
-    &lt;id&gt;CreateNewNuGetPackageFromProjectAfterEachBuild&lt;/id&gt;
-    &lt;version&gt;1.4.2&lt;/version&gt;
-    &lt;title&gt;Create New NuGet Package From Project After Each Build&lt;/title&gt;
-    &lt;authors&gt;Daniel Schroeder,iQmetrix&lt;/authors&gt;
-    &lt;owners&gt;Daniel Schroeder,iQmetrix&lt;/owners&gt;
-    &lt;licenseUrl&gt;https://newnugetpackage.codeplex.com/license&lt;/licenseUrl&gt;
-    &lt;projectUrl&gt;https://newnugetpackage.codeplex.com/wikipage?title=NuGet%20Package%20To%20Create%20A%20NuGet%20Package%20From%20Your%20Project%20After%20Every%20Build&lt;/projectUrl&gt;
-    &lt;requireLicenseAcceptance&gt;false&lt;/requireLicenseAcceptance&gt;
-    &lt;description&gt;Automatically creates a NuGet package from your project each time it builds. The NuGet package is placed in the project's output directory.
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>CreateNewNuGetPackageFromProjectAfterEachBuild</id>
+    <version>1.4.2</version>
+    <title>Create New NuGet Package From Project After Each Build</title>
+    <authors>Daniel Schroeder,iQmetrix</authors>
+    <owners>Daniel Schroeder,iQmetrix</owners>
+    <licenseUrl>https://newnugetpackage.codeplex.com/license</licenseUrl>
+    <projectUrl>https://newnugetpackage.codeplex.com/wikipage?title=NuGet%20Package%20To%20Create%20A%20NuGet%20Package%20From%20Your%20Project%20After%20Every%20Build</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Automatically creates a NuGet package from your project each time it builds. The NuGet package is placed in the project's output directory.
 	If you want to use a .nuspec file, place it in the same directory as the project's project file (e.g. .csproj, .vbproj, .fsproj).
 	This adds a PostBuildScripts folder to your project to house the PowerShell script that is called from the project's Post-Build event to create the NuGet package.
-	If it does not seem to be working, check the Output window for any errors that may have occurred.&lt;/description&gt;
-    &lt;summary&gt;Automatically creates a NuGet package from your project each time it builds.&lt;/summary&gt;
-    &lt;releaseNotes&gt;Updated to use latest version of New-NuGetPackage.ps1.&lt;/releaseNotes&gt;
-    &lt;copyright&gt;Daniel Schroeder 2013&lt;/copyright&gt;
-    &lt;tags&gt;Auto Automatic Automatically Build Pack Create New NuGet Package From Project After Each Build On PowerShell Power Shell .nupkg new nuget package NewNuGetPackage New-NuGetPackage&lt;/tags&gt;
-  &lt;/metadata&gt;
-  &lt;files&gt;
-    &lt;file src="..\New-NuGetPackage.ps1" target="content\PostBuildScripts\New-NuGetPackage.ps1" /&gt;
-    &lt;file src="Content\NuGet.exe" target="content\PostBuildScripts\NuGet.exe" /&gt;
-    &lt;file src="Content\BuildNewPackage-RanAutomatically.ps1" target="content\PostBuildScripts\BuildNewPackage-RanAutomatically.ps1" /&gt;
-    &lt;file src="Content\UploadPackage-RunManually.ps1" target="content\PostBuildScripts\UploadPackage-RunManually.ps1" /&gt;
-    &lt;file src="Content\UploadPackage-RunManually.bat" target="content\PostBuildScripts\UploadPackage-RunManually.bat" /&gt;
-    &lt;file src="tools\Install.ps1" target="tools\Install.ps1" /&gt;
-    &lt;file src="tools\Uninstall.ps1" target="tools\Uninstall.ps1" /&gt;
-  &lt;/files&gt;
-&lt;/package&gt;
+	If it does not seem to be working, check the Output window for any errors that may have occurred.</description>
+    <summary>Automatically creates a NuGet package from your project each time it builds.</summary>
+    <releaseNotes>Updated to use latest version of New-NuGetPackage.ps1.</releaseNotes>
+    <copyright>Daniel Schroeder 2013</copyright>
+    <tags>Auto Automatic Automatically Build Pack Create New NuGet Package From Project After Each Build On PowerShell Power Shell .nupkg new nuget package NewNuGetPackage New-NuGetPackage</tags>
+  </metadata>
+  <files>
+    <file src="..\New-NuGetPackage.ps1" target="content\PostBuildScripts\New-NuGetPackage.ps1" />
+    <file src="Content\NuGet.exe" target="content\PostBuildScripts\NuGet.exe" />
+    <file src="Content\BuildNewPackage-RanAutomatically.ps1" target="content\PostBuildScripts\BuildNewPackage-RanAutomatically.ps1" />
+    <file src="Content\UploadPackage-RunManually.ps1" target="content\PostBuildScripts\UploadPackage-RunManually.ps1" />
+    <file src="Content\UploadPackage-RunManually.bat" target="content\PostBuildScripts\UploadPackage-RunManually.bat" />
+    <file src="tools\Install.ps1" target="tools\Install.ps1" />
+    <file src="tools\Uninstall.ps1" target="tools\Uninstall.ps1" />
+  </files>
+</package>
 </pre>
 </div>
 

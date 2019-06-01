@@ -46,7 +46,7 @@ I typically use this following bit of code instead so that it only prompts for i
 if ($Host.Name -eq "ConsoleHost")
 {
 	Write-Host "Press any key to continue..."
-	$Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyUp") &gt; $null
+	$Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyUp") > $null
 }
 </pre>
 </div>
@@ -60,7 +60,7 @@ Adjust the registry keys used to run a PowerShell script to include the –NoExi
 <div class="wlWriterEditableSmartContent" id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:b994dfe5-5f5f-4b73-bf05-6bbf791539c8" style="float: none; margin: 0px; display: inline; padding: 0px;">
   <pre class="brush: plain; title: ; notranslate" title="">
 Registry Key: HKEY_CLASSES_ROOT\Applications\powershell.exe\shell\open\command
-Description: Key used when you right-click a .ps1 file and choose Open With -&gt; Windows PowerShell.
+Description: Key used when you right-click a .ps1 file and choose Open With -> Windows PowerShell.
 Default Value: "C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe" "%1"
 Desired Value: "C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe" "& \"%1\""
 
