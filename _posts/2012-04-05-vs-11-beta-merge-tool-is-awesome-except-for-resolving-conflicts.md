@@ -16,6 +16,7 @@ tags:
   - VS
   - VS 11
 ---
+
 If you've downloaded the new VS 11 Beta and done any merging, then you've probably seen the new diff and merge tools built into VS 11. They are awesome, and by far a vast improvement over the ones included in VS 2010. There is one problem with the merge tool though, and in my opinion it is huge.
 
 Basically the problem with the new VS 11 Beta merge tool is that when you are resolving conflicts after performing a merge, you cannot tell what changes were made in each file where the code is conflicting. Was the conflicting code added, deleted, or modified in the source and target branches? I don't know (without explicitly opening up the history of both the source and target files), and the merge tool doesn't tell me. In my opinion this is a huge fail on the part of the designers/developers of the merge tool, as it actually forces me to either spend an extra minute for every conflict to view the source and target file history, or to go back to use the merge tool in VS 2010 to properly assess which changes I should take.
