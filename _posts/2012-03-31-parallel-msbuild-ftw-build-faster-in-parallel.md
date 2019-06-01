@@ -24,7 +24,7 @@ Example to use 4 cores/processes (If you just pass in `/m` it will use all CPU c
 
 > MSBuild /m:4 /p:BuildInParallel=true "C:devClient.sln"
 
-Obviously this trick will only be useful on PCs with multi-core CPUs (which we should all have by now) and solutions with multiple projects; So there’s no point using it for solutions that only contain one project. Also, testing shows that using multiple processes does not speed up Team Foundation Database deployments either in case you’re curious 😉.
+Obviously this trick will only be useful on PCs with multi-core CPUs (which we should all have by now) and solutions with multiple projects; So there’s no point using it for solutions that only contain one project. Also, testing shows that using multiple processes does not speed up Visual Studio Database deployments either in case you’re curious 😉.
 
 Also, I found that if I didn’t explicitly use `/p:BuildInParallel=true` I would get many build errors (even though the [MSDN documentation](http://msdn.microsoft.com/en-us/library/bb651793.aspx) says that it is true by default).
 
