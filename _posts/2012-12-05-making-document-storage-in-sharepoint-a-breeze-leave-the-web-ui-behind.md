@@ -16,22 +16,23 @@ tags:
   - Sharepoint
   - storage
 ---
-Hey everyone, I know many of us regularly use Sharepoint for document storage in order to make documents available to several people, have it version controlled, etc. Doing this through the Web UI can be a real headache, especially when you have multiple documents you want to modify or upload, or when IE isn’t your default browse0; Luckily we can access the Sharepoint library like a regular network drive if we like.
 
-Open Sharepoint in Internet Explorer (other browsers don’t support the Open with Explorer functionality), navigate to wherever your documents are stored, choose the **Library** tab, and then click **Open with Explorer**.
+Hey everyone, I know many of us regularly use Sharepoint for document storage in order to make documents available to several people, have it version controlled, etc. Doing this through the Web UI can be a real headache, especially when you have multiple documents you want to modify or upload, or when IE isn't your default browse0; Luckily we can access the Sharepoint library like a regular network drive if we like.
 
-[<img title="clip_image001" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="clip_image001" src="/assets/Posts/2012/12/clip_image001_thumb.png" width="600" height="237" />](/assets/Posts/2012/12/clip_image001.png)
+Open Sharepoint in Internet Explorer (other browsers don't support the Open with Explorer functionality), navigate to wherever your documents are stored, choose the __Library__ tab, and then click __Open with Explorer__.
+
+![Open with Explorer](/assets/Posts/2012/12/clip_image001.png)
 
 This will open the document storage in Explorer and you can interact with the documents just like they were on any other network drive J This makes uploading large numbers of documents or directory structures super easy (a simple copy-paste), and modifying your files nice and easy.
 
-[<img title="clip_image002" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="clip_image002" src="/assets/Posts/2012/12/clip_image002_thumb.png" width="571" height="318" />](/assets/Posts/2012/12/clip_image002.png)
+![File Explorer](/assets/Posts/2012/12/clip_image002.png)
 
-As an added bonus, you can drag and drop that location from the address bar in Explorer to the Favorites menu so that it’s always easily accessible and you can leave the Sharepoint Web UI behind completely for modifying your document0; Just click on the new favorite to go straight to your documents.
+As an added bonus, you can drag and drop that location from the address bar in Explorer to the Favorites menu so that it's always easily accessible and you can leave the Sharepoint Web UI behind completely for modifying your document0; Just click on the new favorite to go straight to your documents.
 
-[<img title="clip_image003" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="clip_image003" src="/assets/Posts/2012/12/clip_image003_thumb.png" width="563" height="318" />](/assets/Posts/2012/12/clip_image003.png)
+![Add to Favorites](/assets/Posts/2012/12/clip_image003.png)
 
-[<img title="clip_image004" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="clip_image004" src="/assets/Posts/2012/12/clip_image004_thumb.png" width="586" height="334" />](/assets/Posts/2012/12/clip_image004.png)
+![Added to Favorites](/assets/Posts/2012/12/clip_image004.png)
 
 You can even map this folder location as a network drive if you want to have it show up as another drive (e.g N: drive).
 
-I hope you found this as useful as I did <img class="wlEmoticon wlEmoticon-smile" style="border-style:none;" alt="Smile" src="/assets/Posts/2012/12/wlemoticon-smile1.png" />
+I hope you found this as useful as I did :-)
