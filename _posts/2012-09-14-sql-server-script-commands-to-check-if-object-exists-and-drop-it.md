@@ -2,6 +2,7 @@
 id: 99
 title: SQL Server script commands to check if object exists and drop it
 date: 2012-09-14T14:03:00-06:00
+last_modified_at: 2019-06-01T00:00:00-00:00
 guid: https://deadlydog.wordpress.com/?p=99
 permalink: /sql-server-script-commands-to-check-if-object-exists-and-drop-it/
 jabber_published:
@@ -23,7 +24,7 @@ Over the past couple years I’ve been keeping track of common SQL Server script
 --===============================
 -- Create a new table and add keys and constraints
 --===============================
-IF NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'TableName' AND TABLE_SCHEMA='dbo')
+IF NOT EXISTS (SELECT 1 FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'TableName' AND TABLE_SCHEMA='dbo')
 BEGIN
 	CREATE TABLE [dbo].[TableName]
 	(
@@ -65,7 +66,7 @@ END
 --===============================
 -- Add a new column to an existing table
 --===============================
-IF NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.COLUMNS where TABLE_SCHEMA='dbo'
+IF NOT EXISTS (SELECT 1 FROM INFORMATION_SCHEMA.COLUMNS where TABLE_SCHEMA='dbo'
 	AND TABLE_NAME = 'TableName' AND COLUMN_NAME = 'ColumnName')
 BEGIN
 	ALTER TABLE [dbo].[TableName] ADD [ColumnName] INT NOT NULL DEFAULT(0)
@@ -81,28 +82,28 @@ END
 --===============================
 -- Drop a table
 --===============================
-IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'TableName' AND TABLE_SCHEMA='dbo')
+IF EXISTS (SELECT 1 FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'TableName' AND TABLE_SCHEMA='dbo')
 BEGIN
-	EXEC('DROP TABLE [dbo].[TableName]')
+	EXEC('DROP TABLE [TableName]')
 END
 
 --===============================
 -- Drop a view
 --===============================
-IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.VIEWS WHERE TABLE_NAME = 'ViewName' AND TABLE_SCHEMA='dbo')
+IF EXISTS (SELECT 1 FROM INFORMATION_SCHEMA.VIEWS WHERE TABLE_NAME = 'ViewName' AND TABLE_SCHEMA='dbo')
 BEGIN
-	EXEC('DROP VIEW [dbo].[ViewName]')
+	EXEC('DROP VIEW [ViewName]')
 END
 
 --===============================
 -- Drop a column
 --===============================
-IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.COLUMNS where TABLE_SCHEMA='dbo'
+IF EXISTS (SELECT 1 FROM INFORMATION_SCHEMA.COLUMNS where TABLE_SCHEMA='dbo'
 	AND TABLE_NAME = 'TableName' AND COLUMN_NAME = 'ColumnName')
 BEGIN
 
 	-- If the column has an extended property, drop it first.
-	IF EXISTS (SELECT * FROM sys.fn_listExtendedProperty(N'MS_Description', N'SCHEMA', N'dbo', N'Table',
+	IF EXISTS (SELECT 1 FROM sys.fn_listExtendedProperty(N'MS_Description', N'SCHEMA', N'dbo', N'Table',
 				N'TableName', N'COLUMN', N'ColumnName'))
 	BEGIN
 		EXEC sys.sp_dropextendedproperty @name=N'MS_Description',
@@ -111,43 +112,43 @@ BEGIN
 			@level2name = N'ColumnName'
 	END
 
-	EXEC('ALTER TABLE [dbo].[TableName] DROP COLUMN [ColumnName]')
+	EXEC('ALTER TABLE [TableName] DROP COLUMN [ColumnName]')
 END
 
 --===============================
 -- Drop Primary key constraint
 --===============================
-IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE CONSTRAINT_TYPE='PRIMARY KEY' AND TABLE_SCHEMA='dbo'
+IF EXISTS (SELECT 1 FROM INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE CONSTRAINT_TYPE='PRIMARY KEY' AND TABLE_SCHEMA='dbo'
 		AND TABLE_NAME = 'TableName' AND CONSTRAINT_NAME = 'PK_Name')
 BEGIN
-	EXEC('ALTER TABLE [dbo].[TableName] DROP CONSTRAINT [PK_Name]')
+	EXEC('ALTER TABLE [TableName] DROP CONSTRAINT [PK_Name]')
 END
 
 --===============================
 -- Drop Foreign key constraint
 --===============================
-IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE CONSTRAINT_TYPE='FOREIGN KEY' AND TABLE_SCHEMA='dbo'
+IF EXISTS (SELECT 1 FROM INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE CONSTRAINT_TYPE='FOREIGN KEY' AND TABLE_SCHEMA='dbo'
 		AND TABLE_NAME = 'TableName' AND CONSTRAINT_NAME = 'FK_Name')
 BEGIN
-	EXEC('ALTER TABLE [dbo].[TableName] DROP CONSTRAINT [FK_Name]')
+	EXEC('ALTER TABLE [TableName] DROP CONSTRAINT [FK_Name]')
 END
 
 --===============================
 -- Drop Unique key constraint
 --===============================
-IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE CONSTRAINT_TYPE='UNIQUE' AND TABLE_SCHEMA='dbo'
+IF EXISTS (SELECT 1 FROM INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE CONSTRAINT_TYPE='UNIQUE' AND TABLE_SCHEMA='dbo'
 		AND TABLE_NAME = 'TableName' AND CONSTRAINT_NAME = 'UNI_Name')
 BEGIN
-	EXEC('ALTER TABLE [dbo].[TableNames] DROP CONSTRAINT [UNI_Name]')
+	EXEC('ALTER TABLE [TableNames] DROP CONSTRAINT [UNI_Name]')
 END
 
 --===============================
 -- Drop Check constraint
 --===============================
-IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE CONSTRAINT_TYPE='CHECK' AND TABLE_SCHEMA='dbo'
+IF EXISTS (SELECT 1 FROM INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE CONSTRAINT_TYPE='CHECK' AND TABLE_SCHEMA='dbo'
 		AND TABLE_NAME = 'TableName' AND CONSTRAINT_NAME = 'CH_Name')
 BEGIN
-	EXEC('ALTER TABLE [dbo].[TableName] DROP CONSTRAINT [CH_Name]')
+	EXEC('ALTER TABLE [TableName] DROP CONSTRAINT [CH_Name]')
 END
 
 --===============================
@@ -155,12 +156,12 @@ END
 --===============================
 DECLARE @ConstraintName VARCHAR(100)
 SET @ConstraintName = (SELECT TOP 1 s.name FROM sys.sysobjects s JOIN sys.syscolumns c ON s.parent_obj=c.id
-						WHERE s.xtype='d' AND c.cdefault=s.id
+						WHERE s.xtype='d' AND c.cdefault=s.ID
 						AND parent_obj = OBJECT_ID('TableName') AND c.name ='ColumnName')
 
 IF @ConstraintName IS NOT NULL
 BEGIN
-	EXEC('ALTER TABLE [dbo].[TableName] DROP CONSTRAINT ' + @ConstraintName)
+	EXEC('ALTER TABLE [TableName] DROP CONSTRAINT ' + @ConstraintName)
 END
 
 --===============================
@@ -171,10 +172,10 @@ SET @ConstraintName = (SELECT TOP 1 CONSTRAINT_NAME FROM INFORMATION_SCHEMA.TABL
 						WHERE CONSTRAINT_TYPE='UNIQUE' AND TABLE_SCHEMA='dbo'
 						AND TABLE_NAME = 'TableName' AND CONSTRAINT_NAME LIKE 'FirstPartOfConstraintName%')
 
-IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE CONSTRAINT_TYPE='UNIQUE' AND TABLE_SCHEMA='dbo'
+IF EXISTS (SELECT 1 FROM INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE CONSTRAINT_TYPE='UNIQUE' AND TABLE_SCHEMA='dbo'
 		AND TABLE_NAME = 'TableName' AND CONSTRAINT_NAME = @ConstraintName)
 BEGIN
-	EXEC('ALTER TABLE [dbo].[TableName] DROP CONSTRAINT ' + @ConstraintName)
+	EXEC('ALTER TABLE [TableName] DROP CONSTRAINT ' + @ConstraintName)
 END
 
 --===============================
@@ -185,7 +186,7 @@ IF OBJECT_ID('tempdb..#TableName') IS NOT NULL DROP TABLE #TableName
 --===============================
 -- Drop a stored procedure
 --===============================
-IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.ROUTINES WHERE ROUTINE_TYPE='PROCEDURE' AND ROUTINE_SCHEMA='dbo' AND
+IF EXISTS (SELECT 1 FROM INFORMATION_SCHEMA.ROUTINES WHERE ROUTINE_TYPE='PROCEDURE' AND ROUTINE_SCHEMA='dbo' AND
 		ROUTINE_NAME = 'StoredProcedureName')
 BEGIN
 	EXEC('DROP PROCEDURE [dbo].[StoredProcedureName]')
@@ -194,34 +195,51 @@ END
 --===============================
 -- Drop a UDF
 --===============================
-IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.ROUTINES WHERE ROUTINE_TYPE='FUNCTION' AND ROUTINE_SCHEMA='dbo' AND
+IF EXISTS (SELECT 1 FROM INFORMATION_SCHEMA.ROUTINES WHERE ROUTINE_TYPE='FUNCTION' AND ROUTINE_SCHEMA='dbo' AND
 		ROUTINE_NAME = 'UDFName')
 BEGIN
-	EXEC('DROP FUNCTION [dbo].[UDFName]')
+	EXEC('DROP FUNCTION [UDFName]')
 END
 
 --===============================
 -- Drop an Index
 --===============================
-IF EXISTS (SELECT * FROM SYS.INDEXES WHERE name = 'IndexName')
+IF EXISTS (SELECT 1 FROM SYS.INDEXES WHERE name = 'IndexName')
 BEGIN
-	EXEC('DROP INDEX TableName.IndexName')
+	EXEC('DROP INDEX [IndexName] ON [TableName]')
 END
 
 --===============================
 -- Drop a Schema
 --===============================
-IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.SCHEMATA WHERE SCHEMA_NAME = 'SchemaName')
+IF EXISTS (SELECT 1 FROM INFORMATION_SCHEMA.SCHEMATA WHERE SCHEMA_NAME = 'SchemaName')
 BEGIN
-	EXEC('DROP SCHEMA SchemaName')
+	EXEC('DROP SCHEMA [SchemaName]')
 END
 
 --===============================
 -- Drop a Trigger
 --===============================
-IF EXISTS (SELECT * FROM SYS.TRIGGERS WHERE NAME = 'TriggerName')
+IF EXISTS (SELECT 1 FROM SYS.TRIGGERS WHERE name = 'TriggerName')
 BEGIN
-	EXEC('DROP TRIGGER TriggerName')
+	EXEC('DROP TRIGGER [TriggerName]')
+END
+
+--===============================
+-- Drop a custom Type
+--===============================
+DECLARE @SchemaId INT = (SELECT schema_id FROM sys.schemas WHERE [name] = 'dbo')
+IF EXISTS (SELECT 1 FROM SYS.TYPES WHERE schema_id = @SchemaId AND name = 'TypeName')
+BEGIN
+	EXEC('DROP TYPE [dbo].[TypeName]')
+END
+
+--===============================
+-- Drop a Service Broker Message Type
+--===============================
+IF EXISTS (SELECT 1 FROM SYS.SERVICE_MESSAGE_TYPES WHERE name = 'MessageTypeName')
+BEGIN
+	EXEC('DROP TYPE [TypeName]')
 END
 ```
 
