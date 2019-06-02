@@ -2,6 +2,7 @@
 
 - Go through and update all posts to use proper markdown and get rid of html. Will go through posts oldest to newest.
   - Currently processing page: 2012-09-14-sql-server-script-commands-to-check-if-object-exists-and-drop-it.m
+- Search for `160;` to make sure none were missed that need to be fixed up.
 - Fix up all build errors and warnings.
 - Convert tabs to 4 spaces in all posts for less indentation in the final result.
 - Maybe convert all double spaces after a period to single spaces.
