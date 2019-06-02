@@ -1,7 +1,7 @@
 # List of things to still do to the blog
 
 - Go through and update all posts to use proper markdown and get rid of html. Will go through posts oldest to newest.
-  - Currently processing page: 2013-09-27-wlw-post-fails-with-error-the-underlying-connection-was-closed-an-unexpected-error-occurred-on-a-receive.md
+  - Currently processing page: 2013-10-01-windows-phone-developers-do-not-renew-your-subscription-until-the-expiry-day-or-else-microsoft-steals-your-money.md
 - Search for `160;` and just `0;` to make sure none were missed that need to be fixed up.
 - Fix up all build errors and warnings.
 - Convert tabs to 4 spaces in all posts for less indentation in the final result.
