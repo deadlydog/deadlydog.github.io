@@ -22,113 +22,89 @@ tags:
   - Uncomment
   - Windows PowerShell ISE
 ---
+
 I’ve written some code that you can add to your ISE profile that adds keyboard shortcuts to quickly comment and uncomment lines in PowerShell ISE. So you can quickly turn this:
 
-<div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:5d350a70-cbe6-463e-a3ff-77edd19c556e" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal>
-
-  <pre class="brush: powershell; title: ; notranslate" title="">
+```powershell
 This is some
 	code and here is
 some more code.
-</pre>
-</div>
+```
 
 into this:
 
-<div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:1daa462a-e68d-4520-9f23-31ddf6dc6b7c" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal>
-
-  <pre class="brush: powershell; title: ; notranslate" title="">
+```powershell
 #This is some
 #	code and here is
 #some more code.
-</pre>
-</div>
+```
 
 and back again.
 
 Feel free to skip the Preamble and get right to the good stuff.
 
-
-
 ## Preamble
 
-I’ve only been writing PowerShell (PS) for about 6 months now, and have a love-hate relationship with it. It is simply a wonderful tool...once you understand how it works and have learnt some of the nuances. I’ve gotten hung up for hours on end with things that should be simple, but aren’t. For example, if you have an array of strings, but the array actually only contains a single string, when you go to iterate over the array instead of giving you the string it will iterator over the characters in the string....but if you have multiple strings in your array then everything works fine (btw the trick is you have to explicitly cast your array to a string array when iterating over it). This is only one small example, but I’ve found I’ve hit many little Gotcha’s like this since I started with PS. So PS is a great tool, but has a deceptively steep learning curve in my opinion; it’s easy to get started with it, especially if you have a .Net background, but there are many small roadblocks that just shouldn’t be there. Luckily, we have [Stack Overflow](http://stackoverflow.com/) <img class="wlEmoticon wlEmoticon-smile" style="border-top-style: none; border-left-style: none; border-bottom-style: none; border-right-style: none" alt="Smile" src="/assets/Posts/2013/06/wlEmoticon-smile.png" />
+I’ve only been writing PowerShell (PS) for about 6 months now, and have a love-hate relationship with it. It is simply a wonderful tool...once you understand how it works and have learnt some of the nuances. I’ve gotten hung up for hours on end with things that should be simple, but aren’t. For example, if you have an array of strings, but the array actually only contains a single string, when you go to iterate over the array instead of giving you the string it will iterator over the characters in the string....but if you have multiple strings in your array then everything works fine (btw the trick is you have to explicitly cast your array to a string array when iterating over it). This is only one small example, but I’ve found I’ve hit many little Gotcha’s like this since I started with PS. So PS is a great tool, but has a deceptively steep learning curve in my opinion; it’s easy to get started with it, especially if you have a .Net background, but there are many small roadblocks that just shouldn’t be there. Luckily, we have [Stack Overflow](http://stackoverflow.com/) :-)
 
-Anyways, as a PS newb one of the first things I did was go look for a nice editor to work in; <u>intellisense was a must</u>. First I tried PowerShell ISE v3 since it comes with Windows out of the box, but was quickly turned off at how featureless the GUI is. Here’s a quick list of lacking UI components that immediately turned me off of ISE’s Script Pane:
+Anyways, as a PS newb one of the first things I did was go look for a nice editor to work in; __intellisense was a must__. First I tried PowerShell ISE v3 since it comes with Windows out of the box, but was quickly turned off at how featureless the GUI is. Here’s a quick list of lacking UI components that immediately turned me off of ISE’s Script Pane:
 
-  1. No keyboard shortcut to quickly comment/uncomment code ([go up-vote to get this added](https://connect.microsoft.com/PowerShell/feedback/details/711231/ise-v3-need-to-be-able-to-comment-a-series-of-lines-in-a-block-of-code)).
-  2. No "Save All Files" keyboard shortcut ([go up-vote to get this added](https://connect.microsoft.com/PowerShell/feedback/details/790577/windows-powershell-ise-implement-a-save-all-files-feature-and-tie-it-to-ctrl-shift-s)).
-  3. No ability to automatically reopen files that were open when I closed ISE; there’s the Recent Documents menu, but that’s an extra 10 clicks every time I open ISE ([go up-vote to get this added](https://connect.microsoft.com/PowerShell/feedback/details/790578/windows-powershell-ise-add-ability-to-save-load-session-state)).
-  4. Can not split the tab windows to show two files side by side ([go up-vote to get this added](https://connect.microsoft.com/PowerShell/feedback/details/790581/windows-powershell-ise-add-ability-to-show-multiple-editors-side-by-side)).
-  5. Can not drag a tab out of ISE to show it on another monitor ([go up-vote to get this added](https://connect.microsoft.com/PowerShell/feedback/details/698161/powershell-ise-pane-breakout-for-multi-monitor-use)).
-  6. Can not enter tabs on the end of lines; I do this all of the time to line up my comments placed on the end of the code line. I’m guessing this is "by design" though to allow the tab-completion to work (I show a workaround for this [in this post](http://dans-blog.azurewebsites.net/add-ability-to-add-tabs-to-the-end-of-a-line-in-windows-powershell-ise/)).
-  7. Find/Replace window does not have an option to wrap around the end of the file; it will only search down or up depending on if the Search Up checkbox is checked ([go up-vote to get this added](https://connect.microsoft.com/PowerShell/feedback/details/790583/windows-powershell-ise-add-wrap-around-option-to-find-replace-dialogues)).
-  8. Can’t simply use Ctrl+F3 to search for the current/selected word/text; you have to use the actual Find window ([go up-vote to get this added](https://connect.microsoft.com/PowerShell/feedback/details/790584/windows-powershell-ise-add-keyboard-shortcuts-for-finding-text-in-a-file)).
-  9. When you perform an undo/redo, the caret and view don’t jump to the text being undone/redone, so if the text being changed is outside of the viewable area you can’t see what is being changed ([up-vote to get this fixed](https://connect.microsoft.com/PowerShell/feedback/details/790586/windows-powershell-ise-caret-and-view-do-not-jump-to-text-being-undone-redone)).
- 10.  Can not re-arrange tabs; you have to close and reopen them if you want to change their order ([go up-vote to get this added](https://connect.microsoft.com/PowerShell/feedback/details/790585/windows-powershell-ise-add-ability-to-rearrange-tabs)).
- 11.  The intellisense sometimes becomes intermittent or stops all together and you have to restart ISE ([go up-vote to get this fixed](https://connect.microsoft.com/PowerShell/feedback/details/772736/powershell-ise-v3-rtm-intellisense-does-not-show-up-consistently)).
- 12.  Double-clicking a cmdlet or variable name does not select the entire cmdlet/variable name; e.g. doesn’t fully select "Get-Help" or "$variable" ([go up-vote to get this added](https://connect.microsoft.com/PowerShell/feedback/details/790661/windows-powershell-ise-double-click-should-select-entire-cmdlet-variable-name)).
+1. No keyboard shortcut to quickly comment/uncomment code ([go up-vote to get this added](https://connect.microsoft.com/PowerShell/feedback/details/711231/ise-v3-need-to-be-able-to-comment-a-series-of-lines-in-a-block-of-code)).
+1. No "Save All Files" keyboard shortcut ([go up-vote to get this added](https://connect.microsoft.com/PowerShell/feedback/details/790577/windows-powershell-ise-implement-a-save-all-files-feature-and-tie-it-to-ctrl-shift-s)).
+1. No ability to automatically reopen files that were open when I closed ISE; there’s the Recent Documents menu, but that’s an extra 10 clicks every time I open ISE ([go up-vote to get this added](https://connect.microsoft.com/PowerShell/feedback/details/790578/windows-powershell-ise-add-ability-to-save-load-session-state)).
+1. Can not split the tab windows to show two files side by side ([go up-vote to get this added](https://connect.microsoft.com/PowerShell/feedback/details/790581/windows-powershell-ise-add-ability-to-show-multiple-editors-side-by-side)).
+1. Can not drag a tab out of ISE to show it on another monitor ([go up-vote to get this added](https://connect.microsoft.com/PowerShell/feedback/details/698161/powershell-ise-pane-breakout-for-multi-monitor-use)).
+1. Can not enter tabs on the end of lines; I do this all of the time to line up my comments placed on the end of the code line. I’m guessing this is "by design" though to allow the tab-completion to work (I show a workaround for this [in this post](http://dans-blog.azurewebsites.net/add-ability-to-add-tabs-to-the-end-of-a-line-in-windows-powershell-ise/)).
+1. Find/Replace window does not have an option to wrap around the end of the file; it will only search down or up depending on if the Search Up checkbox is checked ([go up-vote to get this added](https://connect.microsoft.com/PowerShell/feedback/details/790583/windows-powershell-ise-add-wrap-around-option-to-find-replace-dialogues)).
+1. Can’t simply use Ctrl+F3 to search for the current/selected word/text; you have to use the actual Find window ([go up-vote to get this added](https://connect.microsoft.com/PowerShell/feedback/details/790584/windows-powershell-ise-add-keyboard-shortcuts-for-finding-text-in-a-file)).
+1. When you perform an undo/redo, the caret and view don’t jump to the text being undone/redone, so if the text being changed is outside of the viewable area you can’t see what is being changed ([up-vote to get this fixed](https://connect.microsoft.com/PowerShell/feedback/details/790586/windows-powershell-ise-caret-and-view-do-not-jump-to-text-being-undone-redone)).
+1. Can not re-arrange tabs; you have to close and reopen them if you want to change their order ([go up-vote to get this added](https://connect.microsoft.com/PowerShell/feedback/details/790585/windows-powershell-ise-add-ability-to-rearrange-tabs)).
+1. The intellisense sometimes becomes intermittent or stops all together and you have to restart ISE ([go up-vote to get this fixed](https://connect.microsoft.com/PowerShell/feedback/details/772736/powershell-ise-v3-rtm-intellisense-does-not-show-up-consistently)).
+1. Double-clicking a cmdlet or variable name does not select the entire cmdlet/variable name; e.g. doesn’t fully select "Get-Help" or "$variable" ([go up-vote to get this added](https://connect.microsoft.com/PowerShell/feedback/details/790661/windows-powershell-ise-double-click-should-select-entire-cmdlet-variable-name)).
 
 It took me all of 5 minutes to say "ISE is not a mature enough editor for me"; I guess I’ve been spoiled by working in Visual Studio for so many years. So I went and found [PowerGUI](http://powergui.org/index.jspa), which was pretty good and I liked it quite a bit at first. It’s been a while since I’ve used it so honestly I can’t remember all of the reasons why I decided to switch away from it. I remember one problem of having to constantly start a new PS session in order to pick up changes to functions that I made (I think they had a button for that at least), as well as intellisense not being reliable, and having problems with debugging. Anyways, I decided to switch to [PowerShellPlus](http://www.idera.com/productssolutions/freetools/powershellplus) and was much happier with it. It still wasn’t perfect; I still had problems with intellisense and debugging, but I was still happy. I especially liked that I could search for and download other people’s script easily from it, which is great for learning. As I kept using it though, it kept taking longer and longer to load. After about 3 months I found myself waiting about a minute for it to open, and then once it was open, another 15 seconds or so to open all of my previously open tabs; and I have an SSD. So I thought I would give ISE another shot, mainly because it is already installed by default and I now know that I can customize it somewhat with the add-ons.
-
-
 
 ## Other Must Have ISE GUI Add-ons
 
 After looking for not too long, I found posts on [the PowerShell Team’s blog](http://blogs.msdn.com/b/powershell/) which address the [Save All](http://blogs.msdn.com/b/powershell/archive/2010/06/05/save-all-powershell-ise-files-for-thor-s-sake.aspx) and [Save/Restore ISE State](http://blogs.msdn.com/b/powershell/archive/2010/06/05/export-and-import-powershell-ise-opened-files.aspx) issues (#2 and #3 in my list above). These are must haves, and I provide them alongside my code in the last section below.
 
-
-
 ## Why My Implementation Is Better
 
-**<u>Other solutions and why they suck:</u>**
+### Other solutions and why they suck
 
 So of course before writing my own multiline comment/uncomment code I went searching for an existing solution, and I did find two. The first one was recommended by [Ed Wilson (aka Hey, Scripting Guy!)](http://blogs.technet.com/b/heyscriptingguy/) at the bottom of [this post](http://blogs.technet.com/b/heyscriptingguy/archive/2010/11/19/automatically-add-comments-in-powershell-work-with-text-files-and-customize-office-communicator.aspx). He recommended using the [PowerShellPack](http://archive.msdn.microsoft.com/PowerShellPack). I downloaded it, added it to my PS profile, and gave it a try. I was instantly disappointed. The [other solution I found](http://gallery.technet.microsoft.com/PowerShell-ISE-Add-On-to-38ec9dab) was by Clatonh (a Microsoft employee). Again, I added his code to my ISE profile to try it out, and was disappointed.
 
 Here are the problems with their solutions:
 
-  1. If you only have part of a line selected, it places the comment character at the beginning of your selection, not at the beginning of the line (undesirable, both).
-  2. If you don’t have any text selected, nothing gets commented out (undesirable, both).
-  3. If you have any blank lines selected in your multiline selection, it removes them (unacceptable, PowerShellPack only).
-  4. It uses block comments (i.e. <# ... #>)! (unacceptable (block comments are the devil), Clatonh’s solution only) I’m not sure if the PowerShellPack problems are because it was written for PS v2 and I’m using v3 on Windows 8, but either way that was unacceptable for me.
+1. If you only have part of a line selected, it places the comment character at the beginning of your selection, not at the beginning of the line (undesirable, both).
+1. If you don’t have any text selected, nothing gets commented out (undesirable, both).
+1. If you have any blank lines selected in your multiline selection, it removes them (unacceptable, PowerShellPack only).
+1. It uses block comments (i.e. <# ... #>)! (unacceptable (block comments are the devil), Clatonh’s solution only) I’m not sure if the PowerShellPack problems are because it was written for PS v2 and I’m using v3 on Windows 8, but either way that was unacceptable for me.
 
 You might be wondering why #4 is on my list and why I hate block comments so much. Block comments themselves aren’t _entirely_ a bad idea; the problem is that 99% of editors (including PS ISE) don’t handle nested block comments properly. For example, if I comment out 3 lines in a function using block comments, and then later go and comment out the entire function using block comments, I’ll get a compiler error (or in PS’s case, a run-time error); this is because the first closing "#>" tag will be considered the closing tag for both the 1st and 2nd opening "<#" tags; so everything between the 1st and 2nd closing "#>" tag won’t actually be commented out. Because of this it is just easier to avoid block comments all together, even for that paragraph of comment text you are about to write (you do comment your code, right?).
 
-**<u>My Solution:</u>**
+### My Solution
 
-  1. Uses single line comments (no block comments!).
-  2. Places the comment character at the beginning of the line, even if you have middle of line selected.
-  3. Comments out the line that the caret is on if no text is selected.
-  4. Preserves blank lines, and doesn’t comment them out.
-
-
+1. Uses single line comments (no block comments!).
+1. Places the comment character at the beginning of the line, even if you have middle of line selected.
+1. Comments out the line that the caret is on if no text is selected.
+1. Preserves blank lines, and doesn’t comment them out.
 
 ## Show Me The Code
 
-Before I give you the code, we are going to want to add it to your PowerShell **ISE** profile, so we need to open that file.
+Before I give you the code, we are going to want to add it to your PowerShell __ISE__ profile, so we need to open that file.
 
-<u>To edit your PowerShell ISE profile:</u>
+To edit your PowerShell ISE profile:
 
-  1. Open **Windows PowerShell ISE** (not Windows PowerShell, as we want to edit the ISE profile instead of the regular PowerShell profile).
-  2. In the Command window type: **psedit $profile
-
-
-** If you get an error that it cannot find the path, then first type the following to create the file before trying #2 again: **New-Item $profile –ItemType File –Force**
+1. Open __Windows PowerShell ISE__ (not Windows PowerShell, as we want to edit the ISE profile instead of the regular PowerShell profile).
+1. In the Command window type: \*\*psedit $profile
+    If you get an error that it cannot find the path, then first type the following to create the file before trying #2 again: `New-Item $profile –ItemType File –Force`
 
 And now that you have your PowerShell ISE profile file open for editing, here’s the code to append to it in order to get the comment/uncomment commands and keyboard shortcuts (or keep reading and get ALL the code from further down). You will then need to restart PowerShell ISE for the new commands to show up and work. I’ll mention too that I’ve only tested this on Windows 8 with PowerShell v3.0.
 
-<div id="scid:fb3a1972-4489-4e52-abe7-25a00bb07fdf:58862c22-befe-4b77-bb11-5c61d2cc7aa1" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <p>
-    <a href="/assets/Posts/2013/09/CommentSelectedLines.zip" target="_blank">Download The Code</a>
-  </p>
-</div>
+[Download The Code](/assets/Posts/2013/09/CommentSelectedLines.zip)
 
-<div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:82ea387e-6fc6-4b8f-8b45-0fa739aea0be" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal>
-
-  <pre class="brush: powershell; pad-line-numbers: true; title: ; notranslate" title="">
+```powershell
 # Define our constant variables.
 [string]$NEW_LINE_STRING = "`r`n"
 [string]$COMMENT_STRING = "#"
@@ -436,21 +412,15 @@ if (!($psISE.CurrentPowerShellTab.AddOnsMenu.Submenus | Where-Object { $_.Displa
 {
     $psISE.CurrentPowerShellTab.AddOnsMenu.Submenus.Add("Uncomment Selected Lines",{Uncomment-IseSelectedLines},"Ctrl+Shift+K")
 }
-</pre>
-</div>
+```
 
-As you can see by the code at the bottom, the keyboard shortcut to comment lines is **Ctrl+K** and to uncomment it is **Ctrl+Shift+K**. Feel free to change these if you like. I wanted to use the Visual Studio keyboard shortcut keys of Ctrl+K,Ctrl+C and Ctrl+K,Ctrl+U, but it looks like multi-sequence keyboard shortcuts aren’t supported. I figured that anybody who uses Visual Studio or SQL Server Management Studio would be able to stumble across this keyboard shortcut and would like it.
+As you can see by the code at the bottom, the keyboard shortcut to comment lines is __Ctrl+K__ and to uncomment it is __Ctrl+Shift+K__. Feel free to change these if you like. I wanted to use the Visual Studio keyboard shortcut keys of Ctrl+K,Ctrl+C and Ctrl+K,Ctrl+U, but it looks like multi-sequence keyboard shortcuts aren’t supported. I figured that anybody who uses Visual Studio or SQL Server Management Studio would be able to stumble across this keyboard shortcut and would like it.
 
-
-
-**<u>Ok, it’s not perfect:</u>**
+### Ok, it’s not perfect
 
 If you’re still reading then you deserve to know about the edge case bug with my implementation. If you actually read through the functions’ documentation in the code you will see this mentioned there as well.
 
-<div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:d91d2e85-b69d-4773-bd6d-48fb9f6ad4b4" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal>
-
-  <pre class="brush: plain; title: ; notranslate" title="">
+```text
 Edge Case:
     - When the selected text occurs multiple times in the document, directly above or below the selected text.
 
@@ -462,27 +432,17 @@ Edge Case:
     - If only the first two lines are selected, when you run this command it may comment out the 1st and 2nd lines correctly, or it may comment out the 2nd and 3rd lines, depending on
     if the caret is on the 1st line or 2nd line when selecting the text (i.e. the text is selected bottom-to-top vs. top-to-bottom).
     - Since the lines are typically identical for this edge case to occur, you likely won't really care which 2 of the 3 lines get uncommented, so it shouldn't be a big deal.
-</pre>
-</div>
+```
 
 Basically the problem is that I change the selected text to ensure that the entire lines are selected (so that I can put the comment character at the start of the line). The PS ISE API doesn’t tell me the selected text’s starting and ending lines, so I have to try and infer it from the line the caret is on, but the caret can be on either the first or the last line of the selected text. So if text that is identical to the selected text appears directly above or below the selected text, I can’t know for sure if the caret is on the first line of the selected text, or the last line, so I just make a guess. If this bothers you there is a switch you can provide so that it won’t comment out any lines at all if this edge case is hit.
-
-
 
 ## Show Me ALL The Code
 
 Ok, so I mentioned a couple other must-have ISE add-ons above. Here’s the code to add to your ISE profile that includes my comment/uncomment code, as well as the Save All files and Save/Restore ISE State functionality provided by [the PowerShell Team](http://blogs.msdn.com/b/powershell/). This includes a couple customizations that I made; namely adding a Save ISE State And Exit command (Alt+Shift+E) and having the ISE State automatically load when PS ISE starts (I didn’t change the functions they provided that do the actual work at all). So if you want your last session to be automatically reloaded, you just have to get in the habit of closing ISE with Alt+Shift+E (again, you can change this keyboard shortcut if you want).
 
-<div id="scid:fb3a1972-4489-4e52-abe7-25a00bb07fdf:671096ee-632f-4329-af4d-3a4c79a23e5c" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <p>
-    <a href="/assets/Posts/2013/09/CommentSelectedLinesPlusOthers.zip" target="_blank">Download The Code</a>
-  </p>
-</div>
+[Download The Code](/assets/Posts/2013/09/CommentSelectedLinesPlusOthers.zip)
 
-<div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:86dcfab3-093a-4c30-91e5-7242127eda3e" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal>
-
-  <pre class="brush: powershell; pad-line-numbers: true; title: ; notranslate" title="">
+```powershell
 #==========================================================
 # Functions used by the script.
 #==========================================================
@@ -1069,10 +1029,7 @@ if (($psISE.PowerShellTabs.Count -eq 1) -and ($psISE.CurrentPowerShellTab.Files.
 
 # Clear the screen so we don't see any output when opening a new session.
 Clear-Host
-</pre>
-</div>
-
-
+```
 
 Hopefully this post makes your ISE experience a little better. Feel free to comment and let me know if you like this or find any problems with it. Know of any other must-have ISE add-ons? Let me know.
 
