@@ -24,7 +24,7 @@ A while ago [I blogged about a powershell script I made](http://dans-blog.azurew
 
 There was a bit of setup to get this to work.  You had to make sure the powershell script was in the proper directory and add a post-build event to your project.  I’m happy to announce that I’ve significantly updated the powershell script with more features and bug fixes, and __you can now install it from NuGet, which will handle all of the setup for you__.  So now making sure that your end-users are always using the latest version of your application is as easy as adding the [AutoUpdateProjectsMinimumRequiredClickOnceVersion NuGet package](https://nuget.org/packages/AutoUpdateProjectsMinimumRequiredClickOnceVersion) to your ClickOnce project.
 
-![ManageNuget](/assets/Posts/2013/03/managenuget.png)
+![Manage NuGet](/assets/Posts/2013/03/managenuget.png)
 
 ![Install](/assets/Posts/2013/03/install.png)
 
