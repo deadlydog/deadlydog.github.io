@@ -15,6 +15,7 @@ tags:
   - PowerShell
   - script
 ---
+
 __Update:__ I’ve moved this project to it’s own new home at https://invokemsbuild.codeplex.com. All updates will be made there.
 
 I’ve spent a little while creating a powershell module that can be used to call MsBuild. It returns whether the build succeeded or not, and runs through the Visual Studio command prompt if possible, since some projects can’t be built by calling msbuild directly (e.g. XNA projects). It also provides several other parameters to do things like show the window performing the build, automatically open the build log if the build fails, etc.
