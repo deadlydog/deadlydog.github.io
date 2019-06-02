@@ -14,9 +14,10 @@ tags:
   - Package
   - PowerShell
 ---
-**TL;DR** – PowerShell needs centralized package management. Please [go up-vote this request to have it added to PowerShell](https://connect.microsoft.com/PowerShell/feedback/details/800050/centralized-package-management-for-powershell).
 
-* * *
+__TL;DR__ - PowerShell needs centralized package management. Please [go up-vote this request to have it added to PowerShell](https://connect.microsoft.com/PowerShell/feedback/details/800050/centralized-package-management-for-powershell).
+
+---
 
 I love PowerShell, and I love writing reusable PowerShell modules. They work great when I am writing scripts for myself. The problem comes in when I write a script that depends on some modules, and I then want to share that script with others. I basically have 2 options:
 
@@ -33,6 +34,10 @@ If you have thoughts on centralized package management for PowerShell, or have a
 
 Happy coding!
 
-[Update]
+## Update
 
 While PowerShell does not provide a native module management solution, Joel "Jaykul" Bennett [has written one](http://poshcode.org/PoshCode.psm1) and all of the modules are hosted at <http://poshcode.org/>, although I believe it can download modules from other sources as well (e.g. GitHub or any other URL). One place that it cannot download files from is CodePlex since CodePlex does not provide direct download links to the latest versions of files or to their download links (it is done through Javascript). Please go up-vote [this issue](https://codeplex.codeplex.com/workitem/26859) and [this issue](https://codeplex.codeplex.com/workitem/25828) to try and get this restriction removed.
+
+## Update 2
+
+PowerShell does not provide a native module management solution using the `PowerShellGet` module with modules hosted on [the PowerShell Gallery](https://www.powershellgallery.com/) :-)
