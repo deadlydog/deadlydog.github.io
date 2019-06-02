@@ -13,26 +13,21 @@ tags:
   - Password
   - Windows
 ---
-If you are like me and don't want to have to enter your password each time Windows loads, you can have Windows start up without prompting you to enter a user name or password. The simple (and BAD) way to do this is to simply not have a password on your user account, but that’s a big security risk and will allow people to easily remote desktop into your computer.
 
-So, first set a password on your windows account if you don’t already have on0; Then select **R...0;** from the start menu (or use Windows Key + R to open the Run window) and type **control userpasswords2**, which will open the user accounts application.
+If you are like me and don't want to have to enter your password each time Windows loads, you can have Windows start up without prompting you to enter a user name or password. The simple (and BAD) way to do this is to simply not have a password on your user account, but that's a big security risk and will allow people to easily remote desktop into your computer.
 
-[<img title="image" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="image" src="/assets/Posts/2012/12/image_thumb.png" width="417" height="218" />](/assets/Posts/2012/12/image.png)
+So, first set a password on your windows account if you don't already have on0; Then select `Run...` from the start menu (or use Windows Key + R to open the Run window) and type `control userpasswords2`, which will open the user accounts application.
 
+![Run command](/assets/Posts/2012/12/image.png)
 
+On the Users tab, clear the box for `Users must enter a user name and password to use this computer`, and click on OK. An Automatically Log On dialog box will appear; enter the user name and password for the account you want to use to automatically log into Windows. That's it.
 
-On the Users tab, clear the box for **Users must enter a user name and password to use this computer**, and click on OK. An Automatically Log On dialog box will appear; enter the user name and password for the account you want to use to automatically log into Windows. That's it.
-
-[<img title="image" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="image" src="/assets/Posts/2012/12/image_thumb1.png" width="489" height="529" />](/assets/Posts/2012/12/image1.png)
-
-
+![User Accounts window](/assets/Posts/2012/12/image1.png)
 
 You may also want to make sure your screen saver is not set to prompt you for a password when it exits either.
 
-[<img title="image" style="background-image:none;padding-top:0;padding-left:0;display:inline;padding-right:0;border-width:0;" border="0" alt="image" src="/assets/Posts/2012/12/image_thumb2.png" width="466" height="504" />](/assets/Posts/2012/12/image2.png)
+![Screen Saver Settings window](/assets/Posts/2012/12/image2.png)
 
-Now your computer is secure without getting in your way. <img class="wlEmoticon wlEmoticon-smile" style="border-style:none;" alt="Smile" src="/assets/Posts/2012/12/wlemoticon-smile.png" />
+Now your computer is secure without getting in your way. :-)
 
-
-
-**<u>A word of caution about this:</u>** ANYBODY will be able to get into your computer. This is probably fine for your home desktop PCs, but you may want to think about enabling this on your laptop, especially if you regularly take it out and about and it has sensitive information on it (ID, credit card info, saved usernames/passwords in your web browser). If you weren’t using a password before anyways though, using this trick is still more secure than without it <img class="wlEmoticon wlEmoticon-winkingsmile" style="border-style:none;" alt="Winking smile" src="/assets/Posts/2012/12/wlemoticon-winkingsmile.png" />
+__A word of caution about this__: ANYBODY will be able to get into your computer. This is probably fine for your home desktop PCs, but you may want to think about enabling this on your laptop, especially if you regularly take it out and about and it has sensitive information on it (ID, credit card info, saved usernames/passwords in your web browser). If you weren't using a password before anyways though, using this trick is still more secure than without it ;-)
