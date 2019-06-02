@@ -26,7 +26,7 @@ Open a PowerShell console and manually run the script from the command line. I s
 
 The other way is to launch the PowerShell process from the Run box (Windows Key + R) or command prompt using the **-NoExit** switch and passing in the path to the PowerShell file.
 
-For example: **PowerShell -NoExit &#8220;C:\SomeFolder\MyPowerShellScript.ps1&#8221;**
+For example: **PowerShell -NoExit "C:\SomeFolder\MyPowerShellScript.ps1"**
 
 ### 2. Per-script solution
 
