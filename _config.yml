@@ -29,6 +29,7 @@ search: true # Show the search link on the site.
 # Build settings
 markdown: kramdown
 github: [metadata] # Added this to avoid the "No GitHub API authentication could be found. Some fields may be missing or have incorrect data." warning when starting Jekyll.
+highlighter: pygments
 
 # Uncomment to show line numbers in code blocks by default.
 # kramdown:
