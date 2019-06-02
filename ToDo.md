@@ -1,7 +1,7 @@
 # List of things to still do to the blog
 
 - Go through and update all posts to use proper markdown and get rid of html. Will go through posts oldest to newest.
-  - Currently processing page: 2013-09-18-have-your-nuget-package-install-itself-as-a-development-dependency.md
+  - Currently processing page: 2013-09-27-launch-visual-studio-checkin-window-with-a-keystroke.md
 - Search for `160;` and just `0;` to make sure none were missed that need to be fixed up.
 - Fix up all build errors and warnings.
 - Convert tabs to 4 spaces in all posts for less indentation in the final result.
