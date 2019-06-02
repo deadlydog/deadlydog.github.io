@@ -18,47 +18,40 @@ tags:
   - Task Scheduler
   - Windows 8
 ---
-**<Update>**Before you go running your script as an admin, see if [this less obtrusive fix](http://dans-blog.azurewebsites.net/get-autohotkey-to-interact-with-admin-windows-without-running-ahk-script-as-admin/) will solve your problems.**</Update>**
 
-A few weeks back I posted [some problems with running AutoHotkey (AHK) in Windows 8, and that the solution was to run your AHK script as admin](http://dans-blog.azurewebsites.net/?p=97). I also showed how to have the script start automatically when you logged into Windows. What I didn’t realize at the time though was that the method only worked for launching my AHK script as an admin because I had disabled UAC in the registry (which prevents most Metro apps from working in Windows 8, and likely isn’t acceptable for most people).
+__Update__: Before you go running your script as an admin, see if [this less obtrusive fix](http://dans-blog.azurewebsites.net/get-autohotkey-to-interact-with-admin-windows-without-running-ahk-script-as-admin/) will solve your problems.
+
+A few weeks back I posted [some problems with running AutoHotkey (AHK) in Windows 8, and that the solution was to run your AHK script as admin](http://dans-blog.azurewebsites.net/?p=97). I also showed how to have the script start automatically when you logged into Windows. What I didn't realize at the time though was that the method only worked for launching my AHK script as an admin because I had disabled UAC in the registry (which prevents most Metro apps from working in Windows 8, and likely isn't acceptable for most people).
 
 So here is a Windows 8, UAC-friendly method to automatically launch your AHK scripts as admin at startup (also works in previous versions of Windows). The trick is to use the Task Scheduler:
 
 1. Open the Task Scheduler (also known as "Schedule tasks" in Windows 8 Settings).
+    ![Open Task Scheduler](/assets/Posts/2012/11/open-task-scheduler.png)
+1. Create a new Basic Task.
+1. Give it a name and description (something like "launch AutoHotkey script at login"), and then specify to have it run "When I log on". Then specify that you want it to "Start a program", and then point it towards your AutoHotkey script. Before you finish the wizard, check off "Open the Properties dialog for this task when I click Finish".
+    ![Create Basic Task in Task Scheduler](/assets/Posts/2012/11/create-basic-task-in-task-scheduler1.png)
+1. When that Properties dialog opens up, go to the Conditions tab and make sure none of the checkboxes under the Power category are checked off; this will ensure the script still launches if you are on a laptop and not plugged into AC power.
+    ![Basic Task Conditions](/assets/Posts/2012/11/basic-task-conditions1.png)
+1. __Now here is the important part__: To have your script "Run as admin", on the General tab check off "Run with highest privileges".
 
-[<img title="Open Task Scheduler" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-top-width: 0px" border="0" alt="Open Task Scheduler" src="/assets/Posts/2012/11/open-task-scheduler_thumb.png" width="409" height="556" />](/assets/Posts/2012/11/open-task-scheduler.png)
+    ![Run Scheduled Task as Admin](/assets/Posts/2012/11/run-scheduled-task-as-admin_thumb3.png)
 
-2. Create a new Basic Task.
+    Now your AHK script should start automatically as soon as you log into Windows; even when UAC is enabled :-).
+1. If your AHK script uses an __#Include__ statement to include other files, you may get an error similar to this one when your task runs:
 
-3. Give it a name and description (something like "launch AutoHotkey script at login"), and then specify to have it run "When I log on". Then specify that you want it to "Start a program", and then point it towards your AutoHotkey script. Before you finish the wizard, check off "Open the Properties dialog for this task when I click Finish".
+    > #Include file ... cannot be opened. The program will exit.
 
-[<img title="Create Basic Task in Task Scheduler" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-top-width: 0px" border="0" alt="Create Basic Task in Task Scheduler" src="/assets/Posts/2012/11/create-basic-task-in-task-scheduler_thumb1.png" width="766" height="534" />](/assets/Posts/2012/11/create-basic-task-in-task-scheduler1.png)
+    ![AHK Cannot Open Include File](/assets/Posts/2012/11/ahk-cannot-open-include-file.png)
 
-4. When that Properties dialog opens up, go to the Conditions tab and make sure none of the checkboxes under the Power category are checked off; this will ensure the script still launches if you are on a laptop and not plugged into AC power.
+    The solution to this is to tell your AHK script to start in the same directory as the file that you want to include. So you will need to edit your scheduled task's Action to specify the Start In directory.
 
-[<img title="Basic Task Conditions" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-top-width: 0px" border="0" alt="Basic Task Conditions" src="/assets/Posts/2012/11/basic-task-conditions_thumb1.png" width="677" height="511" />](/assets/Posts/2012/11/basic-task-conditions1.png)
-
-5. **Now here is the important part**; To have your script "Run as admin", on the General tab check off "Run with highest privileges".
-
-[<img title="Run Scheduled Task as Admin_thumb[3]" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-top-width: 0px" border="0" alt="Run Scheduled Task as Admin_thumb[3]" src="/assets/Posts/2012/11/run-scheduled-task-as-admin_thumb3_thumb.png" width="650" height="491" />](/assets/Posts/2012/11/run-scheduled-task-as-admin_thumb3.png)
-
-Now your AHK script should start automatically as soon as you log into Windows; even when UAC is enabled <img class="wlEmoticon wlEmoticon-smile" style="border-top-style: none; border-bottom-style: none; border-right-style: none; border-left-style: none" alt="Smile" src="/assets/Posts/2012/11/wlemoticon-smile2.png" />
-
-6. If your AHK script uses an **#Include** statement to include other files, you may get an error similar to this one when your task runs:
-
-"#Include file ... cannot be opened. The program will exit."
-
-[<img title="AHK Cannot Open Include File" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-top-width: 0px" border="0" alt="AHK Cannot Open Include File" src="/assets/Posts/2012/11/ahk-cannot-open-include-file_thumb.png" width="441" height="226" />](/assets/Posts/2012/11/ahk-cannot-open-include-file.png)
-
-The solution to this is to tell your AHK script to start in the same directory as the file that you want to include. So you will need to edit your scheduled task’s Action to specify the Start In directory.
-
-[<img title="Task Scheduler Start In Directory" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-top-width: 0px" border="0" alt="Task Scheduler Start In Directory" src="/assets/Posts/2012/11/task-scheduler-start-in-directory_thumb.png" width="1095" height="504" />](/assets/Posts/2012/11/task-scheduler-start-in-directory.png)
+    ![Task Scheduler Start In Directory](/assets/Posts/2012/11/task-scheduler-start-in-directory.png)
 
 Happy coding!
 
-==< EDIT >==
+## Update
 
-What I failed to realize earlier was that by default the Task Scheduler runs it’s programs in non-interactive mode, so they may run as the correct user, **but in a different user session**. Since most AHK scripts are interactive (i.e. they respond to user input), this means that your script may not work exactly as it should all of the time. For example, my AHK scripts were not able to launch ClickOnce applications.
+What I failed to realize earlier was that by default the Task Scheduler runs it's programs in non-interactive mode, so they may run as the correct user, __but in a different user session__. Since most AHK scripts are interactive (i.e. they respond to user input), this means that your script may not work exactly as it should all of the time. For example, my AHK scripts were not able to launch ClickOnce applications.
 
 The fix is to create your Scheduled Task in interactive mode. Unfortunately you cannot do this through the GUI; it must be done through the command line. So if you open up a command prompt you can use the following command to create a new interactive scheduled task:
 
@@ -75,5 +68,3 @@ If you already have your Scheduled Task created, you can simply make it interact
 > schtasks /Change /TN "[Task Name]" /IT
 
 I hope you find this as helpful as I did!
-
-==</ EDIT >==
