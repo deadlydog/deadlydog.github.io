@@ -16,12 +16,10 @@ tags:
   - SQL
   - SQL Server
 ---
+
 Over the past couple years I’ve been keeping track of common SQL Server script commands that I use so I don’t have to constantly Google them. Most of them are how to check if a SQL Server object exists before dropping it. I thought others might find these useful to have them all in one place, so here you go:
 
-<div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:8a021f85-751a-472b-8bac-979cc265f448" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal>
-
-  <pre class="brush: sql; pad-line-numbers: true; title: ; notranslate" title="">
+```sql
 --===============================
 -- Create a new table and add keys and constraints
 --===============================
@@ -225,16 +223,10 @@ IF EXISTS (SELECT * FROM SYS.TRIGGERS WHERE NAME = 'TriggerName')
 BEGIN
 	EXEC('DROP TRIGGER TriggerName')
 END
+```
 
-</pre>
-</div>
+[Download Code Snippet](/assets/Posts/2013/09/Common-SQL-Changescript-Code.zip)
 
-<div id="scid:fb3a1972-4489-4e52-abe7-25a00bb07fdf:5f0777e4-9ea5-4606-8ccf-b706b9810e74" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <p>
-    <a href="/assets/Posts/2013/09/Common-SQL-Changescript-Code.zip" target="_blank">Download Code Snippet</a>
-  </p>
-</div>
-
-You may have noticed that I wrap the actual DROP statements in an EXEC statement. This is because if you run the script once and it drops the schema object, if you try to run the script a second time SQL may complain that the schema object does not exist, and won’t allow you to run the script; sort of like failing a compile-time check. This seems stupid though since we check if the object exists before dropping it, but the "SQL compiler" doesn’t know that. So to avoid this we convert the drop statement to a string and put it in an EXEC, so that it is not evaluated until "run-time", and since the IF EXISTS checks prevent that code from being executed if the schema object does not exist, everything works fine.
+You may have noticed that I wrap the actual `DROP` statements in an `EXEC` statement. This is because if you run the script once and it drops the schema object, if you try to run the script a second time SQL may complain that the schema object does not exist, and won’t allow you to run the script; sort of like failing a compile-time check. This seems stupid though since we check if the object exists before dropping it, but the "SQL compiler" doesn’t know that. So to avoid this we convert the drop statement to a string and put it in an `EXEC`, so that it is not evaluated until "run-time", and since the `IF EXISTS` checks prevent that code from being executed if the schema object does not exist, everything works fine.
 
 Happy coding!
