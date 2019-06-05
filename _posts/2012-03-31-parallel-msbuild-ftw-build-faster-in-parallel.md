@@ -43,7 +43,7 @@ The poster also has [a follow-up post](http://www.hanselman.com/blog/HackParalle
 
 Happy building!
 
-```bat
+```shell
 :: Calculate how many Processes to use to do the build.
 SET NumberOfProcessesToUseForBuild=1
 SET BuildInParallel=false

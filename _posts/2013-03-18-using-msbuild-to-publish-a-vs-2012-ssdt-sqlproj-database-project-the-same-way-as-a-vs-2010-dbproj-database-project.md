@@ -35,13 +35,13 @@ We recently upgraded from VS (Visual Studio) 2010 to VS 2012, and with it had to
 
 So with the old .dbproj database project, you could deploy it to a database using:
 
-```bat
+```shell
 MSBuild /t:Deploy /p:TargetDatabase="[DbName]";TargetConnectionString="Data Source=[Db.Server];Integrated Security=True;Pooling=False" /p:DeployToDatabase="True" "[PathToBranch]Database\Database.dbproj"
 ```
 
 But with the new .sqlproj database project you have to do:
 
-```bat
+```shell
 MSBuild /t:Publish /p:SqlPublishProfilePath="myPublishFile.publish.xml" "[PathToBranch]Database\Database.sqlproj"
 ```
 
@@ -128,7 +128,7 @@ The PublishToDatabase parameter allows us to publish to the database immediately
 
 If you want to simply publish the database project without building first (generally not recommended), you can do:
 
-```bat
+```shell
 MSBuild /t:Publish /p:TargetDatabaseName="[DbName]";TargetConnectionString="Data Source=[Db.Server];Integrated Security=True;Pooling=False" /p:SqlPublishProfilePath="Template.publish.xml" "[PathToBranch]\Database\Database.sqlproj"
 ```
 
@@ -142,7 +142,7 @@ While creating my solution, I also accidentally stumbled upon what seems to be a
 
 So now if I wanted to deploy my database project to 3 separate databases, I could do so with the following code to first Build the project, and the Publish it to the 3 databases:
 
-```bat
+```shell
 MSBuild /t:Build "[PathToBranch]\Database\Database.sqlproj"
 MSBuild /t:Publish /p:TargetDatabaseName="[DbName1]";TargetConnectionString="Data Source=[Db.Server];Integrated Security=True;Pooling=False" /p:PublishScriptFileName="[DbName1].sql" /p:SqlPublishProfilePath="Template.publish.xml" "[PathToBranch]\Database\Database.sqlproj"
 MSBuild /t:Publish /p:TargetDatabaseName="[DbName2]";TargetConnectionString="Data Source=[Db.Server];Integrated Security=True;Pooling=False" /p:PublishScriptFileName="[DbName2].sql" /p:SqlPublishProfilePath="Template.publish.xml" "[PathToBranch]\Database\Database.sqlproj"

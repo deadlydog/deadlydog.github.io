@@ -91,7 +91,7 @@ Note that you will need to update the script to change __YourCustomCheckinPolicy
 
 If you have developers that aren't familiar with how to run a PowerShell script, then you can include the following batch script (.cmd/.bat file extension) in the same directory as the PowerShell script, and they can run this instead by simply double-clicking it to call the PowerShell script:
 
-```batch
+```shell
 SET ThisScriptsDirectory=%~dp0
 SET PowerShellScriptPath=%ThisScriptsDirectory%UpdateCheckinPolicyInRegistry.ps1
 

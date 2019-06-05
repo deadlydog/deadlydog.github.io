@@ -125,7 +125,7 @@ So copy-paste the powershell script text into a new file, such as "UpdateClickOn
 
 The next step now is to call this script from the Post Build event, so in Visual Studio go into your ClickOnce project’s properties and go to the Build Events tab.  In the Post-build event command line put the following:
 
-```bat
+```shell
 REM Update the ClickOnce MinimumRequiredVersion so that it auto-updates without prompting
 PowerShell Set-ExecutionPolicy RemoteSigned
 PowerShell "$(ProjectDir)UpdateClickOnceVersion.ps1" "$(ProjectPath)"
