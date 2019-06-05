@@ -1,7 +1,7 @@
 # List of things to still do to the blog
 
 - Go through and update all posts to use proper markdown and get rid of html. Will go through posts oldest to newest.
-  - Currently processing page: 2013-10-01-windows-phone-developers-do-not-renew-your-subscription-until-the-expiry-day-or-else-microsoft-steals-your-money.md
+  - Currently processing page: 2013-11-21-get-autohotkey-to-interact-with-admin-windows-without-running-ahk-script-as-admin.md
 - Search for `160;` and just `0;` to make sure none were missed that need to be fixed up.
 - Fix up all build errors and warnings.
 - Convert tabs to 4 spaces in all posts for less indentation in the final result.
