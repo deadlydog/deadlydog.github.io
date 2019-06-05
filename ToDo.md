@@ -7,7 +7,7 @@
 - Convert tabs to 4 spaces in all posts for less indentation in the final result.
 - Maybe convert all double spaces after a period to single spaces.
 - Maybe convert all ** to __ for bold in all posts.
-- Convert all ‘ and ’ and `&#8216;` characters to ', but do them one by one as it seems to mess up some posts.
+- Convert all ‘ and ’ and `&#8216;` and `&rsquo;` characters to ', but do them one by one as it seems to mess up some posts.
 - Remove unnecessary front matter attributes from all posts. e.g. `jabber_published`, `tagazine-media`, `guid`, `id`
 - Maybe add `Email` option to my bio links.
 - Add Google Analytics integration.
