@@ -15,27 +15,22 @@ tags:
   - Windows 8
   - Windows 8.1
 ---
+
 Myself and a few co-workers have updated from Windows 8 to Windows 8.1 and have run into some weird problems. After a bit of Googling I have found that we are not alone. This is just a quick list of some things the the Windows 8.1 Update seems to have broken. I’ll update this post as I find more issues.
 
+## IE 11 breaks some websites
 
-
-### IE 11 breaks some websites
-
-  * I found that some of the links in the website our office uploads our Escrow deposits to no longer worked in IE 11 (which 8.1 installs). Turning on the developer tools showed that it was throwing a Javascript error about an undefined function. Everything works fine in IE 10 though and no undefined errors are thrown.
-  * I have also noticed that after doing a search on Google and clicking one of the links, in order to get back to the Google results page you have to click the Back button twice; the first Back-click just takes you to a blank page (when you click the Google link it directs you to an empty page, which then forwards you to the correct page).
-  * [Others have complained](http://answers.microsoft.com/en-us/ie/forum/ie11_pr-windows8_1_pr/windows-81-upgrade-ie-11-not-working-properly/87224e09-2732-48c6-823d-c2099faead48) that they are experiencing problems with GMail and Silverlight after the 8.1 update.
+- I found that some of the links in the website our office uploads our Escrow deposits to no longer worked in IE 11 (which 8.1 installs). Turning on the developer tools showed that it was throwing a Javascript error about an undefined function. Everything works fine in IE 10 though and no undefined errors are thrown.
+- I have also noticed that after doing a search on Google and clicking one of the links, in order to get back to the Google results page you have to click the Back button twice; the first Back-click just takes you to a blank page (when you click the Google link it directs you to an empty page, which then forwards you to the correct page).
+- [Others have complained](http://answers.microsoft.com/en-us/ie/forum/ie11_pr-windows8_1_pr/windows-81-upgrade-ie-11-not-working-properly/87224e09-2732-48c6-823d-c2099faead48) that they are experiencing problems with GMail and Silverlight after the 8.1 update.
 
 So it may just be that IE 11 updated it’s standards to be more compliant and now many websites don’t meet the new requirements (I’m not sure); but either way, you may find that some of your favorite websites no longer work properly with IE 11, and you’ll have to wait for IE 11 or the website to make an update.
 
-
-
-### VPN stopped working
+## VPN stopped working
 
 We use the SonicWall VPN client at my office, and I found that it no longer worked after updating to Windows 8.1. The solution was a simple uninstall, reinstall, but still, it’s just one more issue to add to the list.
 
-
-
-### More?
+## More?
 
 Have you noticed other things broken after doing the Windows 8.1 update? Share them in the comments below!
 
