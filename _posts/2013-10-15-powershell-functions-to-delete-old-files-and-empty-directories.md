@@ -19,12 +19,10 @@ tags:
   - Remove
   - Time
 ---
+
 I thought I’d share some PowerShell (PS) functions that I wrote for some clean-up scripts at work. I use these functions to delete files older than a certain date. Note that these functions require PS v3.0; slower PS v2.0 compatible functions are given at the end of this article.
 
-<div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:1ae951c3-9a90-495d-b4ae-fc601ee7a3dc" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal>
-
-  <pre class="brush: powershell; pad-line-numbers: true; title: ; notranslate" title="">
+```powershell
 # Function to remove all empty directories under the given path.
 # If -DeletePathIfEmpty is provided the given Path directory will also be deleted if it is empty.
 # If -OnlyDeleteDirectoriesCreatedBeforeDate is provided, empty folders will only be deleted if they were created before the given date.
@@ -45,7 +43,7 @@ function Remove-EmptyDirectories([parameter(Mandatory)][ValidateScript({Test-Pat
 function Remove-FilesCreatedBeforeDate([parameter(Mandatory)][ValidateScript({Test-Path $_})][string] $Path, [parameter(Mandatory)][DateTime] $DateTime, [switch] $DeletePathIfEmpty, [switch] $OutputDeletedPaths, [switch] $WhatIf)
 {
     Get-ChildItem -Path $Path -Recurse -Force -File | Where-Object { $_.CreationTime -lt $DateTime } |
-		ForEach-Object { if ($OutputDeletedPaths) { Write-Output $_.FullName } Remove-Item -Path $_.FullName -Force -WhatIf:$WhatIf }
+        ForEach-Object { if ($OutputDeletedPaths) { Write-Output $_.FullName } Remove-Item -Path $_.FullName -Force -WhatIf:$WhatIf }
     Remove-EmptyDirectories -Path $Path -DeletePathIfEmpty:$DeletePathIfEmpty -OnlyDeleteDirectoriesCreatedBeforeDate $DateTime -OutputDeletedPaths:$OutputDeletedPaths -WhatIf:$WhatIf
 }
 
@@ -53,29 +51,20 @@ function Remove-FilesCreatedBeforeDate([parameter(Mandatory)][ValidateScript({Te
 function Remove-FilesNotModifiedAfterDate([parameter(Mandatory)][ValidateScript({Test-Path $_})][string] $Path, [parameter(Mandatory)][DateTime] $DateTime, [switch] $DeletePathIfEmpty, [switch] $OutputDeletedPaths, [switch] $WhatIf)
 {
     Get-ChildItem -Path $Path -Recurse -Force -File | Where-Object { $_.LastWriteTime -lt $DateTime } |
-	ForEach-Object { if ($OutputDeletedPaths) { Write-Output $_.FullName } Remove-Item -Path $_.FullName -Force -WhatIf:$WhatIf }
+    ForEach-Object { if ($OutputDeletedPaths) { Write-Output $_.FullName } Remove-Item -Path $_.FullName -Force -WhatIf:$WhatIf }
     Remove-EmptyDirectories -Path $Path -DeletePathIfEmpty:$DeletePathIfEmpty -OnlyDeleteDirectoriesNotModifiedAfterDate $DateTime -OutputDeletedPaths:$OutputDeletedPaths -WhatIf:$WhatIf
 }
+```
 
-</pre>
-</div>
+[Download File](/assets/Posts/2014/01/Remove-FilesOlderThan.zip)
 
-<div id="scid:fb3a1972-4489-4e52-abe7-25a00bb07fdf:c2c16c8f-2fb3-43c5-9185-f9386261beae" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <p>
-    <a href="/assets/Posts/2014/01/Remove-FilesOlderThan.zip" target="_blank">Download File</a>
-  </p>
-</div>
+The __Remove-EmptyDirectories__ function removes all empty directories under the given path, and optionally (via the DeletePathIfEmpty switch) the path directory itself if it is empty after cleaning up the other directories. It also takes a couple parameters that may be specified if you only want to delete the empty directories that were created before a certain date, or that haven’t been written to since a certain date.
 
-The **Remove-EmptyDirectories** function removes all empty directories under the given path, and optionally (via the DeletePathIfEmpty switch) the path directory itself if it is empty after cleaning up the other directories. It also takes a couple parameters that may be specified if you only want to delete the empty directories that were created before a certain date, or that haven’t been written to since a certain date.
-
-The **Remove-FilesCreatedBeforeDate** and **Remove-FilesNotModifiedAfterDate** functions are very similar to each other. They delete all files under the given path whose Created Date or Last Written To Date, respectfully, is less than the given DateTime. They then call the Remove-EmptyDirectories function with the provided date to clean up any left over empty directories.
+The __Remove-FilesCreatedBeforeDate__ and __Remove-FilesNotModifiedAfterDate__ functions are very similar to each other. They delete all files under the given path whose Created Date or Last Written To Date, respectfully, is less than the given DateTime. They then call the Remove-EmptyDirectories function with the provided date to clean up any left over empty directories.
 
 To call the last 2 functions, just provide the path to the file/directory that you want it to delete if older than the given date-time. Here are some examples of calling all the functions:
 
-<div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:0c7dde8c-4381-4077-936d-b33119373a95" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal>
-
-  <pre class="brush: powershell; title: ; notranslate" title="">
+```powershell
 # Delete all files created more than 2 days ago.
 Remove-FilesCreatedBeforeDate -Path "C:\Some\Directory" -DateTime ((Get-Date).AddDays(-2)) -DeletePathIfEmpty
 
@@ -96,24 +85,17 @@ Remove-FilesCreatedBeforeDate -Path "C:\SomePath\Temp" -DateTime (Get-Date) -Del
 
 # Delete all files and directories in the Temp folder, as well as the Temp folder itself if it is empty, and output all paths that were deleted.
 Remove-FilesCreatedBeforeDate -Path "C:\SomePath\Temp" -DateTime (Get-Date) -DeletePathIfEmpty -OutputDeletedPaths
+```
 
-</pre>
-</div>
-
-Notice that I am using Get-Date to get the current date and time, and then **subtracting** the specified amount of time from it in order to get a date-time relative to the current time; you can use any valid DateTime though, such as a hard-coded date of January 1st, 2014 3PM.
+Notice that I am using Get-Date to get the current date and time, and then __subtracting__ the specified amount of time from it in order to get a date-time relative to the current time; you can use any valid DateTime though, such as a hard-coded date of January 1st, 2014 3PM.
 
 I use these functions in some scripts that we run nightly via a scheduled task in Windows. Hopefully you find them useful too.
 
-
-
-### PowerShell v2.0 Compatible Functions
+## PowerShell v2.0 Compatible Functions
 
 As promised, here are the slower PS v2.0 compatible functions. The main difference is that they use $_.PSIsContainer in the Where-Object clause rather than using the –File / –Directory Get-ChildItem switches. The Measure-Command cmdlet shows that using the switches is about 3x faster than using the where clause, but since we are talking about milliseconds here you likely won’t notice the difference unless you are traversing a large file tree (which I happen to be for my scripts that we use to clean up TFS builds).
 
-<div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:6a0118b4-0589-49cd-b423-a0f24369b872" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal>
-
-  <pre class="brush: powershell; title: ; notranslate" title="">
+```powershell
 # Function to remove all empty directories under the given path.
 # If -DeletePathIfEmpty is provided the given Path directory will also be deleted if it is empty.
 # If -OnlyDeleteDirectoriesCreatedBeforeDate is provided, empty folders will only be deleted if they were created before the given date.
@@ -134,7 +116,7 @@ function Remove-EmptyDirectories([parameter(Mandatory=$true)][ValidateScript({Te
 function Remove-FilesCreatedBeforeDate([parameter(Mandatory=$true)][ValidateScript({Test-Path $_})][string] $Path, [parameter(Mandatory)][DateTime] $DateTime, [switch] $DeletePathIfEmpty, [switch] $OutputDeletedPaths, [switch] $WhatIf)
 {
     Get-ChildItem -Path $Path -Recurse -Force | Where-Object { !$_.PSIsContainer -and $_.CreationTime -lt $DateTime } |
-		ForEach-Object { if ($OutputDeletedPaths) { Write-Output $_.FullName } Remove-Item -Path $_.FullName -Force -WhatIf:$WhatIf }
+        ForEach-Object { if ($OutputDeletedPaths) { Write-Output $_.FullName } Remove-Item -Path $_.FullName -Force -WhatIf:$WhatIf }
     Remove-EmptyDirectories -Path $Path -DeletePathIfEmpty:$DeletePathIfEmpty -OnlyDeleteDirectoriesCreatedBeforeDate $DateTime -OutputDeletedPaths:$OutputDeletedPaths -WhatIf:$WhatIf
 }
 
@@ -142,17 +124,11 @@ function Remove-FilesCreatedBeforeDate([parameter(Mandatory=$true)][ValidateScri
 function Remove-FilesNotModifiedAfterDate([parameter(Mandatory=$true)][ValidateScript({Test-Path $_})][string] $Path, [parameter(Mandatory)][DateTime] $DateTime, [switch] $DeletePathIfEmpty, [switch] $OutputDeletedPaths, [switch] $WhatIf)
 {
     Get-ChildItem -Path $Path -Recurse -Force | Where-Object { !$_.PSIsContainer -and $_.LastWriteTime -lt $DateTime } |
-	ForEach-Object { if ($OutputDeletedPaths) { Write-Output $_.FullName } Remove-Item -Path $_.FullName -Force -WhatIf:$WhatIf }
+    ForEach-Object { if ($OutputDeletedPaths) { Write-Output $_.FullName } Remove-Item -Path $_.FullName -Force -WhatIf:$WhatIf }
     Remove-EmptyDirectories -Path $Path -DeletePathIfEmpty:$DeletePathIfEmpty -OnlyDeleteDirectoriesNotModifiedAfterDate $DateTime -OutputDeletedPaths:$OutputDeletedPaths -WhatIf:$WhatIf
 }
+```
 
-</pre>
-</div>
-
-<div id="scid:fb3a1972-4489-4e52-abe7-25a00bb07fdf:b8e621ed-daea-4ac4-b565-fb8f9cd997e6" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <p>
-    <a href="/assets/Posts/2014/01/Remove-FilesOlderThanPSv2.zip" target="_blank">Download PSv2 File</a>
-  </p>
-</div>
+[Download PSv2 File](/assets/Posts/2014/01/Remove-FilesOlderThanPSv2.zip)
 
 Happy coding!
