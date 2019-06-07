@@ -156,7 +156,7 @@ The UpdateCheckinPoliciesInRegistry() function checks to see if the appropriate 
 
 The one variable to note here is the __customCheckinPolicyEntryName__. This corresponds to the registry key name that I’ve specified in the RegistryKeyToAdd.pkgdef file, so if you change it be sure to change it in both places. This is what the RegistryKeyToAdd.pkgdef file contains:
 
-```text
+```csharp
 // We use "\..\" in the value because the projects that include this file place it in a "FilesFromShared" folder, and we want it to look for the dll in the root directory.
 [$RootKey$\TeamFoundation\SourceControl\Checkin Policies]
 "CheckinPolicies"="$PackageFolder$\..\CheckinPolicies.dll"
