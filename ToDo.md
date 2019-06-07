@@ -1,7 +1,7 @@
 # List of things to still do to the blog
 
 - Go through and update all posts to use proper markdown and get rid of html. Will go through posts oldest to newest.
-  - Currently processing page: 2014-02-12-if-you-like-using-macros-or-autohotkey-you-might-want-to-try-the-enterpad-ahk-keyboard.md
+  - Currently processing page: 2016-04-14-fix-msbuild-2015-compile-taking-a-very-long-time.md
 - Search for `160;` and just `0;` to make sure none were missed that need to be fixed up.
 - Fix up all build errors and warnings.
 - Convert tabs to 4 spaces in all posts for less indentation in the final result.
