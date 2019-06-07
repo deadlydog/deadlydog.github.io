@@ -18,13 +18,12 @@ tags:
   - View
   - Width
 ---
-###
 
-### The problem
+## The problem
 
 I love GitHub, but one thing that I and most developers hate is that the pages that show source code (Pull requests, commits, blobs) are locked to a fixed width, and it’s only about 900 pixels. Most developers have widescreen monitors, so their code lines are typically longer than 900 pixels. This can make viewing code on GitHub painful because you have to constantly horizontally scroll to see a whole line of code. I honestly can’t believe that after years GitHub still hasn’t fixed this. It either means that the GitHub developers don’t dogfood their own product, or the website designers (not programmers) have the final say on how the site looks, in which case they don’t know their target audience very well. Anyways, I digress.
 
-### My solution
+## My solution
 
 To solve this problem I wrote a GreaseMonkey user script 2 years ago that expands the code section on GitHub to fill the width of your browser, and it works great. The problem was that [GreaseMonkey is a FireFox-only extension](https://addons.mozilla.org/en-US/firefox/addon/greasemonkey/). Luckily, these days most browsers have a GreaseMonkey equivalent:
 
@@ -36,14 +35,14 @@ So if you have GreaseMonkey or an equivalent installed, then you can simply go a
 
 Alternatively, I have also released a free Chrome extension in the Chrome Web Store called [Make GitHub Pages Full Width](https://chrome.google.com/webstore/detail/make-github-pages-full-wi/dfpgjcidmobcpaoolhgchdcmdgenbaoa). When you install it from the store you get all of the added Store benefits, such as having the extension sync across all of your PCs, automatically getting it installed again after you format your PC, etc.
 
-### Results
+## Results
 
 If you install the extension and a code page doesn’t expand it’s width to fit your page, just refresh the page. If anybody knows how to fix this issue please let me know.
 
 And to give you an idea of what the result looks like, here are 2 screenshots; one without the extension installed (top, notice some text goes out of view), and one with it (bottom).
 
-[<img title="WithoutFullWidth" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-top-width: 0px" border="0" alt="WithoutFullWidth" src="/assets/Posts/2014/05/WithoutFullWidth_thumb.png" width="600" height="327" />](/assets/Posts/2014/05/WithoutFullWidth.png)
+![Without Full Width](/assets/Posts/2014/05/WithoutFullWidth.png)
 
-[<img title="WithFullWidth" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-top-width: 0px" border="0" alt="WithFullWidth" src="/assets/Posts/2014/05/WithFullWidth_thumb.png" width="600" height="327" />](/assets/Posts/2014/05/WithFullWidth.png)
+![With Full Width](/assets/Posts/2014/05/WithFullWidth.png)
 
 Happy coding!
