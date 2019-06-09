@@ -1,11 +1,7 @@
 ---
-id: 55
 title: Setting up keyboard shortcuts to build solutions in MSBuild
 date: 2011-06-01T13:32:00-06:00
-guid: https://deadlydog.wordpress.com/?p=55
 permalink: /setting-up-keyboard-shortcuts-to-build-solutions-in-msbuild/
-jabber_published:
-  - "1353108513"
 categories:
   - AutoHotkey
   - Build

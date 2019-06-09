@@ -1,8 +1,6 @@
 ---
-id: 741
 title: Template Solution For Deploying TFS Checkin Policies To Multiple Versions Of Visual Studio And Having Them Automatically Work From "TF.exe Checkin" Too
 date: 2014-03-24T10:55:05-06:00
-guid: http://dans-blog.azurewebsites.net/?p=741
 permalink: /template-solution-for-deploying-tfs-checkin-policies-to-multiple-versions-of-visual-studio-and-having-them-automatically-work-from-tf-exe-checkin-too/
 categories:
   - PowerShell

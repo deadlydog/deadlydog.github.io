@@ -1,11 +1,7 @@
 ---
-id: 19
 title: Adding ValueChanged events to Dependency Objects in WPF
 date: 2011-04-17T22:56:00-06:00
-guid: https://deadlydog.wordpress.com/?p=19
 permalink: /adding-valuechanged-events-to-dependency-objects-in-wpf/
-jabber_published:
-  - "1353106547"
 categories:
   - WPF
 tags:

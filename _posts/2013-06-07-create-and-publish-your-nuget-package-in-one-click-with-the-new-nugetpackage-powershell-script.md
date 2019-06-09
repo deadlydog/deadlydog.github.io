@@ -1,8 +1,6 @@
 ---
-id: 325
 title: Create and publish your NuGet package in one click with the New-NuGetPackage PowerShell script
 date: 2013-06-07T14:54:04-06:00
-guid: http://dans-blog.azurewebsites.net/?p=325
 permalink: /create-and-publish-your-nuget-package-in-one-click-with-the-new-nugetpackage-powershell-script/
 categories:
   - NuGet

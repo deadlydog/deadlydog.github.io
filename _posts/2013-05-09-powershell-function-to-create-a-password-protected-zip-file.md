@@ -1,11 +1,7 @@
 ---
-id: 231
 title: PowerShell function to create a password protected zip file
 date: 2013-05-09T17:42:14-06:00
-guid: https://deadlydog.wordpress.com/?p=231
 permalink: /powershell-function-to-create-a-password-protected-zip-file/
-jabber_published:
-  - "1368142936"
 categories:
   - PowerShell
 tags:

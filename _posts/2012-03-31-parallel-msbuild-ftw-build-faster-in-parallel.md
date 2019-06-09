@@ -1,11 +1,7 @@
 ---
-id: 73
 title: Parallel MSBuild FTW - Build faster in parallel
 date: 2012-03-31T02:09:00-06:00
-guid: https://deadlydog.wordpress.com/?p=73
 permalink: /parallel-msbuild-ftw-build-faster-in-parallel/
-jabber_published:
-  - "1353118161"
 categories:
   - Build
 tags:

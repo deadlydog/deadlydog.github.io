@@ -1,8 +1,6 @@
 ---
-id: 909
 title: PowerShell Log Levels Included In TFS 2017 and VSTS Build and Release Logs
 date: 2017-10-26T01:07:25-06:00
-guid: http://dans-blog.azurewebsites.net/?p=909
 permalink: /powershell-log-levels-included-in-tfs-2017-and-vsts-build-and-release-logs/
 categories:
   - Build

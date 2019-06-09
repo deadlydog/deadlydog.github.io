@@ -1,11 +1,7 @@
 ---
-id: 141
 title: Have Windows Automatically Login Without Entering Your Password
 date: 2012-12-04T10:44:57-06:00
-guid: https://deadlydog.wordpress.com/?p=141
 permalink: /have-windows-automatically-login-without-entering-your-password/
-jabber_published:
-  - "1354639497"
 categories:
   - Windows
 tags:

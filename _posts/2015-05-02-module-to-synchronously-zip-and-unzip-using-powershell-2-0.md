@@ -1,8 +1,6 @@
 ---
-id: 856
 title: Module to Synchronously Zip and Unzip using PowerShell 2.0
 date: 2015-05-02T16:04:48-06:00
-guid: http://dans-blog.azurewebsites.net/?p=856
 permalink: /module-to-synchronously-zip-and-unzip-using-powershell-2-0/
 categories:
   - PowerShell

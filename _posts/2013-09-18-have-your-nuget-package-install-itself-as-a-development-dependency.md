@@ -1,8 +1,6 @@
 ---
-id: 474
 title: Have Your NuGet Package Install Itself As A Development Dependency
 date: 2013-09-18T17:30:26-06:00
-guid: http://dans-blog.azurewebsites.net/?p=474
 permalink: /have-your-nuget-package-install-itself-as-a-development-dependency/
 categories:
   - NuGet

@@ -1,8 +1,6 @@
 ---
-id: 374
 title: Accessing PowerShell Properties and Variables with Periods (and other special characters) in their Name
 date: 2013-09-05T13:09:32-06:00
-guid: http://dans-blog.azurewebsites.net/?p=374
 permalink: /accessing-powershell-variables-with-periods-in-their-name/
 categories:
   - PowerShell

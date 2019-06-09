@@ -1,8 +1,6 @@
 ---
-id: 755
 title: Adding a WPF Settings Page To The Tools Options Dialog Window For Your Visual Studio Extension
 date: 2014-04-25T13:14:44-06:00
-guid: http://dans-blog.azurewebsites.net/?p=755
 permalink: /adding-a-wpf-settings-page-to-the-tools-options-dialog-window-for-your-visual-studio-extension/
 categories:
   - Visual Studio

@@ -1,12 +1,8 @@
 ---
-id: 221
 title: PowerShell Multi-Line Input Box Dialog, Open File Dialog, Folder Browser Dialog, Input Box, and Message Box
 date: 2013-05-01T18:01:53-06:00
 last_modified_at: 2013-12-05T00:00:00-00:00
-guid: https://deadlydog.wordpress.com/?p=221
 permalink: /powershell-multi-line-input-box-dialog-open-file-dialog-folder-browser-dialog-input-box-and-message-box/
-jabber_published:
-  - "1367452917"
 categories:
   - PowerShell
 tags:

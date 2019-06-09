@@ -1,9 +1,7 @@
 ---
-id: 281
 title: Powershell functions to get an xml node, and get and set an xml element's value, even when the element does not already exist
 date: 2013-05-16T17:16:57-06:00
 last_modified_at: 2017-01-07T00:00:00-00:00
-guid: http://dans-blog.azurewebsites.net/?p=281
 permalink: /powershell-functions-to-get-an-xml-node-and-get-and-set-an-xml-elements-value-even-when-the-element-does-not-already-exist/
 categories:
   - PowerShell

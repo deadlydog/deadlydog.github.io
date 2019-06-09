@@ -1,8 +1,6 @@
 ---
-id: 513
 title: 'Windows Phone Developers: Do not renew your subscription until the expiry DAY or else Microsoft steals your money'
 date: 2013-10-01T17:36:46-06:00
-guid: http://dans-blog.azurewebsites.net/?p=513
 permalink: /windows-phone-developers-do-not-renew-your-subscription-until-the-expiry-day-or-else-microsoft-steals-your-money/
 categories:
   - Windows Phone

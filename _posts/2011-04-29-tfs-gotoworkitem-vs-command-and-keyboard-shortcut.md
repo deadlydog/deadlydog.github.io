@@ -1,11 +1,7 @@
 ---
-id: 31
 title: TFS GoToWorkItem VS command and keyboard shortcut
 date: 2011-04-29T23:06:00-06:00
-guid: https://deadlydog.wordpress.com/?p=31
 permalink: /tfs-gotoworkitem-vs-command-and-keyboard-shortcut/
-jabber_published:
-  - "1353107208"
 categories:
   - Shortcuts
   - TFS

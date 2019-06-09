@@ -1,8 +1,6 @@
 ---
-id: 509
 title: 'Windows Live Writer Post Fails With Error "The underlying connection was closed: An unexpected error occurred on a receive."'
 date: 2013-09-27T12:34:41-06:00
-guid: http://dans-blog.azurewebsites.net/?p=509
 permalink: /wlw-post-fails-with-error-the-underlying-connection-was-closed-an-unexpected-error-occurred-on-a-receive/
 categories:
   - Windows Live Writer

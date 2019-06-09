@@ -1,13 +1,7 @@
 ---
-id: 130
 title: Migrating My GWB Blog Over To WordPress
 date: 2012-11-20T16:49:45-06:00
-guid: https://deadlydog.wordpress.com/?p=130
 permalink: /migrating-my-gwb-blog-over-to-wordpress/
-jabber_published:
-  - "1353451785"
-tagazine-media:
-  - 'a:7:{s:7:"primary";s:0:"";s:6:"images";a:1:{s:66:"http://deadlydog.files.wordpress.com/2012/11/wlemoticon-smile3.png";a:6:{s:8:"file_url";s:66:"http://deadlydog.files.wordpress.com/2012/11/wlemoticon-smile3.png";s:5:"width";i:19;s:6:"height";i:19;s:4:"type";s:5:"image";s:4:"area";i:361;s:9:"file_path";b:0;}}s:6:"videos";a:0:{}s:11:"image_count";i:1;s:6:"author";s:8:"22348637";s:7:"blog_id";s:8:"42916521";s:9:"mod_stamp";s:19:"2012-11-20 22:49:45";}'
 categories:
   - Windows Live Writer
   - WordPress

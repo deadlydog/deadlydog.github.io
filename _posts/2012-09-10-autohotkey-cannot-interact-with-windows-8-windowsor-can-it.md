@@ -1,11 +1,7 @@
 ---
-id: 97
 title: AutoHotkey cannot interact with Windows 8...or can it!
 date: 2012-09-10T13:50:00-06:00
-guid: https://deadlydog.wordpress.com/?p=97
 permalink: /autohotkey-cannot-interact-with-windows-8-windowsor-can-it/
-jabber_published:
-  - "1353354696"
 categories:
   - AutoHotkey
   - Windows 8

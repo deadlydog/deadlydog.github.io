@@ -1,11 +1,7 @@
 ---
-id: 16
 title: My WPF Binding won't work. WTF!
 date: 2011-04-17T22:48:00-06:00
-guid: https://deadlydog.wordpress.com/?p=16
 permalink: /my-wpf-binding-wont-work-wtf/
-jabber_published:
-  - "1353106119"
 categories:
   - Binding
   - WPF

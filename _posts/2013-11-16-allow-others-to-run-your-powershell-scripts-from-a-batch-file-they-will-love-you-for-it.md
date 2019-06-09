@@ -1,8 +1,6 @@
 ---
-id: 610
 title: Provide A Batch File To Run Your PowerShell Script From; Your Users Will Love You For It
 date: 2013-11-16T23:16:07-06:00
-guid: http://dans-blog.azurewebsites.net/?p=610
 permalink: /allow-others-to-run-your-powershell-scripts-from-a-batch-file-they-will-love-you-for-it/
 categories:
   - PowerShell

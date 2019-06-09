@@ -1,11 +1,7 @@
 ---
-id: 127
 title: Get AutoHotkey Script To Run As Admin At Startup
 date: 2012-11-06T14:16:00-06:00
-guid: https://deadlydog.wordpress.com/?p=127
 permalink: /get-autohotkey-script-to-run-as-admin-at-startup/
-jabber_published:
-  - "1353356533"
 categories:
   - AutoHotkey
   - Windows 8

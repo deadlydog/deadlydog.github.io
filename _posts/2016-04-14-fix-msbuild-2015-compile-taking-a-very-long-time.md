@@ -1,8 +1,6 @@
 ---
-id: 873
 title: Fix MSBuild 2015 Compile Taking A Very Long Time
 date: 2016-04-14T00:32:24-06:00
-guid: http://dans-blog.azurewebsites.net/?p=873
 permalink: /fix-msbuild-2015-compile-taking-a-very-long-time/
 categories:
   - Build

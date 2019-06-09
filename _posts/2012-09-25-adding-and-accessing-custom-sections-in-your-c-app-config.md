@@ -1,11 +1,7 @@
 ---
-id: 101
 title: Adding and accessing custom sections in your C# App.config
 date: 2012-09-25T14:04:00-06:00
-guid: https://deadlydog.wordpress.com/?p=101
 permalink: /adding-and-accessing-custom-sections-in-your-c-app-config/
-jabber_published:
-  - "1353355941"
 categories:
   - .NET
   - C#

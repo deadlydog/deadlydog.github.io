@@ -1,8 +1,6 @@
 ---
-id: 840
 title: Tell Microsoft To Fix The Sql Server Management Studio "Connect to Server" Dialog Position
 date: 2014-10-17T10:17:39-06:00
-guid: http://dans-blog.azurewebsites.net/?p=840
 permalink: /tell-microsoft-to-fix-the-sql-server-management-studio-connect-to-server-dialog-position/
 categories:
   - SQL

@@ -1,8 +1,6 @@
 ---
-id: 556
 title: PowerShell Functions To Convert, Remove, and Delete IIS Web Applications
 date: 2013-10-23T14:56:22-06:00
-guid: http://dans-blog.azurewebsites.net/?p=556
 permalink: /powershell-functions-to-convert-remove-and-delete-iis-web-applications/
 categories:
   - IIS

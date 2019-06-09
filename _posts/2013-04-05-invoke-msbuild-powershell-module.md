@@ -1,11 +1,7 @@
 ---
-id: 201
 title: Invoke-MsBuild Powershell Module
 date: 2013-04-05T17:05:53-06:00
-guid: https://deadlydog.wordpress.com/?p=201
 permalink: /invoke-msbuild-powershell-module/
-jabber_published:
-  - "1365203160"
 categories:
   - MSBuild
   - PowerShell

@@ -1,8 +1,6 @@
 ---
-id: 350
 title: Automatically Create Your Project's NuGet Package Every Time It Builds, Via NuGet
 date: 2013-06-22T10:16:37-06:00
-guid: http://dans-blog.azurewebsites.net/?p=350
 permalink: /automatically-create-your-projects-nuget-package-every-time-it-builds-via-nuget/
 categories:
   - Build

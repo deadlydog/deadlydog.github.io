@@ -1,8 +1,6 @@
 ---
-id: 399
 title: PowerShell Needs A Centralized Package Management Solution
 date: 2013-09-09T14:20:06-06:00
-guid: http://dans-blog.azurewebsites.net/?p=399
 permalink: /powershell-needs-a-centralized-package-management-solution/
 categories:
   - PowerShell

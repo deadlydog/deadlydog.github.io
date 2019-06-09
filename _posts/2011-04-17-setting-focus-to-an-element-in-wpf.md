@@ -1,11 +1,7 @@
 ---
-id: 10
 title: Setting focus to an element in WPF
 date: 2011-04-17T22:44:00-06:00
-guid: https://deadlydog.wordpress.com/?p=10
 permalink: /setting-focus-to-an-element-in-wpf/
-jabber_published:
-  - "1353104903"
 categories:
   - WPF
 tags:

@@ -1,8 +1,6 @@
 ---
-id: 326
 title: Free Xbox 360 Games If You Have Xbox Live Gold Subscription
 date: 2013-06-12T11:03:18-06:00
-guid: http://dans-blog.azurewebsites.net/?p=326
 permalink: /free-xbox-360-games-if-you-have-xbox-live-gold-subscription/
 categories:
   - Xbox

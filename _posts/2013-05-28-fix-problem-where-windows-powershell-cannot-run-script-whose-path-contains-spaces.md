@@ -1,8 +1,6 @@
 ---
-id: 310
 title: Fix Problem Where Windows PowerShell Cannot Run Script Whose Path Contains Spaces
 date: 2013-05-28T12:58:25-06:00
-guid: http://dans-blog.azurewebsites.net/?p=310
 permalink: /fix-problem-where-windows-powershell-cannot-run-script-whose-path-contains-spaces/
 categories:
   - PowerShell

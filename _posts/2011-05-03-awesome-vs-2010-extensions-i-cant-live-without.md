@@ -1,11 +1,7 @@
 ---
-id: 34
 title: Awesome VS 2010 extensions I can't live without
 date: 2011-05-03T23:15:00-06:00
-guid: https://deadlydog.wordpress.com/?p=34
 permalink: /awesome-vs-2010-extensions-i-cant-live-without/
-jabber_published:
-  - "1353107791"
 categories:
   - Visual Studio
   - Visual Studio Extensions
