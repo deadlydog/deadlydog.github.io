@@ -1,6 +1,5 @@
 # List of things to still do to the blog
 
-- Search for `160;` and just `0;` to make sure none were missed that need to be fixed up.
 - Fix up all build errors and warnings.
 - Convert tabs to 4 spaces in all posts for less indentation in the final result.
 - Maybe convert all double spaces after a period to single spaces.
