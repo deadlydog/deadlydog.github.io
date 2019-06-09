@@ -17,7 +17,7 @@ tags:
   - Shelve
   - Shortcut
   - TFS
-  - visual studio
+  - Visual Studio
 ---
 
 A few weeks ago I blogged about [how you can get custom TFS checkin policies to work when committing from the command line](http://dans-blog.azurewebsites.net/getting-custom-tfs-checkin-policies-to-work-when-committing-from-the-command-line-i-e-tf-checkin/). In that post, I had a quick aside about how you can launch the checkin window (i.e. pending changes) with a quick keystroke using [AutoHotkey](http://www.autohotkey.com/). I realize that many people don’t use AutoHotkey (although you really should; it can save you a lot of time), so I thought I would show how you can accomplish this task without AutoHotkey. It’s quite simple really, and it allows you to launch the VS Checkin window from anywhere, even if you don’t have Visual Studio open.

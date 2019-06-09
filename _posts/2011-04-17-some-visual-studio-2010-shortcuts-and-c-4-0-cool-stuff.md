@@ -15,7 +15,7 @@ tags:
   - features
   - keyboard shortcuts
   - shortcuts
-  - visual studio
+  - Visual Studio
 ---
 
 A list of some shortcuts and new features to VS 2010 and C# 4.0:

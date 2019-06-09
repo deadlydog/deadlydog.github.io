@@ -16,7 +16,7 @@ tags:
   - SQLCMD
   - Team Foundation Database
   - TFS
-  - visual studio
+  - Visual Studio
 ---
 
 Arrggghhhh TFS and builds! Such a love-hate relationship! So we have our TFS builds setup to both compile our C# projects as well as compile and deploy our Team Foundation (TF) Database (DB) projects. One day I started getting the following file path too long error message on our build server:

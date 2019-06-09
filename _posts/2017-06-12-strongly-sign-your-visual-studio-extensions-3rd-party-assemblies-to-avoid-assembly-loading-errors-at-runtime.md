@@ -10,7 +10,7 @@ categories:
 tags:
   - assembly
   - dll
-  - visual studio
+  - Visual Studio
   - Visual Studio Extensions
 ---
 

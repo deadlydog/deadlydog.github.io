@@ -11,7 +11,7 @@ categories:
   - Visual Studio
 tags:
   - tips and tricks
-  - visual studio
+  - Visual Studio
 ---
 
 Just found a few websites that show some Visual Studio tips that I haven't seen before, so I thought I'd share:

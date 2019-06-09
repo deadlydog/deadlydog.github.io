@@ -12,7 +12,7 @@ tags:
   - Custom Page
   - Options
   - Settings
-  - visual studio
+  - Visual Studio
   - Visual Studio Extensions
   - Windows Forms
   - WPF

@@ -12,7 +12,7 @@ categories:
 tags:
   - keyboard shortcuts
   - TFS
-  - visual studio
+  - Visual Studio
 ---
 
  The button to jump directly to a work item by specifying its ID looks to be on the Work Item Tracking toolbar by default in VS / TFS 2010. This button is not on the toolbar by default in VS / TFS 2008 though. To add it yourself just go to Tools => Customize, then choose the category Team and the command Go To Work Item..., and you can drag the command into one of your existing toolbars.

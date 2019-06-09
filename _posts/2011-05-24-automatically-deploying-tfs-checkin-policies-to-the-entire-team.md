@@ -13,7 +13,7 @@ categories:
 tags:
   - Checkin Policies
   - TFS
-  - visual studio
+  - Visual Studio
   - Visual Studio Extensions
 ---
 

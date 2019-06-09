@@ -28,7 +28,7 @@ tags:
   - Publish
   - SQL
   - SSDT
-  - visual studio
+  - Visual Studio
 ---
 
 We recently upgraded from VS (Visual Studio) 2010 to VS 2012, and with it had to upgrade our .dbproj database project to a .sqlproj. When making the switch I realized that .sqlproj database projects do not support specifying the database to deploy to as MSBuild command line arguments; instead you have to pass in the path to an xml file that has the necessary information.

@@ -15,7 +15,7 @@ tags:
   - sln
   - solution
   - unload
-  - visual studio
+  - Visual Studio
 ---
 
 I came across [this great article](http://blogs.msdn.com/b/jjameson/archive/2009/03/06/large-visual-studio-solutions-by-loading-unloading-projects.aspx) which talks about simply unloading projects from a solution to make the solution load and build faster in Visual Studio. This is great, as some of the solution files I work in contain over 300 projects and it can sometimes take a while to load. Also, because the information about which projects to load is stored in the .suo file (not the .sln file itself), this can be configured per developer so they only have to load the projects that they work in (the .suo files should never be stored in source control).
@@ -24,6 +24,6 @@ Now, unloading 300 projects one at a time would take forever, but luckily there 
 
 ![Unload Projects From Solution](/assets/Posts/2012/11/unload-projects-from-solution.png)
 
-__The one caveat with this__ is that because Visual Studio only builds the projects that are loaded, if you get your team's latest code from source control and then try to build the solution from within visual studio, __the build may fail__ since it will only build the projects you have loaded, and these may depend on changes made to the other projects that you don't have loaded. So you can easily reload all of the projects in the solution, build, and then unload all the ones you don't want again, or what I prefer to do is simply [build the solution from MSBuild](http://geekswithblogs.net/deadlydog/archive/2011/06/01/setting-up-keyboard-shortcut-to-build-solution-in-msbuild.aspx), as this ignores the .suo file and builds all projects referenced in the .sln file. I often build my solution files from MSBuild anyways since it has the added benefit of not locking up my visual studio UI while building :).
+__The one caveat with this__ is that because Visual Studio only builds the projects that are loaded, if you get your team's latest code from source control and then try to build the solution from within Visual Studio, __the build may fail__ since it will only build the projects you have loaded, and these may depend on changes made to the other projects that you don't have loaded. So you can easily reload all of the projects in the solution, build, and then unload all the ones you don't want again, or what I prefer to do is simply [build the solution from MSBuild](http://geekswithblogs.net/deadlydog/archive/2011/06/01/setting-up-keyboard-shortcut-to-build-solution-in-msbuild.aspx), as this ignores the .suo file and builds all projects referenced in the .sln file. I often build my solution files from MSBuild anyways since it has the added benefit of not locking up my Visual Studio UI while building :).
 
 Happy Coding!

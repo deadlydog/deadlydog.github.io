@@ -1,6 +1,6 @@
 ---
 id: 24
-title: Friendly visual studio solution names for working with multiple branches
+title: Friendly Visual Studio solution names for working with multiple branches
 date: 2011-04-29T23:16:00-06:00
 guid: https://deadlydog.wordpress.com/?p=24
 permalink: /friendly-visual-studio-solution-names-for-working-with-multiple-branches/
@@ -12,7 +12,7 @@ categories:
 tags:
   - Friendly Name
   - solution
-  - visual studio
+  - Visual Studio
   - VSCommands
 ---
 

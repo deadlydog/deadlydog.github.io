@@ -11,7 +11,7 @@ categories:
 tags:
   - merge
   - merge tool
-  - visual studio
+  - Visual Studio
   - Visual Studio 2012
   - VS
   - VS 11

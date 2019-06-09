@@ -13,7 +13,7 @@ tags:
   - Extension
   - Productivity
   - TFS
-  - visual studio
+  - Visual Studio
   - Visual Studio Extensions
 ---
 

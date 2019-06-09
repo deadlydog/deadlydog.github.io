@@ -19,7 +19,7 @@ tags:
   - TF
   - TF.exe
   - TFS
-  - visual studio
+  - Visual Studio
   - VSIX
 ---
 

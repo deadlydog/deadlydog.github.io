@@ -14,7 +14,7 @@ tags:
   - TFS
   - TFS Power Tools
   - TreeDiff
-  - visual studio
+  - Visual Studio
   - Visual Studio Extensions
 ---
 

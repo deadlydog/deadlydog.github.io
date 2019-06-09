@@ -10,7 +10,7 @@ categories:
   - Visual Studio
 tags:
   - tips and tricks
-  - visual studio
+  - Visual Studio
 ---
 
 I watched an awesome Channel 9 [Visual Studio Tips And Tricks video](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DEV305), so I thought I'd share. Some great VS gems in there. Even a few Windows 7 ones, like using `Alt`+`D` to jump to the address bar in Windows Explorer, and typing "cmd" in the Windows Explorer address bar to open a command prompt at the current directory.

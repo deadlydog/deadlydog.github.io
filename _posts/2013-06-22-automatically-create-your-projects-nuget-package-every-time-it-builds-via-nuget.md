@@ -21,7 +21,7 @@ tags:
   - Package
   - project
   - push
-  - visual studio
+  - Visual Studio
 ---
 
 So you’ve got a super awesome library/assembly that you want to share with others, but you’re too lazy to actually use NuGet to package it up and upload it to the gallery; or maybe you don’t know how to create a NuGet package and don’t have the time or desire to learn. Well, my friends, now this can all be handled for you automatically.

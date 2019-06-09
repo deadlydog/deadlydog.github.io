@@ -13,7 +13,7 @@ tags:
   - Automate
   - ClickOnce
   - PowerShell
-  - visual studio
+  - Visual Studio
 ---
 
 Today I was thinking about using a ClickOnce application in my build process.  The problem is, when using an installed ClickOnce application (as opposed to an online one) if an update to the ClickOnce application is published, the application prompts the user to Accept or Skip downloading and applying the new update.  This would cause a problem for my automated builds as it would end up waiting forever for a user to click Accept.  [This post lead me to the answer](http://stackoverflow.com/questions/1638066/clickonce-skip-asking-for-update-or-fail-lauch-if-skip-is-selected), which is:
@@ -137,6 +137,6 @@ The third line is where we are actually calling the powershell script, passing t
 
 So after going through and adding all of my nice error messages to the powershell script, I realized that if there is a problem with the script Visual Studio does not forward the error message to the Output window like I hoped it would; it just spits out the text in the Post-build event window and says an error occurred; which doesn’t really tell us anything.  So if you find you are getting errors, copy-paste that third line into PowerShell, replace the macro variables for their absolute values, and run it there.  Powershell should then give you a much more informative error message.
 
-One last comment about this process is that because the powershell script modifies the .csproj outside of visual studio, after you publish a new version and build, the script will write to that .csproj file and visual studio will give you a prompt that the project was modified outside of visual studio and will want to reload it.  You can choose to reload it (which will close all file tabs for that project), or choose to ignore it; it’s up to you.  This is the one minor annoyance I haven’t been able to find a way around, but it’s still better than having to remember to update the Minimum Required Version manually after every new version of the tool I publish.
+One last comment about this process is that because the powershell script modifies the .csproj outside of Visual Studio, after you publish a new version and build, the script will write to that .csproj file and Visual Studio will give you a prompt that the project was modified outside of Visual Studio and will want to reload it.  You can choose to reload it (which will close all file tabs for that project), or choose to ignore it; it’s up to you.  This is the one minor annoyance I haven’t been able to find a way around, but it’s still better than having to remember to update the Minimum Required Version manually after every new version of the tool I publish.
 
 I hope you find this post useful, and I appreciate any comments; good or bad.  Happy coding!
