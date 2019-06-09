@@ -94,8 +94,8 @@ author:
       icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/1danielschroeder/"
     # - label: "Email"
-    #   icon: "far fa-envelope"
-    #   link: "mailto://deadlydog@hotmail.com"
+    #   icon: "fas fa-fw fa-envelope-square"
+    #   link: "mailto:deadlydog@hotmail.com"
 
 footer:
   links:
