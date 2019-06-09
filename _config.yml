@@ -74,13 +74,12 @@ plugins:
   - jekyll-include-cache
 
 author:
-  name   : "Daniel Schroeder"
-  avatar : "/assets/Site/bio-photo.jpg"
-  bio    : "aka deadlydog. Developer and family man. Loves C#, .NET, PowerShell, AutoHotkey. Automate Everything!"
+  name: "Daniel Schroeder"
+  avatar: "/assets/Site/bio-photo.jpg"
+  bio: "aka deadlydog. Developer and family man. Loves C#, .NET, PowerShell, AutoHotkey. Automate Everything!"
+  location: "Regina, SK, Canada"
   links:
     # Icons are pulled from https://fontawesome.com/icons.
-    # - label: "Regina, SK, Canada"
-    #   icon: "fas fa-map-marker-alt"
     # - label: "Website"
     #   icon: "fas fa-fw fa-link"
     #   url: "https://"
