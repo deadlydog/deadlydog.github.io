@@ -2,7 +2,6 @@
 
 - Fix up all build errors and warnings.
   - `Invalid theme folder: _sass` build warning is a bug in Jekyll: https://github.com/jekyll/jekyll/issues/7630
-- Convert tabs to 4 spaces in all posts for less indentation in the final result.
 - Maybe convert all double spaces after a period to single spaces.
 - Maybe convert all ** to __ for bold in all posts.
 - Make sure tags are all on separate lines in Front Matter on all posts.

@@ -24,17 +24,17 @@ Method 1 - Use static event handlers, like so:
 ```csharp
 public virtual int SelectedID
 {
-	get { return (int)GetValue(SelectedIDProperty); }
-	set { SetValue(SelectedIDProperty, value); }
+    get { return (int)GetValue(SelectedIDProperty); }
+    set { SetValue(SelectedIDProperty, value); }
 }
 
 public static readonly DependencyProperty SelectedIDProperty =
-	DependencyProperty.Register("SelectedID", typeof(int), typeof(SelectorBase),
-		new PropertyMetadata(0, new PropertyChangedCallback(OnSelectedIDChanged)));
+    DependencyProperty.Register("SelectedID", typeof(int), typeof(SelectorBase),
+        new PropertyMetadata(0, new PropertyChangedCallback(OnSelectedIDChanged)));
 
 private static void OnSelectedIDChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
 {
-	// Perform event handler logic
+    // Perform event handler logic
 }
 ```
 
@@ -44,41 +44,41 @@ Method 2 - Hookup event handler at initialize, and remove it during Dispose(), l
 // Constructor
 public SelectorBase()
 {
-	HookupEventHandlers();
+    HookupEventHandlers();
 }
 
 private void HookupEventHandlers()
 {
-	TypeDescriptor.GetProperties(this)["SelectedID"].AddValueChanged(this, SelectedID_ValueChanged);
+    TypeDescriptor.GetProperties(this)["SelectedID"].AddValueChanged(this, SelectedID_ValueChanged);
 }
 
 private void RemoveEventHandlers()
 {
-	TypeDescriptor.GetProperties(this)["SelectedID"].RemoveValueChanged(this, SelectedID_ValueChanged);
+    TypeDescriptor.GetProperties(this)["SelectedID"].RemoveValueChanged(this, SelectedID_ValueChanged);
 }
 
 protected override void Dispose(bool isDisposing)
 {
-	base.Dispose(isDisposing);
-	// If managed resources should be released
-	if (isDisposing)
-	{
-		RemoveEventHandlers();
-	}
+    base.Dispose(isDisposing);
+    // If managed resources should be released
+    if (isDisposing)
+    {
+        RemoveEventHandlers();
+    }
 }
 
 public virtual int SelectedID
 {
-	get { return (int)GetValue(SelectedIDProperty); }
-	set { SetValue(SelectedIDProperty, value); }
+    get { return (int)GetValue(SelectedIDProperty); }
+    set { SetValue(SelectedIDProperty, value); }
 }
 
 public static readonly DependencyProperty SelectedIDProperty =
-	DependencyProperty.Register("SelectedID", typeof(int), typeof(SelectorBase), new PropertyMetadata(0));
+    DependencyProperty.Register("SelectedID", typeof(int), typeof(SelectorBase), new PropertyMetadata(0));
 
 private void SelectedID_ValueChanged(object sender, EventArgs e)
 {
-	// Perform event handler logic
+    // Perform event handler logic
 }
 ```
 

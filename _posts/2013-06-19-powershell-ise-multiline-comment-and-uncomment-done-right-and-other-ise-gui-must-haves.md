@@ -27,7 +27,7 @@ I’ve written some code that you can add to your ISE profile that adds keyboard
 
 ```powershell
 This is some
-	code and here is
+    code and here is
 some more code.
 ```
 
@@ -35,7 +35,7 @@ into this:
 
 ```powershell
 #This is some
-#	code and here is
+#   code and here is
 #some more code.
 ```
 

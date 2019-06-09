@@ -108,7 +108,7 @@ function Get-XmlNamespaceManager([ xml ]$XmlDocument, [string]$NamespaceURI = ""
     # In order for SelectSingleNode() to actually work, we need to use the fully qualified node path along with an Xml Namespace Manager, so set them up.
     [System.Xml.XmlNamespaceManager]$xmlNsManager = New-Object System.Xml.XmlNamespaceManager($XmlDocument.NameTable)
     $xmlNsManager.AddNamespace("ns", $NamespaceURI)
-    return ,$xmlNsManager		# Need to put the comma before the variable name so that PowerShell doesn't convert it into an Object[].
+    return ,$xmlNsManager   # Need to put the comma before the variable name so that PowerShell doesn't convert it into an Object[].
 }
 
 function Get-FullyQualifiedXmlNodePath([string]$NodePath, [string]$NodeSeparatorCharacter = '.')

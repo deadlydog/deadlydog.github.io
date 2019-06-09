@@ -239,7 +239,7 @@ function Compress-ZipFile
         if ($canPerformSimpleCopyIntoZipFile)
         {
             # Start copying the file/directory into the Zip file since there won't be any conflicts. This is an asynchronous operation.
-            $zipShell.CopyHere($FileOrDirectoryPathToAddToZipFile)	# Copy Flags are ignored when copying files into a zip file, so can't use them like we did with the Expand-ZipFile function.
+            $zipShell.CopyHere($FileOrDirectoryPathToAddToZipFile)  # Copy Flags are ignored when copying files into a zip file, so can't use them like we did with the Expand-ZipFile function.
 
             # The Copy operation is asynchronous, so wait until it is complete before continuing.
             # Wait until we can see that the file/directory has been created.
@@ -304,7 +304,7 @@ function Compress-ZipFile
             { Copy-Item -Path $FileOrDirectoryPathToAddToZipFile -Destination $tempDirectoryPath -Recurse -Force }
             # Else the user should be prompted on each conflict.
             else
-            { Copy-Item -Path $FileOrDirectoryPathToAddToZipFile -Destination $tempDirectoryPath -Recurse -Confirm -ErrorAction SilentlyContinue }	# SilentlyContinue errors to avoid an error for every directory copied.
+            { Copy-Item -Path $FileOrDirectoryPathToAddToZipFile -Destination $tempDirectoryPath -Recurse -Confirm -ErrorAction SilentlyContinue }  # SilentlyContinue errors to avoid an error for every directory copied.
 
             # For whatever reason the zip.MoveHere() function is not able to move empty directories into the Zip file, so we have to put dummy files into these directories
             # and then remove the dummy files from the Zip file after.

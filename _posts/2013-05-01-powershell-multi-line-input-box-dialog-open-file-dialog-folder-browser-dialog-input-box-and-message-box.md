@@ -89,7 +89,7 @@ function Read-OpenFileDialog([string]$WindowTitle, [string]$InitialDirectory, [s
     if (![string]::IsNullOrWhiteSpace($InitialDirectory)) { $openFileDialog.InitialDirectory = $InitialDirectory }
     $openFileDialog.Filter = $Filter
     if ($AllowMultiSelect) { $openFileDialog.MultiSelect = $true }
-    $openFileDialog.ShowHelp = $true	# Without this line the ShowDialog() function may hang depending on system configuration and running from console vs. ISE.
+    $openFileDialog.ShowHelp = $true    # Without this line the ShowDialog() function may hang depending on system configuration and running from console vs. ISE.
     $openFileDialog.ShowDialog() > $null
     if ($AllowMultiSelect) { return $openFileDialog.Filenames } else { return $openFileDialog.Filename }
 }
@@ -249,7 +249,7 @@ function Read-MultiLineInputBoxDialog([string]$Message, [string]$WindowTitle, [s
 
     # Initialize and show the form.
     $form.Add_Shown({$form.Activate()})
-    $form.ShowDialog() > $null	# Trash the text of the button that was clicked.
+    $form.ShowDialog() > $null  # Trash the text of the button that was clicked.
 
     # Return the text that the user entered.
     return $form.Tag
