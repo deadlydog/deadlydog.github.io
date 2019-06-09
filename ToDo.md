@@ -2,7 +2,6 @@
 
 - Fix up all build errors and warnings.
   - `Invalid theme folder: _sass` build warning is a bug in Jekyll: https://github.com/jekyll/jekyll/issues/7630
-- Maybe convert all ** to __ for bold in all posts.
 - Make sure tags are all on separate lines in Front Matter on all posts.
 - Convert all ‘ and ’ and `&#8216;` and `&rsquo;` characters to ', but do them one by one as it seems to mess up some posts.
 - Convert all &amp;lt; and &amp;gt; to `<` and `>`.

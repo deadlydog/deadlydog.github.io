@@ -33,7 +33,7 @@ $PSVersionTable.PSVersion
 
 ## How to run/test your script against an older version of PowerShell ([source](http://technet.microsoft.com/en-us/library/hh847899.aspx))
 
-All PS versions: use **PowerShell.exe –Version [version]** to start a new PowerShell session, where [version] is the PowerShell version that you want the session to use, then run your script in this new session. Shorthand is **PowerShell –v [version]**
+All PS versions: use __PowerShell.exe –Version [version]__ to start a new PowerShell session, where [version] is the PowerShell version that you want the session to use, then run your script in this new session. Shorthand is __PowerShell –v [version]__
 
 ```powershell
 PowerShell.exe -Version 2.0
