@@ -8,7 +8,12 @@ categories:
   - Build
   - MSBuild
 tags:
-  - MSBuild msbuild.exe Slow Hangs Build Compile
+  - MSBuild
+  - msbuild.exe
+  - Slow
+  - Hangs
+  - Build
+  - Compile
 ---
 
 I created the [Invoke-MsBuild PowerShell Module](https://invokemsbuild.codeplex.com/) (also [available in the PowerShell Gallery](https://www.powershellgallery.com/packages/Invoke-MsBuild/)), and recently added support to use the Visual Studio 2015 version of MsBuild.exe, when available. After doing so, I noticed that sometimes the build would take a very long time to complete; a solution that typically would take 10 seconds to compile was all of a sudden taking 10 minutes. When changing Invoke-MsBuild back to defaulting to the Visual Studio 2013 version of MsBuild.exe the problem went away. I thought that maybe there was just something strange with my workstation, however after updating Invoke-MsBuild on our build servers at my work we saw the same thing there.
