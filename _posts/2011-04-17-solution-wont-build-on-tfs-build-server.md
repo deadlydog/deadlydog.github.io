@@ -22,7 +22,7 @@ If you are able to build (compile) the solution on your local machine, but it wo
 ```text
 1 error(s), 1 warning(s)
 $/TeamProject/Dev/RQ4/FBs/4.1.4_eSec/RQ4.Client.sln - 1 error(s), 1 warning(s), View Log File
-IntegrationfrmGetIntegrationAuthorization.xaml.cs (1138): The type or namespace name &#8216;BillingFields' could not be found (are you missing a using directive or an assembly reference?)
+IntegrationfrmGetIntegrationAuthorization.xaml.cs (1138): The type or namespace name 'BillingFields' could not be found (are you missing a using directive or an assembly reference?)
 C:WindowsMicrosoft.NETFramework64v4.0.30319Microsoft.Common.targets (1360): Could not resolve this reference. Could not locate the assembly "IQ.Core.Resources, Version=4.1.2.0, Culture=neutral, processorArchitecture=MSIL". Check to make sure the assembly exists on disk. If this reference is required by your code, you may get compilation errors.
 ```
 
