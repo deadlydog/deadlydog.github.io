@@ -26,7 +26,7 @@ A list of some shortcuts and new features to VS 2010 and C# 4.0:
 - Window => New Window to open up same file in two separate tabs, or can drag the splitter at the top-right corner of the edit indow.
 - Edit => Outlining => Hide Selection to collapse any region of code
 - `Alt` + Mouse Left Drag for box selection instead of line selection, then just start typing; you can also use Alt+Shift+Arrow eys to do box selection with the keyboard.
-- `Alt` + Arrow Keys to move current line up/down.  Can also select multiple lines and use `Alt`+`Up`/`Down` to move the whole selection p/down.
+- `Alt` + Arrow Keys to move current line up/down. Can also select multiple lines and use `Alt`+`Up`/`Down` to move the whole selection p/down.
 - In NavigateTo search window (`Ctrl`+`Comma`) use capitals to search for camel casing (i.e. CE to find displayCustomerEmails) nd a space to do an "and" search (i.e. "email customer" would find displayCustomerEmails).
 - `Ctrl`+`I` to do an incremental search of a document, then `F3` and `Shift`+`F3` to move to next/previous matches.
 - Use snippets to automatically create code and save time.
