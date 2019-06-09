@@ -23,7 +23,7 @@ tags:
   - XML
 ---
 
-I love creating tools, particularly ones for myself and other developers to use. A common situation that I run into is needing to save the user's settings to a file so that I can load them up the next time the tool is ra0; I find that the easiest way to accomplish this is to create a Settings class to hold all of the user's settings, and then use serialization to save and load the class instance to/from a f160; I mention a Settings class here, but you can use this technique to save any object (or list of objects) to a file.
+I love creating tools, particularly ones for myself and other developers to use. A common situation that I run into is needing to save the user's settings to a file so that I can load them up the next time the tool is ra0; I find that the easiest way to accomplish this is to create a Settings class to hold all of the user's settings, and then use serialization to save and load the class instance to/from a file. I mention a Settings class here, but you can use this technique to save any object (or list of objects) to a file.
 
 There are tons of different formats that you may want to save your object instances as, but the big three are Binary, XML, and Json. Each of these formats have their pros and cons, which I won't go int0; Below I present functions that can be used to save and load any object instance to / from a file, as well as the different aspects to be aware of when using each method.
 
