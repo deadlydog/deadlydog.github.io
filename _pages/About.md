@@ -17,28 +17,28 @@ You can view my personal (and outdated) [website here](http://www.danskingdom.co
 
 Most software that I create is in my spare time is free and/or open source. Here is some software that I've created:
 
-  * The [Dynamic Particle System Framework (DPSF) for XNA](http://xnaparticles.com).
-  * Baby Touch game for [Windows 8](http://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=3&ved=0CCwQFjAC&url=http%3A%2F%2Fapps.microsoft.com%2Fwindows%2Fen-us%2Fapp%2Fbaby-touch%2F7bfc0cab-bdf4-4aea-b1a1-c734488c4c76&ei=GShZVa3rKYzSoASMjYP4Ag&usg=AFQjCNEN54mP2heSv2VTe3NISrxZoakdfw&sig2=oct4RmvJ-ysK6-exwuUc_w&bvm=bv.93564037,d.cGU&cad=rja) and [Windows Phone](https://www.windowsphone.com/en-ca/store/app/baby-touch/c290b92c-ef4c-404b-b851-56800fbbbf09).
-  * My public [GitHub projects](https://github.com/deadlydog), many of which were migrated from CodePlex before it was archived in late 2017.
-      * [AHK Command Picker](https://github.com/deadlydog/AHKCommandPicker) - An AutoHotkey plugin that makes it easier to automate everything you do on your PC.
-      * [Auto Update Project's Minimum Required ClickOnce Version](https://github.com/deadlydog/AutoUpdateProjectsMinimumRequiredClickOnceVersion) - Will make sure users of your ClickOnce apps are always using the latest version.
-      * [Dan's Utility Libraries](https://github.com/deadlydog/DansUtilityLibraries) - Custom libraries for doing various tasks.
-      * [Diff All Files Visual Studio Extension](https://github.com/deadlydog/VS.DiffAllFiles) - Quickly compare changes to your files in Visual Studio.
-      * [Invoke-MsBuild PowerShell Script](https://github.com/deadlydog/Invoke-MsBuild) - Easily build your projects/solutions and see if the build failed and view error logs.
-      * [New-NuGetPackage PowerShell Script](https://github.com/deadlydog/New-NuGetPackage) and [NuGet Package](https://www.nuget.org/packages/CreateNewNuGetPackageFromProjectAfterEachBuild/) - Automatically create NuGet packages for your libraries.
-      * [Path Length Checker](https://github.com/deadlydog/PathLengthChecker) - Quickly view how long file paths in a directory are, and how long they would be if moved somewhere else.
-      * [Sql Script Runner](https://github.com/deadlydog/SqlScriptRunner) - Batch run SQL files (e.g. stored procedures, functions, tables) against a database easily.
-  * My public [BitBucket projects](https://bitbucket.org/deadlydog)
-      * [Make GitHub Commit and Blog pages full width GreaseMonkey script](https://greasyfork.org/scripts/1711-make-github-pull-request-commit-and-blob-pages-full-width) (and [Chrome extension](https://chrome.google.com/webstore/detail/make-github-pages-full-wi/dfpgjcidmobcpaoolhgchdcmdgenbaoa)) - Make GitHub pages with code expand to fit your browser window.
-      * [Make GitHub Pull Request pages ignore whitespace GreaseMonkey script](https://greasyfork.org/scripts/1712-reload-github-pull-request-diff-page-to-ignore-whitespace) - Make GitHub Pull Requests not show whitespace differences.
+- The [Dynamic Particle System Framework (DPSF) for XNA](http://xnaparticles.com).
+- Baby Touch game for [Windows 8](http://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=3&ved=0CCwQFjAC&url=http%3A%2F%2Fapps.microsoft.com%2Fwindows%2Fen-us%2Fapp%2Fbaby-touch%2F7bfc0cab-bdf4-4aea-b1a1-c734488c4c76&ei=GShZVa3rKYzSoASMjYP4Ag&usg=AFQjCNEN54mP2heSv2VTe3NISrxZoakdfw&sig2=oct4RmvJ-ysK6-exwuUc_w&bvm=bv.93564037,d.cGU&cad=rja) and [Windows Phone](https://www.windowsphone.com/en-ca/store/app/baby-touch/c290b92c-ef4c-404b-b851-56800fbbbf09).
+- My public [GitHub projects](https://github.com/deadlydog), many of which were migrated from CodePlex before it was archived in late 2017.
+  - [AHK Command Picker](https://github.com/deadlydog/AHKCommandPicker) - An AutoHotkey plugin that makes it easier to automate everything you do on your PC.
+  - [Auto Update Project's Minimum Required ClickOnce Version](https://github.com/deadlydog/AutoUpdateProjectsMinimumRequiredClickOnceVersion) - Will make sure users of your ClickOnce apps are always using the latest version.
+  - [Dan's Utility Libraries](https://github.com/deadlydog/DansUtilityLibraries) - Custom libraries for doing various tasks.
+  - [Diff All Files Visual Studio Extension](https://github.com/deadlydog/VS.DiffAllFiles) - Quickly compare changes to your files in Visual Studio.
+  - [Invoke-MsBuild PowerShell Script](https://github.com/deadlydog/Invoke-MsBuild) - Easily build your projects/solutions and see if the build failed and view error logs.
+  - [New-NuGetPackage PowerShell Script](https://github.com/deadlydog/New-NuGetPackage) and [NuGet Package](https://www.nuget.org/packages/CreateNewNuGetPackageFromProjectAfterEachBuild/) - Automatically create NuGet packages for your libraries.
+  - [Path Length Checker](https://github.com/deadlydog/PathLengthChecker) - Quickly view how long file paths in a directory are, and how long they would be if moved somewhere else.
+  - [Sql Script Runner](https://github.com/deadlydog/SqlScriptRunner) - Batch run SQL files (e.g. stored procedures, functions, tables) against a database easily.
+- My public [BitBucket projects](https://bitbucket.org/deadlydog)
+  - [Make GitHub Commit and Blog pages full width GreaseMonkey script](https://greasyfork.org/scripts/1711-make-github-pull-request-commit-and-blob-pages-full-width) (and [Chrome extension](https://chrome.google.com/webstore/detail/make-github-pages-full-wi/dfpgjcidmobcpaoolhgchdcmdgenbaoa)) - Make GitHub pages with code expand to fit your browser window.
+  - [Make GitHub Pull Request pages ignore whitespace GreaseMonkey script](https://greasyfork.org/scripts/1712-reload-github-pull-request-diff-page-to-ignore-whitespace) - Make GitHub Pull Requests not show whitespace differences.
 
 And here are some websites that I've made:
 
-  * (2003) [HelpfulPCTools.com](http://www.helpfulpctools.com/) - Free tools and advise about general pc maintenance (viruses, spyware, etc.). (Very outdated now).
-  * (2005) [PostYourWebsite.com](http://www.postyourwebsite.com/) - Search for other peoples websites, and post your own. (No longer exists)
-  * (2007) [DansKingdom.com](http://danskingdom.com/) - My personal site.
-  * (2008) [TheHotMap.com](http://www.thehotmap.com/) - An interactive search engine interface. This was created by myself and one other person.
-  * (2009) [XnaParticles.com](http://www.xnaparticles.com/) - The project home of my Dynamic Particle System Framework.
+- (2003) [HelpfulPCTools.com](http://www.helpfulpctools.com/) - Free tools and advise about general pc maintenance (viruses, spyware, etc.). (Very outdated now).
+- (2005) [PostYourWebsite.com](http://www.postyourwebsite.com/) - Search for other peoples websites, and post your own. (No longer exists)
+- (2007) [DansKingdom.com](http://danskingdom.com/) - My personal site.
+- (2008) [TheHotMap.com](http://www.thehotmap.com/) - An interactive search engine interface. This was created by myself and one other person.
+- (2009) [XnaParticles.com](http://www.xnaparticles.com/) - The project home of my Dynamic Particle System Framework.
 
 ## License
 
