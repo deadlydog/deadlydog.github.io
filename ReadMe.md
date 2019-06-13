@@ -54,6 +54,7 @@ Here's a list of places I've changed code:
 - `assets/css/main.scss`: Adjusted font sizes a bit, and added class used in the masthead.html.
 - `_includes/masthead.html`: Added site description below site title.
 - `_includes/read-time.html`: Added post/page date in with the reading time.
+- `_includes/footer.html`: Added advertisements to the bottom of the footer.
 - `_config.yml` file.
 
 Here's a list of files I've added or changed:
