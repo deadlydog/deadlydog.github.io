@@ -64,6 +64,7 @@ Here's a list of files I've added or changed:
 - The `favicon.ico` image.
 - The `.vscode` directory.
 - The `ReadMe.md` file.
+- The `ads.txt` file with my Google AdSense info.
 
 ## Additional Info
 
