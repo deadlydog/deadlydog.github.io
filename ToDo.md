@@ -9,4 +9,5 @@
 - Add advertisements.
   - Added, but they don't show up yet, possibly because they're not actually on the blog.danskingdom.com URL yet.
 - Add comment support.
+  - Tutorials: https://mademistakes.com/articles/jekyll-static-comments/ and https://mademistakes.com/articles/improving-jekyll-static-comments/
   - If possible, migrate comments from WordPress. Might just need to do it manually.
