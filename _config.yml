@@ -1,3 +1,7 @@
+# File taken from https://github.com/mmistakes/minimal-mistakes and modified.
+# Rather than removing unused settings, they have simply been commented out in case needed in the future.
+# I believe any settings that are not specified will be inherited from the remote repos config file.
+
 # Welcome to Jekyll!
 #
 # This config file is meant for settings that affect your whole blog, values
@@ -8,27 +12,223 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 
-# Site settings
+# Theme Settings
+#
+# Review documentation to determine if you should use `theme` or `remote_theme`
+# https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#installing-the-theme
+
+remote_theme: mmistakes/minimal-mistakes@26c1989 # Specify the branch, tag, or commit so that if they breaks the theme with updates, it won't affect our site. Remove the '@' and everything after it to use the tip of the master branch.
+minimal_mistakes_skin: "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+
+# Site Settings
 # These are used to personalize your new site. If you look in the HTML files,
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Daniel Schroeder's Programming Blog
-email: deadlydog@hotmail.com
-description: Sharing my tips, tricks, and code to help other developers be more productive.
-baseurl:
-url: https://deadlydog.github.io
-twitter_username: deadlydog
-github_username: deadlydog
+locale: "en-US"
+title: "Daniel Schroeder's Programming Blog"
+# title_separator: "-"
+name: "Daniel Schroeder"
+description: "Sharing my tips, tricks, and code to help other developers be more productive."
+url: "https://deadlydog.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+baseurl: # the subpath of your site, e.g. "/blog"
+repository: "deadlydog/deadlydog.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+# teaser: # path of fallback teaser image, e.g. "/assets/images/500x300.png"
+# logo: # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
+# masthead_title: # overrides the website title displayed in the masthead, use " " for no title
+# breadcrumbs: false # true, false (default)
+words_per_minute: 200 # Used to calculate the read time.
+comments:
+  provider: # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "custom"
+  # disqus:
+  #   shortname            : # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
+  # discourse:
+  #   server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
+  # facebook:
+  #   # https://developers.facebook.com/docs/plugins/comments
+  #   appid                :
+  #   num_posts            : # 5 (default)
+  #   colorscheme          : # "light" (default), "dark"
+  # utterances:
+  #   theme                : # "github-light" (default), "github-dark"
+  #   issue_term           : # "pathname" (default)
+staticman:
+  allowedFields: # ['name', 'email', 'url', 'message']
+  branch: # "master"
+  commitMessage: # "New comment by {fields.name}"
+  filename: # comment-{@timestamp}-{fields.name}
+  format: # "yml"
+  moderation: # true
+  path: # "/_data/comments/{options.slug}" (default)
+  requiredFields: # ['name', 'email', 'message']
+  transforms:
+    email: # "md5"
+  generatedFields:
+    date:
+      type: # "date"
+      options:
+        format: # "iso8601" (default), "timestamp-seconds", "timestamp-milliseconds"
+  endpoint: # URL of your own deployment with trailing slash, will fallback to the public instance
+reCaptcha:
+  enabled: true
+  siteKey: "6LexzqgUAAAAACjnxAhDpsymtZKy3ymJFRbVNWKU"
+  secret: "6LexzqgUAAAAAJjkczlwT888oWg48CeU8x3MrNlc"
+# atom_feed:
+#   path: # blank (default) uses feed.xml
+search: true # true, false (default). Show the search link on the site.
+search_full_content: true # true, false (default)
+# search_provider: # lunr (default), algolia, google
+# algolia:
+#   application_id: # YOUR_APPLICATION_ID
+#   index_name: # YOUR_INDEX_NAME
+#   search_only_api_key: # YOUR_SEARCH_ONLY_API_KEY
+#   powered_by: # true (default), false
+# google:
+#   search_engine_id: # YOUR_SEARCH_ENGINE_ID
+#   instant_search: # false (default), true
 
-remote_theme: mmistakes/minimal-mistakes@26c1989 # Specify the branch, tag, or commit so that if they breaks the theme with updates, it won't affect our site. Remove the '@' and everything after it to use the tip of the master branch.
-minimal_mistakes_skin: default # "air", "aqua", "contrast", "dark", "default", "dirt", "neon", "mint", "plum", "sunrise"
-search: true # Show the search link on the site.
+# SEO Related
+# google_site_verification :
+# bing_site_verification   :
+# yandex_site_verification :
+# naver_site_verification  :
 
-# Build settings
+# Social Sharing
+twitter:
+  username: deadlydog
+# facebook:
+#   username:
+#   app_id:
+#   publisher:
+# og_image: # Open Graph/Twitter default site image
+# # For specifying social profiles
+# # - https://developers.google.com/structured-data/customize/social-profiles
+# social:
+#   type: # Person or Organization (defaults to Person)
+#   name: # If the user or organization name differs from the site's name
+#   links: # An array of links to social media profiles
+
+# Analytics
+analytics:
+  provider: "google-gtag" # false (default), "google", "google-universal", "custom"
+  google:
+    tracking_id: "UA-2386298-7"
+    anonymize_ip: false # true, false (default)
+
+# Site Author
+author:
+  name: "Daniel Schroeder"
+  avatar: "/assets/Site/bio-photo.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  bio: "aka deadlydog. Developer and family man. Loves C#, .NET, PowerShell, AutoHotkey. Automate Everything!"
+  location: "Regina, SK, Canada"
+  email: "deadlydog@hotmail.com"
+  links:
+    # Icons are pulled from https://fontawesome.com/icons.
+    # - label: "Website"
+    #   icon: "fas fa-fw fa-link"
+    #   url: "https://your-website.com"
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/deadlydog"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/deadlydog"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/1danielschroeder/"
+    # - label: "Email"
+    #   icon: "fas fa-fw fa-envelope-square"
+    #   url: mailto:your.name@email.com
+    # - label: "Facebook"
+    #   icon: "fab fa-fw fa-facebook-square"
+    #   url: "https://facebook.com/"
+    # - label: "Instagram"
+    #   icon: "fab fa-fw fa-instagram"
+    #   url: "https://instagram.com/"
+
+# Site Footer
+footer:
+  links:
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/deadlydog"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/deadlydog"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/1danielschroeder/"
+    # - label: "Facebook"
+    #   icon: "fab fa-fw fa-facebook-square"
+    #   url:
+    # - label: "GitLab"
+    #   icon: "fab fa-fw fa-gitlab"
+    #   url:
+    # - label: "Bitbucket"
+    #   icon: "fab fa-fw fa-bitbucket"
+    #   url:
+    # - label: "Instagram"
+    #   icon: "fab fa-fw fa-instagram"
+    #   url:
+
+# Reading Files.
+# Additional non-standard directories to process and create HTML files from markdown pages.
+include:
+  # - .htaccess
+  - _pages
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list to override the default setting.
+# exclude:
+#   - "*.sublime-project"
+#   - "*.sublime-workspace"
+#   - vendor
+#   - .asset-cache
+#   - .bundle
+#   - .jekyll-assets-cache
+#   - .sass-cache
+#   - assets/js/plugins
+#   - assets/js/_main.js
+#   - assets/js/vendor
+#   - Capfile
+#   - CHANGELOG
+#   - config
+#   - Gemfile
+#   - Gruntfile.js
+#   - gulpfile.js
+#   - LICENSE
+#   - log
+#   - node_modules
+#   - package.json
+#   - Rakefile
+#   - README
+#   - tmp
+#   - /docs # ignore Minimal Mistakes /docs
+#   - /test # ignore Minimal Mistakes /test
+# keep_files:
+#   - .git
+#   - .svn
+encoding: "utf-8"
+# markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+
+# Conversion
 markdown: kramdown
+highlighter: rouge # GitHub Pages currently (June 2019) only supports "rouge".
+# lsi: false
+# excerpt_separator: "\n\n"
+# incremental: false
 github: [metadata] # Added this to avoid the "No GitHub API authentication could be found. Some fields may be missing or have incorrect data." warning when starting Jekyll.
-highlighter: rouge  # GitHub Pages currently (June 2019) only supports "rouge".
+
+# Markdown Processing
+# kramdown:
+#   input: GFM
+#   hard_wrap: false
+#   auto_ids: true
+#   footnote_nr: 1
+#   entity_output: as_char
+#   toc_levels: 1..6
+#   smart_quotes: lsquo,rsquo,ldquo,rdquo
+#   enable_coderay: false
 
 # Uncomment to show line numbers in code blocks by default.
 # kramdown:
@@ -42,27 +242,16 @@ highlighter: rouge  # GitHub Pages currently (June 2019) only supports "rouge".
 #   let x = 21;
 # {% endhighlight %}
 
+# Sass/SCSS
+# sass:
+#   sass_dir: _sass
+#   style: compressed # http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
+
 # Outputting
 permalink: /:title/
-paginate: 10 # amount of posts to show
+paginate: 20 # amount of posts to show
 paginate_path: /page:num/
 timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-
-# Additional non-standard directories to process and create HTML files from markdown pages.
-include:
-  - _pages
-
-# Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
 
 # Plugins (previously gems:)
 plugins:
@@ -73,40 +262,49 @@ plugins:
   - jemoji
   - jekyll-include-cache
 
-author:
-  name: "Daniel Schroeder"
-  avatar: "/assets/Site/bio-photo.jpg"
-  bio: "aka deadlydog. Developer and family man. Loves C#, .NET, PowerShell, AutoHotkey. Automate Everything!"
-  location: "Regina, SK, Canada"
-  links:
-    # Icons are pulled from https://fontawesome.com/icons.
-    # - label: "Website"
-    #   icon: "fas fa-fw fa-link"
-    #   url: "https://"
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/deadlydog"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/deadlydog"
-    - label: "LinkedIn"
-      icon: "fab fa-fw fa-linkedin"
-      url: "https://www.linkedin.com/in/1danielschroeder/"
-    # - label: "Email"
-    #   icon: "fas fa-fw fa-envelope-square"
-    #   link: "mailto:deadlydog@hotmail.com"
+# Mimic GitHub Pages with --safe
+whitelist:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jemoji
+  - jekyll-include-cache
 
-footer:
-  links:
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/deadlydog"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/deadlydog"
-    - label: "LinkedIn"
-      icon: "fab fa-fw fa-linkedin"
-      url: "https://www.linkedin.com/in/1danielschroeder/"
+# Archives
+#  Type
+#  - GitHub Pages compatible archive pages built with Liquid ~> type: liquid (default)
+#  - Jekyll Archives plugin archive pages ~> type: jekyll-archives
+#  Path (examples)
+#  - Archive page should exist at path when using Liquid method or you can
+#    expect broken links (especially with breadcrumbs enabled)
+#  - <base_path>/tags/my-awesome-tag/index.html ~> path: /tags/
+#  - <base_path/categories/my-awesome-category/index.html ~> path: /categories/
+#  - <base_path/my-awesome-category/index.html ~> path: /
+category_archive:
+  type: liquid
+  path: /categories/
+tag_archive:
+  type: liquid
+  path: /tags/
+# https://github.com/jekyll/jekyll-archives
+# jekyll-archives:
+#   enabled:
+#     - categories
+#     - tags
+#   layouts:
+#     category: archive-taxonomy
+#     tag: archive-taxonomy
+#   permalinks:
+#     category: /categories/:name/
+#     tag: /tags/:name/
+
+# HTML Compression
+# - http://jch.penibelst.de/
+# compress_html:
+#   clippings: all
+#   ignore:
+#     envs: development
 
 defaults:
   # _posts
@@ -137,16 +335,3 @@ defaults:
       toc_icon: stream
       toc_sticky: false
       classes: wide
-
-category_archive:
-  type: liquid
-  path: /categories/
-tag_archive:
-  type: liquid
-  path: /tags/
-
-analytics:
-  provider: "google-gtag"
-  google:
-    tracking_id: "UA-2386298-7"
-    anonymize_ip: false # default
