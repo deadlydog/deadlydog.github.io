@@ -57,7 +57,7 @@ Here's a list of places I've changed code:
 - `_includes/footer.html`: Added advertisements to the bottom of the footer.
 - `_config.yml` file.
 
-Here's a list of files I've added or changed:
+Here's a list of files I've added:
 
 - Everything in the `_posts` and `_drafts` directories.
 - The `_pages\About.md` page.
@@ -66,6 +66,7 @@ Here's a list of files I've added or changed:
 - The `.vscode` directory.
 - The `ReadMe.md` file.
 - The `ads.txt` file with my Google AdSense info.
+- The `includes\comment-form.html`, `includes\comment.html`, and `includes\comments.html` to support comments in the blog.
 
 ## Additional Info
 
