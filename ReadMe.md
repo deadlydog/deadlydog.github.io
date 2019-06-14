@@ -67,6 +67,7 @@ Here's a list of files I've added:
 - The `ReadMe.md` file.
 - The `ads.txt` file with my Google AdSense info.
 - The `includes\comment-form.html`, `includes\comment.html`, and `includes\comments.html` to support comments in the blog.
+- The `staticman.yml` file, which is used to support comments.
 
 ## Additional Info
 

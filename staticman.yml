@@ -1,3 +1,5 @@
+# This file was copied from https://github.com/mmistakes/made-mistakes-jekyll and then modified.
+
 # Name of the property. You can have multiple properties with completely
 # different config blocks for different sections of your site.
 # For example, you can have one property to handle comment submission and
@@ -17,7 +19,7 @@ comments:
   # When allowedOrigins is defined, only requests sent from one of the domains
   # listed will be accepted. The origin is sent as part as the `options` object
   # (e.g. <input name="options[origin]" value="http://yourdomain.com/post1")
-  allowedOrigins: ["mademistakes.com"]
+  allowedOrigins: ["danskingdom.com"]
 
   # (*) REQUIRED
   #
@@ -30,7 +32,7 @@ comments:
   # (*) REQUIRED
   #
   # Destination path (filename) for the data files. Accepts placeholders.
-  filename: "comment-{@timestamp}"
+  filename: "comment-{fields.name}-{@timestamp}"
 
   # The format of the generated data files. Accepted values are "json", "yaml"
   # or "frontmatter"
@@ -61,7 +63,7 @@ comments:
   #   type: "comment"
 
   # Name of the site. Used in notification emails.
-  name: "mademistakes.com"
+  name: "blog.danskingdom.com"
 
   # Notification settings. When enabled, users can choose to receive notifications
   # via email when someone adds a reply or a new comment. This requires an account
@@ -97,5 +99,5 @@ comments:
   # reCaptcha
   reCaptcha:
     enabled: true
-    siteKey: "6LdRBykTAAAAAFB46MnIu6ixuxwu9W1ihFF8G60Q"
-    secret: "PznnZGu3P6eTHRPLORniSq+J61YEf+A9zmColXDM5icqF49gbunH51B8+h+i2IvewpuxtA9TFoK68TuhUp/X3YKmmqhXasegHYabY50fqF9nJh9npWNhvITdkQHeaOqnFXUIwxfiEeUt49Yoa2waRR7a5LdRAP3SVM8hz0KIBT4="
+    siteKey: "6LexzqgUAAAAACjnxAhDpsymtZKy3ymJFRbVNWKU"
+    secret: "6LexzqgUAAAAAJjkczlwT888oWg48CeU8x3MrNlc"
