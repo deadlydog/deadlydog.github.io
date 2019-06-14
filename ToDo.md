@@ -11,3 +11,5 @@
 - Add comment support.
   - Tutorials: https://mademistakes.com/articles/jekyll-static-comments/ and https://mademistakes.com/articles/improving-jekyll-static-comments/
   - If possible, migrate comments from WordPress. Might just need to do it manually.
+- Move custom footer.html code into `_includes\footer\custom.html` and delete `_includes\footer.html` file.
+- Possibly look at removing custom comments files and using the built-in staticman v2 support.
