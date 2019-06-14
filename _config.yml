@@ -20,6 +20,7 @@ baseurl:
 url: https://deadlydog.github.io
 twitter_username: deadlydog
 github_username: deadlydog
+repository: "deadlydog/deadlydog.github.io" # Used for posting comments.
 
 remote_theme: mmistakes/minimal-mistakes@26c1989 # Specify the branch, tag, or commit so that if they breaks the theme with updates, it won't affect our site. Remove the '@' and everything after it to use the tip of the master branch.
 minimal_mistakes_skin: default # "air", "aqua", "contrast", "dark", "default", "dirt", "neon", "mint", "plum", "sunrise"
@@ -72,6 +73,10 @@ plugins:
   - jekyll-feed
   - jemoji
   - jekyll-include-cache
+
+# Staticman comments (full configuration in staticman.yml). Used for posting comments.
+staticman:
+  branch: "master"
 
 author:
   name: "Daniel Schroeder"
