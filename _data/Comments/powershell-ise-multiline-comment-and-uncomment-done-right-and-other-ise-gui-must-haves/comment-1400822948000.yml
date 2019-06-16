@@ -1,0 +1,5 @@
+name: Marlon
+date: '2014-05-22 23:29:08'
+url: 'http://cubantech.blogspot.com'
+message: "or you can replace all that with these two:\r\n#comment\r\n    $text = $psISE.CurrentFile.editor.selectedText\r\n    $psISE.CurrentFile.Editor.InsertText( [regex]::Replace($text, '^', '#', 'Multiline'))\r\n\r\n#uncomment\r\n    $text = $psISE.CurrentFile.editor.selectedText\r\n    $psISE.CurrentFile.Editor.InsertText( [regex]::Replace($text, '^#', '', 'Multiline'))\r\n\r\nNot going to lie, it took me a while to figure out the \"right\" way to use regex.  Made it over complicated several times before realizing...I just need to use multiline...\r\nTested a couple of times and it seems to get everything I want done...might even be enough for you."
+email: dca343223bf5287c3a2fa7a17d258a61

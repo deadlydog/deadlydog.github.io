@@ -1,0 +1,5 @@
+name: Charles
+date: '2015-06-15 14:34:44'
+url: ''
+message: "Hi,\r\n\r\nThanks for the code example - it is helpful. I am struggling to figure out how to Get and Set attributes using this code as the basis. I have been trying to adapt the Get-XmlElementsTextValue and the Set-XmlElementsTextValue functions to make new functions Get-XmlElementAttributesValue and Set-XmlElementAttributesValue  with no success. I am thinking that I should be able to use the $node to select the attribute. That has not been successful.\r\n\r\nHow can I get to the password attribute of a xml path of configuration.servers.server? In the example below I want to change the password attribute value.\r\n\r\n \r\n \r\n    &lt;server name=&quot;servername&quot; id=&quot;0&quot; username=&quot;TheUserName&quot; password=&quot;ThePassword&quot;\r\n \r\n"
+email: 56d20710fed5011bad1b30c885498dbf

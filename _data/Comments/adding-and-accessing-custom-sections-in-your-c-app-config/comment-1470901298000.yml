@@ -1,0 +1,31 @@
+name: zak willis
+date: '2016-08-11 01:41:38'
+url: 'http://www.inforhino.co.uk'
+message: >-
+  Hello, thanks for this post. I am in Switzerland on holiday with only my
+  mobile phone. I am going to be writing a book which will involve lambasting
+  before resolving one of the worst elements and biggest jokes in static code
+  development - configuration. I have used simpleconfig for a simple purpose, to
+  be able to avoid having to replicate keys across different application and
+  test project. If you rely solely upon simple config a multiproject solution
+  will end up with huge config files. It is barely acceptable that 3rd party
+  libraries put massive sections inside config files but to have references to
+  configuration manager but to try and mirror that just to try and be like these
+  guys is insane. My solution is to use simpleconfig to get a few keys but to
+  use configr to return configured classes instead. If we think about an
+  application it only exists because of state that entails data and data can be
+  thought of as being dynamic or static. Configuration is just a slower moving
+  set of pointers to faster moving data. With all this information, the least
+  any application deserves is to get data in the format it expects and not
+  spending countless time referring to keys and sections throughout the
+  application. My solution is to store dictionary / and to inject iconfigurator
+  with a method that allows for a dictionary lookup to return that poco. The
+  advantage of this approach is that we could swap the concrete disk based
+  config poco to a completely different source altogether by changing the
+  bindings. In my world, the only thing config files contain are pointers to
+  .net config files for use by simpleconfig and text files to point to poco
+  implementation. I will try and put some code up at some point but it isn't
+  rocket science, just creating a few classes to expose data to applications in
+  the format they recognise rather than jumping through hoops to add custom
+  config sections or mapping keys.
+email: e5058c600540618fb2b6e2dc4fc0c1e1

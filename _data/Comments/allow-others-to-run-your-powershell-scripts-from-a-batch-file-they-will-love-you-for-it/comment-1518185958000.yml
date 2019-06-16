@@ -1,0 +1,5 @@
+name: David Wohlberg
+date: '2018-02-09 08:19:18'
+url: ''
+message: "<a href=\"#comment-615032\" rel=\"nofollow\">@Mike </a> \r\nPerhaps someone will have a better solution, but if I were in your shoes, I would probably try to make use of a file to pass the parameter/data to. The PS script that you use to keep the serial port open would need to periodically read from this file. Your second script would then write the necessary data to that file."
+email: 8f48e21ce91568972ce14bfe2687344b

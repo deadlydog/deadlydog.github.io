@@ -1,0 +1,5 @@
+name: deadlydog
+date: '2014-04-06 13:51:32'
+url: 'http://www.danskingdom.com'
+message: "<a href=\"#comment-63018\" rel=\"nofollow\">@Tim </a> \r\nSorry, that code will throw an exception if you are not running your script from the PowerShell Console; I've updated it to wrap it in an IF statement so it only prompts for input when running in the PowerShell Console.\r\n\r\nIf you want to prompt for input before continuing regardless of which host the script is running in (e.g. PowerShell ISE), then you can use:\r\n\r\nRead-Host -Prompt \"Press Enter to continue...\" > $null\r\n\r\nThe difference here though is that the user must press Enter to continue, not just any key."
+email: c8addda594c8b338f1e3934e73505d0c

@@ -1,0 +1,5 @@
+name: Budd McNish
+date: '2017-02-23 13:14:27'
+url: ''
+message: "I have tried all variations of executing a PS1 from a .BAT file that passes a single parameter to the PS1.  UNSUCCESSFULLY !!!\r\n\r\nsample1:PowerShell.exe -NoProfile -ExecutionPolicy Bypass -Command \"&amp; 'my.ps1' -sfn'%1%'\";\r\n\r\nsample2: PowerShell.exe -NoProfile -ExecutionPolicy Bypass -Command \"&amp; 'my.ps1' '%1'\";\r\n\r\n\r\nAlways the same result: \r\nNow: 02/23/2017 14:01:57 : filename = \r\nNow: 02/23/2017 14:01:57 : input filename is missing, run aborted"
+email: 616e2f41fe558d04d5c338e612a6503e

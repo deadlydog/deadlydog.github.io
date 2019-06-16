@@ -1,0 +1,5 @@
+name: Aymen
+date: '2014-11-23 13:53:10'
+url: ''
+message: "When running the script I get an error message \r\n\r\nRead-MessageBoxDialog: Unable to find type [System.Windows.Forms.MessageBoxButtons]. Make sure that the assembly that contains this type is loaded.\r\n\r\nAny idea how to fix it?"
+email: 0fe637b3c9af76313a3d784ed2b8eee8

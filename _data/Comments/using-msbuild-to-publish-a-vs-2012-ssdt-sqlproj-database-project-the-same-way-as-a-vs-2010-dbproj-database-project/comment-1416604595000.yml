@@ -1,0 +1,5 @@
+name: deadlydog
+date: '2014-11-21 15:16:35'
+url: 'http://www.danskingdom.com'
+message: "<a href=\"#comment-247221\" rel=\"nofollow\">@qinqoushui </a> \r\n[PathToBranch] is just the local path on your hard drive.  For example, \"[PathToBranch]Database\\Database.dbproj\" might actually be \"C:\\Projects\\MySolution\\Database\\Database.dbproj\". It can be a relative or absolute path."
+email: c8addda594c8b338f1e3934e73505d0c

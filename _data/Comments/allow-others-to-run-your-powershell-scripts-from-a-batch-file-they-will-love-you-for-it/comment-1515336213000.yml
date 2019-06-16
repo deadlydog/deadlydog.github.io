@@ -1,0 +1,5 @@
+name: arkiados
+date: '2018-01-07 08:43:33'
+url: ''
+message: "<a href=\"#comment-610962\" rel=\"nofollow\">@deadlydog </a> \r\nThanks for the quick reply. I have a situation where a proprietary app calls cmd.exe which runs a batch file that calls powershell.exe -NonInteractive -NoProfile -ExecutionPolicy Bypass -Command “.\\script.ps1”. script.ps1 does a $host.setshouldexit($exitcode) and then Exit. The batch file has an Exit. But for some reason the powershell.exe process doesn't exit. The real annoyance is that all of this works just fine if I manually fire up cmd.exe, open another cmd.exe to replicate the proprietary app doing it, and execute the batch file that calls powershell.exe. I think now that this issue is outside of the scope of your post but maybe you know something that could help."
+email: 75395e3bfe3ce53676e6cbbab8ed4aa5

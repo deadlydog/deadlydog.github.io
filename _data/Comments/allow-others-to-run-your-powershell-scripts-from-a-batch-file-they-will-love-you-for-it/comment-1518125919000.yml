@@ -1,0 +1,5 @@
+name: Mike
+date: '2018-02-08 15:38:39'
+url: ''
+message: "I am wondering if using the batch file approach, can you run one PS script and keep open the shell. then run via batch file another PS in the same shell.\r\n\r\nWhat I am trying to do is open a serial port (and keep it open)\r\nthen call a second script from a batch file with attached parameter to send some data out of the serial port.\r\nAs I understand it there is no way to send parameters to a running script, and when calling from a batch file a new instance of Powershell opens and is not using the same environment as the first.\r\n\r\nI have a software PVR that will  launch a program in windows to change channels, it appends parameter to the command line. I have an arduino on the serial port that can change the channel on the set-top box. But I can't find a clean solution to make the communications work well. The arduino must have the port opened before recieving the channel data.\r\n\r\nAny comments or suggestions would be very helpful."
+email: 3abb97b849dad65266d1e07ed92951fc

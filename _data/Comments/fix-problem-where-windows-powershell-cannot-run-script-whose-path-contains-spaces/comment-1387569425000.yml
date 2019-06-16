@@ -1,0 +1,5 @@
+name: Henri Socha
+date: '2013-12-20 13:57:05'
+url: ''
+message: "Thanks for the very useful article. I did run into a little problem (not your fault).\r\nOn my system, the registry entry moved to \"Microsoft.PowerShellScript.1\" but wherever it is, I think you can always find it as follows:\r\nInsert the '(default)' value from registry entry  [HKEY_CLASSES_ROOT\\.ps1]  into your registry path. In my case this generates \r\n[HKEY_CLASSES_ROOT\\Microsoft.PowerShellScript.1\\Shell\\Open\\Command]\r\nand note that \\Applications is not there."
+email: a3962c52eef3da4490ff288f75996b06

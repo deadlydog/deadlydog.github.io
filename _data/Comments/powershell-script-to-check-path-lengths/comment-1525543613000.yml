@@ -1,0 +1,11 @@
+name: >-
+  How do I find files with a path length greater than 260 characters in Windows?
+  - ExceptionsHub
+date: '2018-05-05 12:06:53'
+url: >-
+  https://exceptionshub.com/how-do-i-find-files-with-a-path-length-greater-than-260-characters-in-windows.html
+message: >-
+  [&#8230;] also written and blogged about a simple PowerShell script for
+  getting file and directory lengths. It will output the length and path to a
+  file, and [&#8230;]
+email: d41d8cd98f00b204e9800998ecf8427e

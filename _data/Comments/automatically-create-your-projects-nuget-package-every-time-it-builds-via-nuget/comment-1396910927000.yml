@@ -1,0 +1,5 @@
+name: deadlydog
+date: '2014-04-07 16:48:47'
+url: 'http://www.danskingdom.com'
+message: "<a href=\"#comment-63735\" rel=\"nofollow\">@Grzegorz Mrozik </a> \r\nYup, you are right.  I'm not sure how to do localization in PowerShell, which is why I grouped all of those console messages together in the script; to make it easy for you to change them to their equivalent strings for your language. Basically you will need to perform the pack and push operations against NuGet.exe manually to see what strings the console spits out, and then change the script to use those strings."
+email: c8addda594c8b338f1e3934e73505d0c

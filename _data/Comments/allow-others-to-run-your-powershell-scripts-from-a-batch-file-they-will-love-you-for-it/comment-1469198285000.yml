@@ -1,0 +1,5 @@
+name: techiesat
+date: '2016-07-22 08:38:05'
+url: ''
+message: "Hi i am trying to run as you mentioned here in the below lines replacing script wtih my PS script but its still prompting for UAC and doesn't proceed without asking for it when scheduled it as task with system user as this is the way i want it run, i ran some .bat files which needs admin permissions and those works fine.\r\nbut the same .bat file when run it from admin cmd prompt it works, i \r\n@ECHO OFF\r\nSET ThisScriptsDirectory=%~dp0\r\nSET PowerShellScriptPath=%ThisScriptsDirectory%MyPowerShellScript.ps1\r\nPowerShell -NoProfile -ExecutionPolicy Bypass -Command \"\";\r\n\r\n\r\nLet me know what i am missing here"
+email: 4295ec1ce2427ca313247ddd5d7d1eca

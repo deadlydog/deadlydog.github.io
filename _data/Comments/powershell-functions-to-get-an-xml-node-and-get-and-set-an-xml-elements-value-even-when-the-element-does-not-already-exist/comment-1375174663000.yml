@@ -1,0 +1,5 @@
+name: john mcgregor
+date: '2013-07-30 02:57:43'
+url: 'http://na'
+message: "Hello again,\r\n\r\nI figured out something that works. Not sure if its the best way or not, but it works:\r\n\r\n$stream = $file.OpenBinaryStream()\r\n$xml = New-Object System.Xml.XmlDocument\r\n$xml.Load($stream)\r\n#\r\n#do stuff to $xml using your functions - thanks\r\n#\r\n$xml.Save($stream)\r\n$outStream = [System.Text.ASCIIEncoding]::ASCII.GetBytes($xml.InnerXml)\r\n$file.SaveBinary($outStream)\r\n\r\nThanks again for the post,\r\nJohn"
+email: b4c74246154f6fdf46b30d65f9873f3b

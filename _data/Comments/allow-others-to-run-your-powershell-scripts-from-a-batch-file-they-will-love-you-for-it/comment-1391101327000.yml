@@ -1,0 +1,5 @@
+name: Jon
+date: '2014-01-30 11:02:07'
+url: ''
+message: "Thanks for the good info.  I am running a simpler one-liner, from inside a batch file.  (Intended to 'simply' erase *.xxx files recursively, like \"erase *.xxx /s /q\", but without legacy 8.3 issues deleting extra files like *.xxxxx , as per http://support.microsoft.com/kb/164351/en-us; note that Powershell's remove-item cmdlet still doesn't work with its -recurse parameter, even in PS 4.0!  This is getting crazy complex for something so simple.)\r\n\r\nThis works from within a batch file:\r\n\r\n  PowerShell \"&amp; Get-ChildItem * -Include *.xxx -Recurse | Remove-Item\"\r\n\r\nBut when I try to add parameter -force to right side, to remove hidden files, this does NOT work:\r\n\r\n  PowerShell \"&amp; Get-ChildItem * -Include *.xxx -Recurse | Remove-Item -force\"    [fails]\r\n\r\nAny ideas how to get that to work -- pipelining with a  parameter, on a single line in a batch file?"
+email: 5bdcf725e746cc3bf2178c9626ece6b0

@@ -1,0 +1,5 @@
+name: Debra Hodges
+date: '2015-09-04 15:29:43'
+url: ''
+message: "Daniel, You are so wonderful to post this fantastic information!  Thank you!  I Googled many, many, many, MANY articles, but YOURS did the trick!  I was able to understand it and do it and make my boss happy.  \r\n\r\nI created batch files (using your instruction) that stop and start a Windows service.  These were used in an InstallShield Basic MSI project.  I created Custom Actions that called InstallScripts, that called the batch files, that called Powershell scripts (with Admin privileges) to stop and start the service before and after the install.\r\n\r\nThanks again, and I hope you will keep posting!\r\n\r\nDebra"
+email: ff8f073e726da3623db09b69b2659a9c

@@ -1,0 +1,5 @@
+name: deadlydog
+date: '2013-11-30 08:40:37'
+url: 'http://www.danskingdom.com'
+message: "<a href=\"#comment-28687\" rel=\"nofollow\">@Marc </a> \r\nMake sure you first dot source the script into your PowerShell session (to make the functions available) using:\r\n\r\n. [Path to Remove-FilesOlderThan.ps1]\r\n\r\ne.g. If using an absolute file path:\r\n\r\n. \"C:\\Some Folder\\Remove-FilesOlderThan.ps1\"\r\n\r\ne.g. If using a relative file path, for example your command prompt session is currently in the same directory where the script file is saved:\r\n\r\n. \".\\Remove-FilesOlderThan.ps1\"\r\n\r\nOnce you do this step you should then be able to call the Remove-FilesNotModifiedAfterDate function."
+email: c8addda594c8b338f1e3934e73505d0c

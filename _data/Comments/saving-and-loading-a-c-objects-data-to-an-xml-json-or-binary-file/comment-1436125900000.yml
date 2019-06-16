@@ -1,0 +1,5 @@
+name: alete
+date: '2015-07-05 13:51:40'
+url: ''
+message: "Hi Daniel, thanks for this amazing article.\r\nAnyway, I'm still having troubles trying to read all the records written into the binary file. I've written a list into the file, but when I read the file, the list only populates it first [0] element.\r\nAny advice?"
+email: 26911a99e1809c68c23241b2379e8df4

@@ -1,0 +1,5 @@
+name: deadlydog
+date: '2014-02-25 10:44:17'
+url: 'http://www.danskingdom.com'
+message: "<a href=\"#comment-51393\" rel=\"nofollow\">@Amel </a> \r\nI'm guessing the blog comments stipped some of your code out here? That line you posted won't do anything because you haven't specified a command for PowerShell to execute (i.e. there's nothing in the double quotes)."
+email: c8addda594c8b338f1e3934e73505d0c

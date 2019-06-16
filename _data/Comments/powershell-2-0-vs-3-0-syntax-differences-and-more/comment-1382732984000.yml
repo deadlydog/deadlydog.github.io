@@ -1,0 +1,12 @@
+name: >-
+  Daniel Schroeder&#039;s Programming Blog &raquo; PowerShell Code To Ensure
+  Client Is Using At Least The Minimum Required PowerShell Version
+date: '2013-10-25 14:29:44'
+url: >-
+  http://dans-blog.azurewebsites.net/ensure-client-is-using-at-least-the-minimum-required-powershell-version/
+message: >-
+  [&#8230;] will have this check in it to give them a proper error
+  message.&#160; I have also created a page on PowerShell v2 vs. v3 differences
+  that I’m going to use to keep track of the differences that I encounter, so
+  that I can have [&#8230;]
+email: d41d8cd98f00b204e9800998ecf8427e

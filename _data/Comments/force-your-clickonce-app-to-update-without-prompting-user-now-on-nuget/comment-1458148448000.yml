@@ -1,0 +1,5 @@
+name: Omid
+date: '2016-03-16 11:14:08'
+url: ''
+message: "<a href=\"#comment-552546\" rel=\"nofollow\">@dlcarp </a> No, I mean the project file (*.csproj). First enable ClickOnce, save the project and then modify the project file to have the above property values.\r\n\r\nApplicationVersion is different than AssemblyVersion. ApplicationVersion is used by ClickOnce. AssemblyVersion is used for assembly reference binding.\r\n\r\nUpdate ApplicationVersion through your CI or some script for for auto-update to work."
+email: 02caeae847d97a928b93241d2648966f

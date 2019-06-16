@@ -1,0 +1,5 @@
+name: deadlydog
+date: '2016-02-13 13:41:08'
+url: 'http://www.danskingdom.com'
+message: "<a href=\"#comment-550604\" rel=\"nofollow\">@Daniel </a> \r\nSimply split the string on the newline character (`r`n) and then foreach over it. This stack overflow post shows how to do split a string on spaces; just swap the space out for the newline character, and the hard-coded string value for the string variable containing the user's input. http://stackoverflow.com/a/11348779/602585"
+email: c8addda594c8b338f1e3934e73505d0c

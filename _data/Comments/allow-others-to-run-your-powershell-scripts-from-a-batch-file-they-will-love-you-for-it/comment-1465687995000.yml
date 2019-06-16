@@ -1,0 +1,5 @@
+name: Steven Stover
+date: '2016-06-11 17:33:15'
+url: ''
+message: "Quote: And yes, the PowerShell script name and parameters need to be wrapped in 4 double quotes in order to properly handle paths/values with spaces.\r\n\r\nThis fails when the parameter ends with a backslash character,  c:\\ would be passed as c:\" with a double quote replacing the backslash."
+email: b3445ba6df66e6a73b6c9d63dcf11098

@@ -1,0 +1,5 @@
+name: Victor Vogelpoel
+date: '2013-10-29 03:45:33'
+url: 'http://victorvogelpoel.nl'
+message: "\"Set-StrictMode -Version Latest\" throws an error for a variable that you use but is not set.\r\nA parameter variable from a non-active parameterset is undefined and thus triggers the error \"The variable ‘$PassThru’ cannot be retrieved because it has not been set.\"\r\n\r\nUsing \"Test-Path Variable:PassThru\" is tricky because you don't specify a scope. If the function calling your function already has variable $PassTru defined, your function may return the variable from the calling scoped function instead from your local function scope!\r\n\r\nif you use [CmdLetBinding()], PowerShell also gives you the dictionary $PSBoundParameters of parameters bound while calling the function.  Using \"$PSBoundParameters.ContainsKey(\"PassThru\"), you can check if the parameter PassTrue was passed (regardless of the parameterset)."
+email: c58341710c4a6eedf7d34e69d4179231

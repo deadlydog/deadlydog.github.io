@@ -1,0 +1,5 @@
+name: deadlydog
+date: '2013-09-09 10:21:42'
+url: 'http://www.danskingdom.com'
+message: "<a href=\"#comment-8210\" rel=\"nofollow\">@Simon </a> \r\nI use Firefox and everything displays fine for me, but I just tried Internet Explorer and there I do see the problem where the last line is not displayed on any code blocks long enough to require a vertical scroll bar, as well as when copying text it pastes it all on one line.  I also tried Chrome and everything is fine there, so it looks like this is an IE specific problem (like most website issues :P).  I'm going to try and provide the code for long scripts (like this one) in a file download as well, so that users don't have to copy/paste; I just need to find some free time to do is."
+email: c8addda594c8b338f1e3934e73505d0c

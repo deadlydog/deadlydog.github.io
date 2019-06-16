@@ -1,0 +1,12 @@
+name: >-
+  Continuously Deploy Your ClickOnce Application From Your Build Server &#8211;
+  Kannekens
+date: '2019-01-15 05:49:04'
+url: >-
+  http://kannekens.nl/continuously-deploy-your-clickonce-application-from-your-build-server/
+message: >-
+  [&#8230;] it succeeds. If the build fails with an error relating to an expired
+  certificate or pfx file, see my other blog post on importing the required
+  certificate on the build server at build-time, which involves adding one more
+  “Import-PfxCertificate.ps1” build step before the MSBuild [&#8230;]
+email: d41d8cd98f00b204e9800998ecf8427e

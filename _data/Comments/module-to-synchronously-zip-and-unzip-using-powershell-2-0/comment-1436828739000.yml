@@ -1,0 +1,5 @@
+name: Dave Miller
+date: '2015-07-13 17:05:39'
+url: ''
+message: "Nasty bug on line 199.\r\n\r\n-Path $DestinationDirectoryPath\r\n\r\nShould be:\r\n\r\n-Path $FileOrDirectoryPathToAddToZipFile"
+email: fab32230c6f77df2218c16b1c347bcdf

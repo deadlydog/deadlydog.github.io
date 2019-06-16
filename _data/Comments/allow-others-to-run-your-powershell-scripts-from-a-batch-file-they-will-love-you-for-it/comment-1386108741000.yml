@@ -1,0 +1,5 @@
+name: Antonio Bueno
+date: '2013-12-03 16:12:21'
+url: 'http://www.mundoplus.tv'
+message: "Good idea. But why not simply use %~dpn0 directly? As in\r\n\r\n    PowerShell -NoProfile -ExecutionPolicy Bypass -Command \"&amp; '%~dpn0.ps1'\""
+email: 50cb466985507524c649b8f0d9bed9af

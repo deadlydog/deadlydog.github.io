@@ -1,0 +1,5 @@
+name: arkiados
+date: '2018-01-06 20:47:58'
+url: ''
+message: "Hi deadlydog,\r\nI have some batch files I am where I execute powershell.exe -NoProfile -ExecutionPolicy Bypass -Command \".\\script.ps1\". What is the difference with -Command \"script.ps1\" and -Command \"&amp; {.\\script.ps1}\"?"
+email: 75395e3bfe3ce53676e6cbbab8ed4aa5

@@ -1,0 +1,5 @@
+name: ryan
+date: '2015-11-11 16:07:48'
+url: ''
+message: "Great Article!\r\n\r\nJust one question:\r\n\r\nI am using the named parameter admin solution that you showed how to pass variables. The issue that I'm having is that one of my parameters takes an array of strings. I can pass it from the command line no problem. but when I pass the same thing inside 4 double quotes as you showed. It does not parse it correctly.\r\n\r\nIs there a piece I'm missing to pass an array?"
+email: 6e50c1757995f8daba8a732e4118f513

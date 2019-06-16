@@ -1,0 +1,5 @@
+name: Vamsi
+date: '2014-08-06 21:36:16'
+url: ''
+message: "in EndPoint.cs file.. i replaced\r\n\r\n//var customSection = ConfigurationManager.GetSection(CustomConfigurationSection.SectionName) as CustomConfigurationSection; \r\n\r\nto below and that works..\r\n            var test = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);\r\n            var customSection = test.GetSection(CustomConfigurationSection.SectionName) as CustomConfigurationSection;\r\n\r\nLooks like this is a bug in .NET Framework 4.\r\n\r\nAnd sorry to mention lately.. Thank a lot for a quick reposne and wonderful explantion and code."
+email: f6443362c1259e593b5cf65b3f8660ce

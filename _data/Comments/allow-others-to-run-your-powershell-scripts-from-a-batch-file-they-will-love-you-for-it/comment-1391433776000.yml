@@ -1,0 +1,5 @@
+name: Tomas
+date: '2014-02-03 07:22:56'
+url: ''
+message: "Hello Daniel!\r\n\r\nYou script to run the powershell works perfect, but I think I have something wrong in my powershell code, that maybe you can help me with. I got it from a person on stack overflow.\r\n\r\nHere it is:\r\n\r\n\r\nif ($(Get-Item C:\\Temp\\test\\test.log).CreationTime -gt [DateTime]::Today) {\r\n    Write-Host \"File Changed at $(Get-Item C:\\Temp\\test\\test.log).CreationTime\"\r\n}\r\nelse {\r\n    Write-Host \"File not changed\" \r\n}\r\n\r\n\r\n\r\nIt's supposed to ceck on test.log, and if that file has changed during the day is shoud display the time of the change and if it has not ben changed during the day it should display: File not changed.\r\n\r\nThe problem is that it's always display \"File not changed\" even if the file has been changed.\r\n\r\nHope you have the time to look at it :) \r\n\r\n/Tomas"
+email: 1ffca850a72fa64506fcf83b42eaaa9f

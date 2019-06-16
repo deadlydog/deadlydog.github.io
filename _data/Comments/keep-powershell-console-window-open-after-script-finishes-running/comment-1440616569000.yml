@@ -1,0 +1,5 @@
+name: Ross K
+date: '2015-08-26 13:16:09'
+url: ''
+message: "Thank you for writing this, I found the Global Solutions to be very helpful. However, I have encountered two issues:\r\n\r\n1) the first regedit path does not exist: I can navigate to HKEY_CLASSES_ROOT\\Applications\\ but it does not contain powershell.exe. Has the directory been moved recently? I have powershell 3.0\r\n\r\n2) I am running powershell from a c# executable using the System.Diagnostics.ProcessStartInfo class. I can run any script that I provide to the ProcessStartInfo.Arguments property, but powershell immediately closes after the script completes. What do I need to modify to prevent powershell from closing after script execution when powershell is launched from a c# application?"
+email: 53e5342cada91833dbfb903e8dccda83

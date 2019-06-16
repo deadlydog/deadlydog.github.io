@@ -1,0 +1,38 @@
+name: Del
+date: '2019-03-13 16:08:26'
+url: 'http://none'
+message: >-
+  Hello kind and clever people.
+
+
+  I need help to run a powershell script in a batch file. I run the powershell
+  script manually every single day and I wanted to automate it if possible with
+  your help. Note that I am renaming a large number of files.
+
+
+  this is the script I ran under the command prompt of powershell
+
+
+  get-childitem TSIL_*.pdf |rename-item -NewName {$_.name -replace ‘^TSIL_’,”}
+
+
+  the directory is c:\customer\pdf
+
+
+  my target is to remove the first 5 chars of the filename.
+
+
+  input filename : TSIL_12345_111_222.pdf
+
+  target output : 12345_111_222.pdf
+
+
+  I will greatly, appreciate if you can write the code for me or better if you
+  have other solution that you can assist with.
+
+
+  Thank you and god bless!
+
+
+  Del
+email: cbb88d5e5440ad703aff34794e5bb58d

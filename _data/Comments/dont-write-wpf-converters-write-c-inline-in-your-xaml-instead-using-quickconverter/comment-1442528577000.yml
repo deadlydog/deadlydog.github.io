@@ -1,0 +1,5 @@
+name: Alex
+date: '2015-09-17 16:22:57'
+url: 'http://none'
+message: "The Visiblity converter did not work for me, \r\n\r\nFailed to tokenize expression \"$P ? Visibility.Visible : Visibility.Collapsed\". Did you forget a '$'?"
+email: 7cd9a4d6fc0d23c9c4dec65b2e00eef4

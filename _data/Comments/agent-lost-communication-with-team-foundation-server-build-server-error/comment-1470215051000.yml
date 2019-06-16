@@ -1,0 +1,5 @@
+name: Velimir
+date: '2016-08-03 03:04:11'
+url: ''
+message: "We've started getting absolutely the same error lately. As described in the post it happens randomly but when it happens it's always on the same build machine.\r\nUnfortunately comparing the Hosts files on a working vs corrupted build machine gives no result - both of them are empty. I'll be happy to hear if anyone has found other workarounds."
+email: 4e6aefc3e03c4a2118c8b319dd0f54a9

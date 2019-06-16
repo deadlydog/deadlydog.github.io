@@ -1,0 +1,5 @@
+name: deadlydog
+date: '2014-02-03 09:58:08'
+url: 'http://www.danskingdom.com'
+message: "<a href=\"#comment-47890\" rel=\"nofollow\">@Tomas </a> \r\nHey Tomas, this is a little off topic :P  but it looks like you just have some syntax issues with the $ symbol.  This works for me:\r\n\r\n$path = \"C:\\Temp\\test\\test.log\"\r\nif ((Get-Item $path).CreationTime -gt [DateTime]::Today) {\r\n\tWrite-Host \"File Changed at $((Get-Item $path).CreationTime)\"\r\n}\r\nelse {\r\n\tWrite-Host \"File not changed today\"\r\n}"
+email: c8addda594c8b338f1e3934e73505d0c

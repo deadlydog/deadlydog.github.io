@@ -1,0 +1,5 @@
+name: David Wohlberg
+date: '2015-03-11 09:44:37'
+url: ''
+message: "<a href=\"#comment-371580\" rel=\"nofollow\">@Allen </a> \r\n@Allen, as @deadlydog already pointed out, you need to add \"-Verb RunAs\" without the quotes to your call to launch Powershell, otherwise it is is just running in normal mode, not adminstrative mode."
+email: 8f48e21ce91568972ce14bfe2687344b

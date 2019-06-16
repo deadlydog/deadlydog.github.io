@@ -1,0 +1,23 @@
+name: Ant
+date: '2019-05-07 06:14:47'
+url: ''
+message: >-
+  hi
+
+
+  sorry, i'm a noob and have a powershell script that i want a non admin user to
+  be able to double click a batch file to run. i've followed the instructions
+  and it works fine for my domain admin account, but two things keep stopping it
+  from working for a non admin account. if i run the ps1 file, it gives me an
+  access denied error. if i run my batch file it asks for admin credentials.
+  i've added -Verb RunAs}";  but it's still not working.
+
+
+  hoping someone can help point me in the right direction!
+
+
+  thanks
+
+
+  Ant
+email: dfd36ac7dca342300e6f46339b9a106b

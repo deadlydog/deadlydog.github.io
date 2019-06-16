@@ -1,0 +1,5 @@
+name: Jesse
+date: '2017-03-24 15:34:29'
+url: ''
+message: "Works well on commit pages, though not on pull request pages. Seems it is necessary to kill at least: .container {width: 980px;} .discussion-timeline {width: 760px;}\r\n\r\n(I have complained to @github about the narrow defaults, but to no avail.)"
+email: 79388885ac1ac80b13564b06b2981455

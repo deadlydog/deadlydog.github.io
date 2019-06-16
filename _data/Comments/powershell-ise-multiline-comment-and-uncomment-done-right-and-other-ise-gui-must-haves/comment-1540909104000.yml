@@ -1,0 +1,5 @@
+name: Ben Personick
+date: '2018-10-30 08:18:24'
+url: ''
+message: "Thanks, I wanted the same functionality as in NP++ (CTRL+Q to comment / uncomment based on the 1st line being a commented line or not.) \r\n\r\nI was able to change this code to correctly mirror that functionality. :)  Also, this code seems a little dense, I'm sure there is room to reduce the code further just checking on the functions I needed to modify."
+email: ac5454857ba68a696eebc422a2b18dfd

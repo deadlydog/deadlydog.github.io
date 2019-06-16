@@ -1,0 +1,5 @@
+name: Charles
+date: '2014-04-09 12:50:13'
+url: ''
+message: "Great article! \r\n\r\nYou mention how to pass variables into powershell from the .bat files. Would you know how to go the other way and pull out exit codes or variables from the powershell script? If say for instance you wanted to show if the PS script ran successfully from the .bat file?"
+email: 606f382807fef45bb648f7a1fe3ca567

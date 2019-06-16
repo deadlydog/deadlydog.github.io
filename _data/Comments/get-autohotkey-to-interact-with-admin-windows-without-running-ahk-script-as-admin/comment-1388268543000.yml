@@ -1,0 +1,5 @@
+name: deadlydog
+date: '2013-12-28 16:09:03'
+url: 'http://www.danskingdom.com'
+message: "<a href=\"#comment-39923\" rel=\"nofollow\">@Stephen Wille </a> \r\nHey Stephen, I'm not sure what you mean.  If you are running VS as admin, then the trick I mention in this post should allow AHK to interact with VS. If you are not running VS as admin, then everything should just work without doing this trick.\r\n\r\nAre you asking how to customize VS 2012's code completion, formatting, and shortcut keys natively in VS? or how to implement your own with AHK?  You can customize all of the VS shortcut keys in the Tools->Options->General->Keyboard menu, and specify a few rules around code completion and formatting too in the Tools->Options menus, but not too many.  If you really want to customize the code completion and formatting rules, tools like ReSharper give you much more control."
+email: c8addda594c8b338f1e3934e73505d0c

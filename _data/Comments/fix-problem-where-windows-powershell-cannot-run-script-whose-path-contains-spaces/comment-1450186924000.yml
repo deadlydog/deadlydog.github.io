@@ -1,0 +1,5 @@
+name: Oz Edri
+date: '2015-12-15 07:42:04'
+url: ''
+message: "Great article.\r\nPlease add a note regarding 32-bit PowerShell, which runs from:\r\nC:\\Windows\\SysWOW64\\WindowsPowerShell\\v1.0\\\r\nIt could be useful for those who specifically needs the 32-bit version, e.g. when running VMware vSphere PowerCLI scripts via PowerShell.\r\n\r\nBy the way, the link to the bug you submitted isn't valid anymore. If your bug is still submitted, please post the newer link so we'll be able to upvote it.\r\n\r\n\r\nThank you!"
+email: cc7e0fc263bd183906be3b4e6d9e87be

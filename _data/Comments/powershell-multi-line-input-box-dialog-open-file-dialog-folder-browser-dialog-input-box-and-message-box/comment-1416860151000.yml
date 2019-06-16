@@ -1,0 +1,5 @@
+name: deadlydog
+date: '2014-11-24 14:15:51'
+url: 'http://www.danskingdom.com'
+message: "<a href=\"#comment-250421\" rel=\"nofollow\">@Aymen </a> \r\nMove the line:\r\n\r\nAdd-Type -AssemblyName System.Windows.Forms\r\n\r\nfrom within the Read-MessageBoxDialog function to just before it, so it looks like this:\r\n\r\nAdd-Type -AssemblyName System.Windows.Forms\r\nfunction Read-MessageBoxDialog([string]$Message, [string]$WindowTitle, [System.Windows.Forms.MessageBoxButtons]$Buttons = [System.Windows.Forms.MessageBoxButtons]::OK, [System.Windows.Forms.MessageBoxIcon]$Icon = [System.Windows.Forms.MessageBoxIcon]::None)\r\n{\r\n    return [System.Windows.Forms.MessageBox]::Show($Message, $WindowTitle, $Buttons, $Icon)\r\n}\r\n\r\nI don't have that problem on my local PC, so I'm guessing it's a PowerShell 2.0 problem maybe?"
+email: c8addda594c8b338f1e3934e73505d0c

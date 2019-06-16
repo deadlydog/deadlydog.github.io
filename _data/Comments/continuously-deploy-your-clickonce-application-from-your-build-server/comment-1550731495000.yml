@@ -1,0 +1,5 @@
+name: Tobias
+date: '2019-02-21 00:44:55'
+url: ''
+message: "We had the need to move the assigning of the clickOnce version from the build process to the release process.\r\nThis helped us out \"Update ClickOnce Package\":\r\nhttps://marketplace.visualstudio.com/items?itemName=IfPCInsuranceSE.UpdateClickOncePackage"
+email: a350dc86f1a6e055d63d254ccd133201

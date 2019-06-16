@@ -1,0 +1,5 @@
+name: deadlydog
+date: '2013-10-16 12:50:14'
+url: 'http://www.danskingdom.com'
+message: "<a href=\"#comment-13029\" rel=\"nofollow\">@Carl Reid </a> \r\nI confirmed a hunch I had that the error you were seeing arose when using \"Set-StrictMode -Version Latest\" in the script.  I typically use this in my scripts, but wasn't using it when I did my testing.\r\n\r\nI've updated my code to simply check for $null instead of trying to check .Length, so the problem is fixed and it is still nice and concise :)\r\n\r\nThanks."
+email: c8addda594c8b338f1e3934e73505d0c

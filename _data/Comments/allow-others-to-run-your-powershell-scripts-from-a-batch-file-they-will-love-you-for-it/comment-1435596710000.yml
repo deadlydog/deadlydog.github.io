@@ -1,0 +1,5 @@
+name: Eduardo
+date: '2015-06-29 10:51:50'
+url: ''
+message: "Someone can help me? I am trying to run one powershell script from a batch file just to create a txt file with the list of the software installed on the computer, but it does not work. \r\nThe batch file contains:\r\n@echo off\r\nPowerShell -ExecutionPolicy Bypass -Command \"&amp; '%~dp0'\";\r\nPAUSE\r\nThe powershell script file which has the same name as the batch file simply contains:\r\nGet -WmiObject -Class Win32_Product C:\\software.txt"
+email: 1e2d7a5c4ae4c0658576fe63cbba31bf

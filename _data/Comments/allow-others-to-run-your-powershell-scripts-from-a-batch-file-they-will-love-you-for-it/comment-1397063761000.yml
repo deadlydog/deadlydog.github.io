@@ -1,0 +1,13 @@
+name: rcf
+date: '2014-04-09 11:16:01'
+url: ''
+message: >-
+  Thanks for the insight.  We use a generic 'install.cmd' wrapper for all of our
+  installs so it would really be nice to be able to use one standard script for
+  everything that detects the current path if run from a mapped drive - no
+  modifications wherever it is run from.  The other reason that you mentioned is
+  also a concern - that the script will break if the UNC path changes if hard
+  coded.  I think I'm close at getting it going based on the link in the
+  previous post.  It seems to detect the UNC path from a mapped drive nicely. 
+  This would cover us if the script was run from a mapped drive or not.
+email: f3e0732234900424eb1d9b5b61c8892d

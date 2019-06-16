@@ -1,0 +1,5 @@
+name: Eric
+date: '2015-01-08 07:11:54'
+url: ''
+message: "I am trying to use the Prompt for a directory  script. It worked a few days then now I get the following error when I run the script:\r\n\"The term 'Read-FolderBrowserDialog' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was\r\n included, verify that the path is correct and try again.\"  \r\n\r\nI did a copy and paste directory from the code listed on this site so not sure what else is needed."
+email: 11cd71bbbb6eb62a1edcc98fc2388464

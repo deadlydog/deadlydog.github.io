@@ -1,0 +1,13 @@
+name: David Wohlberg
+date: '2015-02-19 10:20:55'
+url: ''
+message: >-
+  So I found a problem, when running the powershell script with Administrative
+  permissions (i.e. Run As Admin), it will not wait for user input at the end of
+  the script. Placing -NoExit as part of the argument list works, but then quite
+  obviously after the you press any queue, Powershell does not exit. :) If I run
+  my script without Administrative permissions, then the code you provided above
+  will wait for user input. My question is, how do I get this to work with
+  Administraive permissions? It is useful to be able to capture error messages
+  (if any).
+email: 8f48e21ce91568972ce14bfe2687344b

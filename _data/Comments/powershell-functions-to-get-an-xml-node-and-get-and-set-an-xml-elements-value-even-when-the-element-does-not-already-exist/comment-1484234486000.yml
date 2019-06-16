@@ -1,0 +1,5 @@
+name: Renzo
+date: '2017-01-12 09:21:26'
+url: ''
+message: "Found the answer!\r\n($Test.App.ChildNodes |Where-Object { '#comment' -contains $_.Name }) | ForEach-Object {\r\n    # Remove each node from its parent\r\n    [void]$_.ParentNode.RemoveChild($_)"
+email: 3fc7750102c6ea69713d35525380d1f9

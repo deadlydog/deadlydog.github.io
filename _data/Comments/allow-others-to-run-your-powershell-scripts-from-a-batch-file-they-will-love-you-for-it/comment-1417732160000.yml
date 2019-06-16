@@ -1,0 +1,5 @@
+name: deadlydog
+date: '2014-12-04 16:29:20'
+url: 'http://www.danskingdom.com'
+message: "<a href=\"#comment-263690\" rel=\"nofollow\">@noobie </a> \r\nDoes the PowerShell window exit?  I'm guessing that your logging functionality is actually a blocking call and never completes (it waits for something else to happen), so execution is stuck there.  I would try asking on StackOverflow with a code example to get an answer if you are still stuck."
+email: c8addda594c8b338f1e3934e73505d0c

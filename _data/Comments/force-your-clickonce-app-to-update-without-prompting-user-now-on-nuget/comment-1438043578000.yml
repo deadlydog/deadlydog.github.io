@@ -1,0 +1,5 @@
+name: Omid
+date: '2015-07-27 18:32:58'
+url: ''
+message: "I accomplished this simply by adding the followings to the project file:\r\n\r\n&lt;UpdateRequired&gt;true&lt;/UpdateRequired&gt;\r\n&lt;MinimumRequiredVersion&gt;$(ApplicationVersion)&lt;/MinimumRequiredVersion&gt;\r\n\r\nApplicationVersion property should be incremented at build time for auto-update to work."
+email: 02caeae847d97a928b93241d2648966f

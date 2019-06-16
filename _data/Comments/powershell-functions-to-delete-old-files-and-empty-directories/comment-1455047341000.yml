@@ -1,0 +1,5 @@
+name: Alex
+date: '2016-02-09 13:49:01'
+url: ''
+message: "Hello,\r\nI am pretty new in the power shell.\r\nThank you very much for sharing your knowledge.\r\nI saved your scripts in a file and named it as cleanup.ps1\r\nNow I would like to run it in windows schedule task every night to clean up my server and delete all files older than 30 days ago.\r\nI am wondering if there a a way to pass the parameters to the function \"Remove-FilesCreatedBeforeDate\""
+email: 562fc3e569dc52bd2134ca60e3954487

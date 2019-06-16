@@ -1,0 +1,5 @@
+name: deadlydog
+date: '2014-01-17 15:23:59'
+url: 'http://www.danskingdom.com'
+message: "<a href=\"#comment-45103\" rel=\"nofollow\">@Robert </a> \r\nDo you mean that you are writing files to a directory using some app, while at the same time running this script to clean files up in that same directory?  That sounds like poor planning.  If you are scheduling this script to run regularly, you should try and do it when you know other applications will not be writing to the same directory.\r\n\r\nHaving said that, I agree with you that to stay true to their names, the Remove-Files* functions should also check the dates on directories, not just files, so I've updated the scripts on this post to do just that.  Thanks :)"
+email: c8addda594c8b338f1e3934e73505d0c

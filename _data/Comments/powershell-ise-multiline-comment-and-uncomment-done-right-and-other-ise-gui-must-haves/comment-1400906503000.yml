@@ -1,0 +1,5 @@
+name: deadlydog
+date: '2014-05-23 22:41:43'
+url: 'http://www.danskingdom.com'
+message: "<a href=\"#comment-88124\" rel=\"nofollow\">@Marlon </a> \r\nYeah, I could likely cut down on 10 or-so lines in the CommentOrUncommentIseSelectedLines function by using a regex instead of string splitting; that's a good idea.  But the Select-EntireLinesInIseSelectedTextAndReturnFirstAndLastSelectedLineNumbers, which is the majority of the script, would still need to stay so that you could select a line from the middle of it; I believe with your approach you would still need to be sure to select the very start of each line so that the comment character is inserted on that line.\r\n\r\nAs for using the Alt+Shift+Arrow Keys (or Alt+Mouse left drag), you can do that and it does work, but with how often I comment and uncomment lines I prefer to have it as a quick (configurable) shortcut key, rather than a 3 step process; it's just a lot faster.  Also, that strategy places comment characters on blank lines too, which is something that I personally prefer not to have."
+email: c8addda594c8b338f1e3934e73505d0c

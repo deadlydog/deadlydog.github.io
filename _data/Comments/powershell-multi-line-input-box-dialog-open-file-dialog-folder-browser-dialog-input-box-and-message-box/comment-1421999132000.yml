@@ -1,0 +1,5 @@
+name: Eric
+date: '2015-01-23 01:45:32'
+url: ''
+message: "This is what I have :\r\n\r\n#Opens file directory search\r\n$directoryPath = Read-FolderBrowserDialog -Message \"Please select a directory\" -InitialDirectory 'S:\\Projects\\UCG\\Production\\' -NoNewFolderButton\r\nif (![string]::IsNullOrEmpty($directoryPath)) { Write-Host \"You selected the directory: $directoryPath\" }\r\nelse { \"You did not select a directory.\" }\r\n\r\n#Search files within directory\r\nREST OF SCRIPT........\r\n\r\n\r\nSomehow this worked for a few days and when I closed saved the script and closed powershell the next time I tried to run it I got the error"
+email: 11cd71bbbb6eb62a1edcc98fc2388464

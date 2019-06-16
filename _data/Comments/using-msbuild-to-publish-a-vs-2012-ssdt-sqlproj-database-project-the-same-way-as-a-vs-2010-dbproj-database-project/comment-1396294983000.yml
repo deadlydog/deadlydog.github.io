@@ -1,0 +1,5 @@
+name: deadlydog
+date: '2014-03-31 13:43:03'
+url: 'http://www.danskingdom.com'
+message: "<a href=\"#comment-61281\" rel=\"nofollow\">@Neles </a> \r\nHi Neles, I just tested this and calling passing the .sln file instead of the .sqlproj file to MsBuild worked just fine for me.  For my specific test it built and deployed the database project and then built the class library project afterward.  I don't have any unit tests, but you would just call MsTest after MsBuild finishes."
+email: c8addda594c8b338f1e3934e73505d0c

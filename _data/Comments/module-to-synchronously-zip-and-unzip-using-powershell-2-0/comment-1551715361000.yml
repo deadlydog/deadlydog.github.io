@@ -1,0 +1,5 @@
+name: Or Ohev-Zion
+date: '2019-03-04 10:02:41'
+url: ''
+message: "<a href=\"#comment-605083\" rel=\"nofollow\">@Frank </a> \r\nFor whom it may concern, this method is not good.\r\nThis line:\r\nwhile($zipPackage.Items().Item($file.name) -eq $null)\r\nWill not work for files with special chars like \"[\" and \"]\" in them, thus inifinite loop is created."
+email: dc2673e917a1c6d567a328ad74889cc6

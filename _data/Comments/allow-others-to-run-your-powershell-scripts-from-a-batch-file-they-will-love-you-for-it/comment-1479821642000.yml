@@ -1,0 +1,5 @@
+name: David Wohlberg
+date: '2016-11-22 07:34:02'
+url: ''
+message: "<a href=\"#comment-574328\" rel=\"nofollow\">@Nick  </a> \r\n\r\nTake a look at the two examples provided in the blog above, you're not passing your %PowerShellScriptPath% variable, you just have empty quotes."
+email: 8f48e21ce91568972ce14bfe2687344b

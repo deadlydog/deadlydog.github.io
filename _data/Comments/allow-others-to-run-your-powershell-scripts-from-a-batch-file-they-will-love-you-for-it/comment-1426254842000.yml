@@ -1,0 +1,5 @@
+name: Sandeep Saxena
+date: '2015-03-13 07:54:02'
+url: 'http://N/A'
+message: "In line 5 I am trying to pass a parameter like this :\r\nStart-Process PowerShell -ArgumentList '-NoProfile -ExecutionPolicy Bypass -File \"\"\"\"%PowerShellScriptPath%\"\"\"\" -VM_Name2 \"\"\"\" %VM_Name2% \"\"\"\" ' -Verb RunAs"
+email: 85f757250e00d9e74f8b4cb6c3441591

@@ -1,0 +1,13 @@
+name: deadlydog
+date: '2013-07-09 09:41:36'
+url: 'http://www.danskingdom.com'
+message: >-
+  Hi John, PowerShell v3.0 is required, so that shouldn't be the problem.  This
+  "exited with code 1" is a generic "running the batch script failed" error
+  message.  The bottom of this page
+  (https://newnugetpackage.codeplex.com/wikipage?title=NuGet%20Package%20To%20Create%20A%20NuGet%20Package%20From%20Your%20Project%20After%20Every%20Build)
+  shows how to find the real error message.  Can you post that error message
+  please.  Also, it might make more sense for you to open an Issue on the
+  CodePlex page (https://newnugetpackage.codeplex.com/workitem/list/basic)
+  rather than continuing in these comments.  Thanks.
+email: c8addda594c8b338f1e3934e73505d0c

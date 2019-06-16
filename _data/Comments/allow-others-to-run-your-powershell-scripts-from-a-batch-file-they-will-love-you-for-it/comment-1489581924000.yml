@@ -1,0 +1,8 @@
+name: Todd
+date: '2017-03-15 06:45:24'
+url: ''
+message: >-
+  Hello, thanks for the explanation. I appreciate it.  FYI, I did run into a
+  problem because I needed to add "setlocal enabledelayedexpansion" to my batch
+  file before it would work as shown.
+email: fd9dace853263846c1be90e314e4e5aa

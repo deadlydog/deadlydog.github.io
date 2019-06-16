@@ -1,0 +1,5 @@
+name: Echeb
+date: '2014-12-01 10:57:55'
+url: ''
+message: "Great Article.\r\nI have a tab delimited text file which contains values my bat file will read and pass to the PowerShell script, this is so I can have multiple lines in the input file so can do multiple.\r\nThe bat file does the following:\r\nFOR /F \"tokens=1-1\" %%i in (C:\\Values.txt) do PowerShell -NoProfile -ExecutionPolicy Bypass -Command \"\";\r\n\r\nThe test.ps1 is a simple test file which should print Item1 (which needs to have come from the %%1 substituted value):\r\n\r\nparam([string]$Item1)\r\n\r\n$text = $Item1\r\n$text | Set-Content 'C:\\file.txt'\r\n\r\nIn my test file I get the word Parameter rather than the word contained in my values.txt file - \r\nnot sure how I go about construction the -commend \"\" section so that %%i can be used/substituted.\r\nAnyone done this before?\r\n\r\nAny help appreciated"
+email: 410db5b3e1b060f5b0ea55e0f7933633

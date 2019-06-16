@@ -1,0 +1,5 @@
+name: Tim
+date: '2014-04-05 05:48:44'
+url: 'http://www.uktech.co.uk'
+message: "Hi, great post - I'm a bit of a newbie to PS, but I can't get the 'wait' clause to work...if I run your code from within Powershell I get:\r\n\r\nPS E:\\Data\\Scripts\\Powershell&gt; # Wait for input before closing.\r\nWrite-Host \"Press any key to continue...\"\r\n$x = $Host.UI.RawUI.ReadKey(\"NoEcho,IncludeKeyUp\")\r\nPress any key to continue...\r\nException calling \"ReadKey\" with \"1\" argument(s): \"The method or operation is not implemented.\"\r\nAt line:3 char:1\r\n+ $x = $Host.UI.RawUI.ReadKey(\"NoEcho,IncludeKeyUp\")\r\n+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\r\n    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException\r\n    + FullyQualifiedErrorId : NotImplementedException\r\n\r\nOther Googling seems to suggest I can't use ReadKey with PS?\r\n\r\nAny pointers would be most appreciated."
+email: e2652ff646c0573610d3d6f87f8d034b

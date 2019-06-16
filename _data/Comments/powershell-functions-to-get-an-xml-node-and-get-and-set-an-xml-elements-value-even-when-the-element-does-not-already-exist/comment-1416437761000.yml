@@ -1,0 +1,9 @@
+name: John
+date: '2014-11-19 16:56:01'
+url: ''
+message: >-
+  How about getting a list of all nodes and all children? I'm the type that
+  would like to see that 'package' and/or 'metadata' is a node and 'ID' is a
+  child of 'metadata' but not 'file' or 'package' and can feed get/set
+  XmlElementsTextValue the right parameters.
+email: 38ec829a0c8d215abc82189b1fadac34

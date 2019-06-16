@@ -1,0 +1,11 @@
+name: Andres
+date: '2017-02-06 18:03:42'
+url: ''
+message: >-
+  I'm passing through a multiline $DefaultText that's basically notes coming
+  from VM's. I'm seeing multilines if I Write-Host $DefaultText inside the
+  function. But When the text box is opened the lines are all one single line. 
+  If I press ok and output the $multiLineText it looks correct. Is there
+  something else I need to do in order to make the multilines show up in
+  $DefaultText inside $texBox.Text ?
+email: 14f7e1e5924a13142a3fb2ae34c47a56

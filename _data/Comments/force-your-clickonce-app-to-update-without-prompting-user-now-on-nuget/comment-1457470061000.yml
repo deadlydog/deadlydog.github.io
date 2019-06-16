@@ -1,0 +1,8 @@
+name: dlcarp
+date: '2016-03-08 14:47:41'
+url: ''
+message: >-
+  Omid, Do you mean these lines should be added to the app.manifest file? Also,
+  Is the "ApplicationVersion"  the same as the "Assembly Version" that appears
+  in the "Assembly Information"? Thanks
+email: 97149f93e73d755308a81c6e84d7da18

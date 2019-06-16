@@ -1,0 +1,5 @@
+name: Marcello
+date: '2014-09-08 09:45:06'
+url: ''
+message: "In the \"run as admin\" version, when passing parameters, and when the powershell script is passed as an environment  variable, the -File parameter does not want any doublequotes, neither 2, nor 4. In other terms, of these three\r\n-File \"\"\"\"%myScript%\"\"\"\" -Param1name \"\"\"\"Param 1 value\"\"\"\" -Param2name \"\"\"\"Param 2 value\"\"\"\"\r\n-File \"\"%myScript%\"\" -Param1name \"\"\"\"Param 1 value\"\"\"\" -Param2name \"\"\"\"Param 2 value\"\"\"\"\r\n-File %myScript% -Param1name \"\"\"\"Param 1 value\"\"\"\" -Param2name \"\"\"\"Param 2 value\"\"\"\"\r\nonly the third one works.\r\nThis probably solves Jerome's issue.\r\n<a href=\"#comment-96189\" rel=\"nofollow\">@Jerome Lacoste  </a>"
+email: a640e031d76410f4a53e5b35e9837658

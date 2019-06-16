@@ -1,0 +1,5 @@
+name: Elie Saab
+date: '2018-05-29 03:03:18'
+url: ''
+message: "Dear All \r\n\r\nI had a problem concerning the language preference that is adding the uk keyboard by itself and it was resolved manually by entering the powershell  and typing the following:\r\nGet-WinUserLanguageList\r\n$1 = New-WinUserLanguageList en-US\r\nSet-WinUserLanguageList $1\r\nand it worked.\r\n\r\nwhat I would like to know how to put these lines in a batch file to run it directly from the desktop because each time I restart my computer I have to do the same steps again.\r\n\r\nthank you in advance"
+email: 168b06ba00c562a8a4ec75ba97ad6ae1

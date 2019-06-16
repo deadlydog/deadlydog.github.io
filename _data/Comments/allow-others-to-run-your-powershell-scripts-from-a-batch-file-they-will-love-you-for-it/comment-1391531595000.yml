@@ -1,0 +1,10 @@
+name: gm
+date: '2014-02-04 10:33:15'
+url: ''
+message: >-
+  This is great for situations where the batch file and powershell script are in
+  the same location.  Is it possible to get the batch file location from within
+  the powershell script? i.e. - for situations where the batch file is executing
+  a powershell script located on a network share but you want to write back to
+  the batch file location.
+email: fb1b7f6cc47ad9855ac413da4893530e

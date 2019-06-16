@@ -1,0 +1,5 @@
+name: Dan
+date: '2018-08-14 13:30:57'
+url: ''
+message: "<blockquote cite=\"#commentbody-644558\">\r\n<strong><a href=\"#comment-644558\" rel=\"nofollow\">Dan</a> :</strong>\r\n<blockquote cite=\"#commentbody-644556\">\r\n<strong><a href=\"#comment-644556\" rel=\"nofollow\">Dan</a> :</strong>\r\nGet-XmlElementsAttributeValue -XmlDocument $fileContents -ElementPath “package.metadata.version” -AttributeName “djiversion”\r\nSet-XmlElementsAttributeValue -XmlDocument $fileContents -ElementPath “package.metadata.version” -AttributeName “djiversion” -AttributeValue “1.0.0”\r\nI notice that the Set-XmlElementsAttributesValue just adds the name and value, but it doesn’t add the new line, or the less than or greater than, or the end of the tag.\r\n  metadata djiversion=\"1.0.0\"\r\n    id MyAppsId /id\r\n    version djiversion=\"1.0.0\" 1.0.2 /version"
+email: 1a3cc10deff186e2a6a6e53cc8118e63

@@ -1,0 +1,5 @@
+name: Kevin
+date: '2018-02-09 09:07:51'
+url: ''
+message: "How do I format this correctly so that Powershell reads recognizes the $env: and the (get-date)?\r\n\r\nThis is like the 3rd step in two bath files I have that help trigger an Automated Windows Server Backup check when a backup completes. It's supposed to grab a screenshot and format it as COMPUTERNAME_DDMMYY.png so a later script can attach it to a Send-MailMessage.\r\n\r\nI just can't figure out how to feed the script those arguments from a batch file.\r\n\r\nSET ScriptDir=%~dp0\r\nSET PSSPath=%ScriptDir%Take-Screenshot.ps1\r\npowershell -NoProfile -ExecutionPolicy Bypass -Command \"&amp; {%PSSPath% -activewindow -file \"C:\\TN\\Scripts\\WBA\\ScreenShots\\$env:computername_(get-date -F ddMMyy).png\" -imagetype png}\"\r\n\r\npause"
+email: 5ff21eff2c61159d042337af7da75220

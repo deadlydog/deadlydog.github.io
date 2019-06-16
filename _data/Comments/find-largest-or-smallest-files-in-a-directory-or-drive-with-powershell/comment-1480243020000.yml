@@ -1,0 +1,5 @@
+name: netkid
+date: '2016-11-27 04:37:00'
+url: ''
+message: "<a href=\"#comment-559915\" rel=\"nofollow\">@jalapenico </a> \r\n\r\nuse this:\r\nGet-ChildItem -Path $somePath | Where-Object { !$_.PSIsContainer }  # Get files only.\r\n\r\nfrom http://dans-blog.azurewebsites.net/powershell-2-0-vs-3-0-syntax-differences-and-more/"
+email: 1f4b2b71e435a65c8984cc5531853b33

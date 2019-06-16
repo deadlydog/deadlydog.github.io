@@ -1,0 +1,5 @@
+name: Christopher
+date: '2016-03-08 09:03:59'
+url: ''
+message: "Thank you for putting so much time into this blog. It is very helpful. I am coming across a problem and I am letting you know now I am a noob when it comes to this. \r\nI have the following PowerShell script and it runs perfectly if I type it directly in PowerShell...\r\nCD C:\\Temp\r\nGet-ChildItem -Filter \"*-Layout1*\" -Recurse | Rename-Item -NewName {$_.name -replace ‘-Layout1’,'' }\r\n\r\nWhen I run it thru a .bat I get the following error...\r\n\r\n\"You must provide a value expression on the right-hand side of the '-replace' oerator.\r\nAt C:\\Users\\Desktop\\PowerShell\\MyFileRenameUtility.ps1:3 char:85\r\nGet-ChildItem -Filter \"*-Layout1*\" -Recurse | Rename-Item -NewName {$_.name -replace &lt;&lt;&lt;&lt; a?~Layout1a?T,&#039; &#039; }\r\n\r\nI don&#039;t understand how PowerSheel recognizes the commands but then doesn&#039;t recognize them. Do you have any suggestions?"
+email: 40019c51b5fd6fde85b0b01684341a2c

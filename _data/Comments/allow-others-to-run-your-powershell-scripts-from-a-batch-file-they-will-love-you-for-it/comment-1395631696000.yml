@@ -1,0 +1,5 @@
+name: Maverick
+date: '2014-03-23 21:28:16'
+url: ''
+message: "Hi,\r\n\r\nAnyone knows how I can execute .cmd from powershell. I try this but doesnt work\r\n\r\nInvoke-item C:\\setup.cmd -ArgumentsList /c -install-setupforced\r\n\r\nReally appreciate your help"
+email: 9619260466219712a702533bea9266a2

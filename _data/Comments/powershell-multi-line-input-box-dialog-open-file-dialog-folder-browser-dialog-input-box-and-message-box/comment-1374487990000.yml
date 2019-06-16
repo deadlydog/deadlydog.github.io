@@ -1,0 +1,5 @@
+name: Richard
+date: '2013-07-22 04:13:10'
+url: ''
+message: "Hi,\r\n\r\nGreat script. \r\nOne remark though. I am using this in a script of my own (or the intention is there).\r\nI get the input into a variable which I am going to use as the Body for an email i'm sending.\r\nHowever no carriage return are carried over so the message in the email is a single line.\r\nAny idea.\r\n\r\nRvN"
+email: 87645f78025f730b1603cde71d43de9f

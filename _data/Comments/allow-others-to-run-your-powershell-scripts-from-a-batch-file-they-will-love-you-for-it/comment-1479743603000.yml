@@ -1,0 +1,5 @@
+name: Nick
+date: '2016-11-21 09:53:23'
+url: ''
+message: "I'm running into a problem,  trying to have this batch file start my script but nothing happens I need to run this as admin since the execution policy will be set to restricted by default.  Do you guys have any idea what is wrong with my code?  Thanks.\r\n\r\n@ECHO OFF\r\nSET ThisScriptsDirectory= %~dp0\r\nSET PowerShellScriptPath= %ThisScriptDirectory%NameOfMyScript.ps1\r\nPowerShell -NoProfile -ExecutionPolicy Bypass -Command \"\""
+email: 64bb4b19384dbcc21a7f31f5cd65f2ef

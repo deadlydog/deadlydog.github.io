@@ -1,0 +1,5 @@
+name: Amel
+date: '2014-02-25 07:34:49'
+url: ''
+message: "@deadlydog\r\nThanks a lot!\r\n\r\nI do have an issue when executing the following command:\r\n\r\nPowerShell -NoProfile -ExecutionPolicy Bypass -Command \"\"\r\n\r\nIt views all the remaining parameters as a part of -File parameter's value. Any idea on what I'm doing wrong?"
+email: 6fbcc6fbb056f1f954b115856c6c7f30

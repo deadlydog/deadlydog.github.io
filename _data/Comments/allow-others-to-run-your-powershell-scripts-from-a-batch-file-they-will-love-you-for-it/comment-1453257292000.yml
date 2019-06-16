@@ -1,0 +1,9 @@
+name: Sadiq
+date: '2016-01-19 20:34:52'
+url: ''
+message: >-
+  Hi Could someone help me.. I am trying to schedule a bat file which is calling
+  Power shell in Task scheduler and schtasks but my bat file is getting executed
+  and when it calls powersell it's not getting executed. What could be the
+  reason. How should I schedule a bat file which calls power shell.
+email: bee5649606512dd896da282b3de90e0c

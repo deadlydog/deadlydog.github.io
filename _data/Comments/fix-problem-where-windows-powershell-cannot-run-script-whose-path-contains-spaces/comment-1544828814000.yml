@@ -1,0 +1,5 @@
+name: guest
+date: '2018-12-14 17:06:54'
+url: ''
+message: "All these entrys in my Win7SP1 registry were successful:\r\n&quot;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe&quot; &quot;&amp; \\&quot;%1\\&quot;&quot;\r\n\r\n&quot;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe&quot; &amp; \\&quot;%1\\&quot;\r\n&quot;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe&quot; &quot;&amp; &apos;%1&apos;&quot;\r\n&quot;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe&quot; &amp; &apos;%1&apos;\r\n\r\nSo I&apos;d prefer the shortest one.\r\nAs PowerShell seems to allow <b>&apos;</b> or <b>&quot;</b> as string delimiters, which is to prefer?"
+email: 357a20e8c56e69d6f9734d23ef9517e8

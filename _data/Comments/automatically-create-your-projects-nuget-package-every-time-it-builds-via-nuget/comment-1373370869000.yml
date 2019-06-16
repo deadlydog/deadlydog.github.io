@@ -1,0 +1,5 @@
+name: John
+date: '2013-07-09 05:54:29'
+url: ''
+message: "Hi, interesting project - i seem to be getting a error when i build like so:\r\n\r\nThe command \"REM Create a NuGet package for this project and place the .nupkg file in the project's output directory.\r\nECHO Building NuGet package in Post-Build event...\r\nPowerShell -NoProfile -ExecutionPolicy Bypass -Command \"&amp; 'C:\\SVN\\Chevron\\Chevron RTRM\\ISS.WebAPI.PubSub\\ISS.WebAPI.PubSub\\trunk\\ISS.WebAPI.PubSub.Attributes\\PostBuildScripts\\New-NuGetPackage.ps1' -ProjectFilePath 'C:\\SVN\\Chevron\\Chevron RTRM\\ISS.WebAPI.PubSub\\ISS.WebAPI.PubSub\\trunk\\ISS.WebAPI.PubSub.Attributes\\ISS.WebAPI.PubSub.Attributes.csproj' -PackOptions '-OutputDirectory \"\"C:\\SVN\\Chevron\\Chevron RTRM\\ISS.WebAPI.PubSub\\ISS.WebAPI.PubSub\\trunk\\ISS.WebAPI.PubSub.Attributes\\bin\\Debug\\\"\" -NonInteractive' -DoNotUpdateNuSpecFile -NoPrompt\"\" exited with code 1.\t\r\n\r\nI have powershell 3.0 installed - maybe that is the problem? not an expert at ps by any stretch of the imagination..."
+email: f37132d4995f2db754aecd8a78b6390a

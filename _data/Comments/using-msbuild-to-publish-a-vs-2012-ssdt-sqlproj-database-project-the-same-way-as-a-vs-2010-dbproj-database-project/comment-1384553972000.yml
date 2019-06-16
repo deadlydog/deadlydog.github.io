@@ -1,0 +1,5 @@
+name: deadlydog
+date: '2013-11-15 16:19:32'
+url: 'http://www.danskingdom.com'
+message: "<a href=\"#comment-20576\" rel=\"nofollow\">@Galiya </a> \r\nOk, thanks for verifying you were still getting the UriFormatException. I removed that line from my .sqlproj file and confirmed everything still works properly on my PC, so I have removed that line from the blog post code as well, since it seems to be causing problems on some other people's PCs for some reason. Thanks."
+email: c8addda594c8b338f1e3934e73505d0c

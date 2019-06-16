@@ -1,0 +1,5 @@
+name: Graham
+date: '2017-04-12 10:59:55'
+url: ''
+message: "Great script, thanks\r\nam using it to download Word docs from SharePoint, unzip, edit and reconstitute\r\n\r\nand hit a problem, files and dirs. like [trash] and [Content_Types].xml all failed\r\n\r\ndid a spot of googling and in every Test-Path, replaced the -Path param with -LiteralPath and all was good"
+email: 3b03e9366f8783cd2275a4dda9aaadbd

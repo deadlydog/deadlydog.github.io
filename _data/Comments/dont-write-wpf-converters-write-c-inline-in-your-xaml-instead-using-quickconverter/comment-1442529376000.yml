@@ -1,0 +1,10 @@
+name: Johannes Moersch
+date: '2015-09-17 16:36:16'
+url: ''
+message: >-
+  Are you getting this error in the xaml designer or at runtime? I ask because
+  the designer tends to throw a lot of errors when using QuickConverter (even
+  though everything is fine at runtime). If this is a runtime issue, it would be
+  great if you could create an issue at my codeplex site with some addition
+  details. Thanks.
+email: d468e0fc844cf15330f6c15e6e665400

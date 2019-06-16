@@ -1,0 +1,5 @@
+name: deadlydog
+date: '2015-08-27 09:51:13'
+url: 'http://www.danskingdom.com'
+message: "<a href=\"#comment-498136\" rel=\"nofollow\">@Ross K </a> \r\nFor #1 it will probably depend on your OS version.  Hopefully one of the 2 entries is in your registry.  If not, the .reg file will add it I believe and may still work. Otherwise you may just have to do a Find in your registry for \"powershell.exe\" and find the equivalent key.\r\n\r\nFor #2 you should just need to include \"-NoExit\" in the ProcessStartInfo.Arguments.  Also, you may need to toggle the UseShellExecute property as well; I can never remember if we want it to be true or false."
+email: c8addda594c8b338f1e3934e73505d0c

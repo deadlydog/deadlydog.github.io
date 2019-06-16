@@ -1,0 +1,5 @@
+name: Chris
+date: '2015-09-29 05:11:59'
+url: ''
+message: "Dan,\r\n\r\nHow can I use the \"Remove-EmptyDirectories\" with the \"-DeletePathIfEmpty\" flag but not delete the root folder defined in the $path variable?\r\n\r\ni.e. In your example, not delete the 'temp' folder?"
+email: 90c41bd7e48bfa98d9b464d0724562c2

@@ -1,0 +1,5 @@
+name: Steven Kelly
+date: '2018-10-25 04:19:49'
+url: 'http://www.metacase.com/blogs/stevek/blogView'
+message: "Thanks so much for those last schtasks examples! I tried several of the ways to make a script run as admin, either via shortcuts or Task Scheduler, and that was the only one that worked in Windows 10 (1803) with 1.1.30.00 without a UAC prompt and even when an admin window like Task Manager has the focus.\r\n\r\nI use it to translate MIDI into keystrokes to a particular program, with https://github.com/dannywarren/AutoHotkey-Midi."
+email: 727052170346a38f1f8ebc547e03d74d

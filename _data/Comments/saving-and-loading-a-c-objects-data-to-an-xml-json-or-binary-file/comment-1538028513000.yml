@@ -1,0 +1,5 @@
+name: William
+date: '2018-09-27 00:08:33'
+url: ''
+message: "Watch it on the Newtonsoft.Json entry.  It does indeed work fine, but what you get back is not your original object, it's a Json object.  Not an issue unless you start doing squirrelly stuff like reflection on what you saved/loaded.  You'll quickly find what you saved is not exactly what you get back, and for me, at least, I was very lost where all the extra stuff was coming from.\r\n\r\nI used the example from the Stack Overflow related question, and if you .GetType() you'll find it's not what you saved.  I am about to try the binary version and see if I get better results."
+email: de330f3305a64a56b28d1ab7d63a7e25

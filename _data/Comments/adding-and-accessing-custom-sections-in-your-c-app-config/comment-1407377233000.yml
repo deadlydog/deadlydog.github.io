@@ -1,0 +1,5 @@
+name: Vamsi
+date: '2014-08-06 20:07:13'
+url: ''
+message: "In Program.cs till Console.WriteLine(\"\\nEndpoints:\"); its working fine.\r\n\r\nFirst run of foreach is failing. \r\n\t\t\tforeach (var endpoint in AdvancedExamplesData.Endpoints.EndpointsList)\r\n\t\t\t{ ..\r\n\t\t\t}\r\nIt is failing in this part ,'AdvancedExamplesData.Endpoints.EndpointsList' of foreach loop with error \"The type initializer for 'AppConfigExample.AdvancedExamplesData.Endpoints' threw an exception.\""
+email: f6443362c1259e593b5cf65b3f8660ce

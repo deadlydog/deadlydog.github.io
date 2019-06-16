@@ -1,0 +1,5 @@
+name: Josh
+date: '2016-04-29 11:05:05'
+url: ''
+message: "<a href=\"#comment-496722\" rel=\"nofollow\">@Michael </a> \r\n\r\nIn my scripts I usually add a Tee-Variable before the last step (in this case, deleting the files), then add a line that pipes that variable to an Export-CSV with a time stamp.\r\n\r\nI actually found this script because I was looking to delete those exported CSVs after a certain time as part of my nightly maintenance processes, so thanks @deadlydog for providing a tidy set of functions for accomplishing this."
+email: edd2bccdb615b76d2ff0f2a35f623980

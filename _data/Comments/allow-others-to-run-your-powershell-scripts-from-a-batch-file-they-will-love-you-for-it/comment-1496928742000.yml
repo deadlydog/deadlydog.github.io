@@ -1,0 +1,5 @@
+name: David Wohlberg
+date: '2017-06-08 07:32:22'
+url: ''
+message: "<a href=\"#comment-590628\" rel=\"nofollow\">@Andrew  </a> \r\nWould be helpful to see how you set the variable %ThisScriptsDirectory%\r\n\r\nMy guess is you have a space at the end after %~dp0. The cmd interpreter simply thinks you wanted that space as part of your path that you were trying to set."
+email: 8f48e21ce91568972ce14bfe2687344b

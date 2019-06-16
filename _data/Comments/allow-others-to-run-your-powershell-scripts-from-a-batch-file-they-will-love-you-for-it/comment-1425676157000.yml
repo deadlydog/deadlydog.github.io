@@ -1,0 +1,5 @@
+name: Allen
+date: '2015-03-06 15:09:17'
+url: 'http://bna.com'
+message: "I tried this code in .cmd\r\n@ECHO OFF\r\nSET ThisScriptsDirectory=%~dp0\r\nSET PowerShellScriptPath=%ThisScriptsDirectory%IIS_Restart.ps1\r\n\r\nPowerShell -NoProfile -ExecutionPolicy Bypass -Command \"\";\r\n\r\nand below in .ps1 file\r\n\r\nsleep 50\r\n\r\nWrite-OutPut \"Restarting IIS\"\r\n\r\niisreset \r\n\r\nbut still its not working it says \" u need admin access\", can some one help me how can i run powershell script as an admin"
+email: f7f22dda6bd1afc89ea5f4bb56a12f0a

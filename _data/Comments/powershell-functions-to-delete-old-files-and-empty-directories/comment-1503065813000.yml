@@ -1,0 +1,5 @@
+name: BMA
+date: '2017-08-18 08:16:53'
+url: ''
+message: "Script runs great and I get it to parse out the path and file/folder/item names that should be deleted, but nothing is *actually* getting deleted. It just finds the same stuff and parses it out again and again. \r\n\r\nI'm running Remove-FilesNotModifiedAfter like so\r\n\r\nRemove-FilesNotModifiedAfterDate -Path \"D:\\directory\" -DateTime ((Get-Date).AddDays(-728)) -DeletePathIfEmpty -OutputDeletedPaths | Out-File $LogFile -Append\r\n\r\nIt's driving me crazy and I know it's going to be to be such a simple solution, but I just can't seem to stumble upon it. Thanks for any help that you can provide"
+email: a99ccea3506d6cfd863e2db9a6e355d7

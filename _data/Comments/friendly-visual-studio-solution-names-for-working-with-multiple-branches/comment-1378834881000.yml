@@ -1,0 +1,5 @@
+name: Erwin
+date: '2013-09-10 11:41:21'
+url: 'http://erwinmayer.com'
+message: "If you need a lightweight equivalent, you can try the following extension I have developed (\"Rename Visual Studio Window Title\"):\r\nhttp://visualstudiogallery.msdn.microsoft.com/f3f23845-5b1e-4811-882f-60b7181fa6d6\r\n\r\nI have not yet looked into the support of TFS/Git/Hg branch names (through the Visual Studio SDK API), but so far it works great for folder based branches (and many other scenarios)."
+email: 92a359c378b8045bd801c715630dac42

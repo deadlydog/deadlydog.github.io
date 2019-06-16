@@ -1,0 +1,10 @@
+name: Devon Powell
+date: '2017-09-27 08:34:21'
+url: ''
+message: >-
+  Thanks for the great how-to. I almost have it all working but keep getting a
+  build failure for an incorrect AssemblyVersion. I tracked this to using the
+  %2a in the version number (fails when making this change in VS2017). I wonder
+  if the syntax for version # and revision # in the .proj file changed? Have you
+  run into this issue?
+email: 902a63a27076b2a801a06378a7342324

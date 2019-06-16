@@ -1,0 +1,5 @@
+name: Ian
+date: '2017-04-12 04:17:59'
+url: ''
+message: "Scripts are a big help! Wondering if you could explain why this is happening though as I can't see it?\r\n\r\nI'm calling \"Remove-FilesNotModifiedAfterDate\" but when it is running I am being presented with the message \"The item at \"path\" has children and the Recurse parameter was not specified. If you continue, all children will be removed with the item\"\r\n\r\nNow, as far as I can see the Recurse switch is set with -Force? The main problem is, while the message box is popping up, I can't automate it :/ \r\n\r\nThanks!"
+email: 2d3cc41756eb467f69f2fd38a04c81bd

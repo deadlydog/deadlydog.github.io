@@ -1,0 +1,5 @@
+name: deadlydog
+date: '2014-08-13 20:03:21'
+url: 'http://www.danskingdom.com'
+message: "<a href=\"#comment-134824\" rel=\"nofollow\">@serguei kouzmine </a> \r\nTopmost is not a valid property on the $openFileDialog object, so your code generates an error.  Also, the Read-OpenFileDialog function does not have the problem in my testing, so that code is not even required."
+email: c8addda594c8b338f1e3934e73505d0c

@@ -1,0 +1,5 @@
+name: Sean
+date: '2017-01-18 11:41:04'
+url: ''
+message: "Hi Chris,\r\n\r\nInteresting example and project.  Question...\r\n\r\nI don't see any actual task(s).  For example, lets say I need to build up 5,000 url(s) to scrape those pages using webrequest or httpclient, but only allow so many concurrently, how do I make that into a task list and then throw it at your template?\r\n\r\nAlso, I get data out of those pages, and process those page strings as they come in, so does any call from inside your template that is NOT ASync become automatically Async because it is called from an Async process?  In this regard, would the Await task.whenAny() work in your template as well, without breaking it?\r\n\r\nAwesome stuff thanks!\r\n-S"
+email: e4ece54f08494daa77c56e9547ac46a6

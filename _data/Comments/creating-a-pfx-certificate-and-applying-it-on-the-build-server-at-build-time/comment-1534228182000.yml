@@ -1,0 +1,10 @@
+name: Jay
+date: '2018-08-14 00:29:42'
+url: ''
+message: >-
+  I still get build error saying "C:\Program Files (x86)\Microsoft Visual
+  Studio\2017\Professional\MSBuild\Microsoft\VisualStudio\v15.0\AppxPackage\Microsoft.AppXPackage.Targets(4216,5):
+  Error APPX0108: The certificate specified has expired. For more information
+  about renewing certificates, see
+  http://go.microsoft.com/fwlink/?LinkID=241478."
+email: 261faca6bc5a35b21e088cdb25ac52c3

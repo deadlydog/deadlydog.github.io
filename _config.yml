@@ -39,7 +39,7 @@ repository: "deadlydog/deadlydog.github.io" # GitHub username/repo-name e.g. "mm
 # breadcrumbs: false # true, false (default)
 words_per_minute: 200 # Used to calculate the read time.
 comments:
-  provider: # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "custom"
+  provider: staticman_v2 # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "custom"
   # disqus:
   #   shortname            : # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
   # discourse:
@@ -52,27 +52,9 @@ comments:
   # utterances:
   #   theme                : # "github-light" (default), "github-dark"
   #   issue_term           : # "pathname" (default)
-staticman:
-  allowedFields: # ['name', 'email', 'url', 'message']
-  branch: # "master"
-  commitMessage: # "New comment by {fields.name}"
-  filename: # comment-{@timestamp}-{fields.name}
-  format: # "yml"
-  moderation: # true
-  path: # "/_data/comments/{options.slug}" (default)
-  requiredFields: # ['name', 'email', 'message']
-  transforms:
-    email: # "md5"
-  generatedFields:
-    date:
-      type: # "date"
-      options:
-        format: # "iso8601" (default), "timestamp-seconds", "timestamp-milliseconds"
-  endpoint: # URL of your own deployment with trailing slash, will fallback to the public instance
-reCaptcha:
-  enabled: true
-  siteKey: "6LexzqgUAAAAACjnxAhDpsymtZKy3ymJFRbVNWKU"
-  secret: "6LexzqgUAAAAAJjkczlwT888oWg48CeU8x3MrNlc"
+  staticman: # The rest of the settings are specified in staticman.yml.
+    branch: "master"
+    endpoint: "https://dev.staticman.net/v3/entry/github/"
 # atom_feed:
 #   path: # blank (default) uses feed.xml
 search: true # true, false (default). Show the search link on the site.
@@ -330,6 +312,10 @@ defaults:
     values:
       layout: single
       author_profile: true
+      read_time: false
+      comments: false
+      share: false
+      related: false
       toc: false
       toc_label: Post Sections
       toc_icon: stream

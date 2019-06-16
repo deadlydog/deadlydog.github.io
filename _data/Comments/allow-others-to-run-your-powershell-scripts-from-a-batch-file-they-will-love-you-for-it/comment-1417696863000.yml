@@ -1,0 +1,5 @@
+name: noobie
+date: '2014-12-04 06:41:03'
+url: ''
+message: "Hello,\r\nI'm a noob so please bear with me. I ave a batch file that calls a ps1. The ps1 seems to run, the last thing it does is creates a log file which indicates that all tasks have bee completed. The problem is that it nevers passes control back to the batch file. Even inputing an exit command after the logging sections does not help. any ideas?"
+email: 13d9a7142c3f7f4e7496e2326edb361b
