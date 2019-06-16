@@ -6,7 +6,7 @@ comments:
   filename: comment-{@timestamp}
   format: "yml"
   moderation: true
-  path: "/_data/comments/{options.slug}"
+  path: "/_data/Comments/{options.slug}"
   requiredFields: ['name', 'email', 'message']
   transforms:
     email: "md5"
