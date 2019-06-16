@@ -331,6 +331,10 @@ defaults:
     values:
       layout: single
       author_profile: true
+      read_time: false
+      comments: false
+      share: false
+      related: false
       toc: false
       toc_label: Post Sections
       toc_icon: stream
