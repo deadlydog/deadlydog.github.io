@@ -17,7 +17,7 @@
 # Review documentation to determine if you should use `theme` or `remote_theme`
 # https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#installing-the-theme
 
-remote_theme: mmistakes/minimal-mistakes@26c1989 # Specify the branch, tag, or commit so that if they breaks the theme with updates, it won't affect our site. Remove the '@' and everything after it to use the tip of the master branch.
+remote_theme: mmistakes/minimal-mistakes # Specify the branch, tag, or commit so that if they breaks the theme with updates, it won't affect our site (e.g. mmistakes/minimal-mistakes@26c1989). Remove the '@' and everything after it to use the tip of the master branch.
 minimal_mistakes_skin: "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
@@ -52,9 +52,9 @@ comments:
   # utterances:
   #   theme                : # "github-light" (default), "github-dark"
   #   issue_term           : # "pathname" (default)
-  staticman: # The rest of the settings are specified in staticman.yml.
-    branch: "master"
-    endpoint: "https://dev.staticman.net/v3/entry/github/"
+staticman: # The rest of the settings are specified in staticman.yml.
+  branch: "master"
+  endpoint: "https://dev.staticman.net/v3/entry/github/"
 # atom_feed:
 #   path: # blank (default) uses feed.xml
 search: true # true, false (default). Show the search link on the site.
