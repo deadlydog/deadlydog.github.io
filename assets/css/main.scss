@@ -39,6 +39,11 @@ $type-size-8 : 0.625em; // ~10px
 	font-size: $type-size-6
 }
 
+// Reduce the size of the post new comment form text a bit.
+.page__comments-form {
+	font-size: $type-size-6
+}
+
 //========== Dan's Customizations END ==========
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
