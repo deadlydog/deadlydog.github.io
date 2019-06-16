@@ -55,6 +55,7 @@ comments:
 staticman:
   allowedFields: ['name', 'email', 'url', 'message']
   branch: "master"
+  endpoint: "https://dev.staticman.net/v3/entry/github/deadlydog/deadlydog.github.io/master"
   commitMessage: "New comment by {fields.name}"
   filename: comment-{@timestamp}-{fields.name}
   format: "yml"
