@@ -1,0 +1,5 @@
+name: deadlydog
+date: '2016-04-18 10:18:09'
+url: 'http://www.danskingdom.com'
+message: "<a href=\"#comment-557054\" rel=\"nofollow\">@Chris Wolf </a> \r\nGood eye. I actually do use async/await in my real code. For the example here I chose to use synchronous code simply to keep the code example simpler.  To use async/await here you would just have to declare the \"Something\" function prototype as:\r\n\r\npublic async Task Something(int taskNumber)\r\n{\r\n    await Task.Delay(TimeSpan.FromSeconds(1));\r\n    Console.WriteLine(\"Task Number: \" + taskNumber);\r\n}\r\n\r\nand then change the \"() => Something(count)\" action to:\r\n\r\nasync () => await Something(count)"
+email: c8addda594c8b338f1e3934e73505d0c

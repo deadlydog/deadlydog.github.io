@@ -1,0 +1,12 @@
+name: >-
+  Daniel Schroeder&#039;s Programming Blog &raquo; Get AutoHotkey To Interact
+  With Admin Windows Without Running AHK Script As Admin
+date: '2013-11-21 11:25:55'
+url: >-
+  http://dans-blog.azurewebsites.net/get-autohotkey-to-interact-with-admin-windows-without-running-ahk-script-as-admin/
+message: >-
+  [&#8230;] while back I posted about AutoHotKey not being able to interact with
+  Windows 8 windows and other applications that were Ran As&#8230;.&#160; My
+  solution was to run your AutoHotkey (AHK) script as admin as well, and I also
+  showed how [&#8230;]
+email: d41d8cd98f00b204e9800998ecf8427e

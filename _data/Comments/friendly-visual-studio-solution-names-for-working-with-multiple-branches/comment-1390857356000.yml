@@ -1,0 +1,5 @@
+name: Josh
+date: '2014-01-27 15:15:56'
+url: ''
+message: "I had to add an extra back slash for the reg-ex to work in VS 2010 Ultimate. Other than that worked great. \r\n\r\n.*\\\\(?.*)\\\\(?.*(?:.sln))"
+email: fc18b70a96244cb9cfd871ece4867b19

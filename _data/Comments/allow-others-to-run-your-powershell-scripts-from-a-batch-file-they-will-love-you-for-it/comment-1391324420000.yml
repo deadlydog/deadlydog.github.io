@@ -1,0 +1,5 @@
+name: deadlydog
+date: '2014-02-02 01:00:20'
+url: 'http://www.danskingdom.com'
+message: "<a href=\"#comment-47373\" rel=\"nofollow\">@Jon </a> \r\nI don't know what you mean when you say it doesn't work (fails); does it give an error message? or simply just not delete the files?  I'm guessing that it just doesn't delete the files, and that you simply need to also provide the -Force switch to Get-ChildItem, otherwise hidden and read-only files won't be found and passed to the Remove-Item cmdlet.  So basically you want to use this:\r\n\r\nPowerShell “& Get-ChildItem * -Include *.xxx -Recurse -Force | Remove-Item -Force”\r\n\r\nI hope that helps. If you still need an answer I suggest posting your question with more detail on Stack Overflow or the PowerShell.org forums, as there are many others there who are smarter than I who can likely help you out :)"
+email: c8addda594c8b338f1e3934e73505d0c

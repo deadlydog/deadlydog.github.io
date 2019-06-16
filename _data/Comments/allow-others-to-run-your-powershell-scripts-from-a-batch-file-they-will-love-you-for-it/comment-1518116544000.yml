@@ -1,0 +1,11 @@
+name: Ric
+date: '2018-02-08 13:02:24'
+url: ''
+message: >-
+  Hello.  I am following your example of calling PowerShell from PowerShell to
+  use -Verb RunAs.  When the second Powershell starts, I get a dialog box that
+  asks "Do you want to allow this app to make changes to your device?" - Windows
+  Power Shell.  I have to hit Yes or No.  I am an admin on this PC but I want my
+  users to run this who are not admins.  Is there anyway to suppress that dialog
+  for admins and non-admins?
+email: ae604c096a9897d5b6910826ca09342d

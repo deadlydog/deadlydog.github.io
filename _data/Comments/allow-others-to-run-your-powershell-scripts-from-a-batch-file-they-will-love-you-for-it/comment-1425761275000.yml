@@ -1,0 +1,5 @@
+name: deadlydog
+date: '2015-03-07 14:47:55'
+url: 'http://www.danskingdom.com'
+message: "<a href=\"#comment-370136\" rel=\"nofollow\">@Allen </a> \r\nDid you read this blog post?  I give the code for how to run the script as admin just a few lines below the code that you are using for how to run it normally; just use that Run As Admin method instead to call your PowerShell script:\r\n\r\nPowerShell -NoProfile -ExecutionPolicy Bypass -Command \"& {Start-Process PowerShell -ArgumentList '-NoProfile -ExecutionPolicy Bypass -File \"\"%PowerShellScriptPath%\"\"' -Verb RunAs}\";"
+email: c8addda594c8b338f1e3934e73505d0c

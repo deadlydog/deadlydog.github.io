@@ -1,0 +1,5 @@
+name: Paul Pethoe
+date: '2018-08-22 05:32:25'
+url: ''
+message: "I can not use string literals in the expression part!\r\ni.e.:\r\n{qc:Binding '$P ? &quot;some string&quot; : '&quot;another string&quot;', P={Binding SomeBool}}\r\n\r\nAny workaround? \r\n(For example: expression part in XAML element somewhere? Of course XAML extension can only be used in XML attrib :()"
+email: f963630bb9bbd54451d57fa0e8cb5c28

@@ -1,0 +1,7 @@
+name: sr20
+date: '2013-04-18 14:59:15'
+url: ''
+message: >-
+  The &gt; ?xml? &lt;  xml tag in the TransformPublishXml property. Comment
+  system removes angle backets.
+email: 45e1b43b72b478f61c67a513bd5e0481

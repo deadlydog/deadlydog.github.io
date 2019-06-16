@@ -1,0 +1,5 @@
+name: Christopher
+date: '2016-03-09 11:26:40'
+url: ''
+message: "<a href=\"#comment-552522\" rel=\"nofollow\">@Christopher  </a> \r\nBasically I am using this because our CADD program adds \"-Layout1\" or \"-Model1\" to the file name of each output file. I sometimes have hundreds of these files, each with a different name but they all have \"-Layout1\" or \"-Model1\" in common. I can use the script directly in PowerShell and it runs perfectly. Just getting over that hump of passing it from the batch file for other users to use it as well."
+email: 40019c51b5fd6fde85b0b01684341a2c

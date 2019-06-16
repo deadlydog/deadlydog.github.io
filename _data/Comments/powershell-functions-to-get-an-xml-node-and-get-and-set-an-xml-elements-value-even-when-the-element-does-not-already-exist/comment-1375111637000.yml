@@ -1,0 +1,5 @@
+name: john mcgregor
+date: '2013-07-29 09:27:17'
+url: 'http://na'
+message: "Hello,\r\n\r\nThanks for this post - I've happily plundered your code :-)\r\n\r\nI was wondering if you would be able to add to it and show how to read/write to a SharePoint library of xml files. As far as I know the get-content won't work. I've been trying SPFile.OpenBinary() and OpenBinaryStream() which have read ok, but still no luck saving. My situation is concerns a library of InfoPath form data - stored as xml - which I need to bulk amend.\r\n\r\nThanks,\r\nJohn"
+email: b4c74246154f6fdf46b30d65f9873f3b

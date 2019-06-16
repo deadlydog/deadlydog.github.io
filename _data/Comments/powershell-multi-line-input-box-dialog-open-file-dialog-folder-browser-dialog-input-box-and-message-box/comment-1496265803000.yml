@@ -1,0 +1,5 @@
+name: Enzo Lopez
+date: '2017-05-31 15:23:23'
+url: ''
+message: "<a href=\"#comment-591162\" rel=\"nofollow\">@Enzo Lopez </a> \r\nI figured it out\r\n\r\nNew-Variable -Name $textBox.Text\r\nSet-Variable -Name $textBox.Text -Value (get-service) -Scope global\r\n$ArrayName = \"`$\" + $textBox2.Text\r\nWrite-Host \"The Array name is $ArrayName\""
+email: 88982b2d9462ffaabbc11f0b60609da3

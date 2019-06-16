@@ -1,0 +1,5 @@
+name: Ghodmode
+date: '2014-02-18 00:31:11'
+url: ''
+message: "<a href=\"#comment-50190\" rel=\"nofollow\">@deadlydog </a> Hey, Thanks for your reply.  That was it.  I should have read more carefully.  I even looked it up in <a href=\"http://msdn.microsoft.com/en-us/library/windows/desktop/bb736357(v=vs.85).aspx\" rel=\"nofollow\">the documentation</a> and still got it wrong.\r\n\r\nI actually got it to work just by selecting \"Run only when user is logged on\" in the General tab, but I still wanted to understand why the /it argument didn't work.\r\n\r\nAnother minor thing which got me is that my task name was actually \\Startup\\AutoHotkey.  I put all my scheduled tasks into a folder so that I could find them more easily.\r\n\r\nThank you."
+email: 0637c13660fb219d7ae6c4f4b4c0156d

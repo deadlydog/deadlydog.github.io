@@ -1,0 +1,5 @@
+name: LordScree
+date: '2014-07-23 09:19:16'
+url: ''
+message: "I found this helpful.  \r\n\r\nI was creating scripts to drop default bindings that had been using sp_bindefault.  However, in some cases bindings were missing, so I had to check they existed before dropping them.  Sadly, the ALTER TABLE approach doesn't work for defaults added via sp_bindefault - you have to use sp_unbindefault.  I used the following adaptation of your DROP DEFAULT CONSTRAINT script, after a bit of fiddling:\r\n\r\n\tIF EXISTS (SELECT TOP 1 S.NAME FROM SYS.SYSOBJECTS S JOIN SYS.SYSCOLUMNS C ON S.ID = C.CDEFAULT \r\n                                      WHERE C.ID = OBJECT_ID('TableName') AND C.NAME = 'ColumnName')\r\n\tBEGIN\r\n\t\tEXEC sp_unbindefault N'dbo.TableName.ColumnName';\r\n\tEND\t\r\n\r\nI hope this helps someone else."
+email: 42da7d1cd6fc9901ea47192b40b9b795

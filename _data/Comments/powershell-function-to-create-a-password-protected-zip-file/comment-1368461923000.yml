@@ -1,0 +1,10 @@
+name: deadlydog
+date: '2013-05-13 10:18:43'
+url: 'http://deadlydog.wordpress.com'
+message: >-
+  Thanks for the comment.  I chose to implement it as zip purely for
+  compatibility reasons, as Windows can now handle .zip files natively, and not
+  everybody knows what a .7z file is.  I've updated the function to take the
+  compression type as a parameter, so it's easy to specify to make a 7z file
+  now; zip is still the default though.  Thanks :)
+email: c8addda594c8b338f1e3934e73505d0c

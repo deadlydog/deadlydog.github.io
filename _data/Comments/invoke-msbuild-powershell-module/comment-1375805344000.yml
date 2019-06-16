@@ -1,0 +1,11 @@
+name: deadlydog
+date: '2013-08-06 10:09:04'
+url: 'http://www.danskingdom.com'
+message: >-
+  Hi Gal, what is the command line that you are using to try and run
+  Invoke-MsBuild (i.e. how are you calling it and with what parameters)?  Also,
+  if you could create a new issue for this at
+  https://invokemsbuild.codeplex.com/workitem/list/basic that would be great, as
+  others may experience the same problem as you, and we can go back and forth
+  there without cluttering up the comments on this post.  Thanks.
+email: c8addda594c8b338f1e3934e73505d0c

@@ -1,0 +1,5 @@
+name: Florent
+date: '2017-01-26 12:19:57'
+url: ''
+message: "Hello,\r\nWe have the same problem here, this option does fix the problem, on the other side the option : /m:4 /nr:false fix it.\r\nSource : http://stackoverflow.com/questions/13510465/the-mystery-of-stuck-inactive-msbuild-exe-processes-locked-stylecop-dll-nuget\r\n\r\nThank you for your Powershell library for MSBuild\r\nRegards,\r\nFlorent"
+email: b9367dc0526158c7b24c9f372115a9f1

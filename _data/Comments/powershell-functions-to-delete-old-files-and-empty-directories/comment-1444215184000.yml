@@ -1,0 +1,5 @@
+name: Peter
+date: '2015-10-07 04:53:04'
+url: ''
+message: "<blockquote cite=\"#commentbody-496722\">\r\n<strong><a href=\"#comment-496722\" rel=\"nofollow\">Michael</a> :</strong>\r\nlove the scripts – but how would you add output to these so a list of what is deleted can be produced?\r\n</blockquote>\r\n\r\nI would also like this, I am trying to Out-File the function call however does not seem to be working for me, how would we output to the file what the script did?\r\n\r\nthank you"
+email: d27a9e05ed0c49b4f3a5dd1bc16cf4d3

@@ -1,0 +1,5 @@
+name: deadlydog
+date: '2017-02-17 17:38:07'
+url: 'http://www.danskingdom.com'
+message: "<a href=\"#comment-581059\" rel=\"nofollow\">@Cli </a> \r\nYou will need to manually run the \"RunMeToUploadNugetPackage.cmd\" file to actually upload the new version to your NuGet server. This is not ran as part of the build, as it would potentially result in sooooooo many packages being uploaded to the server, as well as increasing build times."
+email: c8addda594c8b338f1e3934e73505d0c

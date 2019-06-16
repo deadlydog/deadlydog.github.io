@@ -1,0 +1,8 @@
+name: Timothy Ross
+date: '2018-06-04 14:42:18'
+url: ''
+message: >-
+  If you're using a VSTS Hosted queue, wouldn't this be invalidating the
+  intention of signing something securely? Wouldn't this be putting your code
+  signing certificate on someone else's machine?
+email: fc731fde64932d76a80b0ba6a21f285c

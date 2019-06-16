@@ -1,0 +1,5 @@
+name: MichaelJ
+date: '2015-06-26 07:10:08'
+url: ''
+message: "Thanks for the batch help!\r\nI'm getting an error that somehow a space is being inserted in the path.\r\nBatch file:\r\nSET ThisScriptsDirectory=%~dp0 \r\nSET PowerShellScriptPath=%ThisScriptsDirectory%Delta.ps1 \r\nPowerShell -NoProfile -ExecutionPolicy Bypass -Command \"&amp; '%PowerShellScriptPath%'\";\r\nError:\r\n&amp; : The term 'C:\\PSLib\\ Delta.ps1 ' is not recognized as the name of a cmdlet,\r\nfunction, script file, or operable program. Check the spelling of the name, or\r\nif a path was included, verify that the path is correct and try again.\r\nThere is not a space in the filename. Any clues?"
+email: 5e8400330993235a0f350672d64d9431

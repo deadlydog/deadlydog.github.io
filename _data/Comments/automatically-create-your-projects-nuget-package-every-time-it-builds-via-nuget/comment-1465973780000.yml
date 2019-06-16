@@ -1,0 +1,5 @@
+name: Joel Damon Elkhorne
+date: '2016-06-15 00:56:20'
+url: ''
+message: "Fantastic addition - makes developing much more productive :)\r\n\r\nIf I want to publish to a private NuGet server for use in-house only via post-build event say for a new purpose-built build config [Pack], can I add a .nuspec in the project directory (to give me author and perhaps other bits and pieces and do:\r\nPowerShell -NoProfile -ExecutionPolicy Bypass -Command \"&amp; '$(ProjectDir)_CreateNewNuGetPackage\\DoNotModify\\UploadNuGetPackage.ps1'\"\r\nafter the creation Powershell line?\r\n\r\nThe reason I ask is that I don't want a new package after every build but if I do want a package created I also want it published automatically so that any assemblies that rely on it will see updates in their NuGet management UI"
+email: 8f18464e52dd156fc413c0fa5600db18

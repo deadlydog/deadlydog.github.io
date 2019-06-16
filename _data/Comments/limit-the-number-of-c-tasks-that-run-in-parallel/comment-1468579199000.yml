@@ -1,0 +1,5 @@
+name: Cyber Sinh
+date: '2016-07-15 04:39:59'
+url: ''
+message: "Your code doesn't seem to work as expected when tasks contain async code. Awaiting the StartAndWaitAllThrottledAsync method doesn't suspend the execution of the caller method.\r\n\r\nYou will find here a sample repro:\r\nhttp://pastebin.com/iE1cc5d5\r\n\r\nDo you know what is wrong?\r\nThanks."
+email: 049cbbbd0a0fa0320c891708eec11351

@@ -1,0 +1,10 @@
+name: Ian Harding
+date: '2013-09-16 08:52:30'
+url: 'http://ianhardingtech.wordpress.com'
+message: >-
+  Ah, this explains why two registry values are required for each Visual Studio
+  version. I took a non-VISX approach, building a simple Wix installation
+  project as part of the custom check-in policy solution, and multiple projects
+  to support different VS versions, more information on my blog
+  http://ianhardingtech.wordpress.com/2013/09/15/tfs-custom-check-in-policy-for-multiple-visual-studio-versions/
+email: c2268e21d7d8be245ab9ba2ea54e0ebc

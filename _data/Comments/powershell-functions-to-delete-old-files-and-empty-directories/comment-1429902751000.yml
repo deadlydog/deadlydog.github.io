@@ -1,0 +1,9 @@
+name: Logrotate für Windows-Webserver IIS | Adlerweb
+date: '2015-04-24 13:12:31'
+url: 'http://adlerweb.info/blog/2015/04/24/logrotate-fuer-windows-webserver-iis'
+message: >-
+  [&#8230;] gegensteuern, eine Dauerlösung ist das aber sicher nicht. Am Ende
+  habe ich auf Basis eines Powershell-Scriptes von Daniel Schroeder aka
+  deadlydog etwas passendes gebastelt um hier Abhilfe zu schaffen. Regelmäßig
+  über die Aufgabenplanung [&#8230;]
+email: d41d8cd98f00b204e9800998ecf8427e

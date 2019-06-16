@@ -1,0 +1,5 @@
+name: JEmlay
+date: '2014-12-19 12:23:41'
+url: ''
+message: "This is a horrible solution!  You're using CREATED and MODIFIED times.  ($_.LastWriteTime)\r\n\r\nA file could have been written recently yet modified years ago.  You're script has the ability to delete WAY MORE then a person might want.\r\n\r\nI just got done stripping out all the extra's that aren't wanted.  Creation time only!"
+email: 3e04078cc7a96111fa2520d24db46027

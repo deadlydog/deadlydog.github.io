@@ -1,0 +1,5 @@
+name: Cli
+date: '2017-02-07 14:48:50'
+url: ''
+message: "Thank you sharing this great tool with us, sir.\r\n\r\nI tried to upload created nuget package to a local gallery with $sourceToUploadTo = \"local-gallery-address\" in config.ps1. But it's not working nor any errors reported. Am I misunderstanding something?"
+email: 6446b13fceed0364ec5a3012e5d8332d

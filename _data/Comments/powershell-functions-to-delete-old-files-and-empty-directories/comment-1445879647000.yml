@@ -1,0 +1,5 @@
+name: deadlydog
+date: '2015-10-26 11:14:07'
+url: 'http://www.danskingdom.com'
+message: "<a href=\"#comment-496722\" rel=\"nofollow\">@Michael </a> \r\n\r\n<a href=\"#comment-520664\" rel=\"nofollow\">@Peter </a> \r\nHey guys, I've updated the scripts to now take 2 additional switch parameters:\r\n-WhatIf will now tell you what files/directories would be deleted without actually deleting them.\r\n-OutputDeletedPaths will output every file/directory that is deleted. So if provided it will output all of the deleted paths to the console window. If you want, you can also pipe the output to something like Out-File to create a file with every path that was deleted.\r\n\r\nI hope that helps you :)"
+email: c8addda594c8b338f1e3934e73505d0c

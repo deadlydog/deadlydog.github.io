@@ -1,0 +1,5 @@
+name: phatfish
+date: '2014-11-27 06:07:26'
+url: ''
+message: "Very helpful page.\r\n\r\nOne issue i had; if your script raises a Windows credential dialog (eg. Add-Computer) then key presses appear to get buffered and can skip through the \"Press any key to continue...\" code. \r\n\r\nThis resolved the issue for me.\r\n\r\n    $Host.UI.RawUI.FlushInputBuffer()\r\n    $Host.UI.RawUI.ReadKey('NoEcho,IncludeKeyUp') &gt; $null"
+email: 7aafb6dbd512f8b583a529e18591b11c

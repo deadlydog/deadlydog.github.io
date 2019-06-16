@@ -1,0 +1,11 @@
+name: Galiya
+date: '2013-11-15 12:20:03'
+url: ''
+message: >-
+  Hi Daniel. Thanks for detailed information on this topic. However, I've
+  managed to get one strange problem after I've recreated your solution on my
+  side. If my connection string is specified using IntegratedSecurity=True, then
+  during the build I get "Unable to connect to target server" error, but if I
+  specify user/password in the connection string - it works perfectly fine. Have
+  you seen anything like this? Thanks in advance!
+email: ada4359fc4a1df11b6ab33bf10824758

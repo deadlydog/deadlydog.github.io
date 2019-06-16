@@ -1,0 +1,5 @@
+name: deadlydog
+date: '2016-06-25 00:58:45'
+url: 'http://www.danskingdom.com'
+message: "<a href=\"#comment-562318\" rel=\"nofollow\">@Graham J </a> \r\nI'm not certain about when reading from a file, but for a variable you can just use the regular `r`n to denote a new line (the string must be in double quotes though, not single quotes) or you can use the [Environment]::NewLine character.\r\n\r\nFor example, the following will have the default message show up over 3 lines:\r\n\r\n$text = \"Some text on line 1`r`nthis is on line 2 (multiple lines)\" + [Environment]::NewLine + \"and some more text on line 3\"\r\nRead-MultiLineInputBoxDialog -Message 'The message' -WindowTitle 'Window title' -DefaultText $text\r\n\r\nWhen reading the text in from a file, I suspect you may need to do a string replacement on the text that it read in, and replace whatever characters it sees for the new line character with `r`n."
+email: c8addda594c8b338f1e3934e73505d0c

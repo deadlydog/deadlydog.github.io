@@ -1,0 +1,5 @@
+name: deadlydog
+date: '2013-10-29 10:54:58'
+url: 'http://www.danskingdom.com'
+message: "<a href=\"#comment-15165\" rel=\"nofollow\">@Victor Vogelpoel </a> \r\nThanks for the info Victor; I hadn't thought about scope.  Luckily we are able to specify scope using the Test-Path Variable method though, so I've updated my code to look for the variable in the Private scope.\r\n\r\nI hadn't heard of $PSBoundParameters before, so it's nice to know about it.  From this article though (http://blogs.msdn.com/b/powershell/archive/2009/04/06/checking-for-bound-parameters.aspx) it looks like it only contains keys for parameters that were actually passed by the caller; so the parameter may actually be defined with a default value, but not exist in $PSBoundParameters. Thanks none-the-less :)"
+email: c8addda594c8b338f1e3934e73505d0c

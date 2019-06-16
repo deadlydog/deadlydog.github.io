@@ -1,0 +1,5 @@
+name: xia
+date: '2014-03-19 08:49:47'
+url: ''
+message: "I tried following your tutorial :\r\n@ECHO off\r\nSET ThisScriptsDirectory=%~dp0\r\nSET PowerShellScriptPath=%ThisScriptsDirectory%SQL.ps1\r\nPowerShell -NoProfile -ExecutionPolicy Bypass -Command \"\";\r\npause\r\n\r\nbut i always get:\r\nMissing expression after unary operator '-'.\r\nAt line:1 char:2\r\n+ -E &lt;&lt;&lt;&lt; xecutionPolicy Bypass -Command \r\n\r\nany help?"
+email: a000c4142cac81af16f2f1dceee28c1b

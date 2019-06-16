@@ -1,0 +1,5 @@
+name: Renzo
+date: '2017-01-12 08:27:16'
+url: ''
+message: "Hello,\r\nI have an XML file that includes comments (much more readable).  However this is causing havoc with my processing logic.  \r\nPart of the logic uses $SequenceCount = ($CFG.APP.INSTALL.ChildNodes).Count.  \r\nI either need to DELETE comments from the XML object or, alternatively, I need the count to EXCLUDE comments.   Can you help??"
+email: 3fc7750102c6ea69713d35525380d1f9

@@ -1,0 +1,5 @@
+name: harre
+date: '2015-06-11 01:36:07'
+url: ''
+message: "Awesome plugin. A little gotcha is that you need to change the packProperties to this\r\n$packProperties = \"VisualStudioVersion=12.0\"\r\n\r\nIf you don't do that msbuild won't find msbuild targets for vs2013 project types, for example MVC project."
+email: b52e6e702fd4d7190c421c026c10db76

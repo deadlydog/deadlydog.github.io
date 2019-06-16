@@ -1,0 +1,5 @@
+name: deadlydog
+date: '2015-01-28 12:23:56'
+url: 'http://www.danskingdom.com'
+message: "<a href=\"#comment-338930\" rel=\"nofollow\">@Dino </a> \r\nAh yes, the -File was introduced in PowerShell v3.0, so if you are still running 2.0 it will throw an error.\r\n\r\nWithout that flag you will get back both files and directories. To just get the files, replace \"-File\"\r\nwith \"| Where-Object { !$_.PSIsContainer } |\"."
+email: c8addda594c8b338f1e3934e73505d0c

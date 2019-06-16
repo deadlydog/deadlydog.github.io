@@ -1,0 +1,5 @@
+name: deadlydog
+date: '2015-09-18 15:42:16'
+url: 'http://www.danskingdom.com'
+message: "<a href=\"#comment-511401\" rel=\"nofollow\">@Michael </a> \r\nThanks Michael. The Training environment is not persisted back to the AppConfigExample.exe.config file; it is just retained in memory.  So the next time you run your app it will not have the Training environment.  If you want it persisted I guess you would need to write the added values to a file somewhere, and then on load have your app check that file for any additional values to add to the list.  You could perhaps try writing directly to the AppConfigExample.exe.config file, but I'm not sure if that's the best idea as if there's a bug you could end up mangling the .config file and not be able to launch the app anymore."
+email: c8addda594c8b338f1e3934e73505d0c

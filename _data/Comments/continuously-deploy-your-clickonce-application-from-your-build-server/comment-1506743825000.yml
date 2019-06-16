@@ -1,0 +1,5 @@
+name: deadlydog
+date: '2017-09-29 21:57:05'
+url: 'http://www.danskingdom.com'
+message: "<a href=\"#comment-601187\" rel=\"nofollow\">@Devon Powell </a> \r\nI use VS 2017 exclusively on my workstation and haven't had any problems, but when I looked I noticed that my TFS builds were set to use VS 2015. After switching it to VS 2017, it is still building and publishing without any issues, so I'm not sure what the problem is with your build. Is the project able to build successfully in the Visual Studio GUI with that change in there, and only breaking on the build server? Does it break if you try and build the .sln directly with MsBuild? Perhaps it's a weird encoding or hidden character problem?\r\n\r\nAlso, just to make sure things are in the correct format, your .csproj file elements should end up looking something like this:\r\n\r\n<code>\r\n    &lt;ApplicationRevision&gt;90&lt;/ApplicationRevision&gt;\r\n    &lt;ApplicationVersion&gt;1.0.0.%2a&lt;/ApplicationVersion&gt;\r\n</code>"
+email: c8addda594c8b338f1e3934e73505d0c

@@ -1,0 +1,9 @@
+name: How to save/restore serializable object to/from file? - ExceptionsHub
+date: '2017-12-08 02:10:17'
+url: >-
+  https://exceptionshub.com/how-to-saverestore-serializable-object-tofrom-file.html
+message: >-
+  [&#8230;] just wrote a blog post on saving an object&#8217;s data to Binary,
+  XML, or Json. You are correct that you must decorate your classes with the
+  [Serializable] attribute, but only if [&#8230;]
+email: d41d8cd98f00b204e9800998ecf8427e

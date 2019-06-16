@@ -1,0 +1,5 @@
+name: Manuel Guzman
+date: '2017-05-15 17:48:29'
+url: ''
+message: "Thank you.  Ran into a bug in the Expand-ZipFile function that loops indefinitely when only one file in the zip.  I used the following to resolve it:\r\n\r\n        # The Copy (i.e. unzip) operation is asynchronous, so wait until it is complete before continuing. That is, sleep until the Destination Directory has the same number of files as the Zip file.\r\n\t\tif ($numberOfItemsInZipFile -eq 1) {\r\n            Start-Sleep -Milliseconds 100 \r\n        } else {\r\n            while ((Get-ChildItem -Path $DestinationDirectoryPath -Recurse -Force).Count -lt $numberOfItemsInZipFile) {\r\n                Start-Sleep -Milliseconds 100 \r\n            }\r\n        }"
+email: c34e5cc2b01b150a317393f717f480f2

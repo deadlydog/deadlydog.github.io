@@ -1,0 +1,5 @@
+name: deadlydog
+date: '2013-08-29 22:06:24'
+url: 'http://www.danskingdom.com'
+message: "Hey Ryan, thanks for the great feedback and suggestions :)  Your request #1 is pretty easy, you just just need modify the line in AHKCommandPicker.ahk from\r\n\r\nCapsLock::\r\n\r\nto whatever key you want to launch the picker.\r\n\r\nRequests 2, 3, and 4 are really good as well, and I'll try to incorporate them into future releases.  I haven't worked on AHK Command Picker in a little while, not because it is dead to me, but because I have been spending the little free time I do get on some other projects of mine.  I'll try to get these changes in on the next go around; or, as you noticed, the source code is on CodePlex so you could also fork it and then send me a pull request to get any changes you make merged back into the official version :)"
+email: c8addda594c8b338f1e3934e73505d0c

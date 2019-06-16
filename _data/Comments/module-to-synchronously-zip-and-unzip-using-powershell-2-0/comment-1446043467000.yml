@@ -1,0 +1,11 @@
+name: 'How to zip/unzip files in Powershell? &#8211; segmentfault'
+date: '2015-10-28 08:44:27'
+url: 'http://fault.itsprite.com/how-to-zipunzip-files-in-powershell/'
+message: >-
+  [&#8230;] I&#8217;ve created a PowerShell 2.0 compatible module that uses the
+  native Windows OS commands to zip and unzip files in a synchronous manner.
+  This works on older OSs, like Windows XP, and does not require .Net 4.5 or any
+  other external tools. The functions will also block script execution until the
+  files have all been zipped/unzipped. You can find more information and the
+  module on my blog here. [&#8230;]
+email: d41d8cd98f00b204e9800998ecf8427e

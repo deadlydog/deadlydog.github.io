@@ -1,0 +1,5 @@
+name: Kalam
+date: '2015-03-31 19:07:56'
+url: ''
+message: "Hello there,\r\n\r\nVery good idea!\r\n\r\nHowever, when running the bat file, instead of executing the script the command open the script in Notepad. Any ideas?\r\n\r\nIf I removed the single Quotation mark ' ' from \"&amp; %PowerShellScriptPath%\", the script get executed, but if the file path have any space with the folder, it will resulted in error. Eg S:\\Repairs and Backup\\test.ps1 will throw an error."
+email: df2bd2dc8cc3212c7ad5620e74117956

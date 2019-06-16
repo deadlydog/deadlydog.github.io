@@ -1,0 +1,13 @@
+name: Robert
+date: '2014-01-17 13:40:41'
+url: ''
+message: >-
+  It would seem there is a potential race condition in your script to remove old
+  files when used to cleanup something like a server output directory.
+  Specifically, if an application creates an empty directory newer than the
+  CreatedBeforeDate or NotModifiedAfterDate and your Remove-Files... script
+  finds it before the application writes a file in the directory, the directory
+  will be deleted and will potentially leave the application broken. IMO, the
+  date of the directory should be checked to meet the CreatedBeforeDate or
+  NotModifiedAfterDate criteria to qualify for deletion.
+email: 04cc64caedc5b1574b9e7fb2c7dc584a

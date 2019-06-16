@@ -1,0 +1,5 @@
+name: Ralph
+date: '2016-03-24 11:23:07'
+url: 'http://na'
+message: "Good information. However it needs a little bit more info.\r\n\r\nHere is my problem.\r\n\r\nI have a Powerscript I run from a .bat file. I use the following commend..\r\n\r\ncall powershell.exe -ExecutionPolicy Bypass -Command &amp; \"%~dp0Removeit\\uninstall-it.ps1\"\r\n\r\nWhen %~dp0 resolves to a path that has NO spaces in it, the script runs fine. IE...\r\n\r\ncall powershell.exe -ExecutionPolicy Bypass -Command &amp; \"c:\\pwrscripts\\Removeit\\uninstall-it.ps1\"\r\n\r\nHowever, when it resolves to a path with a space in it I get an error message and in effect the problem with the space in the path is the cause.\r\n\r\ncall powershell.exe -ExecutionPolicy Bypass -Command &amp; \"c:\\my pwrscripts\\Removeit\\uninstall-it.ps1\"\r\n\r\nUsing the &amp; before or embeded in the path string does not solve the problem.\r\n\r\nWhat is the correct way to write my command line so that it will work without modifying the registry etc?\r\n\r\nThanks\r\n\r\nRalph"
+email: b97663c03899ad658444dffaf5e1e017

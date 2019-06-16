@@ -1,0 +1,9 @@
+name: Rick O'Shea
+date: '2016-08-08 14:09:11'
+url: ''
+message: >-
+  Which begs the question... why does it take pages of boilerplate to read in a
+  key-value list? This really does highlight just how heavy (and needlessly so)
+  .NET can be.  Who would guess it would take more than 10 lines of code
+  (because in NodeJS for example, it would be).
+email: 1a7be2787417fe82e9677e541fb096cb

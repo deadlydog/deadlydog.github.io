@@ -1,0 +1,5 @@
+name: Andrew
+date: '2017-05-25 08:40:12'
+url: ''
+message: "Hi Folks,\r\n\r\nThe script seems to think there is a space between the directory and the file\r\n\r\ncoded\r\nSET PowerShellScriptPath=%ThisScriptsDirectory%Script.ps1 \r\n\r\nfeedback in the DOS screen (when I run it) suggests this \r\nc:\\powershell\\spaceScript.ps1 \r\n\r\nHave I coded this wrong?\r\n\r\nI'm sure its something silly I've done\r\n\r\nThanks,\r\nAndrew"
+email: 2bd7c3a592761706b9ce17894526a1d0

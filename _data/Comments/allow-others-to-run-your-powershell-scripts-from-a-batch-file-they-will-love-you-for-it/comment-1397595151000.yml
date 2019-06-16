@@ -1,0 +1,5 @@
+name: Mike
+date: '2014-04-15 14:52:31'
+url: ''
+message: "I'm trying to do something similar but having problems. For ease of use for the users that will be runnning this I want the commands to be in a batch file. I need to create some AD security groups but need to specify the OU to use and the group name in the variables. The user running the script will enter the branch code and OU and the group will be built off those values. Here is what I have so far but I think the space in the group name is causing problems. It seems to think that \"Test\" is another parameter. I have tried enclosing the name value in double parenthesis but its still gettng the same result. \r\n\r\nAny suggestions?\r\n\r\nSET /P OU=Enter OU:\r\nSet /P Prefix=Enter Prefix:\r\nPowershell New-ADGroup -Name \"%Prefix%-OWA Test\" -SamAccountName \"%Prefix%-OWA Test\" -GroupCategory Security -GroupScope Global -path \"OU=%OU%,OU=Test1,DC=Test2,DC=Test3,DC=Test4,DC=com\""
+email: 2a5dfd27417f3b5a82df841acb5f0018

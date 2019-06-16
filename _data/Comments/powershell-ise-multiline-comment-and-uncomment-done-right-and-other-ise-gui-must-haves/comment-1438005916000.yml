@@ -1,0 +1,11 @@
+name: Darek
+date: '2015-07-27 08:05:16'
+url: ''
+message: >-
+  Hi there. One problem with the code appears when there is no state saved and
+  one wants to load it. One gets a nasty error then. I have changed the code to
+  accommodate the fact that $filename in the Import-IseState could not exist
+  yet. Just Test-Path and if it's $false, don't do anything and output a message
+  onto the console that says a state has not yet been saved and there is nothing
+  to load. Cheers. Best regards, Darek.
+email: 28fd18de5254dc5688834539874eff79

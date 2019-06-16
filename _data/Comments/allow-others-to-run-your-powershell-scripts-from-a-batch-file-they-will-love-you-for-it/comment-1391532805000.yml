@@ -1,0 +1,5 @@
+name: deadlydog
+date: '2014-02-04 10:53:25'
+url: 'http://www.danskingdom.com'
+message: "<a href=\"#comment-48035\" rel=\"nofollow\">@gm </a> \r\nYou could always pass in the batch file location as a parameter to the PowerShell script (see above comments for how to pass a parameter to the PowerShell script).  To get the running batch file's path use \"%~dpnx0\" (without the quotes). If the batch file and PowerShell script are on different computers though (e.g. on network shares), you will want to pass in the batch file location relative to the network share (i.e. instead of passing \"C:\\MySharedFiles\\MyBatchFile.cmd\" (which is what %~dpnx0 will give you) to the PowerShell script, pass in \"\\\\YourPCsName\\MySharedFiles\\MyBatchFile.cmd\").  It's easy enough to hard-code that file path in your batch file; I'm not sure how to get it dynamically in batch file code though (fairly easy to do in PowerShell), but I'm sure Google could help you with that.  I hope that helps."
+email: c8addda594c8b338f1e3934e73505d0c

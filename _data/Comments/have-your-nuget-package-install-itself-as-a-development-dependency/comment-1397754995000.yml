@@ -1,0 +1,5 @@
+name: Terry L.
+date: '2014-04-17 11:16:35'
+url: ''
+message: "The feature in 2.8 seems to be one level removed for my purposes.\r\n\r\nI've developed Powershell scripts that package and push NuGet files for my assembly to internal NuGet feeds after the project is built. It chooses the feed based on the build configuration. Debug doesn't push, Release pushes to our internal production feed, and a new configuration, \"Internal\", pushes to a feed that holds our not-quite-production ready packages.\r\n\r\nI've also developed a NuGet package that sets up all of this plumbing for me. I have set the developmentDependency flag to true in this package. When I install the plumbing package into project C, C's packages.config file does NOT flag the plumbing package as a development dependency.\r\n\r\nIf, however, I install C's NuGet package into application A, the plumbing package is also installed in A, and IS flagged as a development dependency.\r\n\r\nIs this the expected behavior?"
+email: 4fc3817c0df76bf92f57c140094e4416

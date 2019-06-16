@@ -1,0 +1,22 @@
+name: CJ
+date: '2019-04-18 22:16:48'
+url: ''
+message: >-
+  <a href="#comment-647061" rel="nofollow">@Patrick McCoy </a> 
+
+  Try the following:
+
+  SET ThisScriptsDirectory=%~dp0
+
+  SET PowerShellScriptPath=%ThisScriptsDirectory%\Stage_1st_Half.ps1
+
+  PowerShell -NoExit -NoProfile -ExecutionPolicy Bypass -Command "&amp;
+  '%PowerShellScriptPath%'"
+
+
+  You seemed to be missing the following in your code block:
+    * a backslash after %ThisScriptsDirectory% (2nd line)
+    * -NoExit option after PowerShell (3rd line)
+    * %s around PowerShellScriptPath (3rd line)
+    * single quotes need to surround %PowerShellScriptPath% - the first one looks like a backtick (`) and not a single quote (') (3rd line)
+email: d3c6371b69cfb820d93a1a073d6e5439

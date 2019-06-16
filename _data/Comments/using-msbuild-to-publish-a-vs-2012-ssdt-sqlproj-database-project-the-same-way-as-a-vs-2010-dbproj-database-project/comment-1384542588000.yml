@@ -1,0 +1,5 @@
+name: deadlydog
+date: '2013-11-15 13:09:48'
+url: 'http://www.danskingdom.com'
+message: "<a href=\"#comment-20545\" rel=\"nofollow\">@Galiya </a> \r\nHmmm, strange, we use Integrated Security exclusively at my company and nobody has mentioned the issue you are experiencing.  I know for us all of our developers are in a \"Development\" group that has permissions for the SQL server and it's databases; is your Integrated Security relying on group or individual permissions (although I don't think it should matter)? Are you able to connect to the database via Sql Management Studio using Integrated Security?"
+email: c8addda594c8b338f1e3934e73505d0c

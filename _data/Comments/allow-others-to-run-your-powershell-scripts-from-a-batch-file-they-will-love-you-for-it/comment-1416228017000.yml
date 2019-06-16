@@ -1,0 +1,5 @@
+name: korook
+date: '2014-11-17 06:40:17'
+url: ''
+message: "Hello\r\n\r\nThank you for the code. It's exactly what i am looking for. But i just can't get it working:\r\nSET \"InstallerFolder=\\\\dc01\\e\"\r\n\r\nPowerShell -NoProfile -ExecutionPolicy Bypass -Command \"\";\r\n\r\nShould this not work? \r\nThe script runs and all is good, but it is not running as administrator :(\r\n\r\n\r\nThank you."
+email: e94db657d29d364bb65367ec5af89b62

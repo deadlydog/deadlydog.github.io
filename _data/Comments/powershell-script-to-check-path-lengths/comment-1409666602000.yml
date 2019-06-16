@@ -1,0 +1,5 @@
+name: Yomodo
+date: '2014-09-02 08:03:22'
+url: ''
+message: "Hi, this WILL help you.\r\nGet AlphaFS.dll: https://alphafs.codeplex.com/SourceControl/list/changesets\r\n\r\nPowerShell:\r\n\r\nImport-Module \r\n[Alphaleonis.Win32.Filesystem.Directory]::Delete($path, $True)"
+email: f60be353f0f3083a399c6e151a7ec4fb

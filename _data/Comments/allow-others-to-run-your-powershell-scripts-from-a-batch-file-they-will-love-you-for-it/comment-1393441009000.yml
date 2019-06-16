@@ -1,0 +1,5 @@
+name: deadlydog
+date: '2014-02-26 12:56:49'
+url: 'http://www.danskingdom.com'
+message: "<a href=\"#comment-51535\" rel=\"nofollow\">@Screwuphead </a> \r\nSorry, I guess I didn't test it in a path that has spaces, so I never noticed this problem :P\r\n\r\nI re-tested and by using the PrintScreen button and GreenShot I was quickly able to see this error:\r\n\r\nProcessing -File 'C:\\temp folder\\Test.ps1 C:\\temp folder' failed: The given path's format is not supported. Specify a valid path for the -File parameter.\r\n\r\nThe problem was the powershell script name and each of the parameters needs to be wrapped in 4 (yes 4) double quotes.  I've updated the code on the post to fix this.\r\n\r\nThanks"
+email: c8addda594c8b338f1e3934e73505d0c

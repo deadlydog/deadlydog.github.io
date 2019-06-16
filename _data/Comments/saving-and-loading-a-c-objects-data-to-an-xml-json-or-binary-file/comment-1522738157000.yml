@@ -1,0 +1,5 @@
+name: Pavel Khrapkin
+date: '2018-04-03 00:49:17'
+url: 'https://www.linkedin.com/in/pavelkhrapkin'
+message: "I keep my XML file in VSTO Solution as Properties.Suppliers.xml and read it progammatically from Path @\"..\\..\\Properties.Suppliers.xml\" just with this C# code above published long time ago.\r\n\r\nIs it any elegant way to get it \"directly\", somehow similar to \r\n\r\n  var AllSuppliers =?= (new XMLserialyser(List)).Deserialyze(Properties.Supplier);\r\n\r\nAny Json alternative for Properties file like this?\r\n\r\nThank you for the prompt advise"
+email: 11b1229bc78567d39f3c6aa4ebd79842

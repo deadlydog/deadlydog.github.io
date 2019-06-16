@@ -1,0 +1,5 @@
+name: deadlydog
+date: '2014-04-09 13:25:51'
+url: 'http://www.danskingdom.com'
+message: "<a href=\"#comment-64397\" rel=\"nofollow\">@Charles </a> \r\nGoogle and Stack Overflow are your friend ;)\r\n\r\nTo read the last running program/scripts exit code, use the ERRORLEVEL variable as they show here:\r\nhttp://stackoverflow.com/questions/334879/how-do-i-get-the-application-exit-code-from-a-windows-command-line\r\n\r\nTo have your PowerShell script return an exit code (other than zero), be sure to have the script exit using:\r\n\r\nexit [some integer]\r\n\r\nTo pull some variable's value from PowerShell into the batch script I think you would need to write the value in PowerShell using Write-Output, and then capture that output somehow, perhaps by using stream redirection, http://technet.microsoft.com/en-us/library/bb490982.aspx.\r\n\r\nSorry I don't have all of the answers, but I hope this helps."
+email: c8addda594c8b338f1e3934e73505d0c

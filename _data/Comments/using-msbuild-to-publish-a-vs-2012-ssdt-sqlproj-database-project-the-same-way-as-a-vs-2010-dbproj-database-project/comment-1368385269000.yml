@@ -1,0 +1,8 @@
+name: Richard Lee
+date: '2013-05-12 13:01:09'
+url: 'http://poryhedra.wordpress.com'
+message: >-
+  Nice post, we do something slightly different by replacing the database name
+  and connection string using a custom target in our build file, but I like this
+  more.
+email: d36337fe0e95551dd805ef0da1f8f1cc

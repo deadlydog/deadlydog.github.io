@@ -1,0 +1,5 @@
+name: Tony
+date: '2014-09-18 02:34:55'
+url: ''
+message: "Just fyi, Shift-Tab reverses through the tab completion list (goes backwards after pressing Tab first. eg, Type \"Get-\" then press Tab a few times. Now press Shift-Tab and the auto-completion will back up to the previous option each time you press it.\r\n\r\nIt's useful when you Tab too quick and go past the option you wanted."
+email: 4ad7cb546b7f225386a87e3875636bac

@@ -1,0 +1,5 @@
+name: rcf
+date: '2014-04-09 10:42:05'
+url: ''
+message: "Very good post.  The problem is that we have a mapped drive (S:) that we use for scripts/software installs for IT folks so when you use \"-verb RunAs\" in the CMD file and use an elevated domain account , you get an error presumably because there is no mapped S: drive for that elevated account.  If you hard code the UNC path it works, but would not like to do that.\r\n\r\nSomething like this may work if it is incorporated somehow? Any ideas?\r\nhttp://superuser.com/questions/29933/get-the-current-unc-path-from-a-local-path-in-powershell"
+email: f3e0732234900424eb1d9b5b61c8892d

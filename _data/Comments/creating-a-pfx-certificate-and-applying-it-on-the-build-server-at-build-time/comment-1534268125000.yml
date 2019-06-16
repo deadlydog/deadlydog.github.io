@@ -1,0 +1,5 @@
+name: Jay
+date: '2018-08-14 11:35:25'
+url: ''
+message: "<a href=\"#comment-644531\" rel=\"nofollow\">@deadlydog </a> \r\n@deadlydog\r\nI did create a test certificate using my visual studio and pushed it to the remote repository and then I am using this certificate in my PowerShell task with the script as mentioned in your blog. Initially, PowerShell script was throwing the same error and after pushing new certificate to remote repository PowerShell script is not throwing the error anymore but now build solution task is throwing the error."
+email: 261faca6bc5a35b21e088cdb25ac52c3

@@ -1,0 +1,18 @@
+name: knarfalingus
+date: '2013-05-12 16:31:09'
+url: 'http://www.knarfalingus.com'
+message: >-
+  Nice function, but for a little more security I'd look into using the -t7z
+  option along with a password.  The regular zip format with a password isn't
+  very strong protection any more, there are many programs for cracking this out
+  there.
+
+
+  http://oldhome.schmorp.de/marc/fcrackzip.html
+
+
+  This link covers some of the essentials to get encrypted files with 7zip 
+
+
+  http://www.cnx-software.com/2011/02/22/aes-256-encryption-and-file-names-encryption-with-7-zip-7z/
+email: 895797028f9122e3dc2920475f2ce1e9

@@ -1,0 +1,5 @@
+name: Hoang
+date: '2018-03-16 07:05:07'
+url: ''
+message: "Hi Daniel,\r\nGreat and very helpful article. I need your help with Prompt for single-line user input. Me scenario is prompting user to enter computername then it will check if that computername exist in the path, if not it'll prompt again asking user to reenter the correct computername. However, after user entered correct computername, inputbox still comes up. Here is what I have:\r\n# Show input box popup and return the value entered by the user.\r\nfunction Get-InputBoxDialog([string]$Message, [string]$WindowTitle)\r\n{\r\n    Add-Type -AssemblyName Microsoft.VisualBasic\r\n    return [Microsoft.VisualBasic.Interaction]::InputBox($Message, $WindowTitle)\r\n}\r\n\r\n$OSDComputerName = Get-InputBoxDialog -Message \"Enter OLD ComputerName\" -WindowTitle \"Source PC\"\r\n$SrcPath = \"\\\\Server\\Migfolder\\$OSDComputerName\"\r\ndo {\r\n$OSDComputerName = Get-InputBoxDialog -Message \"OLD ComputerName not found.      Re-Enter OLD ComputerName\" -WindowTitle \"Source PC\"\r\n} until (Test-Path $SrcPath)"
+email: 66d2eee4f6023cd51cecf49f11e0fc4e

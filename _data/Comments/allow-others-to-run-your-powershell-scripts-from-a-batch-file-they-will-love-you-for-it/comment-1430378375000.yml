@@ -1,0 +1,5 @@
+name: BertMeed
+date: '2015-04-30 01:19:35'
+url: ''
+message: "Hello,\r\n\r\nI'm trying to run a powershell command from the command line where I want to use the 'pipeline'  \"|\" \r\nIt fails on the command line, but it runs oke witin a powershell environment.\r\n\r\nHow can I use the \"|\" on a commandline powershell command?\r\n\r\nF:\\OTA\\scripts&gt;Powershell.exe -ExecutionPolicy RemoteSigned -File F:\\OTA\\scripts\\GetGroups.ps1 SwartJ | Export-CSV .\\NedstedMembers_SwartJ.csv -NoTypeInformation\r\n'Export-CSV' is not recognized as an internal or external command,\r\noperable program or batch file.\r\n\r\nWhen I use the next command I only get a powershell command prompt.\r\nPowershell.exe &amp; \"-ExecutionPolicy RemoteSigned -File F:\\OTA\\scripts\\GetGroups.ps1 SwartJ | Export-CSV .\\NedstedMembers_SwartJ.csv -NoTypeInformation\""
+email: e1132b41d56b795bb272ad22d24cf807

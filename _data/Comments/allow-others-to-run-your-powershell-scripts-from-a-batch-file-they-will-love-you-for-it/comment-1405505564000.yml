@@ -1,0 +1,5 @@
+name: GlwDay
+date: '2014-07-16 04:12:44'
+url: ''
+message: "I have been using deleteold.ps1 from Technet http://gallery.technet.microsoft.com/Powershell-script-to-ed34c5f9 to clear up files older than x days on individual nodes in our HPC Cluster. From the headnode I use it with the following parameters .\\deleteold.ps1 -FolderPath \\\\Nodename1\\c$\\project-9\\input-data\\temp -FileAge 7 -LogFile Nodename1.log\r\n\r\nThe powershell script is on a network share that the headnode and all computenodes can see and write to.\r\n\r\nJobs being run by users create hundreds of files so the clean up can take 15min to 1 hour depending on what else is happening on the node at the time.\r\n\r\nI would like to run the from the Clusrun command line in the ClusterManager so that it can process the task simultaneously rather than sequentailly as at present. Obviously I modify the -Folderpath parameter to only have the c$\\project-9\\input-data\\temp but I cannot work out how get it to run either directly or via a batch file.\r\n\r\nCan anybody help please?"
+email: c53956e21609484c6a330f6348ba7773

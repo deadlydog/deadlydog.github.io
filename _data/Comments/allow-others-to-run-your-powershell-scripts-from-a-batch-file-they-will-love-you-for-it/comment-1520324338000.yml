@@ -1,0 +1,5 @@
+name: jagadishwar
+date: '2018-03-06 02:18:58'
+url: ''
+message: "Need help.. My command is working fine in Powershell.. I want to run the same by creating batch(.bat).\r\nhere is the command\r\nC:\\Users\\sysname\\Desktop\\Debug\r\n.\\runTest.ps1 -environment staging -configFile ConfigFiles\\Part1.xml\r\n\r\nHow to create a bat file for this"
+email: 25734ac24e56f75cccec7130e06586ef

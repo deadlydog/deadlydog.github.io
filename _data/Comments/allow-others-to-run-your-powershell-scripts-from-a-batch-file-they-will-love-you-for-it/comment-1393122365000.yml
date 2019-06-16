@@ -1,0 +1,5 @@
+name: deadlydog
+date: '2014-02-22 20:26:05'
+url: 'http://www.danskingdom.com'
+message: "<a href=\"#comment-50830\" rel=\"nofollow\">@SB </a> \r\nYup, just add \"-WindowStyle Hidden\" at the start of the PowerShell argument list to have the PowerShell window hidden while it runs:\r\n\r\nPowerShell -WindowStyle Hidden -NoProfile -ExecutionPolicy Bypass -Command \"& '%PowerShellScriptPath%'\"\r\n\r\n-- EDIT --\r\nActually, it looks like using -WindowStyle Hidden may sometimes still cause the window to show for a split second, because that argument is not evaluated until after the window is open (http://social.technet.microsoft.com/Forums/windowsserver/en-US/783ae81a-15d6-4dea-b283-f0020313c7f0/running-hidden-power-shell?forum=winserverpowershell)."
+email: c8addda594c8b338f1e3934e73505d0c

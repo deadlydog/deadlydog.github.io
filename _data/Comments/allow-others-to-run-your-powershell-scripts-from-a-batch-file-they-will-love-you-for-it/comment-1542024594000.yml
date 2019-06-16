@@ -1,0 +1,5 @@
+name: Steve
+date: '2018-11-12 06:09:54'
+url: ''
+message: "Hi, I need to use PSEXEC to launch powershell with a system account and then pass the commands to the new window. I get an exit code of 0, which normally means it's worked,but when running a command to check, it hasn't?\r\nThis is the bat file I've written, any advice would be very greatly appreciated!\r\n\r\n@echo off\r\n.\\psexec.exe -i -s PowerShell.exe -command {'.\\Add VPN.ps1 -xmlFilePath .\\Device Tunnel VPN Profile_RemovedTrafficFilter.xml -ProfileName Test_Device_VPN'}\r\n\r\nThanks"
+email: 9799da1e1ac487cf6096c5fc5c5fc5a0

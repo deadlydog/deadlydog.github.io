@@ -1,0 +1,5 @@
+name: David Wohlberg
+date: '2017-06-12 07:25:56'
+url: ''
+message: "<a href=\"#comment-591953\" rel=\"nofollow\">@HighwayCO (Don)  </a> \r\nIf you look closer at your command, just before %PowerShellScriptPath% you are using some other character that is not a single quote. Perhaps it copied wrong when pasting it in this blog, but I suspect it is wrong in your source. Also your double quote characters are questionable as well. Using something like Notepad.exe (I prefer better text editors myself, like Notepad++), when I copy your script and paste it into either of these editors you'll see the quote characters are not formatted properly. My non-caffeinated brain at the moment can't think of the proper term for the quote characters you want, but they literally look like plain chicken scratches, and not the better formed curly type you might expect in a document processor like MS Word.\r\n\r\nReplace all your double quotes and single quotes in your original script with proper plain text quote characters and I suspect your errors will go away."
+email: 8f48e21ce91568972ce14bfe2687344b

@@ -1,0 +1,5 @@
+name: Tomas
+date: '2013-12-27 03:45:47'
+url: ''
+message: "Thank you it perfectly works. But I have one question I would like to pass some values into power shell script. I would like to call:\r\n\r\nSET PowerShellScriptPath=%ThisScriptsDirectory%MyPowerShellScript.ps1 %1 %2\r\n\r\nbut it does not work. Please can you provide what is the syntax when I am using parameters inside of BAT or Shall script.\r\n\r\nThank you.\r\nTomas"
+email: 6c18a4fe3e07b556b7479f420e53fbfc

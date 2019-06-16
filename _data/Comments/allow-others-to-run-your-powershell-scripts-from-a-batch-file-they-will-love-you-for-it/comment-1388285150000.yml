@@ -1,0 +1,5 @@
+name: deadlydog
+date: '2013-12-28 20:45:50'
+url: 'http://www.danskingdom.com'
+message: "<a href=\"#comment-39367\" rel=\"nofollow\">@Tomas </a> \r\nYou just need to add the parameters in the last line that actually calls PowerShell, so it would be:\r\n\r\nPowerShell -NoProfile -ExecutionPolicy Bypass -Command \"& '%PowerShellScriptPath%' '%1' '%2'\"\r\n\r\nor if you want to use the named powershell parameters (instead of ordered):\r\n\r\nPowerShell -NoProfile -ExecutionPolicy Bypass -Command \"& '%PowerShellScriptPath%' -Param1Name '%1' -Param2Name '%2'\""
+email: c8addda594c8b338f1e3934e73505d0c

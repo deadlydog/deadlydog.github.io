@@ -1,0 +1,5 @@
+name: Allen
+date: '2015-03-07 18:26:35'
+url: 'http://bna.com'
+message: "Thank you for update, I used same code what you gave\r\n\r\n\r\n@ECHO OFF\r\nSET ThisScriptsDirectory=%~dp0\r\nSET PowerShellScriptPath=%ThisScriptsDirectory%IIS_Restart.ps1\r\n\r\nPowerShell -NoProfile -ExecutionPolicy Bypass -Command “”;\r\n\r\nI am getting error as below\r\n\r\nAccess denied, you must be administrator of the remote computer to use this command. either add your account to administrator local group of remote computer or to domain administrator global group.\r\n\r\nI am already admin on that remote computer. still i am getting same error every time."
+email: f7f22dda6bd1afc89ea5f4bb56a12f0a

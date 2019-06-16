@@ -1,0 +1,5 @@
+name: Yarr!!
+date: '2019-01-09 20:14:08'
+url: ''
+message: "Maybe my situation is unique but using the following command on a folder structure as listed below is giving me errors for children because its attempting to delete the top level before the lower levels. This is bad because data could be in the lower levels. I hacked it to work for me by removing the \"-file\" from line 7. This allows it to see other directories when checking if the folder is empty. In this way, it will only remove the parent folder in the next run after removing the last child folder. This isnt the best way to do it but it works.\r\n\r\nCommand run:\r\nRemove-FilesCreatedBeforeDate -Path $sourcePath -DateTime ((Get-Date).AddDays(-3)) -DeletePathIfEmpty\r\n\r\nFolder structure: (name\\year\\month\\day\\hour\\*)\r\nY:\\Yarr\\2019\\01\\05\\01\\filescreatedeveryhour.txt"
+email: dc040ac69538429f0a0e68213257a7fc

@@ -1,0 +1,5 @@
+name: dooRun
+date: '2016-03-21 16:24:14'
+url: ''
+message: "Old post - if anybody has any input, the PS1 I'm trying to run must be ran on a domain controller.  I have a little program I made (Filemaker) that I import powershell scripts, then use the batch coding from this site which is created on the fly from the program to invoke the PS1,,, but, the PS1 for this one script must be ran from the DC,,, I was thinking that instead of rebuilding the PS1, there has to be a way of initiating the PS1 to run from the perspective of it's current computer host location\r\n\r\n... in other words, I set the location of the PS1 and batch script to export from my program onto the target computer (a domain controller in this case), and execute it,,, but it's execution 'perspective' is from the computer it is executed from, not the computer it is stored on,,, make sense?"
+email: 4c9cb1dd3c4f805b7bc49c2f2e23bb93

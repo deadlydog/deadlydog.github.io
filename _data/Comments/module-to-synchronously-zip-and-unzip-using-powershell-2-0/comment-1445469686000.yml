@@ -1,0 +1,5 @@
+name: deadlydog
+date: '2015-10-21 17:21:26'
+url: 'http://www.danskingdom.com'
+message: "<a href=\"#comment-527652\" rel=\"nofollow\">@Will Bel </a> \r\nThe Compress-ZipFile is a blocking operation; It will not return control back to the caller until it completes.  Therefore you can simply assume that by the time the next line in your script is called, the Zip file is guaranteed to exist already."
+email: c8addda594c8b338f1e3934e73505d0c

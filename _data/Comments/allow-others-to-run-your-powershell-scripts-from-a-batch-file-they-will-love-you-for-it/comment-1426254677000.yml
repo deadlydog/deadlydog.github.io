@@ -1,0 +1,5 @@
+name: Sandeep Saxena
+date: '2015-03-13 07:51:17'
+url: 'http://N/A'
+message: "I am using below on the similar lines :\r\n\r\n1. echo %VM_Name%\r\n2. @ECHO OFF\r\n3. SET ThisScriptsDirectory=%~dp0\r\n4. SET PowerShellScriptPath=%ThisScriptsDirectory%Test.ps1\r\n5. PowerShell -NoProfile -ExecutionPolicy Bypass -Command \"\";\r\n\r\nLine number 1 is working and variable  %VM_Name% is echoed. But in line 5 \r\n-VM_Name \"\"\"\"%VM_Name%\"\"\"\"    is not working. I am using variable $VM_Name in my Test.ps1 and powershell says that this variable is null."
+email: 85f757250e00d9e74f8b4cb6c3441591

@@ -1,0 +1,5 @@
+name: deadlydog
+date: '2018-03-16 15:43:57'
+url: 'http://www.danskingdom.com'
+message: "<a href=\"#comment-619843\" rel=\"nofollow\">@Hoang </a> \r\nChanging your code to the following should fix up your issue. In the future, please consider asking these types of questions in StackOverflow.com or a similar site rather than here. Thanks.\r\n\r\n# Show input box popup and return the value entered by the user.\r\nfunction Get-InputBoxDialog([string]$Message, [string]$WindowTitle)\r\n{\r\nAdd-Type -AssemblyName Microsoft.VisualBasic\r\nreturn [Microsoft.VisualBasic.Interaction]::InputBox($Message, $WindowTitle)\r\n}\r\n\r\ndo {\r\n$OSDComputerName = Get-InputBoxDialog -Message “Enter OLD ComputerName” -WindowTitle “Source PC”\r\n$SrcPath = “\\\\Server\\Migfolder\\$OSDComputerName”\r\n} until (Test-Path $SrcPath)\r\n\r\nThe problem was you were not rebuilding $SrcPath after getting the new $OSDComputerName value."
+email: c8addda594c8b338f1e3934e73505d0c

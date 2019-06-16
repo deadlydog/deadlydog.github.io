@@ -1,0 +1,14 @@
+name: >-
+  Daniel Schroeder&#039;s Programming Blog &raquo; Template Solution For
+  Deploying TFS Checkin Policies To Multiple Versions Of Visual Studio And
+  Having Them Automatically Work From &ldquo;TF.exe Checkin&rdquo; Too
+date: '2014-03-24 10:56:54'
+url: >-
+  http://dans-blog.azurewebsites.net/template-solution-for-deploying-tfs-checkin-policies-to-multiple-versions-of-visual-studio-and-having-them-automatically-work-from-tf-exe-checkin-too/
+message: >-
+  [&#8230;] needs to be changed there, but I will explain how it works
+  here.&#160; A while back I blogged about how to get your Team Foundation
+  Server (TFS) checkin polices to still work when checking code in fro&#8230;
+  via the “tf checkin” command; by default when installing your checkin policies
+  via a VSIX [&#8230;]
+email: d41d8cd98f00b204e9800998ecf8427e

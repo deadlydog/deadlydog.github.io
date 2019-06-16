@@ -1,0 +1,5 @@
+name: Ruffin
+date: '2014-10-08 08:19:22'
+url: 'http://myfreakinname.blogspot.com'
+message: "Looks like there's a decent workaround at that link to vote up/down commenting blocks:\r\nhttps://connect.microsoft.com/PowerShell/feedback/details/711231\r\n\r\n\"We added this in v3. Try this:\r\n1. Put cursor on Column 1 in a script\r\n2. Press Alt + Shift + Up/Down Arrow Keys to block select lines to comment\r\n3. Press # to add comment [step numbers added]\"\r\n\r\nAnother comment says that there's no analog for uncommenting, but there is.  Steps 1 &amp; 2 just set up a block cursor, and you can backspace/delete to get rid of the #.\r\n\r\nNot quite as nice as the shortcut here (and I agree, [C]+K, [C]+C would have been great), but built-in."
+email: 6be3a3f14a71ba73aa28da8a9c84cde9

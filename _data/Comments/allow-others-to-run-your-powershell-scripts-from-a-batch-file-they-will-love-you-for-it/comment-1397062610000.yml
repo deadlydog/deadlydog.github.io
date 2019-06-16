@@ -1,0 +1,5 @@
+name: deadlydog
+date: '2014-04-09 10:56:50'
+url: 'http://www.danskingdom.com'
+message: "<a href=\"#comment-64364\" rel=\"nofollow\">@rcf </a> \r\nUnfortunately I don't have much experience using network drives in my PowerShell scripts :(\r\n\r\nWhy don't you want to hard code the UNC path?  You just don't want the user to see the full UNC path (e.g. \\\\SomeServer\\SomeFolder\\SomeOtherFolder\\ScriptsFolder) for security reasons? Or you are afraid that if the UNC path ever changes that it will break all your scripts?  One possible workaround may be to create another \"shortcut\" UNC path that simply points to the real UNC path (e.g. \\\\Shortcuts\\ScriptsFolder). This would both hide the absolute UNC path from the user, and you could always change the shortcut UNC path to point somewhere else if needed. I don't know the proper terms for this or how to set this up myself, but I know at my organization we have several different UNC paths that all point to the same network location, so I'm sure it's possible to do.\r\n\r\nI hope that helps."
+email: c8addda594c8b338f1e3934e73505d0c

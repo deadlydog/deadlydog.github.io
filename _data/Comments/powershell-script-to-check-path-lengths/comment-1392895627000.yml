@@ -1,0 +1,5 @@
+name: Kieran
+date: '2014-02-20 05:27:07'
+url: ''
+message: "Hi Daniel,\r\nThanks for the script - it is exactly what I'm looking for, but I find when I run it, as soon as it comes up against the 260+ pathlenghts I get the usual error:\r\n\"Get-ChildItem : The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be \r\nless than 248 characters.\"\r\n\r\nWhen I look at the output log it starts at 259 characters as the 260+ ones fail. I'm using PowerShell 4 on server 2012 R2.\r\n\r\nThanks for any help.\r\nKieran."
+email: 183f33d0d038b244adc32a37f06651d8

@@ -1,0 +1,5 @@
+name: Jerome Lacoste
+date: '2014-06-11 06:43:48'
+url: ''
+message: "When running the admin version of the script with named parameters, if my parameters are argumnts to the batch script, then I end up having incorrect argument parsing on the PS1 side when the arguments are empty.\r\n\r\nE.g.\r\nP.BAT:\r\nPowerShell ..... -P1 \"\"\"\"%1\"\"\"\"  ...\r\n\r\nP.PS1\r\nparam([string]$P1)\r\nWrite-Host -$P1-\r\n\r\nRunning P.BAT results in \r\n-\"- \r\n\r\nAny idea how to protect against that ?"
+email: 1c7bc212660b8cd47855f3ea47c713fb

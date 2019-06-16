@@ -1,0 +1,9 @@
+name: waqas
+date: '2016-10-18 09:44:25'
+url: ''
+message: >-
+  How can we automate the transformations as well..?? what I mean is that I want
+  to create the transformation files automatically when I build the project..I
+  want to read from the local app.config or web.config and copy the settings
+  into a new xdt file..
+email: 85355ddfa2656cbc4d04b18bf8584021

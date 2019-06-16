@@ -1,0 +1,5 @@
+name: Carl
+date: '2013-07-22 04:52:39'
+url: ''
+message: "Thanks for the article and code samples. Much appreciated as I was coming across the error described when checking for the existence of an XML element.\r\n\r\nYour code works well and has saved me some time.\r\n\r\nOne small point, I think you have some typos in the code block. The [xml][/xml] parameter type in the function headers appears to have become a number 1\"\r\n\r\ne.g.\r\n\r\nfunction Get-XmlNode(1$XmlDocument, [string]$NodePath, [string]$NamespaceURI = \"\", [string]$NodeSeparatorCharacter = '.')\r\n{...\r\n}"
+email: 798d89c2479c3ea0234ac5367d2c3357

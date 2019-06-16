@@ -1,0 +1,8 @@
+name: Martin
+date: '2016-12-19 21:06:45'
+url: ''
+message: >-
+  Helpful, thanks. I have read, and it seems to be the case, that you cannot
+  append to a binary file, so the append flag in the ReadFromBinaryFile is
+  redundant.
+email: 19c8d56a8705da2f8c71de75f42c94c6

@@ -1,0 +1,8 @@
+name: Daniel
+date: '2016-02-11 13:46:33'
+url: ''
+message: >-
+  The multi-line user prompt is fantastic, but how do you run a 'for each' loop
+  against each row entered into that prompt? It seems to take the input as one
+  long string.
+email: 2c14a7411dcad37c30776f15ed924c53

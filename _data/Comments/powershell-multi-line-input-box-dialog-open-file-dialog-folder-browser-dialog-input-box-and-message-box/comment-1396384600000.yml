@@ -1,0 +1,5 @@
+name: SeanD
+date: '2014-04-01 14:36:40'
+url: ''
+message: "OK. I think i am getting further. FYI - I am not a programmer but an admin learning PS.\r\n\r\nMy script pings the list of PCs that are in the text file. I am getting a blank excel sheet where normally if i hard code the text file location For-eachobject does its job and pings.\r\n\r\nIt seems like the function is just passing the name of the file"
+email: a2d4772476e8230be0e1e56bc470b635

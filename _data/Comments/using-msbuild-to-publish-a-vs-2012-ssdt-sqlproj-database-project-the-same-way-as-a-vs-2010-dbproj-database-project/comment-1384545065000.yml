@@ -1,0 +1,5 @@
+name: Galiya
+date: '2013-11-15 13:51:05'
+url: ''
+message: "<a href=\"#comment-20561\" rel=\"nofollow\">@deadlydog </a> \r\nYes, I've tested it once again right now. It seems quite bizarre, and I can definitely connect to that sql server via SSMS using Integrated Security (and it's done similarly via a Development group rather that individual permissions). I also thought that it might be related to the TFS build account not having access to DB, but that didn't work either even after I specified it as a db_owner. Anyway, thanks for your quick reply.\r\nP.S. Btw in your txt file which provides a required addition to sqlproj, I still had to remove &lt;?xml version=\"1.0\"?&gt; next to , otherwise I was getting the same error \"System.UriFormatException: Invalid URI: The URI is empty\" @sr20 mentioned above (just in case somebody will have the same issue later)"
+email: ada4359fc4a1df11b6ab33bf10824758

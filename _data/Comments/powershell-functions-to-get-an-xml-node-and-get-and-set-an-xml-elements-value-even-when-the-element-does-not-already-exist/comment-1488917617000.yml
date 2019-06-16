@@ -1,0 +1,5 @@
+name: Gary
+date: '2017-03-07 14:13:37'
+url: ''
+message: "I use your XML functions all of the time and they are great, but I hit a wall.  Any idea how to parse an Excel XML file?\r\n\r\n[xml]$xmlInvoice = Get-Content $x.Fullname\r\n$dataNodes = Get-XmlNodes -XmlDocument $xmlInvoice -NodePath \"ss:Workbook.ss:Worksheet.ss:Table.ss:Row.ss:Cell.ss:Data\"\r\nForEach ( $node in $dataNodes )\r\n{\r\n\t\r\n}\r\n\r\nException calling \"SelectNodes\" with \"2\" argument(s): \"'/ns:ss:Workbook/ns:ss:Worksheet/ns:ss:Table/ns:ss:Row/ns:ss:Cell/ns:ss:Data' \r\nhas an invalid token.\"\r\nAt H:\\My Documents\\Quality Assurance\\STPr In Progress\\Foodservice Pro Points\\Invoice Data Processing\\External-Excel-Processing.ps1:33 \r\nchar:2\r\n+     $nodes = $XmlDocument.SelectNodes($fullyQualifiedNodePath, $xmlNsManager)\r\n+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\r\n    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException\r\n    + FullyQualifiedErrorId : DotNetMethodException"
+email: 17aebc8c8e93d8adff35e23841c6b2f4

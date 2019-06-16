@@ -1,0 +1,7 @@
+name: sr20
+date: '2013-04-18 14:56:47'
+url: ''
+message: >-
+  I did have to remove the  tag in order to get it to work.  Otherwise I got the
+  error like System.UriFormatException: Invalid URI: The URI is empty.
+email: 45e1b43b72b478f61c67a513bd5e0481

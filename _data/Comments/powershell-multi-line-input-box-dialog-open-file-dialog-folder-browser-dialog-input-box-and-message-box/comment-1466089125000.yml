@@ -1,0 +1,5 @@
+name: Graham J
+date: '2016-06-16 08:58:45'
+url: ''
+message: "First off thanks for this, been using it for loads of Service Desk scripts.\r\n\r\nMind if I pick your brains on something?\r\n\r\nIs there anyway of getting -DEFAULTTEXT to spread onto more than one line when reading from a variable or text file?\r\n\r\nMy variable is $OOO\r\n\r\n\"I am out of the office from x to y.\r\n\r\nIn my absence please contact z.\r\n\r\nThanks\"\r\n\r\nAs a work around I've exported $OOO to a text file with the correct formatting. \r\nWhen I set the -DEFAULTTEXT to :\r\n-DEFAULTTEXT ( Get-Content C:\\OOO.txt ) \r\nIt displays as with double spacing as shown below.\r\n\r\n\"I am out of the office from x to y.  In my absence please contact z.  Thanks\"\r\n\r\nAny help would be appreciated.\r\nThanks"
+email: 7a50df12ea4ec9d9491362dd204d8df6

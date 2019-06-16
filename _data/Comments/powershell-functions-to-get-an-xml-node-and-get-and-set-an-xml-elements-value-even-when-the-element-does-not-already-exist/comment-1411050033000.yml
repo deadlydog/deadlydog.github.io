@@ -1,0 +1,5 @@
+name: David
+date: '2014-09-18 08:20:33'
+url: ''
+message: "Excellent Blog....this is just the information I needed.  I was trying to figure out how to dynamically determine the namespace of an xml file so I could then include it in my xpath for pulling data....couldn't hard code because I needed to rotate through thousands of xmls with different namespaces.  This information was perfect for me and worked.  All I really needed to finish my program was this for pulling the default namespace: \r\n$NamespaceURI = $XmlDocument.DocumentElement.NamespaceURI \r\n\r\nThanks again!!!"
+email: 22059bc22a58b30465cdb85a918b8404

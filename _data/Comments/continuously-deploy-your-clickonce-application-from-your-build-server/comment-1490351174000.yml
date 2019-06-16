@@ -1,0 +1,5 @@
+name: Leszek
+date: '2017-03-24 04:26:14'
+url: ''
+message: "<a href=\"#comment-585347\" rel=\"nofollow\">@Leszek </a> \r\nWith updating application version/assembly version - how to grab current version like:\r\n$ver = $(vbproj).Version // 1.2.3.0\r\n$(vbproj).Version = 1.2.3.%build_number% ?"
+email: be613a9830bb5cef0ea3ac272dfc17b1

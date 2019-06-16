@@ -1,0 +1,9 @@
+name: dragon788
+date: '2016-11-11 13:19:37'
+url: ''
+message: >-
+  This is pretty awesome. I was just trying to figure out how to query the
+  version from a nuspec file to append a build number in my AppVeyor config for
+  a Chocolatey package and after some failures with Select-Xml I ran across your
+  awesome post.
+email: fd29fd8bb9de2ab3fef93a64348be180

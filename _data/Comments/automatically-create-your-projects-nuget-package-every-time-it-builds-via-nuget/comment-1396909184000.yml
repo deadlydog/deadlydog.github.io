@@ -1,0 +1,5 @@
+name: Grzegorz Mrozik
+date: '2014-04-07 16:19:44'
+url: ''
+message: "Hi. Thank you for great tool.\r\nHowever, there is a problem with non-english Windows.\r\nConstants defined in line 290 of New-NuGetPackage.ps1 are valid only on english Windows. On localized Windows (polish version in my case) NuGet.exe output is also localized and pattern matching (e.g. line 1159) returns false."
+email: 5cb16b60de97df9b1e7d166fccd042db

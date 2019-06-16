@@ -1,0 +1,5 @@
+name: deadlydog
+date: '2013-10-16 11:39:35'
+url: 'http://www.danskingdom.com'
+message: "<a href=\"#comment-13029\" rel=\"nofollow\">@Carl Reid </a> \r\nHi Carl, I'm not able to reproduce your problem. I've created your sample scenario, as well as empty directories up to 5 levels deep and everything works fine for me.  What version of PowerShell are you using? I'm using v3.0. If you are using a lower version maybe that is the problem.\r\n\r\nThanks for posting your modified solution though in case anybody else runs into the same problem."
+email: c8addda594c8b338f1e3934e73505d0c

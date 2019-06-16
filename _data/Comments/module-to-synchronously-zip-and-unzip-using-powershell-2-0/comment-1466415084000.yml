@@ -1,0 +1,7 @@
+name: Karel Frajtak
+date: '2016-06-20 03:31:24'
+url: ''
+message: >-
+  I found a much simpler solution - just use Invoke-Command and run the
+  compression/extraction in the script block.
+email: cb3ed6f2e0700934f94a3e794ef2c788

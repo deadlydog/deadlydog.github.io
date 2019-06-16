@@ -1,0 +1,5 @@
+name: deadlydog
+date: '2015-09-28 12:02:21'
+url: 'http://www.danskingdom.com'
+message: "<a href=\"#comment-516410\" rel=\"nofollow\">@evald </a> \r\nI'm assuming that you are either just doing something wrong (a typo perhaps), or that you are expecting this to pause when running the script from a PowerShell IDE, such as PowerShell ISE or PowerGui.  #2 will only cause the script to pause if it's being executed from the native PowerShell command prompt."
+email: c8addda594c8b338f1e3934e73505d0c

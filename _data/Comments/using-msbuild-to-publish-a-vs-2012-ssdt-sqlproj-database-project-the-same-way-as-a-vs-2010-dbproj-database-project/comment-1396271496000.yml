@@ -1,0 +1,5 @@
+name: Neles
+date: '2014-03-31 07:11:36'
+url: ''
+message: "Hi.\r\n\r\nI was wondering if I could deploy my Database project by Building or Re-Building by solution (which contains other projects) from within Visual Studio 2012. I want to build project so that I can run unit tests *after* the build process triggered the localdb deploy to deploy any changes. Is this even possible? thanks!"
+email: 48b6336147f5aaee21dd819cb544d696

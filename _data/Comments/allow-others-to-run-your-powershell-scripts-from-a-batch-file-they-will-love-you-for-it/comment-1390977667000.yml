@@ -1,0 +1,5 @@
+name: Screwuphead
+date: '2014-01-29 00:41:07'
+url: ''
+message: "<a href=\"#comment-40029\" rel=\"nofollow\">@deadlydog </a> \r\nLet me start off by saying this is what I have been looking for, thank you so much for documenting it!\r\n\r\nWhat about passing values with Administrative permissions? I tried using the following an get an error.\r\nPowerShell -NoProfile -ExecutionPolicy Bypass -Command \"\"\r\nBasically I need to pass the current directory that the script was called from because I have other scripts that need to be called from that same directory.\r\n\r\nThank You!"
+email: 1f4db7d80b5e1b8f8c2dc4d52cb12d96

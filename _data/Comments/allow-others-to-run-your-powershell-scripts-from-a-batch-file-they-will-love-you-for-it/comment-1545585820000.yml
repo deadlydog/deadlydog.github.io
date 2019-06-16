@@ -1,0 +1,5 @@
+name: Mark Rohren
+date: '2018-12-23 11:23:40'
+url: ''
+message: "Part of my original post got stripped because of angle brackets; to run the script, enter \"p2b\" followed by the name of the script you wish to convert, for example \"p2b myscript.ps1\" (or \"p2b myscript\"; the .ps1 is optional).  Then you can run the script as a batch by entering the script name without the .ps1, as well as any optional arguments, like \"myscript myfile.txt 3\".\r\n\r\nThanks for the great blog and post!"
+email: 4b6bba4a31d68a325c97e0322ac31817

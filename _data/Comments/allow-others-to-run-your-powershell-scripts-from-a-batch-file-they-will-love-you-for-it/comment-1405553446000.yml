@@ -1,0 +1,5 @@
+name: deadlydog
+date: '2014-07-16 17:30:46'
+url: 'http://www.danskingdom.com'
+message: "<a href=\"#comment-114231\" rel=\"nofollow\">@GlwDay </a> \r\nA couple ideas:\r\n1 - Use a remote session to delete files, so the commands run directly from the remote maching. i.e. New-PSSession -ComputerName $Server\r\n2 - To make them run in parallel, use several Start-Job commands to call your script, and instead of passing in the root directory, pass in folders in the root directory.\r\ni.e. Start-Job .\\deleteold.ps1 -FolderPath \\\\Nodename1\\c$\\project-9\\input-data\\temp\\Folder1 -FileAge 7 -LogFile Nodename1.log\r\nStart-Job .\\deleteold.ps1 -FolderPath \\\\Nodename1\\c$\\project-9\\input-data\\temp\\Folder2 -FileAge 7 -LogFile Nodename2.log\r\n..."
+email: c8addda594c8b338f1e3934e73505d0c

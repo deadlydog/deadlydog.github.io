@@ -1,0 +1,5 @@
+name: Enzo Lopez
+date: '2017-05-30 18:25:25'
+url: ''
+message: "How can I create and array from the word in the $textBox.Text\r\nIf I create an input box and the user enters \"warning\", I then want an array that equals $warning for me to use later in the script. \r\nI'm able to get it type out, but how do I reference an array where the name of the array is unknown\r\n\r\n$test = \"`$\" + $textBox.Text\r\n$magic = (,$test)\r\n\r\nPS C:\\Users&gt; $magic\r\n$warning\r\n\r\nmy goal is the have something like this in the script\r\n$magic.ToString() = Get-Service\r\nand $warning should return whatever is in get-service"
+email: 88982b2d9462ffaabbc11f0b60609da3

@@ -1,0 +1,5 @@
+name: Michael
+date: '2015-09-18 08:02:49'
+url: ''
+message: "First of all, thank you so much for this post.  It has been very useful.\r\n\r\nI do have one question.  In your sample application, again thank you so much for providing a working sample application, when you add the training environment, does that get persisted to the app.config file?  If so, where does that live?  (I've looked at the AppConfigExample.exe.config in the bin directory, but it doesn't appear to have been updated.)  If it doesn't get persisted back, how would you implement something along those lines.\r\n\r\nThanks again for a great article!"
+email: 32c17d825590dc17c2bc20828574713c

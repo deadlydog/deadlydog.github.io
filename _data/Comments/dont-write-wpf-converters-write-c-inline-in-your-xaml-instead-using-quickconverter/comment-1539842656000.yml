@@ -1,0 +1,11 @@
+name: Johannes Moersch
+date: '2018-10-18 00:04:16'
+url: ''
+message: >-
+  Hey Paul, there are a couple solutions to this. First, you can use string
+  literals if you use single quotes and escape them first. For example '$P ?
+  \'One\' : \'Two\''. The second option is to set the V0 property and use it.
+  For example {qc:QuickConverter '$P ? $V0 : $V1', V0='One', V1='Two'}. You can
+  find some more examples here:
+  https://github.com/JohannesMoersch/QuickConverter/blob/master/README.md
+email: d468e0fc844cf15330f6c15e6e665400

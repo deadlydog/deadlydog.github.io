@@ -1,0 +1,5 @@
+name: gast
+date: '2017-11-28 05:04:32'
+url: ''
+message: "@echo off\r\nSET thisScriptsDirectory=%~dp0\r\nSET thisScriptsDirectory_ohneSlash=%thisScriptsDirectory:~0,-1%\r\npowershell -NoProfile -ExecutionPolicy Bypass -Command \"&amp; {&amp; '%thisScriptsDirectory_ohneSlash%\\GUI.ps1' -N 'parameter string'}\""
+email: 0fec525ae0210a9a40b9704780cd61d5

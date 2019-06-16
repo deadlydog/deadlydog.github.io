@@ -1,0 +1,5 @@
+name: Marc
+date: '2013-11-30 05:14:12'
+url: ''
+message: "I have a newbie question... I save this .ps1 file to my disk, but if I run the function names in powershell it's telling me always that this is not a name of a cmdlet or a function or a script or an executable.\r\n\r\nI'd like to run \"Remove-FilesNotModifiedAfterDate -Path “C:\\Temp” -DateTime ((Get-Date).AddDays(-2))\" directly in powershell.\r\n\r\nWhat I'm doing wrong here?"
+email: 7742e7ae82b8506690e1d3c5cd741761

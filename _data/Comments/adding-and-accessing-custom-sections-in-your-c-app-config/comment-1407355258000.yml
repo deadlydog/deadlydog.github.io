@@ -1,0 +1,5 @@
+name: Vamsi
+date: '2014-08-06 14:00:58'
+url: ''
+message: "Hi , When I am debugging the attached source code, I am getting this error {\"The type initializer for 'AppConfigExample.AdvancedExamplesData.Endpoints' threw an exception.\"}.\r\n\r\nSame happening for Environments and DataCenters.\r\n\r\nCan you help me in solving this pls?\r\n\r\nI am using VS 2010 and Target Frame Work: .NET Framework4 Client Profile"
+email: f6443362c1259e593b5cf65b3f8660ce

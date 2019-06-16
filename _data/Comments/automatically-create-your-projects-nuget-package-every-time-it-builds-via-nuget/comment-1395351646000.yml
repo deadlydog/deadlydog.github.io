@@ -1,0 +1,5 @@
+name: deadlydog
+date: '2014-03-20 15:40:46'
+url: 'http://www.danskingdom.com'
+message: "<a href=\"#comment-57320\" rel=\"nofollow\">@Tom </a> \r\nHey Tom, I actually have never looked at these transforms before, but found the docs at http://docs.nuget.org/docs/creating-packages/configuration-file-and-source-code-transformations.\r\n\r\nMy extension simply calls the NuGet.exe with whatever additional parameters you specify in the BuildNewPackage-RanAutomatically.ps1 file.  So transforms will work as they always have; I don't provide any additional functionality related to them, yet ;)."
+email: c8addda594c8b338f1e3934e73505d0c
