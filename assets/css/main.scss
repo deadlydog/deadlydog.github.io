@@ -34,6 +34,11 @@ $type-size-8 : 0.625em; // ~10px
 	font-size: $type-size-6;
 }
 
+// Reduce the size of the comments text in our posts a bit.
+.comment__content-wrapper {
+	font-size: $type-size-6
+}
+
 //========== Dan's Customizations END ==========
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
