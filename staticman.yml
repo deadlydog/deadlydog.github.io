@@ -15,3 +15,7 @@ comments:
       type: "date"
       options:
         format: # "iso8601" (default), "timestamp-seconds", "timestamp-milliseconds"
+  reCaptcha:
+    enabled: true
+    siteKey: "6LexzqgUAAAAACjnxAhDpsymtZKy3ymJFRbVNWKU"
+    secret: "6LexzqgUAAAAAJjkczlwT888oWg48CeU8x3MrNlc"
