@@ -85,6 +85,12 @@ We may want to look at [replacing `Rouge` with `Pygments`][HowToUsePygmentsSynta
 By default Jekyll uses `Kramdown` for markdown processing.
 See [this page][JekyllKramdownOptionsDocumentationUrl] for the list of supported options that may be used in `_config.yml`.
 
+### Other sites using the same theme
+
+Here are some other sites using the same theme, so we can see how they've configured theirs and customizations they've made:
+
+- https://mathieubuisson.github.io/ - [GitHub code](https://github.com/MathieuBuisson/MathieuBuisson.github.io)
+
 ### Site history
 
 The site was migrated from WordPress to Jekyll in April 2019, and before WordPress it was hosted in GeeksWithBlogs.
