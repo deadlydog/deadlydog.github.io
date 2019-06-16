@@ -52,7 +52,7 @@ comments:
   # utterances:
   #   theme                : # "github-light" (default), "github-dark"
   #   issue_term           : # "pathname" (default)
-staticman: # The rest of the settings are specified in staticman.yml.
+staticman: # The actual staticman settings are stored in staticman.yml. These ones are needed by the theme to determine where comments get posted to.
   branch: "master"
   endpoint: "https://dev.staticman.net/v3/entry/github/"
 # atom_feed:
