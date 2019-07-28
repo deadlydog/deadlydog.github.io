@@ -96,6 +96,11 @@ Here are some other sites using the same theme, so we can see how they've config
 The site was migrated from WordPress to Jekyll in April 2019, and before WordPress it was hosted in GeeksWithBlogs.
 This is why the posts before 2019 have additional front matter on them; the tool to export them from WordPress to Jekyll added it.
 
+Some tools I used to convert the site from WordPress to Jekyll:
+
+- [WordPress to Jekyll Exporter][WordPressToJekyllExporterPluginUrl] - Used to migrate all of the posts and uploads to a Jekyll format.
+- [wordpress-comments-jekyll-staticman][WordPressCommentsToJekyllStaticmanToolUrl] - After exporting your WordPress blog comments to an xml using the native export functionality, use this tool to convert the xml file into Staticman-format comments for use in Jekyll.
+
 [MinimalMistakesGitHubPagesStarterRepoUrl]: https://github.com/mmistakes/mm-github-pages-starter
 [MinimalMistakesThemeGitHubRepoUrl]: https://github.com/mmistakes/minimal-mistakes
 [MinimalMistakesThemeDocumentationUrl]: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
@@ -106,3 +111,5 @@ This is why the posts before 2019 have additional front matter on them; the tool
 [RougeAutoHotkeySyntaxHighlightingSupportIssueUrl]: https://github.com/rouge-ruby/rouge/issues/1136
 [HowToUsePygmentsSyntaxHighlighterWithJekyll]: https://lyk6756.github.io/2016/11/22/use_pygments.html
 [JekyllPygmentsSyntaxHighlighterSupportedLanguagesUrl]: https://haisum.github.io/2014/11/07/jekyll-pygments-supported-highlighters/
+[WordPressToJekyllExporterPluginUrl]: https://wordpress.org/plugins/jekyll-exporter
+[WordPressCommentsToJekyllStaticmanToolUrl]: https://github.com/arthurlacoste/wordpress-comments-jekyll-staticman
