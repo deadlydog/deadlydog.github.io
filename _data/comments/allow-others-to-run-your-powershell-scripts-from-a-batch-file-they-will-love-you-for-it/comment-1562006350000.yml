@@ -1,0 +1,15 @@
+name: Barsa Mohapatra
+date: '2019-07-01 12:39:10'
+url: ''
+message: >-
+  I want to pass multiple arguments into the single parameter while running the
+  PS script from a .bat file  , 
+
+  PowerShell -NoProfile -ExecutionPolicy Bypass -Command "&amp; './DW 6.12
+  Install.ps1' -modules 'Printer' -modules 'Scanner' -modules 'EditSend'
+  -modules 'Import'  'SmartConnect' 'WEC' 'IndexCleaner'  'UrlCreator' "
+
+
+  How do I declare the variable in powershell ,its only installing the 1st
+  module not all of them
+email: 5d5c7a85e772085eb9350a2f7cee751d
