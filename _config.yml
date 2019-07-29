@@ -54,7 +54,7 @@ comments:
   #   issue_term           : # "pathname" (default)
 staticman: # The actual staticman settings are stored in staticman.yml. These ones are needed by the theme to determine where comments get posted to.
   branch: "master"
-  endpoint: "https://staticman3.herokuapp.com/v2/entry/github/"
+  endpoint: "https://staticman3.herokuapp.com/v3/entry/github/"
 # atom_feed:
 #   path: # blank (default) uses feed.xml
 search: true # true, false (default). Show the search link on the site.
