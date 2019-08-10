@@ -57,7 +57,7 @@ staticman: # The actual staticman settings are stored in staticman.yml. These on
   endpoint: "https://dansblog-staticman.herokuapp.com/v3/entry/github/"
 reCaptcha: # The siteKey and secret are also stored in staticman.yml. These ones are needed by the theme for Recaptcha to work.
   siteKey: "6LeKP7EUAAAAAJ2v3u_zud_PfBUF7DgCeu0i1Pm0"
-  secret: "s4U3/bNbGg9+zCcuO1eKhm3wD2A5Lfsb5YwX3jlHh1RcJ4bXcEo2Zzri5afyP5ONw8iUoKNJE4ukbVpTLoiVKvArx3xnNyU9yssZZhEPvK0RVdGBRxmP7i7DOv7zYcmmj8IACQJk8VIhoO+iwTyJL0n08jLpd+z9Eu+poDUwu1Y="
+  secret: "YDDQ/Zd3cWC5JcTKX5o3OH7tlG8soGbDSnkvg5uv6R7+SkM2ujaeZYCri5ZXUc7l+2L60NPxpRQFvMjlQq6hhjTVi9IJHrHjrmthPjHj1ZM/rNz6/FtWLs4Sm/mHP4z0/ZqwF5bcAn6s4rpnUR5nHJt3M3f1XtPVdgufg9vSxHNeFRUDRWpZxedDOTharP6xf55FRLnVpOchRe/KkIIi+L4MYfAn27esFdbpcP4rnxCujYk3VGvMUXuFT2JMVY9DMDKfE20D1SUR9sleqFwyaHoYlJG+V8oUJVioBPQTq61NoO2Xj3uddbnLN7hqSJ3V2JKCGa7UZvZCyab56/txOg=="
 # atom_feed:
 #   path: # blank (default) uses feed.xml
 search: true # true, false (default). Show the search link on the site.
