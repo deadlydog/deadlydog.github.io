@@ -69,6 +69,7 @@ Here's a list of files I've added:
 - The `.vscode` directory.
 - The `ReadMe.md` file.
 - The `ads.txt` file with my Google AdSense info.
+- The `CNAME` file was added automatically by GitHub when setting up GitHub pages to use my custom domain name.
 
 ## Additional Info
 
