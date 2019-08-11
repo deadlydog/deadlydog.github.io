@@ -14,6 +14,6 @@ tags:
 
 Your regular markdown goes here. It also supports HTML :)
 
-Posts in this _drafts directory will now show up on the website unless you build using `--draft` when compiling:
+Posts in this _drafts directory will not show up on the website unless you build using `--draft` when compiling:
 
 > bundle exec jekyll serve --draft
