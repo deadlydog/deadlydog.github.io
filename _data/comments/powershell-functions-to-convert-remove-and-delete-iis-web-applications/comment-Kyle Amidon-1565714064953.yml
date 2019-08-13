@@ -1,0 +1,7 @@
+_id: 35fac500-bde8-11e9-90ed-e9232bed94e9
+message: "I'm building a gui for creating website, converting folders to applications, creating folders.\r\n\r\nI'm having a hell of a time converting regular folders to applications. The folders are on a network share and it seems like the commands only work with sites and folders locally (except for commands that ask for a physical path.)\r\nI've tried ConvertTo-WebApplication, keeps saying it can't find path, because the SiteApp1 folder that's within the test site is on the physical path, not the IIS directory.\r\n\r\nI've tried New-Item, same issue. I've tried the older Appcmd, no luck.\r\n\r\nCould you help?"
+name: Kyle Amidon
+email: 68756598110f61b82fa4f27a2731ae65
+url: ''
+hidden: ''
+date: '2019-08-13T16:34:24.944Z'
