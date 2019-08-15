@@ -19,7 +19,7 @@ tags:
 
 You've probably heard of WordPress, but maybe not Jekyll. They are both platforms for hosting blog content. The big difference, in my eyes, is that WordPress stores all of it's data in a MySQL database, while Jekyll's data is all stored in text files. This means your entire blog contents can be stored in source control, such as Git.
 
-Jekyll is used to compile the file contents and output all of the files for your static website. Jekyll typically supports websites with static content, making it ideal for blogs. Jekyll leverages the [Liquid](https://shopify.github.io/liquid/) programming language for flow control (if statements, loops, etc.) and [FrontMatter](https://jekyllrb.com/docs/front-matter/) for variables. It also allows you to write you website content in Markdown, as well as HTML.
+Jekyll is used to compile the file contents and output all of the files for your static website, typically by running a command like `bundle exec jekyll serve`. Jekyll typically supports websites with static content, making it ideal for blogs. Jekyll leverages the [Liquid](https://shopify.github.io/liquid/) programming language for flow control (if statements, loops, etc.) and [FrontMatter](https://jekyllrb.com/docs/front-matter/) for variables. It also allows you to write you website content in Markdown, as well as HTML.
 
 Visit [the official Jekyll site](https://jekyllrb.com/) to learn more and see how to get started with it.
 
@@ -37,7 +37,7 @@ Reasons why I decided to use Jekyll:
 
 - __Source Control__ - As a software developer, using a git repo is familiar to me, and it means all changes are in source control. There's no external database dependency to manage and maintain. It also means no longer having to take backups.
 - __Markdown__ - It supports writing in your posts on Markdown. Enough said.
-- __Everything Is Text__ - Updating and creating posts is easy and can be done from any editor, even just with the GitHub online editor.
+- __Everything Is Text__ - Updating and creating posts is easy and can be done from any editor, even just with the GitHub online editor. There's no magic going on behind the scenes; everything is plain text.
 - __Customization__ - There are tons of themes available for use straight away. If you don't like them, you can customize them, or create your own from scratch, assuming you know HTML, CSS, Javascript, Liquid, and FrontMatter (before this migration I hadn't heard of Liquid or FrontMatter).
 - __It's Free__ - I can host my Jekyll site on GitHub Pages for free!
 
@@ -71,10 +71,14 @@ If the theme you choose doesn't support a specific feature, you can always add i
 This was probably one of the most confusing parts of the migration for me. There are 3 different ways you can use a theme in Jekyll, and not all themes support all 3 ways. The 3 options you have are:
 
 1. __Fork The Theme Repository__ - Basically clone all of the source code, and then go ahead and add your posts to it and customize it however you like. This is perhaps the most straightforward approach, but it doesn't allow you to automatically take new updates to the theme; you would have to manually merge updated into your fork.
-1. __Ruby Gems__ -
-1. __GitHub Remote Repository__ -
+1. __Ruby Gems__ - [The official docs](https://jekyllrb.com/docs/themes/) describe this better than I ever could, but essentially you have a `Gemfile` that lists the dependencies of your site, including your theme. You run a command like `bundle update` to update your gem versions and pull the latest version of the gem's files into your project. This is how you update your site to a newer version of the theme. In the .Net world, this is similar to a NuGet package. You don't actually see the theme files in your project like when forking a theme repository though, so it helps keep your repo nice and clean with only the files you care about. Most themes support this method.
+1. __GitHub Remote Repository__ - I believe this option is only available for themes hosted in GitHub (which most are), and not all themes support it. This method allows you to always be on the latest version of the theme without having to run any addition commands (e.g. `bundle update`). Rather than including the theme in your `Gemfile`, you instead include a line in your `_config.yml` that references the remote theme repo. e.g. `remote_theme: mmistakes/minimal-mistakes` to always use the latest version of the theme, or `mmistakes/minimal-mistakes@26c1989` to use a specific branch/commit/tag of the theme. This allows your site to always be on the latest version of the theme without any intervention, or use the `@branch/commit/tag` syntax to stay on a specific version until you decide to update. As with Ruby Gems, this option does not include the theme files in your repo, keeping it nice and clean.
+
+I first started out using the Ruby Gems approach, but ran into issues where I just couldn't get my site to display properly. While the problems were most likely due to me not understanding `Liquid` and `FrontMatter` at the time, I ended up using the [minimal mistakes](https://mmistakes.github.io/minimal-mistakes/) theme and the remote repository strategy.
 
 ## Using Staticman to get comments working in Jekyll
+
+There are several options for adding comments to your Jekyll site, such as Discuss,
 
 - Add comment support.
   - Tutorials: https://mademistakes.com/articles/jekyll-static-comments/ and https://mademistakes.com/articles/improving-jekyll-static-comments/
