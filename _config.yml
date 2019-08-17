@@ -292,7 +292,7 @@ tag_archive:
 #     envs: development
 
 defaults:
-  # _posts
+  # Posts
   - scope:
       path: "_posts"
       type: posts
@@ -308,7 +308,23 @@ defaults:
       toc_icon: stream
       toc_sticky: false
       classes: wide
-  # _pages
+   # Draft posts (should be identical to the Posts section above, except for the path)
+  - scope:
+      path: "_drafts"
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: true
+      share: true
+      related: true
+      toc: false
+      toc_label: Post Sections
+      toc_icon: stream
+      toc_sticky: false
+      classes: wide
+  # Pages
   - scope:
       path: "_pages"
       type: pages
