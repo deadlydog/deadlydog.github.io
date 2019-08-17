@@ -65,11 +65,12 @@ Here's a list of files I've added:
 - Everything in the `_posts` and `_drafts` directories.
 - The `_pages\About.md` page.
 - Everything in the `_assets\Posts` and `_assets\Site` directories.
+- Everything in the `_data\comments` directory.
 - The `favicon.ico` image.
 - The `.vscode` directory.
 - The `ReadMe.md` file.
 - The `ads.txt` file with my Google AdSense info.
-- The `CNAME` file was added automatically by GitHub when setting up GitHub pages to use my custom domain name.
+- The `CNAME` file was added automatically by GitHub when setting up GitHub Pages to use my custom domain name.
 
 ## Additional Info
 
