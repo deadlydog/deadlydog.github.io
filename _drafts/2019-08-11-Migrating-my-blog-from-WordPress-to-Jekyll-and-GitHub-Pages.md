@@ -15,11 +15,17 @@ tags:
   - Migrate
 ---
 
+You may have noticed my blog has a very different look now! It used to look like this.
+
+![Old WordPress Blog Screenshot](/assets/Posts/Migrating-my-blog-from-WordPress-to-Jekyll-and-GitHub-Pages/OldWordPressBlogScreenshot.png)
+
+I decided to migrate my blog from WordPress to Jekyll.
+
 ## What is Jekyll
 
 You've probably heard of WordPress, but maybe not Jekyll. They are both platforms for hosting blog content. The big difference, in my eyes, is that WordPress stores all of it's data in a MySQL database, while Jekyll's data is all stored in text files. This means your entire blog contents can be stored in source control, such as Git.
 
-Jekyll is used to compile the file contents and output all of the files for your static website, typically by running a command like `bundle exec jekyll serve`. Jekyll typically supports websites with static content, making it ideal for blogs. Jekyll leverages the [Liquid](https://shopify.github.io/liquid/) programming language for flow control (if statements, loops, etc.) and [FrontMatter](https://jekyllrb.com/docs/front-matter/) for variables. It also allows you to write you website content in Markdown, as well as HTML.
+Jekyll is used to compile the file contents and output all of the files for your static website, typically by running a command like `bundle exec jekyll serve`. Jekyll typically supports websites with static content, making it ideal for blogs. Jekyll leverages the [Liquid][LiquidWebsiteUrl] programming language for flow control (if statements, loops, etc.) and [FrontMatter][FrontMatterWebsiteUrl] for variables. It also allows you to write you website content in Markdown, as well as HTML.
 
 Visit [the official Jekyll site](https://jekyllrb.com/) to learn more and see how to get started with it.
 
@@ -36,16 +42,21 @@ Reasons why I wanted to convert my blog away from WordPress:
 Reasons why I decided to use Jekyll:
 
 - __Source Control__ - As a software developer, using a git repo is familiar to me, and it means all changes are in source control. There's no external database dependency to manage and maintain. It also means no longer having to take backups.
-- __Markdown__ - It supports writing in your posts on Markdown. Enough said.
-- __Everything Is Text__ - Updating and creating posts is easy and can be done from any editor, even just with the GitHub online editor. There's no magic going on behind the scenes; everything is plain text.
-- __Customization__ - There are tons of themes available for use straight away. If you don't like them, you can customize them, or create your own from scratch, assuming you know HTML, CSS, Javascript, Liquid, and FrontMatter (before this migration I hadn't heard of Liquid or FrontMatter).
-- __It's Free__ - I can host my Jekyll site on GitHub Pages for free!
+- __Markdown__ - It supports writing in your posts in [Markdown](https://www.markdownguide.org/getting-started). Enough said.
+- __Everything Is Text__ - Updating and creating posts is easy and can be done from any text editor, even just with the GitHub online editor. There's no magic going on behind the scenes; everything is plain text.
+- __Customization__ - There are tons of themes available for use straight away. If you don't like them, you can customize them, or create your own from scratch, assuming you know HTML, CSS, Javascript, Liquid, and FrontMatter (before this migration I hadn't heard of [Liquid][LiquidWebsiteUrl] or [FrontMatter][FrontMatterWebsiteUrl]).
+- __Preview Changes Locally__ - Jekyll allows you to host the site on your local machine to preview any changes you've made, whether it's just a new post that you've written, or large sweeping change like changing your theme. This way I can preview my changes and make sure everything is the way I want it before pushing it to the live site.
+- __It's Free__ - Jekyll itself is [open source](https://github.com/jekyll/jekyll) and free.
+- __Host Your Site Anywhere__ - Because Jekyll simply outputs the HTML files of your site, you can host your site wherever you like; there are no special requirements from your hosting provider.
+- __Free Hosting On GitHub Pages!__ - [GitHub Pages supports Jekyll](https://help.github.com/en/articles/setting-up-your-github-pages-site-locally-with-jekyll) and allows you to host your site completely for free! [More info](https://jekyllrb.com/docs/github-pages/).
 
 ### Why didn't I go to some other free hosted service
 
 There are a ton of [free blog hosting options](https://www.techradar.com/news/the-best-free-blogging-sites) out there, even programming focused ones like [dev.to](https://dev.to), so why did I decide to go this route?
 
-I originally started my blog with [GeeksWithBlogs.net](http://geekswithblogs.net). A couple years after starting my blog, they announced that they were shutting down (although they still seem to be around today, **head-scratch*). With the thought of losing all of the hard work I had put into my blog content (even if it wasn't great), it was then that I decided I was going to move into a self-hosted blog alternative. One where even if my provider disappeared one day, I wouldn't lose all of my hard work. Luckily there was an existing process for exporting from GeeksWithBlogs to WordPress, and that's what I went with. With WordPress I would be able to have database backups and manually put my files into source control. Back then (circa 2012), this was very appealing. I wouldn't be relying on a 3rd party service anymore, and would truly own (and host) my content. I decided to self-host my WordPress site so that I wouldn't be relying on some 3rd party provider that might go under again, and so that I had more options between themes and plugins to use, while not subjecting my readers invasive advertisements.
+I originally started my blog with [GeeksWithBlogs.net](http://geekswithblogs.net). A couple years after starting my blog, they announced that they were shutting down (although they still seem to be around today, \*head-scratch\*). With the thought of losing all of the hard work I had put into my blog content (even if it wasn't great), it was then that I decided I was going to move into a self-hosted blog alternative. One where even if my provider disappeared one day, I wouldn't lose all of my hard work.
+
+Luckily there was an existing process for exporting from GeeksWithBlogs to WordPress, and that's what I went with. With WordPress I would be able to have database backups and manually put my files into source control. Back then (circa 2012), this was very appealing. I wouldn't be relying on a 3rd party service anymore, and would truly own (and host) my content. I decided to self-host my WordPress site so that I wouldn't be relying on some 3rd party provider that might go under again, and so that I had more options between themes and plugins to use, while not subjecting my readers invasive advertisements.
 
 Fast-forward 7 years; being able to natively store my blog in source control with free hosting is even more appealing.
 
@@ -78,21 +89,23 @@ If the theme you choose doesn't support a specific feature, you can always add i
 
 This was probably one of the most confusing parts of the migration for me. There are 3 different ways you can use a theme in Jekyll, and not all themes support all 3 ways. The 3 options you have are:
 
-1. __Fork The Theme Repository__ - Basically clone all of the source code, and then go ahead and add your posts to it and customize it however you like. This is perhaps the most straightforward approach, but it doesn't allow you to automatically take new updates to the theme; you would have to manually merge updated into your fork.
+1. __Fork The Theme Repository__ - Basically clone all of the source code, and then go ahead and add your posts to it and customize it however you like. This is perhaps the most straightforward approach, but it doesn't allow you to automatically take new updates to the theme; you would have to manually merge changes into your forked repository.
 1. __Ruby Gems__ - [The official docs](https://jekyllrb.com/docs/themes/) describe this better than I ever could, but essentially you have a `Gemfile` that lists the dependencies of your site, including your theme. You run a command like `bundle update` to update your gem versions and pull the latest version of the gem's files into your project. This is how you update your site to a newer version of the theme. In the .Net world, this is similar to a NuGet package. You don't actually see the theme files in your project like when forking a theme repository though, so it helps keep your repo nice and clean with only the files you care about. Most themes support this method.
-1. __GitHub Remote Repository__ - I believe this option is only available for themes hosted in GitHub (which most are), and not all themes support it. This method allows you to always be on the latest version of the theme without having to run any addition commands (e.g. `bundle update`). Rather than including the theme in your `Gemfile`, you instead include a line in your `_config.yml` that references the remote theme repo. e.g. `remote_theme: mmistakes/minimal-mistakes` to always use the latest version of the theme, or `mmistakes/minimal-mistakes@26c1989` to use a specific branch/commit/tag of the theme. This allows your site to always be on the latest version of the theme without any intervention, or use the `@branch/commit/tag` syntax to stay on a specific version until you decide to update. As with Ruby Gems, this option does not store the theme files in your repo, keeping your repo nice and clean.
+1. __GitHub Remote Theme Repository__ - I believe this option is only available for themes hosted in GitHub (which most are), and not all themes support it. This method allows you to always be on the latest version of the theme without having to run any addition commands (e.g. `bundle update`). Rather than including the theme in your `Gemfile`, you instead include a line in your `_config.yml` that references the remote theme repo. e.g. `remote_theme: mmistakes/minimal-mistakes` to always use the latest version of the theme, or `mmistakes/minimal-mistakes@26c1989` to use a specific branch/commit/tag of the theme. This allows your site to always be on the latest version of the theme without any intervention, or use the `@branch/commit/tag` syntax to stay on a specific version until you decide to update. As with Ruby Gems, this option does not store the theme files in your repo, keeping your repo nice and clean. GitHub Pages has several built-in themes that [you can use for your Jekyll site](https://help.github.com/en/articles/adding-a-jekyll-theme-to-your-github-pages-site) as well if you like. [More info](https://github.com/benbalter/jekyll-remote-theme).
 
-I ended up using the [minimal mistakes](https://mmistakes.github.io/minimal-mistakes/) theme and the remote repository strategy.
+I ended up using the [minimal mistakes][MinimalMistakesWebsiteUrl] theme and the remote theme repository strategy.
 
 ### Troubleshooting theme issues
 
 I first started out using the Ruby Gems approach, but ran into issues where the site wouldn't display my posts; it seemed to work with some themes (ones I didn't want to actually use), but not others. I didn't understand why at the time, but it was due to my lack of understanding of how `Liquid` and `FrontMatter` worked with the themes. Not all themes looks for the same variables; some expect your posts to have `layout: post` defined on them, others want `layout: posts`, or `layout: single`, or something else. If the posts don't have the theme's expected FrontMatter variables defined on them, they might not be recognized as themes, causing them to not be displayed, or to be displayed, but not look how you expect them to.
 
-In addition to specific FrontMatter variables, different themes often expect to find different variables defined in your `_config.yml` file as well. While there are some standard variables that most themes expect to find, such as `name` and `description`, theme's may expect other variables as well depending on what features they offer. For example, the minimal mistakes theme expected to find a `words_per_minute` variable so that it can display the estimated reading time of a post.
+In addition to specific FrontMatter variables, different themes often expect to find different variables defined in your `_config.yml` file as well. While there are some standard variables that most themes expect to find, such as `name` and `description`, theme's may expect other variables as well depending on what features they offer. For example, the [minimal mistakes theme][MinimalMistakesWebsiteUrl] expected to find a `words_per_minute` variable so that it can display the estimated reading time of a post.
 
 With Jekyll, `Liquid` accesses variables defined in the `_config.yml` by using the `site` keyword. For example, in my theme's code it accesses the `words_per_minute` variable by using `site.words_per_minute`. Variables defined in a posts FrontMatter are accessed using the `post` keyword, such as `post.date`, where `date` is a FrontMatter variable that I define at the top of all my posts.
 
-The moral is, if your site is not displaying how you expect it to, read the theme's documentation (if it has some), or dig right into it's code to see what variables it expects to be defined at the `site` and `post` level.
+Also, some themes only enable certain features when Jekyll is running in production mode. For example, [minimal mistakes][MinimalMistakesWebsiteUrl] only displays advertisements and the comment posting form when running in production mode. Running Jekyll in production mode involves setting the `JEKYLL_ENV` variable to `production`. You can set this variable when starting your Jekyll site by using `JEKYLL_ENV=production bundle exec jekyll serve`. For some reason, this wouldn't work for me when running this command in PowerShell, and I instead had to use Bash. If using GitHub Pages to host your site, it will have the variable set to `production` by default.
+
+So if your site is not displaying how you expect it to, read the theme's documentation (if it has any), or dig right into its code to see what variables it expects to be defined at the `site` and `post` level.
 
 ## Using Staticman to get comments working in Jekyll
 
@@ -103,3 +116,26 @@ There are several options for adding comments to your Jekyll site, such as [Disq
 
 ## Other manual changes I made to the theme
 
+
+## Running the Jekyll site on GitHub Pages
+
+
+## My editor preference
+
+While I can technically use any text editor to create blog posts, my favourite editor is VS Code, for a number of reasons:
+
+- It has native Git support, and pushing my changes up to GitHub is a breeze.
+- It has a built-in terminal, making it easy to build and host the Jekyll site locally to preview my changes.
+- It has some amazing extensions that make writing posts in markdown a great experience:
+  - [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one)
+  - [markdownlint](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint)
+  - [Path Autocomplete](https://marketplace.visualstudio.com/items?itemName=ionutvmi.path-autocomplete)
+  - [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
+- It also has many extensions for doing web development, which is handy if you want to customize your site:
+  - [HTML Snippets](https://marketplace.visualstudio.com/items?itemName=abusaidm.html-snippets)
+  - [HTML CSS Support](https://marketplace.visualstudio.com/items?itemName=ecmel.vscode-html-css)
+  - [Liquid](https://marketplace.visualstudio.com/items?itemName=sissel.shopify-liquid)
+
+[MinimalMistakesWebsiteUrl]: https://mmistakes.github.io/minimal-mistakes/
+[LiquidWebsiteUrl]: https://shopify.github.io/liquid/
+[FrontMatterWebsiteUrl]: https://jekyllrb.com/docs/front-matter/
