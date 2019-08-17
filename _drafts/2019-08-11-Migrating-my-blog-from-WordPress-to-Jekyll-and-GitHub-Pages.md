@@ -41,6 +41,14 @@ Reasons why I decided to use Jekyll:
 - __Customization__ - There are tons of themes available for use straight away. If you don't like them, you can customize them, or create your own from scratch, assuming you know HTML, CSS, Javascript, Liquid, and FrontMatter (before this migration I hadn't heard of Liquid or FrontMatter).
 - __It's Free__ - I can host my Jekyll site on GitHub Pages for free!
 
+### Why didn't I go to some other free hosted service
+
+There are a ton of [free blog hosting options](https://www.techradar.com/news/the-best-free-blogging-sites) out there, even programming focused ones like [dev.to](https://dev.to), so why did I decide to go this route?
+
+I originally started my blog with [GeeksWithBlogs.net](http://geekswithblogs.net). A couple years after starting my blog, they announced that they were shutting down (although they still seem to be around today, **head-scratch*). With the thought of losing all of the hard work I had put into my blog content (even if it wasn't great), it was then that I decided I was going to move into a self-hosted blog alternative. One where even if my provider disappeared one day, I wouldn't lose all of my hard work. Luckily there was an existing process for exporting from GeeksWithBlogs to WordPress, and that's what I went with. With WordPress I would be able to have database backups and manually put my files into source control. Back then (circa 2012), this was very appealing. I wouldn't be relying on a 3rd party service anymore, and would truly own (and host) my content. I decided to self-host my WordPress site so that I wouldn't be relying on some 3rd party provider that might go under again, and so that I had more options between themes and plugins to use, while not subjecting my readers invasive advertisements.
+
+Fast-forward 7 years; being able to natively store my blog in source control with free hosting is even more appealing.
+
 ## How I migrated from WordPress to Jekyll
 
 If you're starting a new blog or website from scratch, using Jekyll is pretty straightforward and you can get up and running in a few minutes. I had a lot of existing content in WordPress that I wanted to migrate though, so I used the [WordPress to Jekyll Exporter plugin](https://github.com/benbalter/wordpress-to-jekyll-exporter), which worked great. I did have a problem with it at first though, in that [it kept generating a zero-byte zip file](https://github.com/benbalter/wordpress-to-jekyll-exporter/issues/145). Fortunately I was able to just roll it back from v2.3.0 to 2.2.3 and that version worked properly.
@@ -72,13 +80,23 @@ This was probably one of the most confusing parts of the migration for me. There
 
 1. __Fork The Theme Repository__ - Basically clone all of the source code, and then go ahead and add your posts to it and customize it however you like. This is perhaps the most straightforward approach, but it doesn't allow you to automatically take new updates to the theme; you would have to manually merge updated into your fork.
 1. __Ruby Gems__ - [The official docs](https://jekyllrb.com/docs/themes/) describe this better than I ever could, but essentially you have a `Gemfile` that lists the dependencies of your site, including your theme. You run a command like `bundle update` to update your gem versions and pull the latest version of the gem's files into your project. This is how you update your site to a newer version of the theme. In the .Net world, this is similar to a NuGet package. You don't actually see the theme files in your project like when forking a theme repository though, so it helps keep your repo nice and clean with only the files you care about. Most themes support this method.
-1. __GitHub Remote Repository__ - I believe this option is only available for themes hosted in GitHub (which most are), and not all themes support it. This method allows you to always be on the latest version of the theme without having to run any addition commands (e.g. `bundle update`). Rather than including the theme in your `Gemfile`, you instead include a line in your `_config.yml` that references the remote theme repo. e.g. `remote_theme: mmistakes/minimal-mistakes` to always use the latest version of the theme, or `mmistakes/minimal-mistakes@26c1989` to use a specific branch/commit/tag of the theme. This allows your site to always be on the latest version of the theme without any intervention, or use the `@branch/commit/tag` syntax to stay on a specific version until you decide to update. As with Ruby Gems, this option does not include the theme files in your repo, keeping it nice and clean.
+1. __GitHub Remote Repository__ - I believe this option is only available for themes hosted in GitHub (which most are), and not all themes support it. This method allows you to always be on the latest version of the theme without having to run any addition commands (e.g. `bundle update`). Rather than including the theme in your `Gemfile`, you instead include a line in your `_config.yml` that references the remote theme repo. e.g. `remote_theme: mmistakes/minimal-mistakes` to always use the latest version of the theme, or `mmistakes/minimal-mistakes@26c1989` to use a specific branch/commit/tag of the theme. This allows your site to always be on the latest version of the theme without any intervention, or use the `@branch/commit/tag` syntax to stay on a specific version until you decide to update. As with Ruby Gems, this option does not store the theme files in your repo, keeping your repo nice and clean.
 
-I first started out using the Ruby Gems approach, but ran into issues where I just couldn't get my site to display properly. While the problems were most likely due to me not understanding `Liquid` and `FrontMatter` at the time, I ended up using the [minimal mistakes](https://mmistakes.github.io/minimal-mistakes/) theme and the remote repository strategy.
+I ended up using the [minimal mistakes](https://mmistakes.github.io/minimal-mistakes/) theme and the remote repository strategy.
+
+### Troubleshooting theme issues
+
+I first started out using the Ruby Gems approach, but ran into issues where the site wouldn't display my posts; it seemed to work with some themes (ones I didn't want to actually use), but not others. I didn't understand why at the time, but it was due to my lack of understanding of how `Liquid` and `FrontMatter` worked with the themes. Not all themes looks for the same variables; some expect your posts to have `layout: post` defined on them, others want `layout: posts`, or `layout: single`, or something else. If the posts don't have the theme's expected FrontMatter variables defined on them, they might not be recognized as themes, causing them to not be displayed, or to be displayed, but not look how you expect them to.
+
+In addition to specific FrontMatter variables, different themes often expect to find different variables defined in your `_config.yml` file as well. While there are some standard variables that most themes expect to find, such as `name` and `description`, theme's may expect other variables as well depending on what features they offer. For example, the minimal mistakes theme expected to find a `words_per_minute` variable so that it can display the estimated reading time of a post.
+
+With Jekyll, `Liquid` accesses variables defined in the `_config.yml` by using the `site` keyword. For example, in my theme's code it accesses the `words_per_minute` variable by using `site.words_per_minute`. Variables defined in a posts FrontMatter are accessed using the `post` keyword, such as `post.date`, where `date` is a FrontMatter variable that I define at the top of all my posts.
+
+The moral is, if your site is not displaying how you expect it to, read the theme's documentation (if it has some), or dig right into it's code to see what variables it expects to be defined at the `site` and `post` level.
 
 ## Using Staticman to get comments working in Jekyll
 
-There are several options for adding comments to your Jekyll site, such as Discuss,
+There are several options for adding comments to your Jekyll site, such as [Disqus](https://disqus.com).
 
 - Add comment support.
   - Tutorials: https://mademistakes.com/articles/jekyll-static-comments/ and https://mademistakes.com/articles/improving-jekyll-static-comments/
