@@ -1,8 +1,6 @@
 ---
 title: "Migrating my blog from WordPress to Jekyll and GitHub Pages"
 permalink: /Migrating-my-blog-from-WordPress-to-Jekyll-and-GitHub-Pages/
-date: 2011-04-17T22:58:00-06:00
-last_modified_at: 2016-03-09T16:20:02-05:00
 comments_locked: false
 categories:
   - Jekyll
@@ -126,6 +124,7 @@ While I can technically use any text editor to create blog posts, my favourite e
 
 - It has native Git support, and pushing my changes up to GitHub is a breeze.
 - It has a built-in terminal, making it easy to build and host the Jekyll site locally to preview my changes.
+- It has a built-in Markdown previewer, so if I don't want to actually spin up my site locally to preview the changes, I can use the built-in editor to quickly verify that my Markdown syntax is all correct.
 - It has some amazing extensions that make writing posts in markdown a great experience:
   - [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one)
   - [markdownlint](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint)
