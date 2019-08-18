@@ -1,6 +1,6 @@
 ---
 title: "Template post"
-permalink: /template-post/
+permalink: /Template-post/
 #date: 2099-01-17T22:58:00-06:00
 #last_modified_at: 2099-01-22T16:20:02-05:00
 comments_locked: false
