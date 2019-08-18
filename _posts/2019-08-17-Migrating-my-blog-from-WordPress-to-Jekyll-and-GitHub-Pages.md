@@ -25,7 +25,7 @@ I decided to migrate my blog from WordPress to Jekyll, and this blog post highli
 
 You've probably heard of WordPress, but maybe not Jekyll. They are both platforms for hosting blog content. The big difference, in my eyes, is that WordPress stores all of it's data in a MySQL database, while Jekyll's data is all stored in text files. This means your entire blog contents can be stored in source control, such as Git.
 
-Jekyll is used to compile the file contents and output all of the files for your static website, typically by running a command like `bundle exec jekyll serve`. Jekyll typically supports websites with static content, making it ideal for blogs. Jekyll leverages the [Liquid][LiquidWebsiteUrl] programming language for flow control (if statements, loops, etc.) and [FrontMatter][FrontMatterWebsiteUrl] for variables. It also allows you to write you website content in Markdown, as well as HTML.
+Jekyll is used to compile the file contents and output all of the files for your static website, typically by running a command like `bundle exec jekyll serve`. Jekyll typically supports websites with static content, making it ideal for blogs. Jekyll leverages the [Liquid][LiquidWebsiteUrl] programming language for flow control (if statements, loops, etc.) and [FrontMatter][FrontMatterWebsiteUrl] for variables. It also allows you to write your website content in [Markdown][MarkdownWebsiteUrl], as well as HTML.
 
 Visit [the official Jekyll site](https://jekyllrb.com/) to learn more and see how to get started with it.
 
@@ -44,7 +44,7 @@ Reasons why I wanted to convert my blog away from WordPress:
 Reasons why I decided to use Jekyll:
 
 - __Source Control__ - As a software developer, using a git repo is familiar to me, and it means all changes are in source control. There's no external database dependency to manage and maintain. It also means no longer having to take backups.
-- __Markdown__ - It supports writing in your posts in [Markdown](https://www.markdownguide.org/getting-started). Enough said.
+- __Markdown__ - It supports writing in your posts in [Markdown][MarkdownWebsiteUrl]. Enough said.
 - __Everything Is Text__ - Updating and creating posts is easy and can be done from any text editor, even just with the GitHub online editor. There's no magic going on behind the scenes (other than the filename convention and FrontMatter); everything is plain text.
 - __Customization__ - There are tons of themes available. If you don't like them, you can customize them, or create your own from scratch, assuming you know HTML, CSS, Javascript, Liquid, and FrontMatter (before this migration I hadn't heard of [Liquid][LiquidWebsiteUrl] or [FrontMatter][FrontMatterWebsiteUrl]).
 - __Preview Changes Locally__ - Jekyll allows you to host the site on your local machine to preview any changes you've made, whether it's just a new post that you've written, or large sweeping change like changing your theme. This way I can preview my changes and make sure everything is the way I want it before pushing it to the live site.
@@ -159,7 +159,8 @@ The hardest part was getting my existing content changed into a format that my c
 
 Happy <strike>coding</strike> blogging :)
 
-[MinimalMistakesWebsiteUrl]: https://mmistakes.github.io/minimal-mistakes/
 [LiquidWebsiteUrl]: https://shopify.github.io/liquid/
 [FrontMatterWebsiteUrl]: https://jekyllrb.com/docs/front-matter/
+[MarkdownWebsiteUrl]: https://www.markdownguide.org/getting-started
+[MinimalMistakesWebsiteUrl]: https://mmistakes.github.io/minimal-mistakes/
 [StaticmanWebsiteUrl]: https://staticman.net/
