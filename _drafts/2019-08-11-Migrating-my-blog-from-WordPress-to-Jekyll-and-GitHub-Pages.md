@@ -17,7 +17,7 @@ You may have noticed my blog has a very different look now! It used to look like
 
 ![Old WordPress Blog Screenshot](/assets/Posts/Migrating-my-blog-from-WordPress-to-Jekyll-and-GitHub-Pages/OldWordPressBlogScreenshot.png)
 
-I decided to migrate my blog from WordPress to Jekyll, and this blog post highlights some of my experiences when doing so.
+I decided to migrate my blog from WordPress to Jekyll, and this blog post highlights my reasons why and some of my experiences when doing so.
 
 ## What is Jekyll
 
@@ -29,9 +29,11 @@ Visit [the official Jekyll site](https://jekyllrb.com/) to learn more and see ho
 
 ## Why I migrated from WordPress to Jekyll
 
+You may have noticed that I haven't blogged in quite a while; almost 2 years! While I was busy with work and family, another contributor was simply that the technology didn't make it _easy_ to post new content.
+
 Reasons why I wanted to convert my blog away from WordPress:
 
-- __The Editor__ - I wasn't a fan of the WordPress online editor, so I used [Open Live Writer](http://openlivewriter.org). It provided a nice experience, but required some plugins for code snippets and images to work properly. Also, updating posts would often result in duplicate images and attachments being uploaded.
+- __The Editor__ - I wasn't a fan of the WordPress online editor, so I used [Open Live Writer](http://openlivewriter.org). It provided a nicer experience, but required some plugins for code snippets and images to work properly. Also, updating posts would often result in duplicate images and attachments being uploaded. It just wasn't a great experience, and it required a bit of work to get everything setup correctly again after reinstalling Windows. Also, when editing posts later in WordPress, I'd have to wade through generated HTML code as well instead of focusing just on my content.
 - __Special Characters__ - Special XML characters common in code (such as `<`, `>`, and `"`) would get converted to their escape sequence when posting through Open Live Writer, and I'd always have to go into the online editor and modify my code snippets to transform things like `&lt;` back into their proper character.
 - __Markdown__ - I wanted to write my posts in Markdown so that I could focus on my content, and less on it's presentation. It also meant I wouldn't need lean on a special editor or to mess with HTML. I tried a few WordPress plugins, but ultimately they didn't meet my expectations.
 - __Update Nightmares__ - WordPress and the plugins constantly had new updates that needed to be applied. My main issue was often the updates would fail, leaving my blog offline until I manually fixed things up; I learned very quickly to backup all files and the database before doing any updates. The resolution often involved grabbing the new version's updated source code and manually applying the updated files to my WordPress instance over FTP, rather than using the `Update` button in the WordPress GUI. I'm not sure if this is a common problem for other WordPress users, but it was for me for several years.
@@ -41,11 +43,11 @@ Reasons why I decided to use Jekyll:
 
 - __Source Control__ - As a software developer, using a git repo is familiar to me, and it means all changes are in source control. There's no external database dependency to manage and maintain. It also means no longer having to take backups.
 - __Markdown__ - It supports writing in your posts in [Markdown](https://www.markdownguide.org/getting-started). Enough said.
-- __Everything Is Text__ - Updating and creating posts is easy and can be done from any text editor, even just with the GitHub online editor. There's no magic going on behind the scenes; everything is plain text.
-- __Customization__ - There are tons of themes available for use straight away. If you don't like them, you can customize them, or create your own from scratch, assuming you know HTML, CSS, Javascript, Liquid, and FrontMatter (before this migration I hadn't heard of [Liquid][LiquidWebsiteUrl] or [FrontMatter][FrontMatterWebsiteUrl]).
+- __Everything Is Text__ - Updating and creating posts is easy and can be done from any text editor, even just with the GitHub online editor. There's no magic going on behind the scenes (other than the filename convention and FrontMatter); everything is plain text.
+- __Customization__ - There are tons of themes available. If you don't like them, you can customize them, or create your own from scratch, assuming you know HTML, CSS, Javascript, Liquid, and FrontMatter (before this migration I hadn't heard of [Liquid][LiquidWebsiteUrl] or [FrontMatter][FrontMatterWebsiteUrl]).
 - __Preview Changes Locally__ - Jekyll allows you to host the site on your local machine to preview any changes you've made, whether it's just a new post that you've written, or large sweeping change like changing your theme. This way I can preview my changes and make sure everything is the way I want it before pushing it to the live site.
 - __It's Free__ - Jekyll itself is [open source](https://github.com/jekyll/jekyll) and free.
-- __Host Your Site Anywhere__ - Because Jekyll simply outputs the HTML files of your site, you can host your site wherever you like; there are no special requirements from your hosting provider.
+- __Host Your Site Anywhere__ - Because Jekyll simply outputs the HTML files of your site, you can host your site wherever you like; there are no special requirements from your hosting provider (e.g. supporting MySQL).
 - __Free Hosting On GitHub Pages!__ - [GitHub Pages supports Jekyll](https://help.github.com/en/articles/setting-up-your-github-pages-site-locally-with-jekyll) and allows you to host your site completely for free! [More info](https://jekyllrb.com/docs/github-pages/).
 
 ### Why didn't I go to some other free hosted service
@@ -118,27 +120,31 @@ Getting your site up and running on GitHub Pages is actually super easy. GitHub 
 
 Pretty much though, if you're able to build and serve your Jekyll site on your local computer, just push the files to your GitHub repo and it will compile and host your site for you. It may take a couple minutes for any changes to show on the GitHub Pages after you've pushed them to the GitHub repo, as it needs to compile your Jekyll site to generate the GitHub Pages files.
 
-## Using Staticman to get comments working in Jekyll
+## Using Staticman to get comments in Jekyll
 
-There are several options for adding comments to your Jekyll site, such as [Disqus](https://disqus.com).
+With Staticman producing a static website and not having a database, it doesn't natively lend itself to comment submissions. Luckily, there are several options for adding comments to your Jekyll site, with one of the most popular being [Disqus](https://disqus.com). I decided to go with [Staticman][StaticmanWebsiteUrl] for my blog because, again, I didn't want to be reliant on a 3rd party; I want to own all of the content and not worry about a 3rd party going out of business, changing their pricing model, or figuring out how to export my comments out of their system at a later point in time.
 
-- Add comment support.
-  - Tutorials: https://mademistakes.com/articles/jekyll-static-comments/ and https://mademistakes.com/articles/improving-jekyll-static-comments/
+With [Staticman][StaticmanWebsiteUrl], you [add a form](https://mademistakes.com/articles/jekyll-static-comments/) [to your website](https://mademistakes.com/articles/improving-jekyll-static-comments/) (if your theme doesn't provide a built-in one). When a comment is submitted, it sends the information to the Staticman API, and then Staticman will open up a pull request against your GitHub (or GitLab) repository with the information. Once the pull request is completed, the comment will now be inside of your Git repository, causing GitHub Pages to rebuild your Jekyll site and display the new comment.
 
+The idea of how Staticman works is simple enough, and actually pretty clever. Unfortunately when I went to integrate Staticman into my Jekyll site (summer 2019), there were issues with Staticman. The main issue was that the official documentation says to use a free publicly hosted instance of the Staticman API, and gives the URL for it. The problem is that it's using a free hosting plan and is limited to a certain number of requests per day. As more and more people adopted it, it began reaching it's quota very often, resulting in frequent `409 Too many requests` errors when people tried to submit comments.
 
-## My editor preference
+This led me down the path of hosting my own private instance of Staticman. Luckily, a few other people had already taken this route as well and [blogged](https://www.datascienceblog.net/post/other/staticman_comments/) [some](https://vincenttam.gitlab.io/post/2018-09-16-staticman-powered-gitlab-pages/2/) [nice](https://bloggerbust.ca/series/staticman-with-github-and-zeit-now/) [tutorials](https://github.com/eduardoboucas/staticman/issues/293) for various hosting providers. The unfortunate bit was the official Staticman docs had not been updated to include any of this information, so finding it involved hunting through numerous GitHub issues on the Staticman repository. Also, many of the code changes required for these hosting options had not been merged into the Staticman `dev` or `master` branches yet, so it meant using an "unofficial" Staticman branch.
+
+For myself, I ended up using Heroku to host my Staticman instance. It's completely free, and since I'm the only one hitting the API, I shouldn't run over my API request limit. [This GitHub issue](https://github.com/eduardoboucas/staticman/issues/294) provides more information around exactly what I did and the issues I encountered and their resolutions. My main issues had to do around using ReCaptcha on comment submissions, but I got it all figured out in the end.
+
+## Bonus section: My editor preference
 
 While I can technically use any text editor to create blog posts, my favourite editor is VS Code, for a number of reasons:
 
 - It has native Git support, and pushing my changes up to GitHub is a breeze.
-- It has a built-in terminal, making it easy to build and host the Jekyll site locally to preview my changes.
-- It has a built-in Markdown previewer, so if I don't want to actually spin up my site locally to preview the changes, I can use the built-in editor to quickly verify that my Markdown syntax is all correct.
+- It has a built-in terminal, making it easy to build and serve the Jekyll site locally to preview my changes.
+- It has a built-in Markdown previewer, so if I don't want to actually spin up my site locally to preview the changes, I can use the built-in editor to quickly verify that my Markdown syntax is all correct and looks the way I expect.
 - It has some amazing extensions that make writing posts in markdown a great experience:
   - [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one)
   - [markdownlint](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint)
   - [Path Autocomplete](https://marketplace.visualstudio.com/items?itemName=ionutvmi.path-autocomplete)
   - [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
-- It also has many extensions for doing web development, which is handy if you want to customize your site:
+- It also has many extensions for doing web development, which is handy if you want to customize your Jekyll site:
   - [HTML Snippets](https://marketplace.visualstudio.com/items?itemName=abusaidm.html-snippets)
   - [HTML CSS Support](https://marketplace.visualstudio.com/items?itemName=ecmel.vscode-html-css)
   - [Liquid](https://marketplace.visualstudio.com/items?itemName=sissel.shopify-liquid)
@@ -154,3 +160,4 @@ Happy <strike>coding</strike> blogging :)
 [MinimalMistakesWebsiteUrl]: https://mmistakes.github.io/minimal-mistakes/
 [LiquidWebsiteUrl]: https://shopify.github.io/liquid/
 [FrontMatterWebsiteUrl]: https://jekyllrb.com/docs/front-matter/
+[StaticmanWebsiteUrl]: https://staticman.net/
