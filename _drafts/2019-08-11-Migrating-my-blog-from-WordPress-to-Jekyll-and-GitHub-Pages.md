@@ -17,7 +17,7 @@ You may have noticed my blog has a very different look now! It used to look like
 
 ![Old WordPress Blog Screenshot](/assets/Posts/Migrating-my-blog-from-WordPress-to-Jekyll-and-GitHub-Pages/OldWordPressBlogScreenshot.png)
 
-I decided to migrate my blog from WordPress to Jekyll.
+I decided to migrate my blog from WordPress to Jekyll, and this blog post highlights some of my experiences when doing so.
 
 ## What is Jekyll
 
@@ -83,7 +83,7 @@ There are [a lot of great Jekyll themes to choose from](https://rubygems.org/sea
 
 If the theme you choose doesn't support a specific feature, you can always add it in yourself, but it does require some development effort and know-how. It's great if you can find one that not only looks great, but that also natively supports everything you want.
 
-### Different ways of leveraging a theme
+### Different ways of leveraging a Jekyll theme
 
 This was probably one of the most confusing parts of the migration for me. There are 3 different ways you can use a theme in Jekyll, and not all themes support all 3 ways. The 3 options you have are:
 
@@ -93,7 +93,7 @@ This was probably one of the most confusing parts of the migration for me. There
 
 I ended up using the [minimal mistakes][MinimalMistakesWebsiteUrl] theme and the remote theme repository strategy.
 
-### Troubleshooting theme issues
+### Troubleshooting Jekyll theme issues
 
 I first started out using the Ruby Gems approach, but ran into issues where the site wouldn't display my posts; it seemed to work with some themes (ones I didn't want to actually use), but not others. I didn't understand why at the time, but it was due to my lack of understanding of how `Liquid` and `FrontMatter` worked with the themes. Not all themes looks for the same variables; some expect your posts to have `layout: post` defined on them, others want `layout: posts`, or `layout: single`, or something else. If the posts don't have the theme's expected FrontMatter variables defined on them, they might not be recognized as themes, causing them to not be displayed, or to be displayed, but not look how you expect them to.
 
@@ -105,17 +105,25 @@ Also, some themes only enable certain features when Jekyll is running in product
 
 So if your site is not displaying how you expect it to, read the theme's documentation (if it has any), or dig right into its code to see what variables it expects to be defined at the `site` and `post` level.
 
+Lastly, I've found that sometimes the best or quickest way to troubleshoot issues is to find somebody elses website that's using the same theme or integrations as you and take a look at their code. Feel free to check out [the code used to host this blog](https://github.com/deadlydog/deadlydog.github.io).
+
+## Running the Jekyll site on GitHub Pages
+
+Getting your site up and running on GitHub Pages is actually super easy. GitHub has [some help docs](https://help.github.com/en/articles/using-jekyll-as-a-static-site-generator-with-github-pages) that walk you through it. The main points are:
+
+- In your repository's `Settings` page, enable `GitHub Pages`.
+- If your Jekyll site is on your User or Organization page (e.g. username.github.io), then GitHub Pages will build your site from the `master` branch.
+- If your Jekyll site is on a Project page, it will build your site from the `gh-pages` branch.
+- The `_config.yml` file and other Jekyll files must be at the root of the branch, or optionally [in a `docs` folder at the root of the branch](https://help.github.com/en/articles/configuring-a-publishing-source-for-github-pages).
+
+Pretty much though, if you're able to build and serve your Jekyll site on your local computer, just push the files to your GitHub repo and it will compile and host your site for you. It may take a couple minutes for any changes to show on the GitHub Pages after you've pushed them to the GitHub repo, as it needs to compile your Jekyll site to generate the GitHub Pages files.
+
 ## Using Staticman to get comments working in Jekyll
 
 There are several options for adding comments to your Jekyll site, such as [Disqus](https://disqus.com).
 
 - Add comment support.
   - Tutorials: https://mademistakes.com/articles/jekyll-static-comments/ and https://mademistakes.com/articles/improving-jekyll-static-comments/
-
-## Other manual changes I made to the theme
-
-
-## Running the Jekyll site on GitHub Pages
 
 
 ## My editor preference
@@ -134,6 +142,14 @@ While I can technically use any text editor to create blog posts, my favourite e
   - [HTML Snippets](https://marketplace.visualstudio.com/items?itemName=abusaidm.html-snippets)
   - [HTML CSS Support](https://marketplace.visualstudio.com/items?itemName=ecmel.vscode-html-css)
   - [Liquid](https://marketplace.visualstudio.com/items?itemName=sissel.shopify-liquid)
+
+## Conclusion
+
+Hopefully this has given you some insight or tips into what you can do with your own blog. I chose Jekyll because it allows me to host the website wherever I like, and I completely own my content and don't have to worry about my hosting provider going out of business. I also chose it because GitHub Pages natively supports it, and can host my blog completely for free.
+
+The hardest part was getting my existing content changed into a format that my chosen theme expected. I think starting fresh from scratch would be much easier, regardless of what theme you choose to go with. I'm not certain that I would recommend Jekyll for somebody non-technical (like my mom), but for software developers who like to write in Markdown it's definitely a top contender.
+
+Happy <strike>coding</strike> blogging :)
 
 [MinimalMistakesWebsiteUrl]: https://mmistakes.github.io/minimal-mistakes/
 [LiquidWebsiteUrl]: https://shopify.github.io/liquid/
