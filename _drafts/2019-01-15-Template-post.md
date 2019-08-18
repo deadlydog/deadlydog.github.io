@@ -1,8 +1,8 @@
 ---
 title: "Template post"
 permalink: /Template-post/
-#date: 2099-01-17T22:58:00-06:00
-#last_modified_at: 2099-01-22T16:20:02-05:00
+#date: 2099-01-17T00:00:00-06:00
+#last_modified_at: 2099-01-22T00:00:00-06:00
 comments_locked: false
 categories:
   - Blog
