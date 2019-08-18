@@ -1,6 +1,6 @@
 ---
-title: "Order Outlook deleted emails by date deleted"
-permalink: /Order-Outlook-deleted-emails-by-date-deleted/
+title: "Order Outlook Deleted Items folder by date deleted"
+permalink: /Order-Outlook-Deleted-Items-folder-by-date-deleted/
 comments_locked: false
 categories:
   - Email
