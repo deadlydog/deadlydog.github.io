@@ -6,10 +6,12 @@ categories:
   - Jekyll
   - GitHub Pages
   - WordPress
+  - Staticman
 tags:
   - Jekyll
   - GitHub Pages
   - WordPress
+  - Staticman
   - Migrate
 ---
 
