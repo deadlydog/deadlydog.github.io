@@ -87,6 +87,14 @@ We may want to look at [replacing `Rouge` with `Pygments`][HowToUsePygmentsSynta
 By default Jekyll uses `Kramdown` for markdown processing.
 See [this page][JekyllKramdownOptionsDocumentationUrl] for the list of supported options that may be used in `_config.yml`.
 
+To show line numbers in code blocks, rather than using the traditional ``` syntax, do this instead (replacing 'powershell' with the appropriate language):
+
+```liquid
+{% highlight powershell linenos %}
+Your code goes here
+{% endhighlight %}
+```
+
 ### Other sites using the same theme
 
 Here are some other sites using the same theme, so we can see how they've configured theirs and customizations they've made:
