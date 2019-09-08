@@ -1,6 +1,6 @@
 ---
-title: "A better way to do TestCases with Pester"
-permalink: /A-better-way-to-do-TestCases-with-Pester/
+title: "A better way to do TestCases when unit testing with Pester"
+permalink: /A-better-way-to-do-TestCases-when-unit-testing-with-Pester/
 #date: 2099-01-17T00:00:00-06:00
 #last_modified_at: 2099-01-22T00:00:00-06:00
 comments_locked: false
