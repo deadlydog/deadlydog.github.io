@@ -2,7 +2,7 @@
 title: "A better way to do TestCases when unit testing with Pester"
 permalink: /A-better-way-to-do-TestCases-when-unit-testing-with-Pester/
 #date: 2099-01-17T00:00:00-06:00
-#last_modified_at: 2099-01-22T00:00:00-06:00
+last_modified_at: 2019-09-08
 comments_locked: false
 categories:
   - PowerShell
@@ -50,6 +50,20 @@ Describe 'Get-WorkingDirectory' {
 }
 ```
 
+The code above produces the following Pester output:
+
+```text
+Describing Get-WorkingDirectory
+
+  Context When requesting the Application Directory as the working directory
+    [+] Returns the applications directory when no Custom Working Directory is given 98ms
+    [+] Returns the applications directory when a Custom Working Directory is given 15ms
+
+  Context When requesting a custom working directory
+    [+] Returns the custom directory 67ms
+    [+] Returns the custom directory even if its blank 15ms
+```
+
 Don't worry about what the internals of the `Get-WorkingDirectory` function might look like, or the fact that `workingDirectoryOption` is a string rather than an enum/bool/switch, or that we could have separate `Get-CustomWorkingDirectory` and `Get-ApplicationWorkingDirectory` functions.
 Those are all things that could be improved, but we're not concerned with that for this post.
 
@@ -57,7 +71,7 @@ Those are all things that could be improved, but we're not concerned with that f
 
 In the example above we only have 4 test cases, but in practice you may have 10s or 100s of test cases for a particular function.
 Also, in the example above we're able to exercise the function and assert the result in only 2 lines of code, but for other scenarios each test may require many lines to arrange, act, and assert.
-That can quickly cause your test files to quickly bloat from a lot of copy and pasting.
+That can cause your test files to quickly bloat from a lot of copy and pasting.
 One common technique to help alleviate that is to use other functions for arranging and asserting.
 Let's do that here and see how the code transforms.
 
@@ -113,6 +127,7 @@ Describing Get-WorkingDirectory
 
 You can see that each test is now only a single line; one call to the `Assert-GetWorkingDirectoryReturnsCorrectResult` function.
 The only difference between the tests are the parameters that they pass to the function.
+The Pester output is identical.
 
 ## Save lines of code by using `TestCases`
 
@@ -167,21 +182,21 @@ If I would have kept them, the entire function would have needed to be copied, m
 ### Things I don't like about this approach
 
 - In the code, I've lost the english description of what the test is actually testing.
-- I've also lost it in the test result's output.
+- I've also lost it in the Pester test result's output.
 
 This is actually a very big problem in my opinion.
-Not having the english description means that when a tests fails, I don't immediately have a clear idea of what test scenario is no longer working; I need to go digging through the code to try and figure out which of the `TestCases` is failing.
+Not having the english description means that when a tests fails, I don't immediately have a clear idea of what test scenario is no longer working; I need to go digging through the test code to try and figure out which of the `TestCases` is failing.
 Also, once I find which test case is failing, it may not be obvious what the test case is actually intending to test.
 I can look at the parameters, but without any context I'm not sure which parameters are relevant.
 Is the fact that one of the parameters is an empty string important?
 Or maybe it's that the working directory path has a special character in it?
 Or maybe it has to do with the particular `workingDirectoryOption` value being provided?
 
-Having a clear description of what is being tested and what the expected result should be are vitally important. e.g. 'Returns the applications directory when a Custom Working Directory is given'.
+__Having a clear description of what is being tested and what the expected result should be are vitally important__. e.g. 'Returns the applications directory when a Custom Working Directory is given'.
 
 ## A hybrid approach
 
-So we've seen how to use a function to perform the assertions, as well as how to define the test cases stacked on top of each other to easily see and compare all of the test cases being covered.
+So we've seen how to use a function to perform the assertions, as well as how to define the test cases stacked on top of each other to easily compare all of the test cases being covered.
 Let's see if we can put them together to get the benefits of using `TestCases` without incurring the downsides.
 
 ```powershell
