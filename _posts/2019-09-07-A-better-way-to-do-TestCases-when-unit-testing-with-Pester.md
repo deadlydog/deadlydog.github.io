@@ -2,7 +2,7 @@
 title: "A better way to do TestCases when unit testing with Pester"
 permalink: /A-better-way-to-do-TestCases-when-unit-testing-with-Pester/
 #date: 2099-01-17T00:00:00-06:00
-last_modified_at: 2019-09-08
+last_modified_at: 2019-09-09
 comments_locked: false
 categories:
   - PowerShell
@@ -264,9 +264,9 @@ Notice that the `It` block was moved into the `Assert-GetWorkingDirectoryReturns
 
 We are no longer using the built-in `TestCases` functionality, but instead create our own hashtable array of test cases and manually loop through each of them and call the `Assert-GetWorkingDirectoryReturnsCorrectResult` function, splatting the test case parameters.
 Ideally this additional code could be avoided if the native `TestCases` functionality supported providing the `It` description in the `TestCases` hashtable array.
-Hopefully that's a feature that we can get added to Pester in the future, but for now this approach is the best I could think of.
+I've submitted [a GitHub issue requesting this feature in Pester](https://github.com/pester/Pester/issues/1361) to more easily get this functionality, but for now the approach shown here is the best I could think of.
 
-This approach allows us to get the best of both worlds; we have contextual english descriptions of each test case, both in code and in the Pester output, while also having our test cases stacked on top of each other so we can easily compare the parameters for each one.
+This approach allows us to get the best of both worlds; we have contextual english descriptions of each test case, both in code and in the Pester output, while also having our test cases stacked on top of each other so we can easily compare the parameters for each one, and easily add new test cases with minimal code.
 
 While the code in this example is actually longer than the other approaches we started with, that changes as more test cases are added.
 
