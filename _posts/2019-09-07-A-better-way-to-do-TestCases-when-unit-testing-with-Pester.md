@@ -2,7 +2,7 @@
 title: "A better way to do TestCases when unit testing with Pester"
 permalink: /A-better-way-to-do-TestCases-when-unit-testing-with-Pester/
 #date: 2099-01-17T00:00:00-06:00
-last_modified_at: 2019-09-09
+last_modified_at: 2019-09-10
 comments_locked: false
 categories:
   - PowerShell
@@ -266,6 +266,9 @@ We are no longer using the built-in `TestCases` functionality, but instead creat
 Ideally this additional code could be avoided if the native `TestCases` functionality supported providing the `It` description in the `TestCases` hashtable array.
 I've submitted [a GitHub issue requesting this feature in Pester](https://github.com/pester/Pester/issues/1361) to more easily get this functionality, but for now the approach shown here is the best I could think of.
 
+> Update: Since writing this post I've discovered a better Pester-native way that achieves the same results as this hybrid approach.
+> I've left the hybrid approach in here though for anybody interested, and describe the Pester-native approach next.
+
 This approach allows us to get the best of both worlds; we have contextual english descriptions of each test case, both in code and in the Pester output, while also having our test cases stacked on top of each other so we can easily compare the parameters for each one, and easily add new test cases with minimal code.
 
 While the code in this example is actually longer than the other approaches we started with, that changes as more test cases are added.
@@ -273,19 +276,112 @@ While the code in this example is actually longer than the other approaches we s
 I could have skipped the `Context` blocks altogether and just included their text in the `testDescription` which would shorten the code a bit.
 However, the `workingDirectoryOption` parameter value fundamentally changes how the `Get-WorkingDirectory` function behaves, and having separate contexts makes that more clear.
 
+## The Pester-native approach
+
+Since originally writing this post I've discovered that the `It` block supports variable substitution in its name when using the `TestCases` parameter.
+They actually show it off on [the main Pester ReadMe page](https://github.com/pester/Pester) with this example code:
+
+```powershell
+It "Given valid -Name '<Filter>', it returns '<Expected>'" -TestCases @(
+    @{ Filter = 'Earth'; Expected = 'Earth' }
+    @{ Filter = 'ne*'  ; Expected = 'Neptune' }
+    @{ Filter = 'ur*'  ; Expected = 'Uranus' }
+    @{ Filter = 'm*'   ; Expected = 'Mercury', 'Mars' }
+) {
+    param ($Filter, $Expected)
+
+    $planets = Get-Planet -Name $Filter
+    $planets.Name | Should -Be $Expected
+}
+```
+
+and its Pester output:
+
+```text
+[+] Given valid -Name 'Earth', it returns 'Earth' 27ms
+[+] Given valid -Name 'ne*', it returns 'Neptune' 16ms
+[+] Given valid -Name 'ur*', it returns 'Uranus' 17ms
+[+] Given valid -Name 'm*', it returns 'Mercury Mars' 15ms
+```
+
+While I did notice that documentation before, it never clicked that I could use it to achieve my desired functionality here.
+So continuing with our earlier example, I could use the following code to give each of my test cases a rich, contextual description:
+
+```powershell
+Describe 'Get-WorkingDirectory' {
+    Context 'When requesting the Application Directory as the working directory' {
+        It '<testDescription>' -TestCases @(
+            @{ testDescription = 'Returns the applications directory when no Custom Working Directory is given'
+                workingDirectoryOption = 'ApplicationDirectory'; customWorkingDirectory = ''; applicationPath = 'C:\AppDirectory\MyApp.exe'; expectedWorkingDirectory = 'C:\AppDirectory' }
+            @{ testDescription = 'Returns the applications directory when a Custom Working Directory is given'
+                workingDirectoryOption = 'ApplicationDirectory'; customWorkingDirectory = 'C:\SomeDirectory'; applicationPath = 'C:\AppDirectory\MyApp.exe'; expectedWorkingDirectory = 'C:\AppDirectory' }
+        ) {
+            param
+            (
+                [string] $workingDirectoryOption,
+                [string] $customWorkingDirectory,
+                [string] $applicationPath,
+                [string] $expectedWorkingDirectory
+            )
+
+            $result = Get-WorkingDirectory -workingDirectoryOption $workingDirectoryOption -customWorkingDirectory $customWorkingDirectory -applicationPath $applicationPath
+            $result | Should -Be $expectedWorkingDirectory
+        }
+    }
+
+    Context 'When requesting a custom working directory' {
+        It '<testDescription>' -TestCases @(
+            @{ testDescription = 'Returns the custom directory'
+                workingDirectoryOption = 'CustomDirectory'; customWorkingDirectory = 'C:\SomeDirectory'; applicationPath = 'C:\AppDirectory\MyApp.exe'; expectedWorkingDirectory = 'C:\SomeDirectory' }
+            @{ testDescription = 'Returns the custom directory even if its blank'
+                workingDirectoryOption = 'CustomDirectory'; customWorkingDirectory = ''; applicationPath = 'C:\AppDirectory\MyApp.exe'; expectedWorkingDirectory = '' }
+        ) {
+            param
+            (
+                [string] $workingDirectoryOption,
+                [string] $customWorkingDirectory,
+                [string] $applicationPath,
+                [string] $expectedWorkingDirectory
+            )
+
+            $result = Get-WorkingDirectory -workingDirectoryOption $workingDirectoryOption -customWorkingDirectory $customWorkingDirectory -applicationPath $applicationPath
+            $result | Should -Be $expectedWorkingDirectory
+        }
+    }
+}
+```
+
+The code above produces the following Pester output:
+
+```text
+Describing Get-WorkingDirectory
+
+  Context When requesting the Application Directory as the working directory
+    [+] Returns the applications directory when no Custom Working Directory is given 90ms
+    [+] Returns the applications directory when no Custom Working Directory is given 9ms
+
+  Context When requesting a custom working directory
+    [+] Returns the custom directory 49ms
+    [+] Returns the custom directory even if its blank 11ms
+```
+
+So here you can see that we've replaced the name of the `It` blocks with `<testDescription>`, as that's the name of the variable we provide in each test case hashtable.
+For brevity you may decide to replace `testDescription` with `it`, or something similar.
+
+Also, you'll notice that we have a lot of duplicated code between the 2 `It` statements again, so you could refactor that out into a function like we did in the hybrid approach above.
+The benefits that this has over the hybrid approach is that we don't need to define the `[hashtable[]] $tests` variable any longer, nor do we need to manually iterate over it with the `$tests | ForEach-Object` statement, so this can save us from having to write that redundant code for every `It` block using `TestCases`.
+
 ## Conclusion
 
 We started with a simple example and saw how to refactor it to use a an assertion function to make it less verbose when we have many tests.
 We then saw how to refactor it to use `TestCases` to make it less verbose and easy to compare the test cases, at the cost of reduced clarity and context.
-Lastly, we saw a hybrid approach that allows you to see all of the test cases side-by-side without losing important contextual information about the test cases.
-
-I would love for Pester to update their code and simply support specifying the `It` description directly in the `TestCases` hashtable array.
-That would allow us to get the benefits of my approach in a much less verbose manner.
+Next, we saw a hybrid approach that allows you to see all of the test cases side-by-side without losing important contextual information about the test cases.
+Lastly, we saw how we can use the variable substitution functionality of the `It` block to achieve the same results as the hybrid approach, while saving on a bit of boilerplate code for every `It` block using `TestCases`.
 
 There are always many different ways to do things when programming, and the approaches we choose often come down to personal preference, as well as other contextual information.
 For example, if you only have a few test cases (as in the examples here), it may not be worth it to implement the approaches I've shown.
-I hope that you'll find the approach I've presented here valuable, or at the very least, interesting.
+I hope that you'll find the approaches I've presented here valuable, or at the very least, interesting.
 
-Feel free to leave comments and let me know what you think of this approach, or perhaps ways you could see it improved.
+Feel free to leave comments and let me know what you think, or perhaps ways these approaches could be improved.
 
 Happy coding!
