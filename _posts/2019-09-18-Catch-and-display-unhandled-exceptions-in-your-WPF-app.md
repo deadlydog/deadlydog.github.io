@@ -19,6 +19,7 @@ There are [numerous ways unhandled exceptions can be caught](https://stackoverfl
 One thing I especially like about that answer is they also capture the application's assembly name and version in the error message being logged, which can be helpful if there are multiple versions of your app in the wild.
 
 I thought I would show a sample here though that handles the exceptions a bit differently, allowing the user to choose and try and keep the app alive when applicable, rather than it hard crashing.
+This is what the `App.xaml.cs` file looks like:
 
 ```csharp
 using System;
@@ -108,6 +109,11 @@ With this approach, the user can just do a `Ctrl`+`C` to copy the message box te
 The message box may look a bit crude for professionally polished apps, but I think is fine for apps distributed internally in your organization.
 Of course you could use some other UI mechanism to display the error to the user, and may want to change the message box message wording.
 Also, I would hope that unhandled exceptions in your app are not very common, so they shouldn't see the message box too often.
+
+I'll note though that the `TaskScheduler.UnobservedTaskException` exceptions often do not crash the app.
+In fact, often times those exceptions will simply be lost and the app will silently keep on working (although maybe not properly).
+For those errors, you may want to _just_ log the exception and not display it to the user.
+That's your call depending on the apps target audience and what you feel is best.
 
 I've found this technique useful for some internal tools I've made, and thought I'd share.
 
