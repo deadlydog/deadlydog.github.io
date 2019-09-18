@@ -39,44 +39,37 @@ namespace WpfApplicationCatchUnhandledExceptionsExample
 
         private void SetupUnhandledExceptionHandling()
         {
-            // Catch all unhandled exceptions.
-            AppDomain.CurrentDomain.UnhandledException += CurrentDomain_UnhandledException; // Caught from all threads in the AppDomain.
-            TaskScheduler.UnobservedTaskException += TaskScheduler_UnobservedTaskException; // Caught from each AppDomain that uses a task scheduler for async operations.
-            Dispatcher.UnhandledException += Dispatcher_UnhandledException; // Caught from a single specific UI dispatcher thread.
+            // Catch exceptions from all threads in the AppDomain.
+            AppDomain.CurrentDomain.UnhandledException += (sender, args) =>
+                ShowUnhandledException(args.ExceptionObject as Exception, "AppDomain.CurrentDomain.UnhandledException", false);
 
-            // Typically only need to catch this OR the Dispatcher.UnhandledException.
+            // Catch exceptions from each AppDomain that uses a task scheduler for async operations.
+            TaskScheduler.UnobservedTaskException += (sender, args) =>
+                ShowUnhandledException(args.Exception, "TaskScheduler.UnobservedTaskException", false);
+
+            // Catch exceptions from a single specific UI dispatcher thread.
+            Dispatcher.UnhandledException += (sender, args) =>
+            {
+                // If we are debugging, let Visual Studio handle the exception and take us to the code that threw it.
+                if (!Debugger.IsAttached)
+                {
+                    args.Handled = true;
+                    ShowUnhandledException(args.Exception, "Dispatcher.UnhandledException", true);
+                }
+            };
+
+            // Catch exceptions from the main UI dispatcher thread.
+            // Typically we only need to catch this OR the Dispatcher.UnhandledException.
             // Handling both can result in the exception getting handled twice.
-            //Application.Current.DispatcherUnhandledException += Current_DispatcherUnhandledException;   // Caught from the main UI dispatcher thread.
-        }
-
-        private void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs args)
-        {
-            ShowUnhandledException(args.ExceptionObject as Exception, "AppDomain.CurrentDomain.UnhandledException", false);
-        }
-
-        private void TaskScheduler_UnobservedTaskException(object sender, UnobservedTaskExceptionEventArgs args)
-        {
-            ShowUnhandledException(args.Exception, "TaskScheduler.UnobservedTaskException", false);
-        }
-
-        private void Dispatcher_UnhandledException(object sender, System.Windows.Threading.DispatcherUnhandledExceptionEventArgs args)
-        {
-            // If we are debugging, let Visual Studio handle the exception and take us to the code that threw it.
-            if (!Debugger.IsAttached)
-            {
-                args.Handled = true;
-                ShowUnhandledException(args.Exception, "Dispatcher.UnhandledException", true);
-            }
-        }
-
-        private void Current_DispatcherUnhandledException(object sender, DispatcherUnhandledExceptionEventArgs args)
-        {
-            // If we are debugging, let Visual Studio handle the exception and take us to the code that threw it.
-            if (!Debugger.IsAttached)
-            {
-                args.Handled = true;
-                ShowUnhandledException(args.Exception, "Application.Current.DispatcherUnhandledException", true);
-            }
+            //Application.Current.DispatcherUnhandledException += (sender, args) =>
+            //{
+            //	// If we are debugging, let Visual Studio handle the exception and take us to the code that threw it.
+            //	if (!Debugger.IsAttached)
+            //	{
+            //		args.Handled = true;
+            //		ShowUnhandledException(args.Exception, "Application.Current.DispatcherUnhandledException", true);
+            //	}
+            //};
         }
 
         void ShowUnhandledException(Exception e, string unhandledExceptionType, bool promptUserForShutdown)
@@ -104,7 +97,7 @@ namespace WpfApplicationCatchUnhandledExceptionsExample
 As a best practice you should be logging these exceptions somewhere as well, such as to a file on the local machine or to a centralized logging storage mechanism, as shown in the Stack Overflow answer mentioned earlier.
 
 Explicitly displaying the message to the user as well, as shown here, can be very helpful, as it then does not require the user to pull the error message out of some file on their machine, or for you to hunt down the users specific exception in a sea of other user exceptions (depending on what centralized logging mechanism you are using).
-With this approach, the user can just do a `Ctrl`+`C` to copy the message box text, or take a screenshot of the error, and email it to you.
+With this approach, the user can just do a `Ctrl`+`C` to copy the message box text, or take a screenshot of the error (even with their phone camera!), and email it to you.
 
 The message box may look a bit crude for professionally polished apps, but I think is fine for apps distributed internally in your organization.
 Of course you could use some other UI mechanism to display the error to the user, and may want to change the message box message wording.
@@ -113,6 +106,8 @@ Also, I would hope that unhandled exceptions in your app are not very common, so
 I'll note though that the `TaskScheduler.UnobservedTaskException` exceptions often do not crash the app.
 In fact, often times those exceptions will simply be lost and the app will silently keep on working (although maybe not properly).
 For those errors, you may want to _just_ log the exception and not display it to the user.
+
+You may not want to display the exception stack trace to your users; maybe just because it's ugly, or because you're worried about them seeing some of your internal code function and parameter names.
 That's your call depending on the apps target audience and what you feel is best.
 
 I've found this technique useful for some internal tools I've made, and thought I'd share.
