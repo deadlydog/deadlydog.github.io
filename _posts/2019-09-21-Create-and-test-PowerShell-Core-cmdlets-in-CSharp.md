@@ -79,7 +79,7 @@ Most of the posts I found said to use the `PowerShellLibrary.Standard` NuGet pac
 However, I discovered that invoking the PowerShell Core cmdlet with that NuGet package always resulted in exceptions.
 The solution (at least for .Net Core 2.2) is to instead use the [Microsoft.PowerShell.SDK NuGet package](https://www.nuget.org/packages/Microsoft.PowerShell.SDK/) in your test project.
 
-So to create your test project:
+To create your test project:
 
 1. Add a new C# `xUnit Test Project (.Net Core)` project to your solution.
 1. Include the `Microsoft.PowerShell.SDK` NuGet package in your test project.
@@ -99,7 +99,7 @@ while (enumerator.MoveNext())
 }
 ```
 
-This works, but is a bit verbose to include in ever test.
+This works, but is a bit verbose to include in every test.
 Luckily during a code review, a co-worker pointed out that I could condense that code down into the following:
 
 ```csharp
