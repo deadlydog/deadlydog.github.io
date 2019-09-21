@@ -22,9 +22,9 @@ What those posts don't cover is unit testing your C# cmdlets.
 
 ## Creating a PowerShell Core cmdlet
 
-I'm not going to entirely rehash what's in that awesome blog post, but I'll share the highlights in case it goes offline in the future.
+I'm not going to entirely rehash what's in that awesome blog post, but I'll share the highlights in case it goes offline in the future:
 
-1. Create a new .Net Standard Class Library project in Visual Studio.
+1. Create a new C# `Class Library (.Net Standard)` project in Visual Studio.
 1. Add the [PowerShellStandard.Library NuGet package](https://www.nuget.org/packages/PowerShellStandard.Library/) to the project.
 1. Create a class for your cmdlet and have it inherit from the `System.Management.Automation.Cmdlet` class.
 1. Add a `Cmdlet` attribute to your class that describes the cmdlet verb and name.
@@ -79,9 +79,14 @@ Most of the posts I found said to use the `PowerShellLibrary.Standard` NuGet pac
 However, I discovered that invoking the PowerShell Core cmdlet with that NuGet package always resulted in exceptions.
 The solution (at least for .Net Core 2.2) is to instead use the [Microsoft.PowerShell.SDK NuGet package](https://www.nuget.org/packages/Microsoft.PowerShell.SDK/) in your test project.
 
-Once you've included the `Microsoft.PowerShell.SDK` NuGet package in your test project, you can call the `Invoke()` method on your cmdlet to exercise it.
-Of course, PowerShell cmdlets have the option of returning multiple objects.
-Because of this, to make sure you read all of the cmdlet output, you'll want to enumerate over all of the results.
+So to create your test project:
+
+1. Add a new C# `xUnit Test Project (.Net Core)` project to your solution.
+1. Include the `Microsoft.PowerShell.SDK` NuGet package in your test project.
+1. Add a reference to the project you created above where your cmdlet is defined.
+
+Now you can create a new class and call the `Invoke()` method on your cmdlet to exercise it.
+PowerShell cmdlets have the option of returning multiple objects, so to make sure you read all of the cmdlet output, you'll want to enumerate over all of the results.
 One example of how you might do this could be:
 
 ```csharp
@@ -153,7 +158,7 @@ public void ShouldReturnThePhraseRepeatedTheCorrectNumberOfTimes()
 
 ## Downloadable example
 
-I've created [a small sample solution on GitHub](https://github.com/deadlydog/PowerShellCmdletInCSharpExample) that you can clone or download and check out.
+I've created [a small sample solution on GitHub](https://github.com/deadlydog/PowerShellCmdletInCSharpExample) that you can check out.
 It shows how to create a couple basic PowerShell Core cmdlets, as well as a test project to test both cmdlets using xUnit.
 
 ## Conclusion
