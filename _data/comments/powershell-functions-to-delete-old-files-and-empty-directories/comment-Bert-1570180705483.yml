@@ -1,0 +1,7 @@
+_id: eb317050-e687-11e9-a788-d754c4911668
+message: "Hi @Deadlydog,\r\n\r\nFirst of all, thanks for the script.\r\n\r\nI seem to run in a problem with empty directories. I want all files older than 7 days to be deleted and all empty folders but NOT the TEMP folder itself.\r\n\r\nI use this line but the directories, that are older than 7 days, are not deleted. \r\nRemove-FilesCreatedBeforeDate -Path \"c:\\temp\" -DateTime ((Get-Date).AddDays(-7)) -DeletePathIfEmpty\r\n\r\nThanks"
+name: Bert
+email: d95ae2d60bb1f4b2a6c0896d6d4a9cf7
+url: ''
+hidden: ''
+date: '2019-10-04T09:18:25.478Z'
