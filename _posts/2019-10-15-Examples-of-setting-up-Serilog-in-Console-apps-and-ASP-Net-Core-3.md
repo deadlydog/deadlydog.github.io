@@ -94,5 +94,6 @@ If you think you would find seeing those sample applications useful, let me know
 
 If you haven't already, go checkout the [Sample.Serilog GitHub repository](https://github.com/deadlydog/Sample.Serilog) for full examples of setting up Serilog in console and ASP.Net Core applications.
 Fork it and play around with other sinks, enrichers, and configuration changes.
+If you would like anything else documented, clarified, or shown, [open an issue](https://github.com/deadlydog/Sample.Serilog/issues).
 
 Happy coding!
