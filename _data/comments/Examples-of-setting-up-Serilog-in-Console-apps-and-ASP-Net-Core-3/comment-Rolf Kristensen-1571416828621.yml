@@ -1,0 +1,9 @@
+_id: fe0ac200-f1c5-11e9-8ace-a956ed8e9e3d
+message: >-
+  NLog ver. 4.5 also support serialization of object properties. See also
+  https://github.com/NLog/NLog/wiki/How-to-use-structured-logging
+name: Rolf Kristensen
+email: e896e0dfc3e8f02c27c1f97805cd52ff
+url: 'http://smallvoid.com'
+hidden: ''
+date: '2019-10-18T16:40:28.613Z'
