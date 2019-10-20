@@ -2,7 +2,7 @@
 title: "Examples of setting up Serilog in .Net Core 3 Console apps and ASP .Net Core 3"
 permalink: /Examples-of-setting-up-Serilog-in-Console-apps-and-ASP-Net-Core-3/
 #date: 2099-01-17T00:00:00-06:00
-#last_modified_at: 2099-01-22T00:00:00-06:00
+last_modified_at: 2019-10-19
 comments_locked: false
 categories:
   - C#
@@ -39,7 +39,9 @@ Hopefully my GitHub repo provides a little more clarity in those areas with the 
 
 In the past with my .Net Framework apps I had defaulted to [log4net](https://logging.apache.org/log4net/release/manual/introduction.html) for work projects (as it's our standard at work) and [NLog](https://nlog-project.org/) for personal projects (as I prefer its xml configuration syntax).
 For a while now though I've been wanting to try out [Serilog](https://serilog.net/).
-It's main differentiator is the it is able to serialize objects when writing them in a log, so it will automatically log an instances public properties.
+It's main differentiator is that it is able to serialize objects when writing them in a log, so it will automatically log an instances public properties.
+
+> Update: Thanks to Rolf Kristensen for pointing out in the comments that [NLog does indeed also provide this](https://github.com/NLog/NLog/wiki/How-to-use-structured-logging).
 
 For example, if you have a simple class, like:
 
@@ -51,7 +53,7 @@ public class Person
 }
 ```
 
-In a traditional logging solution like log4Net or NLog, if you wanted to have the `FirstName` and `LastName` properties written to the log sink (e.g. console, file, database, etc.) you would have to do something like:
+In a traditional logging solution like log4Net <strike>or NLog</strike>, if you wanted to have the `FirstName` and `LastName` properties written to the log sink (e.g. console, file, database, etc.) you would have to do something like:
 
 ```csharp
 var person = new Person() { FirstName = "Dan"; LastName = "Schroeder" }
