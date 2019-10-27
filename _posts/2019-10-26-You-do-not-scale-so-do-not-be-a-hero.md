@@ -48,9 +48,9 @@ They should be the exception, not the expectance.
 A coworker of mine once put it very nicely. I can't remember the exact wording, but it went something like:
 
 > Unknown to you, your child is playing in the street and there's a car speeding toward them.
-> Luckily a neighbour (the hero) grabs the child and pulls him off the street just in time.
+> Luckily a stranger (the hero) happens to be walking by grabs the child and pulls him off the street just in time.
 >
-> Are you simply going to rely on your neighbour being there again the next time?
+> Are you simply going to rely on a stranger being there again the next time?
 
 I would hope your answer to that question is "No".
 However, every time you help somebody out with something that you are not directly accountable for, or with something after hours when you are supposed to be off, you're implicitly say "Yes".
