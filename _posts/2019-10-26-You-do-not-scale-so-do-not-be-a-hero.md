@@ -2,7 +2,7 @@
 title: "You don't scale, so don't be a hero"
 permalink: /You-do-not-scale-so-do-not-be-a-hero/
 #date: 2099-01-17T00:00:00-06:00
-#last_modified_at: 2099-01-22T00:00:00-06:00
+last_modified_at: 2019-10-27
 comments_locked: false
 categories:
   - Software Development
@@ -32,7 +32,10 @@ The guy you come to when you don't know where else to go.
 The guy where even if I can't solve your problem, I can likely direct you where to go; and if I can't, I'll help you find out who to go to.
 This has all worked out well and good.....for me.....so far.
 
-The problem is that I am not scalable.
+The problem is that I am not scalable; I'm just one person.
+
+![I don't scale](/assets/Posts/You-do-not-scale-so-do-not-be-a-hero/Clones.gif)
+
 As our organization has grown, so too did the demands on my time.
 Over the years, what used to be one or two interruptions a day grew to 10+.
 Whenever somebody interrupts you it results in a context switch, which even if they just need your attention for 2 minutes, [have been shown to reduce your productivity](https://www.petrikainulainen.net/software-development/processes/the-cost-of-context-switching/) by much more.
@@ -54,6 +57,8 @@ A coworker of mine once put it very nicely. I can't remember the exact wording, 
 
 I would hope your answer to that question is "No".
 However, every time you help somebody out with something that you are not directly accountable for, or with something after hours when you are supposed to be off, you're implicitly say "Yes".
+
+![This is fine while everything is on fire](/assets/Posts/You-do-not-scale-so-do-not-be-a-hero/ThisIsFine.gif)
 
 I'm not saying that you should let the child get hit by the proverbial car.
 I'm saying that you should instead direct the people making the request to the appropriate team that is accountable for helping in the given situation.
@@ -79,7 +84,9 @@ It's in the post title, but I'll state it again:
 The best thing to do in the interest of _both you and your company_ is to ensure that proper accountability is explicitly assigned, and that there are enough people to handle the workload.
 If there aren't enough people to handle the workload, then you need voice that and set proper expectations.
 
-Hopefully by following my advice, you'll be able to enjoy your weekends, and the weekend fires will still be able to be extinguished.
+Hopefully by following my advice, you'll be able to relax and enjoy your weekends, and the weekend fires will still get extinguished.
+
+![Relax](/assets/Posts/You-do-not-scale-so-do-not-be-a-hero/Relax.gif)
 
 To recap, I've brushed over 3 types of developer heroism:
 
