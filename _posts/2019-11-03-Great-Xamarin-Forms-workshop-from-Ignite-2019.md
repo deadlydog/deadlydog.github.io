@@ -1,6 +1,6 @@
 ---
-title: "Great Xamarin.Forms workshop"
-permalink: /Great-Xamarin-Forms-workshop/
+title: "Great Xamarin.Forms workshop from Ignite 2019"
+permalink: /Great-Xamarin-Forms-workshop-from-Ignite-2019/
 #date: 2099-01-17T00:00:00-06:00
 #last_modified_at: 2099-01-22T00:00:00-06:00
 comments_locked: false
