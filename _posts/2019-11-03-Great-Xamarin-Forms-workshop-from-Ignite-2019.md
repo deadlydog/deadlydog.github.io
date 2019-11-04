@@ -24,7 +24,7 @@ Before starting on the workshop, you may want to run through [this Xamarin setup
 
 ## My personal notes
 
-In addition to the setup guide and James' workshop, here are some tidbits I took from things James' said that aren't in the slides or workshop.
+In addition to the setup guide and James' workshop, here are some tidbits I took from things James said that aren't in the slides or workshop.
 
 - [SyncFusion](https://www.syncfusion.com), Telerik, Infragistics, DevExpress, ComponentOne, and Steema for cross platform and Xamarin compatible controls.
   SyncFusion offers [a free community license](https://www.syncfusion.com/products/communitylicense).
