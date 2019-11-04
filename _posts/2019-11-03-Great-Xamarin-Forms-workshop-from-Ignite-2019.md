@@ -37,9 +37,9 @@ In addition to the setup guide and James' workshop, here are some tidbits I took
 - Can use `<BoxView HeightRequest="1" Color="#DDDDDD"/>` to create small horizontal line separators.
 - Can use [NuGet package for circular images](https://github.com/jamesmontemagno/xamarin.forms-workshop/tree/master/Part%203%20-%20Navigation#create-detailspagexaml-ui).
 - The ListView has a poor default caching strategy (for legacy reasons) [that should be set for better performance](https://github.com/jamesmontemagno/xamarin.forms-workshop/tree/master/Part%205%20-%20Pull%20To%20Refresh%20%26%20ListView%20Optimizations#caching-strategy).
-- Can use the Analytics.TrackEvent to automatically track events to the App Center.
-- Can use Crashes.* to see things like if the app crashed on the last run, log errors, and much more.
-- Can use Data to easily store and retrieve data from your Azure Cosmos DB (not free yet, but they plan to have a free data tier of some sort).
+- Can use the `Analytics.TrackEvent` to automatically track events to the App Center.
+- Can use the `Crashes` class to see things like if the app crashed on the last run, log errors, and much more.
+- Can use the `Data`class to easily store and retrieve data from your Azure Cosmos DB (still in preview, and not free yet, but they may have a free data tier of some sort when it comes out of preview).
   It does local offline caching for you for free.
 - <https://github.com/xamarin/XamarinComponents> has some xamarin plugins for things like data caching and database plugins and others.
 
