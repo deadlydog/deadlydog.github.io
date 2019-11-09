@@ -26,7 +26,7 @@ In case that download link disappears in the future, you can also [grab it direc
 The nice thing about this script is it will also download the session's slide deck if it exists.
 You can either download EVERY session, or use the `-sessionCodes` command-line parameter to specify just the IDs of the sessions you want to download.
 There's a readme file included in the zip that specifies how the script can be used.
-All of the sessions and there IDs [can be found on the session catalog here](https://myignite.techcommunity.microsoft.com/sessions).
+All of the sessions and their IDs [can be found on the session catalog here](https://myignite.techcommunity.microsoft.com/sessions).
 
 For example, this is the PowerShell command I used to download just the sessions that I'm interested in and wasn't able to attend (because there was too much other awesome content at the same time).
 
