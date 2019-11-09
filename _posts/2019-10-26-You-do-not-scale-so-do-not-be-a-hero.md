@@ -34,7 +34,7 @@ This has all worked out well and good.....for me.....so far.
 
 The problem is that I am not scalable; I'm just one person.
 
-![I don't scale](/assets/Posts/You-do-not-scale-so-do-not-be-a-hero/Clones.gif)
+![I don't scale](/assets/Posts/2019-10-26-You-do-not-scale-so-do-not-be-a-hero/Clones.gif)
 
 As our organization has grown, so too did the demands on my time.
 Over the years, what used to be one or two interruptions a day grew to 10+.
@@ -58,7 +58,7 @@ A coworker of mine once put it very nicely. I can't remember the exact wording, 
 I would hope your answer to that question is "No".
 However, every time you help somebody out with something that you are not directly accountable for, or with something after hours when you are supposed to be off, you're implicitly say "Yes".
 
-![This is fine while everything is on fire](/assets/Posts/You-do-not-scale-so-do-not-be-a-hero/ThisIsFine.gif)
+![This is fine while everything is on fire](/assets/Posts/2019-10-26-You-do-not-scale-so-do-not-be-a-hero/ThisIsFine.gif)
 
 I'm not saying that you should let the child get hit by the proverbial car.
 I'm saying that you should instead direct the people making the request to the appropriate team that is accountable for helping in the given situation.
@@ -86,7 +86,7 @@ If there aren't enough people to handle the workload, then you need voice that a
 
 Hopefully by following my advice, you'll be able to relax and enjoy your weekends, and the weekend fires will still get extinguished.
 
-![Relax](/assets/Posts/You-do-not-scale-so-do-not-be-a-hero/Relax.gif)
+![Relax](/assets/Posts/2019-10-26-You-do-not-scale-so-do-not-be-a-hero/Relax.gif)
 
 To recap, I've brushed over 3 types of developer heroism:
 

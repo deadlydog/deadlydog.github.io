@@ -17,7 +17,7 @@ tags:
 
 You may have noticed my blog has a very different look now! It used to look like this.
 
-![Old WordPress Blog Screenshot](/assets/Posts/Migrating-my-blog-from-WordPress-to-Jekyll-and-GitHub-Pages/OldWordPressBlogScreenshot.png)
+![Old WordPress Blog Screenshot](/assets/Posts/2019-08-17-Migrating-my-blog-from-WordPress-to-Jekyll-and-GitHub-Pages/OldWordPressBlogScreenshot.png)
 
 I decided to migrate my blog from WordPress to Jekyll, and this blog post highlights my reasons why and some of my experiences when doing so.
 
