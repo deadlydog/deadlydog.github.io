@@ -10,6 +10,7 @@ categories:
 tags:
   - Xamarin
   - C#
+  - Ignite
 ---
 
 I'm lucky enough to attend the Microsoft Ignite 2019 conference this year, and do a pre-conference workshop.
