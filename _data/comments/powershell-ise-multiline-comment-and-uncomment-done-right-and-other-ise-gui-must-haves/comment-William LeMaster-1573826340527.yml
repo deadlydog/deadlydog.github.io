@@ -1,0 +1,7 @@
+_id: 1302f1a0-07b0-11ea-9676-b72708068ed3
+message: "Recently the comment and uncomment (which I love) has stopped working for me and I am not sure why :(\r\n\r\nIf I use the comment one line at a time, it still works...but selecting multiple lines gives me a range of results (from only 1 line being commented out, to all but one line commented out and everything in between....just not every line commented out).\r\n\r\nMaybe there conflicting code or the new version of powershell is not playing nice."
+name: William LeMaster
+email: afefa10064965c4d1bb94696360f2634
+url: ''
+hidden: ''
+date: '2019-11-15T13:59:00.522Z'
