@@ -19,7 +19,7 @@ $type-size-8 : 0.625em; // ~10px
 
 // Reduce the size of regular text in our posts a bit.
 .page__content {
-	font-size: $type-size-6;
+	font-size: 0.8em;
 }
 
 // Reducing the Page Content font size also reduces the Table Of Contents size a bit too much, so make that bigger.
