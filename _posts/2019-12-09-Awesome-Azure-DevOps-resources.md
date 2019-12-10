@@ -32,9 +32,10 @@ This page will help you stay current so you don't miss critical updates.
 I'm personally not a big podcast guy, and have only ever listened to one or two of the talks.
 I frequent this site for the links that get posted from the talks.
 There's always links to great blog posts and other resources.
-It's a great place to find out about community driven projects and non-Microsoft things that integration with Azure DevOps.
+It's a great place to find out about community driven projects and non-Microsoft things that integrate with Azure DevOps.
 - [Azure DevOps team official blog](https://devblogs.microsoft.com/devops/): This is another awesome resource to find out about changes recently implemented or coming down the pipe for Azure DevOps, as well as other community projects and blog posts.
 - [Channel 9 DevOps-Lab](https://channel9.msdn.com/Shows/DevOps-Lab/): If you're more into watching videos than reading blogs, this is a great channel to subscribe to.
+It focuses on performing DevOps operations using Microsoft technologies; mostly, but not entirely limited to, Azure DevOps.
 - [YouTube DevOps channel](https://www.youtube.com/channel/UC-ikyViYMM69joIAv7dlMsA): Another great channel to subscribe to for videos.
 This one actually includes the Channel 9 video feed mentioned above, as well as many other DevOps related videos; not all of them are about Azure DevOps.
 - [Official community feedback page](https://developercommunity.visualstudio.com/spaces/21/index.html): The Developer Community is the official place to file bug reports and make feature requests for Azure DevOps.
