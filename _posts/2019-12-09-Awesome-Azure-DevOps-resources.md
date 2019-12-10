@@ -10,16 +10,16 @@ tags:
   - Azure DevOps
 ---
 
-I'm a huge fan of [Azure DevOps](https://azure.microsoft.com/en-ca/services/devops/).
+I'm a huge fan of Microsoft's [Azure DevOps](https://azure.microsoft.com/en-ca/services/devops/).
 As a developer, it's a single place that allows me to do everything.
 It stores my code, tracks my project ideas and current work, builds and deploys my applications, stores my artifacts, and more.
-And the best part, [it's all free](https://azure.microsoft.com/en-ca/pricing/details/devops/azure-devops-services/) (well, if you're team 5 people or less).
+And the best part, [it's all free](https://azure.microsoft.com/en-ca/pricing/details/devops/azure-devops-services/) (well, if you're a team of 5 people or less).
 Typically I store my open source repositories on GitHub and my closed source projects in Azure DevOps.
 That's not a problem though, because Azure DevOps has awesome integration with GitHub, and again, most of the services are free when used with open source projects.
 I'm grateful that we also use Azure DevOps at my organization, so I'm able to leverage all of the awesomeness in my day-to-day job as well.
 Sure, it may not be perfect, but the teams are improving it all the time, and continually asking for community feedback.
 
-With that said, here's a quick list of some of my favourite Azure DevOps resources:
+With that said, here's a quick list of some of my favourite Azure DevOps resources to help me stay up-to-date on the constantly evolving product:
 
 - [Azure DevOps Labs](https://azuredevopslabs.com): Tons of labs/tutorials showing at-a-glance many of the things Azure DevOps can do.
 You can then drill into the ones that interest you for step-by-step instructions to accomplish your task, or to just learn more about the features that Azure DevOps offers.
