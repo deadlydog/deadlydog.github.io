@@ -27,7 +27,7 @@ Whether you are looking to use semantic versioning, or want to use some other ve
 Before we look at the yaml way, if you've been using Azure DevOps for a while you may have already solved this problem in the classic build pipeline editor.
 One way to do this was to use the `$(Rev:r)` syntax in your `Build number format`; for example, using `1.0.0.$(Rev:r)`.
 
-![Azure Pipelines classic editor build number format](/assets/Posts/2020-01-10-Define-version-numbers-in-Azure-DevOps-yaml-pipelines/AzurePipelinesClassicEditorBuildNumberFormat.png)
+![Azure Pipelines classic editor build number format](/assets/Posts/2020-01-10-Custom-version-numbers-in-Azure-DevOps-yaml-pipelines/AzurePipelinesClassicEditorBuildNumberFormat.png)
 
 The `$(Rev:r)` syntax acts as a variable with an auto-incrementing value, so the first build would be `1.0.0.0`, the next would be `1.0.0.1`, then `1.0.0.2`, and so on.
 Once any part of the string to the left of `$(Rev:r)` changes, the counter resets to zero.
@@ -36,7 +36,7 @@ So if you changed the Build Number Format to `1.1.0.$(Rev:r)`, the next build wo
 To access the Build Number Format value in your tasks so that you could actually use it, you would use the built-in `$(Build.BuildNumber)` variable.
 For example, if you wanted to apply the version to all of your .Net projects before building the assemblies, you could do this:
 
-![Azure Pipelines classic editor using build number format](/assets/Posts/2020-01-10-Define-version-numbers-in-Azure-DevOps-yaml-pipelines/AzurePipelinesClassicEditorUsingBuildNumberFormat.png)
+![Azure Pipelines classic editor using build number format](/assets/Posts/2020-01-10-Custom-version-numbers-in-Azure-DevOps-yaml-pipelines/AzurePipelinesClassicEditorUsingBuildNumberFormat.png)
 
 I am a huge fan of [Richard Fennell's Manifest Versioning Build Tasks Azure DevOps extension](https://marketplace.visualstudio.com/items?itemName=richardfennellBM.BM-VSTS-Versioning-Task), which is what is being used in the above screenshot to version all of the .Net assemblies with our version number.
 
