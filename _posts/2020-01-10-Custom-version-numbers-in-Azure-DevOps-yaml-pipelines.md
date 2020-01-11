@@ -166,6 +166,21 @@ At the start of this post I mentioned that I'm a fan of semantic versioning.
 Part of semantic versioning is supporting prerelease versions.
 While not everything supports prerelease versions, such as .Net assemblies, many things do, such as NuGet package versions.
 
+Defining your prerelease version can be as simple as defining a new variable, like so:
+
+```yaml
+variables:
+  version.MajorMinor: '1.2' # Manually adjust the version number as needed for semantic versioning. Revision is auto-incremented.
+  version.Revision: $[counter(variables['version.MajorMinor'], 0)]
+  versionNumber: '$(version.MajorMinor).$(version.Revision)'
+  prereleaseVersionNumber: '$(versionNumber)-$(Build.SourceVersion)'
+```
+
+Where `$(Build.SourceVersion)` is the git commit sha being built.
+
+I typically like to include the date and time in my prerelease version number.
+Unfortunately, there isn't a predefined variable that can be used to access the current date and time, so it takes a bit of extra effort.
+
 Here is some yaml code that I typically use for my prerelease versions:
 
 ```yaml
@@ -194,18 +209,8 @@ steps:
     InjectVersion: true
 ```
 
-Here I've introduced a new `prereleaseVersionNumber` variable whose value gets set in the first PowerShell task step.
-A task step must be used in order for me to access the current date and time.
-If you don't plan on using the date time then you may be able to avoid the PowerShell task step altogether and simply use something like:
-
-```yaml
-  prereleaseVersionNumber: '$(versionNumber)-$(Build.SourceVersion)'
-```
-
-Where `$(Build.SourceVersion)` is the git commit sha being built.
-
-In my example I did want the date time though.
-The first line of the PowerShell gets the date and time.
+Here I've introduced a new `prereleaseVersionNumber` variable, as well as a PowerShell task step to set it.
+The first line of the PowerShell gets the date and time in a format acceptable for prerelease semantic versions.
 The second line then builds the complete prerelease version number, appending `-ci$dateTime` to the regular version number.
 I use `ci` to indicate that it's from a continuous integration build, but you don't need to.
 The fourth line then assigns the value back to the `prereleaseVersionNumber` yaml variable so it can be used in later tasks.
