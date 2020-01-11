@@ -230,4 +230,6 @@ I enjoy them because you get your build definition stored in source control with
 
 With so many great reasons to start using yaml for your Azure Pipelines builds, I hope this information helps you get your version numbers and build names setup how you like them.
 
+I'd also like to throw a shout out to [Andrew Hoefling's blog post](https://www.andrewhoefling.com/Blog/Post/azure-pipelines-custom-build-numbers-in-yaml-templates) that introduced me to the `counter` function and helped me get started with using custom version numbers in my yaml builds.
+
 Happy versioning!
