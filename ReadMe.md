@@ -1,6 +1,7 @@
 # Daniel Schroeder's Programming Blog
 
 Welcome to the home of my personal programming blog.
+If you're looking for the actual blog and not the code that generates it, you can find it at [blog.danskingdom.com](https://blog.danskingdom.com).
 
 This repository was initially cloned off of [Minimal Mistakes GitHub Pages Starter][MinimalMistakesGitHubPagesStarterRepoUrl], and then updated with my content and configuration.
 
