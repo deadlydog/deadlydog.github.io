@@ -34,7 +34,7 @@ The software listed here has been created in my spare time and most is free and 
 
 And here are some websites that I've made:
 
-- (2003) [HelpfulPCTools.com](http://www.helpfulpctools.com/) - Free tools and advise about general pc maintenance (viruses, spyware, etc.) (very outdated now, and I actually let the domain expire and somebody else purchased the domain and placed a clone of my original site).
+- (2003) HelpfulPCTools.com - Free tools and advice about general PC maintenance (viruses, spyware, etc.) (no longer exists).
 - (2005) PostYourWebsite.com - Search for other peoples websites, and post your own (no longer exists).
 - (2007) [DansKingdom.com](http://danskingdom.com/) - My personal site (old and outdated).
 - (2008) TheHotMap.com - An interactive search engine interface. This was created by myself and one other person (no longer exists).
