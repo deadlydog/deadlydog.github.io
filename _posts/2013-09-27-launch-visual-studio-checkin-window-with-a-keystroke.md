@@ -18,7 +18,7 @@ tags:
   - Visual Studio
 ---
 
-A few weeks ago I blogged about [how you can get custom TFS checkin policies to work when committing from the command line](http://dans-blog.azurewebsites.net/getting-custom-tfs-checkin-policies-to-work-when-committing-from-the-command-line-i-e-tf-checkin/). In that post, I had a quick aside about how you can launch the checkin window (i.e. pending changes) with a quick keystroke using [AutoHotkey](http://www.autohotkey.com/). I realize that many people don’t use AutoHotkey (although you really should; it can save you a lot of time), so I thought I would show how you can accomplish this task without AutoHotkey. It’s quite simple really, and it allows you to launch the VS Checkin window from anywhere, even if you don’t have Visual Studio open.
+A few weeks ago I blogged about [how you can get custom TFS checkin policies to work when committing from the command line](https://blog.danskingdom.com/getting-custom-tfs-checkin-policies-to-work-when-committing-from-the-command-line-i-e-tf-checkin/). In that post, I had a quick aside about how you can launch the checkin window (i.e. pending changes) with a quick keystroke using [AutoHotkey](http://www.autohotkey.com/). I realize that many people don’t use AutoHotkey (although you really should; it can save you a lot of time), so I thought I would show how you can accomplish this task without AutoHotkey. It’s quite simple really, and it allows you to launch the VS Checkin window from anywhere, even if you don’t have Visual Studio open.
 
 ## Steps To Launch VS Checkin Window From The Visual Studio Command Prompt
 
@@ -68,6 +68,6 @@ If you are using TFS and want to shelve your changes instead of checking them in
 
 ### Getting Custom TFS Checkin Policies To Work
 
-As you may have guessed from the very start of the article, custom TFS checkin policies don’t run in this checkin window by default; they will throw errors. Fortunately for you I have already created [a registry file that you can run after each checkin policy update](http://dans-blog.azurewebsites.net/getting-custom-tfs-checkin-policies-to-work-when-committing-from-the-command-line-i-e-tf-checkin/) that you do which will rectify this problem.
+As you may have guessed from the very start of the article, custom TFS checkin policies don’t run in this checkin window by default; they will throw errors. Fortunately for you I have already created [a registry file that you can run after each checkin policy update](https://blog.danskingdom.com/getting-custom-tfs-checkin-policies-to-work-when-committing-from-the-command-line-i-e-tf-checkin/) that you do which will rectify this problem.
 
 I hope this helps you be more productive. Happy coding!

@@ -60,7 +60,7 @@ The code presented here is [based on this post](http://huddledmasses.org/adventu
     Custom targets and properties added so that we can specify the database to publish to using command line parameters with VS 2012 .sqlproj projects, like we did with VS 2010 .dbproj projects.
     This allows us to specify the MSBuild command-line parameters TargetDatabaseName, and TargetConnectionString when Publishing, and PublishToDatabase when Building.
     I also stumbled across the undocumented parameter, PublishScriptFileName, which can be used to specify the generated sql script file name, just like DeployScriptFileName used to in VS 2010 .dbproj projects.
-    Taken from: http://dans-blog.azurewebsites.net/using-msbuild-to-publish-a-vs-2012-ssdt-sqlproj-database-project-the-same-way-as-a-vs-2010-dbproj-database-project/
+    Taken from: https://blog.danskingdom.com/using-msbuild-to-publish-a-vs-2012-ssdt-sqlproj-database-project-the-same-way-as-a-vs-2010-dbproj-database-project/
   -->
   <PropertyGroup Condition="'$(TargetDatabaseName)' != '' Or '$(TargetConnectionString)' != ''">
     <PublishToDatabase Condition="'$(PublishToDatabase)' == ''">False</PublishToDatabase>

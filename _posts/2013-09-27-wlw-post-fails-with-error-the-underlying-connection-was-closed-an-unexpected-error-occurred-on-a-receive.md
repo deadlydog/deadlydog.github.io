@@ -13,11 +13,11 @@ tags:
   - WordPress
 ---
 
-When trying to upload [my last blog post](http://dans-blog.azurewebsites.net/launch-visual-studio-checkin-window-with-a-keystroke/) from Windows Live Writer (WLW) to WordPress (WP) I received the following error:
+When trying to upload [my last blog post](https://blog.danskingdom.com/launch-visual-studio-checkin-window-with-a-keystroke/) from Windows Live Writer (WLW) to WordPress (WP) I received the following error:
 
 > Network Connection Error
 > Error attempting to connect to blog at:
-> <http://dans-blog.azurewebsites.net/xmlrpc.php>
+> <https://blog.danskingdom.com/xmlrpc.php>
 > The underlying connection was closed. An unexpected error occurred on a receive.
 
 ![WLW Network Connection Error](/assets/Posts/2013/09/WLWNetworkConnectionError.png)
@@ -36,7 +36,7 @@ Happy coding!
 
 ## Update
 
-I’ve ran into this problem again when trying to post [this](http://dans-blog.azurewebsites.net/get-autohotkey-to-interact-with-admin-windows-without-running-ahk-script-as-admin/) article. 3 different spots in the article were causing the problem. Here is the source of the article with what broke it, and what worked:
+I’ve ran into this problem again when trying to post [this](https://blog.danskingdom.com/get-autohotkey-to-interact-with-admin-windows-without-running-ahk-script-as-admin/) article. 3 different spots in the article were causing the problem. Here is the source of the article with what broke it, and what worked:
 
 1. This broke:
 

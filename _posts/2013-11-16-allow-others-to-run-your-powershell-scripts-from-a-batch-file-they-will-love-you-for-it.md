@@ -17,7 +17,7 @@ tags:
 
 Aside - This post has received many tangential questions in the comments. Your best bet at getting an answer to those questions is to check [Stack Overflow](https://stackoverflow.com) and/or post your question there.
 
-A while ago in [one of my older posts](http://dans-blog.azurewebsites.net/getting-custom-tfs-checkin-policies-to-work-when-committing-from-the-command-line-i-e-tf-checkin/) I included a little gem that I think deserves it’s own dedicated post; calling PowerShell scripts from a batch file.
+A while ago in [one of my older posts](https://blog.danskingdom.com/getting-custom-tfs-checkin-policies-to-work-when-committing-from-the-command-line-i-e-tf-checkin/) I included a little gem that I think deserves it’s own dedicated post; calling PowerShell scripts from a batch file.
 
 ## Why call my PowerShell script from a batch file?
 
@@ -25,7 +25,7 @@ When I am writing a script for other people to use (in my organization, or for t
 
 Let’s list the problems with sending somebody the PowerShell script alone; The first two points below are hurdles that __every__ user stumbles over the first time they encounter PowerShell (they are there for security purposes):
 
-1. When you double-click a PowerShell script (*.ps1 file) the default action is often to open it up in an editor, not to run it ([you can change this for your PC](http://dans-blog.azurewebsites.net/fix-problem-where-windows-powershell-cannot-run-script-whose-path-contains-spaces/)).
+1. When you double-click a PowerShell script (*.ps1 file) the default action is often to open it up in an editor, not to run it ([you can change this for your PC](https://blog.danskingdom.com/fix-problem-where-windows-powershell-cannot-run-script-whose-path-contains-spaces/)).
 1. When you do figure out you need to right-click the .ps1 file and choose Open With –> Windows PowerShell to run the script, it will fail with a warning saying that the execution policy is currently configured to not allow scripts to be ran.
 1. My script may require admin privileges in order to run correctly, and it can be tricky to run a PowerShell script as admin without going into a PowerShell console and running the script from there, which a lot of people won’t know how to do.
 1. A potential problem that could affect PowerShell Pros is that it’s possible for them to have variables or other settings set in their PowerShell profile that could cause my script to not perform correctly; this is pretty unlikely, but still a possibility.
@@ -84,7 +84,7 @@ if ($Host.Name -eq "ConsoleHost")
 }
 ```
 
-This will prompt the user for keyboard input before closing the PowerShell console window. This is useful because it allows users to read any errors that your PowerShell script may have thrown before the window closes, or even just so they can see the "Everything completed successfully" message that your script spits out so they know that it ran correctly. Related side note: you can [change your PC to always leave the PowerShell console window open](http://dans-blog.azurewebsites.net/fix-problem-where-windows-powershell-cannot-run-script-whose-path-contains-spaces/) after running a script, if that is your preference.
+This will prompt the user for keyboard input before closing the PowerShell console window. This is useful because it allows users to read any errors that your PowerShell script may have thrown before the window closes, or even just so they can see the "Everything completed successfully" message that your script spits out so they know that it ran correctly. Related side note: you can [change your PC to always leave the PowerShell console window open](https://blog.danskingdom.com/fix-problem-where-windows-powershell-cannot-run-script-whose-path-contains-spaces/) after running a script, if that is your preference.
 
 I hope you find this useful. Feel free to leave comments.
 
