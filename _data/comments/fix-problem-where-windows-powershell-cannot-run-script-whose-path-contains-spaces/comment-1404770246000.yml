@@ -3,7 +3,7 @@ name: >-
   Window Open After Script Finishes Running
 date: '2014-07-07 15:57:26'
 url: >-
-  http://dans-blog.azurewebsites.net/keep-powershell-console-window-open-after-script-finishes-running/
+  https://blog.danskingdom.com/keep-powershell-console-window-open-after-script-finishes-running/
 message: >-
   [&#8230;] originally included this as a small bonus section at the end of my
   other post about fixing the issue of not being able to run a PowerShell script

@@ -16,14 +16,14 @@ tags:
   - Windows
 ---
 
-A while back I posted about [AutoHotkey not being able to interact with Windows 8 windows and other applications that were Ran As Admin](http://dans-blog.azurewebsites.net/autohotkey-cannot-interact-with-windows-8-windowsor-can-it/). My solution was to run your [AutoHotkey](http://www.autohotkey.com/) (AHK) script as admin as well, and I also showed how to have your AHK script start automatically with Windows, but not as an admin. Afterwards I followed that up with a post about how to [get your AHK script to run as admin on startup](http://dans-blog.azurewebsites.net/get-autohotkey-script-to-run-as-admin-at-startup/), so life was much better, but still not perfect.
+A while back I posted about [AutoHotkey not being able to interact with Windows 8 windows and other applications that were Ran As Admin](https://blog.danskingdom.com/autohotkey-cannot-interact-with-windows-8-windowsor-can-it/). My solution was to run your [AutoHotkey](http://www.autohotkey.com/) (AHK) script as admin as well, and I also showed how to have your AHK script start automatically with Windows, but not as an admin. Afterwards I followed that up with a post about how to [get your AHK script to run as admin on startup](https://blog.danskingdom.com/get-autohotkey-script-to-run-as-admin-at-startup/), so life was much better, but still not perfect.
 
 ## Problems with running your AHK script as admin
 
 1. You may have to deal with the annoying UAC prompt every time you launch your script.
 1. Any programs the script launches also receive administrative privileges.
 
-\#1 is only a problem if you haven't set your AHK script to run as admin on startup as I showed in [my other blog post](http://dans-blog.azurewebsites.net/get-autohotkey-script-to-run-as-admin-at-startup/) (i.e. you are still manually launching your script) or you haven't changed your UAC settings to never prompt you with notifications (which some companies restrict) (see screenshot).
+\#1 is only a problem if you haven't set your AHK script to run as admin on startup as I showed in [my other blog post](https://blog.danskingdom.com/get-autohotkey-script-to-run-as-admin-at-startup/) (i.e. you are still manually launching your script) or you haven't changed your UAC settings to never prompt you with notifications (which some companies restrict) (see screenshot).
 
 ![UAC Never Notify](/assets/Posts/2013/11/UAC-Never-Notify1.png)
 

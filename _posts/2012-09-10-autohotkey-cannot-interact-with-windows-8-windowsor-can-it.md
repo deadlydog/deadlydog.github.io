@@ -13,7 +13,7 @@ tags:
   - Windows 8
 ---
 
-__Update__: Before you go running your script as an admin, see if [this less obtrusive fix](http://dans-blog.azurewebsites.net/get-autohotkey-to-interact-with-admin-windows-without-running-ahk-script-as-admin/) will solve your problems.
+__Update__: Before you go running your script as an admin, see if [this less obtrusive fix](https://blog.danskingdom.com/get-autohotkey-to-interact-with-admin-windows-without-running-ahk-script-as-admin/) will solve your problems.
 
 If you’ve installed Windows 8 and are trying to use AutoHotkey (AHK) to interact with some of the Windows 8 Windows (such as the Control Panel for example), or with apps that need to be Ran As Administrator, then you’ve likely [become very frustrated as I did](http://www.autohotkey.com/community/viewtopic.php?f=1&t=92147) to discover that AHK can not send any commands (keyboard or mouse input) to these windows. This was a huge concern as I often need to run Visual Studio as an administrator and wanted my hotkeys and hotstrings to work in Visual Studio. After a day of fighting I finally realized the answer (and it’s pretty obvious once you think about it). If you want AHK to be able to interact with Windows 8 Windows or apps running as administrator, then __you also need to have your AHK script Run As Administrator__.
 
@@ -27,7 +27,7 @@ Note that you will need to replace "[User Name]" with your username, and that "A
 
 ==< EDIT >==
 
-This method works for running AHK scripts that _don’t_ require admin privileges at startup. It only works for running AHK scripts as admin at Windows startup if you have [disabled UAC in the registry in Windows 8](http://www.eightforums.com/system-security/2434-disable-uac-completely.html), which you likely do not want to do (and I had done at the time of writing this article, but have since switched it back on). For a better, UAC-friendly solution to running your AHK scripts as admin at startup, [see my newer post](http://dans-blog.azurewebsites.net/get-autohotkey-script-to-run-as-admin-at-startup/) to actually get your AHK script to run as admin at startup.
+This method works for running AHK scripts that _don’t_ require admin privileges at startup. It only works for running AHK scripts as admin at Windows startup if you have [disabled UAC in the registry in Windows 8](http://www.eightforums.com/system-security/2434-disable-uac-completely.html), which you likely do not want to do (and I had done at the time of writing this article, but have since switched it back on). For a better, UAC-friendly solution to running your AHK scripts as admin at startup, [see my newer post](https://blog.danskingdom.com/get-autohotkey-script-to-run-as-admin-at-startup/) to actually get your AHK script to run as admin at startup.
 
 If you do need your AHK script to run as admin and plan on manually double-clicking your AHK script to launch it though, then you can still use this trick of create a shortcut and setting it to Run As Admin in order to avoid having to right-click the AHK script and choose Run As Admin.
 

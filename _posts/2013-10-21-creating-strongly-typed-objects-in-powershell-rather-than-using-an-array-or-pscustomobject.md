@@ -16,7 +16,7 @@ tags:
 
 I recently [read a great article](http://www.happysysadm.com/2013/10/powershell-hashtables-dictionaries-and.html) that explained how to create hashtables, dictionaries, and PowerShell objects. I already knew a bit about these, but this article gives a great comparison between them, when to use each of them, and how to create them in the different versions of PowerShell.
 
-Right now I’m working on refactoring some existing code into some general functions for creating, removing, and destroying IIS applications ([read about it here](http://dans-blog.azurewebsites.net/powershell-functions-to-convert-remove-and-delete-iis-web-applications/)). At first, I thought that this would be a great place to use PSCustomObject, as in order to perform these operations I needed 3 pieces of information about a website; the Website name, the Application Name (essentially the path to the application under the Website root), and the Application Pool that the application should run in.
+Right now I’m working on refactoring some existing code into some general functions for creating, removing, and destroying IIS applications ([read about it here](https://blog.danskingdom.com/powershell-functions-to-convert-remove-and-delete-iis-web-applications/)). At first, I thought that this would be a great place to use PSCustomObject, as in order to perform these operations I needed 3 pieces of information about a website; the Website name, the Application Name (essentially the path to the application under the Website root), and the Application Pool that the application should run in.
 
 ## Using an array
 

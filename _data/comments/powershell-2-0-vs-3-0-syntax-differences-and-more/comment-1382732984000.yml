@@ -3,7 +3,7 @@ name: >-
   Client Is Using At Least The Minimum Required PowerShell Version
 date: '2013-10-25 14:29:44'
 url: >-
-  http://dans-blog.azurewebsites.net/ensure-client-is-using-at-least-the-minimum-required-powershell-version/
+  https://blog.danskingdom.com/ensure-client-is-using-at-least-the-minimum-required-powershell-version/
 message: >-
   [&#8230;] will have this check in it to give them a proper error
   message.&#160; I have also created a page on PowerShell v2 vs. v3 differences

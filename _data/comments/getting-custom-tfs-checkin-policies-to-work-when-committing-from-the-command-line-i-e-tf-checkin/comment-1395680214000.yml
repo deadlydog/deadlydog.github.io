@@ -4,7 +4,7 @@ name: >-
   Having Them Automatically Work From &ldquo;TF.exe Checkin&rdquo; Too
 date: '2014-03-24 10:56:54'
 url: >-
-  http://dans-blog.azurewebsites.net/template-solution-for-deploying-tfs-checkin-policies-to-multiple-versions-of-visual-studio-and-having-them-automatically-work-from-tf-exe-checkin-too/
+  https://blog.danskingdom.com/template-solution-for-deploying-tfs-checkin-policies-to-multiple-versions-of-visual-studio-and-having-them-automatically-work-from-tf-exe-checkin-too/
 message: >-
   [&#8230;] needs to be changed there, but I will explain how it works
   here.&#160; A while back I blogged about how to get your Team Foundation

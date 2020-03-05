@@ -65,6 +65,6 @@ switch ($PsCmdlet.ParameterSetName)
 
 I still prefer to default all of my parameters, but you may prefer this method.
 
-I hope you find this useful. Check out my other [article for more PowerShell v2.0 vs. v3.0 differences](http://dans-blog.azurewebsites.net/powershell-2-0-vs-3-0-syntax-differences-and-more/).
+I hope you find this useful. Check out my other [article for more PowerShell v2.0 vs. v3.0 differences](https://blog.danskingdom.com/powershell-2-0-vs-3-0-syntax-differences-and-more/).
 
 Happy coding!

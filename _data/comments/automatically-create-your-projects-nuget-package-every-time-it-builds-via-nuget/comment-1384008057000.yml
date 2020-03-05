@@ -3,7 +3,7 @@ name: >-
   package in one click with the New-NuGetPackage PowerShell script
 date: '2013-11-09 08:40:57'
 url: >-
-  http://dans-blog.azurewebsites.net/create-and-publish-your-nuget-package-in-one-click-with-the-new-nugetpackage-powershell-script/
+  https://blog.danskingdom.com/create-and-publish-your-nuget-package-in-one-click-with-the-new-nugetpackage-powershell-script/
 message: >-
   [&#8230;] will automatically create a NuGet package for your own projects
   without you having to do anything. Read about it here. [&#8230;]
