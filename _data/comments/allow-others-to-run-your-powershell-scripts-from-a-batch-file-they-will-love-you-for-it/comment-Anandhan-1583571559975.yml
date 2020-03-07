@@ -1,0 +1,7 @@
+_id: ee7d2da0-6051-11ea-8c5a-2173c75d2195
+message: "hi all, in the below code, am saving variable from external file to batch file and i want to pass the variable into power shell\r\n\r\nBat file:\r\n\r\n@echo off\r\nSetLocal EnableDelayedExpansion\r\nset content=\r\nfor /F \"delims=\" %%i in (C:\\Campaign\\cupid\\ee.txt) do set content=!content!%%i\r\necho %content%\r\nEndLocal\r\npause\r\npowershell.exe -ExecutionPolicy Bypass -File C:\\sample\\cupid\\a.ps1 %content%\r\npause\r\n\r\nPowershell.ps1\r\n\r\n$path=$content\r\n\r\nExpand-Archive -LiteralPath C:\\sample\\cupid\\$path.zip -DestinationPath C:\\sample\\cupid\r\n\r\ntar -xvzf C:\\sample\\cupid\\cupidmedia-mid-prod2-1_config.tar.gz -C C:\\sample\\cupid\r\n\r\nwhile executing the batch file, the variable is not getting replaced in the powershell."
+name: Anandhan
+email: 7470f74290b4813bff41a3215f711535
+url: ''
+hidden: ''
+date: '2020-03-07T08:59:19.971Z'
