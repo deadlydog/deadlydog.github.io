@@ -99,7 +99,7 @@ Begin
 		[hashtable] $requestHeaders = @{
 			'Content-Type' = 'application/json'
 			Accept = 'application/json'
-			Authorization = 'Basic ' + [Convert]::ToBase64String([Text.Encoding]::ASCII.GetBytes(":$($gitHubPat)"))
+			Authorization = 'Bearer ' + $gitHubPat
 		}
 		return $requestHeaders
 	}
