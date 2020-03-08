@@ -17,7 +17,6 @@
 			"type": "PowerShell",
 			"request": "launch",
 			"script": "${workspaceFolder}/Scripts/CloseAllOpenStaticmanPullRequests.ps1",
-			"args": ["${workspaceFolder}"],
 			"cwd": "${workspaceFolder}"
 		}
 	]
