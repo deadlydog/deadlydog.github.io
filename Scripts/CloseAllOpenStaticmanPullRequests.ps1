@@ -1,8 +1,8 @@
 # This script will find all open staticman comment pull requests in the given repository and close them after confirmation.`
 param
 (
-	[Parameter(Mandatory = $true, HelpMessage = 'A GitHub Personal Access Token that has permissions to read and close pull requests.')]
-	[string] $GitHubPat,
+	[Parameter(Mandatory = $false, HelpMessage = 'A GitHub Personal Access Token that has permissions to read and close pull requests.')]
+	[string] $GitHubPersonalAccessToken,
 
 	[Parameter(Mandatory = $false, HelpMessage = 'The username that contains the repository to inspect for open staticman comment pull requests.')]
 	[string] $GitHubUsername = 'deadlydog',
@@ -13,7 +13,8 @@ param
 
 Process
 {
-	[hashtable] $requestHeaders = Get-GitHubRequestHeaders -gitHubPat $GitHubPat
+	[string] $gitHubPat = Get-AndSaveGitHubPersonalAccessTokenIfNecessary -gitHubPersonalAccessToken $GitHubPersonalAccessToken
+	[hashtable] $requestHeaders = Get-GitHubRequestHeaders -gitHubPat $gitHubPat
 
 	$openPullRequests = Get-OpenStaticmanPullRequests -gitHubUsername $GitHubUsername -gitHubRepository $GitHubRepository -requestHeaders $requestHeaders
 
@@ -24,10 +25,9 @@ Process
 	}
 
 	[bool] $userWantsToCloseOpenPullRequests = Prompt-UserIfTheyWantToCloseOpenPullRequests -openPullRequests $openPullRequests
-
 	if (!$userWantsToCloseOpenPullRequests)
 	{
-		Write-Warning "User answered with '$answer', so not closing any pull requests and just exiting."
+		Write-Warning "User chose to not close pull requests, so exiting."
 		break
 	}
 
@@ -39,6 +39,60 @@ Begin
 	$InformationPreference = 'Continue'
 
 	[string] $StaticmanCommentPrefix = "Dear human,`n`nHere's a new entry for your approval. :tada:`n`nMerge the pull request to accept it, or close it to send it away.`n`n:heart: Your friend [Staticman](https://staticman.net) :muscle:`n`n---`n"
+
+	[string] $GitHubPersonalAccessTokenEnvironmentVariableName = 'StaticmanGitHubPat'
+
+	function Get-AndSaveGitHubPersonalAccessTokenIfNecessary([string] $gitHubPersonalAccessToken)
+	{
+		[string] $gitHubPat = $gitHubPersonalAccessToken
+		if ([string]::IsNullOrWhiteSpace($gitHubPat))
+		{
+			$gitHubPat = Get-GitHubPersonalAccessToken
+		}
+		Save-GitHubPersonalAccessTokenIfNecessary -gitHubPersonalAccessToken $gitHubPat
+
+		return $gitHubPat
+	}
+
+	function Get-GitHubPersonalAccessToken
+	{
+		[string] $gitHubPat = Get-GitHubPersonalAccessTokenEnvironmentVariable
+
+		if ([string]::IsNullOrWhiteSpace($gitHubPat))
+		{
+			$gitHubPat = Read-Host -Prompt "Enter the GitHub personal access token to use"
+		}
+
+		return $gitHubPat
+	}
+
+	function Save-GitHubPersonalAccessTokenIfNecessary([string] $gitHubPersonalAccessToken)
+	{
+		[string] $savedGitHubPat = Get-GitHubPersonalAccessTokenEnvironmentVariable
+
+		if ([string]::Equals($savedGitHubPat, $gitHubPersonalAccessToken, [System.StringComparison]::OrdinalIgnoreCase))
+		{
+			return
+		}
+
+		[string] $answer = Read-Host -Prompt "The saved GitHub personal access token is different than the one provided. Do you want to save this token instead? (y/n)"
+
+		if ($answer.StartsWith('y', [System.StringComparison]::OrdinalIgnoreCase))
+		{
+			Set-GitHubPersonalAccessTokenEnvironmentVariable -gitHubPersonalAccessToken $gitHubPersonalAccessToken
+		}
+	}
+
+	function Get-GitHubPersonalAccessTokenEnvironmentVariable
+	{
+		[string] $pat = [System.Environment]::GetEnvironmentVariable($GitHubPersonalAccessTokenEnvironmentVariableName, "Machine")
+		return $pat
+	}
+
+	function Set-GitHubPersonalAccessTokenEnvironmentVariable([string] $gitHubPersonalAccessToken)
+	{
+		[System.Environment]::SetEnvironmentVariable($GitHubPersonalAccessTokenEnvironmentVariableName, $gitHubPersonalAccessToken, "Machine")
+	}
 
 	function Get-GitHubRequestHeaders([string] $gitHubPat)
 	{
@@ -69,6 +123,7 @@ Begin
 		$pullRequestConfirmationDetails = $openPullRequests |
 			Select-Object -Property Number, @{ name = 'Name'; expression = { $_.title.Replace('New comment by ', '') }}, @{ name = 'Comment'; expression = { $_.body.Replace($StaticmanCommentPrefix, '') }}
 
+		Write-Information "Review open pull requests in grid view window, and close it when ready to proceed."
 		$pullRequestConfirmationDetails | Out-GridView -Wait
 
 		[string] $answer = Read-Host -Prompt 'Do you want to close all of the open Staticman comment pull requests (y/n)'
