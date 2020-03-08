@@ -11,6 +11,14 @@
 			"script": "${workspaceFolder}/.vscode/StartJekyllServe.ps1",
 			"args": ["${workspaceFolder}"],
 			"cwd": "${workspaceFolder}"
+		},
+		{
+			"name": "Close all open staticman comment pull requests",
+			"type": "PowerShell",
+			"request": "launch",
+			"script": "${workspaceFolder}/Scripts/CloseAllOpenStaticmanPullRequests.ps1",
+			"args": ["${workspaceFolder}"],
+			"cwd": "${workspaceFolder}"
 		}
 	]
 }
