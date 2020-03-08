@@ -139,7 +139,7 @@ Begin
 			[string] $gitBranch = $_.head.ref
 			Write-Information "Closing pull request '$pullRequestUrl' and deleting it's branch '$gitBranch'."
 			Close-PullRequest -pullRequestUrl $pullRequestUrl -requestHeaders $requestHeaders
-			Delete-GitHubBranch -gitBranch $gitBranch -gitHubUsername $GitHubUsername -gitHubRepository $GitHubRepository -requestHeaders $requestHeaders
+			Remove-GitHubBranch -gitBranch $gitBranch -gitHubUsername $GitHubUsername -gitHubRepository $GitHubRepository -requestHeaders $requestHeaders
 		}
 	}
 
@@ -152,7 +152,7 @@ Begin
 		Invoke-RestMethod -Method 'Patch' -Uri $pullRequestUrl -Headers $requestHeaders -Body $closePullRequestBody > $null
 	}
 
-	function Delete-GitHubBranch([string] $gitBranch, [string] $gitHubUsername, [string] $gitHubRepository)
+	function Remove-GitHubBranch([string] $gitBranch, [string] $gitHubUsername, [string] $gitHubRepository)
 	{
 		[string] $branchUrl = "https://api.github.com/repos/$gitHubUsername/$gitHubRepository/git/refs/heads/$gitBranch"
 		Invoke-RestMethod -Method 'Delete' -Uri $branchUrl -Headers $requestHeaders
