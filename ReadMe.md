@@ -74,6 +74,7 @@ Here's a list of files I've added:
 - The `ReadMe.md` file.
 - The `ads.txt` file with my Google AdSense info.
 - The `CNAME` file was added automatically by GitHub when setting up GitHub Pages to use my custom domain name.
+- The `Scripts` directory and all files in it for making some operations easier.
 
 ## Additional Info
 
