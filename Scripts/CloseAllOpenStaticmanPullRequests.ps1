@@ -1,7 +1,7 @@
 # This script will find all open staticman comment pull requests in the given repository and close them after confirmation.`
 param
 (
-	[Parameter(Mandatory = $false, HelpMessage = 'A GitHub Personal Access Token that has permissions to read and close pull requests.')]
+	[Parameter(Mandatory = $false, HelpMessage = 'A GitHub Personal Access Token that has permissions to read and close pull requests (i.e. full "repo" permissions).')]
 	[string] $GitHubPersonalAccessToken,
 
 	[Parameter(Mandatory = $false, HelpMessage = 'The username that contains the repository to inspect for open staticman comment pull requests.')]
