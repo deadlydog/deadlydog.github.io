@@ -1,0 +1,11 @@
+_id: 83de6f50-622b-11ea-b865-6dd842068cbd
+message: >-
+  @Anandhan You would be much better off to ask these types of questions on
+  Stack Overflow. At first glance my guess is the problem is that you don't have
+  a param section in your PowerShell.ps1 file. You should replace
+  `$path=$content` with `param($path)`.
+name: Daniel Schroeder
+email: c8addda594c8b338f1e3934e73505d0c
+url: 'http://blog.danskingdom.com'
+hidden: ''
+date: '2020-03-09T17:29:22.665Z'
