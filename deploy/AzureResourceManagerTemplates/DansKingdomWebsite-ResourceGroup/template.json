@@ -249,24 +249,6 @@
 			}
 		},
 		{
-			"type": "Microsoft.Web/sites/deployments",
-			"apiVersion": "2018-11-01",
-			"name": "[concat(parameters('sites_DansKingdomWebsite_name'), '/351578721101667')]",
-			"location": "[parameters('location')]",
-			"dependsOn": [
-				"[resourceId('Microsoft.Web/sites', parameters('sites_DansKingdomWebsite_name'))]"
-			],
-			"properties": {
-				"status": 4,
-				"author": "Daniel Schroeder",
-				"deployer": "VSTS",
-				"message": "{\"type\":\"Deployment\",\"commitId\":\"96719d84da014212bbf46d580b7d00123b816432\",\"buildId\":\"538\",\"releaseId\":\"35\",\"buildNumber\":\"20200110.1\",\"releaseName\":\"Release-4\",\"repoProvider\":\"TfsGit\",\"repoName\":\"DansKingdom.Website\",\"collectionUrl\":\"https://dev.azure.com/deadlydog/\",\"teamProject\":\"2fdacc85-2f97-401e-bc68-69090c712dea\",\"slotName\":\"production\"}",
-				"start_time": "2020-01-11T05:38:21.7174439Z",
-				"end_time": "2020-01-11T05:38:21.7174439Z",
-				"active": true
-			}
-		},
-		{
 			"type": "Microsoft.Web/sites/hostNameBindings",
 			"apiVersion": "2018-11-01",
 			"name": "[concat(parameters('sites_DansKingdomWebsite_name'), '/danskingdom.com')]",
