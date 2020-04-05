@@ -1,0 +1,30 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"sites_DansKingdomWebsite_name": {
+			"value": null
+		},
+		"components_DansKingdomWebsite_ApplicationInsights_name": {
+			"value": null
+		},
+		"webtests_ping_danskingdom_landing_page_danskingdomwebsite_applicationinsights_name": {
+			"value": null
+		},
+		"metricalerts_ping_danskingdom_landing_page_danskingdomwebsite_applicationinsights_name": {
+			"value": null
+		},
+		"smartdetectoralertrules_failure_anomalies___danskingdomwebsite_applicationinsights_name": {
+			"value": null
+		},
+		"actiongroups_notify_20dan_20action_20group_externalid": {
+			"value": null
+		},
+		"actiongroups_notify_dan_action_group_externalid": {
+			"value": null
+		},
+		"serverfarms_PersonalSitesAppServicePlan_externalid": {
+			"value": null
+		}
+	}
+}
