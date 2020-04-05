@@ -33,6 +33,13 @@
 		"serverfarms_PersonalSitesAppServicePlan_externalid": {
 			"defaultValue": "/subscriptions/42f8591c-9fd1-47ac-95bb-7c32858bf1cd/resourceGroups/SharedResources-ResourceGroup/providers/Microsoft.Web/serverfarms/PersonalSitesAppServicePlan",
 			"type": "String"
+		},
+		"location": {
+			"type": "string",
+			"defaultValue": "[resourceGroup().location]",
+			"metadata": {
+				"description": "Location for all resources."
+			}
 		}
 	},
 	"variables": {
@@ -42,7 +49,7 @@
 			"type": "microsoft.insights/components",
 			"apiVersion": "2015-05-01",
 			"name": "[parameters('components_DansKingdomWebsite_ApplicationInsights_name')]",
-			"location": "eastus",
+			"location": "[parameters('location')]",
 			"kind": "web",
 			"properties": {
 				"Application_Type": "web",
@@ -53,7 +60,7 @@
 			"type": "microsoft.insights/webtests",
 			"apiVersion": "2015-05-01",
 			"name": "[parameters('webtests_ping_danskingdom_landing_page_danskingdomwebsite_applicationinsights_name')]",
-			"location": "eastus",
+			"location": "[parameters('location')]",
 			"tags": {
 				"hidden-link:/subscriptions/42f8591c-9fd1-47ac-95bb-7c32858bf1cd/resourceGroups/DansKingdomWebsite-ResourceGroup/providers/microsoft.insights/components/DansKingdomWebsite-ApplicationInsights": "Resource"
 			},
@@ -97,7 +104,7 @@
 			"type": "Microsoft.Web/sites",
 			"apiVersion": "2018-11-01",
 			"name": "[parameters('sites_DansKingdomWebsite_name')]",
-			"location": "East US",
+			"location": "[parameters('location')]",
 			"kind": "app",
 			"properties": {
 				"enabled": true,
@@ -172,7 +179,7 @@
 			"type": "Microsoft.Web/sites/config",
 			"apiVersion": "2018-11-01",
 			"name": "[concat(parameters('sites_DansKingdomWebsite_name'), '/web')]",
-			"location": "East US",
+			"location": "[parameters('location')]",
 			"dependsOn": [
 				"[resourceId('Microsoft.Web/sites', parameters('sites_DansKingdomWebsite_name'))]"
 			],
@@ -245,7 +252,7 @@
 			"type": "Microsoft.Web/sites/deployments",
 			"apiVersion": "2018-11-01",
 			"name": "[concat(parameters('sites_DansKingdomWebsite_name'), '/321553319038059')]",
-			"location": "East US",
+			"location": "[parameters('location')]",
 			"dependsOn": [
 				"[resourceId('Microsoft.Web/sites', parameters('sites_DansKingdomWebsite_name'))]"
 			],
@@ -263,7 +270,7 @@
 			"type": "Microsoft.Web/sites/deployments",
 			"apiVersion": "2018-11-01",
 			"name": "[concat(parameters('sites_DansKingdomWebsite_name'), '/321553319084080')]",
-			"location": "East US",
+			"location": "[parameters('location')]",
 			"dependsOn": [
 				"[resourceId('Microsoft.Web/sites', parameters('sites_DansKingdomWebsite_name'))]"
 			],
@@ -281,7 +288,7 @@
 			"type": "Microsoft.Web/sites/deployments",
 			"apiVersion": "2018-11-01",
 			"name": "[concat(parameters('sites_DansKingdomWebsite_name'), '/331553319802901')]",
-			"location": "East US",
+			"location": "[parameters('location')]",
 			"dependsOn": [
 				"[resourceId('Microsoft.Web/sites', parameters('sites_DansKingdomWebsite_name'))]"
 			],
@@ -299,7 +306,7 @@
 			"type": "Microsoft.Web/sites/deployments",
 			"apiVersion": "2018-11-01",
 			"name": "[concat(parameters('sites_DansKingdomWebsite_name'), '/331553319826310')]",
-			"location": "East US",
+			"location": "[parameters('location')]",
 			"dependsOn": [
 				"[resourceId('Microsoft.Web/sites', parameters('sites_DansKingdomWebsite_name'))]"
 			],
@@ -317,7 +324,7 @@
 			"type": "Microsoft.Web/sites/deployments",
 			"apiVersion": "2018-11-01",
 			"name": "[concat(parameters('sites_DansKingdomWebsite_name'), '/341553328402621')]",
-			"location": "East US",
+			"location": "[parameters('location')]",
 			"dependsOn": [
 				"[resourceId('Microsoft.Web/sites', parameters('sites_DansKingdomWebsite_name'))]"
 			],
@@ -335,7 +342,7 @@
 			"type": "Microsoft.Web/sites/deployments",
 			"apiVersion": "2018-11-01",
 			"name": "[concat(parameters('sites_DansKingdomWebsite_name'), '/341553328431602')]",
-			"location": "East US",
+			"location": "[parameters('location')]",
 			"dependsOn": [
 				"[resourceId('Microsoft.Web/sites', parameters('sites_DansKingdomWebsite_name'))]"
 			],
@@ -353,7 +360,7 @@
 			"type": "Microsoft.Web/sites/deployments",
 			"apiVersion": "2018-11-01",
 			"name": "[concat(parameters('sites_DansKingdomWebsite_name'), '/351578721075924')]",
-			"location": "East US",
+			"location": "[parameters('location')]",
 			"dependsOn": [
 				"[resourceId('Microsoft.Web/sites', parameters('sites_DansKingdomWebsite_name'))]"
 			],
@@ -371,7 +378,7 @@
 			"type": "Microsoft.Web/sites/deployments",
 			"apiVersion": "2018-11-01",
 			"name": "[concat(parameters('sites_DansKingdomWebsite_name'), '/351578721101667')]",
-			"location": "East US",
+			"location": "[parameters('location')]",
 			"dependsOn": [
 				"[resourceId('Microsoft.Web/sites', parameters('sites_DansKingdomWebsite_name'))]"
 			],
@@ -389,7 +396,7 @@
 			"type": "Microsoft.Web/sites/deployments",
 			"apiVersion": "2018-11-01",
 			"name": "[concat(parameters('sites_DansKingdomWebsite_name'), '/70bf4cf6-f6aa-4523-acf4-ccba6117cf04')]",
-			"location": "East US",
+			"location": "[parameters('location')]",
 			"dependsOn": [
 				"[resourceId('Microsoft.Web/sites', parameters('sites_DansKingdomWebsite_name'))]"
 			],
@@ -407,7 +414,7 @@
 			"type": "Microsoft.Web/sites/hostNameBindings",
 			"apiVersion": "2018-11-01",
 			"name": "[concat(parameters('sites_DansKingdomWebsite_name'), '/danskingdom.com')]",
-			"location": "East US",
+			"location": "[parameters('location')]",
 			"dependsOn": [
 				"[resourceId('Microsoft.Web/sites', parameters('sites_DansKingdomWebsite_name'))]"
 			],
@@ -420,7 +427,7 @@
 			"type": "Microsoft.Web/sites/hostNameBindings",
 			"apiVersion": "2018-11-01",
 			"name": "[concat(parameters('sites_DansKingdomWebsite_name'), '/', parameters('sites_DansKingdomWebsite_name'), '.azurewebsites.net')]",
-			"location": "East US",
+			"location": "[parameters('location')]",
 			"dependsOn": [
 				"[resourceId('Microsoft.Web/sites', parameters('sites_DansKingdomWebsite_name'))]"
 			],
@@ -433,7 +440,7 @@
 			"type": "Microsoft.Web/sites/hostNameBindings",
 			"apiVersion": "2018-11-01",
 			"name": "[concat(parameters('sites_DansKingdomWebsite_name'), '/www.danskingdom.com')]",
-			"location": "East US",
+			"location": "[parameters('location')]",
 			"dependsOn": [
 				"[resourceId('Microsoft.Web/sites', parameters('sites_DansKingdomWebsite_name'))]"
 			],
