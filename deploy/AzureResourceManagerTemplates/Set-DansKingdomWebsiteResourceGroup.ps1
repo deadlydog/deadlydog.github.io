@@ -1,3 +1,5 @@
+# Run 'Connect-AzAccount' to authenticate before running this script.
+
 $resourceGroupName = 'DansKingdomWebsite'
 $location = 'eastus2'
 
