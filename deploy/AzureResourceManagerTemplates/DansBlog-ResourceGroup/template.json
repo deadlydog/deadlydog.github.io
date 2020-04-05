@@ -29,6 +29,13 @@
 		"actiongroups_notify_dan_action_group_externalid": {
 			"defaultValue": "/subscriptions/42f8591c-9fd1-47ac-95bb-7c32858bf1cd/resourceGroups/sharedresources-resourcegroup/providers/microsoft.insights/actiongroups/notify dan action group",
 			"type": "String"
+		},
+		"location": {
+			"type": "string",
+			"defaultValue": "[resourceGroup().location]",
+			"metadata": {
+				"description": "Location for all resources."
+			}
 		}
 	},
 	"variables": {
@@ -66,7 +73,7 @@
 			"type": "microsoft.insights/components",
 			"apiVersion": "2015-05-01",
 			"name": "[parameters('components_DansBlog_ApplicationInsights_name')]",
-			"location": "eastus",
+			"location": "[parameters('location')]",
 			"kind": "web",
 			"properties": {
 				"Application_Type": "web",
@@ -78,7 +85,7 @@
 			"type": "microsoft.insights/webtests",
 			"apiVersion": "2015-05-01",
 			"name": "[parameters('webtests_ping_dansblog_landing_page_dansblog_applicationinsights_name')]",
-			"location": "eastus",
+			"location": "[parameters('location')]",
 			"tags": {
 				"hidden-link:/subscriptions/42f8591c-9fd1-47ac-95bb-7c32858bf1cd/resourceGroups/DansBlog-ResourceGroup/providers/microsoft.insights/components/DansBlog-ApplicationInsights": "Resource"
 			},
