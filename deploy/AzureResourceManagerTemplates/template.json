@@ -1,0 +1,476 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "sites_DansKingdomWebsite_name": {
+            "defaultValue": "DansKingdomWebsite",
+            "type": "String"
+        },
+        "components_DansKingdomWebsite_ApplicationInsights_name": {
+            "defaultValue": "DansKingdomWebsite-ApplicationInsights",
+            "type": "String"
+        },
+        "webtests_ping_danskingdom_landing_page_danskingdomwebsite_applicationinsights_name": {
+            "defaultValue": "ping danskingdom landing page-danskingdomwebsite-applicationinsights",
+            "type": "String"
+        },
+        "metricalerts_ping_danskingdom_landing_page_danskingdomwebsite_applicationinsights_name": {
+            "defaultValue": "ping danskingdom landing page-danskingdomwebsite-applicationinsights",
+            "type": "String"
+        },
+        "smartdetectoralertrules_failure_anomalies___danskingdomwebsite_applicationinsights_name": {
+            "defaultValue": "failure anomalies - danskingdomwebsite-applicationinsights",
+            "type": "String"
+        },
+        "actiongroups_notify_20dan_20action_20group_externalid": {
+            "defaultValue": "/subscriptions/42f8591c-9fd1-47ac-95bb-7c32858bf1cd/resourceGroups/sharedresources/providers/microsoft.insights/actiongroups/notify%20dan%20action%20group",
+            "type": "String"
+        },
+        "actiongroups_notify_dan_action_group_externalid": {
+            "defaultValue": "/subscriptions/42f8591c-9fd1-47ac-95bb-7c32858bf1cd/resourceGroups/sharedresources-resourcegroup/providers/microsoft.insights/actiongroups/notify dan action group",
+            "type": "String"
+        },
+        "serverfarms_PersonalSitesAppServicePlan_externalid": {
+            "defaultValue": "/subscriptions/42f8591c-9fd1-47ac-95bb-7c32858bf1cd/resourceGroups/SharedResources-ResourceGroup/providers/Microsoft.Web/serverfarms/PersonalSitesAppServicePlan",
+            "type": "String"
+        }
+    },
+    "variables": {},
+    "resources": [
+        {
+            "type": "microsoft.insights/components",
+            "apiVersion": "2015-05-01",
+            "name": "[parameters('components_DansKingdomWebsite_ApplicationInsights_name')]",
+            "location": "eastus",
+            "kind": "web",
+            "properties": {
+                "Application_Type": "web",
+                "Request_Source": "IbizaWebAppExtensionCreate"
+            }
+        },
+        {
+            "type": "microsoft.insights/webtests",
+            "apiVersion": "2015-05-01",
+            "name": "[parameters('webtests_ping_danskingdom_landing_page_danskingdomwebsite_applicationinsights_name')]",
+            "location": "eastus",
+            "tags": {
+                "hidden-link:/subscriptions/42f8591c-9fd1-47ac-95bb-7c32858bf1cd/resourceGroups/DansKingdomWebsite-ResourceGroup/providers/microsoft.insights/components/DansKingdomWebsite-ApplicationInsights": "Resource"
+            },
+            "properties": {
+                "SyntheticMonitorId": "[parameters('webtests_ping_danskingdom_landing_page_danskingdomwebsite_applicationinsights_name')]",
+                "Name": "Ping DansKingdom landing page",
+                "Enabled": true,
+                "Frequency": 300,
+                "Timeout": 120,
+                "Kind": "ping",
+                "RetryEnabled": true,
+                "Locations": [
+                    {
+                        "Id": "emea-nl-ams-azr"
+                    },
+                    {
+                        "Id": "us-ca-sjc-azr"
+                    },
+                    {
+                        "Id": "us-tx-sn1-azr"
+                    },
+                    {
+                        "Id": "us-il-ch1-azr"
+                    },
+                    {
+                        "Id": "us-va-ash-azr"
+                    },
+                    {
+                        "Id": "apac-hk-hkn-azr"
+                    },
+                    {
+                        "Id": "us-fl-mia-edge"
+                    }
+                ],
+                "Configuration": {
+                    "WebTest": "<WebTest         Name=\"Ping DansKingdom landing page\"         Id=\"b464fb6a-4c44-48ef-9ce5-66cb223da7bb\"         Enabled=\"True\"         CssProjectStructure=\"\"         CssIteration=\"\"         Timeout=\"120\"         WorkItemIds=\"\"         xmlns=\"http://microsoft.com/schemas/VisualStudio/TeamTest/2010\"         Description=\"\"         CredentialUserName=\"\"         CredentialPassword=\"\"         PreAuthenticate=\"True\"         Proxy=\"default\"         StopOnError=\"False\"         RecordedResultFile=\"\"         ResultsLocale=\"\">        <Items>        <Request         Method=\"GET\"         Guid=\"ab04f462-b9a4-a65b-6b55-137684868a1a\"         Version=\"1.1\"         Url=\"http://danskingdom.com\"         ThinkTime=\"0\"         Timeout=\"120\"         ParseDependentRequests=\"False\"         FollowRedirects=\"True\"         RecordResult=\"True\"         Cache=\"False\"         ResponseTimeGoal=\"0\"         Encoding=\"utf-8\"         ExpectedHttpStatusCode=\"200\"         ExpectedResponseUrl=\"\"         ReportingName=\"\"         IgnoreHttpStatusCode=\"False\" />        </Items>        </WebTest>"
+                }
+            }
+        },
+        {
+            "type": "Microsoft.Web/sites",
+            "apiVersion": "2018-11-01",
+            "name": "[parameters('sites_DansKingdomWebsite_name')]",
+            "location": "East US",
+            "kind": "app",
+            "properties": {
+                "enabled": true,
+                "hostNameSslStates": [
+                    {
+                        "name": "danskingdom.com",
+                        "sslState": "Disabled",
+                        "hostType": "Standard"
+                    },
+                    {
+                        "name": "danskingdomwebsite.azurewebsites.net",
+                        "sslState": "Disabled",
+                        "hostType": "Standard"
+                    },
+                    {
+                        "name": "www.danskingdom.com",
+                        "sslState": "Disabled",
+                        "hostType": "Standard"
+                    },
+                    {
+                        "name": "danskingdomwebsite.scm.azurewebsites.net",
+                        "sslState": "Disabled",
+                        "hostType": "Repository"
+                    }
+                ],
+                "serverFarmId": "[parameters('serverfarms_PersonalSitesAppServicePlan_externalid')]",
+                "reserved": false,
+                "isXenon": false,
+                "hyperV": false,
+                "scmSiteAlsoStopped": false,
+                "clientAffinityEnabled": true,
+                "clientCertEnabled": false,
+                "hostNamesDisabled": false,
+                "containerSize": 0,
+                "dailyMemoryTimeQuota": 0,
+                "httpsOnly": false,
+                "redundancyMode": "None"
+            }
+        },
+        {
+            "type": "microsoft.alertsmanagement/smartdetectoralertrules",
+            "apiVersion": "2019-06-01",
+            "name": "[parameters('smartdetectoralertrules_failure_anomalies___danskingdomwebsite_applicationinsights_name')]",
+            "location": "global",
+            "dependsOn": [
+                "[resourceId('microsoft.insights/components', parameters('components_DansKingdomWebsite_ApplicationInsights_name'))]"
+            ],
+            "properties": {
+                "description": "Failure Anomalies notifies you of an unusual rise in the rate of failed HTTP requests or dependency calls",
+                "state": "Enabled",
+                "severity": "Sev3",
+                "frequency": "PT1M",
+                "detector": {
+                    "id": "FailureAnomaliesDetector",
+                    "name": "Failure Anomalies",
+                    "description": "Detects if your application experiences an abnormal rise in the rate of HTTP requests or dependency calls that are reported as failed. The anomaly detection uses machine learning algorithms and occurs in near real time, therefore there's no need to define a frequency for this signal.<br/></br/>To help you triage and diagnose the problem, an analysis of the characteristics of the failures and related telemetry is provided with the detection. This feature works for any app, hosted in the cloud or on your own servers, that generates request or dependency telemetry - for example, if you have a worker role that calls <a class=\"ext-smartDetecor-link\" href=\\\"https://docs.microsoft.com/azure/application-insights/app-insights-api-custom-events-metrics#trackrequest\\\" target=\\\"_blank\\\">TrackRequest()</a> or <a class=\"ext-smartDetecor-link\" href=\\\"https://docs.microsoft.com/azure/application-insights/app-insights-api-custom-events-metrics#trackdependency\\\" target=\\\"_blank\\\">TrackDependency()</a>.<br/><br/><a class=\"ext-smartDetecor-link\" href=\\\"https://docs.microsoft.com/azure/azure-monitor/app/proactive-failure-diagnostics\\\" target=\\\"_blank\\\">Learn more about Failure Anomalies</a>",
+                    "supportedResourceTypes": [
+                        "ApplicationInsights"
+                    ]
+                },
+                "scope": [
+                    "[resourceId('microsoft.insights/components', parameters('components_DansKingdomWebsite_ApplicationInsights_name'))]"
+                ],
+                "actionGroups": {
+                    "groupIds": [
+                        "[parameters('actiongroups_notify_20dan_20action_20group_externalid')]"
+                    ]
+                }
+            }
+        },
+        {
+            "type": "Microsoft.Web/sites/config",
+            "apiVersion": "2018-11-01",
+            "name": "[concat(parameters('sites_DansKingdomWebsite_name'), '/web')]",
+            "location": "East US",
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/sites', parameters('sites_DansKingdomWebsite_name'))]"
+            ],
+            "properties": {
+                "numberOfWorkers": 1,
+                "defaultDocuments": [
+                    "Default.htm",
+                    "Default.html",
+                    "Default.asp",
+                    "index.htm",
+                    "index.html",
+                    "iisstart.htm",
+                    "default.aspx",
+                    "index.php",
+                    "hostingstart.html"
+                ],
+                "netFrameworkVersion": "v4.0",
+                "phpVersion": "5.6",
+                "requestTracingEnabled": false,
+                "remoteDebuggingEnabled": false,
+                "httpLoggingEnabled": false,
+                "logsDirectorySizeLimit": 35,
+                "detailedErrorLoggingEnabled": false,
+                "publishingUsername": "$DansKingdomWebsite",
+                "scmType": "VSTSRM",
+                "use32BitWorkerProcess": true,
+                "webSocketsEnabled": false,
+                "alwaysOn": false,
+                "managedPipelineMode": "Integrated",
+                "virtualApplications": [
+                    {
+                        "virtualPath": "/",
+                        "physicalPath": "site\\wwwroot",
+                        "preloadEnabled": false
+                    }
+                ],
+                "loadBalancing": "LeastRequests",
+                "experiments": {
+                    "rampUpRules": []
+                },
+                "autoHealEnabled": false,
+                "localMySqlEnabled": false,
+                "ipSecurityRestrictions": [
+                    {
+                        "ipAddress": "Any",
+                        "action": "Allow",
+                        "priority": 1,
+                        "name": "Allow all",
+                        "description": "Allow all access"
+                    }
+                ],
+                "scmIpSecurityRestrictions": [
+                    {
+                        "ipAddress": "Any",
+                        "action": "Allow",
+                        "priority": 1,
+                        "name": "Allow all",
+                        "description": "Allow all access"
+                    }
+                ],
+                "scmIpSecurityRestrictionsUseMain": false,
+                "http20Enabled": false,
+                "minTlsVersion": "1.2",
+                "ftpsState": "AllAllowed",
+                "reservedInstanceCount": 0
+            }
+        },
+        {
+            "type": "Microsoft.Web/sites/deployments",
+            "apiVersion": "2018-11-01",
+            "name": "[concat(parameters('sites_DansKingdomWebsite_name'), '/321553319038059')]",
+            "location": "East US",
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/sites', parameters('sites_DansKingdomWebsite_name'))]"
+            ],
+            "properties": {
+                "status": 4,
+                "author": "Daniel Schroeder",
+                "deployer": "VSTS",
+                "message": "{\"type\":\"Install Extensions\",\"commitId\":\"c4cd06612f9ddf822f5bebfe972a095d62775274\",\"buildId\":\"358\",\"releaseId\":\"32\",\"buildNumber\":\"20190322.1\",\"releaseName\":\"Release-1\",\"repoProvider\":\"TfsGit\",\"repoName\":\"DansKingdom.Website\",\"collectionUrl\":\"https://dev.azure.com/deadlydog/\",\"teamProject\":\"2fdacc85-2f97-401e-bc68-69090c712dea\"}",
+                "start_time": "2019-03-23T05:30:38.4432746Z",
+                "end_time": "2019-03-23T05:30:38.4432746Z",
+                "active": false
+            }
+        },
+        {
+            "type": "Microsoft.Web/sites/deployments",
+            "apiVersion": "2018-11-01",
+            "name": "[concat(parameters('sites_DansKingdomWebsite_name'), '/321553319084080')]",
+            "location": "East US",
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/sites', parameters('sites_DansKingdomWebsite_name'))]"
+            ],
+            "properties": {
+                "status": 4,
+                "author": "Daniel Schroeder",
+                "deployer": "VSTS",
+                "message": "{\"type\":\"Deployment\",\"commitId\":\"c4cd06612f9ddf822f5bebfe972a095d62775274\",\"buildId\":\"358\",\"releaseId\":\"32\",\"buildNumber\":\"20190322.1\",\"releaseName\":\"Release-1\",\"repoProvider\":\"TfsGit\",\"repoName\":\"DansKingdom.Website\",\"collectionUrl\":\"https://dev.azure.com/deadlydog/\",\"teamProject\":\"2fdacc85-2f97-401e-bc68-69090c712dea\",\"slotName\":\"production\"}",
+                "start_time": "2019-03-23T05:31:24.2909236Z",
+                "end_time": "2019-03-23T05:31:24.2909236Z",
+                "active": false
+            }
+        },
+        {
+            "type": "Microsoft.Web/sites/deployments",
+            "apiVersion": "2018-11-01",
+            "name": "[concat(parameters('sites_DansKingdomWebsite_name'), '/331553319802901')]",
+            "location": "East US",
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/sites', parameters('sites_DansKingdomWebsite_name'))]"
+            ],
+            "properties": {
+                "status": 4,
+                "author": "Daniel Schroeder",
+                "deployer": "VSTS",
+                "message": "{\"type\":\"Install Extensions\",\"commitId\":\"f76166665700b9695764b50d08f80242546b65e7\",\"buildId\":\"359\",\"releaseId\":\"33\",\"buildNumber\":\"20190322.2\",\"releaseName\":\"Release-2\",\"repoProvider\":\"TfsGit\",\"repoName\":\"DansKingdom.Website\",\"collectionUrl\":\"https://dev.azure.com/deadlydog/\",\"teamProject\":\"2fdacc85-2f97-401e-bc68-69090c712dea\"}",
+                "start_time": "2019-03-23T05:43:23.3110186Z",
+                "end_time": "2019-03-23T05:43:23.3110186Z",
+                "active": false
+            }
+        },
+        {
+            "type": "Microsoft.Web/sites/deployments",
+            "apiVersion": "2018-11-01",
+            "name": "[concat(parameters('sites_DansKingdomWebsite_name'), '/331553319826310')]",
+            "location": "East US",
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/sites', parameters('sites_DansKingdomWebsite_name'))]"
+            ],
+            "properties": {
+                "status": 4,
+                "author": "Daniel Schroeder",
+                "deployer": "VSTS",
+                "message": "{\"type\":\"Deployment\",\"commitId\":\"f76166665700b9695764b50d08f80242546b65e7\",\"buildId\":\"359\",\"releaseId\":\"33\",\"buildNumber\":\"20190322.2\",\"releaseName\":\"Release-2\",\"repoProvider\":\"TfsGit\",\"repoName\":\"DansKingdom.Website\",\"collectionUrl\":\"https://dev.azure.com/deadlydog/\",\"teamProject\":\"2fdacc85-2f97-401e-bc68-69090c712dea\",\"slotName\":\"production\"}",
+                "start_time": "2019-03-23T05:43:46.4723341Z",
+                "end_time": "2019-03-23T05:43:46.4723341Z",
+                "active": false
+            }
+        },
+        {
+            "type": "Microsoft.Web/sites/deployments",
+            "apiVersion": "2018-11-01",
+            "name": "[concat(parameters('sites_DansKingdomWebsite_name'), '/341553328402621')]",
+            "location": "East US",
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/sites', parameters('sites_DansKingdomWebsite_name'))]"
+            ],
+            "properties": {
+                "status": 4,
+                "author": "Daniel Schroeder",
+                "deployer": "VSTS",
+                "message": "{\"type\":\"Install Extensions\",\"commitId\":\"60140ff49b17c4cab79dc1667e7ae8bba1606513\",\"buildId\":\"360\",\"releaseId\":\"34\",\"buildNumber\":\"20190323.1\",\"releaseName\":\"Release-3\",\"repoProvider\":\"TfsGit\",\"repoName\":\"DansKingdom.Website\",\"collectionUrl\":\"https://dev.azure.com/deadlydog/\",\"teamProject\":\"2fdacc85-2f97-401e-bc68-69090c712dea\"}",
+                "start_time": "2019-03-23T08:06:43.103953Z",
+                "end_time": "2019-03-23T08:06:43.103953Z",
+                "active": false
+            }
+        },
+        {
+            "type": "Microsoft.Web/sites/deployments",
+            "apiVersion": "2018-11-01",
+            "name": "[concat(parameters('sites_DansKingdomWebsite_name'), '/341553328431602')]",
+            "location": "East US",
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/sites', parameters('sites_DansKingdomWebsite_name'))]"
+            ],
+            "properties": {
+                "status": 4,
+                "author": "Daniel Schroeder",
+                "deployer": "VSTS",
+                "message": "{\"type\":\"Deployment\",\"commitId\":\"60140ff49b17c4cab79dc1667e7ae8bba1606513\",\"buildId\":\"360\",\"releaseId\":\"34\",\"buildNumber\":\"20190323.1\",\"releaseName\":\"Release-3\",\"repoProvider\":\"TfsGit\",\"repoName\":\"DansKingdom.Website\",\"collectionUrl\":\"https://dev.azure.com/deadlydog/\",\"teamProject\":\"2fdacc85-2f97-401e-bc68-69090c712dea\",\"slotName\":\"production\"}",
+                "start_time": "2019-03-23T08:07:11.7453258Z",
+                "end_time": "2019-03-23T08:07:11.7453258Z",
+                "active": false
+            }
+        },
+        {
+            "type": "Microsoft.Web/sites/deployments",
+            "apiVersion": "2018-11-01",
+            "name": "[concat(parameters('sites_DansKingdomWebsite_name'), '/351578721075924')]",
+            "location": "East US",
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/sites', parameters('sites_DansKingdomWebsite_name'))]"
+            ],
+            "properties": {
+                "status": 4,
+                "author": "Daniel Schroeder",
+                "deployer": "VSTS",
+                "message": "{\"type\":\"Install Extensions\",\"commitId\":\"96719d84da014212bbf46d580b7d00123b816432\",\"buildId\":\"538\",\"releaseId\":\"35\",\"buildNumber\":\"20200110.1\",\"releaseName\":\"Release-4\",\"repoProvider\":\"TfsGit\",\"repoName\":\"DansKingdom.Website\",\"collectionUrl\":\"https://dev.azure.com/deadlydog/\",\"teamProject\":\"2fdacc85-2f97-401e-bc68-69090c712dea\"}",
+                "start_time": "2020-01-11T05:37:56.2945546Z",
+                "end_time": "2020-01-11T05:37:56.2945546Z",
+                "active": false
+            }
+        },
+        {
+            "type": "Microsoft.Web/sites/deployments",
+            "apiVersion": "2018-11-01",
+            "name": "[concat(parameters('sites_DansKingdomWebsite_name'), '/351578721101667')]",
+            "location": "East US",
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/sites', parameters('sites_DansKingdomWebsite_name'))]"
+            ],
+            "properties": {
+                "status": 4,
+                "author": "Daniel Schroeder",
+                "deployer": "VSTS",
+                "message": "{\"type\":\"Deployment\",\"commitId\":\"96719d84da014212bbf46d580b7d00123b816432\",\"buildId\":\"538\",\"releaseId\":\"35\",\"buildNumber\":\"20200110.1\",\"releaseName\":\"Release-4\",\"repoProvider\":\"TfsGit\",\"repoName\":\"DansKingdom.Website\",\"collectionUrl\":\"https://dev.azure.com/deadlydog/\",\"teamProject\":\"2fdacc85-2f97-401e-bc68-69090c712dea\",\"slotName\":\"production\"}",
+                "start_time": "2020-01-11T05:38:21.7174439Z",
+                "end_time": "2020-01-11T05:38:21.7174439Z",
+                "active": true
+            }
+        },
+        {
+            "type": "Microsoft.Web/sites/deployments",
+            "apiVersion": "2018-11-01",
+            "name": "[concat(parameters('sites_DansKingdomWebsite_name'), '/70bf4cf6-f6aa-4523-acf4-ccba6117cf04')]",
+            "location": "East US",
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/sites', parameters('sites_DansKingdomWebsite_name'))]"
+            ],
+            "properties": {
+                "status": 4,
+                "author": "VSTS",
+                "deployer": "VSTS",
+                "message": "{\"type\":\"CDDeploymentConfiguration\",\"message\":\"Successfully set up continuous delivery and triggered deployment to Azure Web App.\",\"VSTSRM_BuildDefinitionWebAccessUrl\":\"https://dev.azure.com/deadlydog/2fdacc85-2f97-401e-bc68-69090c712dea/_build?_a=simple-process&definitionId=27\",\"VSTSRM_ConfiguredCDEndPoint\":\"https://dev.azure.com/deadlydog/2fdacc85-2f97-401e-bc68-69090c712dea/_apps/hub/ms.vss-releaseManagement-web.hub-explorer?definitionId=5\",\"VSTSRM_BuildWebAccessUrl\":\"https://dev.azure.com/deadlydog/2fdacc85-2f97-401e-bc68-69090c712dea/_build?_a=summary&buildId=358\"}",
+                "start_time": "2019-03-23T05:28:16.3088688Z",
+                "end_time": "2019-03-23T05:28:16.3088688Z",
+                "active": false
+            }
+        },
+        {
+            "type": "Microsoft.Web/sites/hostNameBindings",
+            "apiVersion": "2018-11-01",
+            "name": "[concat(parameters('sites_DansKingdomWebsite_name'), '/danskingdom.com')]",
+            "location": "East US",
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/sites', parameters('sites_DansKingdomWebsite_name'))]"
+            ],
+            "properties": {
+                "siteName": "DansKingdomWebsite",
+                "hostNameType": "Verified"
+            }
+        },
+        {
+            "type": "Microsoft.Web/sites/hostNameBindings",
+            "apiVersion": "2018-11-01",
+            "name": "[concat(parameters('sites_DansKingdomWebsite_name'), '/', parameters('sites_DansKingdomWebsite_name'), '.azurewebsites.net')]",
+            "location": "East US",
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/sites', parameters('sites_DansKingdomWebsite_name'))]"
+            ],
+            "properties": {
+                "siteName": "DansKingdomWebsite",
+                "hostNameType": "Verified"
+            }
+        },
+        {
+            "type": "Microsoft.Web/sites/hostNameBindings",
+            "apiVersion": "2018-11-01",
+            "name": "[concat(parameters('sites_DansKingdomWebsite_name'), '/www.danskingdom.com')]",
+            "location": "East US",
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/sites', parameters('sites_DansKingdomWebsite_name'))]"
+            ],
+            "properties": {
+                "siteName": "DansKingdomWebsite",
+                "hostNameType": "Verified"
+            }
+        },
+        {
+            "type": "microsoft.insights/metricalerts",
+            "apiVersion": "2018-03-01",
+            "name": "[parameters('metricalerts_ping_danskingdom_landing_page_danskingdomwebsite_applicationinsights_name')]",
+            "location": "global",
+            "dependsOn": [
+                "[resourceId('microsoft.insights/webtests', parameters('webtests_ping_danskingdom_landing_page_danskingdomwebsite_applicationinsights_name'))]",
+                "[resourceId('microsoft.insights/components', parameters('components_DansKingdomWebsite_ApplicationInsights_name'))]"
+            ],
+            "tags": {
+                "hidden-link:/subscriptions/42f8591c-9fd1-47ac-95bb-7c32858bf1cd/resourcegroups/DansKingdomWebsite-ResourceGroup/providers/microsoft.insights/components/DansKingdomWebsite-ApplicationInsights": "Resource",
+                "hidden-link:/subscriptions/42f8591c-9fd1-47ac-95bb-7c32858bf1cd/resourcegroups/DansKingdomWebsite-ResourceGroup/providers/microsoft.insights/webtests/ping danskingdom landing page-danskingdomwebsite-applicationinsights": "Resource"
+            },
+            "properties": {
+                "description": "[concat('Automatically created alert rule for availability test \"', parameters('metricalerts_ping_danskingdom_landing_page_danskingdomwebsite_applicationinsights_name'), '\"')]",
+                "severity": 1,
+                "enabled": true,
+                "scopes": [
+                    "[resourceId('microsoft.insights/webtests', parameters('webtests_ping_danskingdom_landing_page_danskingdomwebsite_applicationinsights_name'))]",
+                    "[resourceId('microsoft.insights/components', parameters('components_DansKingdomWebsite_ApplicationInsights_name'))]"
+                ],
+                "evaluationFrequency": "PT1M",
+                "windowSize": "PT5M",
+                "criteria": {},
+                "actions": [
+                    {
+                        "actionGroupId": "[parameters('actiongroups_notify_dan_action_group_externalid')]",
+                        "webHookProperties": {}
+                    }
+                ]
+            }
+        }
+    ]
+}
