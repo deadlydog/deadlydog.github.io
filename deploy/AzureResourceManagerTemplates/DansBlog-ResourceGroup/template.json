@@ -27,7 +27,7 @@
 			"type": "String"
 		},
 		"actiongroups_notify_dan_action_group_externalid": {
-			"defaultValue": "/subscriptions/42f8591c-9fd1-47ac-95bb-7c32858bf1cd/resourceGroups/sharedresources-resourcegroup/providers/microsoft.insights/actiongroups/notify dan action group",
+			"defaultValue": "/subscriptions/42f8591c-9fd1-47ac-95bb-7c32858bf1cd/resourceGroups/SharedResources/providers/microsoft.insights/actiongroups/notify dan action group",
 			"type": "String"
 		},
 		"location": {
