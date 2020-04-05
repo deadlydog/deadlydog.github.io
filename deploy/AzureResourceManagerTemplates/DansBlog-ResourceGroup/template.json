@@ -87,7 +87,7 @@
 			"name": "[parameters('webtests_ping_dansblog_landing_page_dansblog_applicationinsights_name')]",
 			"location": "[parameters('location')]",
 			"tags": {
-				"hidden-link:/subscriptions/42f8591c-9fd1-47ac-95bb-7c32858bf1cd/resourceGroups/DansBlog-ResourceGroup/providers/microsoft.insights/components/DansBlog-ApplicationInsights": "Resource"
+				"hidden-link:/subscriptions/42f8591c-9fd1-47ac-95bb-7c32858bf1cd/resourceGroups/DansBlog/providers/microsoft.insights/components/DansBlog-ApplicationInsights": "Resource"
 			},
 			"properties": {
 				"SyntheticMonitorId": "[parameters('webtests_ping_dansblog_landing_page_dansblog_applicationinsights_name')]",
@@ -166,8 +166,8 @@
 				"[resourceId('microsoft.insights/components', parameters('components_DansBlog_ApplicationInsights_name'))]"
 			],
 			"tags": {
-				"hidden-link:/subscriptions/42f8591c-9fd1-47ac-95bb-7c32858bf1cd/resourcegroups/DansBlog-ResourceGroup/providers/microsoft.insights/components/DansBlog-ApplicationInsights": "Resource",
-				"hidden-link:/subscriptions/42f8591c-9fd1-47ac-95bb-7c32858bf1cd/resourcegroups/DansBlog-ResourceGroup/providers/microsoft.insights/webtests/ping dansblog landing page-dansblog-applicationinsights": "Resource"
+				"hidden-link:/subscriptions/42f8591c-9fd1-47ac-95bb-7c32858bf1cd/resourcegroups/DansBlog/providers/microsoft.insights/components/DansBlog-ApplicationInsights": "Resource",
+				"hidden-link:/subscriptions/42f8591c-9fd1-47ac-95bb-7c32858bf1cd/resourcegroups/DansBlog/providers/microsoft.insights/webtests/ping dansblog landing page-dansblog-applicationinsights": "Resource"
 			},
 			"properties": {
 				"description": "[concat('Automatically created alert rule for availability test \"', parameters('metricalerts_ping_dansblog_landing_page_dansblog_applicationinsights_name'), '\"')]",
