@@ -62,7 +62,7 @@
 			"name": "[parameters('webtests_ping_danskingdom_landing_page_danskingdomwebsite_applicationinsights_name')]",
 			"location": "[parameters('location')]",
 			"tags": {
-				"hidden-link:/subscriptions/42f8591c-9fd1-47ac-95bb-7c32858bf1cd/resourceGroups/DansKingdomWebsite-ResourceGroup/providers/microsoft.insights/components/DansKingdomWebsite-ApplicationInsights": "Resource"
+				"hidden-link:/subscriptions/42f8591c-9fd1-47ac-95bb-7c32858bf1cd/resourceGroups/DansKingdomWebsite/providers/microsoft.insights/components/DansKingdomWebsite-ApplicationInsights": "Resource"
 			},
 			"properties": {
 				"SyntheticMonitorId": "[parameters('webtests_ping_danskingdom_landing_page_danskingdomwebsite_applicationinsights_name')]",
@@ -251,132 +251,6 @@
 		{
 			"type": "Microsoft.Web/sites/deployments",
 			"apiVersion": "2018-11-01",
-			"name": "[concat(parameters('sites_DansKingdomWebsite_name'), '/321553319038059')]",
-			"location": "[parameters('location')]",
-			"dependsOn": [
-				"[resourceId('Microsoft.Web/sites', parameters('sites_DansKingdomWebsite_name'))]"
-			],
-			"properties": {
-				"status": 4,
-				"author": "Daniel Schroeder",
-				"deployer": "VSTS",
-				"message": "{\"type\":\"Install Extensions\",\"commitId\":\"c4cd06612f9ddf822f5bebfe972a095d62775274\",\"buildId\":\"358\",\"releaseId\":\"32\",\"buildNumber\":\"20190322.1\",\"releaseName\":\"Release-1\",\"repoProvider\":\"TfsGit\",\"repoName\":\"DansKingdom.Website\",\"collectionUrl\":\"https://dev.azure.com/deadlydog/\",\"teamProject\":\"2fdacc85-2f97-401e-bc68-69090c712dea\"}",
-				"start_time": "2019-03-23T05:30:38.4432746Z",
-				"end_time": "2019-03-23T05:30:38.4432746Z",
-				"active": false
-			}
-		},
-		{
-			"type": "Microsoft.Web/sites/deployments",
-			"apiVersion": "2018-11-01",
-			"name": "[concat(parameters('sites_DansKingdomWebsite_name'), '/321553319084080')]",
-			"location": "[parameters('location')]",
-			"dependsOn": [
-				"[resourceId('Microsoft.Web/sites', parameters('sites_DansKingdomWebsite_name'))]"
-			],
-			"properties": {
-				"status": 4,
-				"author": "Daniel Schroeder",
-				"deployer": "VSTS",
-				"message": "{\"type\":\"Deployment\",\"commitId\":\"c4cd06612f9ddf822f5bebfe972a095d62775274\",\"buildId\":\"358\",\"releaseId\":\"32\",\"buildNumber\":\"20190322.1\",\"releaseName\":\"Release-1\",\"repoProvider\":\"TfsGit\",\"repoName\":\"DansKingdom.Website\",\"collectionUrl\":\"https://dev.azure.com/deadlydog/\",\"teamProject\":\"2fdacc85-2f97-401e-bc68-69090c712dea\",\"slotName\":\"production\"}",
-				"start_time": "2019-03-23T05:31:24.2909236Z",
-				"end_time": "2019-03-23T05:31:24.2909236Z",
-				"active": false
-			}
-		},
-		{
-			"type": "Microsoft.Web/sites/deployments",
-			"apiVersion": "2018-11-01",
-			"name": "[concat(parameters('sites_DansKingdomWebsite_name'), '/331553319802901')]",
-			"location": "[parameters('location')]",
-			"dependsOn": [
-				"[resourceId('Microsoft.Web/sites', parameters('sites_DansKingdomWebsite_name'))]"
-			],
-			"properties": {
-				"status": 4,
-				"author": "Daniel Schroeder",
-				"deployer": "VSTS",
-				"message": "{\"type\":\"Install Extensions\",\"commitId\":\"f76166665700b9695764b50d08f80242546b65e7\",\"buildId\":\"359\",\"releaseId\":\"33\",\"buildNumber\":\"20190322.2\",\"releaseName\":\"Release-2\",\"repoProvider\":\"TfsGit\",\"repoName\":\"DansKingdom.Website\",\"collectionUrl\":\"https://dev.azure.com/deadlydog/\",\"teamProject\":\"2fdacc85-2f97-401e-bc68-69090c712dea\"}",
-				"start_time": "2019-03-23T05:43:23.3110186Z",
-				"end_time": "2019-03-23T05:43:23.3110186Z",
-				"active": false
-			}
-		},
-		{
-			"type": "Microsoft.Web/sites/deployments",
-			"apiVersion": "2018-11-01",
-			"name": "[concat(parameters('sites_DansKingdomWebsite_name'), '/331553319826310')]",
-			"location": "[parameters('location')]",
-			"dependsOn": [
-				"[resourceId('Microsoft.Web/sites', parameters('sites_DansKingdomWebsite_name'))]"
-			],
-			"properties": {
-				"status": 4,
-				"author": "Daniel Schroeder",
-				"deployer": "VSTS",
-				"message": "{\"type\":\"Deployment\",\"commitId\":\"f76166665700b9695764b50d08f80242546b65e7\",\"buildId\":\"359\",\"releaseId\":\"33\",\"buildNumber\":\"20190322.2\",\"releaseName\":\"Release-2\",\"repoProvider\":\"TfsGit\",\"repoName\":\"DansKingdom.Website\",\"collectionUrl\":\"https://dev.azure.com/deadlydog/\",\"teamProject\":\"2fdacc85-2f97-401e-bc68-69090c712dea\",\"slotName\":\"production\"}",
-				"start_time": "2019-03-23T05:43:46.4723341Z",
-				"end_time": "2019-03-23T05:43:46.4723341Z",
-				"active": false
-			}
-		},
-		{
-			"type": "Microsoft.Web/sites/deployments",
-			"apiVersion": "2018-11-01",
-			"name": "[concat(parameters('sites_DansKingdomWebsite_name'), '/341553328402621')]",
-			"location": "[parameters('location')]",
-			"dependsOn": [
-				"[resourceId('Microsoft.Web/sites', parameters('sites_DansKingdomWebsite_name'))]"
-			],
-			"properties": {
-				"status": 4,
-				"author": "Daniel Schroeder",
-				"deployer": "VSTS",
-				"message": "{\"type\":\"Install Extensions\",\"commitId\":\"60140ff49b17c4cab79dc1667e7ae8bba1606513\",\"buildId\":\"360\",\"releaseId\":\"34\",\"buildNumber\":\"20190323.1\",\"releaseName\":\"Release-3\",\"repoProvider\":\"TfsGit\",\"repoName\":\"DansKingdom.Website\",\"collectionUrl\":\"https://dev.azure.com/deadlydog/\",\"teamProject\":\"2fdacc85-2f97-401e-bc68-69090c712dea\"}",
-				"start_time": "2019-03-23T08:06:43.103953Z",
-				"end_time": "2019-03-23T08:06:43.103953Z",
-				"active": false
-			}
-		},
-		{
-			"type": "Microsoft.Web/sites/deployments",
-			"apiVersion": "2018-11-01",
-			"name": "[concat(parameters('sites_DansKingdomWebsite_name'), '/341553328431602')]",
-			"location": "[parameters('location')]",
-			"dependsOn": [
-				"[resourceId('Microsoft.Web/sites', parameters('sites_DansKingdomWebsite_name'))]"
-			],
-			"properties": {
-				"status": 4,
-				"author": "Daniel Schroeder",
-				"deployer": "VSTS",
-				"message": "{\"type\":\"Deployment\",\"commitId\":\"60140ff49b17c4cab79dc1667e7ae8bba1606513\",\"buildId\":\"360\",\"releaseId\":\"34\",\"buildNumber\":\"20190323.1\",\"releaseName\":\"Release-3\",\"repoProvider\":\"TfsGit\",\"repoName\":\"DansKingdom.Website\",\"collectionUrl\":\"https://dev.azure.com/deadlydog/\",\"teamProject\":\"2fdacc85-2f97-401e-bc68-69090c712dea\",\"slotName\":\"production\"}",
-				"start_time": "2019-03-23T08:07:11.7453258Z",
-				"end_time": "2019-03-23T08:07:11.7453258Z",
-				"active": false
-			}
-		},
-		{
-			"type": "Microsoft.Web/sites/deployments",
-			"apiVersion": "2018-11-01",
-			"name": "[concat(parameters('sites_DansKingdomWebsite_name'), '/351578721075924')]",
-			"location": "[parameters('location')]",
-			"dependsOn": [
-				"[resourceId('Microsoft.Web/sites', parameters('sites_DansKingdomWebsite_name'))]"
-			],
-			"properties": {
-				"status": 4,
-				"author": "Daniel Schroeder",
-				"deployer": "VSTS",
-				"message": "{\"type\":\"Install Extensions\",\"commitId\":\"96719d84da014212bbf46d580b7d00123b816432\",\"buildId\":\"538\",\"releaseId\":\"35\",\"buildNumber\":\"20200110.1\",\"releaseName\":\"Release-4\",\"repoProvider\":\"TfsGit\",\"repoName\":\"DansKingdom.Website\",\"collectionUrl\":\"https://dev.azure.com/deadlydog/\",\"teamProject\":\"2fdacc85-2f97-401e-bc68-69090c712dea\"}",
-				"start_time": "2020-01-11T05:37:56.2945546Z",
-				"end_time": "2020-01-11T05:37:56.2945546Z",
-				"active": false
-			}
-		},
-		{
-			"type": "Microsoft.Web/sites/deployments",
-			"apiVersion": "2018-11-01",
 			"name": "[concat(parameters('sites_DansKingdomWebsite_name'), '/351578721101667')]",
 			"location": "[parameters('location')]",
 			"dependsOn": [
@@ -390,24 +264,6 @@
 				"start_time": "2020-01-11T05:38:21.7174439Z",
 				"end_time": "2020-01-11T05:38:21.7174439Z",
 				"active": true
-			}
-		},
-		{
-			"type": "Microsoft.Web/sites/deployments",
-			"apiVersion": "2018-11-01",
-			"name": "[concat(parameters('sites_DansKingdomWebsite_name'), '/70bf4cf6-f6aa-4523-acf4-ccba6117cf04')]",
-			"location": "[parameters('location')]",
-			"dependsOn": [
-				"[resourceId('Microsoft.Web/sites', parameters('sites_DansKingdomWebsite_name'))]"
-			],
-			"properties": {
-				"status": 4,
-				"author": "VSTS",
-				"deployer": "VSTS",
-				"message": "{\"type\":\"CDDeploymentConfiguration\",\"message\":\"Successfully set up continuous delivery and triggered deployment to Azure Web App.\",\"VSTSRM_BuildDefinitionWebAccessUrl\":\"https://dev.azure.com/deadlydog/2fdacc85-2f97-401e-bc68-69090c712dea/_build?_a=simple-process&definitionId=27\",\"VSTSRM_ConfiguredCDEndPoint\":\"https://dev.azure.com/deadlydog/2fdacc85-2f97-401e-bc68-69090c712dea/_apps/hub/ms.vss-releaseManagement-web.hub-explorer?definitionId=5\",\"VSTSRM_BuildWebAccessUrl\":\"https://dev.azure.com/deadlydog/2fdacc85-2f97-401e-bc68-69090c712dea/_build?_a=summary&buildId=358\"}",
-				"start_time": "2019-03-23T05:28:16.3088688Z",
-				"end_time": "2019-03-23T05:28:16.3088688Z",
-				"active": false
 			}
 		},
 		{
@@ -459,8 +315,8 @@
 				"[resourceId('microsoft.insights/components', parameters('components_DansKingdomWebsite_ApplicationInsights_name'))]"
 			],
 			"tags": {
-				"hidden-link:/subscriptions/42f8591c-9fd1-47ac-95bb-7c32858bf1cd/resourcegroups/DansKingdomWebsite-ResourceGroup/providers/microsoft.insights/components/DansKingdomWebsite-ApplicationInsights": "Resource",
-				"hidden-link:/subscriptions/42f8591c-9fd1-47ac-95bb-7c32858bf1cd/resourcegroups/DansKingdomWebsite-ResourceGroup/providers/microsoft.insights/webtests/ping danskingdom landing page-danskingdomwebsite-applicationinsights": "Resource"
+				"hidden-link:/subscriptions/42f8591c-9fd1-47ac-95bb-7c32858bf1cd/resourcegroups/DansKingdomWebsite/providers/microsoft.insights/components/DansKingdomWebsite-ApplicationInsights": "Resource",
+				"hidden-link:/subscriptions/42f8591c-9fd1-47ac-95bb-7c32858bf1cd/resourcegroups/DansKingdomWebsite/providers/microsoft.insights/webtests/ping danskingdom landing page-danskingdomwebsite-applicationinsights": "Resource"
 			},
 			"properties": {
 				"description": "[concat('Automatically created alert rule for availability test \"', parameters('metricalerts_ping_danskingdom_landing_page_danskingdomwebsite_applicationinsights_name'), '\"')]",
