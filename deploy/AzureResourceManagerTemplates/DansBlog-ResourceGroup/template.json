@@ -1,175 +1,187 @@
 {
-    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
-    "contentVersion": "1.0.0.0",
-    "parameters": {
-        "components_DansBlog_ApplicationInsights_name": {
-            "defaultValue": "DansBlog-ApplicationInsights",
-            "type": "String"
-        },
-        "actionGroups_Application_Insights_Smart_Detection_name": {
-            "defaultValue": "Application Insights Smart Detection",
-            "type": "String"
-        },
-        "webtests_ping_dansblog_landing_page_dansblog_applicationinsights_name": {
-            "defaultValue": "ping dansblog landing page-dansblog-applicationinsights",
-            "type": "String"
-        },
-        "metricalerts_ping_dansblog_landing_page_dansblog_applicationinsights_name": {
-            "defaultValue": "ping dansblog landing page-dansblog-applicationinsights",
-            "type": "String"
-        },
-        "smartdetectoralertrules_failure_anomalies___dansblog_applicationinsights_name": {
-            "defaultValue": "failure anomalies - dansblog-applicationinsights",
-            "type": "String"
-        },
-        "actiongroups_application_20insights_20smart_20detection_externalid": {
-            "defaultValue": "/subscriptions/42f8591c-9fd1-47ac-95bb-7c32858bf1cd/resourceGroups/dansblog/providers/microsoft.insights/actiongroups/application%20insights%20smart%20detection",
-            "type": "String"
-        },
-        "actiongroups_notify_dan_action_group_externalid": {
-            "defaultValue": "/subscriptions/42f8591c-9fd1-47ac-95bb-7c32858bf1cd/resourceGroups/sharedresources-resourcegroup/providers/microsoft.insights/actiongroups/notify dan action group",
-            "type": "String"
-        }
-    },
-    "variables": {},
-    "resources": [
-        {
-            "type": "microsoft.insights/actionGroups",
-            "apiVersion": "2019-03-01",
-            "name": "[parameters('actionGroups_Application_Insights_Smart_Detection_name')]",
-            "location": "Global",
-            "properties": {
-                "groupShortName": "SmartDetect",
-                "enabled": true,
-                "emailReceivers": [],
-                "smsReceivers": [],
-                "webhookReceivers": [],
-                "itsmReceivers": [],
-                "azureAppPushReceivers": [],
-                "automationRunbookReceivers": [],
-                "voiceReceivers": [],
-                "logicAppReceivers": [],
-                "azureFunctionReceivers": []
-            }
-        },
-        {
-            "type": "microsoft.insights/components",
-            "apiVersion": "2015-05-01",
-            "name": "[parameters('components_DansBlog_ApplicationInsights_name')]",
-            "location": "eastus",
-            "kind": "web",
-            "properties": {
-                "Application_Type": "web",
-                "Flow_Type": "Redfield",
-                "Request_Source": "IbizaAIExtension"
-            }
-        },
-        {
-            "type": "microsoft.insights/webtests",
-            "apiVersion": "2015-05-01",
-            "name": "[parameters('webtests_ping_dansblog_landing_page_dansblog_applicationinsights_name')]",
-            "location": "eastus",
-            "tags": {
-                "hidden-link:/subscriptions/42f8591c-9fd1-47ac-95bb-7c32858bf1cd/resourceGroups/DansBlog-ResourceGroup/providers/microsoft.insights/components/DansBlog-ApplicationInsights": "Resource"
-            },
-            "properties": {
-                "SyntheticMonitorId": "[parameters('webtests_ping_dansblog_landing_page_dansblog_applicationinsights_name')]",
-                "Name": "ping dansblog landing page",
-                "Enabled": true,
-                "Frequency": 300,
-                "Timeout": 120,
-                "Kind": "ping",
-                "RetryEnabled": true,
-                "Locations": [
-                    {
-                        "Id": "emea-nl-ams-azr"
-                    },
-                    {
-                        "Id": "us-ca-sjc-azr"
-                    },
-                    {
-                        "Id": "us-tx-sn1-azr"
-                    },
-                    {
-                        "Id": "us-il-ch1-azr"
-                    },
-                    {
-                        "Id": "us-va-ash-azr"
-                    },
-                    {
-                        "Id": "apac-hk-hkn-azr"
-                    },
-                    {
-                        "Id": "us-fl-mia-edge"
-                    }
-                ],
-                "Configuration": {
-                    "WebTest": "<WebTest         Name=\"ping dansblog landing page\"         Id=\"7a1bdf78-b4ed-4189-95b4-7e8507144eec\"         Enabled=\"True\"         CssProjectStructure=\"\"         CssIteration=\"\"         Timeout=\"120\"         WorkItemIds=\"\"         xmlns=\"http://microsoft.com/schemas/VisualStudio/TeamTest/2010\"         Description=\"\"         CredentialUserName=\"\"         CredentialPassword=\"\"         PreAuthenticate=\"True\"         Proxy=\"default\"         StopOnError=\"False\"         RecordedResultFile=\"\"         ResultsLocale=\"\">        <Items>        <Request         Method=\"GET\"         Guid=\"a8dd04b7-7a3f-6abc-c981-f9f15a1b05db\"         Version=\"1.1\"         Url=\"http://blog.danskingdom.com\"         ThinkTime=\"0\"         Timeout=\"120\"         ParseDependentRequests=\"False\"         FollowRedirects=\"True\"         RecordResult=\"True\"         Cache=\"False\"         ResponseTimeGoal=\"0\"         Encoding=\"utf-8\"         ExpectedHttpStatusCode=\"200\"         ExpectedResponseUrl=\"\"         ReportingName=\"\"         IgnoreHttpStatusCode=\"False\" />        </Items>        </WebTest>"
-                }
-            }
-        },
-        {
-            "type": "microsoft.alertsmanagement/smartdetectoralertrules",
-            "apiVersion": "2019-06-01",
-            "name": "[parameters('smartdetectoralertrules_failure_anomalies___dansblog_applicationinsights_name')]",
-            "location": "global",
-            "dependsOn": [
-                "[resourceId('microsoft.insights/components', parameters('components_DansBlog_ApplicationInsights_name'))]"
-            ],
-            "properties": {
-                "description": "Failure Anomalies notifies you of an unusual rise in the rate of failed HTTP requests or dependency calls.",
-                "state": "Enabled",
-                "severity": "Sev3",
-                "frequency": "PT1M",
-                "detector": {
-                    "id": "FailureAnomaliesDetector",
-                    "name": "Failure Anomalies",
-                    "description": "Detects if your application experiences an abnormal rise in the rate of HTTP requests or dependency calls that are reported as failed. The anomaly detection uses machine learning algorithms and occurs in near real time, therefore there's no need to define a frequency for this signal.<br/></br/>To help you triage and diagnose the problem, an analysis of the characteristics of the failures and related telemetry is provided with the detection. This feature works for any app, hosted in the cloud or on your own servers, that generates request or dependency telemetry - for example, if you have a worker role that calls <a class=\"ext-smartDetecor-link\" href=\\\"https://docs.microsoft.com/azure/application-insights/app-insights-api-custom-events-metrics#trackrequest\\\" target=\\\"_blank\\\">TrackRequest()</a> or <a class=\"ext-smartDetecor-link\" href=\\\"https://docs.microsoft.com/azure/application-insights/app-insights-api-custom-events-metrics#trackdependency\\\" target=\\\"_blank\\\">TrackDependency()</a>.<br/><br/><a class=\"ext-smartDetecor-link\" href=\\\"https://docs.microsoft.com/azure/azure-monitor/app/proactive-failure-diagnostics\\\" target=\\\"_blank\\\">Learn more about Failure Anomalies</a>",
-                    "supportedResourceTypes": [
-                        "ApplicationInsights"
-                    ]
-                },
-                "scope": [
-                    "[resourceId('microsoft.insights/components', parameters('components_DansBlog_ApplicationInsights_name'))]"
-                ],
-                "actionGroups": {
-                    "groupIds": [
-                        "[parameters('actiongroups_application_20insights_20smart_20detection_externalid')]"
-                    ]
-                }
-            }
-        },
-        {
-            "type": "microsoft.insights/metricalerts",
-            "apiVersion": "2018-03-01",
-            "name": "[parameters('metricalerts_ping_dansblog_landing_page_dansblog_applicationinsights_name')]",
-            "location": "global",
-            "dependsOn": [
-                "[resourceId('microsoft.insights/webtests', parameters('webtests_ping_dansblog_landing_page_dansblog_applicationinsights_name'))]",
-                "[resourceId('microsoft.insights/components', parameters('components_DansBlog_ApplicationInsights_name'))]"
-            ],
-            "tags": {
-                "hidden-link:/subscriptions/42f8591c-9fd1-47ac-95bb-7c32858bf1cd/resourcegroups/DansBlog-ResourceGroup/providers/microsoft.insights/components/DansBlog-ApplicationInsights": "Resource",
-                "hidden-link:/subscriptions/42f8591c-9fd1-47ac-95bb-7c32858bf1cd/resourcegroups/DansBlog-ResourceGroup/providers/microsoft.insights/webtests/ping dansblog landing page-dansblog-applicationinsights": "Resource"
-            },
-            "properties": {
-                "description": "[concat('Automatically created alert rule for availability test \"', parameters('metricalerts_ping_dansblog_landing_page_dansblog_applicationinsights_name'), '\"')]",
-                "severity": 1,
-                "enabled": true,
-                "scopes": [
-                    "[resourceId('microsoft.insights/webtests', parameters('webtests_ping_dansblog_landing_page_dansblog_applicationinsights_name'))]",
-                    "[resourceId('microsoft.insights/components', parameters('components_DansBlog_ApplicationInsights_name'))]"
-                ],
-                "evaluationFrequency": "PT1M",
-                "windowSize": "PT5M",
-                "criteria": {},
-                "actions": [
-                    {
-                        "actionGroupId": "[parameters('actiongroups_notify_dan_action_group_externalid')]",
-                        "webHookProperties": {}
-                    }
-                ]
-            }
-        }
-    ]
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"components_DansBlog_ApplicationInsights_name": {
+			"defaultValue": "DansBlog-ApplicationInsights",
+			"type": "String"
+		},
+		"actionGroups_Application_Insights_Smart_Detection_name": {
+			"defaultValue": "Application Insights Smart Detection",
+			"type": "String"
+		},
+		"webtests_ping_dansblog_landing_page_dansblog_applicationinsights_name": {
+			"defaultValue": "ping dansblog landing page-dansblog-applicationinsights",
+			"type": "String"
+		},
+		"metricalerts_ping_dansblog_landing_page_dansblog_applicationinsights_name": {
+			"defaultValue": "ping dansblog landing page-dansblog-applicationinsights",
+			"type": "String"
+		},
+		"smartdetectoralertrules_failure_anomalies___dansblog_applicationinsights_name": {
+			"defaultValue": "failure anomalies - dansblog-applicationinsights",
+			"type": "String"
+		},
+		"actiongroups_application_20insights_20smart_20detection_externalid": {
+			"defaultValue": "/subscriptions/42f8591c-9fd1-47ac-95bb-7c32858bf1cd/resourceGroups/dansblog/providers/microsoft.insights/actiongroups/application%20insights%20smart%20detection",
+			"type": "String"
+		},
+		"actiongroups_notify_dan_action_group_externalid": {
+			"defaultValue": "/subscriptions/42f8591c-9fd1-47ac-95bb-7c32858bf1cd/resourceGroups/sharedresources-resourcegroup/providers/microsoft.insights/actiongroups/notify dan action group",
+			"type": "String"
+		}
+	},
+	"variables": {
+	},
+	"resources": [
+		{
+			"type": "microsoft.insights/actionGroups",
+			"apiVersion": "2019-03-01",
+			"name": "[parameters('actionGroups_Application_Insights_Smart_Detection_name')]",
+			"location": "Global",
+			"properties": {
+				"groupShortName": "SmartDetect",
+				"enabled": true,
+				"emailReceivers": [
+				],
+				"smsReceivers": [
+				],
+				"webhookReceivers": [
+				],
+				"itsmReceivers": [
+				],
+				"azureAppPushReceivers": [
+				],
+				"automationRunbookReceivers": [
+				],
+				"voiceReceivers": [
+				],
+				"logicAppReceivers": [
+				],
+				"azureFunctionReceivers": [
+				]
+			}
+		},
+		{
+			"type": "microsoft.insights/components",
+			"apiVersion": "2015-05-01",
+			"name": "[parameters('components_DansBlog_ApplicationInsights_name')]",
+			"location": "eastus",
+			"kind": "web",
+			"properties": {
+				"Application_Type": "web",
+				"Flow_Type": "Redfield",
+				"Request_Source": "IbizaAIExtension"
+			}
+		},
+		{
+			"type": "microsoft.insights/webtests",
+			"apiVersion": "2015-05-01",
+			"name": "[parameters('webtests_ping_dansblog_landing_page_dansblog_applicationinsights_name')]",
+			"location": "eastus",
+			"tags": {
+				"hidden-link:/subscriptions/42f8591c-9fd1-47ac-95bb-7c32858bf1cd/resourceGroups/DansBlog-ResourceGroup/providers/microsoft.insights/components/DansBlog-ApplicationInsights": "Resource"
+			},
+			"properties": {
+				"SyntheticMonitorId": "[parameters('webtests_ping_dansblog_landing_page_dansblog_applicationinsights_name')]",
+				"Name": "ping dansblog landing page",
+				"Enabled": true,
+				"Frequency": 300,
+				"Timeout": 120,
+				"Kind": "ping",
+				"RetryEnabled": true,
+				"Locations": [
+					{
+						"Id": "emea-nl-ams-azr"
+					},
+					{
+						"Id": "us-ca-sjc-azr"
+					},
+					{
+						"Id": "us-tx-sn1-azr"
+					},
+					{
+						"Id": "us-il-ch1-azr"
+					},
+					{
+						"Id": "us-va-ash-azr"
+					},
+					{
+						"Id": "apac-hk-hkn-azr"
+					},
+					{
+						"Id": "us-fl-mia-edge"
+					}
+				],
+				"Configuration": {
+					"WebTest": "<WebTest         Name=\"ping dansblog landing page\"         Id=\"7a1bdf78-b4ed-4189-95b4-7e8507144eec\"         Enabled=\"True\"         CssProjectStructure=\"\"         CssIteration=\"\"         Timeout=\"120\"         WorkItemIds=\"\"         xmlns=\"http://microsoft.com/schemas/VisualStudio/TeamTest/2010\"         Description=\"\"         CredentialUserName=\"\"         CredentialPassword=\"\"         PreAuthenticate=\"True\"         Proxy=\"default\"         StopOnError=\"False\"         RecordedResultFile=\"\"         ResultsLocale=\"\">        <Items>        <Request         Method=\"GET\"         Guid=\"a8dd04b7-7a3f-6abc-c981-f9f15a1b05db\"         Version=\"1.1\"         Url=\"http://blog.danskingdom.com\"         ThinkTime=\"0\"         Timeout=\"120\"         ParseDependentRequests=\"False\"         FollowRedirects=\"True\"         RecordResult=\"True\"         Cache=\"False\"         ResponseTimeGoal=\"0\"         Encoding=\"utf-8\"         ExpectedHttpStatusCode=\"200\"         ExpectedResponseUrl=\"\"         ReportingName=\"\"         IgnoreHttpStatusCode=\"False\" />        </Items>        </WebTest>"
+				}
+			}
+		},
+		{
+			"type": "microsoft.alertsmanagement/smartdetectoralertrules",
+			"apiVersion": "2019-06-01",
+			"name": "[parameters('smartdetectoralertrules_failure_anomalies___dansblog_applicationinsights_name')]",
+			"location": "global",
+			"dependsOn": [
+				"[resourceId('microsoft.insights/components', parameters('components_DansBlog_ApplicationInsights_name'))]"
+			],
+			"properties": {
+				"description": "Failure Anomalies notifies you of an unusual rise in the rate of failed HTTP requests or dependency calls.",
+				"state": "Enabled",
+				"severity": "Sev3",
+				"frequency": "PT1M",
+				"detector": {
+					"id": "FailureAnomaliesDetector",
+					"name": "Failure Anomalies",
+					"description": "Detects if your application experiences an abnormal rise in the rate of HTTP requests or dependency calls that are reported as failed. The anomaly detection uses machine learning algorithms and occurs in near real time, therefore there's no need to define a frequency for this signal.<br/></br/>To help you triage and diagnose the problem, an analysis of the characteristics of the failures and related telemetry is provided with the detection. This feature works for any app, hosted in the cloud or on your own servers, that generates request or dependency telemetry - for example, if you have a worker role that calls <a class=\"ext-smartDetecor-link\" href=\\\"https://docs.microsoft.com/azure/application-insights/app-insights-api-custom-events-metrics#trackrequest\\\" target=\\\"_blank\\\">TrackRequest()</a> or <a class=\"ext-smartDetecor-link\" href=\\\"https://docs.microsoft.com/azure/application-insights/app-insights-api-custom-events-metrics#trackdependency\\\" target=\\\"_blank\\\">TrackDependency()</a>.<br/><br/><a class=\"ext-smartDetecor-link\" href=\\\"https://docs.microsoft.com/azure/azure-monitor/app/proactive-failure-diagnostics\\\" target=\\\"_blank\\\">Learn more about Failure Anomalies</a>",
+					"supportedResourceTypes": [
+						"ApplicationInsights"
+					]
+				},
+				"scope": [
+					"[resourceId('microsoft.insights/components', parameters('components_DansBlog_ApplicationInsights_name'))]"
+				],
+				"actionGroups": {
+					"groupIds": [
+						"[parameters('actiongroups_application_20insights_20smart_20detection_externalid')]"
+					]
+				}
+			}
+		},
+		{
+			"type": "microsoft.insights/metricalerts",
+			"apiVersion": "2018-03-01",
+			"name": "[parameters('metricalerts_ping_dansblog_landing_page_dansblog_applicationinsights_name')]",
+			"location": "global",
+			"dependsOn": [
+				"[resourceId('microsoft.insights/webtests', parameters('webtests_ping_dansblog_landing_page_dansblog_applicationinsights_name'))]",
+				"[resourceId('microsoft.insights/components', parameters('components_DansBlog_ApplicationInsights_name'))]"
+			],
+			"tags": {
+				"hidden-link:/subscriptions/42f8591c-9fd1-47ac-95bb-7c32858bf1cd/resourcegroups/DansBlog-ResourceGroup/providers/microsoft.insights/components/DansBlog-ApplicationInsights": "Resource",
+				"hidden-link:/subscriptions/42f8591c-9fd1-47ac-95bb-7c32858bf1cd/resourcegroups/DansBlog-ResourceGroup/providers/microsoft.insights/webtests/ping dansblog landing page-dansblog-applicationinsights": "Resource"
+			},
+			"properties": {
+				"description": "[concat('Automatically created alert rule for availability test \"', parameters('metricalerts_ping_dansblog_landing_page_dansblog_applicationinsights_name'), '\"')]",
+				"severity": 1,
+				"enabled": true,
+				"scopes": [
+					"[resourceId('microsoft.insights/webtests', parameters('webtests_ping_dansblog_landing_page_dansblog_applicationinsights_name'))]",
+					"[resourceId('microsoft.insights/components', parameters('components_DansBlog_ApplicationInsights_name'))]"
+				],
+				"evaluationFrequency": "PT1M",
+				"windowSize": "PT5M",
+				"criteria": {
+				},
+				"actions": [
+					{
+						"actionGroupId": "[parameters('actiongroups_notify_dan_action_group_externalid')]",
+						"webHookProperties": {
+						}
+					}
+				]
+			}
+		}
+	]
 }
