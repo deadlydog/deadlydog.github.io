@@ -1,0 +1,14 @@
+_id: a24030a0-781a-11ea-a0fc-bf1821a9c4fb
+message: >-
+  Your post, Daniel, is great, thank you for a pretty well starting point. I
+  have spent some hours with Pester, this is great tool, bravos for
+  contributors, but it is not intended to work with binary cmdlets. And because
+  we like xUnit, and this is our weapon of choice... One tip for an update is
+  that [.NET Core has the template for Powershell
+  module](https://docs.microsoft.com/en-us/powershell/scripting/learn/writing-portable-modules?view=powershell-7#creating-a-new-module).
+  Thanks a lot!
+name: Gerard
+email: b3ba0b9d2b82ae29c395eff61eb9ce58
+url: 'https://www.linkedin.com/in/gjaryczewski/'
+hidden: ''
+date: '2020-04-06T15:23:58.255Z'
