@@ -20,6 +20,9 @@ Creating PowerShell Core cmdlets in C# is actually quite easy, especially when y
 There is also some official [MS documentation](https://docs.microsoft.com/en-us/powershell/developer/cmdlet/how-to-write-a-simple-cmdlet) [as well](https://docs.microsoft.com/en-us/powershell/developer/module/how-to-write-a-powershell-binary-module).
 What those posts don't cover is unit testing your C# cmdlets.
 
+__Update April, 2020:__ Microsoft released [a new blog post](https://devblogs.microsoft.com/powershell/depending-on-the-right-powershell-nuget-package-in-your-net-project/) that describes the various PowerShell project types and which NuGet packages to use for each.
+See that post for more detailed background information.
+
 ## Creating a PowerShell Core cmdlet
 
 I'm not going to entirely rehash what's in that awesome blog post, but I'll share the highlights in case it goes offline in the future:
