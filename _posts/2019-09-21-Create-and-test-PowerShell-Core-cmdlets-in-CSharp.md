@@ -2,7 +2,7 @@
 title: "Create and test PowerShell Core cmdlets in C#"
 permalink: /Create-and-test-PowerShell-Core-cmdlets-in-CSharp/
 #date: 2099-01-17T00:00:00-06:00
-#last_modified_at: 2099-01-22T00:00:00-06:00
+last_modified_at: 2020-04-09T00:00:00-06:00
 comments_locked: false
 categories:
   - C#
