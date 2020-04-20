@@ -1,0 +1,7 @@
+_id: 2da45610-82a9-11ea-a723-85cd38ba4052
+message: "I don't think any of these address the situation where you want to have a script to run an any computer authorized to run the script, and then after running, the script leaves the PowerShell window open for the user to continue entering commands at the prompt. \r\n\r\nIn the old .BAT/.CMD command prompt days, this was accomplished with a simple @cmd /k at the end of the bat file. \r\n\r\nIs there really no equivalent with PowerShell? This seems a common need: I want to run a script that connects to a remote computer (an Exchange server in this case), and then drops me at the PowerShell prompt to work on that remote computer in PowerShell."
+name: Colin
+email: b307347dab2254f22d1f248ba69d22e6
+url: ''
+hidden: ''
+date: '2020-04-20T01:49:31.993Z'
