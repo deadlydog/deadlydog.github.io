@@ -1,0 +1,9 @@
+_id: 000bf8a0-8594-11ea-930a-87f5e99f0388
+message: >-
+  The GUID for the options pane is actually NOT special and should be unique for
+  every pane. Otherwise, VS cannot disambiguate between different options.
+name: Taylor Southwick
+email: cba7b69743883e807f5ce1c51c661892
+url: ''
+hidden: ''
+date: '2020-04-23T18:55:30.583Z'
