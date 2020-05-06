@@ -1,0 +1,11 @@
+_id: b05b15a0-8fea-11ea-b90d-1365aad8d57c
+message: >-
+  Never mind. Found out the issue. If you have setup Fiddler for decrypting
+  HTTPS, for some reason, the cert installed by this script becomes issued by
+  the Fiddler's non-trusted authority, which causes the error I mentioned above.
+  Once I removed Fiddler's cert, it worked :)
+name: eefias
+email: c1a6af449a867157dcf1fd56184defd8
+url: ''
+hidden: ''
+date: '2020-05-06T22:41:13.546Z'
