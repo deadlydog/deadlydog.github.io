@@ -1,0 +1,12 @@
+_id: 9c7a3290-9932-11ea-b2b1-9922abdd8131
+message: >-
+  This does not work at all in Windows 10. I followed the recipe to a T. When
+  logging in, up comes a window asking what programme I would want the file
+  opened in (weird, since .ahk files are associated with AHK). I choose AHK. It
+  then gives the error message "Script file not found:
+  C:\Users\<username>\OneDrive\AHK" (the folder where I have stored the script)
+name: Jitters
+email: 612f2f7dfac6494b4c6f29391c9195a5
+url: ''
+hidden: ''
+date: '2020-05-18T18:08:44.580Z'
