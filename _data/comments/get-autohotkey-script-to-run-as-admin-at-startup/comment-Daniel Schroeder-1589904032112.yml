@@ -1,0 +1,12 @@
+_id: dde0ac20-99e9-11ea-919d-5f328d7279dd
+message: >-
+  Hey @Jitters, I suspect it's a configuration issue with your machine or your
+  scheduled task. Either way, I'd recommend following this approach instead
+  (https://blog.danskingdom.com/get-autohotkey-to-interact-with-admin-windows-without-running-ahk-script-as-admin/),
+  as it will always open AHK as admin, not just when it's launched by the
+  Windows scheduled task.
+name: Daniel Schroeder
+email: c8addda594c8b338f1e3934e73505d0c
+url: 'https://blog.danskingdom.com'
+hidden: ''
+date: '2020-05-19T16:00:32.110Z'
