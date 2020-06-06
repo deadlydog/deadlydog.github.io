@@ -1,0 +1,7 @@
+_id: 8281f9a0-a7a5-11ea-9cbb-0b9f3e248dfe
+message: "Hey guys, \r\nWith this fix, my admin mode apps now respect the hotkeys. One strange issue : After a hotstring/key runs, I need to hit the Win key to \"end\" it. For example, I have a hotkey (Win + 2) to activate all Chrome windows to bring them into the foreground. When I press Win+2, the Chrome windows get activated, but if I type any key after that, weird windows pop up. I have to hit the Windows key to disable this every time."
+name: eefias
+email: c1a6af449a867157dcf1fd56184defd8
+url: ''
+hidden: ''
+date: '2020-06-06T03:26:29.334Z'
