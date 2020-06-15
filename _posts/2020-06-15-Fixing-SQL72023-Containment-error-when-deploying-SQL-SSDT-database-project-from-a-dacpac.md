@@ -1,6 +1,6 @@
 ---
-title: "Fixing SQL72023 Containment error when deploying dacpac from an SSDT database project"
-permalink: /Fixing-SQL72023-Containment-error-when-deploying-dacpac-from-an-SSDT-database-project/
+title: "Fixing SQL72023 Containment error when deploying SQL SSDT database project from a dacpac"
+permalink: /Fixing-SQL72023-Containment-error-when-deploying-SQL-SSDT-database-project-from-a-dacpac/
 #date: 2099-01-17T00:00:00-06:00
 #last_modified_at: 2099-01-22T00:00:00-06:00
 comments_locked: false
@@ -57,7 +57,7 @@ The root cause of both is the same; It seems the deployment was trying to set th
 The fix for this is to modify the .sqlproj file to change it's default `Containment` mode.
 You can do this from Visual Studio by right-clicking on the project in Solution Explorer, choosing `Properties`, in the `Project Settings` tab click the `Database Settings...` button, then in the `Miscellaneous` tab change the value of the `Containment` drop-down to `None` or `Partial` as needed.
 
-![How to change the Containment mode from Visual Studio](/assets/Posts/2020-06-15-Fixing-SQL72023-Containment-error-when-deploying-dacpac-from-an-SSDT-database-project/SetVisualStudioDatabaseProjectContainmentMode.png)
+![How to change the Containment mode from Visual Studio](/assets/Posts/2020-06-15-Fixing-SQL72023-Containment-error-when-deploying-SQL-SSDT-database-project-from-a-dacpac/SetVisualStudioDatabaseProjectContainmentMode.png)
 
 Changing that value from `None` to `Partial` ends up adding the following element to the database's .sqlproj file:
 
