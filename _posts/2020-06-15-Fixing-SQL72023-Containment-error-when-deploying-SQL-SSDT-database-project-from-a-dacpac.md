@@ -48,8 +48,8 @@ On the same morning, a different team ran into this same issue with one of their
 
 ```text
 *** Could not deploy package.
-    Warning SQL72023: The database containment option has been changed to None.  This may result in deployment failure if the state of the database is not compliant with this containment level.
-    Error SQL72014: .Net SqlClient Data Provider: Msg 12809, Level 16, State 1, Line 5 You must remove all users with password before setting the containment property to NONE.
+Warning SQL72023: The database containment option has been changed to None.  This may result in deployment failure if the state of the database is not compliant with this containment level.
+Error SQL72014: .Net SqlClient Data Provider: Msg 12809, Level 16, State 1, Line 5 You must remove all users with password before setting the containment property to NONE.
 ```
 
 The root cause of both is the same; It seems the deployment was trying to set the database `Containment` mode to `None`, which requires additional permissions and isn't allowed when using SQL Availability Groups.
