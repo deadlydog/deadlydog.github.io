@@ -65,6 +65,8 @@ Changing that value from `None` to `Partial` ends up adding the following elemen
 <Containment>Partial</Containment>
 ```
 
+One of the teams reported that they also had to go into their database project settings and change the `Target platform` from `SQL Server 2008` to `SQL Server 2016` before the above change would work.
+
 If you encounter this problem as well, hopefully this helps get you going.
 
 Happy coding!
