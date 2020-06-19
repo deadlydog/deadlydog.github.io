@@ -1,0 +1,7 @@
+_id: da1453f0-b229-11ea-a68b-816e3354e631
+message: "With the above powershell script to import .pfx i am getting below error on jenkins pipeline. If i login and logout the jenkins server then it''s working fine. Any suggestions ?\r\n\r\n(VisualStudioForApplicationsBuild target) -> \r\n  C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\BuildTools\\MSBuild\\Microsoft\\VisualStudio\\v16.0\\OfficeTools\\Microsoft.VisualStudio.Tools.Office.targets(328,9): error MSB3482: An error occurred while signing: Invalid provider type specified."
+name: Jayavardhan
+email: f333ce96ab78ae27cdae23db01ea8b9d
+url: ''
+hidden: ''
+date: '2020-06-19T12:39:01.498Z'
