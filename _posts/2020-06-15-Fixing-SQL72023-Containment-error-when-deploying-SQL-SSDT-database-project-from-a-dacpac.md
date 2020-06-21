@@ -2,7 +2,7 @@
 title: "Fixing SQL72023 Containment error when deploying SQL SSDT database project from a dacpac"
 permalink: /Fixing-SQL72023-Containment-error-when-deploying-SQL-SSDT-database-project-from-a-dacpac/
 #date: 2099-01-17T00:00:00-06:00
-#last_modified_at: 2099-01-22T00:00:00-06:00
+last_modified_at: 2020-06-16
 comments_locked: false
 categories:
   - SQL
