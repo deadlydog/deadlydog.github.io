@@ -2,7 +2,7 @@
 title: "A better way to do TestCases when unit testing with Pester"
 permalink: /A-better-way-to-do-TestCases-when-unit-testing-with-Pester/
 #date: 2099-01-17T00:00:00-06:00
-last_modified_at: 2019-09-10
+last_modified_at: 2020-06-20
 comments_locked: false
 categories:
   - PowerShell
@@ -13,6 +13,10 @@ tags:
   - Pester
   - Unit Testing
 ---
+
+> Note: Pester v5 was released which made breaking changes.
+> The code shown here works with Pester v4 and previous, but not v5.
+> I'm hoping to update this post in the future to show how to use this same technique with Pester v5.
 
 While writing some PowerShell code a while back I found myself at a crossroads in terms of the style I wanted to write some unit tests in with [Pester](https://github.com/pester/Pester).
 I had a number of test cases that would be testing the same function, just with different input data.
