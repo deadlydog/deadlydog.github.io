@@ -1,0 +1,7 @@
+_id: e0208210-b93a-11ea-9efd-7596b43ab130
+message: "Hi Daniel Schroeder\r\nThanks for this good post and solution.\r\n\r\nI have a question in this regard. How to output the PowerShell script outputs to a file or back to cmd console. You have any idea how to redirect the output.\r\n\r\nI tried something similar but I ended up empty file\r\nPowerShell -NoProfile -ExecutionPolicy Bypass -Command \"& '%PowerShellScriptPath%' -Param1Name 'Param 1 Value' -Param2Name 'Param 2 Value' >psoutput.txt\""
+name: KayJay
+email: 1cc0051dcd76fb9ffcdb5c6d3ee01d1e
+url: ''
+hidden: ''
+date: '2020-06-28T12:28:31.225Z'
