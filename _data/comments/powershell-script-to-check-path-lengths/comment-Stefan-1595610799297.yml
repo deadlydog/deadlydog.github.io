@@ -1,0 +1,7 @@
+_id: f83361b0-cdd0-11ea-b80b-27efaeb5f2f7
+message: "I updated your script to scan for paths longer than f.e. 260.\r\n---------------\r\n$pathToScan = \"P:\\\"  # The path to scan (sub-directories will be scanned as well).\r\n$MaxLength = \"260\"   # the maximum path length\r\n$outputFilePath = \"C:\\temp\\PathsLongerThan260_at_P.txt\" # This must be a file in a directory that exists and does not require admin rights to write to.\r\n$writeToConsoleAsWell = $false   # Writing to the console will be much slower.\r\n\r\n# Open a new file stream (nice and fast) and write all the paths and their lengths to it.\r\n$outputFileDirectory = Split-Path $outputFilePath -Parent\r\nif (!(Test-Path $outputFileDirectory)) { New-Item $outputFileDirectory -ItemType Directory }\r\n$stream = New-Object System.IO.StreamWriter($outputFilePath, $false)\r\nGet-ChildItem -Path $pathToScan -Recurse -Force | Where-Object {$_.FullName.Length -gt $MaxLength} | Select-Object -Property FullName, @{Name=\"FullNameLength\";Expression={($_.FullName.Length)}} | Sort-Object -Property FullNameLength -Descending | ForEach-Object {\r\n    $filePath = $_.FullName\r\n    $length = $_.FullNameLength\r\n    $string = \"$length : $filePath\"\r\n\r\n    # Write to the Console.\r\n    if ($writeToConsoleAsWell) { Write-Host $string }\r\n\r\n    #Write to the file.\r\n    $stream.WriteLine($string)\r\n}\r\n$stream.Close()"
+name: Stefan
+email: a32b676080b99f030c1f3b19e3a751f7
+url: ''
+hidden: ''
+date: '2020-07-24T17:13:19.293Z'
