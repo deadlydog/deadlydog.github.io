@@ -40,7 +40,8 @@ For example, if you wanted to apply the version to all of your .Net projects bef
 
 I am a huge fan of [Richard Fennell's Manifest Versioning Build Tasks Azure DevOps extension](https://marketplace.visualstudio.com/items?itemName=richardfennellBM.BM-VSTS-Versioning-Task), which is what is being used in the above screenshot to version all of the .Net assemblies with our version number.
 
-> NOTE: You'll need to have the extension installed in order to use the `VersionAssemblies@2` task shown in yaml snippets below.
+> NOTE: You'll need to have the extension installed in order to use the `richardfennellBM.BM-VSTS-Versioning-Task.Version-Assemblies-Task.VersionAssemblies@2` task shown in yaml snippets below.
+> You may be able to simply use `VersionAssemblies@2`, but it conflicts with other extensions I have installed so I use the fully qualified name here to avoid the ambiguity error.
 
 ## Simple yaml solution
 
@@ -51,7 +52,7 @@ To accomplish the same thing as described in the above classic editor scenario i
 name: '1.0.0.$(Rev:r)'
 
 steps:
-- task: VersionAssemblies@2
+- task: richardfennellBM.BM-VSTS-Versioning-Task.Version-Assemblies-Task.VersionAssemblies@2
   displayName: Version the assemblies
   inputs:
     Path: '$(Build.SourcesDirectory)'
@@ -87,7 +88,7 @@ variables:
   versionNumber: '$(version.MajorMinor).$(version.Revision)'
 
 steps:
-- task: VersionAssemblies@2
+- task: richardfennellBM.BM-VSTS-Versioning-Task.Version-Assemblies-Task.VersionAssemblies@2
   displayName: Version the assemblies
   inputs:
     Path: '$(Build.SourcesDirectory)'
@@ -140,7 +141,7 @@ steps:
       Write-Host "Setting the name of the build to '$buildName'."
       Write-Host "##vso[build.updatebuildnumber]$buildName"
 
-- task: VersionAssemblies@2
+- task: richardfennellBM.BM-VSTS-Versioning-Task.Version-Assemblies-Task.VersionAssemblies@2
   displayName: Version the assemblies
   inputs:
     Path: '$(Build.SourcesDirectory)'
