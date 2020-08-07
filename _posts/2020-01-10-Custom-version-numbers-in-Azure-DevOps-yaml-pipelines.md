@@ -2,7 +2,7 @@
 title: "Custom version numbers in Azure DevOps yaml pipelines"
 permalink: /Custom-version-numbers-in-Azure-DevOps-yaml-pipelines/
 #date: 2099-01-17T00:00:00-06:00
-#last_modified_at: 2099-01-22T00:00:00-06:00
+last_modified_at: 2020-08-07
 comments_locked: false
 categories:
   - Azure DevOps
@@ -52,6 +52,7 @@ name: '1.0.0.$(Rev:r)'
 
 steps:
 - task: VersionAssemblies@2
+  displayName: Version the assemblies
   inputs:
     Path: '$(Build.SourcesDirectory)'
     VersionNumber: '$(Build.BuildNumber)'
@@ -87,6 +88,7 @@ variables:
 
 steps:
 - task: VersionAssemblies@2
+  displayName: Version the assemblies
   inputs:
     Path: '$(Build.SourcesDirectory)'
     VersionNumber: '$(versionNumber)'
@@ -139,6 +141,7 @@ steps:
       Write-Host "##vso[build.updatebuildnumber]$buildName"
 
 - task: VersionAssemblies@2
+  displayName: Version the assemblies
   inputs:
     Path: '$(Build.SourcesDirectory)'
     VersionNumber: '$(versionNumber)'
