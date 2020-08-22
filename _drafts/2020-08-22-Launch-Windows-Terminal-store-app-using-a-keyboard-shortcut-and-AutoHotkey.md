@@ -18,8 +18,6 @@ tags:
   - Keyboard shortcuts
 ---
 
-## Get the Windows Terminal app
-
 I recently decided to try out the new [Windows Terminal](https://github.com/microsoft/terminal) to see how it compared to [ConEmu](https://conemu.github.io), which is my usual console.
 The recommended way to get the Windows Terminal is to [download it from the Microsoft Store](https://www.microsoft.com/en-us/p/windows-terminal/9n0dx20hk701) so that it can automatically update itself as new versions are released.
 
@@ -55,7 +53,7 @@ I'm going to assume you already have AutoHotkey installed and are familiar with 
 
 In an new or existing AutoHotkey script, you can define this function to launch the Windows Terminal, or put it in focus if it's already open:
 
-```autohotkey
+```csharp
 SwitchToWindowsTerminal()
 {
   windowHandleId := WinExist("ahk_exe WindowsTerminal.exe")
@@ -76,7 +74,7 @@ SwitchToWindowsTerminal()
 
 Once you have the function defined, you can create a keyboard shortcut to call it, like so:
 
-```autohotkey
+```csharp
 ; Use Ctrl+Shift+C to launch/restore the Windows Terminal.
 ^+c::WindowsTerminal()
 ```
