@@ -59,11 +59,13 @@ SwitchToWindowsTerminal()
   windowHandleId := WinExist("ahk_exe WindowsTerminal.exe")
   windowExistsAlready := windowHandleId > 0
 
+  ; If the Windows Terminal is already open, put it in focus.
   if (windowExistsAlready = true)
   {
     WinActivate, "ahk_id %windowHandleId%"
     WinShow, "ahk_id %windowHandleId%"
   }
+  ; Else it's not already open, so launch it.
   else
   {
     ; How to find the Package Family Name and App ID of a Windows Store app to launch it from the command line: https://answers.microsoft.com/en-us/windows/forum/windows_10-windows_store/starting-windows-10-store-app-from-the-command/836354c5-b5af-4d6c-b414-80e40ed14675
@@ -76,7 +78,7 @@ Once you have the function defined, you can create a keyboard shortcut to call i
 
 ```csharp
 ; Use Ctrl+Shift+C to launch/restore the Windows Terminal.
-^+c::WindowsTerminal()
+^+c::SwitchToWindowsTerminal()
 ```
 
 Here I'm using `Ctrl`+`Shift`+`C` for my keyboard shortcut, but you could use something else like `Windows Key`+`C` (#c) or `Ctrl`+`Alt`+`C` (^!c).
