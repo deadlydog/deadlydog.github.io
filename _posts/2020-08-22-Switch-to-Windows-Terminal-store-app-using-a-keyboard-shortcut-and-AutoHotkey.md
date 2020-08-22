@@ -1,6 +1,6 @@
 ---
-title: "Launch Windows Terminal store app using a keyboard shortcut and AutoHotkey"
-permalink: /Launch-Windows-Terminal-store-app-using-a-keyboard-shortcut-and-AutoHotkey/
+title: "Switch to Windows Terminal store app using a keyboard shortcut and AutoHotkey"
+permalink: /Switch-to-Windows-Terminal-store-app-using-a-keyboard-shortcut-and-AutoHotkey/
 #date: 2099-01-17T00:00:00-06:00
 #last_modified_at: 2099-01-22T00:00:00-06:00
 comments_locked: false
