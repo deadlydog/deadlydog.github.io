@@ -47,7 +47,6 @@ While this will allow you to launch the Windows Terminal with a keyboard shortcu
 ## Switch to the Windows Terminal via keyboard shortcut and AutoHotkey
 
 To be able to both launch the Windows Terminal, as well as simply switch to the Windows Terminal window if it's already open, I use [AutoHotkey](https://www.autohotkey.com).
-
 I've [blogged about AutoHotkey in the past](https://blog.danskingdom.com/categories/#autohotkey), and if you've never used it you really should check it out.
 
 In an new or existing AutoHotkey script, you can define this function to launch the Windows Terminal, or put it in focus if it's already open:
