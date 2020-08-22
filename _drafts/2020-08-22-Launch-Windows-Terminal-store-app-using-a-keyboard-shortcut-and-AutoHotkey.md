@@ -1,0 +1,96 @@
+---
+title: "Launch Windows Terminal store app using a keyboard shortcut and AutoHotkey"
+permalink: /Launch-Windows-Terminal-store-app-using-a-keyboard-shortcut-and-AutoHotkey/
+#date: 2099-01-17T00:00:00-06:00
+#last_modified_at: 2099-01-22T00:00:00-06:00
+comments_locked: false
+categories:
+  - Windows Terminal
+  - AutoHotkey
+  - Microsoft Store
+  - Productivity
+  - Shortcuts
+tags:
+  - Windows Terminal
+  - AutoHotkey
+  - Microsoft Store
+  - AHK
+  - Keyboard shortcuts
+---
+
+## Get the Windows Terminal app
+
+I recently decided to try out the new [Windows Terminal](https://github.com/microsoft/terminal) to see how it compared to [ConEmu](https://conemu.github.io), which is my usual console.
+The recommended way to get the Windows Terminal is to [download it from the Microsoft Store](https://www.microsoft.com/en-us/p/windows-terminal/9n0dx20hk701) so that it can automatically update itself as new versions are released.
+
+While the Windows Terminal is not as mature and feature rich as ConEmu, I did enjoy it, and it's being actively worked on with plenty of features set to come down the road.
+I'd also recommend following [Scott Hanselman's post about how to make it look nicer](https://www.hanselman.com/blog/HowToMakeAPrettyPromptInWindowsTerminalWithPowerlineNerdFontsCascadiaCodeWSLAndOhmyposh.aspx).
+
+## Launch the Windows Terminal from the command line
+
+I decided to try it as my default terminal for a while.
+I currently have a keyboard shortcut setup to quickly and easily launch ConEmu, and wanted to do the same for Windows Terminal so it was never more than a keystroke away.
+However, because the Windows Terminal is installed as a Microsoft Store app, the location of the executable isn't very obvious, and it is likely to change every time the app is updated.
+Luckily, I found [this wonderful post describing how to launch Microsoft Store apps from the command line](https://answers.microsoft.com/en-us/windows/forum/windows_10-windows_store/starting-windows-10-store-app-from-the-command/836354c5-b5af-4d6c-b414-80e40ed14675).
+
+From there, I was able to track down that you can launch the Windows Terminal store app using:
+
+```cmd
+explorer.exe shell:AppsFolder\Microsoft.WindowsTerminal_8wekyb3d8bbwe!App
+```
+
+## Launch the Windows Terminal via keyboard shortcut
+
+The above post mentions that you can simply navigate to `shell:AppsFolder`, find the Windows Terminal app, right-click on it, and choose `Create shortcut`.
+This will put a shortcut to the application on your desktop, and like any shortcut file in Windows, you can right-click on it, go to `Properties`, and assign it a `Shortcut key` that can be used to launch the application.
+
+While this will allow you to launch the Windows Terminal with a keyboard shortcut, I don't use this method because every time you do the keyboard shortcut it opens a new instance of the Windows Terminal, which isn't what I want.
+
+## Switch to the Windows Terminal via keyboard shortcut and AutoHotkey
+
+To be able to both launch the Windows Terminal, as well as simply switch to the Windows Terminal window if it's already open, I use [AutoHotkey](https://www.autohotkey.com).
+
+I've [blogged about AutoHotkey in the past](https://blog.danskingdom.com/categories/#autohotkey), and if you've never used it you really should check it out.
+I'm going to assume you already have AutoHotkey installed and are familiar with it.
+
+In an new or existing AutoHotkey script, you can define this function to launch the Windows Terminal, or put it in focus if it's already open:
+
+```autohotkey
+SwitchToWindowsTerminal()
+{
+  windowHandleId := WinExist("ahk_exe WindowsTerminal.exe")
+  windowExistsAlready := windowHandleId > 0
+
+  if (windowExistsAlready = true)
+  {
+    WinActivate, "ahk_id %windowHandleId%"
+    WinShow, "ahk_id %windowHandleId%"
+  }
+  else
+  {
+    ; How to find the Package Family Name and App ID of a Windows Store app to launch it from the command line: https://answers.microsoft.com/en-us/windows/forum/windows_10-windows_store/starting-windows-10-store-app-from-the-command/836354c5-b5af-4d6c-b414-80e40ed14675
+    Run, explorer.exe shell:AppsFolder\Microsoft.WindowsTerminal_8wekyb3d8bbwe!App
+  }
+}
+```
+
+Once you have the function defined, you can create a keyboard shortcut to call it, like so:
+
+```autohotkey
+; Use Ctrl+Shift+C to launch/restore the Windows Terminal.
+^+c::WindowsTerminal()
+```
+
+Here I'm using `Ctrl`+`Shift`+`C` for my keyboard shortcut, but you could use something else like `Windows Key`+`C` (#c) or `Ctrl`+`Alt`+`C` (^!c).
+Check out the [AutoHotkey key list](https://www.autohotkey.com/docs/KeyList.htm) for other non-obvious key symbols.
+
+> Shameless Plug: You can also checkout my open source project [AHK Command Picker](https://github.com/deadlydog/AHKCommandPicker) that allows you to use a GUI picker instead of having to remember a ton of keyboard shortcuts.
+
+## Conclusion
+
+As a software developer, I'm constantly in and out of the terminal for running Git and PowerShell commands.
+I can now use `Ctrl`+`Shift`+`C` to switch to the Windows Terminal at anytime, no matter what other application currently has focus, and not having to reach for the mouse.
+
+I hope you've found this information helpful.
+
+Happy command lining :)
