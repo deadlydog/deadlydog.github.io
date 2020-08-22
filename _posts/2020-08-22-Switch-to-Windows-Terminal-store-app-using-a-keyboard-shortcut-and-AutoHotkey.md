@@ -49,7 +49,6 @@ While this will allow you to launch the Windows Terminal with a keyboard shortcu
 To be able to both launch the Windows Terminal, as well as simply switch to the Windows Terminal window if it's already open, I use [AutoHotkey](https://www.autohotkey.com).
 
 I've [blogged about AutoHotkey in the past](https://blog.danskingdom.com/categories/#autohotkey), and if you've never used it you really should check it out.
-I'm going to assume you already have AutoHotkey installed and are familiar with it.
 
 In an new or existing AutoHotkey script, you can define this function to launch the Windows Terminal, or put it in focus if it's already open:
 
@@ -72,17 +71,28 @@ SwitchToWindowsTerminal()
     Run, explorer.exe shell:AppsFolder\Microsoft.WindowsTerminal_8wekyb3d8bbwe!App
   }
 }
-```
 
-Once you have the function defined, you can create a keyboard shortcut to call it, like so:
-
-```csharp
 ; Use Ctrl+Shift+C to launch/restore the Windows Terminal.
 ^+c::SwitchToWindowsTerminal()
 ```
 
-Here I'm using `Ctrl`+`Shift`+`C` for my keyboard shortcut, but you could use something else like `Windows Key`+`C` (#c) or `Ctrl`+`Alt`+`C` (^!c).
+The last line in the script defines the keyboard shortcut and has it call the function.
+
+Here I'm using `Ctrl`+`Shift`+`C` (^+c) for my keyboard shortcut, but you could use something else like `Windows Key`+`C` (#c) or `Ctrl`+`Alt`+`C` (^!c).
 Check out the [AutoHotkey key list](https://www.autohotkey.com/docs/KeyList.htm) for other non-obvious key symbols.
+
+If you've never used AutoHotkey before and want to get this working, all you need to do is:
+
+1. Install [AutoHotkey](https://www.autohotkey.com)
+1. Create a new text file with a `.ahk` extension
+1. Copy-paste the above script into the file
+1. Double click the file to run it.
+
+Once that's done, you should be able to use your keyboard shortcut to switch to Windows Terminal.
+
+You'll also likely want to have your script startup automatically with Windows so that you don't have to manually run it all the time.
+This is as easy as dropping the .ahk file (or a shortcut to it) in your `shell:Startup` directory.
+Windows will automatically run all files in this directory every time you log in.
 
 > Shameless Plug: You can also checkout my open source project [AHK Command Picker](https://github.com/deadlydog/AHKCommandPicker) that allows you to use a GUI picker instead of having to remember a ton of keyboard shortcuts.
 
