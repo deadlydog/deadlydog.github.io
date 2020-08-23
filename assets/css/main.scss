@@ -45,6 +45,12 @@ $type-size-8 : 0.625em; // ~10px
 	margin-bottom: -2em;
 }
 
+// Use more prominent colors for inline code text.
+code.highlighter-rouge {
+	background-color: rgb(200, 208, 212);
+	color: rgb(5, 98, 18);
+}
+
 //========== Dan's Customizations END ==========
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin

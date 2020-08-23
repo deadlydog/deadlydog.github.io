@@ -64,7 +64,8 @@ Here's a list of places I've changed code:
 - `_config.yml` file.
 - `assets/css/main.scss`:
   - Adjusted font sizes a bit.
-  - Added class used in the masthead.html.
+  - Added class used for the site description in the masthead.html.
+  - Adjusted colors used for inline code text.
 
 Here's a list of files I've added:
 
