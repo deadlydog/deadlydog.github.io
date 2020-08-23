@@ -51,7 +51,7 @@ Luckily, I found [this wonderful post describing how to launch Microsoft Store a
 
 From there, I was able to track down that you can launch the Windows Terminal store app using:
 
-```cmd
+```text
 explorer.exe shell:AppsFolder\Microsoft.WindowsTerminal_8wekyb3d8bbwe!App
 ```
 
