@@ -61,7 +61,7 @@ Here's a list of places I've changed code:
 - `assets/css/main.scss`:
   - Adjusted font sizes a bit.
   - Added class used in the masthead.html.
-  - Adjusted 'Recent Posts' heading margin to reduce empty space.
+  - Adjusted margin of the entries-list below the 'Recent Posts' heading to reduce empty space.
 - `_includes/masthead.html`: Added site description below site title.
 - `_includes/footer.html`: Added advertisements to the bottom of the footer.
 - `_config.yml` file.
