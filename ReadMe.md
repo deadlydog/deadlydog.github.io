@@ -58,7 +58,10 @@ This doesn't include the `_config.yml` though, as we're expected to set custom s
 
 Here's a list of places I've changed code:
 
-- `assets/css/main.scss`: Adjusted font sizes a bit, and added class used in the masthead.html.
+- `assets/css/main.scss`:
+  - Adjusted font sizes a bit.
+  - Added class used in the masthead.html.
+  - Adjusted 'Recent Posts' heading margin to reduce empty space.
 - `_includes/masthead.html`: Added site description below site title.
 - `_includes/footer.html`: Added advertisements to the bottom of the footer.
 - `_config.yml` file.

@@ -39,6 +39,11 @@ $type-size-8 : 0.625em; // ~10px
 	font-size: $type-size-6
 }
 
+// Reduce the amount of line space between the 'Recent Posts' title and the first entry.
+.entries-list {
+	margin-top: -2em;
+}
+
 //========== Dan's Customizations END ==========
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
