@@ -39,6 +39,12 @@ $type-size-8 : 0.625em; // ~10px
 	font-size: $type-size-6;
 }
 
+// Reduce the amount of whitespace above and below the 'Recent Posts' heading on the home page.
+#home-page-recent-posts {
+	margin-top: -1em;
+	margin-bottom: -2em;
+}
+
 //========== Dan's Customizations END ==========
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin

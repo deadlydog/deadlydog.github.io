@@ -58,12 +58,13 @@ This doesn't include the `_config.yml` though, as we're expected to set custom s
 
 Here's a list of places I've changed code:
 
+- `_includes/footer.html`: Added advertisements to the bottom of the footer.
+- `_includes/masthead.html`: Added site description below site title.
+- `_layouts/home.html`: Added id to 'Recent Posts' heading so we can adjust whitespace around it.
+- `_config.yml` file.
 - `assets/css/main.scss`:
   - Adjusted font sizes a bit.
   - Added class used in the masthead.html.
-- `_includes/masthead.html`: Added site description below site title.
-- `_includes/footer.html`: Added advertisements to the bottom of the footer.
-- `_config.yml` file.
 
 Here's a list of files I've added:
 

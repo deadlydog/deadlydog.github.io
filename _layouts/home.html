@@ -1,0 +1,25 @@
+---
+layout: archive
+---
+
+{{ content }}
+
+<!--========== Dan's Customizations START ==========-->
+<!-- This line was already here. Just added the home-page-recent-posts id to it so we can adjust the spacing around it via css. -->
+<h3 id="home-page-recent-posts" class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Recent Posts" }}</h3>
+<!--========== Dan's Customizations END ==========-->
+
+{% if paginator %}
+{% assign posts = paginator.posts %}
+{% else %}
+{% assign posts = site.posts %}
+{% endif %}
+
+{% assign entries_layout = page.entries_layout | default: 'list' %}
+<div class="entries-{{ entries_layout }}">
+	{% for post in posts %}
+	{% include archive-single.html type=entries_layout %}
+	{% endfor %}
+</div>
+
+{% include paginator.html %}
