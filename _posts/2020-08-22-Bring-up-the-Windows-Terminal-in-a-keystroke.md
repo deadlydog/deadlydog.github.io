@@ -89,7 +89,6 @@ SwitchToWindowsTerminal()
   ; Else it's not already open, so launch it.
   else
   {
-    ; How to find the Package Family Name and App ID of a Windows Store app to launch it from the command line: https://answers.microsoft.com/en-us/windows/forum/windows_10-windows_store/starting-windows-10-store-app-from-the-command/836354c5-b5af-4d6c-b414-80e40ed14675
     Run, explorer.exe shell:AppsFolder\Microsoft.WindowsTerminal_8wekyb3d8bbwe!App
   }
 }
