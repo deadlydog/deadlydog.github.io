@@ -116,6 +116,7 @@ Check out the [AutoHotkey key list](https://www.autohotkey.com/docs/KeyList.htm)
 
 You may have also noticed in the code that if the window is already in focus, we minimize it.
 This allows me to easily switch to and away from the Windows Terminal using the same shortcut keys.
+Using `Alt`+`Tab` would also work to switch back to your previous application.
 
 ### Getting the AutoHotkey script running
 
@@ -136,7 +137,7 @@ Windows will automatically run all files in this directory every time you log in
 
 As a software developer, I'm constantly in and out of the terminal for running Git and PowerShell commands.
 If you're ok simply pinning Windows Terminal to the taskbar in a dedicated position and don't mind the preset keyboard shortcut, then roll with that.
-For myself, using AutoHotkey I can now use `Ctrl`+`Shift`+`C` to switch to and away the Windows Terminal at anytime, no matter what other application currently has focus, and not having to reach for the mouse.
+For myself, using AutoHotkey I can now use `Ctrl`+`Shift`+`C` to switch to and away from the Windows Terminal at anytime, no matter what other application currently has focus, and not having to reach for the mouse.
 
 > Shameless Plug: You can also checkout my open source project [AHK Command Picker](https://github.com/deadlydog/AHKCommandPicker) that allows you to use a GUI picker instead of having to remember a ton of keyboard shortcuts.
 
