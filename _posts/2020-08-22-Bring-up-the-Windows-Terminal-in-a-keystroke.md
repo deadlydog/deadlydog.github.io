@@ -80,11 +80,23 @@ SwitchToWindowsTerminal()
   windowHandleId := WinExist("ahk_exe WindowsTerminal.exe")
   windowExistsAlready := windowHandleId > 0
 
-  ; If the Windows Terminal is already open, put it in focus.
+  ; If the Windows Terminal is already open, determine if we should put it in focus or minimize it.
   if (windowExistsAlready = true)
   {
-    WinActivate, "ahk_id %windowHandleId%"
-    WinShow, "ahk_id %windowHandleId%"
+    activeWindowHandleId := WinExist("A")
+    windowIsAlreadyActive := activeWindowHandleId == windowHandleId
+
+    if (windowIsAlreadyActive)
+    {
+      ; Minimize the window.
+      WinMinimize, "ahk_id %windowHandleId%"
+    }
+    else
+    {
+      ; Put the window in focus.
+      WinActivate, "ahk_id %windowHandleId%"
+      WinShow, "ahk_id %windowHandleId%"
+    }
   }
   ; Else it's not already open, so launch it.
   else
@@ -102,6 +114,11 @@ The last line in the script defines the keyboard shortcut and has it call the fu
 Here I'm using `Ctrl`+`Shift`+`C` (^+c) for my keyboard shortcut, but you could use something else like `Windows Key`+`C` (#c) or `Ctrl`+`Alt`+`C` (^!c).
 Check out the [AutoHotkey key list](https://www.autohotkey.com/docs/KeyList.htm) for other non-obvious key symbols.
 
+You may have also noticed in the code that if the window is already in focus, we minimize it.
+This allows me to easily switch to and away from the Windows Terminal using the same shortcut keys.
+
+### Getting the AutoHotkey script running
+
 If you've never used AutoHotkey before and want to get this working, all you need to do is:
 
 1. Install [AutoHotkey](https://www.autohotkey.com)
@@ -115,13 +132,13 @@ You'll also likely want to have your script startup automatically with Windows s
 This is as easy as dropping the .ahk file (or a shortcut to it) in your `shell:Startup` directory.
 Windows will automatically run all files in this directory every time you log in.
 
-> Shameless Plug: You can also checkout my open source project [AHK Command Picker](https://github.com/deadlydog/AHKCommandPicker) that allows you to use a GUI picker instead of having to remember a ton of keyboard shortcuts.
-
 ## Conclusion
 
 As a software developer, I'm constantly in and out of the terminal for running Git and PowerShell commands.
 If you're ok simply pinning Windows Terminal to the taskbar in a dedicated position and don't mind the preset keyboard shortcut, then roll with that.
-For myself, using AutoHotkey I can now use `Ctrl`+`Shift`+`C` to switch to the Windows Terminal at anytime, no matter what other application currently has focus, and not having to reach for the mouse.
+For myself, using AutoHotkey I can now use `Ctrl`+`Shift`+`C` to switch to and away the Windows Terminal at anytime, no matter what other application currently has focus, and not having to reach for the mouse.
+
+> Shameless Plug: You can also checkout my open source project [AHK Command Picker](https://github.com/deadlydog/AHKCommandPicker) that allows you to use a GUI picker instead of having to remember a ton of keyboard shortcuts.
 
 I hope you've found this information helpful.
 
