@@ -2,7 +2,7 @@
 title: "Bring up the Windows Terminal in a keystroke"
 permalink: /Bring-up-the-Windows-Terminal-in-a-keystroke/
 #date: 2099-01-17T00:00:00-06:00
-#last_modified_at: 2099-01-22T00:00:00-06:00
+last_modified_at: 2020-08-27
 comments_locked: false
 categories:
   - Windows Terminal
@@ -54,6 +54,8 @@ From there, I was able to track down that you can launch the Windows Terminal st
 ```text
 explorer.exe shell:AppsFolder\Microsoft.WindowsTerminal_8wekyb3d8bbwe!App
 ```
+
+> Update: It turns out you can also simply run `wt` from the command line to launch the Windows Terminal, as `wt.exe` gets added to the Windows PATH when the Windows Terminal is installed.
 
 Now that we know how to launch it from the command line, you can use this from any custom scripts or application launchers you might use.
 This is in fact what I show how to do from AutoHotkey further below.
