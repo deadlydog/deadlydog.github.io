@@ -35,17 +35,17 @@ See the [GitHub repository](https://github.com/igrigorik/videospeed) for more in
 
 I was not able to find the Video Speed Controller extension for Edge, but hopefully it will be developed soon, or you can try looking for other similar extensions for your other browsers.
 
-### Why do I need this
+### Why do I need this?
 
 For a few reasons:
 
-1. Many sites, such as YouTube, already allow you to adjust the playback speed.
+1. Works everywhere*: Many sites, such as YouTube, already allow you to adjust the playback speed.
 However, many sites do not.
 This extension allows you to control the playback speed on videos, even when the video hosting platform does not.
-I have found however that it does not work with FaceBook videos, so it may not work with _every_ website out there.
-1. Even when sites give you playback speed control, they often only allow you to speed up the video by increments of 0.5x, so you have to jump straight from 1.0x speed to 1.5x, to 2.0x.
+*I have found that it does not work with FaceBook videos, so it may not work with _every_ website out there, but the majority of them.
+1. Fine-grained control: Even when sites give you playback speed control, they often only allow you to speed up the video by increments of 0.5x, so you have to jump straight from 1.0x speed to 1.5x, to 2.0x.
 I find my sweet spot is typically around 1.7x, but it depends on the speaker and content.
-1. The playback speed controls are easily accessible and always the same.
+1. Consistency: The playback speed controls are easily accessible and always the same.
 You don't have to dig through menus to find them, and they are always in the same spot no matter what site you are watching a video on.
 
 ## Phones, tablets, and media streaming devices
