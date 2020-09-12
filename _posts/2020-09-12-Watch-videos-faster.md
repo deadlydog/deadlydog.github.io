@@ -12,7 +12,7 @@ tags:
 ---
 
 Your time is valuable.
-Many videos we watch online, whether they're conference sessions, DIY instructions, movies, or silly cat videos, can easily be understood and enjoyed while watching at a faster playback speed.
+Many videos we watch, whether they're conference sessions, DIY instructions, movies, or silly cat videos, can easily be understood and enjoyed while watching at a faster playback speed.
 
 I typically find increasing the playback speed most valuable on informational and instructional videos, such as presentations and DIY videos.
 It also comes in handy for shows with a lot of slow moving cutscenes (e.g. Game of Thrones), or if my wife has watched a few episodes of our show without me and I need to catch up.
