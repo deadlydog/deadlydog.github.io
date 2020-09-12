@@ -21,6 +21,7 @@ I currently use the [Minimal Mistakes theme][MinimalMistakesThemeGitHubRepoUrl].
 To run Jekyll locally, from the site directory run `bundle exec jekyll serve`.
 Include the `--incremental` (or `-I`) parameter to do faster incremental builds.
 e.g. `bundle exec jekyll serve --incremental`.
+However, this will not rebuilt the site when making site-wide changes, such as changes to the layout or styles.
 
 Some features are only enabled for `production` builds (e.g. comments, advertisements).
 To build in production mode, use `JEKYLL_ENV=production bundle exec jekyll serve -I`. Also, it doesn't seem to work from PowerShell or Cmd; you must run it from Bash.
