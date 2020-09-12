@@ -1,6 +1,6 @@
 ---
-title: "Watch videos faster"
-permalink: /Watch-videos-faster/
+title: "Watch videos faster and reclaim your time"
+permalink: /Watch-videos-faster-and-reclaim-your-time/
 #date: 2099-01-17T00:00:00-06:00
 #last_modified_at: 2099-01-22T00:00:00-06:00
 comments_locked: false
@@ -26,8 +26,8 @@ To make the most of my time, I use the `Video Speed Controller` browser extensio
 
 The extension allows you to speed up or slowdown any HTML5 video in small increments by adding semi-transparent controls to the top-left corner of the video when your mouse is over the video; if your mouse is not over the video, it does not overlay anything on the video.
 
-![Video Speed Controller speed overlay](/assets/Posts/2020-09-12-Watch-videos-faster/VideoSpeedControllerOverlay.png)
-![Video Speed Controller controls overlay](/assets/Posts/2020-09-12-Watch-videos-faster/VideoSpeedControllerOverlayControls.png)
+![Video Speed Controller speed overlay](/assets/Posts/2020-09-12-Watch-videos-faster-and-reclaim-your-time/VideoSpeedControllerOverlay.png)
+![Video Speed Controller controls overlay](/assets/Posts/2020-09-12-Watch-videos-faster-and-reclaim-your-time/VideoSpeedControllerOverlayControls.png)
 
 It also provides [customizable keyboard shortcuts](https://github.com/igrigorik/videospeed#install-chrome-extension) that can be used to control the playback speed and jump forward and back in the video, which is very handy.
 
@@ -60,7 +60,7 @@ If you're watching videos that you have stored on your local machine or a networ
 
 You can control the playback speed via the Playback > Speed menu; this menu is also accessible via a right-click context menu.
 
-![VLC playback speed controls](/assets/Posts/2020-09-12-Watch-videos-faster/VlcPlaybackSpeedControls.png)
+![VLC playback speed controls](/assets/Posts/2020-09-12-Watch-videos-faster-and-reclaim-your-time/VlcPlaybackSpeedControls.png)
 
 It also provides configurable hotkeys that can be used.
 The default hotkeys are:
