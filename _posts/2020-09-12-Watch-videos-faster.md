@@ -11,7 +11,7 @@ tags:
   - Video
 ---
 
-Your time is valuable.
+Your time is valuable, and limited.
 Many videos we watch, whether they're conference sessions, DIY instructions, movies, or silly cat videos, can easily be understood and enjoyed while watching at a faster playback speed.
 
 I typically find increasing the playback speed most valuable on informational and instructional videos, such as presentations and DIY videos.
@@ -78,6 +78,10 @@ The default hotkeys are:
 
 Whether watching videos online or offline, make the most of your time by controlling the playback speed, and easily jumping ahead or back in the video.
 How much you increase the speed will depend on how fast the people in the video speak, as well as the content of the video.
-Being able to adjust the playback speed by small amounts allows you to find the sweet spot for that particular video
+Being able to adjust the playback speed by small amounts allows you to find the sweet spot for that particular video.
+
+As more people transition to working from home, work presentations are often recorded and available to watch later.
+If you know a presentation will be recorded, skip watching it live and instead burn through that 60 minute video in 40 minutes later.
+Give some extra minutes back to your life every day by watching videos faster.
 
 Happy watching!
