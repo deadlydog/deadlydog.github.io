@@ -42,9 +42,11 @@ For a few reasons:
 1. __Works everywhere__*: Many sites, such as YouTube, already allow you to adjust the playback speed.
 However, many sites do not.
 This extension allows you to control the playback speed on videos, even when the video hosting platform does not.
-*I have found that it does not work with FaceBook videos, so it may not work with _every_ website, but the majority of them.
+   - *This extension only works with HTML5 video, which is what most sites use these days. If a site uses something else for their videos, like Flash, the extension may not work.
+   - **I have found that the mouse controls are not accessible when viewing videos on FaceBook, however the keyboard shortcuts still work.
 1. __Fine-grained control__: Even when sites give you playback speed control, they often only allow you to speed up the video by increments of 0.5x, so you have to jump straight from 1.0x speed to 1.5x, to 2.0x.
 I find my sweet spot is typically around 1.7x, but it depends on the speaker and content.
+In addition to playback speed, you can also easily jump forward and back 10 seconds in the video, which is much more precise than using the mouse and the video slider.
 1. __Consistency__: The playback speed controls are easily accessible and always the same.
 You don't have to dig through menus to find them, and they are always in the same spot no matter what site you are watching a video on.
 
