@@ -1,0 +1,7 @@
+_id: 261dc430-f9a0-11ea-9e39-47b861fe17ad
+message: "Hey.. I'm searching a lot but not getting solution. I'm running below command which is working fine in powershell but want to run in cmd for my batch file wherein getting error Start-Process : A parameter cannot be found that matches parameter name 'path'.. Please please help. \r\n\r\npowershell command\r\nstart-Process Remove-Item  -path \"C:\\Users\\$env:USERNAME\\AppData\\Local\\Microsoft\\Windows\\Temporary Internet Files\\*\" -Recurse -Force -EA SilentlyContinue -Verbose\r\n\r\nHow can i run this in through cmd for my batch file."
+name: Sandeep
+email: acb806136aab32d8b91aca4d38280616
+url: ''
+hidden: ''
+date: '2020-09-18T11:14:42.165Z'
