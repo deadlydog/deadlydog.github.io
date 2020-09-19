@@ -1,11 +1,15 @@
 main:
+# Dan's Customizations START (Add Home nav menu item)
   - title: "Home"
     url: /
+# Dan's Customizations END
   - title: "Posts"
     url: /posts/
   - title: "Categories"
     url: /categories/
+# Dan's Customizations START (Comment out Tags nav menu item)
 # - title: "Tags"
 #   url: /tags/
+# Dan's Customizations END
   - title: "About"
     url: /about/
