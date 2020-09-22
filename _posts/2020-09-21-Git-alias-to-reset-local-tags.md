@@ -1,6 +1,6 @@
 ---
-title: "Reset local Git tags alias"
-permalink: /Reset-local-Git-tags-alias/
+title: "Git alias to reset local tags"
+permalink: /Git-alias-to-reset-local-tags/
 #date: 2099-01-15T00:00:00-06:00
 #last_modified_at: 2099-01-22T00:00:00-06:00
 comments_locked: false
@@ -16,7 +16,7 @@ tags:
 I've noticed that VS Code sometimes detects conflicts between my local Git tags and remote ones.
 This results in a Git error when hitting the small Git sync button in the VS Code bottom toolbar.
 
-![VS Code sync icon](/assets/Posts/2020-09-21-Reset-local-git-tags-alias/VsCodeSyncIcon.png)
+![VS Code sync icon](/assets/Posts/2020-09-21-Git-alias-to-reset-local-tags/VsCodeSyncIcon.png)
 
 To easily solve this issue, I setup this alias in my `.gitconfig` to easily wipe my local tags and reset them to what the remote has:
 
