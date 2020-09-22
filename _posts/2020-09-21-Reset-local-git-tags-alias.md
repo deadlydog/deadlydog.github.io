@@ -14,14 +14,17 @@ tags:
 ---
 
 I've noticed that VS Code sometimes detects conflicts between my local Git tags and remote ones.
-This results in a Git error when hitting the Git sync button in VS Code.
+This results in a Git error when hitting the small Git sync button in the VS Code bottom toolbar.
 
+![VS Code sync icon](assets/Posts/2020-09-21-Reset-local-git-tags-alias/VsCodeSyncIcon.png)
 
-
-To easily solve this issue, I setup this alias in my .gitconfig to easily wipe my local tags and reset them to what the remote has:
+To easily solve this issue, I setup this alias in my `.gitconfig` to easily wipe my local tags and reset them to what the remote has:
 
 ```bash
-delete-local-tags = !echo 'git tag -l | xargs git tag -d && git fetch --tags' && git tag -l | xargs git tag -d && git fetch --tags
+[alias]
+    delete-local-tags = !echo 'git tag -l | xargs git tag -d && git fetch --tags' && git tag -l | xargs git tag -d && git fetch --tags
 ```
 
 Now when I encounter this error, from the command line I just type `git delete-local-tags` and it resets my local tags to what the remote has, making VS Code happy and enabling me to sync Git with a single button click again.
+
+Happy syncing :)
