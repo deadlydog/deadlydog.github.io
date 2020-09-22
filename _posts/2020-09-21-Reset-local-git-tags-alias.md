@@ -25,6 +25,8 @@ To easily solve this issue, I setup this alias in my `.gitconfig` to easily wipe
     delete-local-tags = !echo 'git tag -l | xargs git tag -d && git fetch --tags' && git tag -l | xargs git tag -d && git fetch --tags
 ```
 
+This snippet assumes you're running Git in a Bash prompt.
+
 Now when I encounter this error, from the command line I just type `git delete-local-tags` and it resets my local tags to what the remote has, making VS Code happy and enabling me to sync Git with a single button click again.
 
 The `!echo [string]` portion isn't required as it will simply display the command that is about to run, but I like to know what my aliases are doing behind the scenes when I run them.
