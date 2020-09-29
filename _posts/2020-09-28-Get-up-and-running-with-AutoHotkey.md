@@ -46,7 +46,7 @@ If you edit the script, right-click the system tray icon and choose `Reload This
 You did it!
 You wrote and ran your first AHK script.
 
-## Editing AHK scripts
+## Editing AHK scripts at startup
 
 While you can use any text editor to write your scripts, I would recommend either:
 
