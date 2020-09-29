@@ -46,7 +46,7 @@ If you edit the script, right-click the system tray icon and choose `Reload This
 You did it!
 You wrote and ran your first AHK script.
 
-## Editing AHK scripts at startup
+## Editing AHK scripts
 
 While you can use any text editor to write your scripts, I would recommend either:
 
@@ -56,7 +56,7 @@ While you can use any text editor to write your scripts, I would recommend eithe
 Both options provide syntax highlighting, intellisense, and debug support.
 There are [other editors/IDEs](https://www.autohotkey.com/docs/commands/Edit.htm#Editors) as well, but these are the 2 I have experience with and have enjoyed.
 
-## Run scripts automatically
+## Run scripts automatically at startup
 
 While it's cool that you can simply double-click your script file to run it, you likely don't want to have to do this every time you restart your computer.
 
