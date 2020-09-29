@@ -31,7 +31,7 @@ To get up and running with AHK:
 1. Double-click the file to run it, or right-click it and choose `Run Script`.
   ![AHK file context menu](/assets/Posts/2020-09-28-Get-up-and-running-with-Auto-Hotkey/AhkContextMenu.png)
 
-You should see a new Auto Hotkey icon appear in your system tray; a green square with a white "H".
+You should see a new Auto Hotkey icon appear in your system tray ![AHK system tray icon](/assets/Posts/2020-09-28-Get-up-and-running-with-Auto-Hotkey/AhkSystemTrayIcon.png).
 This is your running script.
 
 If you used the line of code provided above, when you hold the `Windows key` and press `b` you should see a message box pop up that says "Hello World!".
@@ -41,7 +41,7 @@ If you used the line of code provided above, when you hold the `Windows key` and
 You can right-click the system tray icon and choose `Exit` to kill your script at any time.
 If you edit the script, right-click the system tray icon and choose `Reload This Script` to restart the script with the changes applied.
 
-![AHK system tray icon](/assets/Posts/2020-09-28-Get-up-and-running-with-Auto-Hotkey/AhkSystemTrayIcon.png)
+![AHK system tray icon context menu](/assets/Posts/2020-09-28-Get-up-and-running-with-Auto-Hotkey/AhkSystemTrayIconContextMenu.png)
 
 You did it!
 You wrote and ran your first AHK script.
