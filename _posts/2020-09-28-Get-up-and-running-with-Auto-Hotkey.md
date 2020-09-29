@@ -12,6 +12,7 @@ tags:
 ---
 
 Auto Hotkey (AHK) is an amazing programming language for automating tasks and keystrokes in Windows.
+In this post we'll look at how you can get your first AHK script up and running, and other configurations and processes you may want to adopt.
 I've given some of these AHK setup instructions in previous posts, but figured they deserved their own dedicate post.
 
 ## Install AHK and run your first script
@@ -53,6 +54,7 @@ While you can use any text editor to write your scripts, I would recommend eithe
 1. [SciTE4AutoHotkey](https://ahk4.net/user/fincs/scite4ahk/) - A great IDE, but hasn't had an update since 2014.
 
 Both options provide syntax highlighting, intellisense, and debug support.
+There are [other editors/IDEs](https://www.autohotkey.com/docs/commands/Edit.htm#Editors) as well, but these are the 2 I have experience with and have enjoyed.
 
 ## Run scripts automatically
 
@@ -75,7 +77,7 @@ Now the next time the user logs into Windows, the script will be started automat
 *You don't _need_ to paste a shortcut; you could paste the actual .ahk file itself in the Startup directory and things would work as expected.
 However, I prefer to keep the actual .ahk file somewhere that it will be backed up, such as in a Git repository, or in a OneDrive folder.
 
-## Run AHK as admin
+## Allow AHK to interact with apps running as admin
 
 If you run other applications as admin on your computer, you may notice that AHK cannot interact with them.
 This is because in order for AHK to interact with applications running as admin, it either also needs to run as admin, or we need to digitally sign the AutoHotkey.exe.
