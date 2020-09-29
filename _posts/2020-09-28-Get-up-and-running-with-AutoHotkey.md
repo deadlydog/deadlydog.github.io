@@ -1,6 +1,6 @@
 ---
-title: "Get up and running with Auto Hotkey"
-permalink: /Get-up-and-running-with-Auto-Hotkey/
+title: "Get up and running with AutoHotkey"
+permalink: /Get-up-and-running-with-AutoHotkey/
 #date: 2099-01-15T00:00:00-06:00
 #last_modified_at: 2099-01-22T00:00:00-06:00
 comments_locked: false
@@ -11,7 +11,7 @@ tags:
   - AHK
 ---
 
-Auto Hotkey (AHK) is an amazing programming language for automating tasks and keystrokes in Windows.
+AutoHotkey (AHK) is an amazing programming language for automating tasks and keystrokes in Windows.
 In this post we'll look at how you can get your first AHK script up and running, and other configurations and processes you may want to adopt.
 I've given some of these AHK setup instructions in previous posts, but figured they deserved their own dedicate post.
 
@@ -19,7 +19,7 @@ I've given some of these AHK setup instructions in previous posts, but figured t
 
 To get up and running with AHK:
 
-1. [Download and install](https://www.autohotkey.com) the current version of Auto Hotkey.
+1. [Download and install](https://www.autohotkey.com) the current version of AutoHotkey.
 1. Create a new text file with the extension `.ahk`. e.g. MyHotkeys.ahk.
 1. Open the text file in an editor, such as Notepad, and add some AHK code to the file, such as:
 
@@ -29,19 +29,19 @@ To get up and running with AHK:
 
 1. Save the file.
 1. Double-click the file to run it, or right-click it and choose `Run Script`.
-  ![AHK file context menu](/assets/Posts/2020-09-28-Get-up-and-running-with-Auto-Hotkey/AhkContextMenu.png)
+  ![AHK file context menu](/assets/Posts/2020-09-28-Get-up-and-running-with-AutoHotkey/AhkContextMenu.png)
 
-You should see a new Auto Hotkey icon appear in your system tray ![AHK system tray icon](/assets/Posts/2020-09-28-Get-up-and-running-with-Auto-Hotkey/AhkSystemTrayIcon.png).
+You should see a new AutoHotkey icon appear in your system tray ![AHK system tray icon](/assets/Posts/2020-09-28-Get-up-and-running-with-AutoHotkey/AhkSystemTrayIcon.png).
 This is your running script.
 
 If you used the line of code provided above, when you hold the `Windows key` and press `b` you should see a message box pop up that says "Hello World!".
 
-![AHK Hello World message box](/assets/Posts/2020-09-28-Get-up-and-running-with-Auto-Hotkey/AhkHelloWorldMessageBox.png)
+![AHK Hello World message box](/assets/Posts/2020-09-28-Get-up-and-running-with-AutoHotkey/AhkHelloWorldMessageBox.png)
 
 You can right-click the system tray icon and choose `Exit` to kill your script at any time.
 If you edit the script, right-click the system tray icon and choose `Reload This Script` to restart the script with the changes applied.
 
-![AHK system tray icon context menu](/assets/Posts/2020-09-28-Get-up-and-running-with-Auto-Hotkey/AhkSystemTrayIconContextMenu.png)
+![AHK system tray icon context menu](/assets/Posts/2020-09-28-Get-up-and-running-with-AutoHotkey/AhkSystemTrayIconContextMenu.png)
 
 You did it!
 You wrote and ran your first AHK script.
@@ -64,12 +64,12 @@ You can have your script run automatically when you log into Windows by doing th
 
 1. Open File Explorer.
 1. In the address bar, type `shell:Startup` and hit enter.
-  ![File Explorer shell startup command](/assets/Posts/2020-09-28-Get-up-and-running-with-Auto-Hotkey/FileExplorerShellStartupCommand.png)
+  ![File Explorer shell startup command](/assets/Posts/2020-09-28-Get-up-and-running-with-AutoHotkey/FileExplorerShellStartupCommand.png)
 1. You should now be in your user's Startup directory.
 Every file in this directory will be executed automatically when the user logs into Windows.
 1. Find your .ahk script file and copy it.
 1. Back in your user's Startup directory, paste a shortcut to your .ahk file*.
-  ![Paste shortcut into Startup directory](/assets/Posts/2020-09-28-Get-up-and-running-with-Auto-Hotkey/FileExplorerStartUpDirectory.png)
+  ![Paste shortcut into Startup directory](/assets/Posts/2020-09-28-Get-up-and-running-with-AutoHotkey/FileExplorerStartUpDirectory.png)
 
 That's it.
 Now the next time the user logs into Windows, the script will be started automatically.
@@ -86,7 +86,7 @@ I recommend digitally signing the AutoHotkey executable.
 It's a one-time setup operation and only takes about 30 seconds to do.
 To digitally sign the AutoHotkey executable:
 
-1. Download and unzip [the EnableUIAccess.zip file](/assets/Posts/2020-09-28-Get-up-and-running-with-Auto-Hotkey/EnableUIAccess.zip).
+1. Download and unzip [the EnableUIAccess.zip file](/assets/Posts/2020-09-28-Get-up-and-running-with-AutoHotkey/EnableUIAccess.zip).
 1. Double-click the `EnableUIAccess.ahk` script to run it, and it will automatically prompt you.
 1. Read the disclaimer and click `OK`.
 1. On the `Select Source File` prompt choose the "C:\Program Files\AutoHotkey\AutoHotkey.exe" file; it's typically already selected by default so you can just hit the `Open` button. (Might be Program Files (x86) if you have 32-bit AHK installed on 64-bit Windows)
@@ -94,19 +94,19 @@ To digitally sign the AutoHotkey executable:
 1. Click `Yes` to replace the existing file.
 1. Click `Yes` when prompted to `Run With UI Access`.
 
-That's it; Auto Hotkey should now be able to interact with all windows/applications, even ones running as admin.
+That's it; AutoHotkey should now be able to interact with all windows/applications, even ones running as admin.
 I've blogged about this in the past, so if you're interested you can [see this post](/get-autohotkey-to-interact-with-admin-windows-without-running-ahk-script-as-admin) for more background information.
 
 ## Transform your script into an executable
 
-Perhaps you've written a cool AHK script that you want to share with your friends, but you don't want them to have to install Auto Hotkey.
-Auto Hotkey has you covered!
+Perhaps you've written a cool AHK script that you want to share with your friends, but you don't want them to have to install AutoHotkey.
+AutoHotkey has you covered!
 Simply right-click on your .ahk script file and choose `Compile Script`.
 
-![AHK context menu](/assets/Posts/2020-09-28-Get-up-and-running-with-Auto-Hotkey/AhkContextMenu.png)
+![AHK context menu](/assets/Posts/2020-09-28-Get-up-and-running-with-AutoHotkey/AhkContextMenu.png)
 
 This will create a .exe executable from your script file.
-Double-clicking the .exe file will have the same result as double-clicking the .ahk file to run it, except the .exe does not require that Auto Hotkey be installed on the computer.
+Double-clicking the .exe file will have the same result as double-clicking the .ahk file to run it, except the .exe does not require that AutoHotkey be installed on the computer.
 
 ## Conclusion
 
