@@ -34,7 +34,7 @@ To get up and running with AHK:
 You should see a new AutoHotkey icon appear in your system tray ![AHK system tray icon](/assets/Posts/2020-09-28-Get-up-and-running-with-AutoHotkey/AhkSystemTrayIcon.png).
 This is your running script.
 
-If you used the line of code provided above, when you hold the `Windows key` and press `b` you should see a message box pop up that says "Hello World!".
+If you used the line of code provided above, when you hold the `Windows key` down and press `b` you should see a message box pop up that says "Hello World!".
 
 ![AHK Hello World message box](/assets/Posts/2020-09-28-Get-up-and-running-with-AutoHotkey/AhkHelloWorldMessageBox.png)
 
