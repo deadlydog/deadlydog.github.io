@@ -135,6 +135,8 @@ You'll also likely want to have your script startup automatically with Windows s
 This is as easy as dropping the .ahk file (or a shortcut to it) in your `shell:Startup` directory.
 Windows will automatically run all files in this directory every time you log in.
 
+For more detailed instructions and information, [see this post](/Get-up-and-running-with-Auto-Hotkey/)
+
 ## Conclusion
 
 As a software developer, I'm constantly in and out of the terminal for running Git and PowerShell commands.
