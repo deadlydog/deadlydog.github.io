@@ -15,6 +15,8 @@ tags:
   - AHK
 ---
 
+## So many Zoom windows to close
+
 We've been using Zoom for a while at my office, and I've noticed that anytime I join a meeting I need to go and close windows/tabs afterward.
 
 Anytime you join a Zoom meeting via a link, whether via an Outlook meeting or URL sent in a DM, the flow is:
@@ -25,6 +27,9 @@ Anytime you join a Zoom meeting via a link, whether via an Outlook meeting or UR
 1. Which then opens the actual Zoom meeting window.
 
 Steps 2 and 3 are really unnecessary, and I find myself always having to go and close them after I've joined the meeting.
+When you have multiple Zoom meetings every day, this routine quickly gets old.
+
+## The solution
 
 To help eliminate this tedious constant closing of windows and browser tabs, I've created the following AutoHotkey script:
 
@@ -60,7 +65,9 @@ SetTimer, CloseZoomWindowsAfterJoiningAMeeting, 250
 
 If you're not familiar with AutoHotkey or how to use it, check out [this post](/Get-up-and-running-with-AutoHotkey) to get familiar with it and how you can automate away many daily annoyances like this one.
 
-If programming code scares you, or you're just feeling lazy, go ahead and [download the executable](/assets/Posts/2020-09-29-Close-those-superfluous-Zoom-windows-automatically/CloseZoomWindowsAfterJoiningMeeting.exe) that will run [this script](/assets/Posts/2020-09-29-Close-those-superfluous-Zoom-windows-automatically/CloseZoomWindowsAfterJoiningMeeting.ahk) for you.
+## I don't know what that gobbledygook code above means
+
+If programming code scares you, or you're just feeling lazy, go ahead and [download the executable](/assets/Posts/2020-09-29-Close-those-superfluous-Zoom-windows-automatically/CloseZoomWindowsAfterJoiningMeeting.exe) that will run [the above script](/assets/Posts/2020-09-29-Close-those-superfluous-Zoom-windows-automatically/CloseZoomWindowsAfterJoiningMeeting.ahk) for you.
 You'll likely still want to check out [how to automatically run it automatically when you log into Windows](/Get-up-and-running-with-AutoHotkey/#run-scripts-automatically-at-startup) though.
 
 Happy Zooming!
