@@ -38,7 +38,7 @@ Anytime you join a Zoom meeting via a link, whether via an Outlook meeting or UR
     ![Zoom meeting](/assets/Posts/2020-09-29-Close-those-superfluous-Zoom-windows-automatically/Step4-ZoomMeetingWindow.png)
 
 Steps 2 and 3 are really unnecessary, and I find myself always having to go and close them after I've joined the meeting.
-When you have multiple Zoom meetings every day, this routine quickly gets old.
+When you have multiple Zoom meetings every day, this routine of closing windows quickly gets old.
 
 ## The solution
 
