@@ -22,16 +22,27 @@ We've been using Zoom for a while at my office, and I've noticed that anytime I 
 Anytime you join a Zoom meeting via a link, whether via an Outlook meeting or URL sent in a DM, the flow is:
 
 1. Click the meeting URL link.
+
+    ![Outlook Zoom meeting invitation](/assets/Posts/2020-09-29-Close-those-superfluous-Zoom-windows-automatically/Step1-OutlookZoomMeeting.png)
+
 1. It opens a tab in your browser.
+
+    ![Browser Zoom meeting](/assets/Posts/2020-09-29-Close-those-superfluous-Zoom-windows-automatically/Step2-ZoomMeetingBrowserUrl.png)
+
 1. This then launches the Zoom app.
+
+    ![Zoom app](/assets/Posts/2020-09-29-Close-those-superfluous-Zoom-windows-automatically/Step3-ZoomAppWindow.png)
+
 1. Which then opens the actual Zoom meeting window.
+
+    ![Zoom meeting](/assets/Posts/2020-09-29-Close-those-superfluous-Zoom-windows-automatically/Step4-ZoomMeetingWindow.png)
 
 Steps 2 and 3 are really unnecessary, and I find myself always having to go and close them after I've joined the meeting.
 When you have multiple Zoom meetings every day, this routine quickly gets old.
 
 ## The solution
 
-To help eliminate this tedious constant closing of windows and browser tabs, I've created the following AutoHotkey script:
+To help eliminate this tedious constant closing of windows and browser tabs (steps 2 and 3 above), I've created the following AutoHotkey script:
 
 ```csharp
 #SingleInstance, Force
@@ -62,6 +73,9 @@ CloseZoomWindowsAfterJoiningAMeeting()
 }
 SetTimer, CloseZoomWindowsAfterJoiningAMeeting, 250
 ```
+
+__NOTE__: This script assumes you've checked the box in your browser that says something to the effect of "Always open links of this type automatically".
+If you haven't, then you'll need to manually click the "Open" button in your browser every time; only this script will close the tab before you have a chance to click the Open button.
 
 If you're not familiar with AutoHotkey or how to use it, check out [this post](/Get-up-and-running-with-AutoHotkey) to get familiar with it and how you can automate away many daily annoyances like this one.
 
