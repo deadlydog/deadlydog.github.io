@@ -26,7 +26,7 @@ Anytime you join a Zoom meeting via a link, whether via an Outlook meeting or UR
 
 Steps 2 and 3 are really unnecessary, and I find myself always having to go and close them after I've joined the meeting.
 
-To help eliminate this tedious constant closing of windows and browser tabs, I've created the following AutoHotkey script:
+To help eliminate this tedious constant closing of windows and browser tabs, I've created the following AutoHotkey script ([download](/assets/Posts/2020-09-29-Close-those-superfluous-Zoom-windows-automatically/CloseZoomWindowsAfterJoiningMeeting.ahk)):
 
 ```csharp
 CloseZoomWindowsAfterJoiningAMeeting()
@@ -57,7 +57,7 @@ SetTimer, CloseZoomWindowsAfterJoiningAMeeting, 250
 
 If you're not familiar with AutoHotkey or how to use it, check out [this post](/Get-up-and-running-with-AutoHotkey) to get familiar with it and how you can automate away many daily annoyances like this one.
 
-If programming code scares you, or you're just feeling lazy, go ahead and download the executable that will run this script for you.
+If programming code scares you, or you're just feeling lazy, go ahead and [download the executable](/assets/Posts/2020-09-29-Close-those-superfluous-Zoom-windows-automatically/CloseZoomWindowsAfterJoiningMeeting.exe) that will run this script for you.
 You'll likely still want to check out [how to automatically run it automatically when you log into Windows](/Get-up-and-running-with-AutoHotkey/#run-scripts-automatically-at-startup) though.
 
 Happy Zooming!
