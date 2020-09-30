@@ -1,3 +1,6 @@
+#SingleInstance, Force
+#Persistent
+
 CloseZoomWindowsAfterJoiningAMeeting()
 {
 	browserWindowTitleToMatch := "Launch Meeting - Zoom"
