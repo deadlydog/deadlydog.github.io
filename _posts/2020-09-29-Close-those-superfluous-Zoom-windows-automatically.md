@@ -81,7 +81,10 @@ If you're not familiar with AutoHotkey or how to use it, check out [this post](/
 
 ## I don't know what that gobbledygook code above means
 
-If programming code scares you, or you're just feeling lazy, go ahead and [download the executable](/assets/Posts/2020-09-29-Close-those-superfluous-Zoom-windows-automatically/CloseZoomWindowsAfterJoiningMeeting.exe) that will run [the above script](/assets/Posts/2020-09-29-Close-those-superfluous-Zoom-windows-automatically/CloseZoomWindowsAfterJoiningMeeting.ahk) for you.
-You'll likely still want to check out [how to automatically run it automatically when you log into Windows](/Get-up-and-running-with-AutoHotkey/#run-scripts-automatically-at-startup) though.
+If programming code scares you, or you're just feeling lazy, go ahead and [download the executable](/assets/Posts/2020-09-29-Close-those-superfluous-Zoom-windows-automatically/CloseZoomWindowsAfterJoiningMeeting.exe).
+It simply runs [the above script](/assets/Posts/2020-09-29-Close-those-superfluous-Zoom-windows-automatically/CloseZoomWindowsAfterJoiningMeeting.ahk) for you without requiring you to install AutoHotkey or write any code.
+Just double-click the executable to run it.
+
+You'll likely still want to check out [how to automatically run it automatically when you log into Windows](/Get-up-and-running-with-AutoHotkey/#run-scripts-automatically-at-startup) though so that you don't need to manually run it every time you restart your computer.
 
 Happy Zooming!
