@@ -15,7 +15,7 @@ tags:
   - AHK
 ---
 
-## So many Zoom windows to close
+## So many Zoom windows to close every day
 
 We've been using Zoom for a while at my office, and I've noticed that anytime I join a meeting I need to go and close windows/tabs afterward.
 
@@ -37,10 +37,10 @@ Anytime you join a Zoom meeting via a link, whether via an Outlook meeting or UR
 
     ![Zoom meeting](/assets/Posts/2020-09-29-Close-those-superfluous-Zoom-windows-automatically/Step4-ZoomMeetingWindow.png)
 
-Steps 2 and 3 are really unnecessary, and I find myself always having to go and close them after I've joined the meeting.
+Steps 2 and 3 are really unnecessary, and I find myself always having to go and close them after I've joined a meeting.
 When you have multiple Zoom meetings every day, this routine of closing windows quickly gets old.
 
-## The solution
+## The code to close the Zoom windows automatically
 
 To help eliminate this tedious constant closing of windows and browser tabs (steps 2 and 3 above), I've created the following AutoHotkey script:
 
