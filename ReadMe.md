@@ -16,7 +16,7 @@ I currently use the [Minimal Mistakes theme][MinimalMistakesThemeGitHubRepoUrl].
 1. Install the Jekyll gem using `gem install jekyll bundler`
    - Use `jekyll -v` to see which version of jekyll is installed.
    - You may need to restart your computer before the VS Code terminal recognizes Ruby.
-1. Run `bundle install` to install all of the required gems.
+1. Run `bundle install` in the repository directory to install all of the required gems.
 
 ### Run Jekyll locally
 
