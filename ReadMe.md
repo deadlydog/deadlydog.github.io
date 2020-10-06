@@ -11,10 +11,12 @@ I currently use the [Minimal Mistakes theme][MinimalMistakesThemeGitHubRepoUrl].
 
 ### Prerequisites
 
-1. Install [Ruby][RubyInstallerDownloadPageUrl], as well as have it install MSYS2 after installation.
+1. Install [Ruby][RubyInstallerDownloadPageUrl] v2.5 (some gems don't support v2.6 yet), as well as have it install MSYS2 after installation.
    - Use `ruby -v` to see which version is installed.
 1. Install the Jekyll gem using `gem install jekyll bundler`
    - Use `jekyll -v` to see which version of jekyll is installed.
+   - You may need to restart your computer before the VS Code terminal recognizes Ruby.
+1. Run `bundle install` to install all of the required gems.
 
 ### Run Jekyll locally
 
