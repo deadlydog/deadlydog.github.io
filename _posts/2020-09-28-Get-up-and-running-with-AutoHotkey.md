@@ -159,7 +159,7 @@ To give a few examples of the types of things you can do with AutoHotkey:
 
 You can do way more than quick one-line scripts as well.
 For example, if you use Zoom [check out this post](/Close-those-superfluous-Zoom-windows-automatically) that gives an AHK script that will close excess Zoom windows.
-Hopefully these examples will peek your curiosity though 😊
+Hopefully these examples will peek your curiosity 😊
 
 ## Conclusion
 
