@@ -127,6 +127,40 @@ Simply right-click on your .ahk script file and choose `Compile Script`.
 This will create a .exe executable from your script file.
 Double-clicking the .exe file will have the same result as double-clicking the .ahk file to run it, except the .exe does not require that AutoHotkey be installed on the computer.
 
+## A few quick AHK script examples
+
+To give a few examples of the types of things you can do with AutoHotkey:
+
+- Hotkey to expand your full address when you type `myaddress`:
+
+  ```csharp
+  ::myaddress::123 My Street, My City, My Province/State, My Postal/Zip Code, My Country
+  ```
+
+- Hotkey to open a new email message when you press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>e</kbd>:
+
+  ```csharp
+  ^+e::Run, mailto:
+  ```
+
+- Hotkey to open a frequent directory when you press <kbd>Win</kbd> + <kbd>o</kbd>:
+
+  ```csharp
+  #o::Run, C:\Some folder I open often
+  ```
+
+- Hotkey to open a frequent website when you press <kdb>Ctrl</kdb> + <kbd>Alt</kbd> + <kbd>w</kbd>:
+
+  ```csharp
+  ^!w::Run, http://Some.Website.com
+  ```
+
+[Lifehack has a few more useful script examples](https://www.lifehack.org/articles/featured/10-ways-to-use-autohotkey-to-rock-your-keyboard.html) if you'd like to check them out.
+
+You can do way more than quick one-line scripts as well.
+For example, if you use Zoom [check out this post](/Close-those-superfluous-Zoom-windows-automatically) that gives an AHK script that will close excess Zoom windows.
+Hopefully these examples will peek your curiosity though 😊
+
 ## Conclusion
 
 Now that you know how easy it is to run AHK code, check out [the official quick start tutorial](https://www.autohotkey.com/docs/Tutorial.htm) to learn the AHK language syntax and common operations and commands.
