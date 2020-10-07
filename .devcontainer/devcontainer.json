@@ -6,22 +6,28 @@
 		"dockerfile": "Dockerfile",
 		"args": {
 			"NODE_VERSION": "lts/*"
-		}	
+		}
 	},
 
 	// Set *default* container specific settings.json values on container create.
-	"settings": { 
+	"settings": {
 		"terminal.integrated.shell.linux": "/bin/bash"
 	},
 
 	// Add the IDs of extensions you want installed when the container is created.
-	"extensions": [],
+	"extensions": [
+		"yzhang.markdown-all-in-one",
+		"davidanson.vscode-markdownlint",
+		"ionutvmi.path-autocomplete",
+		"ms-vscode.powershell",
+		"redhat.vscode-yaml"
+	],
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	"forwardPorts": [4000]
+	"forwardPorts": [4000],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	// "postCreateCommand": "bundle install",
+	"postCreateCommand": "bundle install",
 
 	// Uncomment to connect as a non-root user. See https://aka.ms/vscode-remote/containers/non-root.
 	// "remoteUser": "vscode"
