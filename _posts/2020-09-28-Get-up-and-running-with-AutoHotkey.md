@@ -137,7 +137,7 @@ To give a few examples of the types of things you can do with AutoHotkey:
   ::myaddress::123 My Street, My City, My Province/State, My Postal/Zip Code, My Country
   ```
 
-- Hotkey to open a new email message when you press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>e</kbd>:
+- Hotkey to open a new email message for you to send when you press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>e</kbd>:
 
   ```csharp
   ^+e::Run, mailto:
