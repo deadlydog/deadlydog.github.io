@@ -17,8 +17,8 @@ RUN su vscode -c "source /usr/local/share/nvm/nvm.sh && nvm install ${NODE_VERSI
 
 # [Optional] Uncomment this section to install additional OS packages.
 # Install PowerShell
-RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
-    && apt-get -y install --no-install-recommends powershell
+# RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
+#     && apt-get -y install --no-install-recommends powershell
 
 # [Optional] Uncomment this line to install additional gems.
 # RUN gem install <your-gem-names-here>
