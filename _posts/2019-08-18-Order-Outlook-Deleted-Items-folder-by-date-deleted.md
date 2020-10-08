@@ -14,7 +14,7 @@ If you've ever deleted an email by accident and had to hunt it down in your Outl
 
 Too many times I've accidentally deleted the wrong email from my inbox because a new email came in and pushed all the emails in the inbox list down right when I was about to click the trash can icon on an email. By changing the sorting, that email will always be at the top of the `Deleted Items` folder, making it easy to recover.
 
-> Pro tip: You can also hit `Ctrl`+`Z` to undo the deletion.
+> Pro tip: You can also hit <kbd>Ctrl</kbd> + <kbd>Z</kbd> to undo the deletion.
 
  Also, sometimes I have emails sit in my inbox or other folders for days, weeks, or months, and I purposely delete them. Then a few hours or days later I realize I need them back. It's much easier to recall the approximate date and time that I deleted the email than it is to remember what day I received the email on, making it easier to find in my `Deleted Items`. I know there's also the search functionality, but sometimes you can't recall text that was unique to the email to narrow the search results down enough.
 

@@ -18,37 +18,64 @@ $type-size-7 : 0.6875em; // ~11px
 $type-size-8 : 0.625em; // ~10px
 
 // Reduce the size of regular text in our posts a bit.
-.page__content {
+.page__content
+{
 	font-size: 0.8em;
 }
 
 // Reducing the Page Content font size also reduces the Table Of Contents size a bit too much, so make that bigger.
-.toc {
+.toc
+{
 	font-size: $type-size-4;
 }
 
 // Reduce the size of the comments text in our posts a bit.
-.comment__content-wrapper {
+.comment__content-wrapper
+{
 	font-size: $type-size-6
 }
 
 // Create some new styles for our site description customization, which is referenced in masthead.html.
-.DansSiteDescription {
+.DansSiteDescription
+{
 	margin: 0;
 	padding: 0;
 	font-size: $type-size-6;
 }
 
 // Reduce the amount of whitespace above and below the 'Recent Posts' heading on the home page.
-#home-page-recent-posts {
+#home-page-recent-posts
+{
 	margin-top: -1em;
 	margin-bottom: -2em;
 }
 
 // Use more prominent colors for inline code text.
-code.highlighter-rouge {
+code.highlighter-rouge
+{
 	background-color: #dbe4e8;
 	color: #7502ff;
+}
+
+// Make <kbd> HTML elements look like nice keyboard keys.
+kbd
+{
+	-moz-border-radius:3px;
+	-moz-box-shadow:0 1px 0 rgba(0,0,0,0.2),0 0 0 2px #fff inset;
+	-webkit-border-radius:3px;
+	-webkit-box-shadow:0 1px 0 rgba(0,0,0,0.2),0 0 0 2px #fff inset;
+	background-color:#f7f7f7;
+	border:1px solid #ccc;
+	border-radius:3px;
+	box-shadow:0 1px 0 rgba(0,0,0,0.2),0 0 0 2px #fff inset;
+	color:#333;
+	display:inline-block;
+	font-family:Arial,Helvetica,sans-serif;
+	font-size:0.8em;
+	line-height:1.4;
+	margin:0 .1em;
+	padding:.1em .6em;
+	text-shadow:0 1px 0 #fff;
 }
 
 //========== Dan's Customizations END ==========

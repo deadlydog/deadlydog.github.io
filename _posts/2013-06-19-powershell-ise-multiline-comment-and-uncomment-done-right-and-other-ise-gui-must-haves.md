@@ -104,7 +104,7 @@ And now that you have your PowerShell ISE profile file open for editing, here’
 
 ```powershell
 # Define our constant variables.
-[string]$NEW_LINE_STRING = "`r`n"
+[string]$NEW_LINE_STRING = "<kbd>r</kbd>n"
 [string]$COMMENT_STRING = "#"
 
 function Select-EntireLinesInIseSelectedTextAndReturnFirstAndLastSelectedLineNumbers([bool]$DoNothingWhenNotCertainOfWhichLinesToSelect = $false)
@@ -679,7 +679,7 @@ function Import-ISEState
 }
 
 # Define our constant variables.
-[string]$NEW_LINE_STRING = "`r`n"
+[string]$NEW_LINE_STRING = "<kbd>r</kbd>n"
 [string]$COMMENT_STRING = "#"
 
 function Select-EntireLinesInIseSelectedTextAndReturnFirstAndLastSelectedLineNumbers([bool]$DoNothingWhenNotCertainOfWhichLinesToSelect = $false)

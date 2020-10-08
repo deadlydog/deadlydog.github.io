@@ -69,10 +69,10 @@ The default hotkeys are:
 
 - `+` - Increase playback speed by 0.5x.
 - `-` - Decrease playback speed by 0.5x.
-- `]` - Increase playback speed by 0.1x.
-- `[` - Decrease playback speed by 0.1x.
+- <kbd>]</kbd> - Increase playback speed by 0.1x.
+- <kbd>[</kbd> - Decrease playback speed by 0.1x.
 - `=` - Reset playback speed to 1.0.
-- `Spacebar` - Pause playback.
+- <kbd>Spacebar</kbd> - Pause playback.
 - `Right arrow` - Jump ahead 10 seconds.
 - `Left arrow` - Jump back 10 seconds.
 
