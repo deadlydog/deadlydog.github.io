@@ -34,7 +34,7 @@ To get up and running with AHK:
 You should see a new AutoHotkey icon appear in your system tray ![AHK system tray icon](/assets/Posts/2020-09-28-Get-up-and-running-with-AutoHotkey/AhkSystemTrayIcon.png).
 This is your running script.
 
-If you used the line of code provided above, when you hold the <kbd>Windows key</kbd> down and press <kbd>b</kbd> you should see a message box pop up that says "Hello World!".
+If you used the line of code provided above, when you press <kbd>Windows key</kbd> + <kbd>b</kbd> you should see a message box pop up that says "Hello World!".
 
 ![AHK Hello World message box](/assets/Posts/2020-09-28-Get-up-and-running-with-AutoHotkey/AhkHelloWorldMessageBox.png)
 
@@ -143,7 +143,7 @@ To give a few examples of the types of things you can do with AutoHotkey:
   ^+e::Run, mailto:
   ```
 
-- Hotkey to open a frequent directory when you press <kbd>Win</kbd> + <kbd>o</kbd>:
+- Hotkey to open a frequent directory when you press <kbd>Windows Key</kbd> + <kbd>o</kbd>:
 
   ```csharp
   #o::Run, C:\Some folder I open often
