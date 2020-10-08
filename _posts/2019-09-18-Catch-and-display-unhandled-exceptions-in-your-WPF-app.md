@@ -97,7 +97,7 @@ namespace WpfApplicationCatchUnhandledExceptionsExample
 As a best practice you should be logging these exceptions somewhere as well, such as to a file on the local machine or to a centralized logging storage mechanism, as shown in the Stack Overflow answer mentioned earlier.
 
 Explicitly displaying the message to the user as well, as shown here, can be very helpful, as it then does not require the user to pull the error message out of some file on their machine, or for you to hunt down the users specific exception in a sea of other user exceptions (depending on what centralized logging mechanism you are using).
-With this approach, the user can just do a `Ctrl`+`C` to copy the message box text, or take a screenshot of the error (even with their phone camera!), and email it to you.
+With this approach, the user can just do a <kbd>Ctrl</kbd> + <kbd>C</kbd> to copy the message box text, or take a screenshot of the error (even with their phone camera!), and email it to you.
 
 The message box may look a bit crude for professionally polished apps, but I think is fine for apps distributed internally in your organization.
 Of course you could use some other UI mechanism to display the error to the user, and may want to change the message box message wording.

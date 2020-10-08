@@ -30,15 +30,15 @@ As a software developer, I'm constantly in and out of the terminal, and being ab
 ## Method 1: Pin Windows Terminal to the taskbar
 
 The easiest way to get to the Windows Terminal using a keyboard shortcut is to pin it to the taskbar.
-Not only does it make it easy to click on with the mouse, but you can also use the `Windows Key`+`[number]` keyboard shortcut to launch it or put it in focus.
+Not only does it make it easy to click on with the mouse, but you can also use the <kbd>Windows Key</kbd> + <kbd>[number]</kbd> keyboard shortcut to launch it or put it in focus.
 
-For example, if on your taskbar from left to right you have: Edge, Chrome, Windows Terminal, then you could use `Windows Key`+`3` to launch the Windows Terminal, or put it in focus if it's already open.
-Similarly, `Windows Key`+`1` would launch Edge, and `Windows Key`+`2` would launch Chrome.
+For example, if on your taskbar from left to right you have: Edge, Chrome, Windows Terminal, then you could use <kbd>Windows Key</kbd> + <kbd>3</kbd> to launch the Windows Terminal, or put it in focus if it's already open.
+Similarly, <kbd>Windows Key</kbd> + <kbd>1</kbd> would launch Edge, and <kbd>Windows Key</kbd> + <kbd>2</kbd> would launch Chrome.
 
 This is a simple solution and it works, but the reason I'm not a fan of it is:
 
 1. If I reorder the windows on the taskbar then the keyboard shortcut changes.
-1. This method only works for the first 10 items on the taskbar. i.e. you can't do `Windows Key`+`11`.
+1. This method only works for the first 10 items on the taskbar. i.e. you can't do <kbd>Windows Key</kbd>+`11`.
 1. I find it awkward to use the Windows Key with any numbers greater than 4.
 
 So let's continue exploring other options.
@@ -113,12 +113,12 @@ SwitchToWindowsTerminal()
 
 The last line in the script defines the keyboard shortcut and has it call the function.
 
-Here I'm using `Ctrl`+`Shift`+`C` (^+c) for my keyboard shortcut, but you could use something else like `Windows Key`+`C` (#c) or `Ctrl`+`Alt`+`C` (^!c).
+Here I'm using <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>C</kbd> (^+c) for my keyboard shortcut, but you could use something else like <kbd>Windows Key</kbd> + <kbd>C</kbd> (#c) or <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>C</kbd> (^!c).
 Check out the [AutoHotkey key list](https://www.autohotkey.com/docs/KeyList.htm) for other non-obvious key symbols.
 
 You may have also noticed in the code that if the window is already in focus, we minimize it.
 This allows me to easily switch to and away from the Windows Terminal using the same shortcut keys.
-Using `Alt`+`Tab` would also work to switch back to your previous application.
+Using <kbd>Alt</kbd>+`Tab` would also work to switch back to your previous application.
 
 ### Getting the AutoHotkey script running
 
@@ -141,7 +141,7 @@ For more detailed instructions and information, [see this post](/Get-up-and-runn
 
 As a software developer, I'm constantly in and out of the terminal for running Git and PowerShell commands.
 If you're ok simply pinning Windows Terminal to the taskbar in a dedicated position and don't mind the preset keyboard shortcut, then roll with that.
-For myself, using AutoHotkey I can now use `Ctrl`+`Shift`+`C` to switch to and away from the Windows Terminal at anytime, no matter what other application currently has focus, and not having to reach for the mouse.
+For myself, using AutoHotkey I can now use <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>C</kbd> to switch to and away from the Windows Terminal at anytime, no matter what other application currently has focus, and not having to reach for the mouse.
 
 > Shameless Plug: You can also checkout my open source project [AHK Command Picker](https://github.com/deadlydog/AHKCommandPicker) that allows you to use a GUI picker instead of having to remember a ton of keyboard shortcuts.
 
