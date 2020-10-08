@@ -22,7 +22,7 @@ A list of some shortcuts and new features to VS 2010 and C# 4.0:
 - Window => New Window to open up same file in two separate tabs, or can drag the splitter at the top-right corner of the edit indow.
 - Edit => Outlining => Hide Selection to collapse any region of code
 - <kbd>Alt</kbd> + Mouse Left Drag for box selection instead of line selection, then just start typing; you can also use Alt+Shift+Arrow eys to do box selection with the keyboard.
-- <kbd>Alt</kbd> + Arrow Keys to move current line up/down. Can also select multiple lines and use <kbd>Alt</kbd> + <kbd>Up</kbd>/<kbd>Down</kbd> to move the whole selection p/down.
+- <kbd>Alt</kbd> + Arrow Keys to move current line up/down. Can also select multiple lines and use <kbd>Alt</kbd> + <kbd>Up</kbd> / <kbd>Down</kbd> to move the whole selection p/down.
 - In NavigateTo search window (<kbd>Ctrl</kbd> + <kbd>Comma</kbd>) use capitals to search for camel casing (i.e. CE to find displayCustomerEmails) nd a space to do an "and" search (i.e. "email customer" would find displayCustomerEmails).
 - <kbd>Ctrl</kbd> + <kbd>I</kbd> to do an incremental search of a document, then <kbd>F3</kbd> and <kbd>Shift</kbd> + <kbd>F3</kbd> to move to next/previous matches.
 - Use snippets to automatically create code and save time.
@@ -39,7 +39,7 @@ A list of some shortcuts and new features to VS 2010 and C# 4.0:
 - New `Dynamic` keyword type => just like Object except not checked at compile time.
 - <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>V</kbd> to cycle through clipboard ring
 - <kbd>Alt</kbd> + <kbd>Ctrl</kbd> + <kbd>Down</kbd> to access tab menu
-- <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Up</kbd>/<kbd>Down</kbd> to move between instances of the highlighted variable
+- <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Up</kbd> / <kbd>Down</kbd> to move between instances of the highlighted variable
 - <kbd>Ctrl</kbd> + <kbd>]</kbd> to move back and forth between a functions opening and closing braces (i.e. "{" and "}"). This appears to also work in XAML!
-- <kbd>Alt</kbd> + <kbd>Arrow Keys</kbd> to move current line up/down. Can also select multiple lines and use <kbd>Alt</kbd> + <kbd>Up</kbd>/<kbd>Down</kbd> to move the whole selection up/down.
+- <kbd>Alt</kbd> + <kbd>Arrow Keys</kbd> to move current line up/down. Can also select multiple lines and use <kbd>Alt</kbd> + <kbd>Up</kbd> / <kbd>Down</kbd> to move the whole selection up/down.
 - Rather than selecting a whole line first, just use <kbd>Ctrl</kbd> + <kbd>C</kbd> or <kbd>Ctrl</kbd> + <kbd>X</kbd> to Copy/Cut the entire line. You can also use <kbd>Shift</kbd> + <kbd>Delete</kbd> to delete an entire line without selecting it.
