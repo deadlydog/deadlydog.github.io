@@ -2,7 +2,7 @@
 title: "Get up and running with AutoHotkey"
 permalink: /Get-up-and-running-with-AutoHotkey/
 #date: 2099-01-15T00:00:00-06:00
-#last_modified_at: 2099-01-22T00:00:00-06:00
+last_modified_at: 2020-10-15
 comments_locked: false
 categories:
   - AutoHotkey
@@ -96,25 +96,6 @@ To digitally sign the AutoHotkey executable:
 
 That's it; AutoHotkey should now be able to interact with all windows/applications, even ones running as admin.
 I've blogged about this in the past, so if you're interested you can [see this post](/get-autohotkey-to-interact-with-admin-windows-without-running-ahk-script-as-admin) for more background information.
-
-### Run AHK as admin (not recommended)
-
-Even after digitally signing AutoHotkey.exe I've noticed there's the very odd app that blocks AHK key presses so scripts don't work when it's in focus.
-One example is the `Active Directory Users and Computers` app.
-If you run into this problem, you can overcome it by running your AHK script as admin.
-
-If you've created a shortcut to your AHK script and placed it in the `shell:Startup` directory as mentioned above, the easiest way to run the script as admin is:
-
-1. Right-click the AHK script shortcut file and choose `Properties`.
-1. In the `Shortcut` tab, click the `Advanced` button.
-1. Check off `Run as administrator`.
-
-![File shortcut properties Run As Admin](/assets/Posts/2020-09-28-Get-up-and-running-with-AutoHotkey/FileShortcutPropertiesRunAsAdmin.png)
-
-Now when the AHK script is launched via the shortcut file it will run as admin.
-
-__NOTE:__ I generally don't recommend this as any applications you launch from the AHK script will also be launched with admin privileges, which can cause issues if a non-admin app tries to communicate with it.
-e.g. You can't open links from your email when your browser is running as admin and the email program is not.
 
 ## Transform your script into an executable
 
