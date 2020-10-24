@@ -2,7 +2,7 @@
 title: "Close those superfluous Zoom windows automatically"
 permalink: /Close-those-superfluous-Zoom-windows-automatically/
 #date: 2099-01-15T00:00:00-06:00
-#last_modified_at: 2099-01-22T00:00:00-06:00
+last_modified_at: 2020-10-24
 comments_locked: false
 categories:
   - Zoom
@@ -62,7 +62,7 @@ CloseZoomWindowsAfterJoiningAMeeting()
     SendInput, ^{F4}
 
     ; Wait until the URL opened the Zoom app to join the meeting.
-    WinWait, ahk_class ZPPTMainFrmWndClassEx,,5000
+    WinWait, ahk_class ZPPTMainFrmWndClassEx,,5
 
     ; Close the Zoom app.
     IfWinExist, ahk_class ZPPTMainFrmWndClassEx
@@ -71,8 +71,10 @@ CloseZoomWindowsAfterJoiningAMeeting()
     }
   }
 }
-SetTimer, CloseZoomWindowsAfterJoiningAMeeting, 250
+SetTimer, CloseZoomWindowsAfterJoiningAMeeting, 500
 ```
+
+> Update: The code has been moved into [this GitHub repository](https://github.com/deadlydog/CloseZoomWindowsAfterJoiningMeeting), so check there for the latest code.
 
 __NOTE__: This script assumes you've checked the box in your browser that says something to the effect of "Always open links of this type automatically".
 If you haven't, then you'll need to manually click the "Open" button in your browser every time; only this script will close the tab before you have a chance to click the Open button.
@@ -81,10 +83,10 @@ If you're not familiar with AutoHotkey or how to use it, check out [this post](/
 
 ## I don't know what that gobbledygook code above means
 
-If programming code scares you, or you're just feeling lazy, go ahead and [download the executable](/assets/Posts/2020-09-29-Close-those-superfluous-Zoom-windows-automatically/CloseZoomWindowsAfterJoiningMeeting.exe).
-It simply runs [the above script](/assets/Posts/2020-09-29-Close-those-superfluous-Zoom-windows-automatically/CloseZoomWindowsAfterJoiningMeeting.ahk) for you without requiring you to install AutoHotkey or write any code.
+If programming code scares you, or you're just feeling lazy, go ahead and [download the executable](https://github.com/deadlydog/CloseZoomWindowsAfterJoiningMeeting/releases).
+It simply runs [the above script](https://github.com/deadlydog/CloseZoomWindowsAfterJoiningMeeting/blob/master/src/CloseZoomWindowsAfterJoiningMeeting.ahk) for you without requiring you to install AutoHotkey or write any code.
 Just double-click the executable to run it.
 
-You'll likely still want to check out [how to automatically run it automatically when you log into Windows](/Get-up-and-running-with-AutoHotkey/#run-scripts-automatically-at-startup) though so that you don't need to manually run it every time you restart your computer.
+You'll likely also want to check out [how to run it automatically when you log into Windows](/Get-up-and-running-with-AutoHotkey/#run-scripts-automatically-at-startup) so that you don't need to manually run it every time you restart your computer.
 
 Happy Zooming!
