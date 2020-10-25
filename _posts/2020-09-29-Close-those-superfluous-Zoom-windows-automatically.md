@@ -74,7 +74,7 @@ CloseZoomWindowsAfterJoiningAMeeting()
 SetTimer, CloseZoomWindowsAfterJoiningAMeeting, 500
 ```
 
-> Update: The code has been moved into [this GitHub repository](https://github.com/deadlydog/CloseZoomWindowsAfterJoiningMeeting), so check there for the latest code.
+> Update: The code has been moved into [this GitHub repository](https://github.com/deadlydog/CloseZoomWindowsAfterJoiningMeeting), so check there for the latest version.
 
 __NOTE__: This script assumes you've checked the box in your browser that says something to the effect of "Always open links of this type automatically".
 If you haven't, then you'll need to manually click the "Open" button in your browser every time; only this script will close the tab before you have a chance to click the Open button.
