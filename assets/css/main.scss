@@ -78,6 +78,39 @@ kbd
 	text-shadow:0 1px 0 #fff;
 }
 
+// Have a fixed donate section on all of the pages.
+#Donate
+{
+	position: fixed;
+	width: 100%;
+	max-width: 1300px;	// Ensure the Donate section doesn't drift too far left on large screens.
+	bottom: 0;
+	z-index: 9000;	// Always on top.
+}
+
+// Default size for the donate image on large screens.
+#DonateImage
+{
+	width: 150px;
+}
+
+// Shrink donate image a bit on medium size screens.
+@media only screen and (max-width: 1024px) {
+	#DonateImage
+	{
+		width: 100px;
+	}
+}
+
+// Shrink donate image a lot on smaller screens.
+@media only screen and (max-width: 500px)
+{
+	#DonateImage
+	{
+		width: 80px;
+	}
+}
+
 //========== Dan's Customizations END ==========
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
