@@ -97,7 +97,7 @@ kbd
 }
 
 // Default size for the donate image on large screens.
-.donate-image
+.donate-button-image
 {
 	width: 150px;
 }
@@ -105,18 +105,23 @@ kbd
 // Shrink donate image a bit on medium size screens.
 @media only screen and (max-width: 1024px)
 {
-	.donate-image
+	.donate-button-image
 	{
 		width: 100px;
 	}
 }
 
-// Shrink donate image a lot on smaller screens.
+// Shrink donate images a lot on smaller screens.
 @media only screen and (max-width: 500px)
 {
-	.donate-image
+	.donate-button-image
 	{
 		width: 80px;
+	}
+
+	.donate-image
+	{
+		width: 120px;
 	}
 }
 
