@@ -120,44 +120,26 @@ kbd
 	display: none;	// Hidden by default.
 	position: fixed;
 	z-index: 100;	// Always on top.
-	padding-top: 50px;
-	padding-bottom: 50px;
 
 	// Center the modal-container div.
 	left: 50%;
 	top: 50%;
 	transform: translate(-50%, -50%);
 
+	width: 80%;
 	max-width: 600px;
+	padding: 10px;
 	overflow: auto;	// Enable scroll if needed.
 	background-color: rgb(0, 0, 0);	// Fallback color.
 	background-color: rgba(0, 0, 0, 0.9);
 	transition: 0.3s;
 }
 
-// Modal content.
-.modal-content
-{
-	margin: auto;
-	display: block;
-	width: 80%;
-	text-align: center;
-	color: #7502ff;
-}
-
-// Use full width on smaller screens.
-@media only screen and (max-width: 700px) {
-	.modal-content {
-		width: 100%;
-	}
-}
-
 // The modal's close button.
 .modal-close-button
 {
-	position: absolute;
-	top: 15px;
-	right: 35px;
+	float: right;
+	margin-right: 20px;
 	color: #f1f1f1;
 	font-size: 40px;
 	font-weight: bold;
@@ -170,6 +152,18 @@ kbd
 	color: #bbb;
 	text-decoration: none;
 	cursor: pointer;
+}
+
+// Modal content.
+.modal-content
+{
+	margin: auto;
+	display: block;
+	clear: both;	// Ensure the content appears below the floated close button.
+	width: 80%;
+	text-align: center;
+	padding-bottom: 30px;
+	color: #7502ff;
 }
 
 //========== Dan's Customizations END ==========
