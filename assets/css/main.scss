@@ -78,7 +78,7 @@ kbd
 	text-shadow:0 1px 0 #fff;
 }
 
-// Have a fixed donate section on all of the pages (always on-top on bottom-left.
+// Have a fixed donate section on all of the pages (always on-top on bottom-left).
 #Donate
 {
 	position: fixed;
@@ -90,7 +90,7 @@ kbd
 }
 
 // Default size for the donate image on large screens.
-#DonateImageButton
+.donate-image
 {
 	cursor: pointer;
 	width: 150px;
@@ -99,7 +99,7 @@ kbd
 // Shrink donate image a bit on medium size screens.
 @media only screen and (max-width: 1024px)
 {
-	#DonateImageButton
+	.donate-image
 	{
 		width: 100px;
 	}
@@ -108,7 +108,7 @@ kbd
 // Shrink donate image a lot on smaller screens.
 @media only screen and (max-width: 500px)
 {
-	#DonateImageButton
+	.donate-image
 	{
 		width: 80px;
 	}

@@ -1,5 +1,5 @@
 var donateModal = document.getElementById("DonateModal");
-var donateModalOpenButton = document.getElementById("DonateImageButton");
+var donateModalOpenButton = document.getElementById("DonateModalOpenButton");
 var donateModalCloseButton = document.getElementById("DonateModalCloseButton");
 
 // When the user clicks the open button, open the modal.
