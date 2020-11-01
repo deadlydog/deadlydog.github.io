@@ -70,6 +70,8 @@ Here's a list of places I've changed code:
   - Adjusted font sizes a bit.
   - Added class used for the site description in the masthead.html.
   - Adjusted colors used for inline code text.
+  - Added styling for <kbd> elements.
+  - Added styles for custom Donate sections.
 
 Here's a list of files I've added:
 
