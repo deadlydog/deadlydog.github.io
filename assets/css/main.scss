@@ -85,14 +85,20 @@ kbd
 	width: 100%;
 	max-width: 1300px;	// Ensure the Donate section doesn't drift too far left on large screens.
 	bottom: 0;
-	z-index: 10;	// Always on-top, except for modals.
 	transition: 0.3s;
+	pointer-events: none;	// Allow clicking through the div to blog content underneath.
+}
+
+#DonateModalOpenButton
+{
+	z-index: 10;	// Always on-top, except for modals.
+	cursor: pointer;
+	pointer-events: auto;	// Restore allowing clicking this element in the Donate div.
 }
 
 // Default size for the donate image on large screens.
 .donate-image
 {
-	cursor: pointer;
 	width: 150px;
 }
 
