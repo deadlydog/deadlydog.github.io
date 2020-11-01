@@ -5,8 +5,15 @@ var donateModalCloseButton = document.getElementById("DonateModalCloseButton");
 // When the user clicks the open button, open the modal.
 donateModalOpenButton.onclick = function(event)
 {
-	OpenDonateModal();
-	event.stopPropagation();	// Prevent the window event handler from closing the modal instantly.
+	if (DonateModalIsOpen())
+	{
+		CloseDonateModal();
+	}
+	else
+	{
+		OpenDonateModal();
+		event.stopPropagation();	// Prevent the window event handler from closing the modal instantly.
+	}
 }
 
 // When the user clicks the close button, close the modal.
