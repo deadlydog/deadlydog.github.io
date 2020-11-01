@@ -62,7 +62,7 @@ This doesn't include the `_config.yml` though, as we're expected to set custom s
 Here's a list of places I've changed code:
 
 - `_data/navigation.yml`: Added Home navigation menu item and commented out Tags.
-- `_includes/footer.html`: Added advertisements to the bottom of the footer.
+- `_includes/footer.html`: Added advertisements and Donate sections to the bottom of the footer.
 - `_includes/masthead.html`: Added site description below site title.
 - `_layouts/home.html`: Added id to 'Recent Posts' heading so we can adjust whitespace around it.
 - `_config.yml` file.
@@ -70,6 +70,8 @@ Here's a list of places I've changed code:
   - Adjusted font sizes a bit.
   - Added class used for the site description in the masthead.html.
   - Adjusted colors used for inline code text.
+  - Added styling for <kbd> elements.
+  - Added styles for custom Donate sections.
 
 Here's a list of files I've added:
 
