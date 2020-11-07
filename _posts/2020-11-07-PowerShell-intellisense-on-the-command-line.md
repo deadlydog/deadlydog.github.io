@@ -42,7 +42,7 @@ Set-PSReadLineKeyHandler -Chord Shift+Spacebar -Function MenuComplete
 Now you should be able to activate the menu by using <kbd>Shift</kbd> + <kbd>Spacebar</kbd>.
 Of course you can choose a different keyboard combination if you like, including overriding the default <kbd>Tab</kbd> behaviour with this, and this trick also works on Windows if you don't like the default <kbd>Ctrl</kbd> + <kbd>Space</kbd> trigger.
 
-A shout-out to Steve Lee of the PowerShell team for [showing me the Menu Complete functionality in this tweet](https://twitter.com/Steve_MSFT/status/1324192341310124033).
+A shout-out to Steve Lee of the PowerShell team for showing me the Menu Complete functionality [in this tweet](https://twitter.com/Steve_MSFT/status/1324192341310124033).
 
 I hope you've found this information helpful.
 
