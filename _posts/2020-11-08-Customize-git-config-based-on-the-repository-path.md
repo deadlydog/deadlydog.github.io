@@ -58,6 +58,9 @@ Then git would interpret the final configuration to be:
 
 In git if you define the same settings twice, whichever one was defined last would win and be used, so in this case git would mark the commits as being created by "Daniel Schroeder", not "deadlydog".
 
+You can typically find your global .gitconfig file in your user directory.
+e.g. "C:\Users\Dan.Schroeder\\.gitconfig"
+
 ## Using git conditional includes
 
 The last piece of the puzzle is to only include that external configuration file if it's actually a work project, not a personal project.
@@ -81,14 +84,24 @@ Here is what the final global `.gitconfig` code looks like:
 
 There's a few things to note here:
 
-1. I'm running Windows, but in my .gitconfig file I use forward slashes for the directory paths.
-Backslashes work, but need to be escaped, so you could use double backslashes if you prefer. e.g. C:\\\\Git\\\\WorkProjects\\\\.
-1. If you read the conditional include docs, it mentions that if a path ends with a trailing slash you don't need to include the `**` wildcards.
-I prefer to include them to make it obvious that a wildcard match is happening, but using `"gitdir:C:/Git/WorkProjects/"` works the same.
 1. You will want to add your includes to the bottom of your .gitconfig file.
 This will ensure the included file settings always take precedence over what is directly in the .gitconfig file, since the last setting value defined in the .gitconfig file is what gets used.
+1. If you read [the conditional include docs](https://git-scm.com/docs/git-config#_conditional_includes), it mentions that if a path ends with a trailing slash you don't need to include the `**` wildcards.
+I prefer to include them to make it obvious that a wildcard match is happening, but using `"gitdir:C:/Git/WorkProjects/"` works the same.
 1. You can call the include file whatever you like.
 Here I called it "Work.gitconfig", but ".gitconfig", or "GitSettings.inc" would work fine too.
+1. I'm running Windows, but in my .gitconfig file I use forward slashes for the directory paths.
+Backslashes work, but need to be escaped, so you could use double backslashes if you prefer. e.g. C:\\\\Git\\\\WorkProjects\\\\.
+
+### Use relative file paths
+
+In the example above, I've placed the "Work.gitconfig" include file in the "WorkProjects" directory so it sits beside the git repositories that it will apply to, and then referenced it by an absolute path in the .gitconfig file.
+If you prefer, you could place the "Work.gitconfig" file in the same directory as your global .gitconfig file, and then reference it using a relative path, like this:
+
+```ini
+[includeIf "gitdir:C:/Git/WorkProjects/**"]
+  path = Work.gitconfig
+```
 
 ## Conclusion
 
