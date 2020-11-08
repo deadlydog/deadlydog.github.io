@@ -96,8 +96,11 @@ By simply keeping your personal and work git repositories in different directori
 Here I've shown overriding the user's name and email, but you could use it for other things like preferring rebase instead of merge, which diff or merge tool to use, etc.
 While I didn't show it, you can also include different files based on what branch the git repo is on; perhaps you want some different rules applied when on the main branch vs. a feature branch.
 
-Besides not having to apply the change directly to individual git repository configs, the additional benefit to this approach is that if I change the settings in the include file, or add new settings to it, they take effect immediately.
-I don't need to iterate over all of the git repos and update their repository config again.
+The advantages of using conditional includes in your global .gitconifg file instead of updating every repo's config are:
+
+1. No manual work is necessary to apply the config change to the repos.
+1. The changes are automatically applied to new repos created in the directory.
+1. If I change settings in the include file, they take effect immediately in all repos.
 
 Lastly, after writing this up I came across [this similar blog post by Eric Williams](https://www.motowilliams.com/conditional-includes-for-git-config), so if you still have questions check that out, as well as [the official git docs](https://git-scm.com/docs/git-config#_includes).
 
