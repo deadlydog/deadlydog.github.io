@@ -1,0 +1,7 @@
+_id: 5bfa3920-281d-11eb-be1f-f5465cf999e6
+message: "> Is there any possibility to change the app.config parameters after the build process? In the Release-Pipeline I want to adjust some app.config parameters for Test, Integration and Production.\r\n\r\nHey Tobias, you could perhaps try modifying the config file in the Applicaiton Files directory. e.g. Application Files\\[App Name]_[Version]\\[App Name].exe.config.deploy. I suspect though that the ClickOnce installer will detect that a file was changed/tampered with after the package had been generated, and give a security error about it.\r\n\r\nThe other, probably preferable, option is to modify the app.config and build the project several times in your build pipeline; once for each environment that you want to deploy to and needs the config transform, and then publish the artifacts for each build. Then in your Release pipeline the Dev stage could copy the Dev build artifacts to the Dev file location to publish the Dev version of the app; the Test stage could copy the Test build artifacts to the Test file location to publish the Test version, etc."
+name: deadlydog
+email: c8addda594c8b338f1e3934e73505d0c
+url: 'https://blog.danskingdom.com'
+hidden: ''
+date: '2020-11-16T15:06:53.082Z'
