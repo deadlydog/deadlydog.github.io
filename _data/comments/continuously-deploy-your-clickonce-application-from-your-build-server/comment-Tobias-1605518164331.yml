@@ -1,0 +1,10 @@
+_id: 5a0193b0-27ec-11eb-84aa-6fa087cc665b
+message: >-
+  Is there any possibility to change the app.config parameters after the build
+  process? In the Release-Pipeline I want to adjust some app.config parameters
+  for Test, Integration and Production.
+name: Tobias
+email: 27eb64255b206a37dd92a8fa80d77534
+url: ''
+hidden: ''
+date: '2020-11-16T09:16:04.322Z'
