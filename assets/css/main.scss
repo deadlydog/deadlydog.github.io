@@ -78,6 +78,18 @@ kbd
 	text-shadow:0 1px 0 #fff;
 }
 
+// Style for our dynamically generated Copy Code Snippet buttons.
+.CopyCodeSnippetToClipboardButton
+{
+	float: right;
+	cursor: pointer;
+}
+
+.CopyCodeSnippetToClipboardButton:hover
+{
+	font-weight: bolder;
+}
+
 // Have a fixed donate section on all of the pages (always on-top on bottom-left).
 #Donate
 {
