@@ -59,10 +59,13 @@ Currently with the MinimalMistakes theme we are not installing it from a gem, bu
 Anywhere that I make custom code changes, I try to put `Dan's Customizations` in comments, so doing a search of the repo for `Dan` should find all places I've changed / overwritten code.
 This doesn't include the `_config.yml` though, as we're expected to set custom settings in there.
 
-Here's a list of places I've changed code:
+Here's a list of places I've changed code. This typically meant copying the file from the forked minimal-mistakes repo and overriding parts of it:
 
 - `_data/navigation.yml`: Added Home navigation menu item and commented out Tags.
-- `_includes/footer.html`: Added advertisements and Donate sections to the bottom of the footer.
+- `_includes/footer.html`: Added code to the bottom of the file that:
+  - Adds advertisements.
+  - Adds a Donate section.
+  - Dynamically adds a "Copy to clipboard" button to all code blocks.
 - `_includes/masthead.html`: Added site description below site title.
 - `_layouts/home.html`: Added id to 'Recent Posts' heading so we can adjust whitespace around it.
 - `_config.yml` file.
@@ -77,7 +80,7 @@ Here's a list of files I've added:
 
 - Everything in the `_posts` and `_drafts` directories.
 - The `_pages\About.md` page.
-- Everything in the `_assets\Posts` and `_assets\Site` directories.
+- Everything in the `_assets\Posts`, `_assets\Site`, and `_assets\js` directories.
 - Everything in the `_data\comments` directory.
 - The `favicon.ico` image.
 - The `.vscode` directory.
