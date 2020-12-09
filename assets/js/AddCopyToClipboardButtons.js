@@ -1,7 +1,8 @@
 // Once DOM has finished loading (by using 'defer' to reference this script), collect all code block elements
 // and dynamically attach buttons to them for copying the code snippet text to the clipboard.
 var allCodeElements = document.querySelectorAll("code");
-allCodeElements.forEach((codeElement, index, parent) => {
+allCodeElements.forEach((codeElement, index, parent) =>
+{
 
 	if (!IsFencedCodeBlock(codeElement))
 		return;
@@ -23,36 +24,35 @@ function AddCopyCodeSnippetButtonToCodeElement(codeElement)
 	// change back to storing only the codeElement.id and dynamically retrieving the contents in the CopyTextToClipboard function.
 	var textToCopyToClipboard = codeElement.innerText;
 
-	// Create the button tooltip.
-	var tooltipElement = document.createElement("span");
-	tooltipElement.classList = "TooltipText";
+	var buttonTooltipElement = document.createElement("span");
+	buttonTooltipElement.classList = "TooltipText";
 
-	// Create the button.
 	// Instead of using a real button we use an <i> element, as per Font Awesome's instructions: https://fontawesome.com/v3.2.1/examples/
 	var buttonElement = document.createElement("i");
-	buttonElement.addEventListener('click', function ()
-		{
-			CopyTextToClipboard(textToCopyToClipboard);
-			tooltipElement.textContent = "Text copied to clipboard"
-		});
-	buttonElement.addEventListener('mouseenter', function () { tooltipElement.textContent = "Copy code snippet to clipboard" });
 	buttonElement.classList = 'CopyCodeSnippetToClipboardButton Tooltip far fa-copy';	// https://fontawesome.com/icons/copy?style=regular
+	buttonElement.addEventListener('click',
+		function () { CopyTextToClipboardAndUpdateTooltip(textToCopyToClipboard, buttonTooltipElement); });
 
-	// Add the dynamic elements to the DOM.
-	buttonElement.appendChild(tooltipElement);
+	// The click event will update the tooltip text, so reset it when the mouse re-enters the button.
+	buttonElement.addEventListener('mouseenter',
+		function () { buttonTooltipElement.textContent = "Copy code snippet to clipboard" });
+
+	// Add the dynamically created elements to the DOM.
+	buttonElement.appendChild(buttonTooltipElement);
 	codeElement.prepend(buttonElement);
 }
 
-function CopyTextToClipboard(textToCopyToClipboard)
+function CopyTextToClipboardAndUpdateTooltip(textToCopyToClipboard, tooltipElement)
 {
 	navigator.clipboard.writeText(textToCopyToClipboard).then(
 		function ()
 		{
-			console.log('Copying to clipboard was successful!');
+			tooltipElement.textContent = "Text copied to clipboard"
 		},
 		function (error)
 		{
 			console.error('Could not copy text to clipboard.', error);
+			tooltipElement.textContent = "Problem occurred copying text to clipboard"
 		}
 	);
 }
