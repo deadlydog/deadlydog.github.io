@@ -90,6 +90,53 @@ kbd
 	font-weight: bolder;
 }
 
+.CopyCodeSnippetToClipboardButton.Tooltip
+{
+	position: relative;	// Ensure the TooltipText element's position is relative to the element that has the tooltip.
+}
+
+.CopyCodeSnippetToClipboardButton.Tooltip .TooltipText
+{
+	color: #555;
+	background-color: #fff;
+	text-align: center;
+	border-radius: 6px;
+	padding: 0.3em 0.5em;
+	z-index: 1;	// Ensure the TooltipText shows up on top of any other elements.
+
+	position: absolute;
+	right: 100%;	// Ensure text shows up to the left of the element with the Tooltip.
+	margin-right: 1em;	// Give a bit more padding so the Tooltip doesn't touch the element with the Tooltip.
+	top: 50%;	// Center the tooltip vertically with the Tooltip element.
+	transform: translateY(-50%);
+
+	visibility: hidden;
+	opacity: 0;
+	transition: opacity 0.3s;
+}
+
+// The little arrow on the tooltip that points toward it's element that makes it look like a speech bubble.
+.CopyCodeSnippetToClipboardButton.Tooltip .TooltipText::after
+{
+	content: ""; // Doesn't show up if the content is not set.
+	position: absolute;
+
+	left: 100%;	// Make sure the arrow shows up on the right side of the TooltipText.
+	top: 50%;	// Center the arrow vertically with the TooltipText.
+	transform: translateY(-50%);
+
+	height: 0.1em;
+	border-style: solid;
+	border-color: transparent transparent transparent #fff;
+}
+
+// Show the TooltipText when the hovering over the Tooltip element.
+.CopyCodeSnippetToClipboardButton.Tooltip:hover .TooltipText
+{
+	visibility: visible;
+	opacity: 1;
+}
+
 // Have a fixed donate section on all of the pages (always on-top on bottom-left).
 #Donate
 {
