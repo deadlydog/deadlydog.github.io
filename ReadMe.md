@@ -62,7 +62,10 @@ This doesn't include the `_config.yml` though, as we're expected to set custom s
 Here's a list of places I've changed code. This typically meant copying the file from the forked minimal-mistakes repo and overriding parts of it:
 
 - `_data/navigation.yml`: Added Home navigation menu item and commented out Tags.
-- `_includes/footer.html`: Added advertisements and Donate sections to the bottom of the footer.
+- `_includes/footer.html`: Added code to the bottom of the file that:
+  - Adds advertisements.
+  - Adds a Donate section.
+  - Dynamically adds a "Copy to clipboard" button to all code blocks.
 - `_includes/masthead.html`: Added site description below site title.
 - `_layouts/home.html`: Added id to 'Recent Posts' heading so we can adjust whitespace around it.
 - `_config.yml` file.
