@@ -3,7 +3,6 @@
 var allCodeElements = document.querySelectorAll("code");
 allCodeElements.forEach((codeElement, index, parent) =>
 {
-
 	if (!IsFencedCodeBlock(codeElement))
 		return;
 
