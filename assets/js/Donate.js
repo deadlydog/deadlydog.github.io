@@ -46,5 +46,5 @@ function CloseDonateModal()
 
 function DonateModalIsOpen()
 {
-	return donateModal.style.display == "block"
+	return donateModal.style.display == "block";
 }

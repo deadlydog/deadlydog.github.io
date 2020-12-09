@@ -1,4 +1,5 @@
-
+// Once DOM has finished loading (by using 'defer' to reference this script), collect all code block elements
+// and dynamically attach buttons to them for copying the code snippet text to the clipboard.
 var allCodeElements = document.querySelectorAll("code");
 allCodeElements.forEach((codeElement, index, parent) => {
 
@@ -6,7 +7,7 @@ allCodeElements.forEach((codeElement, index, parent) => {
 		return;
 
 	// Assign the <code> element a unique ID so we can reference it when clicked.
-	var codeElementId = `dynamicCodeElement${index}`
+	var codeElementId = `dynamicCodeElement${index}`;
 	codeElement.setAttribute("id", codeElementId);
 
 	AddCopyCodeSnippetButtonToCodeElement(codeElement, codeElementId)
@@ -28,7 +29,7 @@ function AddCopyCodeSnippetButtonToCodeElement(codeElement, codeElementId)
 
 	// Add the button tooltip.
 	var tooltipElement = document.createElement("span");
-	tooltipElement.textContent = "Copy code snippet to clipboard"
+	tooltipElement.textContent = "Copy code snippet to clipboard";
 	tooltipElement.classList = "TooltipText";
 	buttonElement.appendChild(tooltipElement);
 }
