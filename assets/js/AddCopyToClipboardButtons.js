@@ -23,17 +23,24 @@ function AddCopyCodeSnippetButtonToCodeElement(codeElement)
 	// change back to storing only the codeElement.id and dynamically retrieving the contents in the CopyTextToClipboard function.
 	var textToCopyToClipboard = codeElement.innerText;
 
+	// Create the button tooltip.
+	var tooltipElement = document.createElement("span");
+	tooltipElement.classList = "TooltipText";
+
+	// Create the button.
 	// Instead of using a real button we use an <i> element, as per Font Awesome's instructions: https://fontawesome.com/v3.2.1/examples/
 	var buttonElement = document.createElement("i");
-	buttonElement.addEventListener('click', function () { CopyTextToClipboard(textToCopyToClipboard) });
+	buttonElement.addEventListener('click', function ()
+		{
+			CopyTextToClipboard(textToCopyToClipboard);
+			tooltipElement.textContent = "Text copied to clipboard"
+		});
+	buttonElement.addEventListener('mouseenter', function () { tooltipElement.textContent = "Copy code snippet to clipboard" });
 	buttonElement.classList = 'CopyCodeSnippetToClipboardButton Tooltip far fa-copy';	// https://fontawesome.com/icons/copy?style=regular
-	codeElement.prepend(buttonElement);
 
-	// Add the button tooltip.
-	var tooltipElement = document.createElement("span");
-	tooltipElement.textContent = "Copy code snippet to clipboard";
-	tooltipElement.classList = "TooltipText";
+	// Add the dynamic elements to the DOM.
 	buttonElement.appendChild(tooltipElement);
+	codeElement.prepend(buttonElement);
 }
 
 function CopyTextToClipboard(textToCopyToClipboard)
