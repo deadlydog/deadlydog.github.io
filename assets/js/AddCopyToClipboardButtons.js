@@ -6,11 +6,7 @@ allCodeElements.forEach((codeElement, index, parent) => {
 	if (!IsFencedCodeBlock(codeElement))
 		return;
 
-	// Assign the <code> element a unique ID so we can reference it when clicked.
-	var codeElementId = `dynamicCodeElement${index}`;
-	codeElement.setAttribute("id", codeElementId);
-
-	AddCopyCodeSnippetButtonToCodeElement(codeElement, codeElementId)
+	AddCopyCodeSnippetButtonToCodeElement(codeElement);
 });
 
 function IsFencedCodeBlock(codeElement)
@@ -19,12 +15,18 @@ function IsFencedCodeBlock(codeElement)
 	return (codeElement.className ? false : true);
 }
 
-function AddCopyCodeSnippetButtonToCodeElement(codeElement, codeElementId)
+function AddCopyCodeSnippetButtonToCodeElement(codeElement)
 {
+	// Grab the Code Element's text before it's DOM is modified by anything, such as the Tooltip.
+	// This may not be the most performant way to do this, as it will keep all code snippet text in memory in the
+	// anonymous function defined below, but it's definitely the simplest. If we find this causes problems, we can
+	// change back to storing only the codeElement.id and dynamically retrieving the contents in the CopyTextToClipboard function.
+	var textToCopyToClipboard = codeElement.innerText;
+
 	// Instead of using a real button we use an <i> element, as per Font Awesome's instructions: https://fontawesome.com/v3.2.1/examples/
 	var buttonElement = document.createElement("i");
-	buttonElement.addEventListener('click', function () { CopyElementTextToClipboard(codeElementId) });
-	buttonElement.classList = 'CopyCodeSnippetToClipboardButton Tooltip far fa-copy'	// https://fontawesome.com/icons/copy?style=regular
+	buttonElement.addEventListener('click', function () { CopyTextToClipboard(textToCopyToClipboard) });
+	buttonElement.classList = 'CopyCodeSnippetToClipboardButton Tooltip far fa-copy';	// https://fontawesome.com/icons/copy?style=regular
 	codeElement.prepend(buttonElement);
 
 	// Add the button tooltip.
@@ -34,16 +36,8 @@ function AddCopyCodeSnippetButtonToCodeElement(codeElement, codeElementId)
 	buttonElement.appendChild(tooltipElement);
 }
 
-function CopyElementTextToClipboard(domElementId)
+function CopyTextToClipboard(textToCopyToClipboard)
 {
-	var element = document.getElementById(domElementId);
-	if (!element)
-	{
-		console.error(`Could not find the element to copy text to clipboard for. Specified element ID was '${domElementId}'.`);
-	}
-
-	var textToCopyToClipboard = element.innerText
-
 	navigator.clipboard.writeText(textToCopyToClipboard).then(
 		function ()
 		{
