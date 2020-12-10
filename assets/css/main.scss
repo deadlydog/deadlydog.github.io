@@ -93,6 +93,7 @@ kbd
 .CopyCodeSnippetToClipboardButton.Tooltip
 {
 	position: relative;	// Ensure the TooltipText element's position is relative to the element that has the tooltip.
+	font-size: 1.5em;	// Make copy icon a bit larger.
 }
 
 .CopyCodeSnippetToClipboardButton.Tooltip .TooltipText
@@ -101,12 +102,14 @@ kbd
 	background-color: #fff;
 	text-align: center;
 	border-radius: 6px;
+
+	font-size: 0.75em;	// Have to shrink text a bit, as we increased the font-size of the parent Tooltip.
 	padding: 0.3em 0.5em;
 	z-index: 1;	// Ensure the TooltipText shows up on top of any other elements.
 
 	position: absolute;
 	right: 100%;	// Ensure text shows up to the left of the element with the Tooltip.
-	margin-right: 1em;	// Give a bit more padding so the Tooltip doesn't touch the element with the Tooltip.
+	margin-right: 0.5em;	// Give a bit more padding so the Tooltip doesn't touch the element with the Tooltip.
 	top: 50%;	// Center the tooltip vertically with the Tooltip element.
 	transform: translateY(-50%);
 
