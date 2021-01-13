@@ -3,8 +3,9 @@ title: Create Unique Strong Passwords That Are Easy To Remember For All Your Acc
 date: 2014-10-11T15:38:51-06:00
 permalink: /create-unique-strong-passwords-that-are-easy-to-remember-for-all-your-accounts-without-using-a-password-manager/
 categories:
-  - Uncategorized
+  - Security
 tags:
+  - Security
   - Account
   - Credentials
   - Password
