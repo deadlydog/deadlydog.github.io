@@ -1,6 +1,6 @@
 ---
-title: "Separate editorconfig files for personal and team settings"
-permalink: /Separate-editorconfig-files-for-personal-and-team-settings/
+title: "Use a separate global editorconfig file for personal settings"
+permalink: /Use-a-separate-global-editorconfig-file-for-personal-settings/
 #date: 2099-01-15T00:00:00-06:00
 #last_modified_at: 2099-01-22T00:00:00-06:00
 comments_locked: false
@@ -46,7 +46,7 @@ If I add that property to my .editorconfig file and set it to silent, other team
 
 So how do we solve this problem?
 The answer is to use 2 .editorconfig files.
-A local .editorconfig file that contains team settings and gets committed to source control in your repository, and a global .editorconfig file that lives in a directory above all of your repositories, outside of source control (you can still keep it in source control _somewhere_, just not in every repository).
+A local .editorconfig file that contains team settings and gets committed to source control in your repository, and a global .editorconfig file for personal settings that lives in a directory above all of your repositories, outside of source control (you can still keep it in source control _somewhere_, just not in every repository).
 
 The global .editorconfig file:
 
