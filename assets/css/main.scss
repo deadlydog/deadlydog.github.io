@@ -241,6 +241,18 @@ kbd
 	text-decoration: underline !important; // Override the footer's "text-decoration: none;". https://stackoverflow.com/a/64637823/602585
 }
 
+// Styles for easily positioning html-defined images in posts.
+img.left
+{
+	float: left;
+	margin-right: 0.5em;
+}
+img.right
+{
+	float: right;
+	margin-left: 0.5em;
+}
+
 //========== Dan's Customizations END ==========
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
