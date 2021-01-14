@@ -92,7 +92,7 @@ Benefits of using a global .editorconfig file include:
 ## Conclusion
 
 I've been using this strategy of both a global and local .editorconfig file for a couple years now and have found it works well for me.
-I haven't read about it or seen it used elsewhere though, so I thought I'd share.
+I haven't read about it or seen it elsewhere though, so I thought I'd share.
 
 What are your thoughts on this approach?
 Do you think you'll try it?
