@@ -5,12 +5,10 @@ permalink: /Use-a-separate-global-editorconfig-file-for-personal-settings/
 #last_modified_at: 2099-01-22T00:00:00-06:00
 comments_locked: false
 categories:
-  - Software Development
   - Productivity
   - Editor
   - IDE
 tags:
-  - Software Development
   - Productivity
   - Editor
   - IDE
