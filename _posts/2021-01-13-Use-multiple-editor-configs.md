@@ -57,9 +57,9 @@ The local .editorconfig file:
 
 - Gets committed to source control in your repository.
 - Should not contain any presentation-only properties, such as tab width; only properties that you want enforced across your team.
-- Should have `root = false` so that presentation-only (and other) properties can be inherited from the global .editorconfig file.
+- Should have `root = false` defined so that presentation-only (and other) properties can be inherited from the global .editorconfig file.
 
-Here is an example of [my personal global .editorconfig file](https://gist.github.com/deadlydog/f83de31269f6f9982d26cfbd70bbf50f) and my default [local .editorconfig file](https://gist.github.com/deadlydog/f83de31269f6f9982d26cfbd70bbf50f) that I drop in my git repositories.
+Here is an example of [my personal global .editorconfig file](https://gist.github.com/deadlydog/f83de31269f6f9982d26cfbd70bbf50f) and my default [local .editorconfig file](https://gist.github.com/deadlydog/bd000162e85c155b243a712c16f7411c) that I drop in my git repositories.
 That gist is essentially the source control for my personal global .editorconfig file.
 
 ### Why this works
@@ -76,16 +76,18 @@ That is:
 This means that properties found in an .editorconfig file closer to the file will override ones found further away from the file.
 
 So if you wanted, you could place your global .editorconfig file at `C:\.editorconfig` and it would apply to any file you open in your editor, whether they are part of a git repository or not.
+Any properties defined in your repository's local .editorconfig file will override the global ones.
+
 I keep all of my git repositories under `C:\Git`, so my global .editorconfig file lives in that directory.
 
 ## The benefits
 
 Benefits of using a global .editorconfig file include:
 
-- Everyone's personal preference presentation-only properties can be respected, so long as those properties aren't overridden in the local .editorconfig file (if they are, you can maybe remove them).
+- Everyone's personal preference presentation-only properties can be respected, so long as those properties aren't overridden in the local .editorconfig file (if they are, you can likely remove them).
 - When working in a repository that does not have an .editorconfig file, I still get all of _my_ personal properties applied.
 - Depending on which language I'm working in, I use different editors / IDEs.
-  I no longer have to worry about configuring each one the same way; the .editorconfig file handles that for me.
+  Because I always have _at least_ my global .editorconfig file being applied, I no longer have to worry about configuring each editor the same way; the .editorconfig file handles that for me.
 
 ## Conclusion
 
