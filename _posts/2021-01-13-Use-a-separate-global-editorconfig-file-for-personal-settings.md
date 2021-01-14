@@ -41,7 +41,7 @@ This property does not affect the physical contents of the file, and is solely a
 Some people might like their tabs represented as 4 spaces, while others like it as 2 to save on horizontal space, while others might prefer 8 for accessibility reasons.
 
 As mentioned earlier, some editors have extended the list of EditorConfig properties.
-For example, Visual Studio allows you to specify if Visual Studio should suggest transforming a simple one-line function into an expression bodied lambda.
+For example, Visual Studio allows you to specify if Visual Studio should suggest transforming a simple one-line method into an expression bodied method.
 Some users may find that helpful, while others may find it annoying and want to change it from a suggestion to being silent (so Visual Studio doesn't underline it with a blue squiggle).
 If I add that property to my .editorconfig file and set it to silent, other team members may miss out on a feature they love.
 
