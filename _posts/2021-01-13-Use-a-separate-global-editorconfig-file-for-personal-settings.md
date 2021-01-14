@@ -14,6 +14,7 @@ tags:
   - Productivity
   - Editor
   - IDE
+  - EditorConfig
 ---
 
 ## What is EditorConfig
