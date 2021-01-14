@@ -37,7 +37,7 @@ Not having to worry about which repositories use tabs and which use spaces, what
 
 That said, there's still one issue I come across, which is that teams tend to put presentation-only properties in the .editorconfig file that gets committed to source control.
 The biggest offender is the `indent_size` property used with an `indent_style` of `tabs`, as well as the `tab_width` property.
-This property does not affect the physical contents of the file, and is solely a personal preference setting.
+This property does not affect the physical contents of the file, and is solely a personal preference presentation setting.
 Some people might like their tabs represented as 4 spaces, while others like it as 2 to save on horizontal space, while others might prefer 8 for accessibility reasons.
 
 As mentioned earlier, some editors have extended the list of EditorConfig properties.
