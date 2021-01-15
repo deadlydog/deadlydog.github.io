@@ -7,7 +7,7 @@
 //========== Dan's Customizations START ==========
 
 // These sizes are unchanged, but they must be pre-defined so we can reference them in our changes below.
-// Values were taken from `_sass/minimal-mistakes/_variables.scss
+// Values were taken from '_sass/minimal-mistakes/_variables.scss' of the minimal-mistakes repo.
 $type-size-1 : 2.441em; // ~39.056px
 $type-size-2 : 1.953em; // ~31.248px
 $type-size-3 : 1.563em; // ~25.008px
@@ -116,6 +116,9 @@ kbd
 	visibility: hidden;
 	opacity: 0;
 	transition: opacity 0.3s;
+
+	// Value taken from the $sans-serif variable value in '_sass/minimal-mistakes/_variables.scss' of the minimal-mistakes repo.
+	font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
 }
 
 // The little arrow on the tooltip that points toward it's element that makes it look like a speech bubble.
