@@ -62,7 +62,7 @@ The local .editorconfig file:
 - __Should not contain any presentation-only properties__, such as tab width; only include properties that affect actual file contents, and that you want enforced in the repository.
 - Should have `root = false` defined so that presentation-only (and other) properties can be inherited from the global .editorconfig file.
 
-Here is an example of [my personal global .editorconfig file (gist)](https://gist.github.com/deadlydog/f83de31269f6f9982d26cfbd70bbf50f):
+Here is an example of my personal global .editorconfig file [(gist)](https://gist.github.com/deadlydog/f83de31269f6f9982d26cfbd70bbf50f):
 
 ```ini
 # This .editorconfig file should live outside of all repositories (and thus not be committed to source control) in
@@ -86,7 +86,7 @@ indent_style = space
 indent_size = 2
 ```
 
-And of my default [local .editorconfig file (gist)](https://gist.github.com/deadlydog/bd000162e85c155b243a712c16f7411c) that I drop in my git repositories:
+And of my default local .editorconfig file [(gist)](https://gist.github.com/deadlydog/bd000162e85c155b243a712c16f7411c) that I drop in my git repositories:
 
 ```ini
 # This file should only include settings that affect the physical contents of the file, not just how it appears in an editor.
