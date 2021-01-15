@@ -59,7 +59,7 @@ The global .editorconfig file:
 The local .editorconfig file:
 
 - Gets committed to source control in your repository.
-- Should not contain any presentation-only properties, such as tab width; only properties that you want enforced across your team.
+- __Should not contain any presentation-only properties__, such as tab width; only include properties that affect actual file contents, and that you want enforced in the repository.
 - Should have `root = false` defined so that presentation-only (and other) properties can be inherited from the global .editorconfig file.
 
 Here is an example of [my personal global .editorconfig file (gist)](https://gist.github.com/deadlydog/f83de31269f6f9982d26cfbd70bbf50f):
