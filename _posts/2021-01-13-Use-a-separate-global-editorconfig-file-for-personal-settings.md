@@ -66,8 +66,8 @@ Here is an example of my personal global .editorconfig file [(gist)](https://gis
 
 ```ini
 # This .editorconfig file should live outside of all repositories (and thus not be committed to source control) in
-# a parent directory, as it includes personal preference settings, like a tab's `indent_size`.
-# v1.1
+# a parent directory, as it includes personal preference presentation settings, like a tab's `indent_size`.
+# v1.2
 
 root = true
 
@@ -90,11 +90,11 @@ And of my default local .editorconfig file [(gist)](https://gist.github.com/dead
 
 ```ini
 # This file should only include settings that affect the physical contents of the file, not just how it appears in an editor.
-# Do not include personal preference meta-data settings like a tab's `indent_size` in this file; those should be specified in
-# a parent .editorconfig file outside of the repository.
-# v1.3
+# Do not include personal preference presentation settings like a tab's `indent_size` in this file; those should be specified
+# in a parent .editorconfig file outside of the repository.
+# v1.4
 
-# Ensure that personal preference meta-settings can be inherited from parent .editorconfig files.
+# Ensure that personal preference presentation settings can be inherited from parent .editorconfig files.
 root = false
 
 [*]
