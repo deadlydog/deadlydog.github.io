@@ -62,8 +62,59 @@ The local .editorconfig file:
 - Should not contain any presentation-only properties, such as tab width; only properties that you want enforced across your team.
 - Should have `root = false` defined so that presentation-only (and other) properties can be inherited from the global .editorconfig file.
 
-Here is an example of [my personal global .editorconfig file](https://gist.github.com/deadlydog/f83de31269f6f9982d26cfbd70bbf50f) and my default [local .editorconfig file](https://gist.github.com/deadlydog/bd000162e85c155b243a712c16f7411c) that I drop in my git repositories.
-That gist is essentially the source control for my personal global .editorconfig file.
+Here is an example of [my personal global .editorconfig file (gist)](https://gist.github.com/deadlydog/f83de31269f6f9982d26cfbd70bbf50f):
+
+```ini
+# This .editorconfig file should live outside of all repositories (and thus not be committed to source control) in
+# a parent directory, as it includes personal preference settings, like a tab's `indent_size`.
+# v1.1
+
+root = true
+
+[*]
+indent_style = tab
+end_of_line = crlf
+trim_trailing_whitespace = true
+insert_final_newline = true
+indent_size = 4
+
+[*.{html,xml,config,json}]
+indent_size = 2
+
+[*.{md,psd1,pp,yml,yaml}]
+indent_style = space
+indent_size = 2
+```
+
+And of my default [local .editorconfig file (gist)](https://gist.github.com/deadlydog/bd000162e85c155b243a712c16f7411c) that I drop in my git repositories:
+
+```ini
+# This file should only include settings that affect the physical contents of the file, not just how it appears in an editor.
+# Do not include personal preference meta-data settings like a tab's `indent_size` in this file; those should be specified in
+# a parent .editorconfig file outside of the repository.
+# v1.3
+
+# Ensure that personal preference meta-settings can be inherited from parent .editorconfig files.
+root = false
+
+[*]
+indent_style = tab
+end_of_line = crlf
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+[*.{md,psd1,pp,yml,yaml}]
+indent_style = space
+indent_size = 2
+```
+
+Those gist links essentially act as the source control for my personal .editorconfig files.
+
+Notice that the local .editorconfig file has `root = false` defined, and does not include an `indent_size` when `indent_style = tab`, while the global .editorconfig file does.
+
+You may also notice that aside from these 2 properties, the files are very similar.
+That is because these are _my files_ and they reflect _my preferences_.
+I might clone an open source git repo, or one that a different team in my office maintains, and their local .editorconfig file may look very different from my global one, but I can be sure that their local .editorconfig file settings will be used instead of my global ones.
 
 ### Why this works
 
@@ -83,7 +134,9 @@ This means that properties found in an .editorconfig file closer to the file wil
 So if you wanted, you could place your global .editorconfig file at `C:\.editorconfig` and it would apply to any file you open in your editor, whether they are part of a git repository or not.
 Any properties defined in your repository's local .editorconfig file will override the global ones.
 
-I keep all of my git repositories under `C:\Git`, so my global .editorconfig file lives in that directory.
+I keep all of my git repositories under `C:\dev\Git`, so my global .editorconfig file lives in that directory.
+
+![Editorconfig files in File Explorer](/assets/Posts/2021-01-13-Use-a-separate-global-editorconfig-file-for-personal-settings/EditorconfigFilesInFileExplorer.png)
 
 ## The benefits
 
