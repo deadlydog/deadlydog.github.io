@@ -1,6 +1,6 @@
 ---
-title: "Use a separate global editorconfig file for personal settings"
-permalink: /Use-a-separate-global-editorconfig-file-for-personal-settings/
+title: "Reasons to use both a local and global editorconfig file"
+permalink: /Reasons-to-use-both-a-local-and-global-editorconfig-file/
 #date: 2099-01-15T00:00:00-06:00
 #last_modified_at: 2099-01-22T00:00:00-06:00
 comments_locked: false
@@ -17,7 +17,7 @@ tags:
 
 ## What is EditorConfig
 
-<img alt="Editor icons" src="/assets/Posts/2021-01-13-Use-a-separate-global-editorconfig-file-for-personal-settings/EditorIcons.png" class="right" />
+<img alt="Editor icons" src="/assets/Posts/2021-01-13-Reasons-to-use-both-a-local-and-global-editorconfig-file/EditorIcons.png" class="right" />
 
 [EditorConfig](https://editorconfig.org) is a project that aims to define common editor configuration outside of your editor.
 The settings are instead stored in a `.editorconfig` file, which can be committed to your source control repository, or live outside of it.
@@ -33,7 +33,7 @@ Not having to worry about which repositories use tabs and which use spaces, what
 
 ## The problem
 
-<img alt="Code" src="/assets/Posts/2021-01-13-Use-a-separate-global-editorconfig-file-for-personal-settings/Code.jpg" class="left" />
+<img alt="Code" src="/assets/Posts/2021-01-13-Reasons-to-use-both-a-local-and-global-editorconfig-file/Code.jpg" class="left" />
 
 That said, there's still one issue I come across, which is that teams tend to put presentation-only properties in the .editorconfig file that gets committed to source control.
 The biggest offender is the `indent_size` property used with an `indent_style` of `tabs`, as well as the `tab_width` property.
@@ -127,7 +127,7 @@ That is:
 > EditorConfig files are read top to bottom and the most recent rules found take precedence.
 > Properties from matching EditorConfig sections are applied in the order they were read, so properties in closer files take precedence.
 
-<img alt="Globe" src="/assets/Posts/2021-01-13-Use-a-separate-global-editorconfig-file-for-personal-settings/Globe.jpg" class="right" />
+<img alt="Globe" src="/assets/Posts/2021-01-13-Reasons-to-use-both-a-local-and-global-editorconfig-file/Globe.jpg" class="right" />
 
 This means that properties found in an .editorconfig file closer to the file will override ones found further away from the file.
 
@@ -136,7 +136,7 @@ Any properties defined in your repository's local .editorconfig file will overri
 
 I keep all of my git repositories under `C:\dev\Git`, so my global .editorconfig file lives in that directory.
 
-![Editorconfig files in File Explorer](/assets/Posts/2021-01-13-Use-a-separate-global-editorconfig-file-for-personal-settings/EditorconfigFilesInFileExplorer.png)
+![Editorconfig files in File Explorer](/assets/Posts/2021-01-13-Reasons-to-use-both-a-local-and-global-editorconfig-file/EditorconfigFilesInFileExplorer.png)
 
 ## The benefits
 
@@ -147,7 +147,7 @@ Benefits of using a global .editorconfig file include:
 - Depending on which language I'm working in, I use different editors / IDEs.
   Because I always have _at least_ my global .editorconfig file being applied, I no longer have to worry about configuring each editor the same way for all of the different file types; the .editorconfig file handles that for me.
 
-![Hooray](/assets/Posts/2021-01-13-Use-a-separate-global-editorconfig-file-for-personal-settings/Hooray.gif)
+![Hooray](/assets/Posts/2021-01-13-Reasons-to-use-both-a-local-and-global-editorconfig-file/Hooray.gif)
 
 ## Conclusion
 
