@@ -134,6 +134,8 @@ This means that properties found in an .editorconfig file closer to the file wil
 So if you wanted, you could place your global .editorconfig file at `C:\.editorconfig` and it would apply to any file you open in your editor, whether they are part of a git repository or not.
 Any properties defined in your repository's local .editorconfig file will override the global ones.
 
+I wouldn't actually recommend putting your global .editorconfig file at `C:\.editorconfig`, as you may not want your editor to auto-format files you open in `C:\Windows` or `C:\Program Files`.
+
 I keep all of my git repositories under `C:\dev\Git`, so my global .editorconfig file lives in that directory.
 
 ![Editorconfig files in File Explorer](/assets/Posts/2021-01-13-Reasons-to-use-both-a-local-and-global-editorconfig-file/EditorconfigFilesInFileExplorer.png)
