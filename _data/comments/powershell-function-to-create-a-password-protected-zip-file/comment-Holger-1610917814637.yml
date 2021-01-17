@@ -1,0 +1,7 @@
+_id: 645080e0-5908-11eb-89cf-2dacef69d08e
+message: "Hi, thanks for that function. I only added one feature into the argument syntax.\r\n    if (!([string]::IsNullOrEmpty($Password))) { \r\n    $arguments += \" -p$Password\"\r\n    # Header encryption Add -mhe to encrypt headers for 7z files\r\n    if ($CompressionType -eq \"7z\"){$arguments += \" -mhe\"}\r\n    }"
+name: Holger
+email: 66c639a6c79450ada1848b937f221c5e
+url: ''
+hidden: ''
+date: '2021-01-17T21:10:14.596Z'
