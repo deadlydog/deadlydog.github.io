@@ -2,7 +2,7 @@
 title: "Custom version numbers in Azure DevOps yaml pipelines"
 permalink: /Custom-version-numbers-in-Azure-DevOps-yaml-pipelines/
 #date: 2099-01-17T00:00:00-06:00
-last_modified_at: 2020-08-07
+last_modified_at: 2021-01-23
 comments_locked: false
 categories:
   - Azure DevOps
@@ -180,7 +180,7 @@ variables:
   prereleaseVersionNumber: '$(versionNumber)-$(Build.SourceVersion)'
 ```
 
-Where `$(Build.SourceVersion)` is the git commit sha being built.
+Where `$(Build.SourceVersion)` is the git commit SHA being built.
 
 I typically like to include the date and time in my prerelease version number.
 Unfortunately, there isn't a predefined variable that can be used to access the current date and time, so it takes a bit of extra effort.
@@ -226,6 +226,140 @@ In this example I'm using the prereleaseVersionNumber to version a PowerShell mo
 If you need a unique ID in your version number, you can use the `$(Build.BuildId)` [predefined variable](https://docs.microsoft.com/en-us/azure/devops/pipelines/build/variables?view=azure-devops&tabs=yaml).
 This is an auto-incrementing integer that Azure DevOps increments after any build in your Azure DevOps organization; not just in your specific build pipeline.
 No two builds created in your Azure DevOps should ever have the same Build ID.
+
+## Ready to use code
+
+Above I've shown you a few different variations of ways to do version numbers in yaml templates.
+Hopefully I explained it well enough that you understand how to customize it for your specific needs.
+That said, here's a few code snippets that are ready for direct copy-pasting into your yaml files, where you can then use the variables in any pipeline tasks.
+
+Specifying a 3-part version number with an auto-incrementing revision:
+
+```yaml
+name: 'Set dynamically below in a task'
+
+variables:
+  version.MajorMinor: '1.0' # Manually adjust the version number as needed for semantic versioning. Revision is auto-incremented.
+  version.Revision: $[counter(variables['version.MajorMinor'], 0)]
+  versionNumber: '$(version.MajorMinor).$(version.Revision)'
+
+steps:
+- task: PowerShell@2
+  displayName: Set the name of the build (i.e. the Build.BuildNumber)
+  inputs:
+    targetType: 'inline'
+    script: |
+      [string] $buildName = "$(versionNumber)_$(Build.SourceBranchName)"
+      Write-Host "Setting the name of the build to '$buildName'."
+      Write-Host "##vso[build.updatebuildnumber]$buildName"
+```
+
+Specifying a 4-part version number with an auto-incrementing revision:
+
+```yaml
+name: 'Set dynamically below in a task'
+
+variables:
+  version.MajorMinor: '1.0' # Manually adjust the version number as needed. Revision is auto-incremented.
+  version.Revision: $[counter(variables['version.MajorMinor'], 0)]
+  versionNumber: '$(version.MajorMinor).$(version.Revision).$(Build.BuildId)'
+
+steps:
+- task: PowerShell@2
+  displayName: Set the name of the build (i.e. the Build.BuildNumber)
+  inputs:
+    targetType: 'inline'
+    script: |
+      [string] $buildName = "$(versionNumber)_$(Build.SourceBranchName)"
+      Write-Host "Setting the name of the build to '$buildName'."
+      Write-Host "##vso[build.updatebuildnumber]$buildName"
+```
+
+Specifying a 3-part version number with an auto-incrementing revision, along with a prerelease version number that includes the date and time of the build and the Git commit SHA:
+
+```yaml
+name: 'Set dynamically below in a task'
+
+variables:
+  version.MajorMinor: '1.0' # Manually adjust the version number as needed for semantic versioning. Revision is auto-incremented.
+  version.Revision: $[counter(variables['version.MajorMinor'], 0)]
+  versionNumber: '$(version.MajorMinor).$(version.Revision)'
+  prereleaseVersionNumber: 'Set dynamically below in a task'
+
+steps:
+- task: PowerShell@2
+  displayName: Set the name of the build (i.e. the Build.BuildNumber)
+  inputs:
+    targetType: 'inline'
+    script: |
+      [string] $buildName = "$(versionNumber)_$(Build.SourceBranchName)"
+      Write-Host "Setting the name of the build to '$buildName'."
+      Write-Host "##vso[build.updatebuildnumber]$buildName"
+
+- task: PowerShell@2
+  displayName: Set the prereleaseVersionNumber variable value
+  inputs:
+    targetType: 'inline'
+    script: |
+      [string] $dateTime = (Get-Date -Format 'yyyyMMddTHHmmss')
+      [string] $prereleaseVersionNumber = "$(versionNumber)-ci$dateTime+$(Build.SourceVersion)"
+      Write-Host "Setting the prerelease version number variable to '$prereleaseVersionNumber'."
+      Write-Host "##vso[task.setvariable variable=prereleaseVersionNumber]$prereleaseVersionNumber"
+```
+
+With the above, you can do things like determine whether to use the `versionNumber` or the `prereleaseVersionNumber` variables depending on if the `$(Build.SourceBranchName)` is the default branch (e.g. `main` or `master`) or a feature branch.
+The below example shows one way of how to do this, and sets the `versionNumber` variable to the `stableVersionNumber` if building the `main` branch, or to the `prereleaseVersionNumber` if building any other branch.
+
+```yaml
+name: 'Set dynamically below in a task'
+
+variables:
+  version.MajorMinor: '1.0' # Manually adjust the version number as needed for semantic versioning. Revision is auto-incremented.
+  version.Revision: $[counter(variables['version.MajorMinor'], 0)]
+  stableVersionNumber: '$(version.MajorMinor).$(version.Revision)'
+  prereleaseVersionNumber: 'Set dynamically below in a task'
+  versionNumber: 'Set dynamically below in a task' # Will be set to the stableVersionNumber or prereleaseVersionNumber based on the branch.
+  isMainBranch: $[eq(variables['Build.SourceBranch'], 'refs/heads/main')] # Determine if we're building the 'main' branch or not.
+
+steps:
+- task: PowerShell@2
+  displayName: Set the prereleaseVersionNumber variable value
+  inputs:
+    targetType: 'inline'
+    script: |
+      [string] $dateTime = (Get-Date -Format 'yyyyMMddTHHmmss')
+      [string] $prereleaseVersionNumber = "$(versionNumber)-ci$dateTime+$(Build.SourceVersion)"
+      Write-Host "Setting the prerelease version number variable to '$prereleaseVersionNumber'."
+      Write-Host "##vso[task.setvariable variable=prereleaseVersionNumber]$prereleaseVersionNumber"
+
+- task: PowerShell@2
+  displayName: Set the versionNumber to the stable or prerelease version number based on if the 'main' branch is being built or not
+  inputs:
+    targetType: 'inline'
+    script: |
+      [bool] $isMainBranch = $(isMainBranch)
+      [string] $versionNumber = "$(prereleaseVersionNumber)"
+      if ($isMainBranch)
+      {
+        $versionNumber = "$(stableVersionNumber)"
+      }
+      Write-Host "Setting the version number to use to '$versionNumber'."
+      Write-Host "##vso[task.setvariable variable=versionNumber]$versionNumber"
+
+- task: PowerShell@2
+  displayName: Set the name of the build (i.e. the Build.BuildNumber)
+  inputs:
+    targetType: 'inline'
+    script: |
+      [string] $buildName = "$(versionNumber)_$(Build.SourceBranchName)"
+      Write-Host "Setting the name of the build to '$buildName'."
+      Write-Host "##vso[build.updatebuildnumber]$buildName"
+```
+
+You can also leverage [expressions](https://docs.microsoft.com/en-us/azure/devops/pipelines/process/expressions?view=azure-devops#conditionally-set-a-task-input) to determine at runtime what inputs to provide to later tasks (e.g. the `stableVersionNumber` or the `prereleaseVersionNumber`), or if a tasks should run at all by placing a [condition](https://docs.microsoft.com/en-us/azure/devops/pipelines/process/conditions?view=azure-devops&tabs=yaml) on it.
+
+If you like you could combine all 3 PowerShell tasks into a single task for brevity.
+I prefer to keep them separated for clarity.
 
 ## Conclusion
 
