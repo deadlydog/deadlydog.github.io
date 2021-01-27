@@ -1,0 +1,7 @@
+_id: 38924900-6085-11eb-b5bb-439b35a3eb15
+message: "I tried to change\r\n$arguments = \"a -t$CompressionType \"\"$ZipOutputFilePath\"\" \"\"$FilesToZip\"\" -mx9\" \r\nto\r\n$arguments = \"a -t$CompressionType \"\"$ZipOutputFilePath\"\" \"\"$FilesToZip\"\" -mhe\" \r\n-mhe means Encrypts archive header (This will hide the file names inside the archive)\r\nHowever, -mhe was not working at all.\r\nI tried in CMD, -mhe was working perfect with outprint below:\r\n\r\n7z a -t7z Auto7Zip.7z Auto7Zip.ps1 -p123 -mhe\r\n\r\n7-Zip 19.00 (x64) : Copyright (c) 1999-2018 Igor Pavlov : 2019-02-21\r\nScanning the drive:\r\n1 file, 2853 bytes (3 KiB)\r\nCreating archive: Auto7Zip.7z\r\nAdd new data to archive: 1 file, 2853 bytes (3 KiB)\r\nFiles read from disk: 1\r\nArchive size: 1520 bytes (2 KiB)\r\nEverything is Ok\r\n\r\nWhy -mhe not working in this function?"
+name: ConanF
+email: 839e4455de00c0b71ac2ac0d3c285050
+url: ''
+hidden: ''
+date: '2021-01-27T09:51:26.441Z'
