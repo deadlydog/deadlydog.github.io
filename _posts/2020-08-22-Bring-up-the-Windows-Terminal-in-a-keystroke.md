@@ -38,7 +38,7 @@ Similarly, <kbd>Windows Key</kbd> + <kbd>1</kbd> would launch Edge, and <kbd>Win
 This is a simple solution and it works, but the reason I'm not a fan of it is:
 
 1. If I reorder the windows on the taskbar then the keyboard shortcut changes.
-1. This method only works for the first 10 items on the taskbar. i.e. you can't do <kbd>Windows Key</kbd> + <kbd>11</kbd>`.
+1. This method only works for the first 10 items on the taskbar. i.e. you can't do <kbd>Windows Key</kbd> + <kbd>11</kbd>.
 1. I find it awkward to use the Windows Key with any numbers greater than 4.
 
 So let's continue exploring other options.
