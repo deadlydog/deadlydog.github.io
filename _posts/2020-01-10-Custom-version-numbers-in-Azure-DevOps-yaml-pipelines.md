@@ -328,7 +328,7 @@ steps:
     targetType: 'inline'
     script: |
       [string] $dateTime = (Get-Date -Format 'yyyyMMddTHHmmss')
-      [string] $prereleaseVersionNumber = "$(versionNumber)-ci$dateTime+$(Build.SourceVersion)"
+      [string] $prereleaseVersionNumber = "$(stableVersionNumber)-ci$dateTime+$(Build.SourceVersion)"
       Write-Host "Setting the prerelease version number variable to '$prereleaseVersionNumber'."
       Write-Host "##vso[task.setvariable variable=prereleaseVersionNumber]$prereleaseVersionNumber"
 
