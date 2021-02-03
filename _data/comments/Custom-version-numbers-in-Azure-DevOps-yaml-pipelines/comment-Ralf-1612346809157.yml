@@ -1,0 +1,7 @@
+_id: 87077830-6607-11eb-85c8-49fdf7867e77
+message: "Hi Daniel,\r\n\r\nnice work, well done. I think there is a bug in the last script, it hasn't worked for me until I have initialized the variable prereleaseVersionNumber with the stabelVersionNumber instead of versionNumber whitch was still set to 'Set dynamically below in task' in line 17:\r\n\r\n    [string] $prereleaseVersionNumber = \"$(stableVersionNumber)-ci$dateTime+$(Build.SourceVersion)\"\r\n\r\nafter that it worked verry well. \r\n\r\nThanks for sharing!!!"
+name: Ralf
+email: 1f731a553d0d8576b80f2d6ed6b1906d
+url: ''
+hidden: ''
+date: '2021-02-03T10:06:49.149Z'
