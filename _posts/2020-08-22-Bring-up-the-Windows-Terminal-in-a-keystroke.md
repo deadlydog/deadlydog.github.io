@@ -2,7 +2,7 @@
 title: "Bring up the Windows Terminal in a keystroke"
 permalink: /Bring-up-the-Windows-Terminal-in-a-keystroke/
 #date: 2099-01-17T00:00:00-06:00
-last_modified_at: 2020-08-27
+last_modified_at: 2021-02-09
 comments_locked: false
 categories:
   - Windows Terminal
@@ -103,7 +103,7 @@ SwitchToWindowsTerminal()
   ; Else it's not already open, so launch it.
   else
   {
-    Run, explorer.exe shell:AppsFolder\Microsoft.WindowsTerminal_8wekyb3d8bbwe!App
+    Run, *RunAs wt
   }
 }
 
@@ -119,6 +119,19 @@ Check out the [AutoHotkey key list](https://www.autohotkey.com/docs/KeyList.htm)
 You may have also noticed in the code that if the window is already in focus, we minimize it.
 This allows me to easily switch to and away from the Windows Terminal using the same shortcut keys.
 Using <kbd>Alt</kbd> + <kbd>Tab</kbd> would also work to switch back to your previous application.
+
+Finally, the line that actually launches the Windows Terminal is:
+
+```csharp
+Run, *RunAs wt
+```
+
+The `*RunAs` will launch the Windows Terminal as Admin.
+If you don't want it launched as an elevated command prompt, then remove the `*RunAs`, like this:
+
+```csharp
+Run, wt
+```
 
 ### Getting the AutoHotkey script running
 
