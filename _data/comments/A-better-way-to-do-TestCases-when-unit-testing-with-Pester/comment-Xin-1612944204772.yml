@@ -1,0 +1,7 @@
+_id: 73017380-6b76-11eb-8bcd-5982d73395a9
+message: "The current major obstacle to reuse is that 'Pester's various functions have no way to use external variables directly in their code block arguments'. \r\n\r\nIf these functions (for example,`it`) were all like `ForEach-Object`, the reuse problem would be solved directly, and there would be no obstacle at all.\r\n\r\nI don't know if this is the author's design error or if it's really difficult to implement this function.\r\n\r\nThis makes me interested in pester's code. I'm ready to learn it and try to find a way to solve this problem."
+name: Xin
+email: f5499197fe9d88e1ee32a60346614d60
+url: ''
+hidden: ''
+date: '2021-02-10T08:03:24.763Z'
