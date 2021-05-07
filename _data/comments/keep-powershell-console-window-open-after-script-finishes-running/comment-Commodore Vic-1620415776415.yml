@@ -1,0 +1,12 @@
+_id: 8ec85560-af6a-11eb-a378-5d19b4607689
+message: >-
+  i had the same question as Colin, i have some users that need to ping a
+  handful of computers that are not admins,  was able to make a script and even
+  add the Read-Host -Prompt "Press Enter to exit" and works great for me but
+  would like to have a shortcut for the select users to simply click on. having
+  a few issues with this final step
+name: Commodore Vic
+email: ce5009426bd9ab3f2fd1b93a620522f1
+url: ''
+hidden: ''
+date: '2021-05-07T19:29:36.412Z'
