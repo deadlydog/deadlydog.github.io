@@ -1,0 +1,7 @@
+_id: 1b09fd30-b7c2-11eb-8496-3d12bbb16873
+message: "Hi Daniel,\r\nthank you for this work!\r\nI encountered an issue with Set-XmlElementsAttributeValue, not able to solve it, yet.\r\nBasically this is the XML:\r\n<p><code><Config><SubNode Hello=\"1\"/></Config></code></p>\r\nI tried this:\r\n<p><code>Set-XmlElementsAttributeValue -XmlDocument $Xml -ElementPath \"Config.SubNode\" -AttributeName 'Hello' AttributeValue '0';</code></p>\r\nI traced the issue down to function Get-XmlNodes, where this returns null, but only in case where the node to change is too close to the root node:\r\n<p><code>$nodes = $XmlDocument.SelectNodes($fullyQualifiedNodePath, $xmlNsManager)</code></p>"
+name: Dev
+email: 715cb1ee6c0aa90cd96c984c7340cb75
+url: ''
+hidden: ''
+date: '2021-05-18T10:16:27.928Z'
