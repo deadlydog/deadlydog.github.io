@@ -1,0 +1,7 @@
+_id: c788feb0-b96d-11eb-a993-79d4d6f80359
+message: "Hi, \r\n\r\nI also needed to change the version build number, and ended up using the counter. But for me it works also for the name: definition in the yaml file. I have defined two variables in the GUI for the pipeline (Pipeline Variables), like:\r\n\r\nbuildMajorMin = 1.5\r\nbuildStartCounter = 22\r\n\r\nIn the top of the yaml file I have:\r\n\r\nvariables:\r\n  buildRev: $[counter(variables['buildMajorMin'], variables['buildStartCounter'])]\r\n\r\nname: $(buildMajorMin).$(buildRev)"
+name: SkyHome
+email: dfc88bd7659f714ffdb05141d75611fc
+url: ''
+hidden: ''
+date: '2021-05-20T13:17:51.769Z'
