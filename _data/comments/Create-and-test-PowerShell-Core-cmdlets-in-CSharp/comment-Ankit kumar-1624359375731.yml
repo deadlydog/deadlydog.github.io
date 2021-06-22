@@ -1,0 +1,12 @@
+_id: 772324b0-d348-11eb-8f78-fbe033259ba1
+message: >-
+  your post is well written but it does nt work if your cmdlets are derived from
+  PScmdlets instead of CMDlets. Then it fails saying that "PSCmdlets cant be
+  invoked directly"your post is well written but it does nt work if your cmdlets
+  are derived from PScmdlets instead of CMDlets. Then it fails saying that
+  PSCmdlets cant be invoked directly
+name: Ankit kumar
+email: c19fd041cbc114f788e6edd676cbe649
+url: ''
+hidden: ''
+date: '2021-06-22T10:56:15.728Z'
