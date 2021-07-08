@@ -2,7 +2,7 @@
 title: "Bring up the Windows Terminal in a keystroke"
 permalink: /Bring-up-the-Windows-Terminal-in-a-keystroke/
 #date: 2099-01-17T00:00:00-06:00
-last_modified_at: 2021-02-09
+last_modified_at: 2021-07-07
 comments_locked: false
 categories:
   - Windows Terminal
