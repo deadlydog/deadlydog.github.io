@@ -103,7 +103,7 @@ SwitchToWindowsTerminal()
   ; Else it's not already open, so launch it.
   else
   {
-    Run, *RunAs wt
+    Run, wt
   }
 }
 
@@ -123,15 +123,17 @@ Using <kbd>Alt</kbd> + <kbd>Tab</kbd> would also work to switch back to your pre
 Finally, the line that actually launches the Windows Terminal is:
 
 ```csharp
+Run, wt
+```
+
+If you want the Windows Terminal launched as an elevated command prompt (i.e. as Admin), then you need to add `*RunAs`, like this:
+
+```csharp
 Run, *RunAs wt
 ```
 
-The `*RunAs` will launch the Windows Terminal as Admin.
-If you don't want it launched as an elevated command prompt, then remove the `*RunAs`, like this:
-
-```csharp
-Run, wt
-```
+Also, if you haven't already, you'll want to [follow these steps to digitally sign your AutoHotkey executable](2020-09-28-Get-up-and-running-with-AutoHotkey.md#allow-ahk-to-interact-with-apps-running-as-admin) to allow AutoHotkey scripts to be able to interact with applications running as Admin.
+Without this, the AutoHotkey script will not be able to minimize the Windows Terminal.
 
 ### Getting the AutoHotkey script running
 
