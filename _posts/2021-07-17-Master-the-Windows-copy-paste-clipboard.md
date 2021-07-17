@@ -106,7 +106,8 @@ While the Windows 10 Clipboard History was only introduced in the past couple of
 - Pasting clips as plain text to remove formatting.
 - Customizing additional keyboard shortcuts for quick access to additional functionality.
 
-There's a great comparison of various clipboard manager applications and their features on [the ClipAngel wiki](https://sourceforge.net/p/clip-angel/wiki/Description/).
+There are plenty of clipboard managers to choose from; you can find some lists [here](https://www.maketecheasier.com/five-free-clipboard-managers-for-windows) and [here](https://www.slant.co/topics/4034/~clipboard-managers-for-windows).
+[The ClipAngel wiki](https://sourceforge.net/p/clip-angel/wiki/Description/) has a nice comparison table of a few popular ones.
 
 ## Ditto clipboard manager
 
@@ -177,7 +178,7 @@ On the `Keyboard Shortcuts` tab the options of note are:
 #### Quick Paste Keyboard tab
 
 On the `Quick Paste Keyboard` tab you'll find tons of configurable hotkeys.
-The ones I want to mention are `Paste Position 1` - `Paste Position 10`, as these allow you to quickly select one of the first 10 items using the keyboard when you're in Ditto.
+The ones I want to mention are `Paste Position 1` - `Paste Position 10`, as these allow you to quickly select one of the first 10 clips using the keyboard when you're in Ditto.
 This can save you from reaching for the mouse and having to click on the clip you want to select.
 
 ![Ditto Options Quick Paste Keyboard Tab Screenshot](/assets/Posts/2021-07-17-Master-the-Windows-copy-paste-clipboard/DittoOptionsQuickPasteKeyboardTabScreenshot.png)
