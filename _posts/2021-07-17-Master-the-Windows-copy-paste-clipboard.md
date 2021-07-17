@@ -73,7 +73,7 @@ If you want to paste the last thing you copied, then use <kbd>Ctrl</kbd> + <kbd>
 If you want to access something you copied earlier though, use <kbd>Windows Key</kbd> + <kbd>V</kbd> and the Clipboard History window will appear and show you the last clips you copied.
 From there, choose the clip that you want and it will be pasted into your application.
 
-![Windows 10 Clipboard History Screenshot](/assets/Posts/2021-07-07-Master-the-Windows-copy-paste-clipboard/Windows10ClipboardHistoryScreenshot.png)
+![Windows 10 Clipboard History Screenshot](/assets/Posts/2021-07-17-Master-the-Windows-copy-paste-clipboard/Windows10ClipboardHistoryScreenshot.png)
 
 Nice.
 
@@ -81,7 +81,7 @@ And, it's built right into Windows 10, so there's no need to download or install
 
 You can access the Clipboard History settings by hitting the <kbd>Windows Key</kbd> and searching for `Clipboard settings`.
 
-![Windows 10 Clipboard Settings](/assets/Posts/2021-07-07-Master-the-Windows-copy-paste-clipboard/Windows10ClipboardSettingsScreenshot.png)
+![Windows 10 Clipboard Settings](/assets/Posts/2021-07-17-Master-the-Windows-copy-paste-clipboard/Windows10ClipboardSettingsScreenshot.png)
 
 ### What's lacking in the Windows 10 Clipboard History
 
@@ -113,29 +113,29 @@ There's a great comparison of various clipboard manager applications and their f
 While there are many clipboard managers out there, my favourite is the [Ditto Clipboard Manager](https://ditto-cp.sourceforge.io), which is free and can be installed from their website or [from the Microsoft store](https://www.microsoft.com/en-us/store/p/ditto-cp/9nblggh3zbjq).
 I like Ditto because it provides a minimalistic user interface, while still providing a ton of options so you can configure it just the way you like.
 
-You can open Ditto by using a customizable keyboard shortcut (default is <kbd>Ctrl</kbd> + <kbd>`</kbd>), by double-clicking the tray icon (which looks like double quotes on a blue square ![Ditto Tray Icon Context Menu Image](/assets/Posts/2021-07-07-Master-the-Windows-copy-paste-clipboard/DittoTrayIconImage.png)), or by right-clicking the tray icon and selecting `Show Quick Paste`.
+You can open Ditto by using a customizable keyboard shortcut (default is <kbd>Ctrl</kbd> + <kbd>`</kbd>), by double-clicking the tray icon (which looks like double quotes on a blue square ![Ditto Tray Icon Context Menu Image](/assets/Posts/2021-07-17-Master-the-Windows-copy-paste-clipboard/DittoTrayIconImage.png)), or by right-clicking the tray icon and selecting `Show Quick Paste`.
 
-![Ditto Tray Icon Context Menu Screenshot](/assets/Posts/2021-07-07-Master-the-Windows-copy-paste-clipboard/DittoTrayIconContextMenuScreenshot.png)
+![Ditto Tray Icon Context Menu Screenshot](/assets/Posts/2021-07-17-Master-the-Windows-copy-paste-clipboard/DittoTrayIconContextMenuScreenshot.png)
 
 Here's a screenshot of what my Ditto window currently looks like:
 
-![Ditto Main Window Screenshot](/assets/Posts/2021-07-07-Master-the-Windows-copy-paste-clipboard/DittoMainWindowScreenshot.png)
+![Ditto Main Window Screenshot](/assets/Posts/2021-07-17-Master-the-Windows-copy-paste-clipboard/DittoMainWindowScreenshot.png)
 
 You can see that it displays previews for both text and images.
 If you hover your mouse over a clip you'll get a larger preview of that clip, as well as some extra information, such as when it was copied to the clipboard.
 
-![Ditto Tooltip Screenshot](/assets/Posts/2021-07-07-Master-the-Windows-copy-paste-clipboard/DittoMainWindowTooltipScreenshot.png)
+![Ditto Tooltip Screenshot](/assets/Posts/2021-07-17-Master-the-Windows-copy-paste-clipboard/DittoMainWindowTooltipScreenshot.png)
 
 If you want to see the entire text, or the image in it's original size, you can right-click on the clip and choose `View Full Description`, or press <kbd>F3</kbd>.
 
-![Ditto Full Image Preview Screenshot](/assets/Posts/2021-07-07-Master-the-Windows-copy-paste-clipboard/DittoMainWindowFullImagePreviewScreenshot.png)
+![Ditto Full Image Preview Screenshot](/assets/Posts/2021-07-17-Master-the-Windows-copy-paste-clipboard/DittoMainWindowFullImagePreviewScreenshot.png)
 
 The window can be moved around and is resizable, so if you want to see more or less clips, you can resize the window.
 
 The best feature though is the ability to search for clips.
 Just open the Ditto window and start typing.
 
-![Ditto Search Screenshot](/assets/Posts/2021-07-07-Master-the-Windows-copy-paste-clipboard/DittoMainWindowSearchScreenshot.png)
+![Ditto Search Screenshot](/assets/Posts/2021-07-17-Master-the-Windows-copy-paste-clipboard/DittoMainWindowSearchScreenshot.png)
 
 I use this feature all the time, typically to find something that I copied earlier that day or a few days ago.
 It's even been a life saver at recovering something that I copied months ago.
@@ -156,7 +156,7 @@ On the `General` tab, the options of note are:
 - __Theme__: Ditto supports both light and dark themes.
 - __Popup Position__: Do you want the window to appear where your typing cursor is, where your mouse is, or where you last moved it to.
 
-![Ditto Options General Tab Screenshot](/assets/Posts/2021-07-07-Master-the-Windows-copy-paste-clipboard/DittoOptionsGeneralTabScreenshot.png)
+![Ditto Options General Tab Screenshot](/assets/Posts/2021-07-17-Master-the-Windows-copy-paste-clipboard/DittoOptionsGeneralTabScreenshot.png)
 
 If you click on the `Advanced` button, you'll find a lot more options. One that I typically change is:
 
@@ -172,7 +172,7 @@ On the `Keyboard Shortcuts` tab the options of note are:
 - __Activate Ditto__: The keyboard shortcut to open Ditto. The default is <kbd>Ctrl</kbd> + <kbd>`</kbd>, but I've modified mine to be <kbd>Alt</kbd> + <kbd>`</kbd> because I use <kbd>Ctrl</kbd> + <kbd>`</kbd> to open the terminal in Visual Studio and Visual Studio Code.
 - __Text Only Paste__: This is a great one, as it will paste the clip with all formatting removed, including font, color, size, hyperlinks, etc. No more copying to Notepad to remove formatting!
 
-![Ditto Options Keyboard Shortcuts Tab Screenshot](/assets/Posts/2021-07-07-Master-the-Windows-copy-paste-clipboard/DittoOptionsKeyboardShortcutsTabScreenshot.png)
+![Ditto Options Keyboard Shortcuts Tab Screenshot](/assets/Posts/2021-07-17-Master-the-Windows-copy-paste-clipboard/DittoOptionsKeyboardShortcutsTabScreenshot.png)
 
 #### Quick Paste Keyboard tab
 
@@ -180,7 +180,7 @@ On the `Quick Paste Keyboard` tab you'll find tons of configurable hotkeys.
 The ones I want to mention are `Paste Position 1` - `Paste Position 10`, as these allow you to quickly select one of the first 10 items using the keyboard when you're in Ditto.
 This can save you from reaching for the mouse and having to click on the clip you want to select.
 
-![Ditto Options Quick Paste Keyboard Tab Screenshot](/assets/Posts/2021-07-07-Master-the-Windows-copy-paste-clipboard/DittoOptionsQuickPasteKeyboardTabScreenshot.png)
+![Ditto Options Quick Paste Keyboard Tab Screenshot](/assets/Posts/2021-07-17-Master-the-Windows-copy-paste-clipboard/DittoOptionsQuickPasteKeyboardTabScreenshot.png)
 
 ## ClipAngel clipboard manager
 
@@ -189,7 +189,7 @@ ClipAngel is very comparable to Ditto and provides many of the same features, su
 
 This is what ClipAngel looks like:
 
-![ClipAngel Main Window Screenshot](/assets/Posts/2021-07-07-Master-the-Windows-copy-paste-clipboard/ClipAngelMainWindowScreenshot.png)
+![ClipAngel Main Window Screenshot](/assets/Posts/2021-07-17-Master-the-Windows-copy-paste-clipboard/ClipAngelMainWindowScreenshot.png)
 
 The default keyboard shortcut to open ClipAngel is <kbd>Alt</kbd> + <kbd>V</kbd>, and that can be changed if you like.
 You can also double click on the tray icon to open ClipAngel.
@@ -197,17 +197,17 @@ You can also double click on the tray icon to open ClipAngel.
 As you can see, ClipAngel shows quite a bit more things in it's user interface, including a preview window of the selected clip.
 The preview window is nice when wanting to quickly view images or very long text clips.
 
-![ClipAngel Text Filter Options Screenshot](/assets/Posts/2021-07-07-Master-the-Windows-copy-paste-clipboard/ClipAngelTextFilterOptionsScreenshot.png)
+![ClipAngel Text Filter Options Screenshot](/assets/Posts/2021-07-17-Master-the-Windows-copy-paste-clipboard/ClipAngelTextFilterOptionsScreenshot.png)
 
 Searching works as you would expect; simply open ClipAngel and start typing.
 
-![ClipAngel Search Screenshot](/assets/Posts/2021-07-07-Master-the-Windows-copy-paste-clipboard/ClipAngelSearchScreenshot.png)
+![ClipAngel Search Screenshot](/assets/Posts/2021-07-17-Master-the-Windows-copy-paste-clipboard/ClipAngelSearchScreenshot.png)
 
 ClipAngel provides a few nice features that Ditto does not, such as showing which application a clip was copied from, and the ability to filter clips by various criteria.
 For example, you can have the list show only image clips, clips that contain an email address, or clips created between a certain date range.
 Those additional filter options are great for when you can't remember specific text from the clip that you're searching for.
 
-![ClipAngel List Filter Options Screenshot](/assets/Posts/2021-07-07-Master-the-Windows-copy-paste-clipboard/ClipAngelListFilterOptionsScreenshot.png)
+![ClipAngel List Filter Options Screenshot](/assets/Posts/2021-07-17-Master-the-Windows-copy-paste-clipboard/ClipAngelListFilterOptionsScreenshot.png)
 
 I personally prefer Ditto for it's minimalistic user interface and ton of configurable options, but you may prefer ClipAngel.
 
