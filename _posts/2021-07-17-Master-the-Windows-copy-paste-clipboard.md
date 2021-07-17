@@ -218,6 +218,9 @@ In this post we looked at what the clipboard is, it's basic operations, how to l
 We looked at the Ditto and ClipAngel clipboard managers, both of which are free and still under active development, so their feature sets may continue to expand and improve.
 There are other options out there, but of the ones I tried these 2 were my favourite and are the ones I'd recommend.
 
+Do you use a different clipboard manager that you think is better?
+Let me know in the comments!
+
 If you're not using a clipboard manager yet, I hope you'll consider it, and that it makes you more productive.
 
 Happy copy-pasting :)
