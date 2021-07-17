@@ -199,13 +199,17 @@ The preview window is nice when wanting to quickly view images or very long text
 
 ![ClipAngel Text Filter Options Screenshot](/assets/Posts/2021-07-07-Master-the-Windows-copy-paste-clipboard/ClipAngelTextFilterOptionsScreenshot.png)
 
-I personally prefer Ditto for it's minimalistic user interface and ton of configurable options, but you may prefer ClipAngel.
+Searching works as you would expect; simply open ClipAngel and start typing.
 
-ClipAngel does provide a few nice additional features that Ditto does not, such as showing which application a clip was copied from, and the ability to filter clips by various criteria.
+![ClipAngel Search Screenshot](/assets/Posts/2021-07-07-Master-the-Windows-copy-paste-clipboard/ClipAngelSearchScreenshot.png)
+
+ClipAngel provides a few nice features that Ditto does not, such as showing which application a clip was copied from, and the ability to filter clips by various criteria.
 For example, you can have the list show only image clips, clips that contain an email address, or clips created between a certain date range.
 Those additional filter options are great for when you can't remember specific text from the clip that you're searching for.
 
 ![ClipAngel List Filter Options Screenshot](/assets/Posts/2021-07-07-Master-the-Windows-copy-paste-clipboard/ClipAngelListFilterOptionsScreenshot.png)
+
+I personally prefer Ditto for it's minimalistic user interface and ton of configurable options, but you may prefer ClipAngel.
 
 ## Conclusion
 
