@@ -72,7 +72,7 @@ Go ahead, press <kbd>Windows Key</kbd> + <kbd>V</kbd> right now. I'll wait.....
 
 Once enabled, just start copying things.
 If you want to paste the last thing you copied, use <kbd>Ctrl</kbd> + <kbd>V</kbd> as usual.
-If you want to access something you copied earlier though, use <kbd>Windows Key</kbd> + <kbd>V</kbd> and the Clipboard History window will appear and show you the last clips you copied.
+If you want to paste something you copied earlier though, use <kbd>Windows Key</kbd> + <kbd>V</kbd> and the Clipboard History window will appear and show you the last clips you copied.
 From there, choose the clip that you want and it will be pasted into your application.
 If you click away from the Clipboard History window, it will close without pasting anything.
 
