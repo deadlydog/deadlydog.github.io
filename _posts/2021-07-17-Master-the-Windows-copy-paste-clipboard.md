@@ -68,10 +68,13 @@ This feature includes the following benefits:
 To access the Clipboard History feature simply use <kbd>Windows Key</kbd> + <kbd>V</kbd>.
 If the Clipboard History feature is not enabled, the window will prompt you to turn it on.
 
+Go ahead, press <kbd>Windows Key</kbd> + <kbd>V</kbd> right now. I'll wait.....
+
 Once enabled, just start copying things.
-If you want to paste the last thing you copied, then use <kbd>Ctrl</kbd> + <kbd>V</kbd> as usual to paste.
+If you want to paste the last thing you copied, use <kbd>Ctrl</kbd> + <kbd>V</kbd> as usual.
 If you want to access something you copied earlier though, use <kbd>Windows Key</kbd> + <kbd>V</kbd> and the Clipboard History window will appear and show you the last clips you copied.
 From there, choose the clip that you want and it will be pasted into your application.
+If you click away from the Clipboard History window, it will close without pasting anything.
 
 ![Windows 10 Clipboard History Screenshot](/assets/Posts/2021-07-17-Master-the-Windows-copy-paste-clipboard/Windows10ClipboardHistoryScreenshot.png)
 
