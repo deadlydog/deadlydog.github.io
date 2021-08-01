@@ -32,7 +32,7 @@ The software listed here has been created in my spare time, and most is free, op
 - [Wait Azure DevOps Extension](https://github.com/deadlydog/AzureDevOps.Wait) ([Marketplace](https://marketplace.visualstudio.com/items?itemName=deadlydog.WaitBuildAndReleaseTask)) - Add a delay to your build and deployment pipelines.
 - [Windows Scheduled Tasks Azure DevOps Extension](https://github.com/deadlydog/AzureDevOps.WindowsScheduledTasks) ([Marketplace](https://marketplace.visualstudio.com/items?itemName=deadlydog.WindowsScheduledTasksBuildAndReleaseTasks)) - Easily install, uninstall, enable, disable, start, and stop Windows Scheduled Tasks from your deployment pipelines.
 
-Videos I've made on [my public YouTube account](https://www.youtube.com/user/deadlydog/videos):
+Videos I've made on [my YouTube channel](https://www.youtube.com/user/deadlydog/videos):
 
 - [Setup a website in Azure with CI / CD from your Git repo using Azure DevOps (PHP example)](https://www.youtube.com/watch?v=On_5K7Vy-m8)
 
