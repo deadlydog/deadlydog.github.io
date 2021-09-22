@@ -1,0 +1,9 @@
+_id: b2e2c030-1b93-11ec-8c1e-df0fd2071d71
+message: >-
+  The terminal seems to launch from the location the script is located in. How
+  to fix this? I'd rather have it start in `%USERPROFILE%.`
+name: Ayon
+email: e04706647ad92d20f11c948923aed1d1
+url: ''
+hidden: ''
+date: '2021-09-22T10:56:12.090Z'
