@@ -76,6 +76,7 @@ This doesn't include the `_config.yml` though, as we're expected to set custom s
 Here's a list of places I've changed code. This typically meant copying the file from the forked minimal-mistakes repo and overriding parts of it:
 
 - `_data/navigation.yml`: Added Home navigation menu item and commented out Tags.
+- `_includes/comments.html`: Added parameter to sort comments by date.
 - `_includes/footer.html`: Added code to the bottom of the file that:
   - Adds advertisements.
   - Adds a Donate section.
