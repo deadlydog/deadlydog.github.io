@@ -27,9 +27,9 @@ minimal_mistakes_skin: "default" # "air", "aqua", "contrast", "dark", "dirt", "n
 # in the templates via {{ site.myvariable }}.
 locale: "en-US"
 title: "Daniel Schroeder's Programming Blog"
+subtitle: "Sharing my tips, tricks, and code to help other developers be more productive."
 # title_separator: "-"
 name: "Daniel Schroeder"
-description: "Sharing my tips, tricks, and code to help other developers be more productive."
 url: "https://blog.danskingdom.com" # "https://deadlydog.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl: # the subpath of your site, e.g. "/blog"
 repository: "deadlydog/deadlydog.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"

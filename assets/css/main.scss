@@ -35,14 +35,6 @@ $type-size-8 : 0.625em; // ~10px
 	font-size: $type-size-6
 }
 
-// Create some new styles for our site description customization, which is referenced in masthead.html.
-.DansSiteDescription
-{
-	margin: 0;
-	padding: 0;
-	font-size: $type-size-6;
-}
-
 // Reduce the amount of whitespace above and below the 'Recent Posts' heading on the home page.
 #home-page-recent-posts
 {
