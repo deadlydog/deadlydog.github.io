@@ -26,7 +26,8 @@ e.g. `bundle exec jekyll serve --incremental`.
 However, this will not rebuilt the site when making site-wide changes, such as changes to the layout or styles.
 
 Some features are only enabled for `production` builds (e.g. comments, advertisements).
-To build in production mode, use `JEKYLL_ENV=production bundle exec jekyll serve -I`. Also, it doesn't seem to work from PowerShell or Cmd; you must run it from Bash.
+To build in production mode, use `JEKYLL_ENV=production bundle exec jekyll serve -I`.
+Also, it doesn't seem to work from PowerShell or Cmd; you must run it from Bash.
 
 If you've written a draft post in the `_drafts` directory and want it to show up on the site, use `bundle exec jekyll serve --incremental --draft` to start Jekyll.
 
@@ -45,6 +46,19 @@ remote_theme: mmistakes/minimal-mistakes@[tag|commit|branch]
 to use a newer tag/commit from [the theme repo][MinimalMistakesThemeGitHubRepoUrl].
 
 Additionally, since we are overriding some files (see the Customizations section below), you may also need to update those files with newer versions if they have been changed in theme updates.
+
+#### Updating to a newer version of the theme
+
+To update to a newer version of [the minimal-mistakes theme][MinimalMistakesThemeGitHubRepoUrl], do the following:
+
+1. Find the latest stable tag from [the theme's changelog](https://github.com/mmistakes/minimal-mistakes/blob/master/CHANGELOG.md).
+1. Update the `_config.yml` file's `remote_theme` attribute to use that tag.
+1. Checkout [the minimal-mistakes theme][MinimalMistakesThemeGitHubRepoUrl] repo for that specific tag.
+1. In this repo, find all of the files that have `Dan's Customizations` in them.
+You will want to copy the code from the files of the official minimal-mistakes repo into the files in this repo, being sure to keep the customizations sections though, if still necessary.
+e.g. Copy all of the code from the official footer.html file into this repo's footer.html file, but keep the `Dan's Customizations` section.
+1. Test the site locally to ensure it still works as expected.
+1. Commit the changes with an appropriate comment and push them to GitHub.
 
 ### Installing new gems and themes
 
@@ -66,7 +80,6 @@ Here's a list of places I've changed code. This typically meant copying the file
   - Adds advertisements.
   - Adds a Donate section.
   - Dynamically adds a "Copy to clipboard" button to all code blocks.
-- `_includes/masthead.html`: Added site description below site title.
 - `_layouts/home.html`: Added id to 'Recent Posts' heading so we can adjust whitespace around it.
 - `_config.yml` file.
 - `assets/css/main.scss`:
