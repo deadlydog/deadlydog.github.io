@@ -21,10 +21,11 @@
 	font-size: $type-size-4;
 }
 
-// Increase the subtitle font size a bit.
+// Increase the subtitle font size a bit and remove the bold from it.
 .site-subtitle
 {
 	font-size: $type-size-6;
+	font-weight: normal;
 }
 
 // Reduce the size of the comments text in our posts a bit.
