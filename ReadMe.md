@@ -46,6 +46,19 @@ to use a newer tag/commit from [the theme repo][MinimalMistakesThemeGitHubRepoUr
 
 Additionally, since we are overriding some files (see the Customizations section below), you may also need to update those files with newer versions if they have been changed in theme updates.
 
+#### Updating to a newer version of the theme
+
+To update to a newer version of [the minimal-mistakes theme][MinimalMistakesThemeGitHubRepoUrl], do the following:
+
+1. Find the latest stable tag from [the theme's changelog](https://github.com/mmistakes/minimal-mistakes/blob/master/CHANGELOG.md).
+1. Update the `_config.yml` file's `remote_theme` attribute to use that tag.
+1. Checkout [the minimal-mistakes theme][MinimalMistakesThemeGitHubRepoUrl] repo for that specific tag.
+1. In this repo, find all of the files that have `Dan's Customizations` in them.
+You will want to copy the code from the files of the official minimal-mistakes repo into the files in this repo, being sure to keep the customizations sections though, if still necessary.
+e.g. Copy all of the code from the official footer.html file into this repo's footer.html file, but keep the `Dan's Customizations` section.
+1. Test the site locally to ensure it still works as expected.
+1. Commit the changes with an appropriate comment and push them to GitHub.
+
 ### Installing new gems and themes
 
 Simply modify the `Gemfile` with the new gem to use, and then run `bundle install` to have it install the new gems.
