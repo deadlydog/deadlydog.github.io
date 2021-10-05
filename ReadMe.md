@@ -30,7 +30,7 @@ Some features are only enabled for `production` builds (e.g. comments, advertise
 To build in production mode, you must create/set an environment variable `JEKYLL_ENV=production` before starting jekyll.
 You can start Jekyll in production mode using either of these one-liner commands:
 
-- PowerShell - `$Env:JEKYLL_ENV='production; bundle exec jekyll serve'`
+- PowerShell - `$Env:JEKYLL_ENV='production'; bundle exec jekyll serve`
 - Bash - `JEKYLL_ENV=production bundle exec jekyll serve`
 
 If you've written a draft post in the `_drafts` directory and want it to show up on the site, use `bundle exec jekyll serve --incremental --draft` to start Jekyll.
