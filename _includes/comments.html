@@ -26,13 +26,13 @@
 										create a new array of plain objects and then sort by the comment date. -->
 
 							<!-- Declare new comments array and add comment objects to it. -->
-							{% assign newComments = '' | split: '' %}
+							{% assign commentObjects = '' | split: '' %}
 							{% for comment in comments %}
-								{% assign newComment = comment[1] %}
-								{% assign newComments = newComments | push: newComment %}
+								{% assign commentObject = comment[1] %}
+								{% assign commentObjects = commentObjects | push: commentObject %}
 							{% endfor %}
 
-							{% assign comments = newComments | sort: "date" %}
+							{% assign comments = commentObjects | sort: "date" %}
 
 							<!-- This code existed already, but we had to change all of the `comment[1].<property>` to `comment.<property>`. -->
 							{% for comment in comments %}
