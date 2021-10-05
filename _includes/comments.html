@@ -17,9 +17,11 @@
 					<div class="js-comments">
 						{% if site.data.comments[page.slug] %}
 							<h4 class="page__comments-title">{{ site.data.ui-text[site.locale].comments_title | default: "Comments" }}</h4>
-							{% assign comments = site.data.comments[page.slug] | sort %}
 
 							<!--========== Dan's Customizations START ==========-->
+							<!-- This line already existed, but removed the unnecessary sort filter. -->
+							{% assign comments = site.data.comments[page.slug] %}
+
 							<!-- In order to sort by date we must have an array of objects, not an array of arrays, so
 										create a new array of plain objects and then sort by the comment date. -->
 
