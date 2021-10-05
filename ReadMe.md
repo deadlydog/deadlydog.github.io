@@ -24,14 +24,14 @@ To run Jekyll locally, from the site directory run `bundle exec jekyll serve`.
 
 You can include the `--incremental` (or `-I`) parameter to do faster incremental builds.
 e.g. `bundle exec jekyll serve --incremental`.
-However, this will not rebuilt the site when making site-wide changes, such as changes to the layout or styles.
+However, this will not rebuild the site when making site-wide changes, such as changes to the layout or styles.
 
 Some features are only enabled for `production` builds (e.g. comments, advertisements).
 To build in production mode, you must create/set an environment variable `JEKYLL_ENV=production` before starting jekyll.
 You can start Jekyll in production mode using either of these one-liner commands:
 
 - PowerShell - `$Env:JEKYLL_ENV='production; bundle exec jekyll serve'`
-- Bash - `JEKYLL_ENV=production bundle exec jekyll serve -I`
+- Bash - `JEKYLL_ENV=production bundle exec jekyll serve`
 
 If you've written a draft post in the `_drafts` directory and want it to show up on the site, use `bundle exec jekyll serve --incremental --draft` to start Jekyll.
 
