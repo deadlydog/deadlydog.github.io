@@ -21,17 +21,21 @@ I currently use the [Minimal Mistakes theme][MinimalMistakesThemeGitHubRepoUrl].
 ### Run Jekyll locally
 
 To run Jekyll locally, from the site directory run `bundle exec jekyll serve`.
-Include the `--incremental` (or `-I`) parameter to do faster incremental builds.
+
+You can include the `--incremental` (or `-I`) parameter to do faster incremental builds.
 e.g. `bundle exec jekyll serve --incremental`.
 However, this will not rebuilt the site when making site-wide changes, such as changes to the layout or styles.
 
 Some features are only enabled for `production` builds (e.g. comments, advertisements).
-To build in production mode, use `JEKYLL_ENV=production bundle exec jekyll serve -I`.
-Also, it doesn't seem to work from PowerShell or Cmd; you must run it from Bash.
+To build in production mode, you must create/set an environment variable `JEKYLL_ENV=production` before starting jekyll.
+You can start Jekyll in production mode using either of these one-liner commands:
+
+- PowerShell - `$Env:JEKYLL_ENV='production; bundle exec jekyll serve'`
+- Bash - `JEKYLL_ENV=production bundle exec jekyll serve -I`
 
 If you've written a draft post in the `_drafts` directory and want it to show up on the site, use `bundle exec jekyll serve --incremental --draft` to start Jekyll.
 
-Jekyll typically runs locally at http://127.0.0.1:4000/.
+Jekyll typically runs locally at <http://127.0.0.1:4000/>.
 
 ### Keeping up to date
 
