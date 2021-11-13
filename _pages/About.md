@@ -9,9 +9,12 @@ My name is Daniel Schroeder, my online handle is usually `deadlydog`, and I live
 
 You can contact me on Twitter [@deadlydog](https://twitter.com/deadlydog), or [send me an email](mailto:deadlydog@hotmail.com).
 
-### Some Software I've Created
+## Things I've Created
 
-The software listed here has been created in my spare time, and most is free, open source, and can be found in my public [GitHub repositories](https://github.com/deadlydog):
+### Software
+
+Below is some software I've created in my spare time over the years.
+Almost all software I create is free, open source, and can be found in my public [GitHub repositories](https://github.com/deadlydog):
 
 - [AHK Command Picker](https://github.com/deadlydog/AHKCommandPicker) - An AutoHotkey plugin that makes it easier to automate everything you do on your PC.
 - [Auto Update Project's Minimum Required ClickOnce Version](https://github.com/deadlydog/AutoUpdateProjectsMinimumRequiredClickOnceVersion) ([NuGet](https://www.nuget.org/packages/AutoUpdateProjectsMinimumRequiredClickOnceVersion)) - NuGet package to easily ensure users of your ClickOnce apps are always using the latest version.
@@ -30,12 +33,19 @@ The software listed here has been created in my spare time, and most is free, op
 - [Wait Azure DevOps Extension](https://github.com/deadlydog/AzureDevOps.Wait) ([Marketplace](https://marketplace.visualstudio.com/items?itemName=deadlydog.WaitBuildAndReleaseTask)) - Add a delay to your build and deployment pipelines.
 - [Windows Scheduled Tasks Azure DevOps Extension](https://github.com/deadlydog/AzureDevOps.WindowsScheduledTasks) ([Marketplace](https://marketplace.visualstudio.com/items?itemName=deadlydog.WindowsScheduledTasksBuildAndReleaseTasks)) - Easily install, uninstall, enable, disable, start, and stop Windows Scheduled Tasks from your deployment pipelines.
 
-Videos I've made on [my YouTube channel](https://www.youtube.com/user/deadlydog/videos):
+### Videos
+
+You can see all of the videos I've made on [my YouTube channel](https://www.youtube.com/user/deadlydog/videos), but here are a few:
 
 - [Setup a website in Azure with CI / CD from your Git repo using Azure DevOps (PHP example)](https://www.youtube.com/watch?v=On_5K7Vy-m8)
+- [Master the copy-paste clipboard in Windows with Ditto and ClipAngel (3 of 3)](https://www.youtube.com/watch?v=bBvKvJfWw2c&)
+- [Can't delete a file? Easily find which process has a file locked in Windows without 3rd party apps](https://www.youtube.com/watch?v=g4TGzaBER1U)
 
-And here are some websites that I've made:
+### Websites
 
+Here are some websites that I've made:
+
+- (Current) [Blog.DansKingdom.com](https://blog.danskingdom.com) - My personal programming blog (the website you're on right now).
 - (2009) [XnaParticles.com](http://www.xnaparticles.com/) - The project home of my Dynamic Particle System Framework.
 - (2008) TheHotMap.com - An interactive search engine interface. This was created by myself and one other person (no longer exists).
 - (2007) [DansKingdom.com](http://danskingdom.com/) - My personal site (very old and outdated).
