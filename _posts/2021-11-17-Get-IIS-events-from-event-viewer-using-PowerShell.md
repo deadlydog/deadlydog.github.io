@@ -26,7 +26,7 @@ Common types of IIS problem events recorded to the Event Viewer include:
 
 There's [plenty of](https://www.howtogeek.com/123646/htg-explains-what-the-windows-event-viewer-is-and-how-you-can-use-it/) [other articles](https://www.dummies.com/computers/operating-systems/windows-10/how-to-use-event-viewer-in-windows-10/) describing how to use the Windows Event Viewer GUI, [filter in it](https://www.papertrail.com/solution/tips/windows-event-log-filtering-techniques/), and [query it using PowerShell](https://evotec.xyz/powershell-everything-you-wanted-to-know-about-event-logs/), so I won't cover that here.
 
-Side note: In this post I will be using [the Get-EventLog cmdlet](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.management/get-eventlog?view=powershell-5.1).
+__Side note:__ In this post I will be using [the Get-EventLog cmdlet](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.management/get-eventlog?view=powershell-5.1).
 The MS docs say that [the Get-WinEvent cmdlet](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.diagnostics/get-winevent?view=powershell-7.2) is replacing it, but I find Get-EventLog much easier to work with and more intuitive, and the docs say it will be kept around for backward compatibility.
 
 ## Getting IIS events using PowerShell
