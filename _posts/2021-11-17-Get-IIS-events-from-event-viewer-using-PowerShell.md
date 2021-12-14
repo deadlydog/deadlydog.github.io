@@ -2,7 +2,7 @@
 title: "Get IIS events from Event Viewer using PowerShell"
 permalink: /Get-IIS-events-from-Event-Viewer-using-PowerShell/
 #date: 2099-01-15T00:00:00-06:00
-#last_modified_at: 2099-01-22T00:00:00-06:00
+last_modified_at: 2021-12-13T00:00:00-06:00
 comments_locked: false
 categories:
   - IIS
@@ -63,6 +63,12 @@ As with any PowerShell command, you can dump the results to a text file using `>
 
 ```powershell
 Get-EventLog -LogName System -Source WAS -Newest 10 | Format-List > C:\temp.txt
+```
+
+Or if you want the output dumped to both the console and a text file, use `Tee-Object`:
+
+```powershell
+Get-EventLog -LogName System -Source WAS -Newest 10 | Format-List | Tee-Object -FilePath C:\temp.txt
 ```
 
 Some IIS logging events, such as request timeouts, are also written to the Windows Event Viewer.
