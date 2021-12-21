@@ -70,21 +70,26 @@ kbd
 }
 
 // Style for our dynamically generated Copy Code Snippet buttons.
+// We use Font Awesome for the button icon.
 .CopyCodeSnippetToClipboardButton
 {
-	float: right;
+	// Hover the button on the top-right of the parent element.
+	position: absolute;
+	right: 0.5em;
+
 	cursor: pointer;
+	font-size: 1.5em;	// Make copy icon a bit larger.
 }
 
 .CopyCodeSnippetToClipboardButton:hover
 {
-	font-weight: bolder;
+	font-weight: bolder;	// This changes the Font Awesome icon to a bolder version.
 }
 
 .CopyCodeSnippetToClipboardButton.Tooltip
 {
-	position: relative;	// Ensure the TooltipText element's position is relative to the element that has the tooltip.
-	font-size: 1.5em;	// Make copy icon a bit larger.
+	// Marker class to indicate the element that has a tooltip, so we can show and hide the TooltipText when hovered over.
+	visibility: visible;	// Simply put this property here to avoid IDE empty CSS ruleset warnings.
 }
 
 .CopyCodeSnippetToClipboardButton.Tooltip .TooltipText
