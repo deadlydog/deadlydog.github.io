@@ -21,7 +21,8 @@ function AddCopyCodeSnippetButtonToCodeElement(codeElement)
 	// This may not be the most performant way to do this, as it will keep all code snippet text in memory in the
 	// anonymous function defined below, but it's definitely the simplest. If we find this causes problems, we can
 	// change back to storing only the codeElement.id and dynamically retrieving the contents in the CopyTextToClipboard function.
-	var textToCopyToClipboard = codeElement.innerText;
+	var rawTextToCopyToClipboard = codeElement.innerText;
+	var textToCopyToClipboard = rawTextToCopyToClipboard.trim();
 
 	var buttonTooltipElement = document.createElement("span");
 	buttonTooltipElement.classList = "TooltipText";
