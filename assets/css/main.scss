@@ -88,7 +88,8 @@ kbd
 
 .CopyCodeSnippetToClipboardButton.Tooltip
 {
-
+	// Marker class to indicate the element that has a tooltip, so we can show and hide the TooltipText when hovered over.
+	visibility: visible;	// Simply put this property here to avoid IDE empty CSS ruleset warnings.
 }
 
 .CopyCodeSnippetToClipboardButton.Tooltip .TooltipText
