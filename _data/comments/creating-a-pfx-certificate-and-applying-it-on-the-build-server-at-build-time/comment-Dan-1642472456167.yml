@@ -1,0 +1,12 @@
+_id: 4430c820-7805-11ec-850b-0581dd22b7d0
+message: >-
+  @shalini you likely have your $PfxFilePath parameter or the Working Folder set
+  incorrectly, as it's saying it can't find the file .pfx file at the path
+  you're providing. If you're providing a relative path for the $PfxFilePath
+  parameter it will look for it in the Working Folder; otherwise you can try
+  providing the absolute file path to the .pfx file if you have it.
+name: Dan
+email: c8addda594c8b338f1e3934e73505d0c
+url: 'https://blog.danskingdom.com'
+hidden: ''
+date: '2022-01-18T02:20:56.163Z'
