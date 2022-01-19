@@ -18,3 +18,6 @@ group :jekyll_plugins do
   gem "jekyll-include-cache"
   gem "jekyll-algolia"
 end
+
+# Required for Ruby v3+
+gem "webrick", "~> 1.7"
