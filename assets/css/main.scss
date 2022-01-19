@@ -197,9 +197,8 @@ kbd
 	top: 50%;
 	transform: translate(-50%, -50%);
 
-	width: 80%;
+	width: 85%;
 	max-width: 600px;
-	padding: 10px;
 	overflow: auto;	// Enable scroll if needed.
 	background-color: rgb(0, 0, 0);	// Fallback color.
 	background-color: rgba(0, 0, 0, 0.9);
