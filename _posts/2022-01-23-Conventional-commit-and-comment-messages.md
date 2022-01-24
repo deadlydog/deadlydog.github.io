@@ -12,7 +12,8 @@ tags:
   - Capitals
 ---
 
-Let's take a quick look at what Conventional Commits and Conventional Comments are and why you likely want to adopt them.
+Conventional Commits and Conventional Comments can help you and your team communicate intent more effectively, saving time and preventing miscommunication.
+Let's look at what they are and why you likely want to adopt them.
 
 ## Conventional Commits
 
