@@ -1,5 +1,5 @@
 ---
-title: "Conventional Commit and Comment messages"
+title: "Communicate intent more effectively with Conventional Commit and Comment messages"
 permalink: /2022-01-23-Conventional-Commit-and-Comment-messages/
 #date: 2099-01-15T00:00:00-06:00
 #last_modified_at: 2099-01-22T00:00:00-06:00
