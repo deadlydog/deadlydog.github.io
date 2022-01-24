@@ -5,11 +5,11 @@ permalink: /2022-01-23-Conventional-Commit-and-Comment-messages/
 #last_modified_at: 2099-01-22T00:00:00-06:00
 comments_locked: false
 categories:
-  - Blog
+  - Software Development
 tags:
-  - Should all
-  - Start with
-  - Capitals
+  - Comment
+  - Commit
+  - Pull Request
 ---
 
 Conventional Commits and Conventional Comments can help you and your team communicate intent more effectively, saving time and preventing miscommunication.
