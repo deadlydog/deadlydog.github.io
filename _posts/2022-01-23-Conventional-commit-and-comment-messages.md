@@ -12,8 +12,8 @@ tags:
   - Pull Request
 ---
 
-Conventional Commits and Conventional Comments can help you and your team communicate intent more effectively, saving time and preventing miscommunication.
-Let's look at what they are and why you likely want to adopt them.
+Conventional Commits and Conventional Comments can save you and your team time and prevent miscommunications by expressing your intent more clearly.
+Let's look at what they are and why you would want to adopt them.
 
 ## ✅ Conventional Commits
 
@@ -106,10 +106,17 @@ I only recently discovered this concept of Conventional Comments so I haven't be
 
 ## Conclusion
 
-The thing I like about both Conventional Commits and Conventional Comments is that the labels are intuitive enough that everyone can understand them, even people who have never heard of these concepts before.
+One thing I really like about both Conventional Commits and Conventional Comments is that the labels are intuitive enough that everyone can understand them, even people who have never heard of these concepts before.
 
 When writing commit and comment messages, it can take a bit of time to remember the various different labels and decorators, but once you've used them for a short while it quickly becomes muscle memory.
 
-Providing additional clarity to your messages by adding a simple label is an easy win, and it's well worth the short time commitment to learn and use the labels.
+Providing additional clarity to your messages by adding a simple label is an easy win, and it's well worth the small time investment to learn and use the labels.
+
+In short, Conventional Commits and Conventional Comments are great because they:
+
+- Make it easier for others (and your future self) to understand the intent of your code / comment.
+- Allow you to quickly know at a glance what to expect in the rest of the message by setting the context.
+- Enable tooling to be put in place to do things like automate manual tasks, collect metrics, etc.
+- Are succinct, intuitive, easy to learn, and easy to use.
 
 Happy code committing and reviewing!
