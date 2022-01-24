@@ -12,7 +12,7 @@ tags:
   - Pull Request
 ---
 
-Conventional Commits and Conventional Comments can save you and your team time and prevent miscommunications by expressing your intent more clearly.
+Conventional Commits and Conventional Comments can save you and your team time and prevent miscommunications by expressing intent more clearly.
 Let's look at what they are and why you would want to adopt them.
 
 ## ✅ Conventional Commits
