@@ -42,7 +42,7 @@ and
 
 > docs: Update outdated hyperlink
 
-you know that the commits make changes to tests and documentation by use of the `test` and `docs` labels respectively, meaning no application or business logic code has been changed and the changes should be safe to promote to production.
+you know that the commits are making changes to tests and documentation by use of the `test` and `docs` labels respectively, meaning no application or business logic code has been changed and the changes should be safe to promote to production.
 
 Commit messages like:
 
@@ -52,7 +52,7 @@ Commit messages like:
 
 use the `!` and `BREAKING CHANGE` labels to make it obvious that the change is breaking backward compatibility, and further considerations should be made before merging the change into production.
 
-In addition to making commit messages more human understandable, it also allows tooling to be built around them, like [automatic semantic versioning from commit messages](https://medium.com/agoda-engineering/automating-versioning-and-releases-using-semantic-release-6ed355ede742) where the tool is able to calculate what the next [semantic version](https://semver.org) should be based on the commit messages and the types of changes in them.
+In addition to making commit messages more human understandable, it also allows tooling to be built around them, like [automatic semantic versioning from commit messages](https://medium.com/agoda-engineering/automating-versioning-and-releases-using-semantic-release-6ed355ede742) where the tool is able to calculate what the next [semantic version](https://semver.org) should be based on the commit messages and the types of changes in them, removing the burden from a human having to figure out the new version number manually.
 
 I also find using Conventional Commit messages helpful for Pull Request (PR) descriptions.
 It allows reviewers to quickly scan the description and know what types of changes are included in the PR.
@@ -81,7 +81,7 @@ or
 
 Code styling is often a personal choice, and in the first example it's not clear if the commenter likes how compact the code is, or if they would prefer it changed to be more readable.
 In the second example, it's clear the commenter is a fan of how compact the code is because they used the `praise` label.
-In the third example, you can tell the commenter doesn't like how compact the code is and would prefer it be changed, but that it shouldn't be considered a blocker to getting the pull request merged in.
+In the third example, you can tell the commenter doesn't like how compact the code is and would prefer it be changed, but that it shouldn't be considered a blocker to getting the pull request merged in, since it's using the `(non-blocking)` decorator.
 
 Here's some more example Conventional Comments:
 
@@ -104,9 +104,10 @@ I only recently discovered this concept of Conventional Comments, but it seems l
 
 ## Conclusion
 
-The thing I like about both Conventional Commits and Conventional Comments is that the labels are intuitive enough that even people who have never seen them before can understand them.
-It can take a bit of time to remember the various different labels and decorators, but once you've used them for a short while it quickly becomes muscle memory.
+The thing I like about both Conventional Commits and Conventional Comments is that the labels are intuitive enough that everyone can understand them, even people who have never heard of these concepts before.
 
-Providing additional clarity to your messages by adding a simple label is an easy win, and well worth the short time commitment to learn the labels.
+When writing commit and comment messages, it can take a bit of time to remember the various different labels and decorators, but once you've used them for a short while it quickly becomes muscle memory.
 
-Happy PR reviewing!
+Providing additional clarity to your messages by adding a simple label is an easy win, and it's well worth the short time commitment to learn and use the labels.
+
+Happy code committing and reviewing!
