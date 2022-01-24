@@ -42,7 +42,7 @@ and
 
 > docs: Update outdated hyperlink
 
-you know that the commits are making changes to tests and documentation by use of the `test` and `docs` labels respectively, meaning no application or business logic code has been changed and the changes should be safe to promote to production.
+you know that the commits are making changes to tests and documentation, by use of the `test` and `docs` labels respectively, meaning no application or business logic code has been changed and the changes should be safe to promote to production.
 
 Commit messages like:
 
