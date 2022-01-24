@@ -15,7 +15,7 @@ tags:
 Conventional Commits and Conventional Comments can help you and your team communicate intent more effectively, saving time and preventing miscommunication.
 Let's look at what they are and why you likely want to adopt them.
 
-## Conventional Commits
+## ✅ Conventional Commits
 
 You may have heard of [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/), which is a convention for making your source control commit messages clearer and easier to understand by using standard labels in your commit messages.
 It allows you to, at a glance, tell if the commit is a bug fix, a new feature, a refactor, etc.
@@ -61,12 +61,11 @@ Azure DevOps has a handy feature that allows the commit messages to easily be co
 
 Conventional Commit messages are not new.
 I've been using it for years and quite enjoy it.
-Be sure to [check out the spec](https://www.conventionalcommits.org/en/v1.0.0/) to see all of the supported labels.
+Be sure to [check out the spec](https://www.conventionalcommits.org/en/v1.0.0/) to see the expected formatting and all of the defined labels.
 
-## Conventional comments
+## 💬 Conventional Comments
 
-Recently I came across [this post on Conventional Comments](https://a-hemdan.medium.com/conventional-comments-1f83f56a7a48).
-It takes the same concept as Conventional Commits and proposes label conventions for your Pull Request (PR) comments, with the goal being to make the intent of your review comments more clear to other readers.
+[Conventional Comments](https://conventionalcomments.org) is a similar concept to Conventional Commits, but it proposes labels to use in your Pull Request (PR) comments, with the goal being to make the intent of your code review comments more clear to other readers.
 
 Here's an example of a typical comment:
 
@@ -98,8 +97,11 @@ The `thought` label indicates that this comment shouldn't block the PR, but that
 
 The `if-minor` decorator indicates to only consider the `suggestion` for this PR if it's a minor change that's easy to make, helping to avoid scope creep.
 
-Conventional Comments has [a dedicated website and spec](https://conventionalcomments.org), so be sure to check it out to see the formatting and all of the available labels.
-There's even [a Chrome extension](https://chrome.google.com/webstore/detail/conventional-comments/pagggmojbbphjnpcjeeniigdkglamffk) to help you use them in your PR comments.
+Be sure to [check out the Conventional Comments spec](https://conventionalcomments.org) to see all of the defined labels.
+
+Also be sure to check out [this blog post on Conventional Comments](https://a-hemdan.medium.com/conventional-comments-1f83f56a7a48) which explains the concept a bit further, and also contains some code that you can copy into GitHub to quickly create GitHub labels for each of the Conventional Comments labels.
+
+There's even [a Chrome extension](https://chrome.google.com/webstore/detail/conventional-comments/pagggmojbbphjnpcjeeniigdkglamffk) ([GitHub](https://github.com/AbdallahHemdan/Conventional-Buttons)) to help easily use them in your PR comments.
 
 I only recently discovered this concept of Conventional Comments, but it seems like an excellent idea, so I thought I'd share it 🙂.
 
