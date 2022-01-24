@@ -27,11 +27,11 @@ Here's an example of a regular commit message:
 
 And what the same commit might look like using Conventional Commit messages:
 
-> feat(cart): Show subtotal of items in cart
+> feat (cart): Show subtotal of items in cart
 
 or
 
-> fix(cart): Show subtotal of items in cart
+> fix (cart): Show subtotal of items in cart
 
 Notice how in the first example it wasn't clear if the change was introducing a new feature or fixing a bug, but it's obvious in the second and third examples by use of the `feat` and `fix` labels.
 
@@ -77,7 +77,7 @@ And what the same comment might look like using Conventional Comments:
 
 or
 
-> nitpick(non-blocking): This code is so compact
+> nitpick (non-blocking): This code is so compact
 
 Code styling is often a personal choice, and in the first example it's not clear if the commenter likes how compact the code is, or if they would prefer it changed to be more readable.
 In the second example, it's clear the commenter is a fan of how compact the code is because they used the `praise` label.
@@ -93,13 +93,13 @@ Using the `issue` label makes it clear that there will be a problem if the check
 
 The `thought` label indicates that this comment shouldn't block the PR, but that it's something we should consider for a future change.
 
-> suggestion(if-minor): Add validation to the checkout form
+> suggestion (if-minor): Add validation to the checkout form
 
 The `if-minor` decorator indicates to only consider the `suggestion` for this PR if it's a minor change that's easy to make, helping to avoid scope creep.
 
 Be sure to [check out the Conventional Comments spec](https://conventionalcomments.org) to see all of the defined labels.
 
-Also be sure to check out [this blog post on Conventional Comments](https://a-hemdan.medium.com/conventional-comments-1f83f56a7a48) which explains the concept a bit further, and also contains some code that you can copy into GitHub to quickly create GitHub labels for each of the Conventional Comments labels.
+Also be sure to check out [this blog post on Conventional Comments](https://a-hemdan.medium.com/conventional-comments-1f83f56a7a48) which explains the concept further, and also contains some code that you can copy into GitHub to quickly create GitHub saved replies for each of the Conventional Comments labels.
 
 There's even [a Chrome extension](https://chrome.google.com/webstore/detail/conventional-comments/pagggmojbbphjnpcjeeniigdkglamffk) ([GitHub](https://github.com/AbdallahHemdan/Conventional-Buttons)) to help easily use them in your PR comments.
 
