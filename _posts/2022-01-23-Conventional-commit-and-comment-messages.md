@@ -17,7 +17,7 @@ Let's look at what they are and why you likely want to adopt them.
 
 ## ✅ Conventional Commits
 
-You may have heard of [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/), which is a convention for making your source control commit messages clearer and easier to understand by using standard labels in your commit messages.
+[Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) is a convention for making your source control commit messages clearer and easier to understand by using standard labels in your commit messages.
 It allows you to, at a glance, tell if the commit is a bug fix, a new feature, a refactor, etc.
 From what I understand, it basically took what [Commitizen](https://github.com/commitizen/cz-cli) was doing and formalized it into a standard spec.
 
@@ -59,8 +59,7 @@ I also find using Conventional Commit messages helpful for Pull Request (PR) des
 It allows reviewers to quickly scan the description and know what types of changes are included in the PR.
 Azure DevOps has a handy feature that allows the commit messages to easily be copied into the PR description, which I'm hoping GitHub adopts soon.
 
-Conventional Commit messages are not new.
-I've been using it for years and quite enjoy it.
+I've been using Conventional Commit messages for years and find it very useful.
 Be sure to [check out the spec](https://www.conventionalcommits.org/en/v1.0.0/) to see the expected formatting and all of the defined labels.
 
 ## 💬 Conventional Comments
@@ -103,7 +102,7 @@ Also be sure to check out [this blog post on Conventional Comments](https://a-he
 
 There's even [a Chrome extension](https://chrome.google.com/webstore/detail/conventional-comments/pagggmojbbphjnpcjeeniigdkglamffk) ([GitHub](https://github.com/AbdallahHemdan/Conventional-Buttons)) to help easily use them in your PR comments.
 
-I only recently discovered this concept of Conventional Comments, but it seems like an excellent idea, so I thought I'd share it 🙂.
+I only recently discovered this concept of Conventional Comments so I haven't been using it as long, but it's an excellent idea and I thought I'd share it 🙂.
 
 ## Conclusion
 
