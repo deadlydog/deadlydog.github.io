@@ -25,7 +25,7 @@ Here's an example of a regular commit message:
 
 > Show subtotal of items in cart
 
-And what the same commit might look like using Conventional Commit messages:
+And what the same commit message might look like using Conventional Commit messages:
 
 > feat (cart): Show subtotal of items in cart
 
@@ -35,7 +35,7 @@ or
 
 Notice how in the first example it wasn't clear if the change was introducing a new feature or fixing a bug, but it's obvious in the second and third examples by use of the `feat` and `fix` labels.
 
-Similarly, simply by looking at commits like:
+Similarly, simply by looking at commit messages like:
 
 > test: Ensure cart total is correct
 
@@ -66,7 +66,7 @@ Be sure to [check out the spec](https://www.conventionalcommits.org/en/v1.0.0/) 
 
 [Conventional Comments](https://conventionalcomments.org) is a similar concept to Conventional Commits, but it proposes labels to use in your Pull Request (PR) comments, with the goal being to make the intent of your code review comments more clear to other readers.
 
-Here's an example of a typical comment:
+Here's an example of a typical code review comment:
 
 > This code is so compact
 
