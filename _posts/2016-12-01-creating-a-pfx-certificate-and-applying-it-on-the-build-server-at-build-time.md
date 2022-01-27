@@ -58,7 +58,9 @@ Now that the project has a pfx certificate, we will need to update our build ser
 Before building the solution, we will want to apply the certificate using this PowerShell script, _Import-PfxCertificate.ps1_:
 
 ```powershell
-param($PfxFilePath, $Password)
+param([string] $PfxFilePath, $Password)
+
+# You may provide a [string] or a [SecureString] for the $Password parameter.
 
 $absolutePfxFilePath = Resolve-Path -Path $PfxFilePath
 Write-Output "Importing store certificate &#39;$absolutePfxFilePath&#39;..."
