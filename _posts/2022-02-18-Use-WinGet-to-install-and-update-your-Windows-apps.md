@@ -57,15 +57,17 @@ Paste the command you copied from WinGet.run into the command prompt, hit enter,
 
 ![WinGet install Spotify screenshot](/assets/Posts/2022-02-18-Use-WinGet-to-install-and-update-your-Windows-apps/WinGetInstallSpotifyScreenshot.png)
 
-You can see here that the app was downloaded and installed in 24 seconds.
+You can see here that Spotify was downloaded and installed in 24 seconds.
+In this case, Spotify installed without prompting me for anything.
 
 You may get prompted by Windows UAC to allow the app installer to run if it requires elevated privileges.
 This can be avoided by opening your command prompt as administrator.
 
 ![Run command prompt as administrator](/assets/Posts/2022-02-18-Use-WinGet-to-install-and-update-your-Windows-apps/RunCommandPromptAsAdministratorScreenshot.png)
 
-Depending on the app, you may also get prompted to click through the app's install wizard.
-If you like, you can provide the `--silent` parameter to suppress the installer and have it install with the default options, if the app's installer supports it.
+Some apps show the install wizard while it installs, others don't.
+From my experience, most apps that do show the install wizard don't prompt you to do anything; you can just see it working.
+If you like, you can provide the `--silent` parameter to suppress showing the installer and have it install with the default options, if the app's installer supports it.
 
 ```shell
 winget install -e --id Spotify.Spotify --silent
