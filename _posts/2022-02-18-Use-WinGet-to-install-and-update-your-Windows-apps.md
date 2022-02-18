@@ -186,7 +186,7 @@ And one of the best parts, it's already pre-installed on Windows 10+, so there's
 
 Microsoft is currently looking at allowing the Microsoft Store to install Win32 apps as well.
 Hopefully once that's complete it will provide a similar experience to WinGet and pull apps from the same catalog.
-It would be great since the Microsoft Store apps not only auto-update, but also roam with your account, so once you log in on a computer it installs your apps with zero effort from you.
+It would be great since the Microsoft Store apps not only auto-update by themselves, but also roam with your account, so once you log in on a computer it installs your apps with zero effort from you.
 Unfortunately that future is not a reality yet, and it's too early to speculate what that user experience will be like, so in the meantime we can use WinGet to make our lives easier.
 
 Happy installing!
