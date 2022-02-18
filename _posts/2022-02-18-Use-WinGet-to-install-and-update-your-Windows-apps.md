@@ -172,6 +172,7 @@ winget upgrade -?
 
 If you're already using an alternate Windows package manager like Chocolatey or Scoop and are happy with it, stick with it.
 WinGet is still relatively new, so more mature alternatives may provide you with functionality that WinGet doesn't have yet, or have a larger catalog with more obscure apps that you use.
+One feature I'm personally looking forward to is [locking an app to a specific version](https://github.com/microsoft/winget-cli/issues/476) so it doesn't get updated when using the `winget update --all` command.
 
 I enjoy that WinGet is already installed by default, has every app I've looked for, and that I can use it to update apps that I've manually installed too.
 
@@ -190,3 +191,6 @@ It would be great since the Microsoft Store apps not only auto-update by themsel
 Unfortunately that future is not a reality yet, and it's too early to speculate what that user experience will be like, so in the meantime we can use WinGet to make our lives easier.
 
 Happy installing!
+
+> Update: There is one app that I couldn't find on WinGet yet, which is `Paint.Net`.
+> There's [a request open](https://forums.getpaint.net/topic/118574-please-add-paintnet-to-the-available-packages-for-windows-package-manager-winget/) for the app developer to considering putting it on WinGet.
