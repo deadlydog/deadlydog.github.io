@@ -34,7 +34,7 @@ There wasn't a single app I wanted that I couldn't find on WinGet.
 ## Head to WinGet.run
 
 Don't believe me?
-Head over to [WinGet.run](https://www.winget.run) and see for yourself.
+Head over to [WinGet.run](https://winget.run) and see for yourself.
 
 Search the name of the app you're looking for and see if it's there.
 
@@ -148,7 +148,7 @@ winget upgrade --all
 
 ## More commands
 
-WinGet.run is handy for searching the app catalog, but you can also search right from the command line if you prefer using `winget search <app name>`
+[WinGet.run](https://winget.run) is handy for searching the app catalog, but you can also search right from the command line if you prefer using `winget search <app name>`
 
 ![WinGet command line search screenshot](/assets/Posts/2022-02-18-Use-WinGet-to-install-and-update-your-Windows-apps/WinGetCommandLineSearchScreenshot.png)
 
