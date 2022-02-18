@@ -134,7 +134,7 @@ If you don't pass any parameters to it, it will scan your computer and tell you 
 ![WinGet upgrade command screenshot](/assets/Posts/2022-02-18-Use-WinGet-to-install-and-update-your-Windows-apps/WinGetUpgradeCommandScreenshot.png)
 
 Notice that there are apps in this list that I didn't install with WinGet, such as "Microsoft Azure Storage Explorer".
-That's right, WinGet can even upgrade apps that you didn't install with it!
+That's right, WinGet can even upgrade apps that it didn't install!
 
 From there you can upgrade a single app using the `--id` or `--name` parameter:
 
