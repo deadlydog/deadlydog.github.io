@@ -55,6 +55,8 @@ You can use cmd, PowerShell, Windows Terminal, Bash, or whatever you prefer.
 
 Paste the command you copied from WinGet.run into the command prompt, hit enter, and watch your app get installed.
 
+![WinGet install Spotify screenshot](/assets/Posts/2022-02-18-Use-WinGet-to-install-and-update-your-Windows-apps/WinGetInstallSpotifyScreenshot.png)
+
 You may get prompted by Windows UAC to allow the app installer to run if it requires elevated privileges.
 This can be avoided by opening your command prompt as administrator.
 
