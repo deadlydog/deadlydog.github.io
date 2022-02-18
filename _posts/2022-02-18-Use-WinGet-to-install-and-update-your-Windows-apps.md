@@ -57,6 +57,8 @@ Paste the command you copied from WinGet.run into the command prompt, hit enter,
 
 ![WinGet install Spotify screenshot](/assets/Posts/2022-02-18-Use-WinGet-to-install-and-update-your-Windows-apps/WinGetInstallSpotifyScreenshot.png)
 
+You can see here that the app was downloaded and installed in 24 seconds.
+
 You may get prompted by Windows UAC to allow the app installer to run if it requires elevated privileges.
 This can be avoided by opening your command prompt as administrator.
 
@@ -118,6 +120,8 @@ Here I've got each install command on a separate line, but you can combine them 
 ```shell
 winget install -e --id 7zip.7zip;winget install -e --id Lexikos.AutoHotkey;winget install -e --id Google.Chrome
 ```
+
+WinGet installs apps one at a time, so if you give it a large number of apps to install or update, it may take a while depending on how long each app takes to download and install.
 
 ## Updating apps
 
