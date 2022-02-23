@@ -1,0 +1,10 @@
+_id: 103e8db0-948c-11ec-98c9-d7fdbf12727b
+message: >-
+  What if I wanted the Powershell script not only to be run with administrative
+  privileges but at the same time with different credentials?  A local user
+  needs to execute the ps1 not only as admin, but as domain admin.
+name: Frank
+email: e2375445a3db28f7403f3e90ad526f38
+url: ''
+hidden: ''
+date: '2022-02-23T09:36:23.468Z'
