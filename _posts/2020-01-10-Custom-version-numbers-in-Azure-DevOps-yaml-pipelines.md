@@ -83,9 +83,9 @@ Note that I've switched from a 4 part version number to a 3 part one to show off
 name: '$(BuildDefinitionName)_$(SourceBranchName)_$(Date:yyyyMMdd)_$(Rev:.r)'
 
 variables:
-  version.MajorMinor: '1.2' # Manually adjust the version number as needed for semantic versioning. Revision is auto-incremented.
-  version.Revision: $[counter(variables['version.MajorMinor'], 0)]
-  versionNumber: '$(version.MajorMinor).$(version.Revision)'
+  version.MajorMinor: '1.2' # Manually adjust the version number as needed for semantic versioning. Patch is auto-incremented.
+  version.Patch: $[counter(variables['version.MajorMinor'], 0)]
+  versionNumber: '$(version.MajorMinor).$(version.Patch)'
 
 steps:
 - task: richardfennellBM.BM-VSTS-Versioning-Task.Version-Assemblies-Task.VersionAssemblies@2
@@ -101,12 +101,12 @@ steps:
 You can see now that we've introduced some variables:
 
 - `version.MajorMinor` is the one that you would manually adjust.
-- `version.Revision` will auto-increment with each build, and reset back to zero when `version.MajorMinor` is changed.
+- `version.Patch` will auto-increment with each build, and reset back to zero when `version.MajorMinor` is changed.
 - `versionNumber` is the full 3-part semantic version, and is used in the assembly versioning task.
 
 You may have noticed that the `name` was changed quite a bit as well.
-It now shows the name of the build definition, the git branch that the build used, the date the build was made, and a revision number.
-The revision number is still appended to ensure that multiple builds made from the same branch on the same day have different names.
+It now shows the name of the build definition, the git branch that the build used, the date the build was made, and a patch number.
+The patch number is still appended to ensure that multiple builds made from the same branch on the same day have different names.
 There are [some other tokens](https://docs.microsoft.com/en-us/azure/devops/pipelines/process/run-number?view=azure-devops&tabs=yaml#tokens) that `name` supports as well.
 
 ## Showing the version number in the build name
@@ -127,9 +127,9 @@ To work around this issue, we can use [the UpdateBuildNumber command](https://do
 name: 'Set dynamically below in a task'
 
 variables:
-  version.MajorMinor: '1.2' # Manually adjust the version number as needed for semantic versioning. Revision is auto-incremented.
-  version.Revision: $[counter(variables['version.MajorMinor'], 0)]
-  versionNumber: '$(version.MajorMinor).$(version.Revision)'
+  version.MajorMinor: '1.2' # Manually adjust the version number as needed for semantic versioning. Patch is auto-incremented.
+  version.Patch: $[counter(variables['version.MajorMinor'], 0)]
+  versionNumber: '$(version.MajorMinor).$(version.Patch)'
 
 steps:
 - task: PowerShell@2
@@ -174,9 +174,9 @@ Defining your prerelease version can be as simple as defining a new variable, li
 
 ```yaml
 variables:
-  version.MajorMinor: '1.2' # Manually adjust the version number as needed for semantic versioning. Revision is auto-incremented.
-  version.Revision: $[counter(variables['version.MajorMinor'], 0)]
-  versionNumber: '$(version.MajorMinor).$(version.Revision)'
+  version.MajorMinor: '1.2' # Manually adjust the version number as needed for semantic versioning. Patch is auto-incremented.
+  version.Patch: $[counter(variables['version.MajorMinor'], 0)]
+  versionNumber: '$(version.MajorMinor).$(version.Patch)'
   prereleaseVersionNumber: '$(versionNumber)-$(Build.SourceVersion)'
 ```
 
@@ -189,9 +189,9 @@ Here is some yaml code that I typically use for my prerelease versions:
 
 ```yaml
 variables:
-  version.MajorMinor: '1.2' # Manually adjust the version number as needed for semantic versioning. Revision is auto-incremented.
-  version.Revision: $[counter(variables['version.MajorMinor'], 0)]
-  versionNumber: '$(version.MajorMinor).$(version.Revision)'
+  version.MajorMinor: '1.2' # Manually adjust the version number as needed for semantic versioning. Patch is auto-incremented.
+  version.Patch: $[counter(variables['version.MajorMinor'], 0)]
+  versionNumber: '$(version.MajorMinor).$(version.Patch)'
   prereleaseVersionNumber: 'Set dynamically below in a task'
 
 steps:
@@ -233,15 +233,15 @@ Above I've shown you a few different variations of ways to do version numbers in
 Hopefully I explained it well enough that you understand how to customize it for your specific needs.
 That said, here's a few code snippets that are ready for direct copy-pasting into your yaml files, where you can then use the variables in any pipeline tasks.
 
-Specifying a 3-part version number with an auto-incrementing revision:
+Specifying a 3-part version number with an auto-incrementing patch:
 
 ```yaml
 name: 'Set dynamically below in a task'
 
 variables:
-  version.MajorMinor: '1.0' # Manually adjust the version number as needed for semantic versioning. Revision is auto-incremented.
-  version.Revision: $[counter(variables['version.MajorMinor'], 0)]
-  versionNumber: '$(version.MajorMinor).$(version.Revision)'
+  version.MajorMinor: '1.0' # Manually adjust the version number as needed for semantic versioning. Patch is auto-incremented.
+  version.Patch: $[counter(variables['version.MajorMinor'], 0)]
+  versionNumber: '$(version.MajorMinor).$(version.Patch)'
 
 steps:
 - task: PowerShell@2
@@ -254,15 +254,15 @@ steps:
       Write-Host "##vso[build.updatebuildnumber]$buildName"
 ```
 
-Specifying a 4-part version number with an auto-incrementing revision:
+Specifying a 4-part version number with an auto-incrementing patch:
 
 ```yaml
 name: 'Set dynamically below in a task'
 
 variables:
-  version.MajorMinor: '1.0' # Manually adjust the version number as needed. Revision is auto-incremented.
-  version.Revision: $[counter(variables['version.MajorMinor'], 0)]
-  versionNumber: '$(version.MajorMinor).$(version.Revision).$(Build.BuildId)'
+  version.MajorMinor: '1.0' # Manually adjust the version number as needed. Patch is auto-incremented.
+  version.Patch: $[counter(variables['version.MajorMinor'], 0)]
+  versionNumber: '$(version.MajorMinor).$(version.Patch).$(Build.BuildId)'
 
 steps:
 - task: PowerShell@2
@@ -275,15 +275,15 @@ steps:
       Write-Host "##vso[build.updatebuildnumber]$buildName"
 ```
 
-Specifying a 3-part version number with an auto-incrementing revision, along with a prerelease version number that includes the date and time of the build and the Git commit SHA:
+Specifying a 3-part version number with an auto-incrementing patch, along with a prerelease version number that includes the date and time of the build and the Git commit SHA:
 
 ```yaml
 name: 'Set dynamically below in a task'
 
 variables:
-  version.MajorMinor: '1.0' # Manually adjust the version number as needed for semantic versioning. Revision is auto-incremented.
-  version.Revision: $[counter(variables['version.MajorMinor'], 0)]
-  versionNumber: '$(version.MajorMinor).$(version.Revision)'
+  version.MajorMinor: '1.0' # Manually adjust the version number as needed for semantic versioning. Patch is auto-incremented.
+  version.Patch: $[counter(variables['version.MajorMinor'], 0)]
+  versionNumber: '$(version.MajorMinor).$(version.Patch)'
   prereleaseVersionNumber: 'Set dynamically below in a task'
 
 steps:
@@ -314,9 +314,9 @@ The below example shows one way of how to do this, and sets the `versionNumber` 
 name: 'Set dynamically below in a task'
 
 variables:
-  version.MajorMinor: '1.0' # Manually adjust the version number as needed for semantic versioning. Revision is auto-incremented.
-  version.Revision: $[counter(variables['version.MajorMinor'], 0)]
-  stableVersionNumber: '$(version.MajorMinor).$(version.Revision)'
+  version.MajorMinor: '1.0' # Manually adjust the version number as needed for semantic versioning. Patch is auto-incremented.
+  version.Patch: $[counter(variables['version.MajorMinor'], 0)]
+  stableVersionNumber: '$(version.MajorMinor).$(version.Patch)'
   prereleaseVersionNumber: 'Set dynamically below in a task'
   versionNumber: 'Set dynamically below in a task' # Will be set to the stableVersionNumber or prereleaseVersionNumber based on the branch.
   isMainBranch: $[eq(variables['Build.SourceBranch'], 'refs/heads/main')] # Determine if we're building the 'main' branch or not.
