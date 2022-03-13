@@ -2,7 +2,7 @@
 title: "Custom version numbers in Azure DevOps yaml pipelines"
 permalink: /Custom-version-numbers-in-Azure-DevOps-yaml-pipelines/
 #date: 2099-01-17T00:00:00-06:00
-last_modified_at: 2021-01-23
+last_modified_at: 2022-03-13
 comments_locked: false
 categories:
   - Azure DevOps
@@ -337,7 +337,7 @@ steps:
   inputs:
     targetType: 'inline'
     script: |
-      [bool] $isMainBranch = $(isMainBranch)
+      [bool] $isMainBranch = $$(isMainBranch)
       [string] $versionNumber = "$(prereleaseVersionNumber)"
       if ($isMainBranch)
       {
