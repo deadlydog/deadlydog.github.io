@@ -1,0 +1,7 @@
+_id: 18159390-a2aa-11ec-bd7b-d312888a616b
+message: "Hey @Kyle, yeah, only incrementing the `Revision` for builds on the `main` branch is one thing I haven't been able to figure out yet, and it's bothered me since I first wrote this post.\r\n\r\nIf you read [the `counter` function docs](https://docs.microsoft.com/en-us/azure/devops/pipelines/process/expressions?view=azure-devops#counter) it shows how to increment a counter based on if it's a PR or not:\r\n\r\n```yaml\r\npatch: $[counter(variables['build.reason'], 0)]\r\n```\r\n\r\nBut that ignores the `Major.Minor` version number part and thus the Revision counter won't be the same as the last stable build. Also, if you include:\r\n\r\n```yaml\r\nversion.Revision: $[counter(variables['version.MajorMinor'], 0)]\r\n```\r\n\r\nin your yaml the counter gets incremented, even if you don't use/display it, so the next stable build will still have it's Revision incremented. So yeah, I really want what you've proposed, but haven't figured out a way to do it yet.\r\n\r\nSide note: I'm not sure why I called the 3rd version number part `Revision` when I wrote this post. [SemVer](https://semver.org) defines the version parts as Major.Minor.Patch, and [Microsoft defines them](https://docs.microsoft.com/en-us/dotnet/standard/assembly/versioning#assembly-version-number) as Major.Minor.Build.Revision. I'm going to update the post to use the more appropriate names."
+name: Dan
+email: c8addda594c8b338f1e3934e73505d0c
+url: 'https://blog.danskingdom.com'
+hidden: ''
+date: '2022-03-13T08:46:38.169Z'
