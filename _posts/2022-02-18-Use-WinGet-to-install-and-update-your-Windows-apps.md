@@ -2,7 +2,7 @@
 title: "Use WinGet to install and update your Windows apps"
 permalink: /Use-WinGet-to-install-and-update-your-Windows-apps/
 #date: 2099-01-15T00:00:00-06:00
-#last_modified_at: 2099-01-22T00:00:00-06:00
+last_modified_at: 2022-03-31T00:00:00-06:00
 comments_locked: false
 categories:
   - Windows
@@ -81,6 +81,8 @@ That text file now looks like this:
 On WinGet: https://winget.run
 ===========================================================
 winget install -e --id 7zip.7zip
+winget install -e --id Audacity.Audacity
+winget install -e --id Microsoft.AzureCLI
 winget install -e --id Lexikos.AutoHotkey
 winget install -e --id Google.Chrome
 winget install -e --id Discord.Discord
@@ -94,6 +96,7 @@ winget install -e --id Git.Git
 winget install -e --id GitExtensionsTeam.GitExtensions
 winget install -e --id StefanTools.grepWin
 winget install -e --id HandBrake.HandBrake
+winget install -e --id icsharpcode.ILSpy
 winget install -e --id JoachimEibl.KDiff3
 winget install -e --id Notepad++.Notepad++
 winget install -e --id JanDeDobbeleer.OhMyPosh
