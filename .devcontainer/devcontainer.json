@@ -20,7 +20,8 @@
 		"davidanson.vscode-markdownlint",
 		"ionutvmi.path-autocomplete",
 		"ms-vscode.powershell",
-		"redhat.vscode-yaml"
+		"redhat.vscode-yaml",
+		"ms-azuretools.vscode-docker"
 	],
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
