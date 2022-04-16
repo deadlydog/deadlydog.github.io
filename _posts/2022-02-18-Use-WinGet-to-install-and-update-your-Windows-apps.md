@@ -2,7 +2,7 @@
 title: "Use WinGet to install and update your Windows apps"
 permalink: /Use-WinGet-to-install-and-update-your-Windows-apps/
 #date: 2099-01-15T00:00:00-06:00
-last_modified_at: 2022-03-31T00:00:00-06:00
+last_modified_at: 2022-04-15T00:00:00-06:00
 comments_locked: false
 categories:
   - Windows
@@ -94,6 +94,7 @@ winget install -e --id Telerik.Fiddler.Classic
 winget install -e --id Mozilla.Firefox
 winget install -e --id Git.Git
 winget install -e --id GitExtensionsTeam.GitExtensions
+winget install -e --id GoLang.Go
 winget install -e --id StefanTools.grepWin
 winget install -e --id HandBrake.HandBrake
 winget install -e --id icsharpcode.ILSpy
@@ -114,7 +115,7 @@ winget install -e --id TortoiseGit.TortoiseGit
 winget install -e --id Microsoft.VisualStudio.2022.Enterprise (Will still need to select your specific workloads afterward)
 winget install -e --id Microsoft.VisualStudioCode (Will not install the File Explorer context menu shortcuts by default; have to manually install to check those boxes in the installer)
 winget install -e --id VideoLAN.VLC
-winget install -e --id Radionomy.Winamp
+winget install -e --id Radionomy.Winamp (Latest version does not allow queuing songs, so better to use 5.6 from https://archive.org/download/winamp5666_full_all_redux)
 winget install -e --id Microsoft.WindowsTerminal
 winget install -e --id AntibodySoftware.WizTree
 winget install -e --id Zoom.Zoom
