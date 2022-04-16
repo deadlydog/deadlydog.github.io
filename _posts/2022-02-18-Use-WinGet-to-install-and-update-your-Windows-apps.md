@@ -2,7 +2,7 @@
 title: "Use WinGet to install and update your Windows apps"
 permalink: /Use-WinGet-to-install-and-update-your-Windows-apps/
 #date: 2099-01-15T00:00:00-06:00
-last_modified_at: 2022-04-15T00:00:00-06:00
+last_modified_at: 2022-04-15
 comments_locked: false
 categories:
   - Windows
