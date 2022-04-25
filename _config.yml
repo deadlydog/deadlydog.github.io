@@ -106,7 +106,7 @@ author:
   avatar: "/assets/Site/bio-photo.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio: "aka deadlydog. Developer and family man. Loves C#, .NET, PowerShell, AutoHotkey. Automate Everything!"
   location: "Regina, SK, Canada"
-  email: "deadlydog@hotmail.com"
+  # email: "deadlydog@hotmail.com"
   links:
     # Icons are pulled from https://fontawesome.com/icons.
     # - label: "Website"
@@ -124,12 +124,12 @@ author:
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/1danielschroeder/"
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: mailto:deadlydog@hotmail.com
     - label: "Blog RSS Feed"
       icon: "fas fa-fw fa-rss-square"
       url: "https://blog.danskingdom.com/feed.xml"
-    # - label: "Email"
-    #   icon: "fas fa-fw fa-envelope-square"
-    #   url: mailto:your.name@email.com
     # - label: "Facebook"
     #   icon: "fab fa-fw fa-facebook-square"
     #   url: "https://facebook.com/"
