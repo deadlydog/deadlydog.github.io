@@ -35,7 +35,7 @@ Almost all software I create is free, open source, and can be found in my public
 
 ### 🎦 Videos
 
-You can see all of the videos I've made on [my YouTube channel](https://www.youtube.com/user/deadlydog/videos), but here are a few:
+You can see all of the videos I've made on [my YouTube channel](https://www.youtube.com/user/deadlydog/featured), but here are a few:
 
 - [Setup a website in Azure with CI / CD from your Git repo using Azure DevOps (PHP example)](https://www.youtube.com/watch?v=On_5K7Vy-m8)
 - [Master the copy-paste clipboard in Windows with Ditto and ClipAngel (3 of 3)](https://www.youtube.com/watch?v=bBvKvJfWw2c&)
