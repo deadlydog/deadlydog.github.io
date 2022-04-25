@@ -1,17 +1,17 @@
 ---
 permalink: /about/
-title: "About Daniel Schroeder"
+title: "👋 About Daniel Schroeder"
 ---
 
-My name is Daniel Schroeder, my online handle is usually `deadlydog`, and I live in Regina, Saskatchewan, Canada. I completed my Masters degree in Computer Science at the University of Regina in 2009, and am currently working at [iQmetrix](http://www.iqmetrix.com/). I have a passion for programming and have created some video games and websites; I especially enjoy creating tools for other developers, and tools for increasing productivity. Automate EVERYTHING!
+My name is Daniel Schroeder, my online handle is usually `deadlydog`, and I live in Regina, Saskatchewan, Canada. I completed my Masters degree in Computer Science at the University of Regina in 2009, and am currently working at [iQmetrix](http://www.iqmetrix.com/). I have a passion for software development and have created some video games and websites; I especially enjoy creating tools for other developers, and tools for increasing productivity. Automate EVERYTHING!
 
-## Contact
+## 💬 Contact
 
 You can contact me on Twitter [@deadlydog](https://twitter.com/deadlydog), or [send me an email](mailto:deadlydog@hotmail.com).
 
-## Things I've Created
+## 🛠 Things I've Created
 
-### Software
+### 💾 Software
 
 Below is some software I've created in my spare time over the years.
 Almost all software I create is free, open source, and can be found in my public [GitHub repositories](https://github.com/deadlydog):
@@ -33,7 +33,7 @@ Almost all software I create is free, open source, and can be found in my public
 - [Wait Azure DevOps Extension](https://github.com/deadlydog/AzureDevOps.Wait) ([Marketplace](https://marketplace.visualstudio.com/items?itemName=deadlydog.WaitBuildAndReleaseTask)) - Add a delay to your build and deployment pipelines.
 - [Windows Scheduled Tasks Azure DevOps Extension](https://github.com/deadlydog/AzureDevOps.WindowsScheduledTasks) ([Marketplace](https://marketplace.visualstudio.com/items?itemName=deadlydog.WindowsScheduledTasksBuildAndReleaseTasks)) - Easily install, uninstall, enable, disable, start, and stop Windows Scheduled Tasks from your deployment pipelines.
 
-### Videos
+### 🎦 Videos
 
 You can see all of the videos I've made on [my YouTube channel](https://www.youtube.com/user/deadlydog/videos), but here are a few:
 
@@ -41,7 +41,7 @@ You can see all of the videos I've made on [my YouTube channel](https://www.yout
 - [Master the copy-paste clipboard in Windows with Ditto and ClipAngel (3 of 3)](https://www.youtube.com/watch?v=bBvKvJfWw2c&)
 - [Can't delete a file? Easily find which process has a file locked in Windows without 3rd party apps](https://www.youtube.com/watch?v=g4TGzaBER1U)
 
-### Websites
+### 🌐 Websites
 
 Here are some websites that I've made:
 
@@ -52,6 +52,6 @@ Here are some websites that I've made:
 - (2005) PostYourWebsite.com - Search for other peoples websites, and post your own (no longer exists).
 - (2003) HelpfulPCTools.com - Free tools and advice about general PC maintenance (viruses, spyware, etc.) (no longer exists).
 
-## License
+## © License
 
 All material found on this blog is offered up under the [Creative Commons 3.0 License](http://creativecommons.org/licenses/by/3.0/). This basically says that you are free to share or change the information provided, as long as you Attribute the original work to me, preferably by linking back to the webpage.
