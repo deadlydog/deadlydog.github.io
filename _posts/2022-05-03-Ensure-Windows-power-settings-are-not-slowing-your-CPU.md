@@ -99,7 +99,7 @@ Now that you know your processor frequency speed in MHz, you can update the valu
 1. Go back to the Power Options Advanced Settings window.
 1. Find your way back to the `Maximum processor frequency` node.
 1. Update the `On battery` and `Plugged in` values to be equal to your CPU's frequency in MHz.
-   1. Be sure not to use a value greater than your CPU's frequency, as that may overclock your CPU which can cause overheating and potentially damage your CPU hardware.
+   - Be sure not to use a value greater than your CPU's frequency, as that may overclock your CPU which can cause overheating and potentially damage your CPU hardware.
 1. Hit OK to save the settings.
 1. Restart your computer for the change to take effect.
 
@@ -107,7 +107,7 @@ Now that you know your processor frequency speed in MHz, you can update the valu
 
 ### Verifying the change worked
 
-Head back into the Resource Monitor and verify that the `CPU Maximum Frequency` is now going higher than it was before, reaching up to 99 or 100%.
+Head back into the Resource Monitor and verify that the `CPU Maximum Frequency` is now going higher than it was before, reaching up to 99% or 100%.
 
 ## Conclusion
 
