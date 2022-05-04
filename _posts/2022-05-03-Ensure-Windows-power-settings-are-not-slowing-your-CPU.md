@@ -30,6 +30,7 @@ On the right side of the window you will also see a `CPU - Total` graph showing 
 ![Resource Monitor screenshot](/assets/Posts/2022-05-03-Ensure-Windows-power-settings-are-not-slowing-your-CPU/ResourceMonitorCpuFrequencyScreenshot.png)
 
 What you are looking for is to see if the Maximum Frequency never goes above a given value (e.g. 30%), and also if the green CPU Usage line is often hitting the blue Maximum Frequency line.
+This should be especially apparent if you watch it while doing something CPU intensive, like playing a game or running multiple applications at once.
 
 For example, I noticed that my PC would often become very sluggish and slow to respond, even though Task Manager showed my CPU was not busy and the memory usage was low.
 In the Resource Manager though, I saw the `CPU Maximum Frequency` never went above 30%, and that the green `CPU Usage` line was continually bumping up against the blue Maximum Frequency line.
