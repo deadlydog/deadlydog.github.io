@@ -52,6 +52,10 @@ Here are some websites that I've made:
 - (2005) PostYourWebsite.com - Search for other peoples websites, and post your own (no longer exists).
 - (2003) HelpfulPCTools.com - Free tools and advice about general PC maintenance (viruses, spyware, etc.) (no longer exists).
 
+## 🙏 Feedback and kudos
+
+[Check out some feedback and kudos](/kudos) I've received my from my peers and users of my software.
+
 ## © License
 
 All material found on this blog is offered up under the [Creative Commons 3.0 License](http://creativecommons.org/licenses/by/3.0/). This basically says that you are free to share or change the information provided, as long as you Attribute the original work to me, preferably by linking back to the webpage.
