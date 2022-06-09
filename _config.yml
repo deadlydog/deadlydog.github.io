@@ -348,7 +348,7 @@ defaults:
       share: false
       related: false
       toc: false
-      toc_label: Post Sections
+      toc_label: Page Sections
       toc_icon: stream
       toc_sticky: false
       classes: wide
