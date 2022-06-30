@@ -229,6 +229,14 @@ Ken Konkel (circa 2011):
 
 ## Donations and thank you emails from the community
 
+$100.00 USD from Shane Spear for Path Length Checker app.
+
+> Thank you Daniel for providing this tool!
+> We used it this week to search for a needle in a haystack (300 files out of 9600 needed to be shortened to 255 characters).
+> We appreciate your work.
+
+---
+
 2022-04-19
 
 Thomas Goddard has sent you $60.41 CAD
