@@ -1,7 +1,6 @@
 ---
 permalink: /kudos/
 title: "🙏 Kudos and Thank Yous I've received"
-toc: true
 ---
 
 A while back I started keeping track of "thank you" emails and donations that I received for my open source software.

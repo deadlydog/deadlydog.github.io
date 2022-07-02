@@ -1,7 +1,6 @@
 ---
 permalink: /feedback/
 title: "💬 Feedback I've received from colleagues"
-toc: true
 ---
 
 A while back I started keeping track of feedback that I received from my peers at work.
