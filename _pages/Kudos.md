@@ -141,7 +141,7 @@ eva whitney sent you $5.00 USD.
 > Prayers for wellness and safety and much happiness and success for you and your loved ones.
 >
 > David Noll
-> Brown Deer
+> Wisconsin, USA
 
 ---
 
@@ -181,7 +181,7 @@ Note from Sergejs Luckinskis:
 > Prayers for wellness and safety for you and your loved ones.
 >
 > David Noll
-> Milwaukee
+> Wisconsin, USA
 
 ---
 
