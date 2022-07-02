@@ -29,7 +29,7 @@ Note from Thomas Goddard:
 
 ---
 
-2022-04-15
+2022-04-15 - Regarding Path Length Checker app
 
 > Hi Daniel,
 >
@@ -141,7 +141,7 @@ eva whitney sent you $5.00 USD.
 > Prayers for wellness and safety and much happiness and success for you and your loved ones.
 >
 > David Noll
-> Brown Deer, Wisconsin, USA
+> Brown Deer
 
 ---
 
@@ -181,7 +181,7 @@ Note from Sergejs Luckinskis:
 > Prayers for wellness and safety for you and your loved ones.
 >
 > David Noll
-> Milwaukee, Wisconsin, USA
+> Milwaukee
 
 ---
 
