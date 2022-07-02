@@ -55,7 +55,9 @@ Here are some websites that I've made:
 
 ## 🙏 Feedback and kudos
 
-[Check out some feedback and kudos](/kudos) I've received my from my peers and users of my software.
+[See what my colleagues have said about me](/feedback) over the years.
+
+[Check out some 'thank yous' and donations I've received](/kudos) from users of my open source software.
 
 ## © License
 
