@@ -57,7 +57,7 @@ The code presented here is [based on this post](http://huddledmasses.org/adventu
 
 ```xml
   <!--
-    Custom targets and properties added so that we can specify the database to publish to using command line parameters with VS 2012 .sqlproj projects, like we did with VS 2010 .dbproj projects.
+    Custom targets and properties added so that we can specify the database to publish to using command line parameters with VS 2012+ .sqlproj projects, like we did with VS 2010 .dbproj projects.
     This allows us to specify the MSBuild command-line parameters TargetDatabaseName, and TargetConnectionString when Publishing, and PublishToDatabase when Building.
     I also stumbled across the undocumented parameter, PublishScriptFileName, which can be used to specify the generated sql script file name, just like DeployScriptFileName used to in VS 2010 .dbproj projects.
     Taken from: https://blog.danskingdom.com/using-msbuild-to-publish-a-vs-2012-ssdt-sqlproj-database-project-the-same-way-as-a-vs-2010-dbproj-database-project/
@@ -65,18 +65,18 @@ The code presented here is [based on this post](http://huddledmasses.org/adventu
   <PropertyGroup Condition="'$(TargetDatabaseName)' != '' Or '$(TargetConnectionString)' != ''">
     <PublishToDatabase Condition="'$(PublishToDatabase)' == ''">False</PublishToDatabase>
     <TargetConnectionStringXml Condition="'$(TargetConnectionString)' != ''">
-      <TargetConnectionString xdt:Transform="Replace">$(TargetConnectionString)</TargetConnectionString>
+      &lt;TargetConnectionString xdt:Transform="Replace"&gt;$(TargetConnectionString)&lt;/TargetConnectionString&gt;
     </TargetConnectionStringXml>
     <TargetDatabaseXml Condition="'$(TargetDatabaseName)' != ''">
-      <TargetDatabaseName xdt:Transform="Replace">$(TargetDatabaseName)</TargetDatabaseName>
+      &lt;TargetDatabaseName xdt:Transform="Replace"&gt;$(TargetDatabaseName)&lt;/TargetDatabaseName&gt;
     </TargetDatabaseXml>
     <TransformPublishXml>
-        <Project xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-        <PropertyGroup>$(TargetConnectionStringXml)$(TargetDatabaseXml)</PropertyGroup>
-        </Project>
+      &lt;Project xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform" xmlns="http://schemas.microsoft.com/developer/msbuild/2003"&gt;
+      &lt;PropertyGroup&gt;$(TargetConnectionStringXml)$(TargetDatabaseXml)&lt;/PropertyGroup&gt;
+      &lt;/Project&gt;
     </TransformPublishXml>
-    <SqlPublishProfilePath Condition="'$([System.IO.Path]::IsPathRooted($(SqlPublishProfilePath)))' == 'False'">$(MSBuildProjectDirectory)\$(SqlPublishProfilePath)</SqlPublishProfilePath>
     <!-- In order to do a transform, we HAVE to change the SqlPublishProfilePath -->
+    <SqlPublishProfilePath Condition="'$([System.IO.Path]::IsPathRooted($(SqlPublishProfilePath)))' == 'False'">$(MSBuildProjectDirectory)\$(SqlPublishProfilePath)</SqlPublishProfilePath>
     <TransformOutputFile>$(MSBuildProjectDirectory)\Transformed_$(TargetDatabaseName).publish.xml</TransformOutputFile>
     <TransformScope>$([System.IO.Path]::GetFullPath($(MSBuildProjectDirectory)))</TransformScope>
     <TransformStackTraceEnabled Condition="'$(TransformStackTraceEnabled)'==''">False</TransformStackTraceEnabled>
@@ -85,32 +85,22 @@ The code presented here is [based on this post](http://huddledmasses.org/adventu
     <CallTarget Targets="Publish" />
   </Target>
   <UsingTask TaskName="ParameterizeTransformXml" AssemblyFile="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Web\Microsoft.Web.Publishing.Tasks.dll" />
+  <!-- If TargetDatabaseName or TargetConnectionString, is passed in then we use the tokenize transform to create a parameterized sql publish file -->
   <Target Name="BeforePublish" Condition="'$(TargetDatabaseName)' != '' Or '$(TargetConnectionString)' != ''">
     <Message Text="TargetDatabaseName = '$(TargetDatabaseName)', TargetConnectionString = '$(TargetConnectionString)', PublishScriptFileName = '$(PublishScriptFileName)', Transformed Sql Publish Profile Path = '$(TransformOutputFile)'" Importance="high" />
-    <!-- If TargetDatabaseName or TargetConnectionString, is passed in then we use the tokenize transform to create a parameterized sql publish file -->
     <Error Condition="!Exists($(SqlPublishProfilePath))" Text="The SqlPublishProfilePath '$(SqlPublishProfilePath)' does not exist, please specify a valid file using msbuild /p:SqlPublishProfilePath='Path'" />
     <ParameterizeTransformXml Source="$(SqlPublishProfilePath)" IsSourceAFile="True" Transform="$(TransformPublishXml)" IsTransformAFile="False" Destination="$(TransformOutputFile)" IsDestinationAFile="True" Scope="$(TransformScope)" StackTrace="$(TransformStackTraceEnabled)" SourceRootPath="$(MSBuildProjectDirectory)" />
     <PropertyGroup>
       <SqlPublishProfilePath>$(TransformOutputFile)</SqlPublishProfilePath>
     </PropertyGroup>
   </Target>
-</pre>
-</div>
+```
 
-<div id="scid:fb3a1972-4489-4e52-abe7-25a00bb07fdf:fd8b0e8d-f40e-4c6f-846e-511003fc9d0a" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <p>
-    <a href="/assets/Posts/2013/11/MsBuildTargetsToPublishSqlProjFromCommandLine.txt">Download the code to avoid website copy-paste formatting problems (right-click this, choose Save Link/Target As...)</a>
-  </p>
-</div>
+You can [get the code here](/assets/Posts/2013/11/MsBuildTargetsToPublishSqlProjFromCommandLine.txt) to avoid website copy-paste formatting problems.
 
+So after adding this code at the bottom of the .sqlproj file (above the `</Project>` tag though), you can now build and publish the database solution from the MSBuild command line using:
 
-
-So after adding this code at the bottom of the .sqlproj file (above the </Project> tag though), you can now build and publish the database solution from the MSBuild command line using:
-
-<div id="scid:C89E2BDB-ADD3-4f7a-9810-1B7EACF446C1:3e2ed27f-66e6-4855-9afa-b7487eb386cc" class="wlWriterEditableSmartContent" style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-  <pre style=white-space:normal>
-
-  <pre class="brush: bash; gutter: false; title: ; notranslate" title="">
+```shell
 MSBuild /t:Build /p:TargetDatabaseName="[DbName]";TargetConnectionString="Data Source=[Db.Server];Integrated Security=True;Pooling=False" /p:PublishToDatabase="True" /p:SqlPublishProfilePath="Template.publish.xml" "[PathToBranch]\Database\Database.sqlproj"
 ```
 
