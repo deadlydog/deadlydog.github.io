@@ -1,0 +1,7 @@
+_id: 3bd4ae40-4234-11ed-a41a-b533bec70dd1
+message: "Thanks ! It was really helpful.\r\nBut although my script is in accordance with your recommendations :\r\n\r\n@ECHO OFF\r\nSET ScriptsDirectory=%~dp0\r\nSET PowerShellScriptPath=%ScriptsDirectory%startup.ps1\r\nPowerShell -NoProfile -ExecutionPolicy Bypass -Command \"& {Start-Process PowerShell -ArgumentList '-NoProfile -ExecutionPolicy Bypass -File \"\"\"\"%PowerShellScriptPath%\"\"\"\"' -Verb RunAs}\";\r\n\r\nit doesn't work. When this \"bat file\" is launched it appears \"User Account Control - Do you want to allow this app to make changes ...\" and asks to enter the administrator password.\r\nWhat I don't want...\r\n\r\nSincerely"
+name: Barnet
+email: 72a12f5631898af6142c21b4185938cf
+url: ''
+hidden: ''
+date: '2022-10-02T09:26:03.640Z'
