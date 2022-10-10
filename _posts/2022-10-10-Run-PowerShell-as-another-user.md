@@ -26,7 +26,7 @@ See the later section for ways to deal with this.
 If you are running PowerShell interactively, you can have it prompt for the credentials of the user that you want to run as like this:
 
 ```powershell
-$credential = Get-Credential
+$credential = Get-Credential # You will be prompted for the username and password here.
 
 Enter-PSSession -ComputerName localhost -Credential $credential
 
@@ -44,7 +44,6 @@ $securePassword = ConvertTo-SecureString $password -AsPlainText -Force
 $credential = New-Object System.Management.Automation.PSCredential ($username, $securePassword)
 
 Invoke-Command -ComputerName localhost -Credential $credential -ScriptBlock {
-
   # Your PowerShell code goes here.
 }
 ```
@@ -85,12 +84,14 @@ Enter-PSSession -HostName 'SomeUser@SomeServer.OnYour.Domain'
 SSH requires PowerShell 6 or later, and supports both password (for interactive sessions) and key-based user authentication.
 [See the docs](https://learn.microsoft.com/en-us/powershell/scripting/learn/remoting/ssh-remoting-in-powershell-core?view=powershell-7.2) for more details on using SSH.
 
+You can read more about WinRM and PowerShell remoting in the docs [here](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_remote?view=powershell-7.2) and [here](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_remote_requirements?view=powershell-7.2).
+
 ## Needing to run PowerShell as admin
 
 As mentioned above, running commands against `localhost` requires you to be running PowerShell as admin.
 This is typically easy to do if you are running PowerShell interactively (assuming your user is an administrator).
 
-[Adam's blog](https://adamtheautomator.com/powershell-run-as-administrator/) describes many different ways that you can launch the interactive PowerShell command prompt as admin.
+[This blog](https://adamtheautomator.com/powershell-run-as-administrator/) describes many different ways that you can launch the interactive PowerShell command prompt as admin.
 Near the end it also mentions two ways to run a PowerShell script as admin: using `Start-Process PowerShell -Verb RunAs`, and using the Windows Task Scheduler.
 
 If we need to run a PowerShell script as admin in another system however, such as a CI/CD pipeline in Azure DevOps Pipelines or GitHub Actions, we don't always have control over if the PowerShell process is started as admin or not.
@@ -104,16 +105,17 @@ if (-NOT ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdenti
   Start-Process powershell -Verb runAs -ArgumentList $arguments
   Break
 }
+# Your script code goes here.
 ```
 
 This approach may work for your needs.
 While this approached worked for scripts on my local machine, it did not work for scripts running in my Azure DevOps Pipelines; I still received the `Access Denied` error message.
 Even if it had worked, one problem you may have spotted is that it starts up a new PowerShell process to run the script as admin.
-This would have resulted in the script output not getting captured by the CI/CD pipeline, and not being available for monitoring and debugging.
+This would have resulted in the script output not getting captured by the deployment pipeline, and not being available for monitoring and debugging.
 
-The workaround I ended up using for my specific scenario of connecting to a remote database and performing some operations was to use Invoke-Command to run the PowerShell scriptblock as a different user from a remote server.
-This isn't an ideal solution as it introduces a dependency on another server simply for the purpose of running some PowerShell code, but it was the best solution I could make work.
-We actually have several different pipelines that have this need, so I created a small VM whose main purpose is to run PowerShell scripts as a different user.
+The workaround I ended up using for my specific scenario of connecting to a remote database and performing some operations was to use `Invoke-Command` to run the PowerShell scriptblock as a different user from a remote server.
+This isn't an ideal solution as it introduces a dependency on another server simply for the purpose of running some PowerShell code, and can introduce additional security risks by enabling WinRM on the server if it's unneeded otherwise, but it was the best solution I could make work.
+We actually have several different pipelines that have this need, so I created a small server whose main purpose is to run PowerShell scripts as a different user.
 
 If you have any other potential solutions, please let me know in the comments below.
 I hope you found this post useful.
