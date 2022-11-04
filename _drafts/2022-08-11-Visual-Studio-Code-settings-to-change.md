@@ -16,6 +16,8 @@ tags:
 VS Code is an awesome editor.
 Make it even more awesome by changing these default settings values.
 
+<!-- Related: You may also be interested in this post about [Visual Studio Code extensions to install](/Visual-Studio-Code-extensions-to-install/). -->
+
 ## Show hidden characters
 
 - Description: Make hidden characters easily visible in the editor.
