@@ -9,6 +9,22 @@ This page is a compilation of that feedback.
 
 ## What my colleagues have to say about me
 
+Steven Swab, 2022-11-08 in Slack
+
+> I wanted to give @deadlydog-DanSchroeder a shout out for exemplifying a number of our core values.
+> He's a `High-horsepower` guy who `Delivers Results` and demonstrates excellent `Servant Leadership`.
+> My team was decommissioning an old service, and asked for some help with access to machines I can't access.
+> Dan didn't just offer help, but went through and taught me how to remove the service and associated jobs, tasks, etc.
+> Despite circumstances not being ideal for its decommissioning, Dan put in extra effort to ensure that the customer wouldn't be impacted and that if they were we could reverse the changes quickly.
+> Thank you Dan - The `High-horsepower`, `Servant Leader`, who `Delivers Results`.
+> You make all of us at iQ better.
+
+Reply from Maryam Bagherzadeh
+
+> @deadlydog-DanSchroeder is great! Knowledgeable, helpful plus humble!
+
+---
+
 2021 Employee of the Year
 
 > In preparing this description of our Employee of the Year winner I asked a few folks for input.
