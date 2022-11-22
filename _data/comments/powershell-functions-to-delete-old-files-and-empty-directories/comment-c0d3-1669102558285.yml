@@ -1,0 +1,7 @@
+_id: 4da8e2e0-6a38-11ed-8882-9358e83cd7c6
+message: "Hello,\r\n\r\nthanks for your great work!\r\n\r\nJust question:\r\n\r\n\"Remove-FilesCreatedBeforeDate\" in this function you're calling function by passing $DateTime:\r\n\r\nRemove-EmptyDirectories -OnlyDeleteDirectoriesCreatedBeforeDate $DateTime\r\n\r\nAnd in function \"Remove-EmptyDirectories\" declaring MaxTime of OnlyDeleteDirectoriesCreatedBeforeDate , then why we need to pass $DateTime instead of defining only MaxTime of variable?\r\n\r\nThank you"
+name: c0d3
+email: 4cc94cceab4563304b72b0636978b233
+url: ''
+hidden: ''
+date: '2022-11-22T07:35:58.274Z'
