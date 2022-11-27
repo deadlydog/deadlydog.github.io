@@ -109,7 +109,7 @@ Here's a list of files I've added:
 
 ## Additional Info
 
-This site uses Staticman to handle comments.
+This site uses [Staticman](https://github.com/eduardoboucas/staticman) to handle comments.
 You can find the code and documentation for my Staticman instance [here](https://github.com/deadlydog/deadlydog.github.io-staticman).
 
 ### Supported code language highlighters
