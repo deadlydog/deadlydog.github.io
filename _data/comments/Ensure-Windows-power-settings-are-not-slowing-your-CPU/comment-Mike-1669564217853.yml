@@ -1,0 +1,7 @@
+_id: 302b8d30-6e6b-11ed-8662-758cce846aa6
+message: "This didn't cure Maximum frequency stuck at 30% for me.  What did the trick was\r\nComputer\\HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\intelppm\r\nChanging the value of `start` from 3 to 4 (followed by a reboot).\r\n\r\nThanks for clues along the way to resolving the issue!"
+name: Mike
+email: 884f0d364e26f0dcac5533c8312d90cf
+url: ''
+hidden: ''
+date: '2022-11-27T15:50:17.841Z'
