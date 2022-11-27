@@ -61,24 +61,24 @@ comments:
     type: "comment"
 
   # Name of the site. Used in notification emails.
-  # name: "Your Site"
+  name: "Daniel Schroeder's Programming Blog"
 
   # Notification settings. When enabled, users can choose to receive notifications
   # via email when someone adds a reply or a new comment. This requires an account
   # with Mailgun, which you can get for free at http://mailgun.com.
-  # notifications:
+  notifications:
     # Enable notifications
-    # enabled: true
+    enabled: true
 
     # (!) ENCRYPTED
     #
     # Mailgun API key
-    # apiKey: ""
+    apiKey: "XaRy4TGSmtAMCug/4XN4i2Qxet+93aL16FG5h/atE/IABXMBGzC3AluhFmuFuaEknERfcPtUAo2dZY/HKsxNkdEIsIleMoCrUPN00baaxEn8B5v5yrjrePv8GyVSuxkqNUZPb3xa+wutaxBztA492t2+3Lv/Sw4rmbFkBcy+PK5EGGw8yAWHJFy7RJHrtymewqwv5RwR8X5ZAQaGBmb3Im1suqPorn3EtbbH9wWpSAvvi7UQKN1kQ1Gx8W6qW+yLN+ClyXu3Ht/WenrpvD7xmflCO20xqkq8Gmiur+v408aR/MQg2QegKsrcI3m9mZb6E8PBGNaduwm149aVvdG0GQ=="
 
     # (!) ENCRYPTED
     #
     # Mailgun domain (encrypted)
-    # domain: ""
+    domain: "GTWfn96tNg6kLpO+bHOI0XK+StJYDD+mMxuJ1qFU2G4El1E+YTCNF77eFoNkFooyldNAX1dynMA95fJpNeyiA2ZGGvmKaZrNkuPz0oA5GyyWUY+vibBrXgc3lvqeFbetdgs658c0go1bWifMC1D2ocIN7+AUyctlufRSC8M8cB83wGQuOarybieSdgkUfzt0oPgMbQVoOYPPYoI5XO1XKG+JmauTb3El6jZJSZQDDNszq7EQq/P5Uxh38lvy3QcfC3/BBdp7YPxZee858L/6laM0p1EFvR+sa1F05GshFqO9GwOQSKvcp83JGNeGBGTReOw3bN/k48LIiVbN+tufrA=="
 
   # (*) REQUIRED
   #
