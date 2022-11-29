@@ -85,6 +85,7 @@ Here's a list of places I've changed code. This typically meant copying the file
   - Adds advertisements.
   - Adds a Donate section.
   - Dynamically adds a "Copy to clipboard" button to all code blocks.
+  - Add verification link for my Mastodon profile.
 - `_layouts/home.html`: Added id to 'Recent Posts' heading so we can adjust whitespace around it.
 - `_config.yml` file.
 - `assets/css/main.scss`:
