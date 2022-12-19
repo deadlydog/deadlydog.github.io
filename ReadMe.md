@@ -99,7 +99,6 @@ Here's a list of files I've added:
 
 - Everything in the `_posts` and `_drafts` directories.
 - The `_pages\About.md` page.
-- The `_pages\.well-known\webfinger.json` page for Mastodon aliases (see [this post](https://hachyderm.io/@shanselman/109537851479089923) and [website](https://webfinger.net)).
 - Everything in the `_assets\Posts`, `_assets\Site`, and `_assets\js` directories.
 - Everything in the `_data\comments` directory.
 - The `favicon.ico` image.
