@@ -10,6 +10,12 @@ It's a nice place I can turn to when I'm not feeling motivated, or when I need a
 
 ## Donations and thank you emails from the community
 
+2022-12-31
+
+$2.00 USD from George Georgevits for Path Length Checker app.
+
+---
+
 2022-07-24
 
 $2.00 USD from Tim Liepelt for Path Length Checker app.
