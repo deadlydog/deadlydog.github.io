@@ -14,8 +14,8 @@ You can contact me on Twitter [@deadlydog](https://twitter.com/deadlydog), or [s
 
 ### 💾 Software
 
-Below is some software I've created in my spare time over the years.
-Almost all software I create is free, open source, and can be found in my public [GitHub repositories](https://github.com/deadlydog):
+Below is some of the software I've created in my spare time over the years.
+Most software I create on my own time is free, open source, and can be found in [my public GitHub repositories](https://github.com/deadlydog):
 
 - [AHK Command Picker](https://github.com/deadlydog/AHKCommandPicker) - An AutoHotkey plugin that makes it easier to automate everything you do on your PC.
 - [Auto Update Project's Minimum Required ClickOnce Version](https://github.com/deadlydog/AutoUpdateProjectsMinimumRequiredClickOnceVersion) ([NuGet](https://www.nuget.org/packages/AutoUpdateProjectsMinimumRequiredClickOnceVersion)) - NuGet package to easily ensure users of your ClickOnce apps are always using the latest version.
