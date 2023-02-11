@@ -17,12 +17,12 @@ You can contact me on Twitter [@deadlydog](https://twitter.com/deadlydog), or [s
 Below is some of the software I've created in my spare time over the years.
 Most software I create on my own time is free, open source, and can be found in [my public GitHub repositories](https://github.com/deadlydog):
 
-- [AHK Command Picker](https://github.com/deadlydog/AHKCommandPicker) - An AutoHotkey plugin that makes it easier to automate everything you do on your PC.
+- [AHK Command Picker](https://github.com/deadlydog/AHKCommandPicker) - An AutoHotkey plugin that makes it easier to automate everything you do on your Windows PC.
 - [Auto Update Project's Minimum Required ClickOnce Version](https://github.com/deadlydog/AutoUpdateProjectsMinimumRequiredClickOnceVersion) ([NuGet](https://www.nuget.org/packages/AutoUpdateProjectsMinimumRequiredClickOnceVersion)) - NuGet package to easily ensure users of your ClickOnce apps are always using the latest version.
 - [Azure Artifacts PowerShell Module Helper](https://github.com/deadlydog/AzureArtifactsPowerShellModuleHelper) ([PowerShell Gallery](https://www.powershellgallery.com/packages/AzureArtifactsPowerShellModuleHelper)) - Makes working with PowerShell modules in Azure Artifacts easier.
 - Baby Touch game for [Windows 8](http://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=3&ved=0CCwQFjAC&url=http%3A%2F%2Fapps.microsoft.com%2Fwindows%2Fen-us%2Fapp%2Fbaby-touch%2F7bfc0cab-bdf4-4aea-b1a1-c734488c4c76&ei=GShZVa3rKYzSoASMjYP4Ag&usg=AFQjCNEN54mP2heSv2VTe3NISrxZoakdfw&sig2=oct4RmvJ-ysK6-exwuUc_w&bvm=bv.93564037,d.cGU&cad=rja) and [Windows Phone](https://www.windowsphone.com/en-ca/store/app/baby-touch/c290b92c-ef4c-404b-b851-56800fbbbf09) - A simple game designed to hold a toddler's attention.
 - [Dan's Utility Libraries](https://github.com/deadlydog/DansUtilityLibraries) - Custom code libraries for performing various tasks.
-- [Diff All Files Visual Studio Extension](https://github.com/deadlydog/VS.DiffAllFiles) ([Marketplace](https://marketplace.visualstudio.com/items?itemName=deadlydog.DiffAllFilesforVS2019)) - Quickly compare changes to your files in Visual Studio.
+- [Diff All Files Visual Studio Extension](https://github.com/deadlydog/VS.DiffAllFiles) ([Marketplace](https://marketplace.visualstudio.com/items?itemName=deadlydog.DiffAllFilesforVS2022)) - Quickly compare changes to your files in Visual Studio.
 - [Dynamic Particle System Framework (DPSF) for XNA](http://xnaparticles.com) - Developed as part of my Masters thesis, and used by many indie and hobbyist video games.
 - [Get your toy MakeCode game](https://github.com/deadlydog/MakeCode.GetYourToy) - [2021 Global Game Jam game](https://globalgamejam.org/2021/games/get-your-toy-7) I made with my 9 year old son over a weekend as a tribute to our dog that had passed away a couple weeks earlier. You can [play it here](https://makecode.com/_5Yr2A9iUFF0A).
 - [Invoke-MsBuild PowerShell Script](https://github.com/deadlydog/Invoke-MsBuild) ([PowerShell Gallery](https://www.powershellgallery.com/packages/Invoke-MsBuild/2.6.4)) - Easily build your projects/solutions and see if the build failed and view error logs.
@@ -42,6 +42,7 @@ You can see all of the videos I've made on [my YouTube channel](https://www.yout
 - [Setup a website in Azure with CI / CD from your Git repo using Azure DevOps (PHP example)](https://www.youtube.com/watch?v=On_5K7Vy-m8)
 - [Master the copy-paste clipboard in Windows with Ditto and ClipAngel (3 of 3)](https://www.youtube.com/watch?v=bBvKvJfWw2c&)
 - [Can't delete a file? Easily find which process has a file locked in Windows without 3rd party apps](https://www.youtube.com/watch?v=g4TGzaBER1U)
+- [Windows File Explorer productivity shortcuts](https://youtu.be/-ixXAB2Gc0M)
 
 ### 🌐 Websites
 
@@ -58,7 +59,7 @@ Here are some websites that I've made:
 
 [See what my colleagues have said about me](/feedback) over the years.
 
-[Check out some 'thank yous' and donations I've received](/kudos) from users of my open source software.
+[Check out some thank-yous and donations I've received](/kudos) from users of my open source software.
 
 ## © License
 
