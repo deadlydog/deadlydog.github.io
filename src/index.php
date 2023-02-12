@@ -19,16 +19,15 @@
     </a>
 </span>
 
-<p>I live in Regina, Saskatchewan, Canada with my wonderful wife Vanessa Schroeder, our son Noah, our 2 dogs. 
-I completed my Masters degree in Computer Science at the University of Regina in 2009, and now work at iQmetrix. 
+<p>I live in Regina, Saskatchewan, Canada with my wonderful wife Vanessa Schroeder, our son Noah, our 2 dogs.
+I completed my Masters degree in Computer Science at the University of Regina in 2009, and now work at iQmetrix.
 I enjoy creating video games and websites, and have a passion for programming.</p>
 
-<p>If you want to get in contact with me you can <a href="mailto:deadlydog@hotmail.com?subject=DansKingdom.com">email me</a></p>
+<p>If you want to get in contact with me you can <a href="mailto:deadlydog@hotmail.com?subject=DansKingdom.com">email me</a> or <a href="https://www.twitter.com/deadlydog">message me on twitter</a></p>
 
-<p>You can also <a href="http://blog.danskingdom.com">check out my blog</a> or <a href="http://www.twitter.com/deadlydog">message me on twitter</a>.</p>
+<p>You can also <a href="https://blog.danskingdom.com">check out my blog</a> and <a href="https://blog.danskingdom.com/about/">the many open source projects I've created</a>.</p>
 
-<p>If you are looking for Marvin Schroeder's pictures go to <a href="http://marvinspictures.danskingdom.com">http://MarvinsPictures.danskingdom.com</a></p>
-<p>If you are looking for Jeremy Schroeder's stuff <a href="Jeremy/index.php">go here</a>
+<p>This website is very old and in desperate need of an update. Hopefully someday soon I'll prioritize updating it 😅.</p>
 
 </div>
 
