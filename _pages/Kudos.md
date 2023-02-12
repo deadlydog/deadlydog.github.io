@@ -157,7 +157,6 @@ eva whitney sent you $5.00 USD.
 > Prayers for wellness and safety and much happiness and success for you and your loved ones.
 >
 > David Noll
-> Wisconsin, USA
 
 ---
 
@@ -187,6 +186,8 @@ Note from Sergejs Luckinskis:
 
 ---
 
+2021-02-03
+
 > Dear Daniel,
 >
 > A quick email to say thank you so much for your Path Length Checker.
@@ -197,9 +198,10 @@ Note from Sergejs Luckinskis:
 > Prayers for wellness and safety for you and your loved ones.
 >
 > David Noll
-> Wisconsin, USA
 
 ---
+
+2021-01-12
 
 > Hi Daniel!
 > I came across your blog post about saving object data to a binary file in c# while I was searching for an easy way to properly save instances of objects in c# for a MonoGame project I've been working on for a while, and it's been incredibly helpful!
@@ -210,5 +212,7 @@ Note from Sergejs Luckinskis:
 > D'Anyil (Yes, pronounced the same as your name!)
 
 ---
+
+2020-12-03
 
 Joshua Huggins sent you $10.00 USD.
