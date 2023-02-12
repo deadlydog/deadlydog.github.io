@@ -127,6 +127,9 @@ author:
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/1danielschroeder/"
+    - label: "Stack Overflow"
+      icon: "fab fa-fw fa-stack-overflow"
+      url: "https://stackoverflow.com/users/602585/deadlydog"
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
       url: mailto:deadlydog@hotmail.com
@@ -158,6 +161,9 @@ footer:
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/1danielschroeder/"
+    - label: "Stack Overflow"
+      icon: "fab fa-fw fa-stack-overflow"
+      url: "https://stackoverflow.com/users/602585/deadlydog"
     # - label: "Facebook"
     #   icon: "fab fa-fw fa-facebook-square"
     #   url:
