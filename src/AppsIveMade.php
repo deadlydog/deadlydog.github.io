@@ -19,7 +19,7 @@
 <a name="DPSF"></a>
 <h2>DPSF (Dynamic Particle System Framework)</h2>
 <p>DPSF is a framework for creating custom particle systems in XNA, which is Microsoft's programming language used to create software on the XBox 360, Zune, and Windows.
-You can get more information and download DPSF by going to <a href="http://dpsf.danskingdom.com">http://dpsf.danskingdom.com</a>.</p>
+You can get more information and download DPSF by going to <a href="http://xnaparticles.com">xnaparticles.com</a>.</p>
 <p>Here are two videos demoing particle systems that were created using DPSF:</p>
 <iframe width="415" height="341" src="http://www.youtube.com/embed/ciuk6evv4_U" frameborder="0" allowfullscreen></iframe>
 <iframe width="415" height="341" src="http://www.youtube.com/embed/JbW5edVNaRI" frameborder="0" allowfullscreen></iframe>
@@ -33,13 +33,13 @@ You can get more information and download DPSF by going to <a href="http://dpsf.
 
 <h3>What Is Dan's One File Photo Gallery</h3>
 <p>Dan's One File Photo Gallery is a way for you to easily display all of your photos on your website.
-The only requirements are that you have a website which supports PHP 5. From there just put your photos 
-and my file on your website and that's it. Just go to the file in your web browser and your pictures 
+The only requirements are that you have a website which supports PHP 5. From there just put your photos
+and my file on your website and that's it. Just go to the file in your web browser and your pictures
 will be displayed.</p>
 
-<p>For example, I have my own webserver so all I had to do was put my Photo Gallery file in my "My Pictures" 
-folder and point my webserver to the Photo Gallery file, and presto. My entire "My Pictures" collection is 
-available online. If you do this, you may want to make sure there aren't any "incriminating" pictures 
+<p>For example, I have my own webserver so all I had to do was put my Photo Gallery file in my "My Pictures"
+folder and point my webserver to the Photo Gallery file, and presto. My entire "My Pictures" collection is
+available online. If you do this, you may want to make sure there aren't any "incriminating" pictures
 in there, since the Photo Gallery will display all pictures within that directory and all sub-directories :-)</p>
 
 <h3>Features</h3>
@@ -52,7 +52,7 @@ in there, since the Photo Gallery will display all pictures within that director
 	<li>Can maintain directory structure as an easy to navigate menu, or can simply display all pictures
 		from all directories on one page</li>
 	<li>Very configurable via global variables near the top of the file</li>
-	<li>Easily change the look and feel of the photo gallery via the CSS style sheet within the file</li>	
+	<li>Easily change the look and feel of the photo gallery via the CSS style sheet within the file</li>
 	<li>Easily specify a welcome message for viewers and explain what your site is about</li>
 	<li>It's open source! If you feel like changing something go right ahead</li>
 	<li>It's only one file!</li>
@@ -76,8 +76,8 @@ INSTALLATION:<br />
 		php.ini file (usually in C:\PHP or C:\Windows) and uncomment the line
 		";extension=php_gd2.dll" (So it should read "extension=php_gd2.dll").
 		If you do not host your own website you may have to contact your
-		hosting provider and ask them to do this for you if they have not already done it. If this is 
-		not enabled then no pictures will show up. So if everything else shows up except the pictures, 
+		hosting provider and ask them to do this for you if they have not already done it. If this is
+		not enabled then no pictures will show up. So if everything else shows up except the pictures,
 		this is likely the problem.
 </p>
 <p>
@@ -85,7 +85,7 @@ CHANGE LOG:
 	<ul>
     	<li>v1.6</li>
         	<ul>
-            	<li>Fixed problem with directory paths having spaces in them when 
+            	<li>Fixed problem with directory paths having spaces in them when
                 $THUMBNAILS_DIRECTORIES_CREATED_IN_PICTURE_DIRECTORIES is set to $No.</li>
             </ul>
 		<li>v1.5</li>
