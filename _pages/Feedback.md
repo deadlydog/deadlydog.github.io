@@ -163,11 +163,29 @@ Kelly Jardine (circa 2018):
 
 ---
 
+Vincent Langevin (circa 2017):
+
+> Dan is a great leader and pillar of iQmetrix.
+> He works tireless behind the scenes to ensure that the infrastructure that RQ, the Hub, and the many intricate interdependencies are running smoothly and effectively.
+> Often times he works well after work hours so that his work won't impact others.
+> He is a laid-back, considerate person, that doesn't balk under the constant pressure and demands that are constantly demanded of Dev Ops.
+> I am always amazed at his cool temperance and ability to come up with the solution that is needed.
+> It has been an honour and pleasure to be in his circle while he was manning the helm.
+
+---
+
 Donny Lu (circa 2017):
 
 > Thanks for all your help and the things you taught me while I was there.
 > You are an inspiration for me to always make life easier for people around me wherever my career goes.
 > Stay awesome!”
+
+---
+
+Tobias Bohm (circa 2017):
+
+> I really enjoyed working with you.
+> You're always eager to help and extremely professional and reliable.
 
 ---
 
@@ -189,6 +207,14 @@ Kelly Jardine (circa 2014):
 > He always gives extra effort and is quick to reply (even though I call him out on ignoring me).
 >
 > Thanks for all that you do Dan!”
+
+---
+
+Unknown (I didn't record the person's name ☹) (circa 2013):
+
+> Dan is always willing to help out with any problem or question someone brings forward.
+> Also, Dan is always very thankful to everyone he works with and expresses that all the time.
+> It doesn't hurt when he brings donuts for the whole floor either.
 
 ---
 
@@ -240,3 +266,10 @@ Ken Konkel (circa 2011):
 > Dan has a passion for producing the best possible work he can, and for improving every process he touches.
 > He is always looking for new and innovative ways to make what we do better in order to help the team.
 > Dan is someone who we all look up to for both his character and abilities.
+
+---
+
+For a long while I was responsible for merging our various code branches during a code freeze to create new versions of our flagship product.
+That's when the team made this gem 😊
+
+![He-Dan picture](/assets/Pages/Feedback/he-dan.jpg)
