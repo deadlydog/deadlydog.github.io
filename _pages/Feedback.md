@@ -269,7 +269,7 @@ Ken Konkel (circa 2011):
 
 ---
 
-For a long while I was responsible for merging our various code branches during a code freeze to create new versions of our flagship product.
+For a long while circa 2011 I was responsible for merging our various code branches during a code freeze to create new versions of our flagship product.
 That's when the team made this gem 😊
 
 ![He-Dan picture](/assets/Pages/Feedback/he-dan.jpg)
