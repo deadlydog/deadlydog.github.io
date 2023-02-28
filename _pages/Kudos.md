@@ -10,6 +10,12 @@ It's a nice place I can turn to when I'm not feeling motivated, or when I need a
 
 ## Donations and thank you emails from the community
 
+2023-02-28
+
+$5.00 USD from Edward Eastman for [CloseZoomWindowsAfterJoiningMeeting](https://github.com/deadlydog/CloseZoomWindowsAfterJoiningMeeting).
+
+> Thank you for the AHK code to close Zoom launch windows.
+
 2022-12-31
 
 $2.00 USD from George Georgevits for Path Length Checker app.
