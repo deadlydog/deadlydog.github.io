@@ -50,7 +50,7 @@ If the registry key does not exist, [see this StackOverflow answer](https://stac
 
 ## Registry values to use for popular AutoHotkey script editors
 
-[There are many editors](https://www.the-automator.com/best-autohotkey-editors-ides/) that can be used to edit AutoHotkey scripts.
+[There are many editors](https://www.autohotkey.com/docs/v1/lib/Edit.htm#Editors) that can be used to edit AutoHotkey scripts.
 Most have extensions/plugins that should be installed for the best experience.
 Below are some popular editors and their registry value to use.
 
