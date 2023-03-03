@@ -93,7 +93,7 @@ Or use the .reg file provided below.
 
 If you use a different editor and are not sure what the executable's file path is, you can typically find it by:
 
-1. Hit the `Windows key` to open the Start Menu.
+1. Hit the `Windows Key` to open the Start Menu.
 1. Type the name of the editor you want to use.
 1. Right-click on the editor and choose `Open file location`.
 
