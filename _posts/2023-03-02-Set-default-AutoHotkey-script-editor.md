@@ -34,19 +34,31 @@ I came across [this forum post](https://www.autohotkey.com/board/topic/897-how-t
 HKEY_CLASSES_ROOT\AutoHotkeyScript\Shell\Edit\Command
 ```
 
-To open the Registry Editor, press `Windows Key`+`R` to access the Run dialog, and then type `regedit` and hit OK.
+Further below, I provide some download files to easily modify this registry key for some popular editors.
+You can use those, but let's first look at how to manually modify the registry key.
+
+We can manually modify the registry key using the Registry Editor.
+To do this, press `Windows Key`+`R` to access the Run dialog, and then type `regedit` and hit OK to open the Registry Editor.
 From there, navigate to the registry key above.
 
 You will want to modify the `(Default)` entry.
 By default it will have a value like `notepad.exe "%1"`.
 
-You will want to replace the path to the Notepad executable with the path to your preferred editor's executable, surrounding the file path with double quotes.
+You will want to replace the path to the Notepad executable with the path to your preferred editor's executable, and surround the file path with double quotes.
 
 I use Visual Studio Code, so this is what my registry entry looks like after updating it:
 
 ![Setting the registry entry for Visual Studio Code](/assets/Posts/2023-03-02-Change-the-default-AutoHotkey-script-editor/autohotkey-default-script-editor-registry-key-to-edit.png)
 
-If the registry key does not exist, [see this StackOverflow answer](https://stackoverflow.com/a/45914527/602585) for the steps to create it.
+### Creating the registry key if it does not exist
+
+If the registry key does not exist, we can create it manually by doing the following in the Registry Editor:
+
+1. Navigate to `HKEY_CLASSES_ROOT\AutoHotkeyScript\Shell` in the Registry Editor.
+1. Right-click the `Shell` folder, select `New` > `Key` and name this `Edit`.
+1. Double-click the `(Default)` entry in the new `Edit` folder, and set its value to `Edit Script`.
+1. Right-click the `Edit` folder, select `New` > `Key` and name this `Command`.
+1. The `(Default)` entry should now exist in the new `Command` folder, and you should be able to set its value as described above.
 
 ## Registry values to use for popular AutoHotkey script editors
 
