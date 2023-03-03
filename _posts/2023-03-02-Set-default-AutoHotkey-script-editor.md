@@ -52,7 +52,7 @@ I use Visual Studio Code, so this is what my registry entry looks like after upd
 
 ### Creating the registry key if it does not exist
 
-If the registry key does not exist, we can create it manually by doing the following in the Registry Editor:
+If the registry key does not exist, we can [create it manually](https://stackoverflow.com/a/45914527/602585) by doing the following in the Registry Editor:
 
 1. Navigate to `HKEY_CLASSES_ROOT\AutoHotkeyScript\Shell` in the Registry Editor.
 1. Right-click the `Shell` folder, select `New` > `Key` and name this `Edit`.
