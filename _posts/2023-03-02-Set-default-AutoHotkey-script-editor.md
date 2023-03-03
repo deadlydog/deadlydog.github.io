@@ -116,7 +116,7 @@ In this example above, the path to the Visual Studio Code executable is "C:\User
 
 You can also use the following AutoHotkey code to open an ahk script in the default editor:
 
-```AutoHotkey
+```csharp
 filePath = C:\Path\To\AutoHotkey\Script.ahk
 Run, edit %filePath%,,UseErrorLevel
 if (%ErrorLevel% = ERROR)
