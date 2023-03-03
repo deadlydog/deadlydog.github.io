@@ -46,6 +46,8 @@ I use Visual Studio Code, so this is what my registry entry looks like after upd
 
 ![Setting the registry entry for Visual Studio Code](/assets/Posts/2023-03-02-Change-the-default-AutoHotkey-script-editor/autohotkey-default-script-editor-registry-key-to-edit.png)
 
+If the registry key does not exist, [see this StackOverflow for the steps to create it](https://stackoverflow.com/a/45914527/602585).
+
 ## Registry values to use for popular AutoHotkey script editors
 
 [There are many editors](https://www.the-automator.com/best-autohotkey-editors-ides/) that can be used to edit AutoHotkey scripts.
