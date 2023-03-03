@@ -28,7 +28,7 @@ Fortunately there is a simple way to change the default editor for AutoHotkey sc
 
 ## Set the default editor for AutoHotkey scripts in the Registry
 
-I came across [this forum post](https://www.autohotkey.com/board/topic/897-how-to-change-autohotkey-default-editor/), which led me to the solution of simply modifying the following registry key:
+I came across [this forum post](https://www.autohotkey.com/board/topic/897-how-to-change-autohotkey-default-editor/) and [this one](https://www.autohotkey.com/board/topic/23889-how-to-edit-this-script-in-any-editor-other-than/), which led me to the solution of simply modifying the following registry key:
 
 ```text
 HKEY_CLASSES_ROOT\AutoHotkeyScript\Shell\Edit\Command
