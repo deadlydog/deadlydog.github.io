@@ -91,6 +91,16 @@ Or use the .reg file provided below.
 
 [Download SciTE4AutoHotkey .reg file](/assets/Posts/2023-03-02-Change-the-default-AutoHotkey-script-editor/SciTE4AutoHotkeyAsDefaultAhkEditor.reg)
 
+---
+
+[Sublime Text 3](https://www.sublimetext.com):
+
+```text
+"C:\Program Files\Sublime Text 3\sublime_text.exe" "%1"
+```
+
+[Download Sublime Text 3 .reg file](/assets/Posts/2023-03-02-Change-the-default-AutoHotkey-script-editor/SublimeText3AsDefaultAhkEditor.reg)
+
 ## Locating the executable file path
 
 If you use a different editor and are not sure what the executable's file path is, you can typically find it by:
