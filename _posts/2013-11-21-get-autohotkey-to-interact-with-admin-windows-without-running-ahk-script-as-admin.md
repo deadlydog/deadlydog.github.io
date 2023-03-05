@@ -2,6 +2,7 @@
 title: Get AutoHotkey To Interact With Admin Windows Without Running AHK Script As Admin
 date: 2013-11-21T11:22:37-06:00
 permalink: /get-autohotkey-to-interact-with-admin-windows-without-running-ahk-script-as-admin/
+last_modified_at: 2023-03-04
 categories:
   - AutoHotkey
   - Windows
@@ -16,7 +17,7 @@ tags:
   - Windows
 ---
 
-> Update: I've found another solution that I prefer over this one. See [this post](/Prevent-admin-apps-from-blocking-AutoHotkey-by-using-UI-access/) for details.
+> March 2023 Update: I've found another solution that I prefer over this one. See [this post](/Prevent-admin-apps-from-blocking-AutoHotkey-by-using-UI-access/) for details.
 
 A while back I posted about [AutoHotkey not being able to interact with Windows 8 windows and other applications that were Ran As Admin](https://blog.danskingdom.com/autohotkey-cannot-interact-with-windows-8-windowsor-can-it/). My solution was to run your [AutoHotkey](http://www.autohotkey.com/) (AHK) script as admin as well, and I also showed how to have your AHK script start automatically with Windows, but not as an admin. Afterwards I followed that up with a post about how to [get your AHK script to run as admin on startup](https://blog.danskingdom.com/get-autohotkey-script-to-run-as-admin-at-startup/), so life was much better, but still not perfect.
 
@@ -35,7 +36,7 @@ A while back I posted about [AutoHotkey not being able to interact with Windows 
 
 Today I stumbled across [this post](http://www.autohotkey.com/board/topic/70449-enable-interaction-with-administrative-programs/) on the AHK community forums. Lexikos has provided an AHK script that will digitally sign the AutoHotkey executable, allowing it to interact with applications running as admin, even when your AHK script isn't.
 
-> Update: I've found that this solution no longer works.
+> March 2023 Update: I've found that this solution no longer works.
 > I'm not certain if the problem is something with my local machine, or an update to newer versions of AutoHotkey.
 > If you don't want to use [my new preferred solution](/Prevent-admin-apps-from-blocking-AutoHotkey-by-using-UI-access/), let me know if this one still works for you in the comments.
 
