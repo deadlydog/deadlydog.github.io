@@ -4,7 +4,7 @@ title: "👋 About Daniel Schroeder"
 toc: true
 ---
 
-My name is Daniel Schroeder, my online handle is usually `deadlydog`, and I live in Regina, Saskatchewan, Canada. I completed my Masters degree in Computer Science at the University of Regina in 2009, and am currently working at [iQmetrix](http://www.iqmetrix.com/). I have a passion for software development and have created some video games and websites; I especially enjoy creating tools for other developers, and tools for increasing productivity. Automate EVERYTHING!
+My name is Daniel Schroeder, my online handle is usually `deadlydog`, and I live in Regina, Saskatchewan, Canada. I completed my Masters degree in Computer Science at the University of Regina in 2009, and am currently working at [iQmetrix](https://www.iqmetrix.com/). I have a passion for software development and have created some video games and websites; I especially enjoy creating tools for other developers, and tools for increasing productivity. Automate EVERYTHING!
 
 ## 💬 Contact
 
@@ -57,9 +57,9 @@ Here are some websites that I've made:
 
 ## 🙏 Feedback and kudos
 
-[See what my colleagues have said about me](/feedback) over the years.
+[See what my colleagues have said about me](https://blog.danskingdom.com/feedback) over the years.
 
-[Check out some thank-yous and donations I've received](/kudos) from users of my open source software.
+[Check out some thank-yous and donations I've received](https://blog.danskingdom.com/kudos) from users of my open source software.
 
 ## © License
 
