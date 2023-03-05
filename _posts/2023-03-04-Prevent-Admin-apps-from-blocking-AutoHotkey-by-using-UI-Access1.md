@@ -1,6 +1,6 @@
 ---
-title: "Prevent admin apps from blocking AutoHotkey by using UI Access"
-permalink: /Prevent-admin-apps-from-blocking-AutoHotkey-by-using-UI-Access/
+title: "Prevent Admin apps from blocking AutoHotkey by using UI Access"
+permalink: /Prevent-Admin-apps-from-blocking-AutoHotkey-by-using-UI-Access/
 #date: 2099-01-15T00:00:00-06:00
 #last_modified_at: 2099-01-22
 comments_locked: false
@@ -25,7 +25,7 @@ The most common workaround is to [run your AHK script with UI Access](https://ww
 By default, the AutoHotkey installer will add a `Run with UI Access` context menu item to AHK scripts.
 If you use this context menu item to run your script (by right-clicking the AHK script and choosing `Run with UI Access`), it will run with UI Access and you will be able to trigger your AHK scripts when an Admin app has focus.
 
-![Run AHK script with UI Access](/assets/Posts/2023-03-04-Prevent-admin-apps-from-blocking-AutoHotkey-by-using-UI-Access/run-ahk-script-with-ui-access.png)
+![Run AHK script with UI Access](/assets/Posts/2023-03-04-Prevent-Admin-apps-from-blocking-AutoHotkey-by-using-UI-Access/run-ahk-script-with-ui-access.png)
 
 This solution addresses the issue, but it is not ideal for a couple reasons:
 
@@ -45,7 +45,7 @@ HKEY_CLASSES_ROOT\AutoHotkeyScript\Shell\Open\Command
 
 The default registry value typically looks like this:
 
-![Default AHK open command registry value](/assets/Posts/2023-03-04-Prevent-admin-apps-from-blocking-AutoHotkey-by-using-UI-Access/default-autohotkey-open-command-registry-value.png)
+![Default AHK open command registry value](/assets/Posts/2023-03-04-Prevent-Admin-apps-from-blocking-AutoHotkey-by-using-UI-Access/default-autohotkey-open-command-registry-value.png)
 
 __NOTE:__ Be aware that updating or reinstalling AutoHotkey will restore the registry value to its default value, so you will need to perform the action below again after updating AutoHotkey.
 
@@ -74,7 +74,7 @@ RegRead, UiAccessCommandKeyValue, HKEY_CLASSES_ROOT\AutoHotkeyScript\Shell\uiAcc
 RegWrite, REG_SZ, HKEY_CLASSES_ROOT\AutoHotkeyScript\Shell\Open\Command,, %UiAccessCommandKeyValue%
 ```
 
-You can [download the script here](/assets/Posts/2023-03-04-Prevent-admin-apps-from-blocking-AutoHotkey-by-using-UI-Access/Always-start-AutoHotkey-with-UI-Access.ahk).
+You can [download the script here](/assets/Posts/2023-03-04-Prevent-Admin-apps-from-blocking-AutoHotkey-by-using-UI-Access/Always-start-AutoHotkey-with-UI-Access.ahk).
 
 Simply run the AHK script and it will update the registry value for you.
 
@@ -89,12 +89,12 @@ If you prefer to manually modify the registry instead of using the script above,
 1. Navigate to `HKEY_CLASSES_ROOT\AutoHotkeyScript\Shell\uiAccess\Command`.
 1. Double-click the `(Default)` value to edit it, copy its value data, then click Cancel.
 
-   ![Copy the UI Access registry value data](/assets/Posts/2023-03-04-Prevent-admin-apps-from-blocking-AutoHotkey-by-using-UI-Access/default-autohotkey-uiaccess-command-registry-value.png)
+   ![Copy the UI Access registry value data](/assets/Posts/2023-03-04-Prevent-Admin-apps-from-blocking-AutoHotkey-by-using-UI-Access/default-autohotkey-uiaccess-command-registry-value.png)
 
 1. Navigate to `HKEY_CLASSES_ROOT\AutoHotkeyScript\Shell\Open\Command`.
 1. Double-click the `(Default)` value to edit it, paste the value data you copied from the `uiAccess` key, then click OK.
 
-   ![Modify the Open registry value data](/assets/Posts/2023-03-04-Prevent-admin-apps-from-blocking-AutoHotkey-by-using-UI-Access/updated-autohotkey-open-command-registry-value.png)
+   ![Modify the Open registry value data](/assets/Posts/2023-03-04-Prevent-Admin-apps-from-blocking-AutoHotkey-by-using-UI-Access/updated-autohotkey-open-command-registry-value.png)
 
 Now all of your AHK scripts will run with UI Access by default, and you won't have to worry about launching them in a special way.
 
