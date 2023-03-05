@@ -157,3 +157,7 @@ Now when you right-click on an AutoHotkey script file and choose `Edit Script`, 
 Hopefully you've found this helpful.
 
 Happy scripting!
+
+> Shameless Plug: [AHK Command Picker](https://github.com/deadlydog/AHKCommandPicker) is my free open-source project that allows you to use a GUI picker instead of having to remember a ton of keyboard shortcuts for your AutoHotkey scripts and hotkeys.
+> It is essentially a quick launcher for any AutoHotkey code.
+> Check it out if you are interested!
