@@ -2,7 +2,7 @@
 title: "Change the default AutoHotkey script editor"
 permalink: /Change-the-default-AutoHotkey-script-editor/
 #date: 2099-01-15T00:00:00-06:00
-#last_modified_at: 2099-01-22
+last_modified_at: 2023-03-06
 comments_locked: false
 categories:
   - AutoHotkey
@@ -37,12 +37,16 @@ HKEY_CLASSES_ROOT\AutoHotkeyScript\Shell\Edit\Command
 Further below, I provide some download files to easily modify this registry key for some popular editors.
 You can use those, but let's first look at how to manually modify the registry key.
 
-We can manually modify the registry key using the Registry Editor.
-To do this, press `Windows Key`+`R` to access the Run dialog, and then type `regedit` and hit OK to open the Registry Editor.
-From there, navigate to the registry key above.
+### Manually update the registry value
 
-You will want to modify the `(Default)` entry.
-By default it will have a value like `notepad.exe "%1"`.
+To manually modify the registry key value:
+
+1. Press `Windows Key`+`R` to access the Run dialog.
+1. Type `regedit` and hit OK to open the Registry Editor.
+1. Navigate to `HKEY_CLASSES_ROOT\AutoHotkeyScript\Shell\Edit\Command`.
+1. Double-click the `(Default)` value to edit it, and update the exe path.
+
+By default, it will have a value like `notepad.exe "%1"`.
 
 You will want to replace the path to the Notepad executable with the path to your preferred editor's executable, and surround the file path with double quotes.
 
@@ -50,7 +54,7 @@ I use Visual Studio Code, so this is what my registry entry looks like after upd
 
 ![Setting the registry entry for Visual Studio Code](/assets/Posts/2023-03-02-Change-the-default-AutoHotkey-script-editor/autohotkey-default-script-editor-registry-key-to-edit.png)
 
-### Creating the registry key if it does not exist
+#### Creating the registry key if it does not exist
 
 If the registry key does not exist, we can [create it manually](https://stackoverflow.com/a/45914527/602585) by doing the following in the Registry Editor:
 
