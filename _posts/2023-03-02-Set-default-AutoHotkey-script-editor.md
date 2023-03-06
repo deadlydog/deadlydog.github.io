@@ -64,7 +64,7 @@ If the registry key does not exist, we can [create it manually](https://stackove
 1. Right-click the `Edit` folder, select `New` > `Key` and name this `Command`.
 1. The `(Default)` entry should now exist in the new `Command` folder, and you should be able to set its value as described above.
 
-## Registry values to use for popular AutoHotkey script editors
+## Registry values and download files for popular AutoHotkey script editors
 
 [There are many editors](https://www.autohotkey.com/docs/v1/lib/Edit.htm#Editors) that can be used to edit AutoHotkey scripts, [some more popular than others](https://www.the-automator.com/best-autohotkey-editors-ides/).
 Most have extensions/plugins that should be installed for the best experience.
