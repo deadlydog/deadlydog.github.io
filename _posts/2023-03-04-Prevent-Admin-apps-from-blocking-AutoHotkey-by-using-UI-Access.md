@@ -123,6 +123,6 @@ I was getting frustrated that I was not able to use [AHK Command Picker](https:/
 > It is essentially a quick launcher for any AutoHotkey code.
 > Check it out if you are interested!
 
-Running AHK Command Picker with UI Access fixed the issue for me, and I hope this post helps you too.
+Running AHK with UI Access by default has fixed the issue for me, and I hope this post helps you too.
 
 Happy scripting!
