@@ -15,6 +15,7 @@ tags:
 ---
 
 This post is a collection of VS Code settings that I think are worth changing from their default values.
+This only includes native VS Code settings; no extensions.
 
 ## Introduction
 
