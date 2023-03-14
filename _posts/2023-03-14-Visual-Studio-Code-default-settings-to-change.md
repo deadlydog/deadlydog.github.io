@@ -531,3 +531,13 @@ JSON setting:
 <!-- Also do terminal settings -->
 
 <!-- Maybe group the settings by category. e.g. Terminal, workbench, editor, etc. -->
+
+## Conclusion
+
+I hope you've found these default setting adjustments useful.
+
+If you have suggestions for other default settings that I missed, please let me know in the comments below.
+
+I plan to update this post as I find more useful settings to tweak, and as new ones are introduced.
+
+Happy coding!
