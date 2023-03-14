@@ -14,9 +14,10 @@ tags:
   - Productivity
 ---
 
-Visual Studio Code is an amazing editor and has a ton of settings, with more being introduced all the time.
+Visual Studio Code is an amazing editor that has a ton of settings, with more being introduced all the time.
 If you don't keep up with all the release notes, it's easy to miss some of the new settings.
 Looking through the list of settings can be overwhelming and time consuming, and it's hard to know which ones are worth changing.
+
 This post is a collection of settings that I think are worth changing from their default values.
 
 > I understand that most of these settings are personal preference, and you may not agree with all of my suggestions.
@@ -30,6 +31,7 @@ Speaking of Settings Sync, if you do not have it enabled, you should consider do
 It allows you to sync your settings across multiple machines, and can also sync extensions, keyboard shortcuts, user snippets and tasks, UI state, and profiles.
 It is great for when you wipe your computer, or migrate to a new machine, as it brings all your customizations with you.
 It used to require an extension, but is now built into VS Code.
+Read more about it in [the official docs](https://code.visualstudio.com/docs/editor/settings-sync).
 
 Alright, enough preamble, let's see the settings!
 
