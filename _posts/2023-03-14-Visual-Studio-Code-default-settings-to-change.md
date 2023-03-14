@@ -14,11 +14,14 @@ tags:
   - Productivity
 ---
 
+This post is a collection of VS Code settings that I think are worth changing from their default values.
+
+## Introduction
+
 Visual Studio Code is an amazing editor that has a ton of settings, with more being introduced all the time.
 If you don't keep up with all the release notes, it's easy to miss some of the new settings.
 Looking through the list of settings can be overwhelming and time consuming, and it's hard to know which ones are worth changing.
-
-This post is a collection of settings that I think are worth changing from their default values.
+Below I list settings that you may want to consider changing from their default values.
 
 > I understand that most of these settings are personal preference, and you may not agree with all of my suggestions.
 > I am simply listing these to make you aware of them.
@@ -27,11 +30,24 @@ This post is a collection of settings that I think are worth changing from their
 I'll note that some of the settings below are mentioned even though they are on by default.
 This is done for features that were not originally turned on by default when they were introduced, and you may still have them turned off in VS Code due to Settings Sync carrying forward the original setting value.
 
+### Settings Sync
+
 Speaking of Settings Sync, if you do not have it enabled, you should consider doing so.
 It allows you to sync your settings across multiple machines, and can also sync extensions, keyboard shortcuts, user snippets and tasks, UI state, and profiles.
 It is great for when you wipe your computer, or migrate to a new machine, as it brings all your customizations with you.
 It used to require an extension, but is now built into VS Code.
 Read more about it in [the official docs](https://code.visualstudio.com/docs/editor/settings-sync).
+
+### Changing settings in VS Code
+
+You can access the settings in VS Code from the `File` -> `Settings` -> `Preferences` menu, or use the keyboard shortcut <kbd>Ctrl</kbd>+<kbd>,</kbd> (<kbd>Cmd</kbd>+<kbd>,</kbd> on macOS).
+From there, use the search box to find the settings mentioned below in this post.
+
+If you prefer to modify the settings.json directly, you can open it using the button in the top right corner of the settings window.
+The settings.json file will only show values that have been changed from their default at one point.
+You can use the setting's gear icon to `Reset Setting` to its default value, and it will be removed from the settings.json file.
+
+![Screenshot of the Settings UI in VS Code](/assets/Posts/2023-03-14-Visual-Studio-Code-default-settings-to-change/screenshot-of-settings-screen.png)
 
 Alright, enough preamble, let's see the settings!
 
