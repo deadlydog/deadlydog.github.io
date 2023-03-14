@@ -346,7 +346,7 @@ JSON setting:
 ### Trim final newlines
 
 While we typically want a final newline, having more than one final newline looks sloppy.
-This setting will automatically trim any final newlines from the end of the file when you save it.
+This setting will automatically trim any additional final newlines from the end of the file when you save it.
 
 GUI setting: `Files: Trim Final Newlines` to `true`.
 
@@ -383,8 +383,8 @@ JSON setting:
 
 Along with this setting, you can specify the format mode.
 By default it will format the entire file.
-I prefer to only format the lines that I have changed, which is what the `modifications` setting does.
-This is especially helpful when working with files in source control and you do not want your pull request diff to include a ton of formatting changes, which may hide the actual changes you made.
+I prefer to only format the lines that I have changed, which is what the `modifications` setting value does.
+This is especially helpful when working with files in source control and you do not want your pull request diff to include a ton of formatting changes for lines that you did not edit, which may hide the actual changes you made.
 
 GUI setting: `Format On Save Mode` to `modifications`.
 
@@ -396,7 +396,7 @@ JSON setting:
 
 ### Default language for new files
 
-When you create a new tab in VS Code, but have not saved it yet, VS Code does not know the file type and what language it is and thus can not provide services like syntax highlighting, intellisense, etc.
+When you create a new tab in VS Code, but have not saved it and given it a file extension yet, VS Code does not know the file type and what language it is and thus can not provide services like syntax highlighting, intellisense, etc.
 You can provide a default language for new tabs that are not saved yet to get these services.
 
 I work a lot in PowerShell, so I set the default language to `powershell`.
@@ -448,7 +448,8 @@ JSON setting:
 
 ### Automatically use find-in-selection if multiple lines are selected
 
-If you select multiple lines of text, VS Code can automatically toggle on the `Find in Selection` option of the `Find` command.
+If you select multiple lines of text and use <kbd>Ctrl</kbd>+<kbd>F</kbd> or <kbd>Ctrl</kbd>+<kbd>H</kbd> to open the Find or Replace dialog respectively, VS Code can automatically toggle on the `Find in Selection` option of the dialog.
+To me, it feels intuitive that if I have multiple lines of text selected, I want to search within those lines, not the entire file.
 
 GUI setting: `Editor › Find: Auto Find In Selection` to `multiline`.
 
