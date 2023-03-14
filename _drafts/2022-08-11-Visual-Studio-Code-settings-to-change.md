@@ -14,8 +14,24 @@ tags:
   - Productivity
 ---
 
-Visual Studio Code is an awesome editor.
-Make it even more awesome by changing these settings from their default values.
+Visual Studio Code is an amazing editor and has a ton of settings, with more being introduced all the time.
+If you don't keep up with all the release notes, it's easy to miss some of the new settings.
+Looking through the list of settings can be overwhelming and time consuming, and it's hard to know which ones are worth changing.
+This post is a collection of settings that I think are worth changing from their default values.
+
+> I understand that most of these settings are personal preference, and you may not agree with all of my suggestions.
+> I am simply listing these to make you aware of them.
+> I encourage you to play around with them and see what works best for you.
+
+I'll note that some of the settings below are mentioned even though they are on by default.
+This is done for features that were not originally turned on by default when they were introduced, and you may still have them turned off in VS Code due to Settings Sync carrying forward the original setting value.
+
+Speaking of Settings Sync, if you do not have it enabled, you should consider doing so.
+It allows you to sync your settings across multiple machines, and can also sync extensions, keyboard shortcuts, user snippets and tasks, UI state, and profiles.
+It is great for when you wipe your computer, or migrate to a new machine, as it brings all your customizations with you.
+It used to require an extension, but is now built into VS Code.
+
+Alright, enough preamble, let's see the settings!
 
 If there are other settings you think belong on this list, please let me know in the comments.
 
@@ -57,7 +73,7 @@ GUI setting: `Editor › Hover: Sticky` to `true`.
 JSON setting:
 
 ```json
-"editor.experimental.stickyScroll.enabled": true,
+"editor.stickyScroll.enabled": true,
 ```
 
 Result:
@@ -132,7 +148,7 @@ JSON setting:
 "files.autoSaveDelay": 1000,
 ```
 
-## Change the default integrated terminal
+## Change the default integrated terminal, and add other terminals
 
 If you use the integrated terminal, you can configure the default terminal to be something other than `cmd.exe` on Windows or `bash` on Linux/macOS.
 I prefer PowerShell, so I set it as my default.
@@ -173,3 +189,323 @@ JSON setting (example):
   }
 }
 ```
+
+## Automatically use find-in-selection if multiple lines are selected
+
+If you select multiple lines of text, VS Code can automatically toggle on the `Find in Selection` option of the `Find` command.
+
+GUI setting: `Editor › Find: Auto Find In Selection` to `multiline`.
+
+JSON setting:
+
+```json
+"editor.find.autoFindInSelection": "multiline"
+```
+
+## Breadcrumbs navigation
+
+Displays a breadcrumbs navigation bar at the top of the editor for the current tab.
+
+GUI setting: `Breadcrumbs: Enabled` to `true`.
+
+JSON setting:
+
+```json
+"breadcrumbs.enabled": true,
+```
+
+Result:
+
+![Result of using breadcrumbs navigation](/assets/Posts/2022-08-15-Visual-Studio-Code-settings-to-change/breadcrumbs-navigation-setting-result.png)
+
+## Format on paste
+
+When you paste text into the editor, VS Code can automatically format the text for you according to any linters or formatting rules you have configured.
+This is especially useful when pasting code snippets from the internet.
+
+GUI setting: `Editor › Format On Paste` to `true`.
+
+JSON setting:
+
+```json
+"editor.formatOnPaste": true,
+```
+
+## Format on save and format save mode
+
+VS Code can automatically format a file when you save it, applying linting rules and other formatting rules.
+
+GUI setting: `Format On Save` to `true`.
+
+JSON setting:
+
+```json
+"editor.formatOnSave": true
+```
+
+Along with this setting, you can specify the format mode.
+By default it will format the entire file.
+I prefer to only format the lines that I have changed, which is what the `modifications` setting does.
+This is especially helpful when working with files in source control and you do not want your pull request diff to include a ton of formatting changes, which may hide the actual changes you made.
+
+GUI setting: `Format On Save Mode` to `modifications`.
+
+JSON setting:
+
+```json
+"editor.formatOnSaveMode": "modifications"
+```
+
+## Minimap for vertical scrolling
+
+The minimap is a small preview of the entire file that is displayed on the right side of the editor, replacing the traditional vertical scrollbar.
+
+GUI setting: `Editor › Minimap: Enabled` to `true`.
+
+JSON setting:
+
+```json
+"editor.minimap.enabled": true
+```
+
+In addition to just enabling the minimap, you can also customize it with many different settings.
+If you search for `minimap` in the settings, you will see the many different settings that you can configure.
+The minimap configuration is a very personal preference, so I recommend trying out different settings to see what works best for you.
+
+Below are the non-default minimap JSON settings that I use:
+
+```json
+"editor.minimap.showSlider": "always",
+"editor.minimap.maxColumn": 100,
+"editor.minimap.renderCharacters": false,
+"editor.minimap.size": "fill",
+```
+
+Result:
+
+![Result of using the minimap for vertical scrolling with shown configuration](/assets/Posts/2022-08-15-Visual-Studio-Code-settings-to-change/minimap-setting-result.png)
+
+## Render whitespace
+
+By default VS Code only shows a glyph for space and tab characters when you highlight them.
+I prefer seeing the glyph any time there is potentially unexpected whitespace, which is typically when there is more than one whitespace character in a row, and is what the `boundary` setting does.
+Yes, this means you will see the glyphs for indentation, but I find it helpful to see the indentation level at a glance (python/YAML anyone?), and to ensure I'm not mixing tabs and spaces, because I'm weird like that ok.
+
+GUI setting: `Editor › Render Whitespace` to `boundary`.
+
+JSON setting:
+
+```json
+"editor.renderWhitespace": "boundary",
+```
+
+Result:
+
+![Result of using render whitespace with shown configuration](/assets/Posts/2022-08-15-Visual-Studio-Code-settings-to-change/render-whitespace-setting-result.png)
+
+## Cursor blinking
+
+You can control if the caret (typing cursor) blinks or not, as well as the animation it uses for the blink.
+This is just a subtle UI tweak that you might not even notice, but I like it.
+[This post](https://dev.to/chris__sev/animating-your-vs-code-cursor-w-cursor-blinking-1p30) shows gifs of the different animations that you can choose from.
+I personally like the `expand` animation, but you can choose whatever you prefer.
+
+GUI setting: `Editor: Cursor Blinking` to `expand`.
+
+JSON setting:
+
+```json
+"editor.cursorBlinking": "expand",
+```
+
+## Smooth scrolling
+
+You can enable smooth scrolling, which adds a slight animation to vertically scrolling.
+I find this makes scrolling less jarring and easier to differentiate which direction you are scrolling.
+
+GUI setting: `Editor: Smooth Scrolling` to `true`.
+
+JSON setting:
+
+```json
+"editor.smoothScrolling": true,
+```
+
+## Smooth caret animation
+
+This is similar to the [Smooth scrolling setting](#smooth-scrolling), only for the caret (the typing cursor).
+This adds a slight animation to the caret when it moves, making it easier to follow, rather than it just jumping to the new location.
+
+GUI setting: `Editor: Cursor Smooth Caret Animation` to `true`.
+
+JSON setting:
+
+```json
+"editor.cursorSmoothCaretAnimation": "on",
+```
+
+## Insert final newline
+
+VS Code can automatically add a final newline to the end of the file when you save it.
+This is especially helpful if you are working with text files that will be accessed on unix, as [unix requires a final newline to be present on text files](https://unix.stackexchange.com/a/18789/351983).
+
+GUI setting: `Files: Insert Final Newline` to `true`.
+
+JSON setting:
+
+```json
+"files.insertFinalNewline": true
+```
+
+## Trim final newlines
+
+While we typically want a final newline, having more than one final newline looks sloppy.
+This setting will automatically trim any final newlines from the end of the file when you save it.
+
+GUI setting: `Files: Trim Final Newlines` to `true`.
+
+JSON setting:
+
+```json
+"files.trimFinalNewlines": true,
+```
+
+## Pinned tab size
+
+You can set the tab size for pinned tabs to be smaller if you like.
+I find if I've pinned a tab, I often know what it is and don't need to see the full filename in the tab.
+You can save some horizontal space by shrinking the tab size for pinned tabs.
+
+GUI setting: `Workbench › Editor: Pinned Tab Sizing` to `shrink`.
+
+JSON setting:
+
+```json
+"workbench.editor.pinnedTabSizing": "shrink"
+```
+
+## Editor decoration colors
+
+In addition to using glyphs in the tab name to indicate things like the file has been modified, VS Code will also color the tab text.
+This setting is on by default, but you may still have it turned off if you've been using VS Code with Settings Sync for a while.
+
+GUI setting: `Workbench › Editor › Decorations: Colors` to `true`.
+
+JSON setting:
+
+```json
+"workbench.editor.decorations.colors": true
+```
+
+## Wrap tabs
+
+When you have many tabs open, you can have them wrap to the next line rather than having a horizontal scrollbar appear.
+
+GUI setting: `Workbench › Editor: Wrap Tabs` to `true`.
+
+JSON setting:
+
+```json
+"workbench.editor.wrapTabs": true,
+```
+
+Result:
+
+![Screenshot of how many tabs look with wrap tabs enabled](/assets/Posts/2022-08-15-Visual-Studio-Code-settings-to-change/wrap-tabs-setting-result.png)
+
+## Bracket pair colorization
+
+This is another setting that is on by default, but may be turned off if you've been using VS Code with Settings Sync for a while.
+This setting will colorize matching brackets, which can make it easier to see which opening bracket matches which closing bracket.
+
+There used to be several extensions that provided this functionality, but now it is built into VS Code.
+
+GUI setting: `Editor › Bracket Pair Colorization: Enabled` to `true`.
+
+JSON setting:
+
+```json
+"editor.bracketPairColorization.enabled": true,
+```
+
+Result (notice how it's easy to see which opening bracket matches which closing bracket):
+
+![Screenshot of bracket pair colorization in action](/assets/Posts/2022-08-15-Visual-Studio-Code-settings-to-change/bracket-pair-colorization-setting-result.png)
+
+## Bracket pair guides
+
+This setting will add a vertical or horizontal line to the editor to help you see which pair of brackets you are currently modifying code for.
+
+GUI setting: `Editor › Guides: Bracket Pairs` to `active`.
+
+JSON setting:
+
+```json
+"editor.guides.bracketPairs": "active",
+```
+
+Result:
+
+![Gif of bracket pair guides in action](/assets/Posts/2022-08-15-Visual-Studio-Code-settings-to-change/bracket-pair-guides-setting-result.gif)
+
+## Editor font
+
+You can change the font used in the editor.
+This is a very personal preference, and may require you to install the font on your machine.
+
+I personally like the `CaskaydiaCove Nerd Font` font.
+Another popular one is `FiraCode`.
+Both of these fonts support ligatures, and can be downloaded for free from [Nerd Fonts](https://www.nerdfonts.com/font-downloads).
+
+You can specify multiple fonts, and VS Code will use the first one that is available on your machine.
+
+GUI setting: `Editor: Font Family` to `'CaskaydiaCove Nerd Font',Consolas, 'Courier New', monospace`.
+
+JSON setting:
+
+```json
+"editor.fontFamily": "'CaskaydiaCove Nerd Font',Consolas, 'Courier New', monospace",
+```
+
+## Editor font ligatures
+
+If your editor font supports it, you can enable font ligatures.
+Font ligatures are a way to combine multiple characters into a single glyph, such as `==` becoming `≡`, or `->` becoming `→`.
+
+I personally do not like font ligatures, but I know many people do.
+
+GUI setting: `Editor: Font Ligatures`, which must be edited in the settings.json file.
+
+JSON setting:
+
+```json
+"editor.fontLigatures": true,
+```
+
+## Git merge editor
+
+When you are resolving merge conflicts, VS Code will open the visual merge editor to help you resolve the conflicting lines.
+
+GUI setting: `Git: Merge Editor` to `true`.
+
+JSON setting:
+
+```json
+"git.mergeEditor": true,
+```
+
+## Markdown validation
+
+VS Code can validate your markdown files for some common errors, such as broken links to pages in your repo.
+
+GUI setting: `Markdown › Validation: Enabled` to `true`.
+
+JSON setting:
+
+```json
+"markdown.validate.enabled": true,
+```
+
+<!-- Also do terminal settings -->
+
+<!-- Maybe group the settings by category. e.g. Terminal, workbench, editor, etc. -->
