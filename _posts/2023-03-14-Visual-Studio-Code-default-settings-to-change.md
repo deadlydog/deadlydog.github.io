@@ -521,7 +521,7 @@ JSON setting:
 
 ### Markdown validation
 
-VS Code can validate your markdown files for some common errors, such as broken links to pages in your repo.
+VS Code can validate your markdown files and notify you of some common errors, such as broken links to pages or images in your repo.
 
 GUI setting: `Markdown › Validation: Enabled` to `true`.
 
