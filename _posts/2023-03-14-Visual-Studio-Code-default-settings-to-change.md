@@ -68,8 +68,8 @@ Note: There are separate settings for the `Markdown` and `PlainText` languages, 
 ### Render whitespace
 
 By default VS Code only shows a glyph for space and tab characters when you highlight them.
-I prefer seeing the glyph any time there is potentially unexpected whitespace, which is typically when there is more than one whitespace character in a row, and is what the `boundary` setting does.
-Yes, this means you will see the glyphs for indentation, but I find it helpful to see the indentation level at a glance (python/YAML anyone?), and to ensure I'm not mixing tabs and spaces, because I'm weird like that ok.
+I prefer seeing the glyph any time there is potentially unexpected whitespace, which is typically when there is more than one whitespace character, and is what the `boundary` setting value does.
+This means you will also see glyphs for indentation, but I find it helpful to see the indentation level at a glance (Python/YAML anyone 😏), and to ensure I'm not mixing tabs and spaces (because I'm weird like that ok! 😜).
 
 GUI setting: `Editor › Render Whitespace` to `boundary`.
 
@@ -83,10 +83,10 @@ Result:
 
 ![Result of using render whitespace with shown configuration](/assets/Posts/2023-03-14-Visual-Studio-Code-default-settings-to-change/render-whitespace-setting-result.png)
 
-### Enable Sticky Scroll
+### Sticky Scroll
 
 As you scroll down through nested classes/functions/structures, the names stick to the top of the editor making it easy to see the nested scope you're currently working in.
-Works in many different languages, such as JavaScript, TypeScript, C#, JSON, YAML, etc.
+Works in many different languages, such as JavaScript, TypeScript, C#, JSON, YAML, Markdown, etc.
 
 GUI setting: `Editor › Sticky Scroll: Enabled` to `true`.
 
@@ -105,6 +105,8 @@ You can also quickly toggle this setting on/off from the `View` menu.
 ### Breadcrumbs navigation
 
 Displays a breadcrumbs navigation bar at the top of the editor for the current tab.
+
+This setting is now on by default, but it might be turned off if you've been using VS Code with Settings Sync for a while.
 
 GUI setting: `Breadcrumbs: Enabled` to `true`.
 
@@ -151,7 +153,7 @@ Result:
 
 You can control if the caret (typing cursor) blinks or not, as well as the animation it uses for the blink.
 This is just a subtle UI tweak that you might not even notice, but I like it.
-[This post](https://dev.to/chris__sev/animating-your-vs-code-cursor-w-cursor-blinking-1p30) shows gifs of the different animations that you can choose from.
+[This other blog](https://dev.to/chris__sev/animating-your-vs-code-cursor-w-cursor-blinking-1p30) shows gifs of the different animations that you can choose from.
 I personally like the `expand` animation, but you can choose whatever you prefer.
 
 GUI setting: `Editor: Cursor Blinking` to `expand`.
@@ -194,6 +196,8 @@ You can set the tab size for pinned tabs to be smaller if you like.
 I find if I've pinned a tab, I often know what it is and don't need to see the full filename in the tab.
 You can save some horizontal space by shrinking the tab size for pinned tabs.
 
+You will still see the full filename in the tooltip when you hover the mouse over the tab, and in the [breadcrumbs navigation bar](#breadcrumbs-navigation) when you have the file selected.
+
 GUI setting: `Workbench › Editor: Pinned Tab Sizing` to `shrink`.
 
 JSON setting:
@@ -202,10 +206,15 @@ JSON setting:
 "workbench.editor.pinnedTabSizing": "shrink"
 ```
 
+Result:
+
+![Result of using pinned tab sizing with shown configuration](/assets/Posts/2023-03-14-Visual-Studio-Code-default-settings-to-change/pinned-tab-size-setting-result.png)
+
 ### Editor decoration colors
 
 In addition to using glyphs in the tab name to indicate things like the file has been modified, VS Code will also color the tab text.
-This setting is on by default, but you may still have it turned off if you've been using VS Code with Settings Sync for a while.
+
+This setting is now on by default, but it might be turned off if you've been using VS Code with Settings Sync for a while.
 
 GUI setting: `Workbench › Editor › Decorations: Colors` to `true`.
 
@@ -235,10 +244,11 @@ Result:
 
 ### Bracket pair colorization
 
-This is another setting that is on by default, but may be turned off if you've been using VS Code with Settings Sync for a while.
 This setting will colorize matching brackets, which can make it easier to see which opening bracket matches which closing bracket.
 
 There used to be several extensions that provided this functionality, but now it is built into VS Code.
+
+This setting is now on by default, but it might be turned off if you've been using VS Code with Settings Sync for a while.
 
 GUI setting: `Editor › Bracket Pair Colorization: Enabled` to `true`.
 
