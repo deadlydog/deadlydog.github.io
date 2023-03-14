@@ -1,6 +1,6 @@
 ---
 title: "Change these VS Code default settings to make it even more awesome"
-permalink: /Visual-Studio-Code-settings-to-change/
+permalink: /Visual-Studio-Code-default-settings-to-change/
 #date: 2099-01-15T00:00:00-06:00
 #last_modified_at: 2099-01-22
 comments_locked: false
@@ -57,11 +57,11 @@ JSON setting:
 
 Result:
 
-![Result of enabling the Show Invisible Characters setting](/assets/Posts/2022-08-15-Visual-Studio-Code-settings-to-change/show-invisible-characters-settings-result.png)
+![Result of enabling the Show Invisible Characters setting](/assets/Posts/2023-03-14-Visual-Studio-Code-default-settings-to-change/show-invisible-characters-settings-result.png)
 
 Note: There are separate settings for the `Markdown` and `PlainText` languages, which are `false` by default, so be sure to enable all of them.
 
-![There are multiple language settings for showing invisible characters](/assets/posts/2022-08-15-Visual-Studio-Code-settings-to-change/show-invisible-characters-multiple-settings.png)
+![There are multiple language settings for showing invisible characters](/assets/posts/2023-03-14-Visual-Studio-Code-default-settings-to-change/show-invisible-characters-multiple-settings.png)
 
 ## Enable Sticky Scroll
 
@@ -78,7 +78,7 @@ JSON setting:
 
 Result:
 
-![Result of using sticky scroll in YAML](/assets/Posts/2022-08-15-Visual-Studio-Code-settings-to-change/sticky-scroll-setting-result.png)
+![Result of using sticky scroll in YAML](/assets/Posts/2023-03-14-Visual-Studio-Code-default-settings-to-change/sticky-scroll-setting-result.png)
 
 You can also quickly toggle this setting on/off from the `View` menu.
 
@@ -216,7 +216,7 @@ JSON setting:
 
 Result:
 
-![Result of using breadcrumbs navigation](/assets/Posts/2022-08-15-Visual-Studio-Code-settings-to-change/breadcrumbs-navigation-setting-result.png)
+![Result of using breadcrumbs navigation](/assets/Posts/2023-03-14-Visual-Studio-Code-default-settings-to-change/breadcrumbs-navigation-setting-result.png)
 
 ## Format on paste
 
@@ -283,7 +283,7 @@ Below are the non-default minimap JSON settings that I use:
 
 Result:
 
-![Result of using the minimap for vertical scrolling with shown configuration](/assets/Posts/2022-08-15-Visual-Studio-Code-settings-to-change/minimap-setting-result.png)
+![Result of using the minimap for vertical scrolling with shown configuration](/assets/Posts/2023-03-14-Visual-Studio-Code-default-settings-to-change/minimap-setting-result.png)
 
 ## Render whitespace
 
@@ -301,7 +301,7 @@ JSON setting:
 
 Result:
 
-![Result of using render whitespace with shown configuration](/assets/Posts/2022-08-15-Visual-Studio-Code-settings-to-change/render-whitespace-setting-result.png)
+![Result of using render whitespace with shown configuration](/assets/Posts/2023-03-14-Visual-Studio-Code-default-settings-to-change/render-whitespace-setting-result.png)
 
 ## Cursor blinking
 
@@ -411,7 +411,7 @@ JSON setting:
 
 Result:
 
-![Screenshot of how many tabs look with wrap tabs enabled](/assets/Posts/2022-08-15-Visual-Studio-Code-settings-to-change/wrap-tabs-setting-result.png)
+![Screenshot of how many tabs look with wrap tabs enabled](/assets/Posts/2023-03-14-Visual-Studio-Code-default-settings-to-change/wrap-tabs-setting-result.png)
 
 ## Bracket pair colorization
 
@@ -430,7 +430,7 @@ JSON setting:
 
 Result (notice how it's easy to see which opening bracket matches which closing bracket):
 
-![Screenshot of bracket pair colorization in action](/assets/Posts/2022-08-15-Visual-Studio-Code-settings-to-change/bracket-pair-colorization-setting-result.png)
+![Screenshot of bracket pair colorization in action](/assets/Posts/2023-03-14-Visual-Studio-Code-default-settings-to-change/bracket-pair-colorization-setting-result.png)
 
 ## Bracket pair guides
 
@@ -446,7 +446,7 @@ JSON setting:
 
 Result:
 
-![Gif of bracket pair guides in action](/assets/Posts/2022-08-15-Visual-Studio-Code-settings-to-change/bracket-pair-guides-setting-result.gif)
+![Gif of bracket pair guides in action](/assets/Posts/2023-03-14-Visual-Studio-Code-default-settings-to-change/bracket-pair-guides-setting-result.gif)
 
 ## Editor font
 
