@@ -82,7 +82,7 @@ Result:
 
 Note: There are separate settings for the `Markdown` and `PlainText` languages, which are `false` by default, so be sure to enable all of them.
 
-![There are multiple language settings for showing invisible characters](/assets/posts/2023-03-14-Visual-Studio-Code-default-settings-to-change/show-invisible-characters-multiple-settings.png)
+![Screenshot showing there are multiple language settings for showing invisible characters](/assets/Posts/2023-03-14-Visual-Studio-Code-default-settings-to-change/show-invisible-characters-multiple-settings.png)
 
 ### Render whitespace
 
