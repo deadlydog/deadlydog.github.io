@@ -333,7 +333,7 @@ JSON setting:
 "editor.fontLigatures": true,
 ```
 
-## Editor files and formatting
+## Editor file and formatting settings
 
 ### Trim trailing whitespace when saving file
 
