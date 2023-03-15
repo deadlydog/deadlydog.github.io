@@ -335,6 +335,22 @@ JSON setting:
 
 ## Editor file and formatting settings
 
+### Save files automatically
+
+If you're tired of constantly hitting <kbd>Ctrl</kbd>+<kbd>S</kbd> to save your files, you can enable auto-save.
+
+I personally like having it save files automatically after 1 second, but you can also choose to have it save when the editor or VS Code lose focus.
+Choose whatever works best for you.
+
+GUI setting: `Files: Auto Save` to `afterDelay`, and `Files: Auto Save Delay` to `1000`.
+
+JSON setting:
+
+```json
+"files.autoSave": "afterDelay",
+"files.autoSaveDelay": 1000,
+```
+
 ### Trim trailing whitespace when saving file
 
 Automatically remove trailing whitespace at the end of any lines when the file is saved.
@@ -413,6 +429,18 @@ JSON setting:
 "editor.formatOnSaveMode": "modifications"
 ```
 
+### Auto guess encoding
+
+When you open a file, VS Code will guess the encoding of the file so it displays properly, and use that encoding when saving the file, rather than changing it to the default encoding type (which is specified by the `files.encoding` setting).
+
+GUI setting: `Files: Auto Guess Encoding` to `true`.
+
+JSON setting:
+
+```json
+"files.autoGuessEncoding": true,
+```
+
 ### Default language for new files
 
 When you create a new tab in VS Code, but have not saved it and given it a file extension yet, VS Code does not know the file type and what language it is and thus can not provide services like syntax highlighting, intellisense, etc.
@@ -447,22 +475,6 @@ JSON setting:
 
 ```json
 "code-runner.defaultLanguage": "powershell",
-```
-
-### Save files automatically
-
-If you're tired of constantly hitting <kbd>Ctrl</kbd>+<kbd>S</kbd> to save your files, you can enable auto-save.
-
-I personally like having it save files automatically after 1 second, but you can also choose to have it save when the editor or VS Code lose focus.
-Choose whatever works best for you.
-
-GUI setting: `Files: Auto Save` to `afterDelay`, and `Files: Auto Save Delay` to `1000`.
-
-JSON setting:
-
-```json
-"files.autoSave": "afterDelay",
-"files.autoSaveDelay": 1000,
 ```
 
 ### Automatically use find-in-selection if multiple lines are selected
