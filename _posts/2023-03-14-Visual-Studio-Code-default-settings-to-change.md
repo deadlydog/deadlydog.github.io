@@ -522,6 +522,47 @@ JSON setting (example):
 }
 ```
 
+### Terminal font
+
+Similar to the [editor font](#editor-font), you can configure the font that is used in the integrated terminal.
+
+Again, I prefer the `CaskaydiaCove Nerd Font Mono` font which you can get free from [Nerd Fonts](https://www.nerdfonts.com/font-downloads), but feel free to use whatever font you prefer.
+You may want to ensure you pick a font that supports any ligatures that you may want to use.
+
+GUI setting: `Terminal › Integrated: Font Family` to `"CaskaydiaCove Nerd Font Mono"`.
+
+JSON setting:
+
+```json
+"terminal.integrated.fontFamily": "CaskaydiaCove Nerd Font Mono",
+```
+
+### Terminal cursor style
+
+You can configure the cursor style that is used in the integrated terminal.
+I prefer the `line` cursor style over `block` or `underline`, but you can choose whatever you prefer.
+
+GUI setting: `Terminal › Integrated: Cursor Style` to `block`.
+
+JSON setting:
+
+```json
+"terminal.integrated.cursorStyle": "line"
+```
+
+### Scrollback
+
+The integrated terminal has a scrollback buffer that stores the output of previous commands.
+It defaults to `1000` lines, but I prefer to increase it as some scripts can output a lot of text and I like to ensure I'm able to view it all.
+
+GUI setting: `Terminal › Integrated: Scrollback` to `10000`.
+
+JSON setting:
+
+```json
+"terminal.integrated.scrollback": 10000,
+```
+
 ## Git settings
 
 ### Autofetch
