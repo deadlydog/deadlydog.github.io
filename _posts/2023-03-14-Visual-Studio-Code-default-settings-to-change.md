@@ -50,6 +50,8 @@ You can use the setting's gear icon to `Reset Setting` to its default value, and
 
 ![Screenshot of the Settings UI in VS Code](/assets/Posts/2023-03-14-Visual-Studio-Code-default-settings-to-change/screenshot-of-settings-screen.png)
 
+If you want to see what settings you've changed from the default values, look in the settings.json file.
+
 Alright, enough preamble, let's see the settings!
 
 If there are other settings you think belong on this list, please let me know in the comments.
@@ -170,7 +172,7 @@ Result:
 
 ### Cursor blinking
 
-You can control if the caret (typing cursor) blinks or not, as well as the animation it uses for the blink.
+Control if the caret (typing cursor) blinks or not, as well as the animation it uses for the blink.
 This is just a subtle UI tweak that you might not even notice, but I like it.
 [This other blog](https://dev.to/chris__sev/animating-your-vs-code-cursor-w-cursor-blinking-1p30) shows gifs of the different animations that you can choose from.
 I personally like the `expand` animation, but you can choose whatever you prefer.
@@ -185,7 +187,7 @@ JSON setting:
 
 ### Smooth scrolling
 
-You can enable smooth scrolling, which adds a slight animation to vertically scrolling.
+Enable smooth scrolling, which adds a slight animation to vertically scrolling.
 I find this makes scrolling less jarring and easier to differentiate which direction you are scrolling.
 
 GUI setting: `Editor: Smooth Scrolling` to `true`.
@@ -211,7 +213,7 @@ JSON setting:
 
 ### Pinned tab size
 
-You can set the tab size for pinned tabs to be smaller if you like.
+Set the tab width for pinned tabs to be smaller.
 I find if I've pinned a tab, I often know what it is and don't need to see the full filename in the tab.
 You can save some horizontal space by shrinking the tab size for pinned tabs.
 
@@ -263,7 +265,7 @@ Result:
 
 ### Bracket pair colorization
 
-This setting will colorize matching brackets, which can make it easier to see which opening bracket matches which closing bracket.
+Colorize matching brackets, making it easier to see which opening bracket matches which closing bracket.
 
 There used to be several extensions that provided this functionality, but now it is built into VS Code.
 
@@ -283,7 +285,7 @@ Result (notice how it's easy to see which opening bracket matches which closing 
 
 ### Bracket pair guides
 
-This setting will add a vertical or horizontal line to the editor to help you see which pair of brackets you are currently modifying code for.
+Add a vertical or horizontal line to the editor to help you see which pair of brackets you are currently modifying code for.
 
 GUI setting: `Editor › Guides: Bracket Pairs` to `active`.
 
@@ -299,7 +301,7 @@ Result:
 
 ### Editor font
 
-You can change the font used in the editor.
+Change the font used in the editor.
 This is a very personal preference, and may require you to install the font on your machine.
 
 I personally like the `CaskaydiaCove Nerd Font` font.
@@ -318,7 +320,7 @@ JSON setting:
 
 ### Editor font ligatures
 
-If your editor font supports it, you can enable font ligatures.
+If your [editor font](#editor-font) supports it, you can enable font ligatures.
 Font ligatures are a way to combine multiple characters into a single glyph, such as `==` becoming `≡`, or `->` becoming `→`.
 
 I personally do not like font ligatures, but I know many people do.
@@ -349,7 +351,7 @@ Note: When working in source controlled files, this can sometimes make the file 
 
 ### Insert final newline
 
-VS Code can automatically add a final newline to the end of the file when you save it.
+Automatically add a final newline to the end of the file when you save it.
 This is especially helpful if you are working with text files that will be accessed on unix, as [unix requires a final newline to be present on text files](https://unix.stackexchange.com/a/18789/351983).
 
 GUI setting: `Files: Insert Final Newline` to `true`.
@@ -388,7 +390,7 @@ JSON setting:
 
 ### Format on save and format save mode
 
-VS Code can automatically format a file when you save it, applying linting rules and other formatting rules.
+Automatically format a file when you save it, applying linting rules and other formatting rules.
 
 GUI setting: `Format On Save` to `true`.
 
@@ -522,7 +524,32 @@ JSON setting (example):
 
 ## Git settings
 
-### Git merge editor
+### Autofetch
+
+Automatically fetch from the remote repository periodically.
+This allows you to see easily if your local repository is out of date or not, without having to fetch manually.
+
+GUI setting: `Git: Autofetch` to `true`.
+
+JSON setting:
+
+```json
+"git.autofetch": true,
+```
+
+### Auto stash
+
+Automatically stash your changes before pulling, and restore them after the pull succeeds.
+
+GUI setting: `Git: Auto Stash` to `true`.
+
+JSON setting:
+
+```json
+"git.autoStash": true,
+```
+
+### Merge editor
 
 When you are resolving merge conflicts, VS Code will open the visual merge editor to help you resolve the conflicting lines.
 
@@ -534,11 +561,38 @@ JSON setting:
 "git.mergeEditor": true,
 ```
 
+### Smart commit
+
+By default if you have not staged any changes, VS Code will prompt you to stage them before you can commit, giving you the options "Yes", "No", "Always", and "Never".
+
+- If you selected "Always", it will have automatically stage all changes for you before committing them.
+- If you selected "Never", the Commit button will be disabled until you stage some changes.
+
+I prefer to not be prompted and for it to automatically stage all changes before committing, so I use this setting.
+
+GUI setting: `Git: Enable Smart Commit` to `true`.
+
+JSON setting:
+
+```json
+"git.enableSmartCommit": true,
+```
+
+If you prefer requiring changes to be manually staged before they can be committed, and do not want to be prompted, you can set the above `enableSmartCommit` setting to `false`, and also set `suggestSmartCommit` to false.
+
+GUI setting: `Git: Suggest Smart Commit` to `false`.
+
+JSON setting:
+
+```json
+"git.suggestSmartCommit": false,
+```
+
 ## Markdown settings
 
 ### Markdown validation
 
-VS Code can validate your markdown files and notify you of some common errors, such as broken links to pages or images in your repo.
+Validate your markdown files and notify you of some common errors, such as broken links to pages or images in your repo.
 
 GUI setting: `Markdown › Validation: Enabled` to `true`.
 
