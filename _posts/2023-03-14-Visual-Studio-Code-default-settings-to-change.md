@@ -351,7 +351,7 @@ JSON setting:
 "files.autoSaveDelay": 1000,
 ```
 
-### Trim trailing whitespace when saving file
+### Trim trailing whitespace
 
 Automatically remove trailing whitespace at the end of any lines when the file is saved.
 
