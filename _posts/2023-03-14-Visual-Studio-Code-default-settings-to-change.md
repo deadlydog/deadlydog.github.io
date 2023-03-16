@@ -177,7 +177,7 @@ Result:
 ### Cursor style
 
 Change the caret (typing cursor) style.
-I prefer the default `line` style, but you may like a different style better.
+I actually prefer the default `line` style, but included this setting in the list as you may like a different style better.
 
 GUI setting: `Editor: Cursor Style` to `line`.
 
@@ -222,7 +222,7 @@ JSON setting:
 ### Smooth caret animation
 
 This is similar to the [Smooth scrolling setting](#smooth-scrolling), only for the caret (the typing cursor).
-This adds a slight animation to the caret when it moves, making it easier to follow, rather than it just jumping to the new location.
+This adds a slight animation of the caret moving to the new location, making it easier to follow, rather than it jumping and just appearing at the new location.
 
 GUI setting: `Editor: Cursor Smooth Caret Animation` to `true`.
 
@@ -254,7 +254,7 @@ Result:
 
 ### Editor decoration colors
 
-In addition to using glyphs in the tab name to indicate things like the file has been modified, VS Code will also color the tab text.
+In addition to using glyphs in the tab name to indicate things like the file has been modified, VS Code will also change the color the tab text.
 
 This setting is now on by default, but it might be turned off if you've been using VS Code with Settings Sync for a while.
 
@@ -265,6 +265,10 @@ JSON setting:
 ```json
 "workbench.editor.decorations.colors": true
 ```
+
+Result:
+
+![Result of enabling editor decoration colors](/assets/Posts/2023-03-14-Visual-Studio-Code-default-settings-to-change/editor-decoration-colors-setting-result.png)
 
 ### Wrap tabs
 
