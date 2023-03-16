@@ -2,7 +2,7 @@
 title: "Change these VS Code default settings to make it even more awesome"
 permalink: /Visual-Studio-Code-default-settings-to-change/
 #date: 2099-01-15T00:00:00-06:00
-last_modified_at: 2023-03-15
+last_modified_at: 2023-03-16
 comments_locked: false
 toc: true
 categories:
@@ -51,6 +51,9 @@ You can use the GUI setting's gear icon to `Reset Setting` to its default value,
 ![Screenshot of the Settings UI in VS Code](/assets/Posts/2023-03-14-Visual-Studio-Code-default-settings-to-change/screenshot-of-settings-screen.png)
 
 If you want to quickly see what settings you've changed from the default values, look in the settings.json file.
+
+While testing out many different settings, I recommend opening a separate VS Code instance on a separate monitor.
+This way you can modify settings in one instance and see the results instantly in the other instance, without having to switch back and forth between the Settings tab and your other tabs.
 
 Alright, enough preamble, let's see the settings!
 
@@ -209,7 +212,7 @@ JSON setting:
 
 ### Smooth scrolling
 
-Enable smooth scrolling, which adds a slight animation to vertically scrolling.
+Adds a slight animation to vertically scrolling, rather than the page just jumping to the new location.
 I find this makes scrolling less jarring and easier to differentiate which direction you are scrolling.
 
 GUI setting: `Editor: Smooth Scrolling` to `true`.
