@@ -41,7 +41,7 @@ Read more about it in [the official docs](https://code.visualstudio.com/docs/edi
 
 ### Changing settings in VS Code
 
-You can access the settings in VS Code from the `File` -> `Settings` -> `Preferences` menu, or use the keyboard shortcut <kbd>Ctrl</kbd>+<kbd>,</kbd> (<kbd>Cmd</kbd>+<kbd>,</kbd> on macOS).
+You can access the settings in VS Code from the `File` -> `Preferences` -> `Settings` menu, or use the keyboard shortcut <kbd>Ctrl</kbd>+<kbd>,</kbd> (<kbd>Cmd</kbd>+<kbd>,</kbd> on macOS).
 From there, use the search box to find the settings mentioned below in this post.
 
 If you prefer to modify the `settings.json` file directly, you can open it using the button in the top right corner of the settings window.
