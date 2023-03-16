@@ -2,7 +2,7 @@
 title: "Change these VS Code default settings to make it even more awesome"
 permalink: /Visual-Studio-Code-default-settings-to-change/
 #date: 2099-01-15T00:00:00-06:00
-#last_modified_at: 2099-01-22
+last_modified_at: 2023-03-15
 comments_locked: false
 toc: true
 categories:
@@ -50,7 +50,7 @@ You can use the GUI setting's gear icon to `Reset Setting` to its default value,
 
 ![Screenshot of the Settings UI in VS Code](/assets/Posts/2023-03-14-Visual-Studio-Code-default-settings-to-change/screenshot-of-settings-screen.png)
 
-If you want to see what settings you've changed from the default values, look in the settings.json file.
+If you want to quickly see what settings you've changed from the default values, look in the settings.json file.
 
 Alright, enough preamble, let's see the settings!
 
