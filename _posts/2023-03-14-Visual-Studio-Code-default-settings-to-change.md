@@ -129,7 +129,7 @@ You can also quickly toggle this setting on/off from the `View` menu.
 
 ### Breadcrumbs navigation
 
-Displays a breadcrumbs navigation bar at the top of the editor for the current tab.
+Displays a breadcrumbs navigation bar at the top of the editor for the current tab, showing not only the file path, but also the class and function that is currently in focus.
 
 This setting is now on by default, but it might be turned off if you've been using VS Code with Settings Sync for a while.
 
@@ -174,10 +174,27 @@ Result:
 
 ![Result of using the minimap for vertical scrolling with shown configuration](/assets/Posts/2023-03-14-Visual-Studio-Code-default-settings-to-change/minimap-setting-result.png)
 
+### Cursor style
+
+Change the caret (typing cursor) style.
+I prefer the default `line` style, but you may like a different style better.
+
+GUI setting: `Editor: Cursor Style` to `line`.
+
+JSON setting:
+
+```json
+"editor.cursorStyle": "line"
+```
+
+Result showing each of the different cursor styles:
+
+![Result of using the different cursor styles](/assets/Posts/2023-03-14-Visual-Studio-Code-default-settings-to-change/cursor-styles-example-results.png)
+
 ### Cursor blinking
 
 Control if the caret (typing cursor) blinks or not, as well as the animation it uses for the blink.
-This is just a subtle UI tweak that you might not even notice, but I like it.
+This is a subtle UI tweak that you might not even notice, but I like it.
 [This other blog](https://dev.to/chris__sev/animating-your-vs-code-cursor-w-cursor-blinking-1p30) shows gifs of the different animations that you can choose from.
 I personally like the `expand` animation, but you can choose whatever you prefer.
 
