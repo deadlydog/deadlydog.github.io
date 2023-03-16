@@ -195,7 +195,6 @@ Result showing each of the different cursor styles:
 
 Control if the caret (typing cursor) blinks or not, as well as the animation it uses for the blink.
 This is a subtle UI tweak that you might not even notice, but I like it.
-[This other blog](https://dev.to/chris__sev/animating-your-vs-code-cursor-w-cursor-blinking-1p30) shows gifs of the different animations that you can choose from.
 I personally like the `expand` animation, but you can choose whatever you prefer.
 
 GUI setting: `Editor: Cursor Blinking` to `expand`.
@@ -205,6 +204,8 @@ JSON setting:
 ```json
 "editor.cursorBlinking": "expand",
 ```
+
+[This other blog](https://dev.to/chris__sev/animating-your-vs-code-cursor-w-cursor-blinking-1p30) shows gifs of the different animations that you can choose from.
 
 ### Smooth scrolling
 
