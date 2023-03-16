@@ -55,6 +55,8 @@ If you want to quickly see what settings you've changed from the default values,
 While testing out many different settings, I recommend opening the Settings tab in a separate tab group to the side (grab the tab and drag it to the right side of the text editor), or else opening it a separate VS Code instance on another monitor.
 This way you can see both the Settings tab and another tab at the same time, allowing you to modify settings and see the results instantly in the other tab without having to switch back and forth.
 
+![Dock settings tab to the right side of the editor](/assets/Posts/2023-03-14-Visual-Studio-Code-default-settings-to-change/dock-settings-tab-on-the-right-side-of-window.png)
+
 Alright, enough preamble, let's see the settings!
 
 If there are other settings you think belong on this list, please let me know in the comments.
