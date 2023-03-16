@@ -121,6 +121,10 @@ Result:
 
 ![Result of using sticky scroll in YAML](/assets/Posts/2023-03-14-Visual-Studio-Code-default-settings-to-change/sticky-scroll-setting-result.png)
 
+And here it is in action while scrolling through a Markdown file:
+
+![Animation showing sticky scroll in action in Markdown](/assets/Posts/2023-03-14-Visual-Studio-Code-default-settings-to-change/sticky-scroll-setting-result-animation.gif)
+
 You can also quickly toggle this setting on/off from the `View` menu.
 
 ### Breadcrumbs navigation
