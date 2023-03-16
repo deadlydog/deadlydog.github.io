@@ -52,8 +52,8 @@ You can use the GUI setting's gear icon to `Reset Setting` to its default value,
 
 If you want to quickly see what settings you've changed from the default values, look in the settings.json file.
 
-While testing out many different settings, I recommend opening a separate VS Code instance on a separate monitor.
-This way you can modify settings in one instance and see the results instantly in the other instance, without having to switch back and forth between the Settings tab and your other tabs.
+While testing out many different settings, I recommend opening the Settings tab in a separate tab group to the side (grab the tab and drag it to the right side of the text editor), or else opening it a separate VS Code instance on another monitor.
+This way you can see both the Settings tab and another tab at the same time, allowing you to modify settings and see the results instantly in the other tab without having to switch back and forth.
 
 Alright, enough preamble, let's see the settings!
 
