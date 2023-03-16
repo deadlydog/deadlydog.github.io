@@ -15,7 +15,7 @@ tags:
 ---
 
 This post is a collection of Visual Studio Code settings that I think are worth changing from their default values.
-This only includes native VS Code settings; no extensions.
+This only includes native VS Code settings; no extensions or themes.
 
 ## Introduction
 
@@ -44,9 +44,9 @@ Read more about it in [the official docs](https://code.visualstudio.com/docs/edi
 You can access the settings in VS Code from the `File` -> `Settings` -> `Preferences` menu, or use the keyboard shortcut <kbd>Ctrl</kbd>+<kbd>,</kbd> (<kbd>Cmd</kbd>+<kbd>,</kbd> on macOS).
 From there, use the search box to find the settings mentioned below in this post.
 
-If you prefer to modify the settings.json file directly, you can open it using the button in the top right corner of the settings window.
-The settings.json file will only show values that have been changed from their default at one point.
-You can use the setting's gear icon to `Reset Setting` to its default value, and it will be removed from the settings.json file.
+If you prefer to modify the `settings.json` file directly, you can open it using the button in the top right corner of the settings window.
+The settings.json file typically only shows setting values that have been changed from their default.
+You can use the GUI setting's gear icon to `Reset Setting` to its default value, and it will be removed from the settings.json file.
 
 ![Screenshot of the Settings UI in VS Code](/assets/Posts/2023-03-14-Visual-Studio-Code-default-settings-to-change/screenshot-of-settings-screen.png)
 
