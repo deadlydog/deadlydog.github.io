@@ -232,6 +232,14 @@ JSON setting:
 "editor.cursorSmoothCaretAnimation": "on",
 ```
 
+Result of smooth caret animation off:
+
+![Result of not using smooth caret animation](/assets/Posts/2023-03-14-Visual-Studio-Code-default-settings-to-change/smooth-caret-animation-off-result.gif
+
+Result of smooth caret animation on:
+
+![Result of using smooth caret animation](/assets/Posts/2023-03-14-Visual-Studio-Code-default-settings-to-change/smooth-caret-animation-on-result.gif)
+
 ### Pinned tab size
 
 Set the tab width for pinned tabs to be smaller.
@@ -290,7 +298,7 @@ Result:
 
 ### Bracket pair colorization
 
-Colorize matching brackets, making it easier to see which opening bracket matches which closing bracket.
+Colorize matching brackets/parenthesis, making it easier to see which opening bracket matches which closing bracket.
 
 There used to be several extensions that provided this functionality, but now it is built into VS Code.
 
@@ -310,7 +318,7 @@ Result (notice how it's easy to see which opening bracket matches which closing 
 
 ### Bracket pair guides
 
-Add a vertical or horizontal line to the editor to help you see which pair of brackets you are currently modifying code for.
+Add a vertical or horizontal line to the editor to help you see which pair of brackets/parenthesis you are currently modifying code for.
 
 GUI setting: `Editor › Guides: Bracket Pairs` to `active`.
 
