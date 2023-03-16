@@ -240,7 +240,7 @@ Result of smooth caret animation off:
 
 ![Result of not using smooth caret animation](/assets/Posts/2023-03-14-Visual-Studio-Code-default-settings-to-change/smooth-caret-animation-off-result.gif)
 
-Result of smooth caret animation on:
+Result of smooth caret animation on (does not look as smooth and nice in the gif due to its low frame rate):
 
 ![Result of using smooth caret animation](/assets/Posts/2023-03-14-Visual-Studio-Code-default-settings-to-change/smooth-caret-animation-on-result.gif)
 
