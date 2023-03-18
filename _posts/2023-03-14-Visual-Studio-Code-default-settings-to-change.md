@@ -7,10 +7,12 @@ comments_locked: false
 toc: true
 categories:
   - Visual Studio Code
+  - Editor
   - Productivity
 tags:
   - Visual Studio Code
   - VS Code
+  - Editor
   - Productivity
 ---
 
