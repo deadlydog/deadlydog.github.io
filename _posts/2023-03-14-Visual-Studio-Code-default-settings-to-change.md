@@ -497,25 +497,6 @@ JSON setting:
 "files.defaultLanguage": "powershell",
 ```
 
-### Default language for code-runner
-
-This setting will be used when you select some text, right-click, and select `Run Code` from the context menu.
-
-This is handy when you open a new tab and have not yet saved the file (so VS Code does not know the file type and language), but want to run a portion of the code.
-It is also useful when you are working in a markdown file and want to run a code snippet.
-
-I work a lot in PowerShell, so I set the default language to `powershell`.
-You may want to set it to something like `javascript`, `typescript`, `python`, `csharp`, `markdown`, etc.
-The supported language identifiers are [listed here](https://code.visualstudio.com/docs/languages/identifiers#_known-language-identifiers).
-
-GUI setting: `Code-running: Default Language` to `powershell`.
-
-JSON setting:
-
-```json
-"code-runner.defaultLanguage": "powershell",
-```
-
 ### Automatically use find-in-selection if multiple lines are selected
 
 If you select multiple lines of text and use <kbd>Ctrl</kbd>+<kbd>F</kbd> or <kbd>Ctrl</kbd>+<kbd>H</kbd> to open the Find or Replace dialog respectively, VS Code can automatically toggle on the `Find in Selection` option of the dialog.
