@@ -416,7 +416,7 @@ GUI setting: `Files: Insert Final Newline` to `true`.
 JSON setting:
 
 ```json
-"files.insertFinalNewline": true
+"files.insertFinalNewline": true,
 ```
 
 ### Trim final newlines
@@ -454,7 +454,7 @@ GUI setting: `Format On Save` to `true`.
 JSON setting:
 
 ```json
-"editor.formatOnSave": true
+"editor.formatOnSave": true,
 ```
 
 Along with this setting, you can specify the format mode.
@@ -467,7 +467,7 @@ GUI setting: `Format On Save Mode` to `modifications`.
 JSON setting:
 
 ```json
-"editor.formatOnSaveMode": "modifications"
+"editor.formatOnSaveMode": "modifications",
 ```
 
 ### Auto guess encoding
@@ -509,7 +509,7 @@ GUI setting: `Editor › Find: Auto Find In Selection` to `multiline`.
 JSON setting:
 
 ```json
-"editor.find.autoFindInSelection": "multiline"
+"editor.find.autoFindInSelection": "multiline",
 ```
 
 ## Terminal settings
@@ -527,7 +527,7 @@ GUI setting: `Terminal › Integrated › Default Profile: Windows` to `PowerShe
 JSON setting:
 
 ```json
-"terminal.integrated.defaultProfile.windows": "PowerShell"
+"terminal.integrated.defaultProfile.windows": "PowerShell",
 ```
 
 If the terminal that you want to use is not in the list, you can add it to your list of terminals that are available using the setting below.
@@ -553,7 +553,7 @@ JSON setting (example):
   "Git Bash": {
     "source": "Git Bash"
   }
-}
+},
 ```
 
 ### Terminal font
@@ -576,12 +576,12 @@ JSON setting:
 You can configure the cursor style that is used in the integrated terminal.
 I prefer the `line` cursor style over `block` or `underline`, but you can choose whatever you prefer.
 
-GUI setting: `Terminal › Integrated: Cursor Style` to `block`.
+GUI setting: `Terminal › Integrated: Cursor Style` to `line`.
 
 JSON setting:
 
 ```json
-"terminal.integrated.cursorStyle": "line"
+"terminal.integrated.cursorStyle": "line",
 ```
 
 ### Scrollback
