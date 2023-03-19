@@ -20,6 +20,8 @@ End with a brief conclusion.
 
 Your regular markdown goes here. It also supports HTML :)
 
+![Example image](/assets/Posts/2099-01-15-Template-post/image-name.png)
+
 Posts in this _drafts directory will not show up on the website unless you build using `--draft` when compiling:
 
 > bundle exec jekyll serve --incremental --draft
