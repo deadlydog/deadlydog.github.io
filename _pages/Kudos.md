@@ -3,18 +3,29 @@ permalink: /kudos/
 title: "🙏 Kudos and Thank Yous I've received"
 ---
 
-A while back I started keeping track of "thank you" emails and donations that I received for my open source software.
-Unfortunately I wasn't very diligent about keeping track of them years ago, so many are lost, but I was able to track down some from years past.
+In 2021 I started keeping track of "thank you" emails and donations that I received for my open source software.
 This page is a compilation of that feedback.
 It's a nice place I can turn to when I'm not feeling motivated, or when I need a pick-me-up.
 
 ## Donations and thank you emails from the community
+
+2023-03-21
+
+$5.00 USD from Josh Jones for my blog posts.
+
+> Thanks for the blog.
+> I'm a PowerShell enthusiast (and dabbler in AHK).
+> I'm currently learning C#/dotnet and it's been very helpful :)
+
+---
 
 2023-02-28
 
 $5.00 USD from Edward Eastman for [CloseZoomWindowsAfterJoiningMeeting](https://github.com/deadlydog/CloseZoomWindowsAfterJoiningMeeting).
 
 > Thank you for the AHK code to close Zoom launch windows.
+
+---
 
 2022-12-31
 

@@ -3,7 +3,7 @@ permalink: /feedback/
 title: "💬 Feedback I've received from colleagues"
 ---
 
-A while back I started keeping track of feedback that I received from my peers at work.
+In 2021 I started keeping track of feedback that I received from my peers at work.
 Unfortunately I wasn't very diligent about keeping track of them years ago, so many are lost, but I was able to track down some from years past.
 This page is a compilation of that feedback.
 
