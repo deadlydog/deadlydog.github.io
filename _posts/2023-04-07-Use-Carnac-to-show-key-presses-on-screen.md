@@ -30,7 +30,7 @@ I have only only been able to get Carnac to work on my primary monitor, and have
 Once I got it configured how I like however, I have not had any issues with it.
 
 While Carnac is not perfect, it is still a great free tool that I get a lot of value from.
-Several people have asked me in [my YouTube channel](https://www.youtube.com/deadlydog) comments what tool I was using to show my key presses on screen, so I decided to write this post to spread the word about Carnac.
+Several people have asked me in [my YouTube channel](https://www.youtube.com/deadlydog) comments what tool I was using to show my key presses on-screen, so I decided to write this post to spread the word about Carnac.
 
 Do you know of any other tools like Carnac?
 Perhaps you have a fork of Carnac that you have been maintaining?
