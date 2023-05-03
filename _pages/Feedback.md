@@ -9,7 +9,13 @@ This page is a compilation of that feedback.
 
 ## What my colleagues have to say about me
 
-Steven Swab, 2022-11-08 in Slack
+2023-05-03: PDLG (Product Development Leadership Group) and Development Leads in Slack:
+
+> Dan is an amazing gift to us
+
+---
+
+2022-11-08: Steven Swab in Slack:
 
 > I wanted to give @deadlydog-DanSchroeder a shout out for exemplifying a number of our core values.
 > He's a `High-horsepower` guy who `Delivers Results` and demonstrates excellent `Servant Leadership`.
@@ -19,7 +25,7 @@ Steven Swab, 2022-11-08 in Slack
 > Thank you Dan - The `High-horsepower`, `Servant Leader`, who `Delivers Results`.
 > You make all of us at iQ better.
 
-Reply from Maryam Bagherzadeh
+Reply from Maryam Bagherzadeh:
 
 > @deadlydog-DanSchroeder is great! Knowledgeable, helpful plus humble!
 
