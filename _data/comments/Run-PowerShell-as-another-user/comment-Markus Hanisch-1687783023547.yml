@@ -1,0 +1,7 @@
+_id: 26f6ffc0-141e-11ee-9532-c39baf22e21a
+message: "If you want to force an elevated PowerShell session (run as administrator), you might make use of the Requires statement at the beginning of your script:\r\n#Requires -RunAsAdministrator\r\n\r\nFurther info:\r\nhttps://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_requires?view=powershell-7.3#-runasadministrator"
+name: Markus Hanisch
+email: 1a758d5d8bfe73a49d2b8bdb305c4674
+url: 'https://linkedin.com/in/markushanisch'
+hidden: ''
+date: '2023-06-26T12:37:03.534Z'
