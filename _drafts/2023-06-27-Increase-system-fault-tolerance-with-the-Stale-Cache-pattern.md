@@ -49,7 +49,8 @@ Caching is a huge topic with many considerations, such as:
 
 Depending on your application, you may implement several different caches at different layers, each with different strategies and configurations.
 
-There are tons of great articles on caching, like [this](https://dev.to/kalkwst/database-caching-strategies-16in) and [this](https://medium.com/geekculture/overview-of-caching-distributed-cache-caching-patterns-techniques-6130a116820) and [this](https://levelup.gitconnected.com/6-caching-strategies-for-system-design-interviews-8cf22193b360) and [this](https://www.neovolve.com/2008/10/08/cache-expiration-policies/) and [this](https://www.linkedin.com/pulse/exploring-caching-patterns-microservices-architecture-saeed-anabtawi/), so I won't go into any more detail here.
+There are tons of great articles on caching and the pros and cons of various strategies, like [this](https://dev.to/kalkwst/database-caching-strategies-16in) and [this](https://medium.com/geekculture/overview-of-caching-distributed-cache-caching-patterns-techniques-6130a116820) and [this](https://levelup.gitconnected.com/6-caching-strategies-for-system-design-interviews-8cf22193b360) and [this](https://www.neovolve.com/2008/10/08/cache-expiration-policies/) and [this](https://www.linkedin.com/pulse/exploring-caching-patterns-microservices-architecture-saeed-anabtawi/) and [this](https://hazelcast.com/blog/a-hitchhikers-guide-to-caching-patterns/), so I won't go into any more detail here.
+I make reference to the cache-aside, read-through, and refresh-ahead strategies later, so you can see these resources for more information on them.
 Remember to finish this article first before falling down the external links rabbit hole 😅.
 
 ## What is fault tolerance?
@@ -168,6 +169,11 @@ The Stale Cache pattern is a good fit for applications that value speed over acc
 As shown above, the implementation may allow applications to return stale cached data right away and then fetch updated data in the background.
 Be aware though that retrieving data asynchronously in the background may come at the expense of more complicated code.
 
+A variation of this strategy is known as refresh-ahead.
+The refresh-ahead strategy however is typically focused on performance, rather than fault tolerance, with some implementations trying to predict when a cache item will be requested and refreshing it before it is requested.
+Other variations simply refresh all cache items on a schedule.
+Both of these implementations may result in more requests and load to the external service, which may not be desirable.
+
 ### - Data that is not extremely time sensitive
 
 The Stale Cache pattern provides fault tolerance when the external source is unavailable for a period of time.
@@ -187,7 +193,7 @@ Examples of this type of data include:
 ## Example implementation of the Stale Cache pattern
 
 Below is a basic example of incorporating the Stale Cache pattern into an in-memory cache that uses the cache-aside strategy in C#.
-In-memory cache-aside caches are very popular for desktop applications, and web services that do not need to scale.
+In-memory cache-aside caches are very popular for client applications, and web services that do not need to horizontally scale greatly.
 I build upon the .NET MemoryCache class in this example.
 
 ```csharp
@@ -272,7 +278,7 @@ An example of using the above in-memory cache with the cache-aside strategy migh
 
 ```csharp
 private readonly TimeSpan TimeBeforeFetchingFreshAuthToken = TimeSpan.FromMinutes(30);
-private readonly TimeSpan MaxTimeToUseStaleAuthTokenFor = TimeSpan.FromMinutes(60);
+private readonly TimeSpan MaxTimeToUseStaleAuthTokenFor = TimeSpan.FromMinutes(120);
 
 public async Task<string> GetAuthToken()
 {
@@ -313,10 +319,21 @@ public async Task<string> GetAuthToken()
 
 Check out [this gist](https://gist.github.com/deadlydog/3169ff35abc95c4607acf5730a12932b) for more complete example code, including unit tests.
 
-This is only one possible implementation of the Stale Cache pattern.
+In this example you can see that `TimeBeforeFetchingFreshAuthToken` is set to 30 minutes, and `MaxTimeToUseStaleAuthTokenFor` to 120 minutes.
+Let's say 120 minutes was chosen because that is how long a new auth token is valid for.
+With this in place and assuming the application is being used constantly, the auth token will refresh every 30 minutes.
+
+Consider what would happen if the application retrieves an auth token at 1pm, and then the external auth service goes down from 2pm - 3pm.
+In a typical cache-aside strategy, a single expiry time must be chosen.
+The developer may choose to expire the cache item after 90 minutes, since that's close to the max lifetime of the auth token.
+Or perhaps they ignore the auth token lifetime and simply expire the cache item every 30 minutes.
+In both cases the application would end up unable to retrieve a fresh auth token at 2:30pm and suffer an outage.
+Using the Stale Cache with the values in the example code above however would allow the application to always have a valid auth token, as it would obtain a new auth token at 2pm which would be good until 4pm.
+
+The above is only one possible implementation of the Stale Cache pattern.
 I chose to keep it simple for the sake of this example, but there are many other things you could do to improve it.
-You may want to have it fetch fresh items in the background and return stale items immediately.
-You may want to store a delegate with the cache item that can be used to have it refresh itself, and move the logic of when to retrieve a fresh item into the cache class.
+You may want to have it fetch fresh items in the background and return stale items immediately (refresh-ahead strategy).
+You may want to store a delegate with the cache item that the `StaleMemoryCache` class can call to refresh the cache item, and move the date and `StaleMemoryCacheResult` comparison logic of when to retrieve a fresh item into the cache class (read-through strategy).
 
 While this example shows how to use the Stale Cache pattern with an in-memory cache-aside strategy, it can be similarly incorporated into distributed caches and other cache strategies.
 
@@ -365,4 +382,4 @@ The pattern can also help give your apps and services a speed boost by returning
 
 I hope this pattern eventually becomes standard functionality in all caching libraries that offer time-based expiration, and that you find it useful in your applications.
 
-Happy coding!
+Happy caching!
