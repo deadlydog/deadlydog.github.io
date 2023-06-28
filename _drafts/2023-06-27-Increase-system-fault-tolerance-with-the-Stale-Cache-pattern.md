@@ -20,8 +20,8 @@ tags:
 ---
 
 Caching is used to improve the performance of an application.
-When applied properly, caches can help increase an application's fault tolerance, helping to prevent outages, reduce latency, and improve the user experience.
-In this post I introduce the `Stale Cache` pattern and show how to use it to greatly increase the fault tolerance of your applications.
+When applied properly, caches can also help increase an application's fault tolerance, helping to prevent outages, reduce latency, and improve the user experience.
+In this post I introduce the `Stale Cache` pattern and show how to apply it to time-based caches to further increase the fault tolerance of your applications.
 
 I have not seen this pattern used in any caching libraries, and do not know if it has an official name, so I am calling it the `Stale Cache` pattern.
 If you know of it by a different name, please let me know in the comments below.
@@ -79,7 +79,7 @@ Even if you are the type to pull food out of the garbage ([like George Costanza]
 
 With no bread for a sandwich and your stomach growling, you reflect on what you could have done to avoid this unhappy situation.
 The answer is simple; you should not have thrown out the stale bread until you had fresh bread to replace it.
-This is the Stale Cache pattern.
+This is the `Stale Cache` pattern.
 
 ### How is this different from traditional time-based caching?
 
@@ -92,7 +92,7 @@ By holding on to the stale cache item until a fresh item is available, the cache
 
 > Retaining stale cache items until they can be replaced with fresh ones makes your application more fault tolerant.
 
-### Additional details
+### Cache item staleness and expiry
 
 You likely want to remove stale items from the cache eventually though, as using data that is too old may cause other problems in your application.
 Just like how you wouldn't want to make a sandwich with bread that was molding, you may not want to use data that is too old.
@@ -113,37 +113,50 @@ There are 3 states for a cache item in the Stale Cache pattern:
 As with any cache, you still need to be mindful of how long in the future you set the Stale and Expiry dates.
 Different pieces of data likely have different freshness requirements.
 
+### How it improves fault tolerance
 
---- TODO: Add a picture of the Stale Cache pattern here ---
+The image below shows an example of how the Stale Cache pattern can be leveraged in a cache-aside strategy, allowing the application to continue to function even when the source is unavailable.
 
+![Cache-aside strategy using the Stale Cache pattern where application works even when the source is not available](/assets/Posts/2023-06-27-Increase-system-fault-tolerance-with-the-Stale-Cache-pattern/StaleCachePatternWithSynchronousCacheAsideStrategy.drawio.png)
 
-In our story, you may have been too hungry to wait for fresh bread.
+In an ideal scenario:
+
+- Step 2 would have returned a fresh item from the cache and there would be no need to make a request to the external source, or
+- Step 3 would have reached the external source and a fresh item would have been returned to the application.
+  The application then could have updated the cache with the fresh item, and then used it for the current request.
+
+The Stale Cache pattern allows the application to get the best of both worlds; use a fresh item when available, but still be able to function when the source is unavailable.
+
+### Preferring speed over freshness
+
+In our earlier story, you may have been too hungry to wait for fresh bread.
 An alternative would have been to make your sandwich using the stale bread, and ask your roommate to go to the bakery for fresh bread while you eat.
 When your roommate returns with the fresh bread, you can throw out the stale bread and use the fresh bread for your next sandwich.
 
-This is another way to implement the Stale Cache pattern, where you return the stale cache item right away and request a fresh item in the background, allowing the cache to be updated with the fresh item asynchronously so it can be used for future cache requests.
+This is another way to implement the Stale Cache pattern, where you return the stale cache item right away to improve speed, and request a fresh item in the background, allowing the cache to be updated with the fresh item asynchronously so it can be used for future cache requests.
 
+![Cache-aside strategy using the Stale Cache pattern asynchronously to improve application speed](/assets/Posts/2023-06-27-Increase-system-fault-tolerance-with-the-Stale-Cache-pattern/StaleCachePatternWithAsynchronousCacheAsideStrategy.drawio.png)
 
---- TODO: Add a picture of the async Stale Cache pattern here ---
-
+In our example above, the cache may have been in-memory or distributed.
+A different strategy could be used in place of the cache-aside strategy, such as the read-through strategy.
+Those changes may require slight implementation changes, but the idea of the Stale Cache pattern remains the same.
 
 ## When to use the Stale caching pattern
 
 ### - Enhance existing caching strategies
 
 The Stale Cache pattern is not meant to replace any caching strategies, but rather is meant to be used in conjunction with them, when applicable.
-For example, if you are using the cache-aside strategy, when you discover that the item returned from the cache is stale, you could request a fresh item from the source and then update the cache with the fresh item.
-If the source is unavailable and you cannot obtain a fresh item, you can continue working with the stale item, making your application more resilient.
+This is shown in the examples above where it is used with the cache-aside strategy.
 
 ### - Enhance existing fault tolerance strategies
 
-Similarly, the Stale Cache pattern is not meant to replace other fault tolerance strategies, like retries or circuit breakers.
+Similarly, the Stale Cache pattern is not meant to replace other fault tolerance strategies, like retries.
 They can be used together to make your application even more fault tolerant.
-For example, you may return a stale cache item while also retrying failed requests to the source in the background to retrieve a fresh item.
+For example, you may return a stale cache item while also retrying failed requests to the source multiple times in the background to retrieve a fresh item.
 
 ### - When cache item eviction is based on age
 
-The Stale Cache pattern is by nature centered around time expiration, so it is not applicable when using non-time based cache invalidation strategies, such as least-recently-used or least-frequently-used eviction algorithms.
+The Stale Cache pattern is by nature centered around time expiration, so it is not applicable when using non-time based cache invalidation strategies, such as least-recently-used or least-frequently-used eviction algorithms where items are evicted when the cache reaches a certain size, rather than when each cache item reaches a certain age.
 
 ### - Read-only operations
 
@@ -152,7 +165,8 @@ The Stale Cache pattern is only applicable to read operations, not write operati
 ### - Can improve speed at the expense accuracy
 
 The Stale Cache pattern is a good fit for applications that value speed over accuracy.
-Depending on the implementation, it can allow applications to return stale cached data right away and then fetch updated data in the background.
+As shown above, the implementation may allow applications to return stale cached data right away and then fetch updated data in the background.
+Be aware though that retrieving data asynchronously in the background may come at the expense of more complicated code.
 
 ### - Data that is not extremely time sensitive
 
@@ -172,8 +186,8 @@ Examples of this type of data include:
 
 ## Example implementation of the Stale Cache pattern
 
-Below is a basic example of incorporating the Stale Cache pattern into an in-process cache that uses the cache-aside strategy in C#.
-In-process cache-aside caches are very popular for desktop applications, and web services that do not need to scale.
+Below is a basic example of incorporating the Stale Cache pattern into an in-memory cache that uses the cache-aside strategy in C#.
+In-memory cache-aside caches are very popular for desktop applications, and web services that do not need to scale.
 I build upon the .NET MemoryCache class in this example.
 
 ```csharp
@@ -185,9 +199,9 @@ namespace Caching;
 
 public enum StaleMemoryCacheResult
 {
-  ValueFound,
-  StaleValueFound,
-  ValueNotFound
+  ValueFound,      // Item is still fresh.
+  StaleValueFound, // Item is stale, but still usable.
+  ValueNotFound    // Item is not in cache, so it expired or was never added.
 }
 
 public class StaleMemoryCache
@@ -245,7 +259,7 @@ public class StaleMemoryCache
 
 The main differences between this an your typical cache are:
 
-- To to set an item in the cache you must provide _two_ times; the time before the item is considered stale, and the time before the item expires (is removed from the cache).
+- To `Set` an item in the cache you must provide _two_ time values; the time until the item is considered stale, and the time until the item expires (is removed from the cache).
   Current cache libraries typically only allow you to specify the expiry time.
 - The cache returns a `StaleMemoryCacheResult` enum instead of a boolean.
   This allows the caller to know if the item was found in the cache, if the item was found but is stale, or if the item was not found in the cache.
@@ -254,7 +268,7 @@ The main differences between this an your typical cache are:
 
 If you are not a fan of the variable names `timeUntilItemIsStale` and `timeUntilItemExpires`, alternatives could be `minTtl` and `maxTtl` respectively (TTL = Time To Live).
 
-An example of using the above class with the cache-aside strategy might look like this:
+An example of using the above in-memory cache with the cache-aside strategy might look like this:
 
 ```csharp
 private readonly TimeSpan TimeBeforeFetchingFreshAuthToken = TimeSpan.FromMinutes(30);
@@ -272,7 +286,7 @@ public async Task<string> GetAuthToken()
   }
 
   // Otherwise, we either don't have an auth token or it is stale, so try to get a fresh one.
-  // (An alternative approach could be to return the stale auth token right away and try to get a fresh one in the background.)
+  // (An alternative approach could be to return the stale auth token right away and try to get a fresh one in the background)
   var authItem = await GetFreshAuthTokenFromExternalService();
 
   // If we successfully retrieved a fresh auth token, add it to the cache and return it.
@@ -304,39 +318,51 @@ I chose to keep it simple for the sake of this example, but there are many other
 You may want to have it fetch fresh items in the background and return stale items immediately.
 You may want to store a delegate with the cache item that can be used to have it refresh itself, and move the logic of when to retrieve a fresh item into the cache class.
 
-While this example shows how to use the Stale Cache pattern with an in-process cache-aside strategy, it can be similarly incorporated into distributed caches and other cache strategies.
+While this example shows how to use the Stale Cache pattern with an in-memory cache-aside strategy, it can be similarly incorporated into distributed caches and other cache strategies.
 
-## Other considerations
+## Considerations
 
-Report telemetry on how often stale items are used.
+- While the Stale Cache pattern can help make your systems more fault tolerant, without proper observability it may also hide external system failures.
+Consider adding telemetry on how often stale items are used, in addition to cache hits (fresh) and misses (expired).
+This may help identify when external services are down or slow, or when your cache is not working as expected.
+It also feels great to see your implementation working as expected and knowing when it saved your system from failing and causing an outage.
 
-Can block while retrieving fresh items, or retrieve them in the background.
+- As mentioned earlier, consider if you want to block while retrieving fresh items, or retrieve them in the background.
 
-[RFC 5861](https://datatracker.ietf.org/doc/html/rfc5861) introduced the `stale-while-revalidate` and `stale-if-error` HTTP Cache Control extensions, which are implementations of Stale Cache pattern.
-Even though the spec was proposed in 2010, many web browsers and web services still do not support it.
+- Adding the Stale Cache pattern to your caches does not mean you should throw away other good caching practices.
+  For example, if you decide to use a distributed cache, you likely still want a locking mechanism in place to prevent [a cache stampede](https://en.wikipedia.org/wiki/Cache_stampede).
+
+## Is this a new pattern?
+
+I thought up this pattern several years ago after one of our services whose data did not change very often had an extended outage and it impacted many other services.
+I have used and recommended it many times since.
+I think it is a relatively straight-forward (and kind of obvious) solution, but I have not seen it documented anywhere, either by this name, `Stale Cache` pattern, or any other.
+I have also never seen it implemented in any other caching libraries.
+That's not to say they don't exist, I just haven't found any.
+
+While researching for this article, I did find one it used in one other place.
+[RFC 5861](https://datatracker.ietf.org/doc/html/rfc5861) introduced the `stale-while-revalidate` and `stale-if-error` HTTP Cache Control header directives, which are implementations of Stale Cache pattern.
+Even though the spec was proposed in 2010, many web browsers and web services [still do not support it](https://caniuse.com/?search=stale-while-revalidate).
 Some of the products that do support it though give good guidance on how and when to use it, such as the [Fastly docs](https://developer.fastly.com/learning/concepts/stale/) and [Amazon CloudFront docs](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Expiration.html), which you may find applicable to your own applications when implementing the Stale Cache pattern.
 
-
-I'll start by saying that this is a pattern I thought up and have used many times in the past.
-I think it is relatively straight forward and a kind of obvious solution, but I have not seen it documented anywhere, either by this name or any other.
-If you know of this pattern by a different name, please let me know in the comments.
-
-
-> There are only two hard things in Computer Science: cache invalidation and naming things.
-
-The Stale Cache pattern helps make time-based cache invalidation more forgiving by allowing you to pick a time range instead of a point in time.
-
-https://martinfowler.com/bliki/TwoHardThings.html
-
+Since that RFC was published in 2010, I clearly was not the first one to have this idea.
+However, `stale-while-revalidate` and `stale-if-error` are _implementations_ of the Stale Cache pattern, not a definition of the pattern itself.
+I was actually quite surprised when I could not find any other references to this pattern, but perhaps I was just searching for the wrong terms.
+If you know of any other references to this pattern, please let me know in the comments below.
 
 ## Conclusion
 
-The Stale Cache pattern is a simple pattern that can be used to make time-based cache invalidation more forgiving by allowing you to pick a time range instead of a point in time.
+> There are only two hard things in Computer Science: cache invalidation and naming things.
+
+While the `Stale Cache` pattern does not completely solve cache invalidation, it helps make time-based cache invalidation more forgiving by allowing you to pick a time range instead of a single point in time.
+
+The pattern is not overly complicated or complex, making it fairly easy to understand and implement.
+
 It can make your apps and services more resilient by reducing the amount of time that they depend on external services to be up for.
 This is especially important in microservice architectures where the number of external service dependencies are often very high.
 
-There is nothing overly complicated or complex with this pattern, making it fairly easy to understand and implement.
-I hope this pattern eventually becomes standard functionality in all caching libraries that offer time-based expiration.
+The pattern can also help give your apps and services a speed boost by returning stale items immediately instead of blocking while retrieving fresh items from the external source.
 
-I hope you find it useful in your applications.
+I hope this pattern eventually becomes standard functionality in all caching libraries that offer time-based expiration, and that you find it useful in your applications.
+
 Happy coding!
