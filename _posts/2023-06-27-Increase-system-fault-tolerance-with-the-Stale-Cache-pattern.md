@@ -333,8 +333,8 @@ Using the Stale Cache with the values in the example code above however would al
 
 The above is only one possible implementation of the Stale Cache pattern.
 I chose to keep it simple for the sake of this example, but there are many other things you could do to improve it.
-You may want to have it fetch fresh items in the background and return stale items immediately (refresh-ahead strategy).
-You may want to store a delegate with the cache item that the `StaleMemoryCache` class can call to refresh the cache item, and move the date and `StaleMemoryCacheResult` comparison logic of when to retrieve a fresh item into the cache class (read-through strategy).
+You may want to have it fetch fresh items in the background and return stale items immediately.
+You may want to store a delegate with the cache item that the `StaleMemoryCache` class can call to refresh the cache item, and move the date and `StaleMemoryCacheResult` comparison logic of when to retrieve a fresh item into the cache class itself.
 
 While this example shows how to use the Stale Cache pattern with an in-memory cache-aside strategy, it can be similarly incorporated into distributed caches, side-car caches, and other cache strategies as well.
 
