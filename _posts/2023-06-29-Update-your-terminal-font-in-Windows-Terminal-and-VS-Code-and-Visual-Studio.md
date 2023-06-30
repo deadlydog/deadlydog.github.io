@@ -6,10 +6,12 @@ permalink: /Update-your-terminal-font-in-Windows-Terminal-and-VS-Code-and-Visual
 comments_locked: false
 toc: false
 categories:
+  - Editor
   - Visual Studio
   - Visual Studio Code
   - Windows Terminal
 tags:
+  - Editor
   - Visual Studio
   - Visual Studio Code
   - Windows Terminal
