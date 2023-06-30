@@ -52,6 +52,7 @@ To update the Windows Terminal font:
 1. Open the Settings via the tab dropdown menu, or by pressing <kbd>Ctrl</kbd>+<kbd>,</kbd>.
 1. (Optional) I recommend setting the `Default terminal application` to Windows Terminal.
    This will make it so that when you launch `Windows PowerShell` or the `PowerShell 7` apps, it will launch Windows Terminal instead of the old Windows Console.
+   It will also configure the Visual Studio console that opens when you start debugging to use Windows Terminal.
    ![Setting Windows Terminal as the default terminal application](/assets/Posts/Update-your-terminal-font-in-Windows-Terminal-and-VS-Code-and-Visual-Studio/set-windows-terminal-as-default-terminal.png)
 1. Select the profile that you want to change the font for.
    If you want to change the default font for all profiles, then select the `Defaults` profile.
