@@ -25,6 +25,8 @@ Mine looks like this:
 
 ![Oh My Posh deadlydog theme screenshot](/assets/Posts/Update-your-terminal-prompt-and-font-in-Windows-Terminal-and-VS-Code-and-Visual-Studio/deadlydog-theme-screenshot.png)
 
+You can see it displays additional helpful information, like the current directory, the current git branch and status, how long it took the last command to complete, and more.
+
 To use a terminal prompt theme you need to have a font installed that supports all the icons that the theme uses, and then configure your terminal to use that font.
 
 Even if you do not want to use a prompt theme, you may still want to update your terminal font, so let's see how to do that.
