@@ -1,26 +1,29 @@
 ---
-title: "Update your terminal font in Windows Terminal, VS Code, and Visual Studio"
-permalink: /Update-your-terminal-font-in-Windows-Terminal-and-VS-Code-and-Visual-Studio/
+title: "Update your terminal prompt and font in Windows Terminal, VS Code, and Visual Studio"
+permalink: /Update-your-terminal-prompt-and-font-in-Windows-Terminal-and-VS-Code-and-Visual-Studio/
 #date: 2099-01-15T00:00:00-06:00
 #last_modified_at: 2099-01-22
 comments_locked: false
 toc: false
 categories:
   - Editor
+  - PowerShell
   - Visual Studio
   - Visual Studio Code
   - Windows Terminal
 tags:
   - Editor
+  - PowerShell
   - Visual Studio
   - Visual Studio Code
   - Windows Terminal
 ---
 
-I use [Oh My Posh](https://ohmyposh.dev) to improve my terminal's prompt appearance, and have even created [my own theme](https://github.com/deadlydog/Oh-My-Posh.DeadlydogTheme).
-It looks like this:
+I use [Oh My Posh](https://ohmyposh.dev) to improve my PowerShell terminal's prompt appearance and show additional helpful information.
+There are [many themes to choose from](https://ohmyposh.dev/docs/themes), and I have even created [my own theme](https://github.com/deadlydog/Oh-My-Posh.DeadlydogTheme) that you are welcome to use.
+Mine looks like this:
 
-![Oh My Posh deadlydog theme screenshot](/assets/Posts/Update-your-terminal-font-in-Windows-Terminal-and-VS-Code-and-Visual-Studio/deadlydog-theme-screenshot.png)
+![Oh My Posh deadlydog theme screenshot](/assets/Posts/Update-your-terminal-prompt-and-font-in-Windows-Terminal-and-VS-Code-and-Visual-Studio/deadlydog-theme-screenshot.png)
 
 To use a terminal prompt theme you need to have a font installed that supports all the icons that the theme uses, and then configure your terminal to use that font.
 
@@ -36,7 +39,7 @@ Once you've downloaded and unzipped the font, you can double-click the appropria
 
 Here is a screenshot of installing the `CaskaydiaCoveNerdFontMono-Regular.ttf` file font:
 
-![Installing a font](/assets/Posts/Update-your-terminal-font-in-Windows-Terminal-and-VS-Code-and-Visual-Studio/install-font-screenshot.png
+![Installing a font](/assets/Posts/Update-your-terminal-prompt-and-font-in-Windows-Terminal-and-VS-Code-and-Visual-Studio/install-font-screenshot.png
 
 You can to install several fonts if you like so that you have a few to choose from in your applications.
 
@@ -53,13 +56,13 @@ To update the Windows Terminal font:
 1. (Optional) I recommend setting the `Default terminal application` to Windows Terminal.
    This will make it so that when you launch `Windows PowerShell` or the `PowerShell 7` apps, it will launch Windows Terminal instead of the old Windows Console.
    It will also configure the Visual Studio console that opens when you start debugging to use Windows Terminal.
-   ![Setting Windows Terminal as the default terminal application](/assets/Posts/Update-your-terminal-font-in-Windows-Terminal-and-VS-Code-and-Visual-Studio/set-windows-terminal-as-default-terminal.png)
+   ![Setting Windows Terminal as the default terminal application](/assets/Posts/Update-your-terminal-prompt-and-font-in-Windows-Terminal-and-VS-Code-and-Visual-Studio/set-windows-terminal-as-default-terminal.png)
 1. Select the profile that you want to change the font for.
    If you want to change the default font for all profiles, then select the `Defaults` profile.
 1. Click into the `Appearance` section.
-   ![Select default profile appearance](/assets/Posts/Update-your-terminal-font-in-Windows-Terminal-and-VS-Code-and-Visual-Studio/access-windows-terminal-defaults-appearance-screenshot.png)
+   ![Select default profile appearance](/assets/Posts/Update-your-terminal-prompt-and-font-in-Windows-Terminal-and-VS-Code-and-Visual-Studio/access-windows-terminal-defaults-appearance-screenshot.png)
 1. Change the `Font face` to the font you want to use.
-   ![Select font face](/assets/Posts/Update-your-terminal-font-in-Windows-Terminal-and-VS-Code-and-Visual-Studio/windows-terminal-set-font-screenshot.png)
+   ![Select font face](/assets/Posts/Update-your-terminal-prompt-and-font-in-Windows-Terminal-and-VS-Code-and-Visual-Studio/windows-terminal-set-font-screenshot.png)
 1. Save the changes.
 1. Repeat for any other profiles you want to change the font for.
 
@@ -74,9 +77,9 @@ To update the VS Code terminal font:
 1. Search for `font family`.
 1. You will likely notice the `Editor: Font Family` setting near the top.
    You can change this if you like, but it will change the code editor font, not the terminal font.
-   ![Change VS Code editor font family](/assets/Posts/Update-your-terminal-font-in-Windows-Terminal-and-VS-Code-and-Visual-Studio/vs-code-change-editor-font-screenshot.png)
+   ![Change VS Code editor font family](/assets/Posts/Update-your-terminal-prompt-and-font-in-Windows-Terminal-and-VS-Code-and-Visual-Studio/vs-code-change-editor-font-screenshot.png)
 1. Scroll down to the `Terminal > Integrated: Font Family` setting, and update it to the font you want to use.
-   ![Change VS Code terminal font family](/assets/Posts/Update-your-terminal-font-in-Windows-Terminal-and-VS-Code-and-Visual-Studio/vs-code-change-terminal-font-screenshot.png)
+   ![Change VS Code terminal font family](/assets/Posts/Update-your-terminal-prompt-and-font-in-Windows-Terminal-and-VS-Code-and-Visual-Studio/vs-code-change-terminal-font-screenshot.png)
 1. Save the changes.
 
 The VS Code terminal should now be using your new font 🙌.
@@ -92,7 +95,7 @@ To update the Visual Studio terminal font:
     You can change the font for these items if you like, but it will change the code editor font, not the terminal font.
 1. Change the setting to `Terminal`.
 1. Update the `Font` setting to the font you want to use.
-   ![Change Visual Studio terminal font](/assets/Posts/Update-your-terminal-font-in-Windows-Terminal-and-VS-Code-and-Visual-Studio/set-visual-studio-terminal-font-screenshot.png)
+   ![Change Visual Studio terminal font](/assets/Posts/Update-your-terminal-prompt-and-font-in-Windows-Terminal-and-VS-Code-and-Visual-Studio/set-visual-studio-terminal-font-screenshot.png)
 1. Click the OK button to save the changes.
 
 The Visual Studio terminal should now be using your new font 🙌.
