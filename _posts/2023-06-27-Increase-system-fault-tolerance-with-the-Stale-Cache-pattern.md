@@ -118,7 +118,7 @@ Different pieces of data likely have different freshness requirements.
 
 The image below shows an example of how the Stale Cache pattern can be leveraged in a cache-aside strategy, allowing the application to continue to function even when the external source is unavailable.
 
-![Cache-aside strategy using the Stale Cache pattern where application works even when the source is not available](/assets/Posts/2023-06-27-Increase-system-fault-tolerance-with-the-Stale-Cache-pattern/StaleCachePatternWithSynchronousCacheAsideStrategy.drawio.png)
+![Cache-aside strategy using the Stale Cache pattern where application works even when the source is not available](/assets/Posts/2023-06-27-Increase-system-fault-tolerance-with-the-Stale-Cache-pattern/stale-cache-pattern-with-synchronous-cache-aside-strategy.drawio.png)
 
 In an ideal scenario:
 
@@ -136,7 +136,7 @@ When your roommate returns with the fresh bread, you can throw out the stale bre
 
 This is another way to implement the Stale Cache pattern, where you return the stale cache item right away to improve speed, and request a fresh item in the background, allowing the cache to be updated with the fresh item asynchronously so it can be used for future cache requests.
 
-![Cache-aside strategy using the Stale Cache pattern asynchronously to improve application speed](/assets/Posts/2023-06-27-Increase-system-fault-tolerance-with-the-Stale-Cache-pattern/StaleCachePatternWithAsynchronousCacheAsideStrategy.drawio.png)
+![Cache-aside strategy using the Stale Cache pattern asynchronously to improve application speed](/assets/Posts/2023-06-27-Increase-system-fault-tolerance-with-the-Stale-Cache-pattern/stale-cache-pattern-with-asynchronous-cache-aside-strategy.drawio.png)
 
 In our example above, the cache may have been in-memory or distributed.
 A different strategy could be used in place of the cache-aside strategy, such as the read-through strategy.
