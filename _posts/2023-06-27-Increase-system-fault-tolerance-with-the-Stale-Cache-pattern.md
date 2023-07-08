@@ -331,6 +331,8 @@ Or perhaps they ignore the auth token lifetime and simply expire the cache item 
 In both cases the application would end up unable to retrieve a fresh auth token at 2:30pm and suffer an outage.
 Using the Stale Cache with the values in the example code above however would allow the application to always have a valid auth token, as it would obtain a new auth token at 2pm which would be good until 4pm.
 
+![Example of traditional caches failing and Stale Cache succeeding](/assets/Posts/2023-06-27-Increase-system-fault-tolerance-with-the-Stale-Cache-pattern/example-of-traditional-cache-failing-and-stale-cache-succeeding.drawio.png)
+
 The above is only one possible implementation of the Stale Cache pattern.
 I chose to keep it simple for the sake of this example, but there are many other things you could do to improve it.
 You may want to have it fetch fresh items in the background and return stale items immediately.
