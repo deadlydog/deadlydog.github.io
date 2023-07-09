@@ -178,6 +178,8 @@ The above razor code is the equivalent to doing this in C#:
 public class StandardRadzenDataGrid<TItem> : RadzenDataGrid<TItem>
 ```
 
+Just like with C# code, you can only inherit from a component if it has not been marked as [sealed](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/sealed).
+
 #### Adding our own header and buttons
 
 ```csharp
