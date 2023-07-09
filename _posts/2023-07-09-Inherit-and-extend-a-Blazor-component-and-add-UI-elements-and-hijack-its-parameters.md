@@ -1,6 +1,6 @@
 ---
-title: "Inherit and extend a Blazor component, draw the base component, and hijack a parameter"
-permalink: /Inherit-and-extend-a-Blazor-component-and-draw-the-base-component-and-hijack-a-parameter/
+title: "Inherit and extend a Blazor component, add UI elements, and hijack its parameters"
+permalink: /Inherit-and-extend-a-Blazor-component-and-add-UI-elements-and-hijack-its-parameters/
 #date: 2099-01-15T00:00:00-06:00
 #last_modified_at: 2099-01-22
 comments_locked: false
