@@ -269,8 +269,11 @@ If you do not want to use a 3rd party library or need more control over the expo
 This is how we display the base RadzenDataGrid that we are inheriting from.
 We place it after the header code so that it is displayed under the header.
 
-[The docs](https://learn.microsoft.com/en-us/aspnet/core/blazor/advanced-scenarios) say that using `BuildRenderTree` should only be used in advanced scenarios.
-Here we are just displaying the base component, not changing the implementation of how it gets rendered, so it is safe to do.
+[The docs for inheriting from a base class](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/?view=aspnetcore-6.0#specify-a-base-class) do not mention how to display the base component, so this was one of the trickier parts for me to figure out.
+Thankfully it is just one line of code though.
+
+[The advanced scenarios docs](https://learn.microsoft.com/en-us/aspnet/core/blazor/advanced-scenarios#manually-build-a-render-tree-rendertreebuilder) say that you need to be careful when using the RenderTreeBuilder.
+Here we are just displaying the base component though, not changing the implementation of how it gets rendered, so it is safe to do.
 
 #### Hiding the base Filter parameter
 
