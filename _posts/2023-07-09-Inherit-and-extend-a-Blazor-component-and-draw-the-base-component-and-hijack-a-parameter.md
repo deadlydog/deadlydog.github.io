@@ -20,7 +20,7 @@ In this post we see how to extend a Blazor component to show additional UI eleme
 I have a lot of data grids in my Blazor app, and I always want to show a header on the grid that displays the number of rows in the grid, and buttons to export the grid to CSV and Excel.
 Once I found myself copy-pasting the same code into 3 different pages, I figured it was time to refactor it into a new component.
 
-For my specific app and in this example I'm using the [Radzen Blazor Component's](https://blazor.radzen.com) DataGrid, but the same principles apply to any Blazor component.
+For my specific app and in this example I'm using the [Radzen Blazor Component's](https://blazor.radzen.com) [DataGrid](https://blazor.radzen.com/datagrid), but the same principles apply to any Blazor component.
 
 [Radzen Blazor](https://github.com/radzenhq/radzen-blazor) is a great component library for Blazor.
 It is free, open source, and being updated all the time.
