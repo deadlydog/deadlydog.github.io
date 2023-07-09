@@ -307,7 +307,7 @@ We want to hook into this event so that we can update the number of records show
 Unlike regular C# events which can handle multiple event handlers by using the `+=` operator, only one event handler can be assigned on [an EventCallback property](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/event-handling?view=aspnetcore-7.0#eventcallback).
 This means that we need to prevent users from setting their own event handler on the `Filter` property, and instead expose our own `FilterApplied` event that users can set.
 
-We hide the base `Filter` property by declaring our own `Filter` property as `new`, and not using the `Parameter` attribute.
+We hide the base `Filter` property by declaring our own `Filter` property as `new`, and _not_ using the `Parameter` attribute.
 This means that the base `Filter` property cannot be set on our component.
 We instead expose a `FilterApplied` EventCallback that users can set on the component.
 
