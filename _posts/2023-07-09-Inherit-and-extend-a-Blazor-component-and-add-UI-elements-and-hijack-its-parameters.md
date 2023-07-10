@@ -115,7 +115,7 @@ This is the code for my new component, `StandardRadzenDataGrid.razor`:
   // By declaring this as new, and not using the Parameter attribute, we are hiding the base Filter property so it cannot be set on the component.
   // We hide the base Filter property so that we can add our own OnFilterChanged event handler to it, and not allow users to set it.
   // We instead expose a FilterApplied event that users can set on the component.
-  public new EventCallback<DataGridColumnFilterEventArgs<TItem>> Filter { get; set; }
+  protected new EventCallback<DataGridColumnFilterEventArgs<TItem>> Filter { get; set; }
 
   protected override void OnInitialized()
   {
@@ -288,7 +288,7 @@ Here we are just displaying the base component though, not changing the implemen
   // We hide the base Filter property so that we can add our own OnFilterChanged
   // event handler to it, and not allow users to set it.
   // We instead expose a FilterApplied event that users can set on the component.
-  public new EventCallback<DataGridColumnFilterEventArgs<TItem>> Filter { get; set; }
+  protected new EventCallback<DataGridColumnFilterEventArgs<TItem>> Filter { get; set; }
 
   protected override void OnInitialized()
   {
