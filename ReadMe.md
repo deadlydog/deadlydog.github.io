@@ -105,6 +105,7 @@ Here's a list of files I've added:
 - The `.vscode` directory.
 - The `ReadMe.md` file.
 - The `ads.txt` file with my Google AdSense info.
+- The `google4c5d9840e746e8e2.html` file to link to my Google Search Console.
 - The `CNAME` file was added automatically by GitHub when setting up GitHub Pages to use my custom domain name.
 - The `Scripts` directory and all files in it for making some operations easier.
 
