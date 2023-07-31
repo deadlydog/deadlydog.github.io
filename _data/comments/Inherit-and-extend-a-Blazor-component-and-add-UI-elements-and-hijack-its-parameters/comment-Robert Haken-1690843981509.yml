@@ -1,0 +1,7 @@
+_id: 00090c30-2ff5-11ee-b548-01431cb2e2b1
+message: "Can you please double-check that parameter values set from OnInitialized -OverrideDefaultRadzenSettingsWithOnesWePrefer can be overriden by setting parameters as usual when using the derived component?\r\nI think the very first render will use your default values from OverrideDefaultRadzenSettingsWithOnesWePrefer and only starting with the second render they will use the parameters provided from markup."
+name: Robert Haken
+email: 4905adcbe8681abc47496dbf9398afef
+url: ''
+hidden: ''
+date: '2023-07-31T22:53:01.496Z'
