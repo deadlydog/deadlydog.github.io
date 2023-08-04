@@ -2,7 +2,7 @@
 title: "Change these VS Code default settings to make it even more awesome"
 permalink: /Visual-Studio-Code-default-settings-to-change/
 #date: 2099-01-15T00:00:00-06:00
-last_modified_at: 2023-03-16
+last_modified_at: 2023-08-04
 comments_locked: false
 toc: true
 categories:
@@ -664,6 +664,20 @@ JSON setting:
 ```
 
 ## Markdown settings
+
+### Pasting URLs into Markdown
+
+Automatically wrap hyperlinks pasted into markdown files with the markdown link syntax.
+
+For example, pasting `https://someurl.com` into a markdown file will be converted to `[Title](https://someurl.com)`.
+
+GUI setting: `Markdown › Editor › Paste URL As Formatted Link: Enabled` to `smart`.
+
+JSON setting:
+
+```json
+"markdown.editor.pasteUrlAsFormattedLink.enabled": "smart",
+```
 
 ### Markdown validation
 
