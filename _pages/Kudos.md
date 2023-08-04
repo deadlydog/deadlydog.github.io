@@ -9,6 +9,19 @@ It's a nice place I can turn to when I'm not feeling motivated, or when I need a
 
 ## Donations and thank you emails from the community
 
+2023-08-04
+
+$5.00 USD from James Prichard for [Path Length Checker app](https://github.com/deadlydog/PathLengthChecker).
+
+> Thanks, Daniel!
+> Used it to see if I had any file names over 260 characters before doing my first OneDrive Desktop backup.
+> Found 2 files.
+> Super easy GUI interface.
+> Super fast.
+> Just what I needed.
+
+---
+
 2023-03-21
 
 $5.00 USD from Josh Jones for my blog posts.
@@ -29,19 +42,19 @@ $5.00 USD from Edward Eastman for [CloseZoomWindowsAfterJoiningMeeting](https://
 
 2022-12-31
 
-$2.00 USD from George Georgevits for Path Length Checker app.
+$2.00 USD from George Georgevits for [Path Length Checker app](https://github.com/deadlydog/PathLengthChecker).
 
 ---
 
 2022-07-24
 
-$2.00 USD from Tim Liepelt for Path Length Checker app.
+$2.00 USD from Tim Liepelt for [Path Length Checker app](https://github.com/deadlydog/PathLengthChecker).
 
 ---
 
 2022-06-30
 
-$100.00 USD from Shane Spear for Path Length Checker app.
+$100.00 USD from Shane Spear for [Path Length Checker app](https://github.com/deadlydog/PathLengthChecker).
 
 > Thank you Daniel for providing this tool!
 > We used it this week to search for a needle in a haystack (300 files out of 9600 needed to be shortened to 255 characters).
@@ -62,7 +75,7 @@ Note from Thomas Goddard:
 
 2022-04-15
 
-> Regarding Path Length Checker app
+> Regarding [Path Length Checker app](https://github.com/deadlydog/PathLengthChecker)
 >
 > Hi Daniel,
 >
