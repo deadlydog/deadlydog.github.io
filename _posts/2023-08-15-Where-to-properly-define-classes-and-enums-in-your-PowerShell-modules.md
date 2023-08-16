@@ -125,7 +125,7 @@ As soon as you need to reference the class/enum name in your script (e.g. `[MyCl
 
 The only way to be able to reference the class/enum name outside of the module is to import the module with `using module`.
 
-## Other info
+## Related information
 
 ### PSFramework
 
