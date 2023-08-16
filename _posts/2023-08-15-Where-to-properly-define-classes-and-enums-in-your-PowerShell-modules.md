@@ -143,6 +143,7 @@ The PowerShell [class docs](https://learn.microsoft.com/en-us/powershell/module/
 
 Knowing what I know now, this makes sense.
 When I first read it though, I thought when it said "the module" and "root module" it just meant any files in the module directory that may get pulled into the psm1 file, not specifically just the psm1 file.
+I created [this PR](https://github.com/MicrosoftDocs/PowerShell-Docs/pull/10343) to clarify this in the docs.
 
 ### PowerShell classes are a bit of a mess
 
