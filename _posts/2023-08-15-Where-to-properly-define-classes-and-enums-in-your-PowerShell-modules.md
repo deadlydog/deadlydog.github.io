@@ -94,9 +94,10 @@ The results of using the different methods to reference a class/enum in the modu
 | Class/Enum defined in the psm1 file          | ✔️                                         | ✔️                                            |
 
 If I use `using module` to import the file with the class, then the class cannot be used by the module functions, and the class type cannot be used outside of the module.
+Simply put, it does not work at all.
 
 If I dot-source the file with the class, then the class can be used by the module functions, but the class type still cannot be used outside of the module.
-This means that while the module functions can output objects of the class type, they cannot use the the class type for any module function parameters; you get the `Unable to find type` error.
+Anytime the class name is referenced you get the `Unable to find type` error.
 
 If I define the class in the psm1 file, then the class can be used by the module functions (both as output and input parameters), and the class type can be used outside of the module.
 
@@ -120,9 +121,9 @@ By implicitly, I mean that you can retrieve a class/enum instance from a module 
 
 You cannot use the class/enum type explicitly outside of the module though.
 That is, you cannot create a new instance of the class, or reference the enum values directly, such as performing a `switch` statement on them.
-As soon as you need to reference the class/enum type in your script (e.g. `[MyClass]` or `[MyEnum]`), you will get the `Unable to find type` error.
+As soon as you need to reference the class/enum name in your script (e.g. `[MyClass]` or `[MyEnum]`), you will get the `Unable to find type` error.
 
-The only way to be able to reference the class/enum types outside of the module is to import the module with `using module`.
+The only way to be able to reference the class/enum name outside of the module is to import the module with `using module`.
 
 ## Other info
 
@@ -134,20 +135,32 @@ I do not like having to depend on additional modules unless necessary, and prefe
 
 ### PowerShell documentation
 
-The PowerShell [class docs](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_classes?view=powershell-7.3#importing-classes-from-a-powershell-module) and [using docs](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_using?view=powershell-7.3&source=docs#module-syntax) do mention:
+The PowerShell [class docs](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_classes?view=powershell-7.3#importing-classes-from-a-powershell-module) and [using docs](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_using?view=powershell-7.3&source=docs#module-syntax) say:
 
 > The using module statement imports classes from the root module (ModuleToProcess) of a script module or binary module.
 > It doesn't consistently import classes defined in nested modules or classes defined in scripts that are dot-sourced into the module.
 > Classes that you want to be available to users outside of the module should be defined in the root module.
 
 Knowing what I know now, this makes sense.
-When I first read it though, I thought when it said "the module" and "root module" it just meant any files in the module directory, not specifically the psm1 file.
+When I first read it though, I thought when it said "the module" and "root module" it just meant any files in the module directory that may get pulled into the psm1 file, not specifically just the psm1 file.
 
 ### PowerShell classes are a bit of a mess
 
 As you can see from the need of this article, as well as all of the possible answers to [this Stack Overflow question](https://stackoverflow.com/questions/31051103/how-to-export-a-class-in-a-powershell-v5-module) on how to export classes from a module, working with PowerShell classes in modules is not as clear and straightforward as it could be.
 
 Classes and enums are extremely useful, so I hope that PowerShell will continue to improve the experience of using them.
+
+### Use C# classes inline in your PowerShell
+
+As mentioned in one of [the Stack Overflow answers](https://stackoverflow.com/a/41489814/602585), you can technically define C# classes and enums inline in PowerShell as a string.
+I have not played around with this technique in many years since classes were introduced in PowerShell 5.
+It is a bit ugly, as you lose syntax highlighting and editor intellisense and checks, but it does work.
+
+### Create your module in C# instead of PowerShell
+
+It is possible to create modules and cmdlets entirely in C# instead of PowerShell.
+This allows you to structure all of your code files however you want.
+For more information on how to do this, [check out my other blog post](https://blog.danskingdom.com/Create-and-test-PowerShell-Core-cmdlets-in-CSharp/).
 
 ## Conclusion
 
@@ -158,6 +171,6 @@ In this post I've shown that to avoid headaches when using classes or enums in y
 
 PowerShell 7.3.6 is the latest version at the time of writing this post.
 Due of the nuances around using PowerShell classes and enums in modules, they don't quite feel like a complete first-class citizen yet.
-Hopefully later versions of PowerShell will improve the language and tooling to make using classes and enums in modules easier and more seamless.
+Hopefully later versions of PowerShell will improve the language and tooling to make using classes and enums in modules easier and more straightforward.
 
 Happy coding!
