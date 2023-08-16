@@ -143,6 +143,12 @@ The PowerShell [class docs](https://learn.microsoft.com/en-us/powershell/module/
 Knowing what I know now, this makes sense.
 When I first read it though, I thought when it said "the module" and "root module" it just meant any files in the module directory, not specifically the psm1 file.
 
+### PowerShell classes are a bit of a mess
+
+As you can see from the need of this article, as well as all of the possible answers to [this Stack Overflow question](https://stackoverflow.com/questions/31051103/how-to-export-a-class-in-a-powershell-v5-module) on how to export classes from a module, working with PowerShell classes in modules is not as clear and straightforward as it could be.
+
+Classes and enums are extremely useful, so I hope that PowerShell will continue to improve the experience of using them.
+
 ## Conclusion
 
 In this post I've shown that to avoid headaches when using classes or enums in your PowerShell modules, you should always:
