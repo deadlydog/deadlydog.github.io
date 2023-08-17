@@ -112,7 +112,7 @@ If I define the class in the psm1 file, then the class can be used by the module
 
 Enums behaved the same as classes in all of the tests that were performed.
 
-### Referencing the module
+### Referencing the module from a script
 
 I also tested the 2 different ways a module can be imported; with `Import-Module` and `using module`.
 An important distinction between the two is that `Import-Module` is a cmdlet that is versioned and can be updated in newer PowerShell versions, while `using module` is a language keyword, like `if` or `foreach`.
@@ -135,7 +135,7 @@ As soon as you need to reference the class/enum name in your script (e.g. `[MyCl
 The only way to be able to reference the class/enum name outside of the module is to import the module with `using module`.
 I did not explicitly test this using a binary module, but I expect the results would be the same.
 
-### Referencing a C# class/enum in the module
+### Use a C# class/enum in the module instead
 
 Rather than using the PowerShell native classes and enums, we can define C# classes and enums inline in PowerShell as a string.
 This even works in pre-PowerShell 5 versions.
@@ -151,7 +151,7 @@ Add-Type -Language CSharp -TypeDefinition @"
   }
 
   public enum MyEnum {
-      Value1
+      Value1,
       Value2
   }
 "@
