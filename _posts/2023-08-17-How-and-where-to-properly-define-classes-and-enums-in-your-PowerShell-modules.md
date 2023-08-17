@@ -98,9 +98,9 @@ The results of using the different methods to reference a PowerShell native clas
 
 |                                              | Class/Enum can be used by module functions | Class/Enum type can be used outside of module |
 | -------------------------------------------- | ------------------------------------------ | --------------------------------------------- |
-| Class/Enum file imported with `using module` | ❌                                         | ❌                                            |
-| Class/Enum file imported with Dot-sourcing   | ✔️                                         | ❌                                            |
-| Class/Enum defined in the psm1 file          | ✔️                                         | ✔️                                            |
+| Class/Enum file imported with `using module` | ❌                                          | ❌                                             |
+| Class/Enum file imported with Dot-sourcing   | ✔️                                          | ❌                                             |
+| Class/Enum defined in the psm1 file          | ✔️                                          | ✔️                                             |
 
 If I use `using module` to import the file with the class, then the class cannot be used by the module functions, and the class type cannot be used outside of the module.
 Simply put, it does not work at all.
@@ -122,8 +122,8 @@ The results below assume the class/enum is referenced directly in the psm1 file 
 
 |                                      | Class/Enum can be used by module functions | Class/Enum type can be used outside of module |
 | ------------------------------------ | ------------------------------------------ | --------------------------------------------- |
-| Module imported with `Import-Module` | ✔️                                         | ❌                                           |
-| Module imported with `using module`  | ✔️                                         | ✔️                                           |
+| Module imported with `Import-Module` | ✔️                                          | ❌                                             |
+| Module imported with `using module`  | ✔️                                          | ✔️                                             |
 
 If you use `Import-Module` to import the module, you can use the class/enum values implicitly, and autocomplete will work.
 By implicitly, I mean that you can retrieve a class/enum instance from a module function, pass the instance around, modify the class properties, and pass it back into module function parameters.
@@ -163,15 +163,15 @@ Using namespaces can help avoid naming conflicts for common class names.
 Using C# classes and enums as shown above instead of the PowerShell native class/enum, the results are as follows:
 
 |                                              | C# Class/Enum can be used by module functions | C# Class/Enum type can be used outside of module |
-| -------------------------------------------- | ------------------------------------------ | --------------------------------------------- |
-| Class/Enum file imported with `using module` | ✔️                                         | ✔️                                            |
-| Class/Enum file imported with Dot-sourcing   | ✔️                                         | ✔️                                            |
-| Class/Enum defined in the psm1 file          | ✔️                                         | ✔️                                            |
+| -------------------------------------------- | --------------------------------------------- | ------------------------------------------------ |
+| Class/Enum file imported with `using module` | ✔️                                             | ✔️                                                |
+| Class/Enum file imported with Dot-sourcing   | ✔️                                             | ✔️                                                |
+| Class/Enum defined in the psm1 file          | ✔️                                             | ✔️                                                |
 
 |                                      | C# Class/Enum can be used by module functions | C# Class/Enum type can be used outside of module |
-| ------------------------------------ | ------------------------------------------ | --------------------------------------------- |
-| Module imported with `Import-Module` | ✔️                                         | ✔️                                           |
-| Module imported with `using module`  | ✔️                                         | ✔️                                           |
+| ------------------------------------ | --------------------------------------------- | ------------------------------------------------ |
+| Module imported with `Import-Module` | ✔️                                             | ✔️                                                |
+| Module imported with `using module`  | ✔️                                             | ✔️                                                |
 
 You can see that using C# classes/enums is much more flexible than using the PowerShell native classes/enums.
 They allow us to define the classes/enums in their own files, and allow end-users to use `Import-Module` and still have full access to the class/enum types.
