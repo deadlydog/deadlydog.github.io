@@ -94,27 +94,33 @@ To ensure my local machine was not impacting the results, all results shown belo
 
 ### Referencing the PowerShell class/enum in the module
 
+To include a class/enum within the module I tried 3 different methods:
+
+1. With "using module":  `using module .\Classes\MyClass.ps1`
+1. With dot-sourcing: `. "$PSScriptRoot\Classes\MyClass.ps1`
+1. Defining the class/enum directly in the .psm1 file
+
 The results of using the different methods to reference a PowerShell native class/enum in the script module are as follows:
 
 |                                              | Class/Enum can be used by module functions | Class/Enum type can be used outside of module |
 | -------------------------------------------- | ------------------------------------------ | --------------------------------------------- |
-| Class/Enum file imported with `using module` | ❌                                          | ❌                                             |
-| Class/Enum file imported with Dot-sourcing   | ✔️                                          | ❌                                             |
+| Class/Enum file included with `using module` | ❌                                          | ❌                                             |
+| Class/Enum file included with dot-sourcing   | ✔️                                          | ❌                                             |
 | Class/Enum defined in the psm1 file          | ✔️                                          | ✔️                                             |
 
-If I use `using module` to import the file with the class, then the class cannot be used by the module functions, and the class type cannot be used outside of the module.
+If I use `using module` to include the file with the class, then the class cannot be used by the module functions, and the class type cannot be used outside of the module.
 Simply put, it does not work at all.
 
 If I dot-source the file with the class, then the class can be used by the module functions, but the class type still cannot be used outside of the module.
 Anytime the class name is referenced you get the `Unable to find type` error.
 
-If I define the class in the psm1 file, then the class can be used by the module functions (both as output and input parameters), and the class type can be used outside of the module.
+If I define the class in the psm1 file, then the class can be used by the module functions (both as output, and input parameters), and the class type can be used outside of the module.
 
 Enums behaved the same as classes in all of the tests that were performed.
 
 ### Referencing the module from a script
 
-I also tested the 2 different ways a module can be imported; with `Import-Module` and `using module`.
+I also tested the 2 different ways a module can be imported into a script; with `Import-Module` and `using module`.
 An important distinction between the two is that `Import-Module` is a cmdlet that is versioned and can be updated in newer PowerShell versions, while `using module` is a language keyword, like `if` or `foreach`.
 The two are fundamentally different, and behave differently when importing modules.
 
@@ -164,8 +170,8 @@ Using C# classes and enums as shown above instead of the PowerShell native class
 
 |                                              | C# Class/Enum can be used by module functions | C# Class/Enum type can be used outside of module |
 | -------------------------------------------- | --------------------------------------------- | ------------------------------------------------ |
-| Class/Enum file imported with `using module` | ✔️                                             | ✔️                                                |
-| Class/Enum file imported with Dot-sourcing   | ✔️                                             | ✔️                                                |
+| Class/Enum file included with `using module` | ✔️                                             | ✔️                                                |
+| Class/Enum file included with dot-sourcing   | ✔️                                             | ✔️                                                |
 | Class/Enum defined in the psm1 file          | ✔️                                             | ✔️                                                |
 
 |                                      | C# Class/Enum can be used by module functions | C# Class/Enum type can be used outside of module |
