@@ -94,11 +94,11 @@ To ensure my local machine was not impacting the results, all results shown belo
 
 ### Referencing the PowerShell class/enum in the module
 
-To include a class/enum within the module I tried 3 different methods:
+To include a class/enum that I created within the module, I tried 3 different methods:
 
-1. With "using module":  `using module .\Classes\MyClass.ps1`
-1. With dot-sourcing: `. "$PSScriptRoot\Classes\MyClass.ps1`
-1. Defining the class/enum directly in the .psm1 file
+1. With "using module" in the psm1 file:  `using module .\Classes\MyClass.ps1`
+1. With dot-sourcing in the psm1 file: `. "$PSScriptRoot\Classes\MyClass.ps1`
+1. Defining the class/enum directly in the psm1 file, instead of in its own file.
 
 The results of using the different methods to reference a PowerShell native class/enum in the script module are as follows:
 
@@ -109,7 +109,7 @@ The results of using the different methods to reference a PowerShell native clas
 | Class/Enum defined in the psm1 file          | ✔️                                          | ✔️                                             |
 
 If I use `using module` to include the file with the class, then the class cannot be used by the module functions, and the class type cannot be used outside of the module.
-Simply put, it does not work at all.
+Simply put, it does not work at all (strangely though it worked when testing on my local machine).
 
 If I dot-source the file with the class, then the class can be used by the module functions, but the class type still cannot be used outside of the module.
 Anytime the class name is referenced you get the `Unable to find type` error.
@@ -121,7 +121,7 @@ Enums behaved the same as classes in all of the tests that were performed.
 ### Referencing the module from a script
 
 I also tested the 2 different ways a module can be imported into a script; with `Import-Module` and `using module`.
-An important distinction between the two is that `Import-Module` is a cmdlet that is versioned and can be updated in newer PowerShell versions, while `using module` is a language keyword, like `if` or `foreach`.
+An important distinction between the two is that `Import-Module` is a cmdlet, while `using module` is a language keyword, like `if` or `foreach`.
 The two are fundamentally different, and behave differently when importing modules.
 
 The results below assume the class/enum is referenced directly in the psm1 file for script modules, as that is the recommended approach to take after seeing the results from the previous section.
