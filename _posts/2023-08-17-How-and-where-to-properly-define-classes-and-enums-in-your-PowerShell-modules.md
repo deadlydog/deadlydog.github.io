@@ -30,7 +30,7 @@ If you do not follow these 2 rules, then you may run into build or runtime error
 > Unable to find type [MyClass/MyEnum]
 
 To easily avoid these errors and not have to remember the specific rules around defining and including classes/enums and importing modules, use C# classes and enums instead of PowerShell native classes and enums.
-C# classes and enums allow you to define your classes and enums in their own files, and allow end-users to use `Import-Module` and still have full access to the class/enum types.
+C# classes/enums can be defined in their own files, and allow end-users to use `Import-Module` and still have full access to the class/enum types.
 
 ## What is a PowerShell native class and enum?
 
