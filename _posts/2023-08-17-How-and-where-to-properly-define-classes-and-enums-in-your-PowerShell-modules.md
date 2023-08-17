@@ -1,6 +1,6 @@
 ---
-title: "Where to properly define classes and enums in your PowerShell modules"
-permalink: /Where-to-properly-define-classes-and-enums-in-your-PowerShell-modules/
+title: "How and where to properly define classes and enums in your PowerShell modules"
+permalink: /How-and-where-to-properly-define-classes-and-enums-in-your-PowerShell-modules/
 #date: 2099-01-15T00:00:00-06:00
 #last_modified_at: 2099-01-22
 comments_locked: false
@@ -15,7 +15,7 @@ I recently created a PowerShell module that defines classes and enums.
 Everything worked fine locally, but broke when I tested the module on a build server.
 This was odd, as the module did not have any dependencies.
 
-In this post I'll explain what I did, and how to properly define classes and enums in your PowerShell modules.
+In this post I'll explain what I did, and how to properly define classes and enums in your PowerShell modules to avoid.
 
 ## TL;DR: Just tell me the proper way to do it
 
