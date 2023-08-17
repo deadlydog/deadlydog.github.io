@@ -90,7 +90,7 @@ The Mastodon PowerShell community is strong and offered some great suggestions a
 I kept experimenting with [my sample repo](https://github.com/deadlydog/PowerShell.Experiment.ClassInModule), and created a Dev Container to try and eliminate any anomalies that may be due to my local machine.
 The tests are explained in more detail in the repo's ReadMe, and the results presented there as well.
 
-To ensure my local machine was not impacting the results, all results shown below are from running the tests in GitHub Actions.
+To ensure my local machine was not impacting the results, all results shown below are from running the tests in GitHub Actions, on both Windows and Linux agents.
 
 ### Referencing the PowerShell class/enum in the module
 
