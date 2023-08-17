@@ -29,12 +29,12 @@ If you do not follow these 2 rules, then you may run into build or runtime error
 
 > Unable to find type [MyClass/MyEnum]
 
-If you want to avoid this type issue, and not have to remember the specific rules around defining and including classes/enums and importing modules, then use C# classes and enums instead of PowerShell native classes and enums.
+If you want to avoid this "missing type" issue, and not have to remember the specific rules around defining and including classes/enums and importing modules, then use C# classes and enums instead of PowerShell native classes and enums.
 They allow you to define your classes and enums in their own files, and allow end-users to use `Import-Module` and still have full access to the class/enum types.
 
-## What is a PowerShell class and enum?
+## What is a PowerShell native class and enum?
 
-Let's ensure we are on the same page with regard to PowerShell native classes and enums.
+Let's ensure we are on the same page with regard to PowerShell native [classes](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_classes) and [enums](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_enum).
 PowerShell native classes and enums were introduced in PowerShell 5, and are a way to define strongly-typed objects in PowerShell.
 
 Here is an example of a basic PowerShell class definition:
@@ -216,10 +216,10 @@ In this post I've shown that to avoid headaches when using PowerShell native cla
 1. Define the class/enum directly in the `.psm1` file.
 1. Import the module with `using module` instead of `Import-Module`.
 
-If you do not want to deal with the limitations of using PowerShell native classes/enums in your modules, then you can define them as C# classes/enums instead, avoiding potential problems, allowing you to put each class/enum in their own file, and providing a nicer experience for consumers of your module.
+If you do not want to deal with the limitations of using PowerShell native classes/enums in your modules, then you can define them as C# classes/enums instead, avoiding potential problems, allowing you to put each class/enum in their own file, and providing a nicer experience for consumers of your module since they can still use the typical `Import-Module` command.
 
 PowerShell 7.3.6 is the latest version at the time of writing this post.
 Due of the nuances around using PowerShell native classes and enums in modules, they don't quite feel like a complete first-class citizen yet.
-Hopefully later versions of PowerShell will improve the language and tooling to make using PowerShell native classes and enums in modules easier and more straightforward with all the benefits of using C# classes/enums.
+Hopefully later versions of PowerShell will improve the language to make using PowerShell native classes and enums in modules easier and more straightforward with all the benefits of using C# classes/enums.
 
 Happy scripting!
