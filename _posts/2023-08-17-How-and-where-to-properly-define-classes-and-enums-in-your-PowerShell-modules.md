@@ -15,7 +15,7 @@ I recently created a PowerShell script module that defines classes and enums.
 Everything worked fine locally, but broke when I tested the module on a build server.
 This was odd, as the module did not have any dependencies.
 
-In this post I'll explain what I did, and how to properly define classes and enums in your PowerShell script modules to avoid issues for yourself and consumers of your modules.
+In this post I'll explain what I did, how to properly define PowerShell classes and enums in your PowerShell script modules to avoid issues for yourself and consumers of your modules, and why you may want to consider using C# classes and enums instead.
 
 ## TL;DR: Just tell me the proper way to do it
 
@@ -29,8 +29,8 @@ If you do not follow these 2 rules, then you may run into build or runtime error
 
 > Unable to find type [MyClass/MyEnum]
 
-If you want to avoid this "missing type" issue, and not have to remember the specific rules around defining and including classes/enums and importing modules, then use C# classes and enums instead of PowerShell native classes and enums.
-They allow you to define your classes and enums in their own files, and allow end-users to use `Import-Module` and still have full access to the class/enum types.
+To easily avoid these errors and not have to remember the specific rules around defining and including classes/enums and importing modules, use C# classes and enums instead of PowerShell native classes and enums.
+C# classes and enums allow you to define your classes and enums in their own files, and allow end-users to use `Import-Module` and still have full access to the class/enum types.
 
 ## What is a PowerShell native class and enum?
 
