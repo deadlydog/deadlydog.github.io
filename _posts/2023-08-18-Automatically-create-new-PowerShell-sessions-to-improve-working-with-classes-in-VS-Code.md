@@ -21,8 +21,8 @@ Once you've installed [the PowerShell extension](https://marketplace.visualstudi
 
 ![Screenshot of the Visual Studio Code setting to enable PowerShell temporary integrated console](/assets/Posts/2023-08-18-Automatically-create-new-PowerShell-sessions-to-improve-working-with-classes-in-VS-Code/vs-code-setting-to-enable-powershell-temporary-integrated-console.png)
 
-Now every time you hit F5 to run a PowerShell script, it will first create a new PowerShell terminal and then run the script in that terminal, ensuring no previous variables are in memory and that the latest version of your classes and binary modules are loaded.
-No more manually restarting your PowerShell sessions when developing classes or binary modules!
+Now every time you debug a PowerShell script, it will first create a new temporary PowerShell terminal and then run the script in that terminal, ensuring no previous variables are still in memory and that the latest version of your classes and binary modules are loaded.
+No more manually restarting your PowerShell terminals when developing classes or binary modules!
 
 I hope you find this useful.
 For more Visual Studio Code settings you might want to tweak, [check out this post](https://blog.danskingdom.com/Visual-Studio-Code-default-settings-to-change/).
