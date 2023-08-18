@@ -19,18 +19,24 @@ In this post I'll explain what I did, how to properly define PowerShell classes 
 
 ## TL;DR: Just tell me the proper way to do it
 
-If you are using PowerShell native classes and enums:
+With the current latest PowerShell version, v7.3.6, there are still nuances to using PowerShell native classes and enums in modules.
+The easiest way to avoid the issues they pose is to simply not use them.
+Instead, use C# classes and enums in your PowerShell modules.
+
+C# classes and enums:
+
+- Can be defined in their own files and dot-sourced into the psm1 file.
+- Allow module consumers to use `Import-Module` and still have full access to the class/enum types.
+
+If you decide to still use PowerShell native classes and enums:
 
 1. Define your classes and enums directly in the `.psm1` file.
    Do _NOT_ define them in a separate file and include them in the psm1 file via dot-sourcing or any other method.
-1. When importing a module that uses classes or enums into your scripts, use the `using module` command ([MS docs](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_using?view=powershell-7.3#module-syntax)), not `Import-Module`.
+1. When importing a module that uses classes or enums into your scripts, use the `using module` command ([MS docs](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_using#module-syntax)), not `Import-Module`.
 
-If you do not follow these 2 rules, then you may run into build or runtime errors like:
+If you do not follow these 2 rules with PowerShell native classes/enums, then you may run into build or runtime errors like:
 
 > Unable to find type [MyClass/MyEnum]
-
-To easily avoid these errors and not have to remember the specific rules around defining and including classes/enums and importing modules, use C# classes and enums instead of PowerShell native classes and enums.
-C# classes/enums can be defined in their own files, and allow end-users to use `Import-Module` and still have full access to the class/enum types.
 
 ## What is a PowerShell native class and enum?
 
@@ -62,7 +68,7 @@ I mostly use classes for passing around strongly-typed data objects (rather than
 
 I love using enums where possible for properties with a limited set of specific values, as it makes the code more readable and less error-prone, and PowerShell offers autocompletion when using them.
 
-## How I defined classes in my module and the problem with it
+## Backstory: How I defined classes in my module and encountered problems
 
 Rather than defining all of my functions directly in the module's `psm1` file and ending up with 2000+ line file, I thought I would follow a common code organization convention and define each of my functions in a separate file, as mentioned in [this blog post](https://tomasdeceuninck.github.io/2018/04/17/PowerShellModuleStructure.html).
 This has a number of benefits, such as making it easier to find the code you are looking for and reducing merge conflicts.
@@ -85,18 +91,19 @@ I created [this small sample repo](https://github.com/deadlydog/PowerShell.Exper
 From there, I created [this Stack Overflow question](https://stackoverflow.com/questions/76886628/powershell-module-with-class-defined-in-separate-file-fails-pester-tests-in-gith) and reached out [on Twitter (X) here](https://twitter.com/deadlydog/status/1690106592182591490?s=20) and [Mastodon here](https://hachyderm.io/@deadlydog/110873007402908403) for help.
 The Mastodon PowerShell community is strong and offered some great suggestions and explanations.
 
-## The results
+## Experiment results
 
 I kept experimenting with [my sample repo](https://github.com/deadlydog/PowerShell.Experiment.ClassInModule), and created a Dev Container to try and eliminate any anomalies that may be due to my local machine.
 The tests are explained in more detail in the repo's ReadMe, and the results presented there as well.
 
+PowerShell version 7.2.13 was used to produce these results.
 To ensure my local machine was not impacting the results, all results shown below are from running the tests in GitHub Actions, on both Windows and Linux agents.
 
 ### Referencing the PowerShell class/enum in the module
 
 To include a class/enum that I created within the module, I tried 3 different methods:
 
-1. With "using module" in the psm1 file:  `using module .\Classes\MyClass.ps1`
+1. With "using module" in the psm1 file: `using module .\Classes\MyClass.ps1`
 1. With dot-sourcing in the psm1 file: `. "$PSScriptRoot\Classes\MyClass.ps1`
 1. Defining the class/enum directly in the psm1 file, instead of in its own file.
 
