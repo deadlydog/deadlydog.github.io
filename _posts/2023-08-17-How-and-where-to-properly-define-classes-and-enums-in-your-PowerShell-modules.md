@@ -94,7 +94,7 @@ The Mastodon PowerShell community is strong and offered some great suggestions a
 ## Experiment results
 
 I kept experimenting with [my sample repo](https://github.com/deadlydog/PowerShell.Experiment.ClassInModule), and created a Dev Container to try and eliminate any anomalies that may be due to my local machine.
-The tests are explained in more detail in the repo's ReadMe, and the results presented there as well.
+The tests are explained in more detail in the repo's ReadMe, and you can virw the source code of the tests performed.
 
 PowerShell version 7.2.13 was used to produce these results.
 To ensure my local machine was not impacting the results, all results shown below are from running the tests in GitHub Actions, on both Windows and Linux agents.
@@ -103,7 +103,7 @@ To ensure my local machine was not impacting the results, all results shown belo
 
 To include a class/enum that I created within the module, I tried 3 different methods:
 
-1. With "using module" in the psm1 file: `using module .\Classes\MyClass.ps1`
+1. With "using module" in the psm1 file: `using module .\Classes\MyClass.psm1`
 1. With dot-sourcing in the psm1 file: `. "$PSScriptRoot\Classes\MyClass.ps1`
 1. Defining the class/enum directly in the psm1 file, instead of in its own file.
 
@@ -115,7 +115,7 @@ The results of using the different methods to reference a PowerShell native clas
 | Class/Enum file included with dot-sourcing   | ✔️                                          | ❌                                             |
 | Class/Enum defined in the psm1 file          | ✔️                                          | ✔️                                             |
 
-If I use `using module` to include the file with the class, then the class cannot be used by the module functions, and the class type cannot be used outside of the module.
+If I use `using module` to include the file with the class defined in it, then the class cannot be used by the module functions, and the class type cannot be used outside of the module.
 Simply put, it does not work at all (strangely though it worked when testing on my local machine 🤷‍♂️, so it seems unreliable at best).
 
 If I dot-source the file with the class, then the class can be used by the module functions, but the class type cannot be referenced outside of the module.
