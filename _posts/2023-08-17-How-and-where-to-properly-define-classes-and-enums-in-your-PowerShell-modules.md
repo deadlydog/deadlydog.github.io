@@ -104,6 +104,7 @@ To ensure my local machine was not impacting the results, all results shown belo
 To include a class/enum that I created within the module, I tried 3 different methods:
 
 1. With "using module" in the psm1 file: `using module .\Classes\MyClass.psm1`
+   - This test is done without using Export-ModuleMember like a real separate module would; it just has the class/enum definition in it.
 1. With dot-sourcing in the psm1 file: `. "$PSScriptRoot\Classes\MyClass.ps1`
 1. Defining the class/enum directly in the psm1 file, instead of in its own file.
 
