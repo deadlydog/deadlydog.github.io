@@ -118,10 +118,10 @@ The results of using the different methods to reference a PowerShell native clas
 If I use `using module` to include the file with the class, then the class cannot be used by the module functions, and the class type cannot be used outside of the module.
 Simply put, it does not work at all (strangely though it worked when testing on my local machine 🤷‍♂️, so it seems unreliable at best).
 
-If I dot-source the file with the class, then the class can be used by the module functions, but the class type still cannot be used outside of the module.
+If I dot-source the file with the class, then the class can be used by the module functions, but the class type cannot be referenced outside of the module.
 Anytime the class name is referenced you get the `Unable to find type` error.
 
-If I define the class in the psm1 file, then the class can be used by the module functions (both as output, and input parameters), and the class type can be used outside of the module.
+If I define the class in the psm1 file, then the class can be used by the module functions, and the class type can be used outside of the module.
 
 Enums behaved the same as classes in all of the tests that were performed.
 
