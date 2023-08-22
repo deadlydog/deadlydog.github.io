@@ -9,6 +9,12 @@ It's a nice place I can turn to when I'm not feeling motivated, or when I need a
 
 ## Donations and thank you emails from the community
 
+2023-08-21
+
+$5.00 USD from Curtis Seegobin for [Path Length Checker app](https://github.com/deadlydog/PathLengthChecker).
+
+---
+
 2023-08-04
 
 $5.00 USD from James Prichard for [Path Length Checker app](https://github.com/deadlydog/PathLengthChecker).
