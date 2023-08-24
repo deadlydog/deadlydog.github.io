@@ -26,7 +26,7 @@ While Carnac is a great tool, it is not perfect.
 I personally use [this fork of Carnac by bfritscher](https://github.com/bfritscher/carnac/releases) which adds a few features, like the ability to also display mouse clicks.
 It too has not been updated since 2020 though.
 
-I have only only been able to get Carnac to work on my primary monitor, and have noticed some other things not working as expected while playing with many of the various settings.
+I have only been able to get Carnac to work on my primary monitor ([see issue here](https://github.com/Code52/carnac/issues/257#issuecomment-1630738758)), and have noticed some other things not working as expected while playing with many of the various settings.
 Once I got it configured how I like however, I have not had any issues with it.
 
 While Carnac is not perfect, it is still a great free tool that I get a lot of value from.
