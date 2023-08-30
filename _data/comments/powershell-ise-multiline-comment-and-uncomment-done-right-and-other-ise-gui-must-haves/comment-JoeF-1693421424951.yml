@@ -1,0 +1,7 @@
+_id: 14008a00-4766-11ee-9f3f-916ae55a8c2d
+message: "(Let's try that again with markdown!)\r\n\r\nIn order for the comment/uncomment feature to work correctly, I had to change:\r\n\r\n```\r\n[string]$NEW_LINE_STRING = \"<kbd>r</kbd>n\"\r\n```\r\n\r\n…to:\r\n\r\n```\r\n[string]$NEW_LINE_STRING = \"`r`n\"\r\n```"
+name: JoeF
+email: 476d42b81e02657a7e0584efe49563fe
+url: ''
+hidden: ''
+date: '2023-08-30T18:50:24.939Z'
