@@ -1,0 +1,7 @@
+_id: ea5acb50-4762-11ee-a542-d590bba5c0f6
+message: "In order for the comment/uncomment feature to work correctly, I had to change:\r\n\r\n[string]$NEW_LINE_STRING = \"<kbd>r</kbd>n\"\r\n\r\n...to:\r\n\r\n[string]$NEW_LINE_STRING = \"`r`n\""
+name: JoeF
+email: 476d42b81e02657a7e0584efe49563fe
+url: ''
+hidden: ''
+date: '2023-08-30T18:27:46.585Z'
