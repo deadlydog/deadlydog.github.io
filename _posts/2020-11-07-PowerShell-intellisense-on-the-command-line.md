@@ -1,8 +1,8 @@
 ---
 title: "PowerShell intellisense on the command line"
 permalink: /PowerShell-intellisense-on-the-command-line/
-date: 2020-11-07
-last_modified_at: 2023-09-06
+date: 2020-11-07T00:00:00-06:00
+last_modified_at: 2023-09-06T00:00:00-06:00
 comments_locked: false
 categories:
   - PowerShell
