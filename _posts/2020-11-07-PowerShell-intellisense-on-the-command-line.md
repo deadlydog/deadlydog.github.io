@@ -33,12 +33,11 @@ Very helpful!
 
 This works for cmdlets, parameters, variables, methods, and more.
 Basically anything that you can tab complete, you can also see in the menu.
+For example:
 
-For example, type `Get-Pro` then <kbd>Ctrl</kbd> + <kbd>Space</kbd> to see all cmdlets that start with `Get-Pro`.
-
-If you have the variables `$variable1` and `$variable2`, then type `$var` and <kbd>Ctrl</kbd> + <kbd>Space</kbd> to see both variables in the menu.
-
-Type `[string]::` and <kbd>Ctrl</kbd> + <kbd>Space</kbd> to see all the methods available on the `[string]` type.
+- Type `Get-Pro` then <kbd>Ctrl</kbd> + <kbd>Space</kbd> to see all cmdlets that start with `Get-Pro`.
+- If you have the variables `$variable1` and `$variable2`, then type `$var` and <kbd>Ctrl</kbd> + <kbd>Space</kbd> to see both variables in the menu.
+- Type `[string]::` and <kbd>Ctrl</kbd> + <kbd>Space</kbd> to see all the methods available on the `[string]` type.
 
 Anytime you want autocomplete, just hit <kbd>Ctrl</kbd> + <kbd>Space</kbd> and you'll see all the options available.
 
