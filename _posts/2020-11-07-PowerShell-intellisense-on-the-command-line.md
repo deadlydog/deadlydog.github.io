@@ -1,8 +1,8 @@
 ---
 title: "PowerShell intellisense on the command line"
 permalink: /PowerShell-intellisense-on-the-command-line/
-#date: 2099-01-15T00:00:00-06:00
-#last_modified_at: 2099-01-22T00:00:00-06:00
+date: 2020-11-07
+last_modified_at: 2023-09-06
 comments_locked: false
 categories:
   - PowerShell
@@ -30,6 +30,14 @@ You activate this menu by using <kbd>Ctrl</kbd> + <kbd>Space</kbd>.
 Notice that when browsing the cmdlet parameters it also displays the parameter's type.
 e.g. It shows that `-Path` is a `[string[]]`, and `-Force` is a `[switch]`.
 Very helpful!
+
+This works for cmdlets, parameters, variables, methods, and more.
+Basically anything that you can tab complete, you can also see in the menu.
+
+For example, type `Get-Pro` then <kbd>Ctrl</kbd> + <kbd>Space</kbd> to see all cmdlets that start with `Get-Pro`.
+If you have the variables `$variable1` and `$variable2`, then type `$var` and <kbd>Ctrl</kbd> + <kbd>Space</kbd> to see both variables in the menu.
+Type `[string]::` and <kbd>Ctrl</kbd> + <kbd>Space</kbd> to see all the methods available on the `[string]` type.
+Anytime you want autocomplete, just hit <kbd>Ctrl</kbd> + <kbd>Space</kbd> and you'll see all the options available.
 
 If you're on a Mac, then apparently the <kbd>Ctrl</kbd> + <kbd>Space</kbd> trigger won't work; I don't have a Mac, so I can't confirm.
 However, do not fret.
