@@ -1,0 +1,11 @@
+_id: a65963d0-4d07-11ee-b0cd-fd99e4c1e76f
+message: >-
+  I am new to PowerShell and have been looking for a way to parse and compare 2
+  xml files. Some of the complex XML has repeatable fields that I need to be put
+  in the same order in both files. I started to play with your code to see if I
+  can use parts of it to do the ordering and comparing.
+name: Kenneth Shaw
+email: cd571306523b0c02e2b7901c02dd18a5
+url: ''
+hidden: ''
+date: '2023-09-06T22:49:35.188Z'
