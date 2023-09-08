@@ -1,8 +1,8 @@
 ---
 title: "Change these VS Code default settings to make it even more awesome"
 permalink: /Visual-Studio-Code-default-settings-to-change/
-#date: 2099-01-15T00:00:00-06:00
-last_modified_at: 2023-08-04
+date: 2023-03-14
+last_modified_at: 2023-09-07
 comments_locked: false
 toc: true
 categories:
@@ -374,6 +374,51 @@ JSON setting:
 "editor.fontLigatures": true,
 ```
 
+### File tree indentation
+
+Increase the indentation of nested items in the file tree so it is easier to tell when files are in a folder.
+
+GUI setting: `Workbench › Tree: Indent` to `11`, or whatever value you prefer; Default is 8.
+
+JSON setting:
+
+```json
+"workbench.tree.indent": 11,
+```
+
+### File tree indentation guide lines
+
+Show vertical lines in the file tree to help you see which files are in which folders.
+By default these are only shown when you hover over the mouse over the file tree, but I prefer to always show them.
+
+GUI setting: `Workbench › Tree: Render Indent Guides` to `always`.
+
+JSON setting:
+
+```json
+"workbench.tree.renderIndentGuides": "always",
+```
+
+Result:
+
+![Before and after screenshot of always showing the indent guides](/assets/Posts/2023-03-14-Visual-Studio-Code-default-settings-to-change/always-show-workbench-tree-indent-guides-before-and-after-result.png)
+
+### File tree indentation guide lines color
+
+Change the color of the file tree indentation guide lines so they are easier to see.
+I found the default color to be too dark and hard to see on some monitors, so I make it brighter.
+You can choose whatever color you prefer.
+
+GUI setting: `Workbench: Color Customizations`, which must be edited in the settings.json file.
+
+JSON setting:
+
+```json
+"workbench.colorCustomizations": {
+  "tree.indentGuidesStroke": "#999999"  // Default is #555555.
+},
+```
+
 ## Editor file and formatting settings
 
 ### Save files automatically
@@ -690,10 +735,6 @@ JSON setting:
 ```json
 "markdown.validate.enabled": true,
 ```
-
-<!-- Also do terminal settings -->
-
-<!-- Maybe group the settings by category. e.g. Terminal, workbench, editor, etc. -->
 
 ## Conclusion
 
