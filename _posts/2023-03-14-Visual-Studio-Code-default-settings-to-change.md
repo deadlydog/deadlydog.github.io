@@ -378,7 +378,8 @@ JSON setting:
 
 Increase the indentation of nested items in the file tree so it is easier to tell when files are in a folder.
 
-GUI setting: `Workbench › Tree: Indent` to `11`, or whatever value you prefer; Default is 8.
+GUI setting: `Workbench › Tree: Indent` to `11`, or whatever value you prefer.
+Default is 8.
 
 JSON setting:
 
@@ -399,7 +400,7 @@ JSON setting:
 "workbench.tree.renderIndentGuides": "always",
 ```
 
-Result:
+Result (before and after):
 
 ![Before and after screenshot of always showing the indent guides](/assets/Posts/2023-03-14-Visual-Studio-Code-default-settings-to-change/always-show-workbench-tree-indent-guides-before-and-after-result.png)
 
