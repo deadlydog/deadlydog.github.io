@@ -143,9 +143,9 @@ This is made more apparent when we sort by `Duration`:
 ![Trace Top50Duration property output in Out-GridView sorted by Duration](/assets/Posts/2023-09-09-Easily-profile-your-PowerShell-code-with-the-Profiler-module/trace-tips-dot-source-offending-line-sorted-by-duration.png)
 
 We can ignore the top row as it is dot-sourcing the file that contains all of my custom profile code, which is why the `Percent` shows as `99.79`.
-I keep my custom profile code in a separate file and dot-source it into the official $Profile so that it can be shared between PowerShell 5 and Pwsh 7.
+I keep my custom profile code in a separate file and dot-source it into the official $Profile so that it can be shared between PowerShell 5 and Pwsh 7, as well as automatically backed up on OneDrive.
 
-Looking in my `tiPS.psm1` file on line `25`, I see that it is looping over all of the files in the module and dot-sourcing them:
+Looking in my `tiPS.psm1` file on line `25`, I see that it is looping over all of the files in the module directory and dot-sourcing them:
 
 ```powershell
 $functionFilePathsToImport | ForEach-Object {
@@ -153,7 +153,7 @@ $functionFilePathsToImport | ForEach-Object {
 }
 ```
 
-This allows me to keep all of my functions in separate files, which I prefer for organization and makes development easier.
+This allows for better code organization by keeping module functions in separate files, rather than having one giant .psm1 file with all of the module code.
 I never anticipated that it would have such a drastic impact on the module load time!
 A quick Google search shows me that others have come across [this dot-sourcing performance issue](https://superuser.com/questions/1170619/is-dot-sourcing-slower-than-just-reading-file-content) as well.
 
