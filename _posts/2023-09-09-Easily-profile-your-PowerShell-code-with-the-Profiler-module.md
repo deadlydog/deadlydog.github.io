@@ -23,6 +23,16 @@ Installing and using it is a breeze.
 In this post I will walk through how I used Profiler to find a surprisingly slow part of a new PowerShell module I am developing, called [tiPS](https://github.com/deadlydog/PowerShell.tiPS).
 I noticed that importing tiPS in my PowerShell profile was noticeably slowing down my PowerShell session startup time, so I decided to profile it to see if I could optimize it.
 
+## TL;DR
+
+If you don't want to read this entire post, just run these commands and thank me (and Jakub) later:
+
+```powershell
+Install-Module -Name Profiler
+$trace = Trace-Script -ScriptBlock { & 'C:\Path\To\Script.ps1' }
+$trace.Top50SelfDuration | Out-GridView
+```
+
 ## Installing the Profiler module
 
 The Profiler module is available on [the PowerShell Gallery here](https://www.powershellgallery.com/packages/Profiler/), so you can install it with:
