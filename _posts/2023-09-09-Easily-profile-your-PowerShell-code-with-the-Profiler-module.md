@@ -165,7 +165,7 @@ $functionFilePathsToImport | ForEach-Object {
 
 This allows for better code organization by keeping module functions in separate files, rather than having one giant .psm1 file with all of the module code.
 I never anticipated that it would have such a drastic impact on the module load time!
-A quick Google search shows me that others have come across [this dot-sourcing](https://becomelotr.wordpress.com/2017/02/13/expensive-dot-sourcing/) [performance issue](https://superuser.com/questions/1170619/is-dot-sourcing-slower-than-just-reading-file-content) as well.
+A quick Google search shows me that others have come across [this dot-sourcing](https://becomelotr.wordpress.com/2017/02/13/expensive-dot-sourcing/) [performance issue](https://superuser.com/questions/1170619/is-dot-sourcing-slower-than-just-reading-file-content) [as well](https://www.codykonior.com/2019/04/18/expensive-dot-sourcing-in-powershell-modules-revisited/).
 
 Since the tiPS module is intended to be loaded on every new PowerShell session, I need to find a way to speed up the module load time.
 This may mean creating a build step that combines all of the files into the .psm1 file, rather than doing it at runtime via dot-sourcing.
