@@ -94,7 +94,12 @@ The real value of the Profiler is in the `Top50SelfDuration` and `Top50Duration`
 The 2 properties show similar information, just sorted based on `SelfDuration` or `Duration` respectively.
 
 - `SelfDuration` is the time spent in the command itself, not including any time spent in functions that it called.
+  This shows you the lines of code that are actually slow in the script.
 - `Duration` is the time spent in the command, including all other functions it called.
+  It shows the bigger pieces that are slow because they contain smaller slow pieces.
+
+A good strategy is to look at the `Top50SelfDuration` first to see which specific lines of code are the slowest.
+You can then look at the `Top50Duration` to see which larger parts of your script take the most time, and see if it matches your expectations.
 
 Here is the output of the `Top50SelfDuration` property:
 
@@ -189,6 +194,9 @@ then:
 $trace = Trace-Script -ScriptBlock { & 'C:\Path\To\Script.ps1' }
 $trace.Top50SelfDuration | Out-GridView
 ```
+
+Profiler has more features that I did not cover in this post, such as using Flags to easily change the functionality of the code in the script block and compare them (e.g. to compare two different implementations), and functions for running the script block multiple times and taking the average performance metrics.
+Be sure to check out [the Profiler git repo](https://github.com/nohwnd/Profiler) for more info.
 
 I hope you've found this post helpful.
 
