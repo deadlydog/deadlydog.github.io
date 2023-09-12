@@ -1,0 +1,7 @@
+_id: 4578fc30-517e-11ee-807d-d30a45846fd3
+message: "When passing the XML to the functions I get this error:\r\nGet-XmlNodes : Cannot process argument transformation on parameter 'XmlDocument'. Cannot \r\nconvert value \"System.Object[]\" to type \"System.Xml.XmlDocument\". Error: \"The specified node \r\ncannot be inserted as the valid child of this node, because the specified node is the wrong \r\ntype.\"\r\nAt C:\\Users\\OrderFile.ps1:154 char:19\r\n+ ... Get-XmlNodes([ xml ]$XmlDocument, [string]$ElementPath, [string]$Name ...\r\n+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\r\n    + CategoryInfo          : InvalidData: (:) [Get-XmlNodes], ParameterBindingArgumentTransfor \r\n   mationException\r\n    + FullyQualifiedErrorId : ParameterArgumentTransformationError,Get-XmlNodes\r\n\r\nI have googled the error and tried multiple ways to force the object to XML.  Is anyone else having this issue?"
+name: Ken Shaw
+email: 20dd10dc52489c965390b508c2bb1e6d
+url: ''
+hidden: ''
+date: '2023-09-12T15:08:47.390Z'
