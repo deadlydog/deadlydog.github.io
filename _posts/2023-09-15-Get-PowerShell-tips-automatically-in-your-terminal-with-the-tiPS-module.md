@@ -37,7 +37,7 @@ Here's a quick demo of installing tiPS and getting tips on demand, and then conf
 
 ![tiPS demo](/assets/Posts/2023-09-15-Get-PowerShell-tips-automatically-in-your-terminal-with-the-tiPS-module/InstallAndConfigureTiPSModule.gif)
 
-While the demo shows displaying a new tip on every PowerShell session, I recommend configuring it to show a new tip daily so that you don't get overwhelmed with too many tips at once.
+While the demo shows displaying a new tip on every PowerShell session, I recommend configuring it to show a new tip daily so that you don't get too distracted by tips while doing your day-to-day work.
 
 ## More info
 
