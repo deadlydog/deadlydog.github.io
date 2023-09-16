@@ -23,7 +23,7 @@ Install and configure the tiPS module by running the following commands in a Pow
 
 ```powershell
 Install-Module -Name tiPS -Scope CurrentUser
-Edit-PowerShellProfileToImportTiPS
+Add-TiPSImportToPowerShellProfile
 Set-TiPSConfiguration -AutomaticallyWritePowerShellTip Daily -AutomaticallyUpdateModule Weekly
 ```
 
