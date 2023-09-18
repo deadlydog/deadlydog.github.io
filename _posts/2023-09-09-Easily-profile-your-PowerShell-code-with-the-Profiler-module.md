@@ -151,7 +151,7 @@ The 6th row shows another top offending line in the `tiPS` module.
 
 ![Trace Top50SelfDuration property output in Out-GridView with 6th row highlighted](/assets/Posts/2023-09-09-Easily-profile-your-PowerShell-code-with-the-Profiler-module/trace-tips-dot-source-offending-line.png)
 
-Notice that this line has a total `Duration` over 1054 milliseconds, due to it being called 15 times.
+Notice that this line has a total `Duration` of 1054 milliseconds, due to it being called 15 times.
 On initial inspection, it appears that this line of code is slowing the module load time even more than our initial top offender (we'll come back to this).
 This is made more apparent when we sort by `Duration`:
 
@@ -174,11 +174,11 @@ Naively we may think that this is giving additional evidence that the dot-sourci
 
 Earlier we saw that the `Add-Type` command was taking 693ms in Configuration.ps1, and 210ms in PowerShellTip.ps1.
 That is 903ms total.
-I did a `Trace-Script -ScriptBlock { Import-Module -Name tiPS }` to see how long it takes to just import the module, and found the entire import takes 1180ms.
+I did a `Trace-Script -ScriptBlock { Import-Module -Name tiPS }` to see how long it takes to just import the tiPS module, and found the entire import takes 1180ms.
 Configuration.ps1 and PowerShellTip.ps1 are 2 of the 15 files that get dot-sourced in the module, and they alone take 903ms of the 1180ms to load the module.
 
 This highlights the difference between `SelfDuration` and `Duration`.
-The `Duration` of the dot-sourcing was including the time spent in all of the operations in the dot-sourced files, such as the `Add-Type`operations.
+The `Duration` of the dot-sourcing was including the time spent in all of the operations of the dot-sourced files, such as the `Add-Type`operations.
 In the screenshot we can see that the dot-sourcing `Duration` is 1054ms, and the `SelfDuration` is 129ms.
 So the act of dot-sourcing the 15 files, regardless of what the files contain, is taking 129ms.
 We know it takes 903ms to execute the two `Add-Type` commands in the dot-sourced files, so that means the time it takes to execute the operations in the other 13 files being dot-sourced is 1054ms - 903ms = 151ms.
