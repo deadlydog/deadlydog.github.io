@@ -2,7 +2,7 @@
 title: "Easily profile your PowerShell code with the Profiler module"
 permalink: /Easily-profile-your-PowerShell-code-with-the-Profiler-module/
 #date: 2099-01-15T00:00:00-06:00
-#last_modified_at: 2099-01-22
+last_modified_at: 2023-09-17
 comments_locked: false
 toc: false
 categories:
@@ -137,9 +137,9 @@ $trace.Top50SelfDuration | Out-GridView
 This allows me to see all of the columns, reorder and hide columns I don't care about, as well as sort and filter the results.
 
 Now that we have the `Text` column, we can see that the top offender is a call to `Add-Type -Language CSharp`.
-Since `tiPS` is my module, I know that line is being used to import some inline C# code.
+Since `tiPS` is my module, I know that line is being used to compile and import some inline C# code.
 The 3rd row shows the same operation for importing a different C# file.
-There's not much I can do to optimize that outside of considering a different strategy for importing C# code or not using C# at all, which may be something to consider.
+Since it is a single line of code calling a library that I do not own, there's not much I can do to optimize it outside of considering a different strategy for importing C# code or not using C# at all, which may be something to consider.
 
 Moving on, the 2nd row shows a call to `Set-PoshPrompt` taking 624 milliseconds.
 I use this third party module to customize my prompt with oh-my-posh.
@@ -151,8 +151,8 @@ The 6th row shows another top offending line in the `tiPS` module.
 
 ![Trace Top50SelfDuration property output in Out-GridView with 6th row highlighted](/assets/Posts/2023-09-09-Easily-profile-your-PowerShell-code-with-the-Profiler-module/trace-tips-dot-source-offending-line.png)
 
-In fact, notice that this line has a total `Duration` over 1 second, due to it being called 15 times.
-This means that this line of code is slowing the module load time even more than our initial top offender.
+Notice that this line has a total `Duration` over 1054 milliseconds, due to it being called 15 times.
+On initial inspection, it appears that this line of code is slowing the module load time even more than our initial top offender (we'll come back to this).
 This is made more apparent when we sort by `Duration`:
 
 ![Trace Top50Duration property output in Out-GridView sorted by Duration](/assets/Posts/2023-09-09-Easily-profile-your-PowerShell-code-with-the-Profiler-module/trace-tips-dot-source-offending-line-sorted-by-duration.png)
@@ -168,13 +168,29 @@ $functionFilePathsToImport | ForEach-Object {
 }
 ```
 
-This allows for better code organization by keeping module functions in separate files, rather than having one giant .psm1 file with all of the module code.
-I never anticipated that it would have such a drastic impact on the module load time!
+This dot-sourcing strategy allows for better code organization by keeping module functions in separate files, rather than having one giant .psm1 file with all of the module code.
 A quick Google search shows me that others have come across [this dot-sourcing](https://becomelotr.wordpress.com/2017/02/13/expensive-dot-sourcing/) [performance issue](https://superuser.com/questions/1170619/is-dot-sourcing-slower-than-just-reading-file-content) [as well](https://www.codykonior.com/2019/04/18/expensive-dot-sourcing-in-powershell-modules-revisited/).
+Naively we may think that this is giving additional evidence that the dot-sourcing may be the main issue.
+
+Earlier we saw that the `Add-Type` command was taking 693ms in Configuration.ps1, and 210ms in PowerShellTip.ps1.
+That is 903ms total.
+I did a `Trace-Script -ScriptBlock { Import-Module -Name tiPS }` to see how long it takes to just import the module, and found the entire import takes 1180ms.
+Configuration.ps1 and PowerShellTip.ps1 are 2 of the 15 files that get dot-sourced in the module, and they alone take 903ms of the 1180ms to load the module.
+
+This highlights the difference between `SelfDuration` and `Duration`.
+The `Duration` of the dot-sourcing was including the time spent in all of the operations in the dot-sourced files, such as the `Add-Type`operations.
+In the screenshot we can see that the dot-sourcing `Duration` is 1054ms, and the `SelfDuration` is 129ms.
+So the act of dot-sourcing the 15 files, regardless of what the files contain, is taking 129ms.
+We know it takes 903ms to execute the two `Add-Type` commands in the dot-sourced files, so that means the time it takes to execute the operations in the other 13 files being dot-sourced is 1054ms - 903ms = 151ms.
+
+So dot-sourcing 15 files takes 129ms, which isn't too bad.
+I imagine (but did not test) the time will increase linearly with the number of files dot-sourced, so if you have a large project that dot-sources hundreds of files, you could be looking at several seconds of time spent just dot-sourcing the files; not executing the code in the files.
+While dot-sourcing is a bit slow, it is not the main offender in my scenario.
+The main performance issue is the `Add-Type` commands to compile and import the C# code.
+I never anticipated that one command would have such a drastic impact on the module load time!
 
 Since the tiPS module is intended to be loaded on every new PowerShell session, I need to find a way to speed up the module load time.
-This may mean creating a build step that combines all of the files into the .psm1 file, rather than doing it at runtime via dot-sourcing.
-Or I may take some other approach; I'm not sure yet.
+This might mean not using C# code, or taking some other approach; I'm not sure yet.
 The main point is that I now know where the bottleneck is and can focus my efforts on optimizing that code.
 
 ## Conclusion
