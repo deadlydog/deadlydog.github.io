@@ -2,7 +2,7 @@
 title: "How and where to properly define classes and enums in your PowerShell modules"
 permalink: /How-and-where-to-properly-define-classes-and-enums-in-your-PowerShell-modules/
 #date: 2099-01-15T00:00:00-06:00
-#last_modified_at: 2099-01-22
+last_modified_at: 2023-09-22
 comments_locked: false
 toc: false
 categories:
@@ -37,6 +37,8 @@ If you decide to still use PowerShell native classes and enums:
 If you do not follow these 2 rules with PowerShell native classes/enums, then you may run into build or runtime errors like:
 
 > Unable to find type [MyClass/MyEnum]
+
+I also discuss the pros and cons of the different ways to define classes and enums in PowerShell [in this post](https://blog.danskingdom.com/PowerShell-class-definition-pros-cons-and-performance-comparison/).
 
 ## What is a PowerShell native class and enum?
 
@@ -225,6 +227,10 @@ Classes and enums are extremely useful, so I hope that PowerShell will continue 
 It is possible to create modules and cmdlets entirely in C# instead of PowerShell.
 This allows you to structure all of your code files however you want.
 For more information on how to do this, [check out my other blog post](https://blog.danskingdom.com/Create-and-test-PowerShell-Core-cmdlets-in-CSharp/).
+
+### PowerShell class definition comparison
+
+I discuss the pros and cons of the different ways to define classes and enums in PowerShell [in this post](https://blog.danskingdom.com/PowerShell-class-definition-pros-cons-and-performance-comparison/).
 
 ## Conclusion
 
