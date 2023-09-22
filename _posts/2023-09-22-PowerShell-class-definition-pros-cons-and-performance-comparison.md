@@ -13,14 +13,14 @@ tags:
   - Performance
 ---
 
-There are 3 different approaches that can be taken to using classes and enums in PowerShell.
+There are 3 different approaches that can be taken to defining classes and enums in PowerShell.
 In this article we will compare the pros, cons, and performance of each approach.
 
 ## The 3 approaches
 
-- __PowerShell classes:__ Introduced in PowerShell 5.0, PowerShell has native support for classes.
-- __Inline C# classes:__ C# classes defined in a string in PowerShell and compiled and imported at runtime.
-- __Compiled assembly C# classes:__ C# classes defined in a .cs file, compiled to a .dll, and the .dll imported at runtime.
+1. __PowerShell classes:__ Introduced in PowerShell 5.0, PowerShell has native support for classes.
+1. __Inline C# classes:__ C# classes defined in a string in PowerShell and compiled and imported at runtime.
+1. __Compiled assembly C# classes:__ C# classes defined in a .cs file, compiled to a .dll, and the .dll imported at runtime.
 
 ### PowerShell class example
 
