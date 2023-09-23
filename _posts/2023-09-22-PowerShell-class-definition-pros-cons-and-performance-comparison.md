@@ -13,8 +13,8 @@ tags:
   - Performance
 ---
 
-There are 3 different approaches that can be taken to defining classes and enums in PowerShell.
-In this article we will compare the pros, cons, and performance of each approach.
+There are 3 different approaches that can be used to define classes and enums in PowerShell.
+This article will compare the pros, cons, and performance of each approach.
 
 ## The 3 approaches
 
