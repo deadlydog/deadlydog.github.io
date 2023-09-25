@@ -2,7 +2,7 @@
 title: "PowerShell class definition pros, cons, and performance comparison"
 permalink: /PowerShell-class-definition-pros-cons-and-performance-comparison/
 #date: 2099-01-15T00:00:00-06:00
-#last_modified_at: 2099-01-22
+last_modified_at: 2023-09-25
 comments_locked: false
 toc: false
 categories:
@@ -110,19 +110,25 @@ In [this post](https://blog.danskingdom.com/How-and-where-to-properly-define-cla
 You can read the post for more details, but the takeaways are:
 
 - If creating a module with PowerShell classes, you _must_ define them directly in the .psm1 file; they cannot be defined in another file and dot-sourced into the .psm1 file.
+  This prevents organizing your class code into multiple files.
 - If creating a module with PowerShell classes, consumers of the module must use `using module YourModule` instead of `Import-Module YourModule` to be able to reference to the class and enum types, otherwise PowerShell will give an error that it cannot find the type.
 
 C# classes and enums, whether inline or compiled, do not have these limitations.
 
-### PowerShell class considerations
+However, using C# code in PowerShell does have its own drawbacks:
+
+- You are not able to step into C# code from PowerShell to debug it.
+- You can not write to the Debug, Verbose, or Warning streams from C#.
+
+### Additional PowerShell class considerations
 
 - In addition to the module limitations mentioned above, PowerShell classes were introduced in PowerShell 5.0, so we can't use them if we want to support PowerShell 3.0 and 4.0.
 
-### Inline C# class considerations
+### Additional Inline C# class considerations
 
 - [Windows PowerShell only supports C# 5.0](https://stackoverflow.com/a/40789694/602585), so we can't use any newer language features.
 
-### Compiled assembly C# class considerations
+### Additional Compiled assembly C# class considerations
 
 - You must compile the C# classes into an assembly, which is an extra development step.
 - The assembly must be compiled against .NET Standard 2.0 so that it can be used in both Windows PowerShell and PowerShell Core.
@@ -146,6 +152,11 @@ If module load time is a concern, then I recommend using compiled assembly C# cl
 Using a compiled assembly gives you the benefit of compiler checking and being able to use other development tools if you like.
 However, it also adds additional development complexity as you need to compile the assembly after any code changes and before you can use it in PowerShell.
 This is the approach I took in my [tiPS PowerShell module](https://github.com/deadlydog/PowerShell.tiPS), as it is intended to be added to a user's PowerShell profile and would be loaded every session, so you can look at that module for an example.
+
+Since you are not able to debug C# classes when running PowerShell, nor write to all of the output streams, I recommend keeping your classes very simple and using them mostly as a data structure.
+They should mostly just be properties with no or very few methods.
+If complex operations need to be performed on the class data, create PowerShell functions that accept the class as a parameter and perform the operation.
+This will allow you to step through and debug the complex code, and write to all of the output streams if needed.
 
 ## Create your module in C# instead of PowerShell
 
