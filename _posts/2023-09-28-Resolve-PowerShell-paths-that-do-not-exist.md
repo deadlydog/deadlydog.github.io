@@ -2,7 +2,7 @@
 title: "Resolve PowerShell paths that do not exist"
 permalink: /Resolve-PowerShell-paths-that-do-not-exist/
 #date: 2099-01-15T00:00:00-06:00
-#last_modified_at: 2099-01-22
+last_modified_at: 2023-10-03
 comments_locked: false
 toc: false
 categories:
@@ -52,7 +52,7 @@ So instead of using `TestDrive:/config.json`, I could just use `$TestDrive/confi
 I ended up changing my Pester mock to use this instead, as it is much cleaner:
 
 ```powershell
-[string] $configPath = 'TestDrive:/config.json'
+[string] $configPath = "$TestDrive/config.json"
 ```
 
 Oh well, I learned something new about PowerShell, so it was worth it.
