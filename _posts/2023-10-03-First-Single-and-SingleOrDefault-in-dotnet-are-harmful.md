@@ -129,7 +129,12 @@ This is just one example of how you could implement this.
 You might choose to create your own SingleItemOrDefault helper method or extension method that performs the operations and adds the information to the exception.
 You might not want to throw an exception at all, but instead use the Result pattern to return a failed result with the rich information.
 
-If we are not worried about multiple items being matched, we can leverage `FirstOrDefault` instead of `Where(...).ToList()` to avoid iterating over the entire collection when there is a match, like this:
+The above shows how to avoid using `Single` and `SingleOrDefault`.
+Let's see how we can avoid using `First` as well.
+
+Rather than using `First` we can leverage `FirstOrDefault`.
+`FirstOrDefault` is preferred over `Where(...).ToList()` and checking `Count == 0` to avoid iterating over the entire collection when a match exists.
+Here's an example of using `FirstOrDefault` instead of `First`:
 
 ```csharp
 var name = "Zane";
@@ -139,6 +144,9 @@ if (person == null)
     throw new PersonNotFoundException($"Could not find a person named '{name}' in our people list.");
 }
 ```
+
+You will need to be mindful of the default value for the type you are working with.
+Object types will be null, but value types will be their default value.
 
 The important thing is that you do not rely on the default `InvalidOperationException`, and that your error message includes all the information that will help you troubleshoot any issues.
 This is a good general rule to follow for any error logging you perform.
