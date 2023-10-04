@@ -67,3 +67,7 @@ Here are some websites that I've made:
 ## © License
 
 All material found on this blog is offered up under the [Creative Commons 3.0 License](http://creativecommons.org/licenses/by/3.0/). This basically says that you are free to share or change the information provided, as long as you Attribute the original work to me, preferably by linking back to the webpage.
+
+## 🔏 Privacy Policy
+
+[View the privacy policy](https://blog.danskingdom.com/privacy).
