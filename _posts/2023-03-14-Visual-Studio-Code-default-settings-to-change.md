@@ -296,11 +296,33 @@ JSON setting:
 "window.density.editorTabHeight": "compact",
 ```
 
+### Pinned tabs on separate row
+
+You can have pinned tabs be displayed on their own row, above non-pinned tabs.
+Tabs can then be easily pinned and unpinned by dragging them in and out of the pinned row.
+
+GUI setting: `Workbench › Editor: Pinned Tabs On Separate Row` to `true`.
+
+JSON setting:
+
+```json
+"workbench.editor.pinnedTabsOnSeparateRow": true,
+```
+
+Result before:
+
+![Screenshot of pinned tabs not on a separate row](/assets/Posts/2023-03-14-Visual-Studio-Code-default-settings-to-change/pinned-tabs-on-separate-row-off.png)
+
+and after:
+
+![Screenshot of pinned tabs on a separate row](/assets/Posts/2023-03-14-Visual-Studio-Code-default-settings-to-change/pinned-tabs-on-separate-row-on.png)
+
 ### Pinned tab size
 
 Set the tab width for pinned tabs to be smaller.
 I find if I've pinned a tab, I often know what it is and don't need to see the full filename in the tab.
 You can save some horizontal space by shrinking the tab size for pinned tabs.
+This is less of an issue if you have pinned tabs show on their own separate row, but I still like to use it as some files have very long names.
 
 You will still see the full filename in the tooltip when you hover the mouse over the tab, and in the [breadcrumbs navigation bar](#breadcrumbs-navigation) when you have the file selected.
 
