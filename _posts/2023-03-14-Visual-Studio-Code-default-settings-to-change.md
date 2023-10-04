@@ -286,7 +286,7 @@ Result:
 
 ### Tab height
 
-You can reduce the tab height, which is especially nice when you have tab wrapping enabled and have multiple rows of tabs.
+You can reduce the tab height to save some vertical space, which is especially nice when you have tab wrapping enabled and have multiple rows of tabs.
 
 GUI setting: `Window › Density: Editor Tab Height` to `compact`.
 
