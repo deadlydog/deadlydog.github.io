@@ -172,7 +172,8 @@ catch (InvalidOperationException ex)
 
 This is not performant.
 We've already mentioned that throwing exceptions is expensive, and this code now throws two.
-Also, in order to get the useful information to include in the error message it has to run the `Where` query anyways, so why not just do that in the first place?
+More importantly, the `SingleOrDefault` call enumerates over the entire collection once.
+In order to get the useful information to include in the error message, it has to enumerate the entire collection again using the `Where` query, so why not just do that in the first place so we only traverse the collection once?
 
 ## Conclusion
 
