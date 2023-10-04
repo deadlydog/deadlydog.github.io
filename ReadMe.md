@@ -98,7 +98,7 @@ Here's a list of places I've changed code. This typically meant copying the file
 Here's a list of files I've added:
 
 - Everything in the `_posts` and `_drafts` directories.
-- The `_pages\About.md` page.
+- The `_pages\About.md`, `_pages\Feedback.md`, `_pages\Kudos.md`, and `_pages\Privacy.md` pages.
 - Everything in the `_assets\Posts`, `_assets\Site`, and `_assets\js` directories.
 - Everything in the `_data\comments` directory.
 - The `favicon.ico` image.
