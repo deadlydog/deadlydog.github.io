@@ -2,7 +2,7 @@
 title: "Change these VS Code default settings to make it even more awesome"
 permalink: /Visual-Studio-Code-default-settings-to-change/
 date: 2023-03-14
-last_modified_at: 2023-09-07
+last_modified_at: 2023-10-04
 comments_locked: false
 toc: true
 categories:
@@ -248,26 +248,6 @@ Result of smooth caret animation on (does not look as smooth and nice in the gif
 
 ![Result of using smooth caret animation](/assets/Posts/2023-03-14-Visual-Studio-Code-default-settings-to-change/smooth-caret-animation-on-result.gif)
 
-### Pinned tab size
-
-Set the tab width for pinned tabs to be smaller.
-I find if I've pinned a tab, I often know what it is and don't need to see the full filename in the tab.
-You can save some horizontal space by shrinking the tab size for pinned tabs.
-
-You will still see the full filename in the tooltip when you hover the mouse over the tab, and in the [breadcrumbs navigation bar](#breadcrumbs-navigation) when you have the file selected.
-
-GUI setting: `Workbench › Editor: Pinned Tab Sizing` to `shrink`.
-
-JSON setting:
-
-```json
-"workbench.editor.pinnedTabSizing": "shrink"
-```
-
-Result:
-
-![Result of using pinned tab sizing with shown configuration](/assets/Posts/2023-03-14-Visual-Studio-Code-default-settings-to-change/pinned-tab-size-setting-result.png)
-
 ### Editor decoration colors
 
 In addition to using glyphs in the tab name to indicate things like the file has been modified, VS Code will also change the color the tab text.
@@ -303,6 +283,38 @@ JSON setting:
 Result:
 
 ![Screenshot of how many tabs look with wrap tabs enabled](/assets/Posts/2023-03-14-Visual-Studio-Code-default-settings-to-change/wrap-tabs-setting-result.png)
+
+### Tab height
+
+You can reduce the tab height, which is especially nice when you have tab wrapping enabled and have multiple rows of tabs.
+
+GUI setting: `Window › Density: Editor Tab Height` to `compact`.
+
+JSON setting:
+
+```json
+"window.density.editorTabHeight": "compact",
+```
+
+### Pinned tab size
+
+Set the tab width for pinned tabs to be smaller.
+I find if I've pinned a tab, I often know what it is and don't need to see the full filename in the tab.
+You can save some horizontal space by shrinking the tab size for pinned tabs.
+
+You will still see the full filename in the tooltip when you hover the mouse over the tab, and in the [breadcrumbs navigation bar](#breadcrumbs-navigation) when you have the file selected.
+
+GUI setting: `Workbench › Editor: Pinned Tab Sizing` to `shrink`.
+
+JSON setting:
+
+```json
+"workbench.editor.pinnedTabSizing": "shrink"
+```
+
+Result:
+
+![Result of using pinned tab sizing with shown configuration](/assets/Posts/2023-03-14-Visual-Studio-Code-default-settings-to-change/pinned-tab-size-setting-result.png)
 
 ### Bracket pair colorization
 
