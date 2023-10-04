@@ -112,7 +112,7 @@ You can see that the exception thrown contains much more information to help tro
 
 - We used a specific type of exception, `TooManyPeopleFoundException`.
 - We include the condition that was used to find the people. e.g. person named {name}.
-- We include the number of items found.
+- We include the number of items found. e.g. {persons.Count}
 - We include the data source that was searched. e.g. our people list.
 - We include all of the matching items that were found. e.g. Billy Baller, Billy Bob.
 
