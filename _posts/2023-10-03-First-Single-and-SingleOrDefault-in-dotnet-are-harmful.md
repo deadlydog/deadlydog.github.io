@@ -178,6 +178,7 @@ Also, in order to get the useful information to include in the error message it 
 
 You might look at the recommended code and wonder if the extra few lines of code are worth it.
 I guarantee you it is.
+You can even write a helper or extension method to make the pattern easier to use.
 
 Spending an extra few minutes to add detailed information to your errors will save you and your team hours of troubleshooting in the future.
 There are some scenarios where it is impossible to ever solve the root issue without this extra information, such as when validating ephemeral data that no longer exists by the time you get to troubleshooting.
