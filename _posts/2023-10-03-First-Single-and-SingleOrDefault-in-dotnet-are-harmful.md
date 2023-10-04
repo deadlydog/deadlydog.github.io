@@ -129,7 +129,7 @@ This is just one example of how you could implement this.
 You might choose to create your own SingleItemOrDefault helper method or extension method that performs the operations and adds the information to the exception.
 You might not want to throw an exception at all, but instead use the Result pattern to return a failed result with the rich information.
 
-If we are not worried about multiple items being returned, we could potentially leverage `FirstOrDefault` instead of `Where`, like this:
+If we are not worried about multiple items being matched, we can leverage `FirstOrDefault` instead of `Where(...).ToList()` to avoid iterating over the entire collection when there is a match, like this:
 
 ```csharp
 var name = "Zane";
