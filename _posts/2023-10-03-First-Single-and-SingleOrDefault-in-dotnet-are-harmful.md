@@ -1,6 +1,6 @@
 ---
-title: "Why First, Single, and SingleOrDefault in .NET are harmful"
-permalink: /Why-First-Single-and-SingleOrDefault-in-dotnet-is-harmful/
+title: "First, Single, and SingleOrDefault in .NET are harmful"
+permalink: /First-Single-and-SingleOrDefault-in-dotnet-are-harmful/
 #date: 2099-01-15T00:00:00-06:00
 #last_modified_at: 2099-01-22
 comments_locked: false
