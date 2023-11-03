@@ -9,6 +9,25 @@ It's a nice place I can turn to when I'm not feeling motivated, or when I need a
 
 ## Donations and thank you emails from the community
 
+2023-11-03
+
+Thank you email from Ilona Chodnicka for my [Windows Scheduled Tasks Azure DevOps Extension](https://github.com/deadlydog/AzureDevOps.WindowsScheduledTasks) 😊
+
+> Hello Daniel
+>
+> I used your Windows scheduled tasks extension for Azure DevOps at Capstone Logistics in the US, way back when, and I liked it very much.
+>
+> I'm about to use it again at Cymax - we are in Vancouver, Canada.
+> I'm very happy that it's actively maintained.
+>
+> My manager is definitely intrigued as currently all of our scheduled tasks are set up by hand.
+>
+> I'm looking forward to setting it all up for us via a pipeline and I thank you (again) for your great work.
+>
+> Ilona Chodnicka (she/her)
+
+---
+
 2023-08-21
 
 $5.00 USD from Curtis Seegobin for [Path Length Checker app](https://github.com/deadlydog/PathLengthChecker).
