@@ -1,0 +1,7 @@
+_id: b8c14a60-7c05-11ee-affb-19bca24b32e4
+message: "Thanks Robert Haken. I tested this and you are correct. The 1st render uses the values set in the OverrideDefaultRadzenSettingsWithOnesWePrefer() function, and the 2nd render uses the properties defined in the markup. I did not have any pages affected by this in my app, so I did not notice it. I could see it being annoying when it does happen though, as things may appear to shift/change on the page when the 2nd render occurs. If there are alternative solutions to what I've provided I would love to hear them \U0001F642. Thanks!"
+name: Daniel Schroeder
+email: c8addda594c8b338f1e3934e73505d0c
+url: 'https://blog.danskingdom.com'
+hidden: ''
+date: '2023-11-05T18:04:11.736Z'
