@@ -2,7 +2,7 @@
 title: "Change these VS Code default settings to make it even more awesome"
 permalink: /Visual-Studio-Code-default-settings-to-change/
 date: 2023-03-14
-last_modified_at: 2023-10-04
+last_modified_at: 2023-11-05
 comments_locked: false
 toc: true
 categories:
@@ -453,6 +453,30 @@ JSON setting:
   "tree.indentGuidesStroke": "#999999"  // Default is #555555.
 },
 ```
+
+### Debug toolbar location
+
+By default the debug toolbar floats so that it is always visible and can be repositioned.
+The problem is it often floats over other controls or tabs, making them hard to access.
+You can dock the debug toolbar, but then it is only visible when you are in the Run And Debug view.
+Instead, I prefer to show the debug toolbar in the Command Center.
+This way it is always visible and accessible, but does not block any other controls.
+
+GUI setting: `Debug: Tool Bar Location` to `commandCenter`.
+
+JSON setting:
+
+```json
+"debug.toolBarLocation": "commandCenter",
+```
+
+Result before, with controls obstructed:
+
+![Screenshot of debug toolbar floating over controls](/assets/Posts/2023-03-14-Visual-Studio-Code-default-settings-to-change/debug-toolbar-location-default-floating.png)
+
+Result after:
+
+![Screenshot of debug toolbar in command center](/assets/Posts/2023-03-14-Visual-Studio-Code-default-settings-to-change/debug-toolbar-location-command-center-result.png)
 
 ## Editor file and formatting settings
 
