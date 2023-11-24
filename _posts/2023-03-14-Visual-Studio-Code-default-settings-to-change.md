@@ -2,7 +2,7 @@
 title: "Change these VS Code default settings to make it even more awesome"
 permalink: /Visual-Studio-Code-default-settings-to-change/
 date: 2023-03-14
-last_modified_at: 2023-11-05
+last_modified_at: 2023-11-24
 comments_locked: false
 toc: true
 categories:
@@ -337,6 +337,23 @@ JSON setting:
 Result:
 
 ![Result of using pinned tab sizing with shown configuration](/assets/Posts/2023-03-14-Visual-Studio-Code-default-settings-to-change/pinned-tab-size-setting-result.png)
+
+### Preview editor tab
+
+When you single click on a file in the file tree, it will open in the preview editor tab by default.
+There is only one preview tab, so if you single click on a different file in the file tree, it will close the first file you had open so it can display the new file in the preview tab.
+To have the file open in a non-preview tab, you can double click on the file in the file tree, double-click the preview tab, or edit the file.
+
+If you do not like the preview tab, you can disable it and have all files open in non-preview tabs.
+I personally like using the preview tab, but I know many people do not.
+
+GUI setting: `Workbench › Editor: Enable Preview` to `false`.
+
+JSON setting:
+
+```json
+"workbench.editor.enablePreview": false,
+```
 
 ### Bracket pair colorization
 
