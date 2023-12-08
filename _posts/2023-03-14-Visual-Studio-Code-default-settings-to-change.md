@@ -2,7 +2,7 @@
 title: "Change these VS Code default settings to make it even more awesome"
 permalink: /Visual-Studio-Code-default-settings-to-change/
 date: 2023-03-14
-last_modified_at: 2023-11-24
+last_modified_at: 2023-12-08
 comments_locked: false
 toc: true
 categories:
@@ -134,7 +134,7 @@ And here it is in action while scrolling through a Markdown file:
 
 You can also quickly toggle this setting on/off from the `View` menu.
 
-### Navigation tree sticky scroll
+### File navigation tree sticky scroll
 
 You can also enable sticky scroll in the file navigation tree.
 This will keep the directory hierarchy visible as you scroll through the file tree.
@@ -149,7 +149,7 @@ JSON setting:
 
 Result:
 
-
+![Result of using sticky scroll in the file navigation tree](/assets/Posts/2023-03-14-Visual-Studio-Code-default-settings-to-change/file-tree-sticky-scroll-setting-result.png)
 
 ### Breadcrumbs navigation
 
