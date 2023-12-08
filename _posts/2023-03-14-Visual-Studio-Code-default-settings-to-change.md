@@ -488,6 +488,24 @@ Result:
 
 ![Result of using sticky scroll in the file navigation tree](/assets/Posts/2023-03-14-Visual-Studio-Code-default-settings-to-change/file-tree-sticky-scroll-setting-result.png)
 
+### File tree compact folders
+
+By default the file navigation tree will collapse folders that only contain a single folder.
+This saves a bit of vertical space, but can also make harder to drag and drop files or folders into the collapsed folder.
+I prefer to disable it.
+
+GUI setting: `Explorer: Compact Folders` to `false`.
+
+JSON setting:
+
+```json
+"explorer.compactFolders": false,
+```
+
+Result:
+
+![Result of disabling compact folders in the file navigation tree](/assets/Posts/2023-03-14-Visual-Studio-Code-default-settings-to-change/file-tree-explorer-compact-folders-setting-result.png)
+
 ### Debug toolbar location
 
 By default the debug toolbar floats so that it is always visible and can be repositioned.
