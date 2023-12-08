@@ -111,7 +111,7 @@ Result:
 
 ![Result of using render whitespace with shown configuration](/assets/Posts/2023-03-14-Visual-Studio-Code-default-settings-to-change/render-whitespace-setting-result.png)
 
-### Sticky Scroll
+### Editor sticky scroll
 
 As you scroll down through nested classes/functions/structures, the names stick to the top of the editor making it easy to see the nested scope you're currently working in.
 Works in many different languages, such as JavaScript, TypeScript, C#, JSON, YAML, Markdown, etc.
@@ -126,13 +126,30 @@ JSON setting:
 
 Result:
 
-![Result of using sticky scroll in YAML](/assets/Posts/2023-03-14-Visual-Studio-Code-default-settings-to-change/sticky-scroll-setting-result.png)
+![Result of using sticky scroll in YAML](/assets/Posts/2023-03-14-Visual-Studio-Code-default-settings-to-change/editor-sticky-scroll-setting-result.png)
 
 And here it is in action while scrolling through a Markdown file:
 
-![Animation showing sticky scroll in action in Markdown](/assets/Posts/2023-03-14-Visual-Studio-Code-default-settings-to-change/sticky-scroll-setting-result-animation.gif)
+![Animation showing sticky scroll in action in Markdown](/assets/Posts/2023-03-14-Visual-Studio-Code-default-settings-to-change/editor-sticky-scroll-setting-result-animation.gif)
 
 You can also quickly toggle this setting on/off from the `View` menu.
+
+### Navigation tree sticky scroll
+
+You can also enable sticky scroll in the file navigation tree.
+This will keep the directory hierarchy visible as you scroll through the file tree.
+
+GUI setting: `Workbench › Tree: Enable Sticky Scroll` to `true`.
+
+JSON setting:
+
+```json
+"workbench.tree.enableStickyScroll": true,
+```
+
+Result:
+
+
 
 ### Breadcrumbs navigation
 
