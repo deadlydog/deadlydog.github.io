@@ -132,24 +132,7 @@ And here it is in action while scrolling through a Markdown file:
 
 ![Animation showing sticky scroll in action in Markdown](/assets/Posts/2023-03-14-Visual-Studio-Code-default-settings-to-change/editor-sticky-scroll-setting-result-animation.gif)
 
-You can also quickly toggle this setting on/off from the `View` menu.
-
-### File navigation tree sticky scroll
-
-You can also enable sticky scroll in the file navigation tree.
-This will keep the directory hierarchy visible as you scroll through the file tree.
-
-GUI setting: `Workbench › Tree: Enable Sticky Scroll` to `true`.
-
-JSON setting:
-
-```json
-"workbench.tree.enableStickyScroll": true,
-```
-
-Result:
-
-![Result of using sticky scroll in the file navigation tree](/assets/Posts/2023-03-14-Visual-Studio-Code-default-settings-to-change/file-tree-sticky-scroll-setting-result.png)
+You can also quickly toggle this setting on/off from the `View` > `Appearance` menu.
 
 ### Breadcrumbs navigation
 
@@ -487,6 +470,23 @@ JSON setting:
   "tree.indentGuidesStroke": "#999999"  // Default is #555555.
 },
 ```
+
+### File tree sticky scroll
+
+You can also enable sticky scroll in the file navigation tree.
+This will keep the directory hierarchy visible as you scroll through the file tree.
+
+GUI setting: `Workbench › Tree: Enable Sticky Scroll` to `true`.
+
+JSON setting:
+
+```json
+"workbench.tree.enableStickyScroll": true,
+```
+
+Result:
+
+![Result of using sticky scroll in the file navigation tree](/assets/Posts/2023-03-14-Visual-Studio-Code-default-settings-to-change/file-tree-sticky-scroll-setting-result.png)
 
 ### Debug toolbar location
 
