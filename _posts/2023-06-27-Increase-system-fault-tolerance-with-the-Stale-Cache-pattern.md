@@ -2,7 +2,7 @@
 title: "Increase system fault tolerance with the Stale Cache pattern"
 permalink: /Increase-system-fault-tolerance-with-the-Stale-Cache-pattern/
 #date: 2099-01-15T00:00:00-06:00
-#last_modified_at: 2099-01-22
+last_modified_at: 2023-12-15
 comments_locked: false
 toc: false
 categories:
@@ -363,7 +363,7 @@ It also feels great to see your implementation working as expected and knowing w
 
 ## Is this a new pattern?
 
-I thought up this pattern several years ago after one of our services whose data did not change very often had an extended outage and it impacted many other services.
+I thought up this pattern many years ago after one of our services whose data did not change very often had an extended outage and it impacted many other services.
 I have used and recommended it many times since.
 I think it is a relatively straight-forward (and kind of obvious) solution, but I have not seen it documented anywhere, either by this name, `Stale Cache` pattern, or any other.
 If you know of it by a different name, please let me know in the comments below.
@@ -380,6 +380,8 @@ I was actually quite surprised when I could not find any articles naming this pa
 Obviously, I am not the first person to think of it, but I was not able to find any other references to it.
 Perhaps I was just searching for the wrong terms.
 If you know of any other articles describing this general pattern (not just an implementation of it, like refresh-ahead), please let me know in the comments below.
+
+> Update December 2023: I came across [the FusionCache .NET library](https://github.com/ZiggyCreatures/FusionCache) that implements the Stale Cache pattern, calling it the [`Fail-Safe` mechanism](https://github.com/ZiggyCreatures/FusionCache/blob/main/docs/FailSafe.md).
 
 ## Conclusion
 
