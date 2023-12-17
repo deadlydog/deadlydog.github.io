@@ -1,0 +1,7 @@
+_id: c836edd0-9c6f-11ee-8568-1f61c0f9c089
+message: "Here is the script for AHK v2, if anybody needs it:\r\n```\r\n#Requires AutoHotkey v2.0\r\n\r\n;------------ Windows Terminal\r\nSwitchToWindowsTerminal()\r\n{\r\n  windowHandleId := WinExist(\"ahk_exe WindowsTerminal.exe\")\r\n  windowExistsAlready := windowHandleId > 0\r\n\r\n  ; If the Windows Terminal is already open, determine if we should put it in focus or minimize it.\r\n  if (windowExistsAlready = true)\r\n  {\r\n    activeWindowHandleId := WinExist(\"A\")\r\n    windowIsAlreadyActive := activeWindowHandleId == windowHandleId\r\n\r\n    if (windowIsAlreadyActive)\r\n    {\r\n      ; Minimize the window.\r\n      WinMinimize(\"ahk_id \" . windowHandleId)\r\n    }\r\n    else\r\n    {\r\n      ; Put the window in focus.\r\n      WinActivate(\"ahk_id \" . windowHandleId)\r\n      WinShow(\"ahk_id \" . windowHandleId)\r\n    }\r\n  }\r\n  ; Else it's not already open, so launch it.\r\n  else\r\n  {\r\n    Run(\"wt\")\r\n  }\r\n}\r\n\r\n; Hotkey to use Ctrl+` to launch/restore the Windows Terminal.\r\n^`::SwitchToWindowsTerminal()\r\n```"
+name: Gusti
+email: c728dfcd6a42712338798782578596de
+url: ''
+hidden: ''
+date: '2023-12-17T00:04:01.817Z'
