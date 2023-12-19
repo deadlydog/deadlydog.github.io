@@ -17,7 +17,7 @@ tags:
   - Continuous Integration
   - Continuous Deployment
 ---
-
+FIND AND RIS TODOs
 In this post I'll show different approaches to setting up your build and deployment workflows with GitHub Actions, as well as some pros and cons of each.
 
 ## Background
@@ -89,8 +89,7 @@ jobs:
     # 👇 Only run this deploy job after the build-and-test job completes successfully.
     needs: build-and-test
     runs-on: ubuntu-latest
-    environment: staging # Used for environment-specific variables, secrets, and approvals.
-    # 👇 Only deploy on pushes or manual triggers (not on PRs though) to the main branch.
+    # 👇 Only run on pushes (not PRs) or manual triggers to the main branch.
     if: (github.event_name == 'push' || github.event_name == 'workflow_dispatch') && github.ref == 'refs/heads/main'
     steps:
       - name: Download artifact
@@ -145,7 +144,7 @@ Cons:
   Having a single yaml file that is several hundred or thousands of lines long can be more difficult to maintain and daunting to look at.
 - If you want to deploy to multiple environments, you will need to duplicate the deployment steps for each environment (see the Reusable Workflows section below on how to solve this).
 - The deployment jobs/steps will be skipped for PRs and branch builds, but will still show up in the workflow UI on the GitHub website.
-  This can be confusing to users, as they may not understand why those jobs/steps were skipped.
+  This can be confusing to users, as they may not understand why those jobs/steps were skipped. ([See example](TODO ADD EXAMPLE LINK)).
 - The PR builds and non-main branch builds will show up in the same `single-file--build-and-deploy` workflow runs as the `main` branch builds.
   If there are a lot of PR runs or pushes to branches, they may bury the `main` branch runs, forcing you to go back several pages to find the `main` branch runs to answer questions like, "When was the last time we deployed to production?".
   ![Main branch build buried under PR builds](/assets/Posts/2023-10-26-Multiple-ways-to-setup-your-CI-CD-pipelines-in-GitHub-Actions/main-branch-build-buried-under-pr-builds-in-GitHub-workflow-runs.png)
@@ -192,7 +191,8 @@ And the accompanying workflow file that deploys the code using the pull approach
 name: pull--deploy
 
 on:
-  # Run workflow anytime the pull--build workflow completes for the main branch.
+  # 👇 Run workflow anytime the pull--build workflow completes for the main branch.
+  # Unfortunately, can not have it only run on successful builds, so it will run when builds fail too.
   workflow_run:
     workflows: pull--build
     types: completed
@@ -201,6 +201,7 @@ on:
   # Allows you to run this workflow manually from the Actions tab.
   workflow_dispatch:
     inputs:
+      # 👇 Must specify the build artifacts to deploy when running manually.
       workflowRunId:
         description: 'The build workflow run ID containing the artifacts to use. The run ID can be found in the URL of the build workflow run.'
         type: number
@@ -208,17 +209,17 @@ on:
 
 env:
   artifactName: buildArtifact # This must match the artifact name in the pull--build workflow.
-  # Ternary operator to use input value if manually triggered, otherwise use the workflow_run.id of the workflow run that triggered this one.
+  # 👇 Ternary operator to use input value if manually triggered, otherwise use the workflow_run.id of the workflow run that triggered this one.
   workflowRunId: ${{ github.event_name == 'workflow_dispatch' && inputs.workflowRunId || github.event.workflow_run.id }}
 
 jobs:
   deploy-to-staging:
-    # Only run the deployment if manually triggered, or the build workflow succeeded.
+    # 👇 Only run the deployment if manually triggered, or the build workflow that triggered this succeeded.
     if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
     steps:
-      # Must use a 3rd party action to download artifacts from other workflows.
-      - name: Download prerelease module artifact from triggered workflow
+      # 👇 Must use a 3rd party action to download artifacts from other workflows.
+      - name: Download artifact from triggered workflow
         uses: dawidd6/action-download-artifact@v2
         with:
           run_id: ${{ env.workflowRunId }}
@@ -235,7 +236,7 @@ jobs:
     environment: production # Used for environment-specific variables, secrets, and approvals.
     steps:
       # Must use a 3rd party action to download artifacts from other workflows.
-      - name: Download prerelease module artifact from triggered workflow
+      - name: Download artifact from triggered workflow
         uses: dawidd6/action-download-artifact@v2
         with:
           run_id: ${{ env.workflowRunId }}
@@ -253,7 +254,7 @@ The deployment workflow waits and listens for the build workflow to complete aga
 Because the build uses its own workflow, the deployment workflow needs a reference to the build's workflow run ID so it knows which build run to download the artifacts from.
 This is provided automatically when the build triggers the deployment workflow, but must be provided manually when the deployment workflow is manually triggered.
 You can find the build workflow run ID by opening the build workflow run in the GitHub Actions UI and looking at the URL.
-The URL will look something like `https://github.com/deadlydog/PowerShell.tiPS/actions/runs/6364723098`, where the run ID is `6364723098`.
+The URL will look something like `https://github.com/deadlydog/GitHub.Experiment.CiCdApproachesWithGitHubActions/actions/runs/6985605790`, where the run ID is `6985605790`.
 
 The next thing to note is that the `artifactName` environment variable is duplicated in both the build and deployment workflows.
 We could have the build workflow create an output variable that the deployment workflow could reference, but for the sake of simplicity I just duplicated the environment variable here.
@@ -269,8 +270,7 @@ They do provide [API endpoints to download artifacts from other workflows](https
 
 Pros:
 
-- The build and deployment steps are separated into their own workflows, which makes it easier to maintain and understand.
-- Builds for PRs and non-main branches that we do not want deployed do not trigger deployment workflows.
+- The build and deployment steps are separated into their own workflows, which can make it easier to maintain and understand.
 - The build workflow only shows the build steps in the GitHub Actions UI, and the deployment workflow only shows the deployment steps.
 - Deployments for non-main branches and PRs can still be manually deployed if needed without any workflow code changes.
 
@@ -285,7 +285,7 @@ Cons:
 After using Azure DevOps classic pipelines, this approach felt very natural.
 In Azure DevOps, you would explicitly create your build and deployment pipelines, and the first step of the deployment pipeline is specifying the build that it should pull the artifacts from, and potentially automatically trigger off of.
 
-This worked quite well in GitHub at first, but I really did not like how blank, skipped deployment workflow runs got created when the build failed.
+This approach worked quite well in GitHub at first, but I really did not like how blank, skipped deployment workflow runs got created when the build failed.
 It quickly cluttered up the deployment runs when issues were encountered with the build workflow that took many attempts to fix.
 
 ## Approach 3: Build workflow triggers deploy workflow (Push approach)
@@ -305,6 +305,7 @@ on:
   # Allows you to run this workflow manually from the Actions tab.
   workflow_dispatch:
     inputs:
+      # 👇 Allow deploying non-main branch builds.
       deploy:
         description: 'Deploy the build artifacts. Only has effect when not building the main branch.'
         required: false
@@ -329,11 +330,13 @@ jobs:
           name: ${{ env.artifactName }}
           path: ./ # Put the path to the build artifact files directory here.
 
+  # 👇 Trigger the deployment workflow.
   trigger-deployment:
     needs: build-and-test
-    # Only trigger a deployment if the deploy parameter was set, or this build is for a push (not a PR) on the default branch (main).
+    # 👇 Only trigger a deployment if the deploy parameter was set, or this build is for a push (not a PR) on the default branch (main).
     if: inputs.deploy || (github.event_name != 'pull_request' && github.ref == format('refs/heads/{0}', github.event.repository.default_branch))
     uses: ./.github/workflows/3-push--deploy.yml
+    # 👇 Allow the deployment workflow to access the secrets of this workflow.
     secrets: inherit
 ```
 
@@ -343,7 +346,8 @@ And here is the accompanying deployment workflow:
 name: push--deploy
 
 on:
-  workflow_call: # Allow this workflow to be called by other workflows.
+  # 👇 Allow this workflow to be called by the push--build workflow.
+  workflow_call:
 
 env:
   artifactName: buildArtifact # This must match the artifact name in the push--build workflow.
@@ -352,6 +356,7 @@ jobs:
   deploy-to-staging:
     runs-on: ubuntu-latest
     steps:
+      # 👇 Can use the native download-artifact action.
       - name: Download artifact
         uses: actions/download-artifact@v2
         with:
@@ -374,6 +379,12 @@ jobs:
 
       # Steps to deploy the code go here.
 ```
+
+### Pros and cons of using the push approach
+
+Pros:
+
+- Builds for PRs and non-main branches that we do not want deployed do not trigger deployment workflows.
 
 ## Reusable workflows (templates)
 
@@ -410,6 +421,9 @@ Some things that may affect which approach you use are:
 - Do you want to deploy PR builds?
 - Do you need to deploy to multiple environments?
 - Do you want deployments to some environments to happen automatically, and others to be manually triggered, or require approval?
+
+- How complicated and how many steps are in the jobs? Would it be easier to understand if they were separated into multiple workflows?
+- Are any jobs/steps duplicated? Can they be moved into a reusable workflow? Are you running the same steps on different platforms (e.g. Windows and Linux)?
 
 You may have workflows that you want to run on a schedule, when a tag is created, or some other reason.
 For example, you may want to run a load testing workflow every Tuesday night.
