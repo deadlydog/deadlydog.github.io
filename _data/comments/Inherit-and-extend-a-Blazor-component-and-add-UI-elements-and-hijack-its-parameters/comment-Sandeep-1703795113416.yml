@@ -1,0 +1,12 @@
+_id: 34544aa0-a5bf-11ee-a5b5-572ed92ee77e
+message: >-
+  Hey, this looks great thanks for the article. I have common base class with
+  all application-level stylings and logs which I need to inject in every
+  component. But I am unable to do that because after I inherited a Radzen
+  component. I can't inherit the other. Is there way that I can inherit my base
+  component class and Radzen class.
+name: Sandeep
+email: af13caa7c0365d74b68c5decb0eb7712
+url: ''
+hidden: ''
+date: '2023-12-28T20:25:13.412Z'
