@@ -17,7 +17,7 @@ tags:
   - Continuous Integration
   - Continuous Deployment
 ---
-FIND AND RIS TODOs
+FIND AND FIX TODOs
 In this post I'll show different approaches to setting up your build and deployment workflows with GitHub Actions, as well as some pros and cons of each.
 
 ## Background
@@ -135,7 +135,7 @@ I would still recommend using the `Upload artifact` step though so that the buil
 Pros:
 
 - Simple to setup, as it is only a single file.
-- Environment variables can be used to easily share predefined constants between jobs.
+- Workflow environment variables can be used to easily share predefined constants between jobs.
   e.g. `env.artifactName`
 
 Cons:
@@ -278,12 +278,14 @@ Cons:
 
 - The deployment workflow is triggered even if the build workflow fails, resulting in skipped deployment runs showing in the workflow UI.
   This can be confusing to users, and it clutters the workflow UI.
+  [TODO: ADD EXAMPLE IMAGE](TODO ADD EXAMPLE LINK)
 - Certain variables must be duplicated between the build and deployment workflows (e.g. `env.artifactName`), or additional code added to pass the variables between the workflows.
+  TODO: TEST IF WE CAN ACCESS ORIGINAL ENV VARIABLES WITH SOMETHING LIKE github.event.workflow_run.env.artifactName
 
 ### Additional thoughts
 
 After using Azure DevOps classic pipelines, this approach felt very natural.
-In Azure DevOps, you would explicitly create your build and deployment pipelines, and the first step of the deployment pipeline is specifying the build that it should pull the artifacts from, and potentially automatically trigger off of.
+In Azure DevOps, you would explicitly create separate build and deployment pipelines, and the first step of the deployment pipeline setup is specifying the build that it should pull the artifacts from, and potentially automatically trigger off of.
 
 This approach worked quite well in GitHub at first, but I really did not like how blank, skipped deployment workflow runs got created when the build failed.
 It quickly cluttered up the deployment runs when issues were encountered with the build workflow that took many attempts to fix.
@@ -380,11 +382,156 @@ jobs:
       # Steps to deploy the code go here.
 ```
 
+Once again the build workflow is separate from the deployment workflow.
+The build workflow will trigger on a push to any branch, PRs to the main branch, or when manually triggered.
+Rather than the deploy workflow listening for the build workflow to complete, the build workflow explicitly calls the deploy workflow as its final job.
+
+Looking at the `trigger-deployment` job, we can see that only builds made from the main branch will trigger the deployment workflow.
+A `deploy` parameter is also provided in the build workflow that can be set when manually triggering a build, allowing for non-main branch builds to be deployed as well, if needed.
+Notice that the job provides the `secrets: inherit` key, which allows the deployment workflow to access the secrets of the build workflow.
+Without this, the deployment workflow would not have access to the GitHub repository secrets.
+
+Aside: In addition to passing secrets to the deployment workflow, you can also pass other parameters to the deployment workflow by using the `with` key.
+While none are shown in this example, I will mention that in order to pass non-string values (e.g. boolean or number), I had to use the `fromJSON` function to maintain the variable's type, as shown in [this GitHub issue](https://github.com/actions/runner/issues/2206#issuecomment-1532246677).
+
+Looking at the deployment workflow, you can see we are using the `on: workflow_call` event to allow the workflow to be called by the build workflow.
+Since the build workflow is triggering the deployment workflow, the end result is a single workflow run, meaning we can use the native `actions/download-artifact` action to download the build artifact, rather than having to use a 3rd party action.
+
 ### Pros and cons of using the push approach
 
 Pros:
 
 - Builds for PRs and non-main branches that we do not want deployed do not trigger deployment workflows.
+- Deployments for non-main branches and PRs can still be manually deployed if needed without any workflow code changes.
+
+Cons:
+
+- Since the deployment workflow is never triggered by GitHub, but is instead called by the build workflow, it means the deployment workflow will never show any runs.
+  Instead, the deploy jobs will show up as part of the build workflow run.
+  This means that builds for PRs and non-main branches will be mixed in with the `main` branch builds and deployments.
+  Just like with the `single-file--build-and-deploy` approach, this may bury the deployments under several pages of non-main branch runs, making it difficult to find runs you care about in the GitHub UI.
+  TODO UPDATE IMAGE IF NEEDED ![Main branch build buried under PR builds](/assets/Posts/2023-10-26-Multiple-ways-to-setup-your-CI-CD-pipelines-in-GitHub-Actions/main-branch-build-buried-under-pr-builds-in-GitHub-workflow-runs.png)
+- Since the deployment jobs show up in the build workflow run, the GitHub UI prefixes each of the deployment jobs with the name of the deployment workflow.
+  This can make it difficult to see the full name of the deployment jobs, especially if the deployment workflow name is long.
+  TODO UPDATE IMAGE IF NEEDED ![Main branch build buried under PR builds](/assets/Posts/2023-10-26-Multiple-ways-to-setup-your-CI-CD-pipelines-in-GitHub-Actions/main-branch-build-buried-under-pr-builds-in-GitHub-workflow-runs.png)
+
+## Approach 4: Deploy workflow includes build workflow (Include approach)
+
+Here is an example of a workflow that builds the code:
+
+```yaml
+name: include--build
+
+on:
+  pull_request:
+    branches: main # Run workflow on PRs to the main branch.
+
+  # 👇 Run workflow on pushes to any branch, except the main branch.
+  push:
+    branches-ignore: main
+
+  # Allows you to run this workflow manually from the Actions tab.
+  workflow_dispatch:
+
+  # 👇 Allows this workflow to be called from the deployment workflow.
+  workflow_call:
+
+env:
+  artifactName: buildArtifact
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the repo source code
+        uses: actions/checkout@v3
+
+      # Steps to version, build, and test the code go here.
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: ${{ env.artifactName }}
+          path: ./ # Put the path to the build artifact files directory here.
+```
+
+And here is the accompanying deployment workflow:
+
+```yaml
+name: include--deploy
+
+on:
+  # 👇 Trigger the workflow on a push to the main branch.
+  push:
+    branches: main
+
+  # 👇 Allows you to run this workflow manually (for any branch) from the Actions tab.
+  workflow_dispatch:
+
+env:
+  artifactName: buildArtifact # This must match the artifact name in the push--build workflow.
+
+jobs:
+  # 👇 Call the build workflow to create the artifacts to deploy.
+  build-and-test:
+    uses: ./.github/workflows/4-include--build.yml
+    secrets: inherit # Inherit secrets from the parent workflow, if necessary.
+
+  deploy-to-staging:
+    # 👇 Only run this deploy job after the build-and-test job completes successfully.
+    needs: build-and-test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: ${{ env.artifactName }}
+          path: ./buildArtifact
+
+      # Steps to deploy the code go here.
+
+  deploy-to-production:
+    # Only run this deploy job after the deploy-to-staging job completes successfully.
+    needs: deploy-to-staging
+    runs-on: ubuntu-latest
+    environment: production # Used for environment-specific variables, secrets, and approvals.
+    steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: ${{ env.artifactName }}
+          path: ./buildArtifact
+
+      # Steps to deploy the code go here.
+```
+
+You will notice that we still have separate build and deployment workflows.
+One key difference here is the specific triggers for each workflow.
+
+The build workflow will trigger on a push to any branch _EXCEPT_ the main branch, PRs to the main branch, or when manually triggered.
+It also allows other workflows to call it via the `workflow_call` event.
+The build workflow no longer triggers deployments, neither directly nor indirectly.
+
+The deployment workflow will now trigger on a push to the main branch, or when manually triggered.
+The manual trigger allows non-main branch deployments if needed.
+A key thing to note here is that the deployment workflow includes the build workflow via the `uses` key, so when a deployment is triggered it will first run the build jobs as part of its workflow run.
+This is similar to the `push` approach mentioned earlier, except that the dependency has been inverted so instead of the build workflow calling the deployment workflow, the deployment workflow calls the build workflow.
+This improves the workflow UI experience, as the deployment jobs will show up as part of the deployment workflow run, rather than the build workflow run.
+
+I came across this approach while reading [this excellent blog post](https://www.viget.com/articles/automating-build-deploy-ci-cd-with-github-actions/), and have adopted it as my standard practice for CI/CD with GitHub Actions.
+
+### Pros and cons of using the include approach
+
+Pros:
+
+- Builds for PRs and non-main branches that we do not want deployed do not trigger deployment workflows, and show up in the GitHub UI under the build workflow.
+- Builds that are deployed show up in the GitHub UI under the deployment workflow, making it easy to find the last time a deployment was made.
+- Deployments for non-main branches and PRs can still be manually deployed if needed without any workflow code changes.
+
+Cons:
+
+- In the deployment workflow run GitHub UI, the build job name is prefixed with the name of the build job, which is a bit annoying.
+  TODO USE PROPER IMAGE ![Build job name prefixed with workflow name](/assets/Posts/2023-10-26-Multiple-ways-to-setup-your-CI-CD-pipelines-in-GitHub-Actions/build-job-name-prefixed-with-workflow-name.png)
 
 ## Reusable workflows (templates)
 
