@@ -4,7 +4,7 @@ permalink: /Multiple-ways-to-setup-your-CI-CD-pipelines-in-GitHub-Actions/
 #date: 2099-01-15T00:00:00-06:00
 #last_modified_at: 2099-01-22
 comments_locked: false
-toc: false
+toc: true
 categories:
   - GitHub
   - Build
@@ -19,6 +19,13 @@ tags:
 ---
 FIND AND FIX TODOs
 In this post I'll show different approaches to setting up your build and deployment workflows with GitHub Actions, as well as some pros and cons of each.
+
+## TL;DR
+
+While I show several approaches here, the one I recommend using is the "Include approach with reusable workflows" (Approach 5), so you can skip straight to that section if you like.
+
+Also, I created [this sample GitHub repository](https://github.com/deadlydog/GitHub.Experiment.CiCdApproachesWithGitHubActions) that contains all of the examples shown in this post, so you view their code and can see how they look in the GitHub Actions web UI.
+Feel free to fork it and play around with it yourself.
 
 ## Background
 
@@ -41,6 +48,7 @@ The approaches we will look at are:
 1. Have a deploy workflow listen for when the build workflow completes (`pull` approach).
 1. Have the build workflow trigger the deploy workflow (`push` approach).
 1. Have the deploy workflow include the build workflow (`include` approach).
+1. Have the deploy workflow include the build workflow, and use a template for the deployment jobs (`include` approach with reusable workflows).
 
 I typically prefer to use the `include` approach, but I'll show each approach so you can decide which one you prefer for a given scenario.
 
@@ -55,7 +63,7 @@ In the example yaml code, I use the "👇" emoji to call out specific things to 
 Here is an example of a single workflow file that builds and deploys some code:
 
 ```yaml
-name: single-file--build-and-deploy
+name: 1-single-file--build-and-deploy
 
 on:
   pull_request:
@@ -80,7 +88,7 @@ jobs:
       # Steps to version, build, and test the code go here.
 
       - name: Upload artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: ${{ env.artifactName }}
           path: ./ # Put the path to the build artifact files directory here.
@@ -93,7 +101,7 @@ jobs:
     if: (github.event_name == 'push' || github.event_name == 'workflow_dispatch') && github.ref == 'refs/heads/main'
     steps:
       - name: Download artifact
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4
         with:
           name: ${{ env.artifactName }}
           path: ./buildArtifact
@@ -107,7 +115,7 @@ jobs:
     environment: production # Used for environment-specific variables, secrets, and approvals.
     steps:
       - name: Download artifact
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4
         with:
           name: ${{ env.artifactName }}
           path: ./buildArtifact
@@ -116,7 +124,7 @@ jobs:
 ```
 
 There are a few things to note here.
-First, the workflow is automatically triggered when a PR to the main branch is created, or when a change is pushed to the main branch.
+First, the workflow is automatically triggered when a PR to the main branch is created, or when a change is pushed to any branch.
 It can also be manually triggered.
 Second, the workflow has 3 jobs: `build-and-test`, `deploy-to-staging`, and `deploy-to-production`.
 Notice in the `deploy-to-staging` job we use a conditional `if` statement to ensure we do not deploy if the workflow was triggered by a PR, or if the `push` was not for the `main` branch.
@@ -145,16 +153,18 @@ Cons:
 - If you want to deploy to multiple environments, you will need to duplicate the deployment steps for each environment (see the Reusable Workflows section below on how to solve this).
 - The deployment jobs/steps will be skipped for PRs and branch builds, but will still show up in the workflow UI on the GitHub website.
   This can be confusing to users, as they may not understand why those jobs/steps were skipped. ([See example](TODO ADD EXAMPLE LINK)).
-- The PR builds and non-main branch builds will show up in the same `single-file--build-and-deploy` workflow runs as the `main` branch builds.
+- The PR builds and non-main branch builds will show up in the same `1-single-file--build-and-deploy` workflow runs as the `main` branch builds.
   If there are a lot of PR runs or pushes to branches, they may bury the `main` branch runs, forcing you to go back several pages to find the `main` branch runs to answer questions like, "When was the last time we deployed to production?".
   ![Main branch build buried under PR builds](/assets/Posts/2023-10-26-Multiple-ways-to-setup-your-CI-CD-pipelines-in-GitHub-Actions/main-branch-build-buried-under-pr-builds-in-GitHub-workflow-runs.png)
+
+To see what the GitHub Actions UI looks like with this approach, check out [the workflow runs in the sample repository](https://github.com/deadlydog/GitHub.Experiment.CiCdApproachesWithGitHubActions/actions/workflows/1-single-file--build-and-deploy.yml).
 
 ## Approach 2: Deploy workflow listens for build workflow to complete (Pull approach)
 
 Here is an example of a workflow file that just builds the code:
 
 ```yaml
-name: pull--build
+name: 2-pull--build
 
 on:
   pull_request:
@@ -179,7 +189,7 @@ jobs:
       # Steps to version, build, and test the code go here.
 
       - name: Upload artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: ${{ env.artifactName }}
           path: ./ # Put the path to the build artifact files directory here.
@@ -188,13 +198,13 @@ jobs:
 And the accompanying workflow file that deploys the code using the pull approach:
 
 ```yaml
-name: pull--deploy
+name: 2-pull--deploy
 
 on:
-  # 👇 Run workflow anytime the pull--build workflow completes for the main branch.
+  # 👇 Run workflow anytime the 2-pull--build workflow completes for the main branch.
   # Unfortunately, can not have it only run on successful builds, so it will run when builds fail too.
   workflow_run:
-    workflows: pull--build
+    workflows: 2-pull--build
     types: completed
     branches: main
 
@@ -208,7 +218,7 @@ on:
         required: true
 
 env:
-  artifactName: buildArtifact # This must match the artifact name in the pull--build workflow.
+  artifactName: buildArtifact # This must match the artifact name in the 2-pull--build workflow.
   # 👇 Ternary operator to use input value if manually triggered, otherwise use the workflow_run.id of the workflow run that triggered this one.
   workflowRunId: ${{ github.event_name == 'workflow_dispatch' && inputs.workflowRunId || github.event.workflow_run.id }}
 
@@ -279,8 +289,13 @@ Cons:
 - The deployment workflow is triggered even if the build workflow fails, resulting in skipped deployment runs showing in the workflow UI.
   This can be confusing to users, and it clutters the workflow UI.
   [TODO: ADD EXAMPLE IMAGE](TODO ADD EXAMPLE LINK)
+- The name of the deployment workflow run is always `2-pull--deploy`, rather than the commit message of the build workflow run that triggered it.
+  It also does not show the commit SHA.
+  This can make it difficult to find the deployment workflow run you are looking for in the GitHub UI.
 - Certain variables must be duplicated between the build and deployment workflows (e.g. `env.artifactName`), or additional code added to pass the variables between the workflows.
   TODO: TEST IF WE CAN ACCESS ORIGINAL ENV VARIABLES WITH SOMETHING LIKE github.event.workflow_run.env.artifactName
+
+To see what the GitHub Actions UI looks like with this approach, check out the workflows in the sample repository for the [pull build runs](https://github.com/deadlydog/GitHub.Experiment.CiCdApproachesWithGitHubActions/actions/workflows/2-pull--build.yml) and [pull deploy runs](https://github.com/deadlydog/GitHub.Experiment.CiCdApproachesWithGitHubActions/actions/workflows/2-pull--deploy.yml).
 
 ### Additional thoughts
 
@@ -295,7 +310,7 @@ It quickly cluttered up the deployment runs when issues were encountered with th
 Here is an example of a workflow that builds the code and then triggers a deployment workflow:
 
 ```yaml
-name: push--build
+name: 3-push--build
 
 on:
   pull_request:
@@ -327,7 +342,7 @@ jobs:
       # Steps to version, build, and test the code go here.
 
       - name: Upload artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: ${{ env.artifactName }}
           path: ./ # Put the path to the build artifact files directory here.
@@ -345,14 +360,14 @@ jobs:
 And here is the accompanying deployment workflow:
 
 ```yaml
-name: push--deploy
+name: 3-push--deploy
 
 on:
-  # 👇 Allow this workflow to be called by the push--build workflow.
+  # 👇 Allow this workflow to be called by the 3-push--build workflow.
   workflow_call:
 
 env:
-  artifactName: buildArtifact # This must match the artifact name in the push--build workflow.
+  artifactName: buildArtifact # This must match the artifact name in the 3-push--build workflow.
 
 jobs:
   deploy-to-staging:
@@ -360,7 +375,7 @@ jobs:
     steps:
       # 👇 Can use the native download-artifact action.
       - name: Download artifact
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4
         with:
           name: ${{ env.artifactName }}
           path: ./buildArtifact
@@ -374,7 +389,7 @@ jobs:
     environment: production # Used for environment-specific variables, secrets, and approvals.
     steps:
       - name: Download artifact
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4
         with:
           name: ${{ env.artifactName }}
           path: ./buildArtifact
@@ -409,18 +424,20 @@ Cons:
 - Since the deployment workflow is never triggered by GitHub, but is instead called by the build workflow, it means the deployment workflow will never show any runs.
   Instead, the deploy jobs will show up as part of the build workflow run.
   This means that builds for PRs and non-main branches will be mixed in with the `main` branch builds and deployments.
-  Just like with the `single-file--build-and-deploy` approach, this may bury the deployments under several pages of non-main branch runs, making it difficult to find runs you care about in the GitHub UI.
+  Just like with the `1-single-file--build-and-deploy` approach, this may bury the deployments under several pages of non-main branch runs, making it difficult to find runs you care about in the GitHub UI.
   TODO UPDATE IMAGE IF NEEDED ![Main branch build buried under PR builds](/assets/Posts/2023-10-26-Multiple-ways-to-setup-your-CI-CD-pipelines-in-GitHub-Actions/main-branch-build-buried-under-pr-builds-in-GitHub-workflow-runs.png)
 - Since the deployment jobs show up in the build workflow run, the GitHub UI prefixes each of the deployment jobs with the name of the deployment workflow.
   This can make it difficult to see the full name of the deployment jobs, especially if the deployment workflow name is long.
   TODO UPDATE IMAGE IF NEEDED ![Main branch build buried under PR builds](/assets/Posts/2023-10-26-Multiple-ways-to-setup-your-CI-CD-pipelines-in-GitHub-Actions/main-branch-build-buried-under-pr-builds-in-GitHub-workflow-runs.png)
+
+To see what the GitHub Actions UI looks like with this approach, check out the workflows in the sample repository for the [push build runs](https://github.com/deadlydog/GitHub.Experiment.CiCdApproachesWithGitHubActions/actions/workflows/3-push--build.yml) and [push deploy runs](https://github.com/deadlydog/GitHub.Experiment.CiCdApproachesWithGitHubActions/actions/workflows/3-push--deploy.yml).
 
 ## Approach 4: Deploy workflow includes build workflow (Include approach)
 
 Here is an example of a workflow that builds the code:
 
 ```yaml
-name: include--build
+name: 4-include--build
 
 on:
   pull_request:
@@ -449,7 +466,7 @@ jobs:
       # Steps to version, build, and test the code go here.
 
       - name: Upload artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: ${{ env.artifactName }}
           path: ./ # Put the path to the build artifact files directory here.
@@ -458,7 +475,7 @@ jobs:
 And here is the accompanying deployment workflow:
 
 ```yaml
-name: include--deploy
+name: 4-include--deploy
 
 on:
   # 👇 Trigger the workflow on a push to the main branch.
@@ -469,13 +486,13 @@ on:
   workflow_dispatch:
 
 env:
-  artifactName: buildArtifact # This must match the artifact name in the push--build workflow.
+  artifactName: buildArtifact # This must match the artifact name in the 4-include--build workflow.
 
 jobs:
   # 👇 Call the build workflow to create the artifacts to deploy.
   build-and-test:
     uses: ./.github/workflows/4-include--build.yml
-    secrets: inherit # Inherit secrets from the parent workflow, if necessary.
+    secrets: inherit # Pass secrets to the build workflow, if necessary.
 
   deploy-to-staging:
     # 👇 Only run this deploy job after the build-and-test job completes successfully.
@@ -483,7 +500,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Download artifact
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4
         with:
           name: ${{ env.artifactName }}
           path: ./buildArtifact
@@ -497,7 +514,7 @@ jobs:
     environment: production # Used for environment-specific variables, secrets, and approvals.
     steps:
       - name: Download artifact
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4
         with:
           name: ${{ env.artifactName }}
           path: ./buildArtifact
@@ -507,6 +524,7 @@ jobs:
 
 You will notice that we still have separate build and deployment workflows.
 One key difference here is the specific triggers for each workflow.
+They have been setup so that the build workflow is only triggered by non-deployment builds, and the deployment workflow is triggered by builds that are meant to be deployed.
 
 The build workflow will trigger on a push to any branch _EXCEPT_ the main branch, PRs to the main branch, or when manually triggered.
 It also allows other workflows to call it via the `workflow_call` event.
@@ -533,6 +551,8 @@ Cons:
 - In the deployment workflow run GitHub UI, the build job name is prefixed with the name of the build job, which is a bit annoying.
   TODO USE PROPER IMAGE ![Build job name prefixed with workflow name](/assets/Posts/2023-10-26-Multiple-ways-to-setup-your-CI-CD-pipelines-in-GitHub-Actions/build-job-name-prefixed-with-workflow-name.png)
 
+To see what the GitHub Actions UI looks like with this approach, check out the workflows in the sample repository for the [include build runs](https://github.com/deadlydog/GitHub.Experiment.CiCdApproachesWithGitHubActions/actions/workflows/4-include--build.yml) and [include deploy runs](https://github.com/deadlydog/GitHub.Experiment.CiCdApproachesWithGitHubActions/actions/workflows/4-include--deploy.yml).
+
 ## Reusable workflows (templates)
 
 You probably noticed that we are always deploying to 2 environments: staging and production.
@@ -545,19 +565,169 @@ You can think of a reusable workflow as a function that accepts parameters, so y
 One caveat to be aware of is that while templates may also include other templates, GitHub only allows up to 4 levels of template nesting.
 Also, a workflow may only call up to 20 other workflows, including nested ones.
 
-Here is an example of a reusable workflow that deploys the code:
+See the [GitHub docs on reusable workflows](https://docs.github.com/en/actions/using-workflows/reusing-workflows) for more information and limitations.
+
+Although I am only now introducing reusable workflows here, we've actually already been using them in the `push` and `include` approaches above, but were not calling them multiple times.
+Let's see how to do that now.
+
+## Approach 5: Deploy workflow includes build workflow, and uses template for deployments (Include approach with reusable workflows)
+
+Here is an example of a workflow that builds the code:
 
 ```yaml
+name: 5-include-with-deploy-template--build
 
+on:
+  pull_request:
+    branches: main # Run workflow on PRs to the main branch.
+
+  # Run workflow on pushes to any branch, except the main branch.
+  push:
+    branches-ignore: main
+
+  # Allows you to run this workflow manually from the Actions tab.
+  workflow_dispatch:
+
+  # 👇 Allows this workflow to be called from the deployment workflow, but the parameters must be provided.
+  workflow_call:
+    inputs:
+      artifactName:
+        description: The name of the artifact to upload to.
+        required: true
+        type: string
+
+env:
+  # 👇 Provide a default artifact name for when this workflow is not called by the deployment workflow.
+  artifactName: ${{ inputs.artifactName || 'buildArtifact' }}
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the repo source code
+        uses: actions/checkout@v3
+
+      # Steps to version, build, and test the code go here.
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ env.artifactName }}
+          path: ./ # Put the path to the build artifact files directory here.
 ```
 
-And here is the accompanying deployment workflow that calls the reusable workflow:
+And here is the accompanying deployment workflow:
 
 ```yaml
+name: 5-include-with-deploy-template--deploy
 
+on:
+  # Trigger the workflow on a push to the main branch.
+  push:
+    branches: main
+
+  # Allows you to run this workflow manually (for any branch) from the Actions tab.
+  workflow_dispatch:
+
+env:
+  # 👇 Set the artifact name that will be used by the build and deployments, so it is now only defined in one place.
+  artifactName: buildArtifact
+
+jobs:
+  # 👇 Call the build workflow to create the artifacts to deploy, and provide the artifact name.
+  build-and-test:
+    uses: ./.github/workflows/5-include-with-deploy-template--build.yml
+    with:
+      artifactName: ${{ github.env.artifactName }}
+    secrets: inherit # Pass secrets to the build workflow, if necessary.
+
+  deploy-to-staging:
+    # Only run this deploy job after the build-and-test job completes successfully.
+    needs: build-and-test
+    # 👇 Call the deploy template with the proper environment name to deploy the artifacts.
+    uses: ./.github/workflows/5-include-with-deploy-template--deploy-template.yml
+    with:
+      artifactName: ${{ github.env.artifactName }}
+      environmentName: staging
+    secrets: inherit # Pass repository secrets to the deployment workflow.
+
+  deploy-to-production:
+    # Only run this deploy job after the deploy-to-staging job completes successfully.
+    needs: deploy-to-staging
+    # 👇 Call the deploy template with the proper environment name to deploy the artifacts.
+    uses: ./.github/workflows/5-include-with-deploy-template--deploy-template.yml
+    with:
+      artifactName: ${{ github.env.artifactName }}
+      environmentName: production
+    secrets: inherit # Pass repository secrets to the deployment workflow.
 ```
 
-See the [GitHub docs on reusable workflows](https://docs.github.com/en/actions/using-workflows/reusing-workflows) for more information.
+We now have on additional workflow file, which is the reusable workflow (template) that defines the deployment jobs:
+
+```yaml
+name: 5-include-with-deploy-template--deploy-template
+
+on:
+  # 👇 Allows this workflow to be called from the deployment workflow, but the parameters must be provided.
+  workflow_call:
+    inputs:
+      artifactName:
+        description: The name of the artifact to download and deploy.
+        required: true
+        type: string
+      environmentName:
+        description: The name of the environment to deploy to.
+        required: true
+        type: string
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    # 👇 Allows using variables and secrets defined in the provided environment.
+    environment: ${{ inputs.environmentName }}
+    steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: ${{ inputs.artifactName }}
+          path: ./buildArtifact
+
+      # Steps to deploy the code go here.
+```
+
+I could have left the build workflow identical to the `include` approach shown earlier, however I thought that I would show how to allow the artifact name to be provided as a parameter.
+This allows the deployment workflow to provide the artifact name to the build workflow, so that we do not have to hardcode the value in 2 separate files as we had been doing earlier.
+Since the build may still be triggered outside of a deployment workflow, we had to update the `env: artifactName` to use a default value when the input value is not provided.
+This same approach can be used for other values that you want shared between different workflows.
+
+Next we see the deployment workflow.
+As mentioned above, you can see that we now pass the artifact name to the build workflow, so the only place the artifact name value is defined is in the deployment workflow.
+Next, notice that the workflow no longer duplicates the deployment steps in the `deploy-to-staging` and `deploy-to-production` jobs, but instead calls the new reusable workflow with the appropriate parameters; namely the `environmentName`.
+In our example the deployment code was simply `# Steps to deploy the code go here.`, but in a real world scenario the deployment steps may be several hundred lines of YAML code, so not duplicating it is a big win.
+
+Finally, look at the reusable workflow.
+You can see it takes 2 parameters: `artifactName` and `environmentName`.
+It defines a single job that is used to perform the deployment.
+
+GitHub allows you to create environment-specific variables and secrets, which can be used by the jobs in the workflow.
+These are configured in the GitHub repository UI under the "Settings" tab, and then the "Environments" menu item.
+I personally prefer to have the variable values defined directly in the workflow files so that they are under source control and everything is in one place.
+If you take that approach, you would simply add additional parameters to the reusable workflow and pass them in from the deployment workflow, just like we did with the `artifactName` and `environmentName` parameters.
+Secrets of course should not be committed to source control, so you would still want to define those in the GitHub UI, or use a 3rd party secrets manager like Azure Key Vault.
+
+## Pros and cons of using reusable workflows
+
+Pros:
+
+- The deployment jobs are defined in a single place, and there is no duplicated code, so they can be easily updated and maintained.
+
+Cons:
+
+- Even though the template will only be referenced by other workflows and never directly triggered itself, it still shows up in the GitHub Actions UI as a workflow.
+  It will never have any runs shown though, which may be confusing to users.
+  TODO ADD SCREENSHOT ([See example](TODO ADD EXAMPLE LINK)).
+- GitHub does not allow you to place reusable workflows in subdirectories, so they are mixed in with other workflow files.
+  It is a good idea is to prefix them with a word like `template` to make it clear that they are reusable workflows, and not meant to be triggered directly.
 
 ## Other considerations
 
