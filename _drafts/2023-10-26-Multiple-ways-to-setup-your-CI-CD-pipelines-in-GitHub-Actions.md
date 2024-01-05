@@ -63,6 +63,7 @@ In the example yaml code, I use the "👇" emoji to call out specific things to 
 Here is an example of a single workflow file that builds and deploys some code:
 
 ```yaml
+{% raw %}
 name: 1-single-file--build-and-deploy
 
 on:
@@ -121,6 +122,7 @@ jobs:
           path: ./buildArtifact
 
       # Steps to deploy the code go here.
+{% endraw %}
 ```
 
 There are a few things to note here.
@@ -164,6 +166,7 @@ To see what the GitHub Actions UI looks like with this approach, check out [the 
 Here is an example of a workflow file that just builds the code:
 
 ```yaml
+{% raw %}
 name: 2-pull--build
 
 on:
@@ -193,11 +196,13 @@ jobs:
         with:
           name: ${{ env.artifactName }}
           path: ./ # Put the path to the build artifact files directory here.
+{% endraw %}
 ```
 
 And the accompanying workflow file that deploys the code using the pull approach:
 
 ```yaml
+{% raw %}
 name: 2-pull--deploy
 
 on:
@@ -255,6 +260,7 @@ jobs:
           search_artifacts: true
 
       # Steps to deploy the code go here.
+{% endraw %}
 ```
 
 Here the build workflow is separate from the deployment workflow.
@@ -310,6 +316,7 @@ It quickly cluttered up the deployment runs when issues were encountered with th
 Here is an example of a workflow that builds the code and then triggers a deployment workflow:
 
 ```yaml
+{% raw %}
 name: 3-push--build
 
 on:
@@ -355,11 +362,13 @@ jobs:
     uses: ./.github/workflows/3-push--deploy.yml
     # 👇 Allow the deployment workflow to access the secrets of this workflow.
     secrets: inherit
+{% endraw %}
 ```
 
 And here is the accompanying deployment workflow:
 
 ```yaml
+{% raw %}
 name: 3-push--deploy
 
 on:
@@ -395,6 +404,7 @@ jobs:
           path: ./buildArtifact
 
       # Steps to deploy the code go here.
+{% endraw %}
 ```
 
 Once again the build workflow is separate from the deployment workflow.
@@ -437,6 +447,7 @@ To see what the GitHub Actions UI looks like with this approach, check out the w
 Here is an example of a workflow that builds the code:
 
 ```yaml
+{% raw %}
 name: 4-include--build
 
 on:
@@ -470,11 +481,13 @@ jobs:
         with:
           name: ${{ env.artifactName }}
           path: ./ # Put the path to the build artifact files directory here.
+{% endraw %}
 ```
 
 And here is the accompanying deployment workflow:
 
 ```yaml
+{% raw %}
 name: 4-include--deploy
 
 on:
@@ -520,6 +533,7 @@ jobs:
           path: ./buildArtifact
 
       # Steps to deploy the code go here.
+{% endraw %}
 ```
 
 You will notice that we still have separate build and deployment workflows.
@@ -575,6 +589,7 @@ Let's see how to do that now.
 Here is an example of a workflow that builds the code:
 
 ```yaml
+{% raw %}
 name: 5-include-with-deploy-template--build
 
 on:
@@ -614,11 +629,13 @@ jobs:
         with:
           name: ${{ env.artifactName }}
           path: ./ # Put the path to the build artifact files directory here.
+{% endraw %}
 ```
 
 And here is the accompanying deployment workflow:
 
 ```yaml
+{% raw %}
 name: 5-include-with-deploy-template--deploy
 
 on:
@@ -660,11 +677,13 @@ jobs:
       artifactName: ${{ github.env.artifactName }}
       environmentName: production
     secrets: inherit # Pass repository secrets to the deployment workflow.
+{% endraw %}
 ```
 
 We now have on additional workflow file, which is the reusable workflow (template) that defines the deployment jobs:
 
 ```yaml
+{% raw %}
 name: 5-include-with-deploy-template--deploy-template
 
 on:
@@ -693,6 +712,7 @@ jobs:
           path: ./buildArtifact
 
       # Steps to deploy the code go here.
+{% endraw %}
 ```
 
 I could have left the build workflow identical to the `include` approach shown earlier, however I thought that I would show how to allow the artifact name to be provided as a parameter.
