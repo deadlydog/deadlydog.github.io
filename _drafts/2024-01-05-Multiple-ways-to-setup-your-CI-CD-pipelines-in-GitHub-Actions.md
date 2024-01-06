@@ -158,11 +158,11 @@ Cons:
 - The deployment jobs/steps will be skipped for PRs and branch builds, but will still show up in the workflow web UI.
   This can be confusing to users, as they may not understand why those jobs/steps were skipped and that they cannot be manually triggered.
 
-  ![Jobs that will never run showing in the web UI](/assets/Posts/2023-10-26-Multiple-ways-to-setup-your-CI-CD-pipelines-in-GitHub-Actions/approach-1-jobs-that-will-never-run-show-in-the-web-ui.png)
+  ![Jobs that will never run showing in the web UI](/assets/Posts/2024-01-05-Multiple-ways-to-setup-your-CI-CD-pipelines-in-GitHub-Actions/approach-1-jobs-that-will-never-run-show-in-the-web-ui.png)
 - The PR builds and non-main branch builds will show up in the same `1-single-file--build-and-deploy` workflow runs as the `main` branch builds.
   If there are a lot of PR runs or pushes to branches, they may bury the `main` branch runs, forcing you to go back several pages in the web UI to find the `main` branch runs to answer questions like, "When was the last time we deployed to production?".
 
-  ![Main branch build buried under PR builds](/assets/Posts/2023-10-26-Multiple-ways-to-setup-your-CI-CD-pipelines-in-GitHub-Actions/approach-1-main-branch-build-and-deploy-buried-under-pr-builds-in-github-workflow-runs.png))
+  ![Main branch build buried under PR builds](/assets/Posts/2024-01-05-Multiple-ways-to-setup-your-CI-CD-pipelines-in-GitHub-Actions/approach-1-main-branch-build-and-deploy-buried-under-pr-builds-in-github-workflow-runs.png))
 
 To see what the GitHub Actions UI looks like with this approach, check out [the workflow runs in the sample repository](https://github.com/deadlydog/GitHub.Experiment.CiCdApproachesWithGitHubActions/actions/workflows/1-single-file--build-and-deploy.yml).
 
@@ -294,7 +294,7 @@ Pros:
 - The build and deployment steps are separated into their own workflows, making them easier to maintain and understand.
 - The build workflow only shows the build steps in the GitHub Actions UI, and the deployment workflow only shows the deployment steps, so we do not constantly have "skipped" jobs for non-deployment builds like in the previous single-workflow-file approach.
 
-  ![Workflows only contain appropriate steps so they do not always have skipped steps](/assets/Posts/2023-10-26-Multiple-ways-to-setup-your-CI-CD-pipelines-in-GitHub-Actions/approach-2-workflows-do-not-need-to-have-skipped-steps.png)
+  ![Workflows only contain appropriate steps so they do not always have skipped steps](/assets/Posts/2024-01-05-Multiple-ways-to-setup-your-CI-CD-pipelines-in-GitHub-Actions/approach-2-workflows-do-not-need-to-have-skipped-steps.png)
 - Non-main branches and PRs can be manually deployed without any workflow code changes.
 - Builds for PRs and non-main branches that we do not want deployed do not trigger deployment workflows.
 
@@ -303,12 +303,12 @@ Cons:
 - The deployment workflow is triggered even if the build workflow for the main branch fails, resulting in skipped deployment runs showing in the workflow UI.
   This can be confusing to users, and it clutters the workflow UI.
 
-  ![Skipped deployment workflow runs clutter the workflow UI](/assets/Posts/2023-10-26-Multiple-ways-to-setup-your-CI-CD-pipelines-in-GitHub-Actions/approach-2-deploy-workflow-jobs-are-all-skipped-when-main-branch-build-fails.png)
+  ![Skipped deployment workflow runs clutter the workflow UI](/assets/Posts/2024-01-05-Multiple-ways-to-setup-your-CI-CD-pipelines-in-GitHub-Actions/approach-2-deploy-workflow-jobs-are-all-skipped-when-main-branch-build-fails.png)
 - The name of the deployment workflow run is always `2-pull--deploy`, rather than the commit message of the build workflow run that triggered it.
   It also does not show the commit SHA.
   This can make it difficult to find the deployment workflow run you are looking for in the GitHub UI.
 
-  ![Deployment workflow runs are always named the same and do not include commit SHA](/assets/Posts/2023-10-26-Multiple-ways-to-setup-your-CI-CD-pipelines-in-GitHub-Actions/approach-2-deploy-workflow-run-name-is-always-the-same.png)
+  ![Deployment workflow runs are always named the same and do not include commit SHA](/assets/Posts/2024-01-05-Multiple-ways-to-setup-your-CI-CD-pipelines-in-GitHub-Actions/approach-2-deploy-workflow-run-name-is-always-the-same.png)
 - Certain variables must be duplicated between the build and deployment workflows (e.g. `env.artifactName`), or additional code added to pass the variables between the workflows.
 
 To see what the GitHub Actions UI looks like with this approach, check out the workflows in the sample repository for the [pull build runs](https://github.com/deadlydog/GitHub.Experiment.CiCdApproachesWithGitHubActions/actions/workflows/2-pull--build.yml) and [pull deploy runs](https://github.com/deadlydog/GitHub.Experiment.CiCdApproachesWithGitHubActions/actions/workflows/2-pull--deploy.yml).
@@ -446,18 +446,18 @@ Cons:
 
 - Since the deployment workflow is never triggered by GitHub, but is instead called by the build workflow, it means the deployment workflow will never show any runs.
 
-  ![Deployment workflow never has any runs](/assets/Posts/2023-10-26-Multiple-ways-to-setup-your-CI-CD-pipelines-in-GitHub-Actions/approach-3-deployment-workflow-never-has-any-runs.png)
+  ![Deployment workflow never has any runs](/assets/Posts/2024-01-05-Multiple-ways-to-setup-your-CI-CD-pipelines-in-GitHub-Actions/approach-3-deployment-workflow-never-has-any-runs.png)
 
   Instead, the deploy jobs will show up as part of the build workflow run.
   This means that builds for PRs and non-main branches will be mixed in with the `main` branch builds and deployments.
   Just like with the `1-single-file--build-and-deploy` approach, this may bury the deployments under several pages of non-main branch runs, making it difficult to find runs you care about in the GitHub UI.
 
-  ![Builds and deployments for all branches are mixed in together](/assets/Posts/2023-10-26-Multiple-ways-to-setup-your-CI-CD-pipelines-in-GitHub-Actions/approach-3-all-builds-and-deployments-are-mixed-in-together.png)
+  ![Builds and deployments for all branches are mixed in together](/assets/Posts/2024-01-05-Multiple-ways-to-setup-your-CI-CD-pipelines-in-GitHub-Actions/approach-3-all-builds-and-deployments-are-mixed-in-together.png)
 - Since the deployment jobs show up in the build workflow run, the GitHub UI prefixes each of the deployment jobs with the name of the job from the build workflow.
   This can make it difficult to see the full name of the deployment jobs in the generated diagram.
   Thankfully, the jobs are listed on the left in a tree view as well, so you can still read the full name there more easily.
 
-  ![Deployment workflow name is prefixed on deployment jobs](/assets/Posts/2023-10-26-Multiple-ways-to-setup-your-CI-CD-pipelines-in-GitHub-Actions/approach-3-build-job-prefixed-on-deployment-job-names.png)
+  ![Deployment workflow name is prefixed on deployment jobs](/assets/Posts/2024-01-05-Multiple-ways-to-setup-your-CI-CD-pipelines-in-GitHub-Actions/approach-3-build-job-prefixed-on-deployment-job-names.png)
 
 To see what the GitHub Actions UI looks like with this approach, check out the workflows in the sample repository for the [push build runs](https://github.com/deadlydog/GitHub.Experiment.CiCdApproachesWithGitHubActions/actions/workflows/3-push--build.yml) and [push deploy runs](https://github.com/deadlydog/GitHub.Experiment.CiCdApproachesWithGitHubActions/actions/workflows/3-push--deploy.yml).
 
@@ -583,7 +583,7 @@ Cons:
 
 - In the deployment workflow run GitHub UI, the build job name is prefixed with the name of the build job in the deployment workflow, which is a minor annoyance.
 
-  ![Build job name prefixed with job name from deployment workflow](/assets/Posts/2023-10-26-Multiple-ways-to-setup-your-CI-CD-pipelines-in-GitHub-Actions/approach-4-build-job-name-is-prefixed-with-deployment-workflow-job-name.png)
+  ![Build job name prefixed with job name from deployment workflow](/assets/Posts/2024-01-05-Multiple-ways-to-setup-your-CI-CD-pipelines-in-GitHub-Actions/approach-4-build-job-name-is-prefixed-with-deployment-workflow-job-name.png)
 
 To see what the GitHub Actions UI looks like with this approach, check out the workflows in the sample repository for the [include build runs](https://github.com/deadlydog/GitHub.Experiment.CiCdApproachesWithGitHubActions/actions/workflows/4-include--build.yml) and [include deploy runs](https://github.com/deadlydog/GitHub.Experiment.CiCdApproachesWithGitHubActions/actions/workflows/4-include--deploy.yml).
 
@@ -769,7 +769,7 @@ Cons:
 
 - Similar to `3-push--deploy` above, because the template will only be referenced by other workflows and never directly triggered itself, it still shows up in the GitHub Actions UI as a workflow, but will never have any runs shown, which may be confusing to users.
 
-  ![Deploy template shows in the workflows even though it will never have any runs](/assets/Posts/2023-10-26-Multiple-ways-to-setup-your-CI-CD-pipelines-in-GitHub-Actions/approach-5-deploy-template-will-never-show-any-runs.png)
+  ![Deploy template shows in the workflows even though it will never have any runs](/assets/Posts/2024-01-05-Multiple-ways-to-setup-your-CI-CD-pipelines-in-GitHub-Actions/approach-5-deploy-template-will-never-show-any-runs.png)
 
 To see what the GitHub Actions UI looks like with this approach, check out the workflows in the sample repository for the [build runs](https://github.com/deadlydog/GitHub.Experiment.CiCdApproachesWithGitHubActions/actions/workflows/5-include-with-deploy-template--build.yml) and [deploy runs](https://github.com/deadlydog/GitHub.Experiment.CiCdApproachesWithGitHubActions/actions/workflows/5-include-with-deploy-template--deploy.yml).
 
