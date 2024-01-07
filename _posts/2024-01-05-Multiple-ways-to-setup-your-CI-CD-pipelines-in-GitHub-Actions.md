@@ -741,6 +741,7 @@ I could have left the build workflow identical to the `include` approach shown e
 This allows the deployment workflow to provide the artifact name to the build workflow, so that we do not have to hardcode the value in 2 separate files as we had been doing earlier.
 Since the build may still be triggered outside of a deployment workflow, we had to update the `env: artifactName` to use a default value when the input value is not provided.
 This same approach can be used for other values that you want shared between different workflows.
+[This excellent blog post](https://7tonshark.com/posts/github-actions-ternary-operator/) shows how to also to use the ternary operator to provide a default value, and also explains why we cannot use `env` variables in a job's `if` clause.
 
 Next we see the deployment workflow.
 As mentioned above, you can see that we now pass the artifact name to the build workflow, so the only place the artifact name value is defined is in the deployment workflow.
