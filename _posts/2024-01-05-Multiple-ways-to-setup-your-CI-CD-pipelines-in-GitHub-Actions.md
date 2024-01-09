@@ -576,6 +576,7 @@ I came across this approach on [this excellent blog post](https://www.viget.com/
 Pros:
 
 - Builds for PRs and non-main branches that we do not want deployed do not trigger deployment workflows, and show up in the GitHub UI under the build workflow.
+  These are typically throwaway builds, so it is nice to not have them cluttering up the deployment workflow runs.
 - Builds that are deployed show up in the GitHub UI under the deployment workflow, making it easy to find the last time a deployment occurred.
 - Non-main branches and PRs can be manually deployed without any workflow code changes.
 
