@@ -37,7 +37,7 @@ repository: "deadlydog/deadlydog.github.io" # GitHub username/repo-name e.g. "mm
 # logo: # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 # masthead_title: # overrides the website title displayed in the masthead, use " " for no title
 # breadcrumbs: false # true, false (default)
-words_per_minute: 200 # Used to calculate the read time.
+words_per_minute: 250 # Used to calculate the read time.
 comments:
   provider: staticman_v2 # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "custom"
   # disqus:
