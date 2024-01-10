@@ -2,7 +2,7 @@
 title: "Multiple ways to setup your CI/CD pipelines in GitHub Actions"
 permalink: /Multiple-ways-to-setup-your-CI-CD-pipelines-in-GitHub-Actions/
 #date: 2099-01-15T00:00:00-06:00
-#last_modified_at: 2099-01-22
+last_modified_at: 2024-01-10
 comments_locked: false
 toc: true
 categories:
@@ -41,6 +41,16 @@ For the purposes of this post, the terms "pipeline" and "workflow" are interchan
 Similarly, Azure DevOps uses the term "template", while GitHub Actions uses the term "reusable workflow", so I may use them interchangeably as well.
 
 ## The approaches
+
+Some CI/CD criteria we want to meet in our examples are:
+
+- Deploy to the `staging` environment automatically when a `main` branch build completes successfully.
+- Manual intervention should be required to deploy to the `production` environment.
+  e.g. A manual approval.
+- PR builds and non-main branch builds should:
+  - Not trigger automatic deployments.
+  - Manual deployments should still be possible when needed.
+- All builds should upload their artifacts so they can be downloaded/inspected.
 
 The approaches we will look at are:
 
@@ -322,6 +332,13 @@ So the build pipeline would not know anything about the deployment pipeline, and
 This approach worked quite well in GitHub at first, but I really did not like how blank, skipped deployment workflow runs got created when the main branch build failed.
 It quickly cluttered up the deployment runs when issues were encountered with the build workflow that took many attempts to fix.
 Also, having every deployment run named the same thing made finding a specific deployment very painful.
+
+### Listening for other events to trigger the deployment workflow
+
+Rather than triggering the deployment workflow when a build workflow completes, you may want to trigger the deployment workflow on other events, such as when a new image is uploaded to a container registry, or when a new release is created.
+These are valid scenarios that may be suitable for your project.
+One thing to consider is that you will either need to no longer upload the artifact to the container registry for non-main branch builds, meaning you are not able to inspect and test them, or you will need to add code to your deployment workflow to determine if the artifact should be deployed or not.
+This may or may not be a big deal, depending on your project requirements.
 
 ## Approach 3: Build workflow triggers deploy workflow (Push approach)
 
@@ -795,5 +812,8 @@ You may want to create additional templates for other operations, such as runnin
 My goal with this post was to share the various ways I've found to structure GitHub workflows, and hopefully give you some ideas on how to structure your own.
 
 Finally, a reminder that I also created [this sample GitHub repository](https://github.com/deadlydog/GitHub.Experiment.CiCdApproachesWithGitHubActions) that contains all of the examples shown in this post, so you view the code and can see how they look in the GitHub Actions menu.
+
+Have another approach that you think should be on this list, or other relevant information?
+Leave a comment and let me know.
 
 Happy pipeline building!
