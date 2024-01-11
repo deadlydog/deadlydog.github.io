@@ -809,7 +809,7 @@ The example code I've shown here is very simple and should simply be used as a s
 You may want additional triggers for your workflows, such as when a tag is created, or on a schedule.
 You may want to create additional templates for other operations, such as running load tests, or running a security scan.
 
-My goal with this post was to share the various ways I've found to structure GitHub workflows, and hopefully give you some ideas on how to structure your own.
+My goal with this post was to share the various ways I've found to structure GitHub CI/CD workflows, and hopefully give you some ideas on how to structure your own.
 
 Finally, a reminder that I also created [this sample GitHub repository](https://github.com/deadlydog/GitHub.Experiment.CiCdApproachesWithGitHubActions) that contains all of the examples shown in this post, so you view the code and can see how they look in the GitHub Actions menu.
 
