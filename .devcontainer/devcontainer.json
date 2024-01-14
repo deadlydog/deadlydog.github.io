@@ -1,36 +1,42 @@
-// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
-// https://github.com/microsoft/vscode-dev-containers/tree/v0.140.1/containers/jekyll
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/jekyll
 {
-	"name": "Jekyll (Community)",
-	"build": {
-		"dockerfile": "Dockerfile",
-		"args": {
-			"NODE_VERSION": "lts/*"
+	"name": "Jekyll",
+
+	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+	"image": "mcr.microsoft.com/devcontainers/jekyll:2-bullseye",
+
+	// Features to add to the dev container. More info: https://containers.dev/features.
+	"features": {
+		"ghcr.io/devcontainers/features/node:1": { },
+		"ghcr.io/devcontainers/features/powershell:1": { }
+	},
+
+	// Configure tool-specific properties.
+	"customizations": {
+		"vscode": {
+			// Set default container-specific settings.json values on container create.
+			"settings": {
+				"terminal.integrated.shell.linux": "/bin/bash"
+			},
+			// Add the IDs of extensions you want installed when the container is created.
+			"extensions": [
+				"yzhang.markdown-all-in-one",
+				"davidanson.vscode-markdownlint",
+				"ionutvmi.path-autocomplete",
+				"ms-vscode.powershell",
+				"redhat.vscode-yaml",
+				"ms-azuretools.vscode-docker"
+			]
 		}
 	},
 
-	// Set *default* container specific settings.json values on container create.
-	"settings": {
-		"terminal.integrated.shell.linux": "/bin/bash"
-	},
-
-	// Add the IDs of extensions you want installed when the container is created.
-	"extensions": [
-		"yzhang.markdown-all-in-one",
-		"davidanson.vscode-markdownlint",
-		"ionutvmi.path-autocomplete",
-		"ms-vscode.powershell",
-		"redhat.vscode-yaml",
-		"ms-azuretools.vscode-docker"
-	],
-
-	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	"forwardPorts": [4000],
-
-	// Use 'postCreateCommand' to run commands after the container is created.
+	// Run commands after the container is created.
 	"postCreateCommand": "bundle install",
 
-	// Uncomment to connect as a non-root user. See https://aka.ms/vscode-remote/containers/non-root.
-	// "remoteUser": "vscode"
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	"forwardPorts": [4000]
 
+	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+	// "remoteUser": "root"
 }

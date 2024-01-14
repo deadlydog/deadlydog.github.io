@@ -1,5 +1,12 @@
 source "https://rubygems.org"
 
+# If we get gem errors building/running the site, try:
+# 1. Comment out this file.
+# 2. Run `bundle clean` in the terminal to remove all local gem files.
+# 3. Uncomment this file.
+# 4. Run `bundle install` again to download and reinstall gem files.
+# Source: https://stackoverflow.com/a/71504116/602585
+
 gem "github-pages", group: :jekyll_plugins
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem.
