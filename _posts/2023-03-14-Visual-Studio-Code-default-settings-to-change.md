@@ -2,7 +2,7 @@
 title: "Change these VS Code default settings to make it even more awesome"
 permalink: /Visual-Studio-Code-default-settings-to-change/
 date: 2023-03-14
-last_modified_at: 2023-12-08
+last_modified_at: 2024-01-14
 comments_locked: false
 toc: true
 categories:
@@ -529,6 +529,44 @@ Result before, with controls obstructed:
 Result after:
 
 ![Screenshot of debug toolbar in command center](/assets/Posts/2023-03-14-Visual-Studio-Code-default-settings-to-change/debug-toolbar-location-command-center-result.png)
+
+### Side bar location
+
+By default the side bar is shown on the left side of the editor.
+I personally prefer this, but others prefer it on the right side so that when you open and close the side bar, all the text in the editor does not suddenly get shifted.
+
+GUI setting: `Workbench › Side Bar: Location` to `right`.
+
+JSON setting:
+
+```json
+"workbench.sideBar.location": "right",
+```
+
+Result of side bar on the left (default):
+
+![Screenshot of side bar on the left](/assets/Posts/2023-03-14-Visual-Studio-Code-default-settings-to-change/side-bar-location-left-result.png)
+
+Result of side bar on the right:
+
+![Screenshot of side bar on the right](/assets/Posts/2023-03-14-Visual-Studio-Code-default-settings-to-change/side-bar-location-right-result.png)
+
+### Activity bar location
+
+By default the activity bar is shown on the side of the Side Bar.
+If you want to save a bit of horizontal space at the expense of being able to see more extension icons at once, you can move the activity bar to the top of the Side Bar.
+
+GUI setting: `Workbench › Activity Bar: Location` to `top`.
+
+JSON setting:
+
+```json
+"workbench.activityBar.location": "top",
+```
+
+Result:
+
+![Screenshot of activity bar on the top](/assets/Posts/2023-03-14-Visual-Studio-Code-default-settings-to-change/activity-bar-location-top-result.png)
 
 ## Editor file and formatting settings
 
