@@ -15,13 +15,18 @@ tags:
 ---
 
 I was recently invited to be a guest on The PowerShell Podcast ([Podbean](https://powershellpodcast.podbean.com/)) ([YouTube playlist](https://www.youtube.com/playlist?list=PL1mL90yFExsjUS8DRkzfLUcHds7vlxqgM)) ([Apple Podcasts](https://podcasts.apple.com/us/podcast/the-powershell-podcast/id1616048196)).
-I had a great time talking with [Andrew Pla](https://twitter.com/AndrewPlaTech).
+I had a great time talking with [Andrew Pla](https://twitter.com/AndrewPlaTech), and it was a bit surreal as I've listened to every episode.
 This was my first time on a podcast, and I was very nervous.
 You can tell because I was talking very fast, so hopefully I was still understandable to everyone 😅.
 
 While I didn't realize it until a few days after recording, I was on the show's 100th episode!
 [Check out the episode on YouTube here](https://youtu.be/sBpm_R1MQ38?si=sEduyCx8ONY3NfNC).
 That is a huge accomplishment for the podcast, and I'm honoured to have been a part of it.
+Congratulations to Andrew and the rest of the team for reaching this milestone!
+
+I was a little bummed that I did not get to also meet [Jordan Hammond](https://twitter.com/DevOpsJordan), as he decided to take a break from the show at the end of 2023.
+I missed out on meeting him by just a couple episodes.
+Even though he stopped just shy of 100 episodes, it is still a great feat and he should be proud, and I hope he returns to the show in the future, even if only as a guest and to check off the "100 episodes milestone" box 😁.
 
 ## Podcast amendments
 
@@ -49,7 +54,7 @@ If I was able to edit the podcast, these are some things I would have mentioned:
   The real value is in the knowledge you gain while studying for the exam.
   Also, the MS exams in particular I've found often have at least one or two "trick" questions, where they will word the question in such a way that the answer is not obvious, even for a subject that you know very well.
 
-### Working from home:
+### Working from home
 
 - When working in the office you can build relationships with people you otherwise wouldn't have.
   I'm a software developer, but have built relationships with people in IT, HR, and Finance.
