@@ -26,7 +26,8 @@ Congratulations to Andrew and the rest of the team for reaching this milestone!
 
 I was a little bummed that I did not get to also meet [Jordan Hammond](https://twitter.com/DevOpsJordan), as he decided to take a break from the show at the end of 2023.
 I missed out on meeting him by just a couple episodes.
-Even though he stopped just shy of 100 episodes, it is still a great feat and he should be proud, and I hope he returns to the show in the future, even if only as a guest and to check off the "100 episodes milestone" box 😁.
+Even though he stopped just shy of 100 episodes, it is still a great feat and he should be proud.
+I hope he returns to the show in the future, even if only as a guest and to check off the "100 episodes milestone" box 😁.
 
 ## Podcast amendments
 
