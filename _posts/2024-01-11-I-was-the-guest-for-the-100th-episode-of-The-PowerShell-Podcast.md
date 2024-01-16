@@ -29,13 +29,13 @@ I missed out on meeting him by just a couple episodes.
 Even though he stopped just shy of 100 episodes, it is still a great feat and he should be proud.
 I hope he returns to the show in the future, even if only as a guest and to check off the "100 episodes milestone" box 😁.
 
-## Podcast amendments
+## Podcast additions
 
 When writing blog posts and recording videos, I have time to gather my thoughts and later update any information that I left out.
 While chatting live, I don't have that luxury.
 After we were done recording I was soon thinking of all the things that I could have said better, or things that I left out and should have mentioned.
 
-If I was able to edit the podcast, these are some things I would have mentioned:
+If I was able to edit the podcast, these are some things additional things I would have mentioned:
 
 ### My [PowerShell tiPS module](https://github.com/deadlydog/PowerShell.tiPS)
 
@@ -58,12 +58,18 @@ If I was able to edit the podcast, these are some things I would have mentioned:
 ### Working from home
 
 - When working in the office you can build relationships with people you otherwise wouldn't have.
-  I'm a software developer, but have built relationships with people in other departments, like IT, Support, HR, and Finance.
+  I'm a software developer, but have built relationships with people in other departments, such as IT, Support, HR, and Finance.
   Not only has this been helpful for both expected and unexpected situations (e.g. "I wonder how we bill our customers; I'll ask Heather in Finance"), but they are also great people and I'm glad to know them.
 - Having a Zoom/Teams call open all day long for your team where you all have the cameras off and are muted is a great way to reproduce the informal conversations that happen in the office.
   You can unmute to ask a team member a question, and others that are on the call can chime in if they choose, or just listen in.
   If you start a screenshare, the others can choose to watch as well if they want, and may learn something new, or tell you a better way to perform the task.
   This is much more organic than scheduling a meeting, and leads to more collaboration in an low-friction way.
+
+### GitOps
+
+- GitOps typically describes how the deployed service and infrastructure should look in a declarative manner, rather than having a procedural script that describes how to get to that state.
+  Similar to how PowerShell DSC/Puppet/Terraform/ARM templates work vs. a regular PowerShell script.
+  Also, while a deployment pipeline is typically used to deploy a single service, GitOps is often used to deploy an entire environment, such as a Kubernetes cluster with hundreds or thousands of services.
 
 ### DevOps, SRE, and Platform Engineering
 
@@ -76,8 +82,8 @@ If I was able to edit the podcast, these are some things I would have mentioned:
   - Often focus on infrastructure security as well.
   This could be things like ensuring applications are only able to accept https traffic (not http), and that only up to date TLS versions are allowed.
 - Platform Engineering
-  - Ideally a dev team is able to just specify the git repository that contains their application code, and what type of application it is (web service, background service, cron job), and the platform will take care of the rest to ensure the application is deployed in a safe a secure manner, including an automated rollback process in case of failure.
-  It may also perform additional tasks, such as security penetration testing, vulnerability scanning, and automated load testing.
+  - Ideally a dev team is able to just specify the git repository that contains their application code and what type of application it is (web service, background service, cron job), and the platform will take care of building and deploying the app in a safe and secure manner, including an automated rollback process in case of failure.
+  It may also perform additional tasks, such as static code analysis, security penetration testing, vulnerability scanning, automated load testing, and more.
 
 ### My favourite thing I use PowerShell for
 
