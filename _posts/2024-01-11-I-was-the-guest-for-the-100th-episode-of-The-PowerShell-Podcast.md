@@ -77,6 +77,7 @@ If I was able to edit the podcast, these are some things I would have mentioned:
   This could be things like ensuring applications are only able to accept https traffic (not http), and that only up to date TLS versions are allowed.
 - Platform Engineering
   - Ideally a dev team is able to just specify the git repository that contains their application code, and what type of application it is (web service, background service, cron job), and the platform will take care of the rest to ensure the application is deployed in a safe a secure manner, including an automated rollback process in case of failure.
+  It may also perform additional tasks, such as security penetration testing, vulnerability scanning, and automated load testing.
 
 ### My favourite thing I use PowerShell for
 
