@@ -58,12 +58,25 @@ If I was able to edit the podcast, these are some things I would have mentioned:
 ### Working from home
 
 - When working in the office you can build relationships with people you otherwise wouldn't have.
-  I'm a software developer, but have built relationships with people in IT, HR, and Finance.
+  I'm a software developer, but have built relationships with people in other departments, like IT, Support, HR, and Finance.
   Not only has this been helpful for both expected and unexpected situations (e.g. "I wonder how we bill our customers; I'll ask Heather in Finance"), but they are also great people and I'm glad to know them.
 - Having a Zoom/Teams call open all day long for your team where you all have the cameras off and are muted is a great way to reproduce the informal conversations that happen in the office.
   You can unmute to ask a team member a question, and others that are on the call can chime in if they choose, or just listen in.
   If you start a screenshare, the others can choose to watch as well if they want, and may learn something new, or tell you a better way to perform the task.
   This is much more organic than scheduling a meeting, and leads to more collaboration in an low-friction way.
+
+### DevOps, SRE, and Platform Engineering
+
+- DevOps
+  - Not only about monitoring how your application performs in production, but also how it is being used.
+  This is done by adding telemetry, and can tell you things like which features are being the most used, and which ones are not used at all and can potentially be removed to reduce application complexity.
+- SRE
+  - Another large focus is infrastructure costs.
+  You want to ensure the applications have redundancy, disaster recovery, and can perform well, but without being wasteful by overprovisioning resources and paying for a bunch of compute and storage that is not utilized.
+  - Often focus on infrastructure security as well.
+  This could be things like ensuring applications are only able to accept https traffic (not http), and that only up to date TLS versions are allowed.
+- Platform Engineering
+  - Ideally a dev team is able to just specify the git repository that contains their application code, and what type of application it is (web service, background service, cron job), and the platform will take care of the rest to ensure the application is deployed in a safe a secure manner, including an automated rollback process in case of failure.
 
 ### My favourite thing I use PowerShell for
 
