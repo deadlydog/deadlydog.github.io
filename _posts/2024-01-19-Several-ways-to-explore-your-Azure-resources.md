@@ -22,6 +22,10 @@ Unfortunately, the Azure portal does not let you simply filter or search for res
 
 ## Ways to explore your Azure resources
 
+It is important to note that all of the approaches below require you to have access to the Azure subscription you want to explore.
+You can only browse and search across subscriptions you have permissions for.
+If you are wanting to search your entire organization, ensure you have access to all subscriptions.
+
 ### Azure portal
 
 The easiest and most user-friendly way to explore your Azure resources is through the Azure portal: <https://portal.azure.com>.
@@ -32,6 +36,8 @@ If you want to just browse your resources, navigate to the `Subscriptions` blade
 ![Search Azure Portal by resource name](/assets/Posts/2024-01-19-Several-ways-to-explore-your-Azure-resources/azure-portal-search-by-resource-name-screenshot.png)
 
 ![Search Azure Portal by service](/assets/Posts/2024-01-19-Several-ways-to-explore-your-Azure-resources/azure-portal-search-by-service-screenshot.png)
+
+NOTE: To ensure you are able to view and search all of the subscriptions you have access to, click the gear icon on the top-right of the webpage and ensure the `Default subscription filter` is set to `All subscriptions`, otherwise you may not see the resources you expect.
 
 The portal does not always expose all of the properties of a resource, or let you search or filter by them.
 If you are looking for something specific, you may need to use another approach.
