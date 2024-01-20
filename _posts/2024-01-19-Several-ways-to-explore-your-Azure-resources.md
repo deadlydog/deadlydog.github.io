@@ -17,7 +17,7 @@ Here I present a few ways to explore your Azure resources, for when the portal's
 
 ## Context
 
-I needed to find all of the Azure `Cloud service (classic)` resources that we had in our organization, since that resource type is being deprecated at the end of August 2024.
+I needed to find all of the Azure `Cloud service (classic)` resources that we had in our organization, since that service is [being retired on August 31, 2024](https://azure.microsoft.com/en-ca/updates/cloud-services-retirement-announcement/).
 Unfortunately, the Azure portal does not let you simply filter or search for resources of that type, so I had to find another way.
 
 ## Ways to explore your Azure resources
