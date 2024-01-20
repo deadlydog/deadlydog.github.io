@@ -20,6 +20,8 @@ Here I present a few ways to explore your Azure resources, for when the portal's
 I needed to find all of the Azure `Cloud service (classic)` resources that we had in our organization, since that service is [being retired on August 31, 2024](https://azure.microsoft.com/en-ca/updates/cloud-services-retirement-announcement/).
 Unfortunately, the Azure portal does not let you simply filter or search for resources of that type, so I had to find another way.
 
+Spoiler: I show how to find them in the Azure Resource Graph Explorer section below.
+
 ## Ways to explore your Azure resources
 
 It is important to note that all of the approaches below require you to have access to the Azure subscription you want to explore.
@@ -182,10 +184,11 @@ Of course, these are just recommendations, and you can use whichever approach yo
 ## Conclusion
 
 We've seen several ways to get started exploring your Azure resources.
-I could have also used the Azure PowerShell module or Azure CLI to solve my initial problem of finding all "Cloud service (classic)" resources.
-I find the Azure Resource Graph Explorer can be the quickest and easiest to use when just starting out, as it allows you to browse through services and properties easily, which is nice when you do not know the specific properties, terms, and syntax to use.
+
+For my initial problem of finding all "Cloud service (classic)" resources, I could have also used the Azure PowerShell module or Azure CLI.
+I find the Azure Resource Graph Explorer can be the easiest to get started with, as it allows you to browse through services and properties easily, which is nice when you do not know the specific properties, terms, and syntax to use.
 Also, it does not require any additional setup (no software to install or connecting to Azure).
-It all comes down to which tool you are most comfortable with though.
+It all comes down using the tool you are most comfortable with though.
 
 Hopefully you've learned something new and this helps you find the resources you are looking for!
 
