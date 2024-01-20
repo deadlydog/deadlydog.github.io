@@ -41,6 +41,8 @@ If you want to just browse your resources, navigate to the `Subscriptions` blade
 
 NOTE: To ensure you are able to view and search all of the subscriptions you have access to, click the gear icon on the top-right of the webpage and ensure the `Default subscription filter` is set to `All subscriptions`, otherwise you may not see the resources you expect.
 
+![Azure Portal default subscription filter](/assets/Posts/2024-01-19-Several-ways-to-explore-your-Azure-resources/azure-portal-default-subscription-filter-screenshot.png)
+
 The portal does not always expose all of the properties of a resource, or let you search or filter by them.
 If you are looking for something specific, you may need to use another approach.
 
