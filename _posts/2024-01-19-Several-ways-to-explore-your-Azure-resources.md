@@ -2,7 +2,7 @@
 title: "Several ways to explore your Azure resources"
 permalink: /Several-ways-to-explore-your-Azure-resources/
 #date: 2099-01-15T00:00:00-06:00
-#last_modified_at: 2099-01-22
+last_modified_at: 2024-01-20
 comments_locked: false
 toc: false
 categories:
@@ -26,8 +26,12 @@ Unfortunately, the Azure portal does not let you simply filter or search for res
 
 The easiest and most user-friendly way to explore your Azure resources is through the Azure portal: <https://portal.azure.com>.
 
-You can use the global search bar at the top center of the web page to search for resources by name, resource type, or resource group.
+You can use the global search bar at the top center of the web page to search for resources by name, resource type (service), or resource group.
 If you want to just browse your resources, navigate to the `Subscriptions` blade and then drill down into the resource groups and their resources to inspect them.
+
+![Search Azure Portal by resource name](/assets/Posts/2024-01-19-Several-ways-to-explore-your-Azure-resources/azure-portal-search-by-resource-name-screenshot.png)
+
+![Search Azure Portal by service](/assets/Posts/2024-01-19-Several-ways-to-explore-your-Azure-resources/azure-portal-search-by-service-screenshot.png)
 
 The portal does not always expose all of the properties of a resource, or let you search or filter by them.
 If you are looking for something specific, you may need to use another approach.
@@ -38,8 +42,11 @@ Another way to browse resources is with the Azure Resource Explorer: <https://re
 
 This can show you the API endpoints for your resources, and let you explore them in a tree view.
 It may also expose some properties that the portal does not.
-I have found this view is not that helpful on its own, but can be when used in conjunction with the other approaches below
+I have found this view is not that helpful on its own, but can be when used in conjunction with the other approaches below.
 
+![Azure Resource Explorer screenshot](/assets/Posts/2024-01-19-Several-ways-to-explore-your-Azure-resources/azure-resource-explorer-screenshot.png)
+
+If you do not see the resources you expect, you may need to change the directory using the dropdown box at the top.
 If your organization has a lot of resources, the page can be very resource intensive and bring your browser to its knees.
 
 ### Azure PowerShell module
@@ -66,6 +73,8 @@ Once installed, use `Connect-AzAccount` to connect to your Azure account.
 Now that the module is installed and connected, you can use `Get-AzResource` to explore the resources in the subscription you are connected to.
 To list the subscriptions you have access to, use `Get-AzSubscription`, and to change subscriptions, use `Set-AzContext -Subscription <subscription name>`.
 
+![View Azure resources with Az PowerShell module](/assets/Posts/2024-01-19-Several-ways-to-explore-your-Azure-resources/az-powershell-module-view-resource-screenshot.png)
+
 The PowerShell module exposes more properties than the portal does, and you can use regular PowerShell commands to filter and search for resources you want.
 You can also use the Az module to create, modify, and delete resources as well.
 For more information, check out the [Az module documentation](https://learn.microsoft.com/en-us/powershell/azure/install-azure-powershell).
@@ -83,7 +92,9 @@ To view all of the subscriptions you have access to, use `az account list`, and 
 The CLI has subcommands for many resource types, such as `az vm list` or `az webapp list` to list just VMs or web apps.
 Use `az --help` to see all of the available commands.
 
-The CLI exposes more properties than the portal, and allows you to also create, modify, and delete resources.
+![View Azure resources with Azure CLI](/assets/Posts/2024-01-19-Several-ways-to-explore-your-Azure-resources/az-cli-view-key-vaults-screenshot.png)
+
+The CLI may expose more properties than the portal, and allows you to also create, modify, and delete resources.
 For more information, check out the [Azure CLI documentation](https://learn.microsoft.com/en-us/cli/azure/).
 
 ### Azure Rest API
@@ -132,10 +143,11 @@ Here's a screenshot of the query editor with the above query:
 ![Azure Resource Graph Explorer](/assets/Posts/2024-01-19-Several-ways-to-explore-your-Azure-resources/azure-resource-graph-explorer-screenshot.png)
 
 The portal allows you to download the query results as a CSV file, so they are easy to share with others.
+Also, unlike the PowerShell module and CLI, the Resource Graph Explorer is not scoped to a specific subscription at a time, so you can easily query across all of your subscriptions.
 
 For more information, check out the [Azure Resource Graph documentation](https://learn.microsoft.com/en-us/azure/governance/resource-graph/).
 
-## When to use each approach
+## When to use each tool
 
 So we've seen multiple ways you can explore your Azure resources.
 When should you use each one?
@@ -164,6 +176,8 @@ Of course, these are just recommendations, and you can use whichever approach yo
 ## Conclusion
 
 We've seen several ways to get started exploring your Azure resources.
+While I could have used the Azure PowerShell module or Azure CLI to solve my initial problem, I find the Azure Resource Graph Explorer the easiest to use when you are just starting out, and when you do not know all of the specific properties, terms, and syntax to use.
+
 Hopefully you've learned something new and this helps you find the resources you are looking for!
 
 Happy exploring!
