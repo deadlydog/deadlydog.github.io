@@ -42,9 +42,6 @@
 </div>
 <script src="/assets/js/Donate.js" defer></script>
 
-<!-- Add buttons for copying code snippets to the clipboard. -->
-<script src="/assets/js/AddCopyToClipboardButtons.js" defer></script>
-
 <!-- This code is here instead of in `_includes\footer\custom.html` so that advertisement appear at the VERY bottom of the page. -->
 <!-- Put some advertisements at the bottom of the site -->
 <div style="text-align: center; margin-top: 1em">
@@ -54,7 +51,10 @@
 		<ins class="adsbygoogle" style="display:inline-block;width:468px;height:60px"
 			data-ad-client="ca-pub-0037930831928769" data-ad-slot="7917470839"></ins>
 		<script>
-			(adsbygoogle = window.adsbygoogle || []).push({});
+			function RunGoogleAdsenseFooterAd1JavaScript()
+			{
+				(adsbygoogle = window.adsbygoogle || []).push({});
+			}
 		</script>
 	</span>
 	<span>
@@ -63,22 +63,11 @@
 		<ins class="adsbygoogle" style="display:inline-block;width:468px;height:60px"
 			data-ad-client="ca-pub-0037930831928769" data-ad-slot="1591735639"></ins>
 		<script>
-			(adsbygoogle = window.adsbygoogle || []).push({});
+			function RunGoogleAdsenseFooterAd2JavaScript()
+			{
+				(adsbygoogle = window.adsbygoogle || []).push({});
+			}
 		</script>
 	</span>
 </div>
-
-<!-- Microsoft Clarity script for analytics (https://clarity.microsoft.com) -->
-<script type="text/javascript">
-		(function(c,l,a,r,i,t,y){
-				c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-				t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-				y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-		})(window, document, "clarity", "script", "49915jr5qy");
-</script>
-
-<!-- Verify that I own this website to Mastodon so it shows up as verified in my Mastodon profile -->
-<span style="visibility: collapse;">
-	<a rel="me" href="https://hachyderm.io/@deadlydog">Mastodon</a>
-</span>
 <!--========== Dan's Customizations END ==========-->

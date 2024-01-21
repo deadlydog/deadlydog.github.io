@@ -1,0 +1,108 @@
+<!-- Original code taken from https://jekyllcodex.org/without-plugin/cookie-consent/ then modified. -->
+<style>
+	#cookie-notice {
+		padding: 0.5rem 1rem;
+		display: none;
+		text-align: center;
+		position: fixed;
+		bottom: 0;
+		width: 100%;
+		background: #222;
+		color: rgba(255, 255, 255, 0.8);
+	}
+
+	#cookie-notice a {
+		display: inline-block;
+		cursor: pointer;
+		margin-left: 0.5rem;
+	}
+
+	#cookie-notice-accept {
+		background: #07a21c;
+		color: white;
+	}
+
+	#cookie-notice-more-info {
+		background: #007bff;
+		color: white;
+	}
+
+	#cookie-notice-reject {
+		background: #dc3545;
+		color: white;
+	}
+
+	#cookie-notice span {
+			display: block;
+		}
+
+	@media only screen and (max-width: 767px) {
+		/* Reduce max width to prevent text running off-screen on some devices. */
+		#cookie-notice span {
+			width: 80%;
+		}
+	}
+</style>
+
+<div id="cookie-notice">
+	<span>Allow using third party cookies and scripts to improve this website.</span>
+	<span>
+		<a id="cookie-notice-accept" class="btn btn-primary btn-sm">Approve</a>
+		<a id="cookie-notice-more-info" class="btn btn-primary btn-sm" href="/privacy">More info</a>
+		<a id="cookie-notice-reject" class="btn btn-primary btn-sm">Deny</a>
+	</span>
+</div>
+
+<script>
+	function createCookie(name, value, days)
+	{
+		var expires = "";
+		if (days)
+		{
+			var date = new Date();
+			date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+			expires = "; expires=" + date.toUTCString();
+		}
+		document.cookie = name + "=" + value + expires + "; path=/";
+	}
+
+	function readCookie(name)
+	{
+		var nameEQ = name + "=";
+		var ca = document.cookie.split(';');
+		for (var i = 0; i < ca.length; i++)
+		{
+			var c = ca[i];
+			while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+			if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+		}
+		return null;
+	}
+
+	function eraseCookie(name)
+	{
+		createCookie(name, "", -1);
+	}
+
+	if (readCookie('cookie-notice-accepted') == 'true')
+	{
+		// Put scripts that should not be ran until after the user has accepted cookies here.
+		{% include CodeToRunWhenCookiesAreAccepted.js %}
+	}
+	else
+	{
+		document.getElementById('cookie-notice').style.display = 'block';
+	}
+
+	document.getElementById('cookie-notice-accept').addEventListener("click", function ()
+	{
+		createCookie('cookie-notice-accepted', 'true', 180); // Persist cookie for 180 days.
+		document.getElementById('cookie-notice').style.display = 'none';
+		location.reload();
+	});
+
+	document.getElementById('cookie-notice-reject').addEventListener("click", function ()
+	{
+		document.getElementById('cookie-notice').style.display = 'none';
+	});
+</script>
