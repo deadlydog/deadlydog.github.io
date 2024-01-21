@@ -84,10 +84,15 @@
 		createCookie(name, "", -1);
 	}
 
+	function RunCodeThatRequiresUserToAcceptCookies()
+	{
+		// Include the code that requires the user to accept cookies before it runs.
+		{% include CodeToRunWhenCookiesAreAccepted.js %}
+	}
+
 	if (readCookie('cookie-notice-response') == 'accepted')
 	{
-		// Put scripts that should not be ran until after the user has accepted cookies here.
-		{% include CodeToRunWhenCookiesAreAccepted.js %}
+		RunCodeThatRequiresUserToAcceptCookies()
 	}
 	else if (readCookie('cookie-notice-response') == 'rejected')
 	{
@@ -107,6 +112,8 @@
 		document.getElementById('cookie-notice').style.display = 'none';
 
 		// Reload the page so the analytics scripts, etc. are ran on this page, not just future pages.
+		// I considered just calling the RunCodeThatRequiresUserToAcceptCookies() function here, but was
+		// not sure how that would affect some analytics metrics, like the time to load the page, etc.
 		location.reload();
 	});
 
