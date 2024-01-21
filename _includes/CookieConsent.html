@@ -84,7 +84,7 @@
 		createCookie(name, "", -1);
 	}
 
-	if (readCookie('cookie-notice-dismissed') == 'true')
+	if (readCookie('cookie-notice-accepted') == 'true')
 	{
 		// Put scripts that should not be ran until after the user has accepted cookies here.
 		{% include CodeToRunWhenCookiesAreAccepted.js %}
@@ -96,7 +96,7 @@
 
 	document.getElementById('cookie-notice-accept').addEventListener("click", function ()
 	{
-		createCookie('cookie-notice-dismissed', 'true', 31);
+		createCookie('cookie-notice-accepted', 'true', 180); // Persist cookie for 180 days.
 		document.getElementById('cookie-notice').style.display = 'none';
 		location.reload();
 	});
