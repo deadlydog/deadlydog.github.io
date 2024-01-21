@@ -4,9 +4,6 @@
 	things that need to be loaded at the bottom of every page.
  -->
 
-<!-- Include the cookie consent popup. -->
-{% include CookieConsent.html %}
-
 <!-- Microsoft Clarity script for analytics (https://clarity.microsoft.com) -->
 <script type="text/javascript">
 	function RunMsClarityJavaScript()
@@ -28,3 +25,7 @@
 <span style="visibility: collapse;">
 	<a rel="me" href="https://hachyderm.io/@deadlydog">Mastodon</a>
 </span>
+
+<!-- Include the cookie consent popup. -->
+<!-- This should be included last to ensure that any functions it calls have been defined already. -->
+{% include CookieConsent.html %}
