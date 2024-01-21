@@ -85,7 +85,7 @@ Here's a list of places I've changed code. This typically meant copying the file
 - `_layouts/default.html`: Added code to the bottom of the file that:
   - Includes cookie consent prompt.
   - Includes website-level scripts that need to be ran.
-- `_includes/footer.html`: Added code to the bottom of the file that:
+- `_includes/footer/custom.html`: Replaced empty file contents with my own code that:
   - Adds a Donate section.
   - Adds advertisements.
 - `_layouts/home.html`: Added id to 'Recent Posts' heading so we can adjust whitespace around it.

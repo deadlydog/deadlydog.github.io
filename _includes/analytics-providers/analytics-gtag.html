@@ -1,14 +1,18 @@
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.analytics.google.tracking_id }}"></script>
 <script>
+	//========== Dan's Customizations START ==========
 	// Added this wrapper function so that the Google Analytics is not run until after the user has accepted cookies.
 	// This wrapper function is the only change made to this file from the Minimal Mistakes theme.
 	function RunGoogleAnalyticsJavaScript()
 	{
+	//========== Dan's Customizations END ============
 		window.dataLayer = window.dataLayer || [];
 		function gtag() { dataLayer.push(arguments); }
 		gtag('js', new Date());
 
 		gtag('config', '{{ site.analytics.google.tracking_id }}', { 'anonymize_ip': {{ site.analytics.google.anonymize_ip | default: false }}});
+	//========== Dan's Customizations START ==========
 	}
+	//========== Dan's Customizations END ============
 </script>
