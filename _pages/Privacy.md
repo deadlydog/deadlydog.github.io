@@ -5,6 +5,11 @@ title: "🔏 Privacy"
 
 Disclaimer: The opinions expressed herein are my own personal opinions and do not represent my employer’s view in any way.
 
+## Summary
+
+Daniel Schroeder's blog uses Google Analytics and Microsoft Clarity to track visitors to show website statistics (e.g. how many views per month, where people are viewing the website from, most popular pages), and Google AdSense to show ads.
+These services require cookies to function properly.
+
 ## Privacy Policy
 
 Effective date: October, 2023
