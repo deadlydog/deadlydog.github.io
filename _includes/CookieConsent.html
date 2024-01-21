@@ -84,25 +84,36 @@
 		createCookie(name, "", -1);
 	}
 
-	if (readCookie('cookie-notice-accepted') == 'true')
+	if (readCookie('cookie-notice-response') == 'accepted')
 	{
 		// Put scripts that should not be ran until after the user has accepted cookies here.
 		{% include CodeToRunWhenCookiesAreAccepted.js %}
 	}
+	else if (readCookie('cookie-notice-response') == 'rejected')
+	{
+		// The user has already rejected cookies, so do not show the cookie prompt.
+		document.getElementById('cookie-notice').style.display = 'none';
+	}
 	else
 	{
+		// Prompt the user to accept cookies.
 		document.getElementById('cookie-notice').style.display = 'block';
 	}
 
 	document.getElementById('cookie-notice-accept').addEventListener("click", function ()
 	{
-		createCookie('cookie-notice-accepted', 'true', 180); // Persist cookie for 180 days.
+		// Persist cookie acceptance for 180 days and hide the cookie prompt.
+		createCookie('cookie-notice-response', 'accepted', 180);
 		document.getElementById('cookie-notice').style.display = 'none';
+
+		// Reload the page so the analytics scripts, etc. are ran on this page, not just future pages.
 		location.reload();
 	});
 
 	document.getElementById('cookie-notice-reject').addEventListener("click", function ()
 	{
+		// Persist cookie rejection for 1 day so they are not continually prompted while navigating, and hide the cookie prompt.
+		createCookie('cookie-notice-response', 'rejected', 1);
 		document.getElementById('cookie-notice').style.display = 'none';
 	});
 </script>
