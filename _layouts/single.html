@@ -50,6 +50,11 @@ layout: default
         {% if page.link %}<div><a href="{{ page.link }}" class="btn btn--primary">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
       </section>
 
+      <!--========== Dan's Customizations START ==========-->
+			<!-- Show an advertisement after the blog post content. -->
+      {% include PostAdvertisement.html %}
+      <!--========== Dan's Customizations END ==========-->
+
       <footer class="page__meta">
         {% if site.data.ui-text[site.locale].meta_label %}
           <h4 class="page__meta-title">{{ site.data.ui-text[site.locale].meta_label }}</h4>
