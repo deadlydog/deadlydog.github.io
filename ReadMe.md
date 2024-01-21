@@ -82,10 +82,11 @@ Here's a list of places I've changed code. This typically meant copying the file
 - `_data/navigation.yml`: Added Home navigation menu item and commented out Tags.
 - `_includes/comments.html`: Added logic to sort comments by date.
 - `_includes/footer.html`: Added code to the bottom of the file that:
-  - Adds advertisements.
   - Adds a Donate section.
-  - Dynamically adds a "Copy to clipboard" button to all code blocks.
-  - Add verification link for my Mastodon profile.
+  - Adds advertisements.
+- `_layouts/default.html`: Added code to the bottom of the file that:
+  - Includes cookie consent prompt.
+  - Includes website-level scripts that need to be ran.
 - `_layouts/home.html`: Added id to 'Recent Posts' heading so we can adjust whitespace around it.
 - `_config.yml` file.
 - `assets/css/main.scss`:
@@ -101,6 +102,13 @@ Here's a list of files I've added:
 - The `_pages\About.md`, `_pages\Feedback.md`, `_pages\Kudos.md`, and `_pages\Privacy.md` pages.
 - Everything in the `_assets\Posts`, `_assets\Site`, and `_assets\js` directories.
 - Everything in the `_data\comments` directory.
+- Everything in the `deploy` directory, for defining the deployment pipeline and infrastructure as code.
+- `_includes/CodeToRunWhenCookiesAreAccepted.js`: Code to run when the user accepts the cookie consent prompt.
+- `_includes/CookieConsent.html`: Cookie consent prompt.
+- `_includes/CustomWebsiteLevelCode.html`: Code to include on every page of the site.
+  - Adds MS Clarity analytics.
+  - Dynamically adds a "Copy to clipboard" button to all code blocks.
+  - Add verification link for my Mastodon profile.
 - The `favicon.ico` image.
 - The `.vscode` directory.
 - The `ReadMe.md` file.
