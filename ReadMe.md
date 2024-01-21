@@ -80,7 +80,7 @@ This doesn't include the `_config.yml` though, as we're expected to set custom s
 Here's a list of places I've changed code. This typically meant copying the file from the forked minimal-mistakes repo and overriding parts of it:
 
 - `_data/navigation.yml`: Added Home navigation menu item and commented out Tags.
-- `_includes/analytics-providers/analytics-gtag.html`: Wrapped the Google Analytics code in a function so it is not run until user accepts cookies.
+- `_includes/analytics-providers/google-gtag.html`: Wrapped the Google Analytics code in a function so it is not run until user accepts cookies.
 - `_includes/comments.html`: Added logic to sort comments by date.
 - `_layouts/default.html`: Added code to the bottom of the file that:
   - Includes cookie consent prompt.
