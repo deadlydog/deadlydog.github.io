@@ -7,7 +7,7 @@ Disclaimer: The opinions expressed herein are my own personal opinions and do no
 
 ## Summary
 
-Daniel Schroeder's blog uses Google Analytics and Microsoft Clarity to track visitors to show website statistics (e.g. how many views per month, where people are viewing the website from, most popular pages), and Google AdSense to show ads.
+Daniel Schroeder's blog uses Google Analytics and Microsoft Clarity to track visitor metrics for website statistics (e.g. how many views per month, where people are viewing the website from, most popular pages), and Google AdSense to show ads.
 These services require cookies to function properly.
 
 ## Privacy Policy
