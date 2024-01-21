@@ -251,4 +251,12 @@ img.right
 	margin-left: 0.5em;
 }
 
+// Google Ads use the <ins> tag to insert ads, and minimal-mistakes alters <ins> to use a bottom border to underline it.
+// Remove the underline so we don't see it when the ad does not take up the full container width.
+// It is nice for styling when debugging since ads are not loaded, but looks bad in production when ads do load.
+ins.adsbygoogle
+{
+	border-bottom: none;
+}
+
 //========== Dan's Customizations END ==========
