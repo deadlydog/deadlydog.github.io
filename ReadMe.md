@@ -109,9 +109,11 @@ Here's a list of files I've added:
 - `_includes/CodeToRunWhenCookiesAreAccepted.js`: Code to run when the user accepts the cookie consent prompt.
 - `_includes/CookieConsent.html`: Cookie consent prompt.
 - `_includes/CustomWebsiteLevelCode.html`: Code to include on every page of the site.
-  - Adds MS Clarity analytics.
+  - Includes MS Clarity analytics.
   - Dynamically adds a "Copy to clipboard" button to all code blocks.
   - Add verification link for my Mastodon profile.
+  - Includes the cookie consent prompt.
+- `_includes/MicrosoftClarityAnalytics.html`: Microsoft Clarity analytics code.
 - The `favicon.ico` image.
 - The `.vscode` directory.
 - The `ReadMe.md` file.
