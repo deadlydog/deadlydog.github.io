@@ -74,10 +74,12 @@ Currently with the MinimalMistakes theme we are not installing it from a gem, bu
 
 ## Customizations I've made to the theme / site
 
-Anywhere that I make custom code changes, I try to put `Dan's Customizations` in comments, so doing a search of the repo for `Dan` should find all places I've changed / overwritten code.
+Anywhere that I make custom code changes to the theme's files, I try to put `Dan's Customizations` in comments, so doing a search of the repo for `Dan` should find all places I've changed / overwritten code.
 This doesn't include the `_config.yml` though, as we're expected to set custom settings in there.
+Any files that I've created typically use PascalCase for the file name; files overriding a file from the theme typically use lowercase kebab-case.
 
-Here's a list of places I've changed code. This typically meant copying the file from the forked minimal-mistakes repo and overriding parts of it:
+Here's a list of places I've changed code.
+This typically meant copying the file from the forked minimal-mistakes repo and overriding parts of it:
 
 - `_data/navigation.yml`: Added Home navigation menu item and commented out Tags.
 - `_includes/analytics-providers/google-gtag.html`: Wrapped the Google Analytics code in a function so it is not run until user accepts cookies.
