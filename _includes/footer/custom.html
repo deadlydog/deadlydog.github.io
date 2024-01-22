@@ -1,27 +1,7 @@
 <!--========== Dan's Customizations START ==========-->
-<!-- Show the Donate image button at the bottom of the screen. -->
-<div id="Donate">
-	<img id="DonateModalOpenButton" class="donate-button-image" src="/assets/Site/CanadianPoutine.png"
-		alt="Donate button image" />
-</div>
-<div id="DonateModal" class="modal-container">
-	<div id="DonateModalCloseButton" class="modal-close-button">&times;</div>
-	<div class="modal-content">
-		<p>
-			If you've found my blog helpful and would like to show your appreciation, buy me a <a
-				href="https://en.wikipedia.org/wiki/Poutine">poutine</a>! It will encourage me to create more content 😁
-		</p>
 
-		<div>
-			<img class="donate-button-image" src="/assets/Site/CanadianPoutine.png" alt="Poutine image" />
-			<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=G2XLYDXFE2MNQ">
-				<img class="donate-image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif"
-					alt="Donate payment button image" />
-			</a>
-		</div>
-	</div>
-</div>
-<script src="/assets/js/Donate.js" defer></script>
+<!-- Show the Donate image button at the bottom of the screen. -->
+{% include DonationButtonAndModal.html %}
 
 <!-- Put an advertisement in the site's footer. -->
 <div style="text-align: center; margin-bottom: 1rem;">

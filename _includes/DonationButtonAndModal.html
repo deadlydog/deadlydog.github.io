@@ -1,0 +1,180 @@
+<!-- This defines all of the CSS, HTML, and JavaScript needed for the Donate button and modal. -->
+
+<style>
+	 /* Have a fixed donate section on all of the pages (always on-top on bottom-left). */
+	#Donate
+	{
+		position: fixed;
+		width: 100%;
+		max-width: 1300px;	/* Ensure the Donate section doesn't drift too far left on large screens. */
+		bottom: 0;
+		pointer-events: none;	/* Allow clicking through the div to blog content underneath. */
+	}
+
+	#DonateModalOpenButton
+	{
+		z-index: 10;	/* Always on-top, except for modals. */
+		cursor: pointer;
+		pointer-events: auto;	/* Restore allowing clicking this element in the Donate div. */
+	}
+
+	/* Default size for the donate image on large screens. */
+	.donate-button-image
+	{
+		width: 150px;
+	}
+
+	/* Shrink donate image a bit on medium size screens. */
+	@media only screen and (max-width: 1024px)
+	{
+		.donate-button-image
+		{
+			width: 100px;
+		}
+	}
+
+	/* Shrink donate images a lot on smaller screens. */
+	@media only screen and (max-width: 500px)
+	{
+		.donate-button-image
+		{
+			width: 80px;
+		}
+
+		.donate-image
+		{
+			width: 120px;
+		}
+	}
+
+	/* Modal background. */
+	.modal-container
+	{
+		display: none;	/* Hidden by default. */
+		position: fixed;
+		z-index: 100;	/* Always on top. */
+
+		/* Center the modal-container div. */
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+
+		width: 85%;
+		max-width: 600px;
+		overflow: auto;	/* Enable scroll if needed. */
+		background-color: rgb(0, 0, 0);	/* Fallback color. */
+		background-color: rgba(0, 0, 0, 0.9);
+	}
+
+	/* The modal's close button. */
+	.modal-close-button
+	{
+		float: right;
+		margin-right: 20px;
+		color: #f1f1f1;
+		font-size: 40px;
+		font-weight: bold;
+	}
+
+	.modal-close-button:hover,
+	.modal-close-button:focus
+	{
+		color: #bbb;
+		text-decoration: none;
+		cursor: pointer;
+	}
+
+	/* Modal content. */
+	.modal-content
+	{
+		margin: auto;
+		display: block;
+		clear: both;	/* Ensure the content appears below the floated close button. */
+		width: 80%;
+		text-align: center;
+		padding-bottom: 30px;
+		color: #7502ff;
+	}
+
+	.modal-content a
+	{
+		/* Override the footer's "text-decoration: none;" by using !important. https://stackoverflow.com/a/64637823/602585 */
+		text-decoration: underline !important;
+	}
+</style>
+
+<!-- Show the Donate image button at the bottom of the screen. -->
+<div id="Donate">
+	<img id="DonateModalOpenButton" class="donate-button-image" src="/assets/Site/CanadianPoutine.png"
+		alt="Donate button image" />
+</div>
+<div id="DonateModal" class="modal-container">
+	<div id="DonateModalCloseButton" class="modal-close-button">&times;</div>
+	<div class="modal-content">
+		<p>
+			If you've found my blog helpful and would like to show your appreciation, buy me a <a
+				href="https://en.wikipedia.org/wiki/Poutine">poutine</a>! It will encourage me to create more content 😁
+		</p>
+
+		<div>
+			<img class="donate-button-image" src="/assets/Site/CanadianPoutine.png" alt="Poutine image" />
+			<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=G2XLYDXFE2MNQ">
+				<img class="donate-image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif"
+					alt="Donate payment button image" />
+			</a>
+		</div>
+	</div>
+</div>
+
+<script>
+	var donateModal = document.getElementById("DonateModal");
+	var donateModalOpenButton = document.getElementById("DonateModalOpenButton");
+	var donateModalCloseButton = document.getElementById("DonateModalCloseButton");
+
+	// When the user clicks the open button, open the modal.
+	donateModalOpenButton.onclick = function (event)
+	{
+		if (DonateModalIsOpen())
+		{
+			CloseDonateModal();
+		}
+		else
+		{
+			OpenDonateModal();
+			event.stopPropagation();	// Prevent the window event handler from closing the modal instantly.
+		}
+	}
+
+	// When the user clicks the close button, close the modal.
+	donateModalCloseButton.onclick = function (event)
+	{
+		CloseDonateModal();
+	}
+
+	// When the user clicks anywhere outside the modal, close the modal.
+	window.onclick = function (event)
+	{
+		// Must check both the modal and it's children.
+		var userClickedOutsideOfModal = (event.target !== donateModal && !donateModal.contains(event.target))
+
+		if (DonateModalIsOpen() && userClickedOutsideOfModal)
+		{
+			CloseDonateModal();
+		}
+	}
+
+	function OpenDonateModal()
+	{
+		donateModal.style.display = "block";
+	}
+
+	function CloseDonateModal()
+	{
+		donateModal.style.display = "none";
+	}
+
+	function DonateModalIsOpen()
+	{
+		return donateModal.style.display == "block";
+	}
+</script>

@@ -113,6 +113,7 @@ Here's a list of files I've added:
   - Dynamically adds a "Copy to clipboard" button to all code blocks.
   - Add verification link for my Mastodon profile.
   - Includes the cookie consent prompt.
+- `_includes/DonationButtonAndModal.html`: Donation button and modal.
 - `_includes/MicrosoftClarityAnalytics.html`: Microsoft Clarity analytics code.
 - The `favicon.ico` image.
 - The `.vscode` directory.
