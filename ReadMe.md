@@ -97,7 +97,6 @@ This typically meant copying the file from the forked minimal-mistakes repo and 
   - Added class used for the site description in the masthead.html.
   - Adjusted colors used for inline code text.
   - Added styling for <kbd> elements.
-  - Added styles for custom Donate sections.
 
 Here's a list of files I've added:
 
@@ -113,7 +112,7 @@ Here's a list of files I've added:
   - Dynamically adds a "Copy to clipboard" button to all code blocks.
   - Add verification link for my Mastodon profile.
   - Includes the cookie consent prompt.
-- `_includes/DonationButtonAndModal.html`: Donation button and modal.
+- `_includes/DonationButtonAndModal.html`: All code for the Donation button and modal components.
 - `_includes/MicrosoftClarityAnalytics.html`: Microsoft Clarity analytics code.
 - The `favicon.ico` image.
 - The `.vscode` directory.
