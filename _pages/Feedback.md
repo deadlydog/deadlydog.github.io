@@ -9,13 +9,36 @@ This page is a compilation of that feedback.
 
 ## What my colleagues have to say about me
 
-2023-05-03: PDLG (Product Development Leadership Group) and Development Leads in Slack:
+2024-01-15 - Anonymous feedback from 4 individuals on a lunch and learn presentation I gave on Dev Containers and GitHub Codespaces:
+
+Individual 1:
+
+> I really enjoyed how Dan made it so people could follow along in Visual Studio Code and try setting up their own Dev Containers, it really helped to reinforce the concepts that were being presented.
+> Dan's presentation skills are always top notch!
+
+Individual 2:
+
+> I really enjoyed the hands on/demo format.
+> I'm sure Dan could've presented some slides and called it a day but being able to actually try something is extremely helpful for my knowledge retention.
+
+Individual 3:
+
+> Dan is great at explaining things!
+> I thought he chose a really nice level of detail, where I felt like I saw and understood the actual code being used to run and use dev containers, but also wasn't bogged down with unnecessary details.
+
+Individual 4:
+
+> Great balance in supporting explanations with slides and practical demonstrations.
+
+---
+
+2023-05-03 - PDLG (Product Development Leadership Group) and Development Leads in Slack:
 
 > Dan is an amazing gift to us
 
 ---
 
-2022-11-08: Steven Swab in Slack:
+2022-11-08 - Steven Swab in Slack:
 
 > I wanted to give @deadlydog-DanSchroeder a shout out for exemplifying a number of our core values.
 > He's a `High-horsepower` guy who `Delivers Results` and demonstrates excellent `Servant Leadership`.
