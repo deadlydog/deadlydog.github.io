@@ -2,7 +2,7 @@
 title: "Several ways to explore your Azure resources"
 permalink: /Several-ways-to-explore-your-Azure-resources/
 #date: 2099-01-15T00:00:00-06:00
-last_modified_at: 2024-01-20
+last_modified_at: 2024-01-24
 comments_locked: false
 toc: false
 categories:
@@ -18,9 +18,10 @@ Here I present a few ways to explore your Azure resources, for when the portal's
 ## Context
 
 I needed to find all of the Azure `Cloud service (classic)` resources that we had in our organization, since that service is [being retired on August 31, 2024](https://azure.microsoft.com/en-ca/updates/cloud-services-retirement-announcement/).
-Unfortunately, the Azure portal does not let you simply filter or search for resources of that type, so I had to find another way.
+I initially overlooked the Azure portal's `All Resources` blade, which would have allowed me to filter by resource type.
+Along the way I discovered some other ways to browse and filter my Azure resources, and thought I'd share them here.
 
-Spoiler: I show how to find them in the Azure Resource Graph Explorer section below.
+Spoiler: I show how to find the Classic services in the Azure Portal and Azure Resource Graph Explorer sections below.
 
 ## Ways to explore your Azure resources
 
@@ -43,8 +44,16 @@ NOTE: To ensure you are able to view and search all of the subscriptions you hav
 
 ![Azure Portal default subscription filter](/assets/Posts/2024-01-19-Several-ways-to-explore-your-Azure-resources/azure-portal-default-subscription-filter-screenshot.png)
 
+There is also an `All Resources` blade that will allow you to browse, search, sort, and filter all resources in the subscriptions you have access to.
+It shows you the resource Name, Type, Location, Resource Group, and Subscription, and also allows you to filter your resources by Tag.
+This is a powerful blade that can be useful for finding resources of a specific type, in a specific location, or with a specific tag.
+
+![Azure Portal All Resources blade](/assets/Posts/2024-01-19-Several-ways-to-explore-your-Azure-resources/azure-portal-all-resources-screenshot.png)
+
+To solve my initial problem, I could use the `All Resources` blade to filter by `Cloud service (classic)` type.
+
 The portal does not always expose all of the properties of a resource, or let you search or filter by them.
-If you are looking for something specific, you may need to use another approach.
+If you are looking for something more specific, you may need to use another approach.
 
 ### Azure Resource Explorer
 
@@ -140,7 +149,7 @@ resources
 | where properties['emailReceivers'][0]['emailAddress'] == "me@domain.com"
 ```
 
-And to solve my initial problem, here is a query to retrieve all of the `Cloud service (classic)` resources:
+Here is a query that could be used solve my initial problem to retrieve all of the `Cloud service (classic)` resources:
 
 ```powershell
 resources
@@ -151,6 +160,8 @@ resources
 Here's a screenshot of the query editor with the above query:
 
 ![Azure Resource Graph Explorer](/assets/Posts/2024-01-19-Several-ways-to-explore-your-Azure-resources/azure-resource-graph-explorer-screenshot.png)
+
+If needed, I could refine the query to further filter down the results based on other resource properties.
 
 The portal allows you to download the query results as a CSV file, so they are easy to share with others.
 Also, unlike the PowerShell module and CLI, the Resource Graph Explorer is not scoped to a specific subscription at a time, so you can easily query across all of your subscriptions.
