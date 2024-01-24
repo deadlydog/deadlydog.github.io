@@ -199,8 +199,8 @@ Of course, these are just recommendations, and you can use whichever approach yo
 We've seen several ways to get started exploring your Azure resources.
 
 For my initial problem of finding all "Cloud service (classic)" resources, I could have also used the Azure PowerShell module or Azure CLI.
-I find the Azure Resource Graph Explorer can be the easiest to get started with, as it allows you to browse through services and properties easily, which is nice when you do not know the specific properties, terms, and syntax to use.
-Also, it does not require any additional setup (no software to install or connecting to Azure).
+The Azure Portal and Azure Resource Graph Explorer can be the easiest to get started with, as they allow you to browse through services and properties easily, which is nice when you do not know the specific properties, terms, and syntax to use.
+Also, they do not require any additional setup (no software to install or connecting to Azure).
 It all comes down using the tool you are most comfortable with though.
 
 Hopefully you've learned something new and this helps you find the resources you are looking for!
