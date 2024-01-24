@@ -50,7 +50,7 @@ This is a powerful blade that can be useful for finding resources of a specific 
 
 ![Azure Portal All Resources blade](/assets/Posts/2024-01-19-Several-ways-to-explore-your-Azure-resources/azure-portal-all-resources-screenshot.png)
 
-To solve my initial problem, I could use the `All Resources` blade to filter by `Cloud service (classic)` type.
+To solve my initial problem, I could use the `All Resources` blade to filter by Type `Cloud service (classic)`.
 
 The portal does not always expose all of the properties of a resource, or let you search or filter by them.
 If you are looking for something more specific, you may need to use another approach.
