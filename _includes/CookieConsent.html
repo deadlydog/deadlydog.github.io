@@ -32,10 +32,6 @@
 		color: white;
 	}
 
-	#cookie-notice span {
-			display: block;
-		}
-
 	@media only screen and (max-width: 767px) {
 		/* Reduce max width to prevent text running off-screen on some devices. */
 		#cookie-notice span {
@@ -45,12 +41,12 @@
 </style>
 
 <div id="cookie-notice">
-	<span>Allow using third party cookies and scripts to improve this website.</span>
-	<span>
+	<div style="margin-bottom: 0.25rem;">Allow using third party cookies and scripts to improve this website.</div>
+	<div>
 		<a id="cookie-notice-accept" class="btn btn-primary btn-sm">Approve</a>
 		<a id="cookie-notice-more-info" class="btn btn-primary btn-sm" href="/privacy">More info</a>
 		<a id="cookie-notice-reject" class="btn btn-primary btn-sm">Deny</a>
-	</span>
+	</div>
 </div>
 
 <script>
