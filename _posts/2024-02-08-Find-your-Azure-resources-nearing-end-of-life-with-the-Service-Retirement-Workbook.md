@@ -12,7 +12,8 @@ tags:
 ---
 
 The Azure portal has a Service Retirement Workbook that shows all of the services you are using which are being retired within the next few years.
-This is extremely helpful when your organization has many teams using a lot of different services, and they need time to plan the migration work into their roadmaps.
+This could be things like having to update your apps because Azure no longer supports TLS 1.0/1.1, old versions of Node.js or .NET, or the retiring of a service like Classic Cloud Services.
+This is extremely helpful when your organization has many teams using a lot of different services, and they need time to plan the update or migration work into their roadmaps.
 Shout out to my colleague Amer Gill for showing me this!
 
 To access the view in the Azure portal, open up the `Advisor`, navigate to `Workbooks` (or use [this link](https://portal.azure.com/#view/Microsoft_Azure_Expert/AdvisorMenuBlade/~/workbooks)), and open the `Service Retirement (Preview)` workbook.
