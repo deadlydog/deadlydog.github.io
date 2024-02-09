@@ -36,6 +36,9 @@ Anybody in the organization is able to view the workbook, and as teams migrate t
 __Recommended Action:__ Set up a recurring reminder to check this workbook every month or quarter, so you can stay on top of any upcoming retirements that may affect you or your organization.
 Share this information with other teams so they can do the same.
 
+If you are curious or just like to stay up-to-date, you can also toggle the workbook view to show all upcoming service retirements, not just retirements for the services that you are currently using.
+There is also [the Azure Updates page](https://azure.microsoft.com/en-us/updates/?updateType=retirements) that lists upcoming and past retirements, can be searched, and has an RSS feed that you can subscribe to.
+
 Did you find this information as helpful as I did?
 Have any other related tips?
 Let me know in the comments below.
