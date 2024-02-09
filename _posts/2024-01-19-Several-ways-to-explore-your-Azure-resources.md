@@ -23,7 +23,7 @@ Along the way I discovered some other ways to browse and filter my Azure resourc
 
 Spoiler: I show how to find the Classic services in the Azure Portal and Azure Resource Graph Explorer sections below.
 
-> Update: For an even better way to track down services that are being retired, check out my post on the [Azure Service Retirement Workbook](/Azure-Service-Retirement-Workbook-is-so-useful/).
+> Update: For an even better way to track down services that are being retired, check out my post on the [Azure Service Retirement Workbook](/Find-your-Azure-resources-nearing-end-of-life-with-the-Service-Retirement-Workbook/).
 
 ## Ways to explore your Azure resources
 
