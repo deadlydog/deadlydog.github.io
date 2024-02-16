@@ -119,4 +119,15 @@
 		createCookie('cookie-notice-response', 'rejected', 1);
 		document.getElementById('cookie-notice').style.display = 'none';
 	});
+
+
+
+
+	// Experimenting to see which services break GDPR compliance.
+
+	// Google Analytics are not included when running locally/debugging, so to avoid an error only call this function if it is defined.
+	if (typeof (RunGoogleAdsensePostAdvertisementJavaScript) === typeof (Function))
+	{
+		RunGoogleAnalyticsJavaScript()
+	}
 </script>
