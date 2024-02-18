@@ -125,9 +125,11 @@
 
 	// Experimenting to see which services break GDPR compliance.
 
-	// Google Analytics are not included when running locally/debugging, so to avoid an error only call this function if it is defined.
+	// If the user is not viewing a post, the Post Ad function will not be defined, so only call it if it is defined.
 	if (typeof (RunGoogleAdsensePostAdvertisementJavaScript) === typeof (Function))
 	{
-		RunGoogleAnalyticsJavaScript()
+		RunGoogleAdsensePostAdvertisementJavaScript()
 	}
+
+	RunGoogleAdsenseFooterAdvertisementJavaScript()
 </script>
