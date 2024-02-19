@@ -86,19 +86,29 @@
 		{% include CodeToRunWhenCookiesAreAccepted.js %}
 	}
 
-	if (readCookie('cookie-notice-response') == 'accepted')
+	// Disable our custom cookie consent banner, as it looks like Google displays its own consent automatically
+	// for countries that require it: https://umbracocommunity.social/@steve_gibe/111925508834045878
+	var useCustomCookieConsentBanner = false;
+	if (useCustomCookieConsentBanner)
 	{
-		RunCodeThatRequiresUserToAcceptCookies()
-	}
-	else if (readCookie('cookie-notice-response') == 'rejected')
-	{
-		// The user has already rejected cookies, so do not show the cookie prompt.
-		document.getElementById('cookie-notice').style.display = 'none';
+		if (readCookie('cookie-notice-response') == 'accepted')
+		{
+			RunCodeThatRequiresUserToAcceptCookies()
+		}
+		else if (readCookie('cookie-notice-response') == 'rejected')
+		{
+			// The user has already rejected cookies, so do not show the cookie prompt.
+			document.getElementById('cookie-notice').style.display = 'none';
+		}
+		else
+		{
+			// Prompt the user to accept cookies.
+			document.getElementById('cookie-notice').style.display = 'block';
+		}
 	}
 	else
 	{
-		// Prompt the user to accept cookies.
-		document.getElementById('cookie-notice').style.display = 'block';
+		RunCodeThatRequiresUserToAcceptCookies()
 	}
 
 	document.getElementById('cookie-notice-accept').addEventListener("click", function ()
@@ -119,11 +129,4 @@
 		createCookie('cookie-notice-response', 'rejected', 1);
 		document.getElementById('cookie-notice').style.display = 'none';
 	});
-
-
-
-
-	// Experimenting to see which services break GDPR compliance.
-
-	RunMsClarityJavaScript()
 </script>
