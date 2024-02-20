@@ -82,7 +82,9 @@ Here's a list of places I've changed code.
 This typically meant copying the file from the forked minimal-mistakes repo and overriding parts of it:
 
 - `_data/navigation.yml`: Added Home navigation menu item and commented out Tags.
-- `_includes/analytics-providers/google-gtag.html`: Wrapped the Google Analytics code in a function so it is not run until user accepts cookies.
+- `_includes/analytics-providers/google-gtag.html`:
+  - Replaced contents with updated Google Analytics tags added in 2023.
+  - Wrapped the Google Analytics code in a function so it is not run until user accepts cookies consent.
 - `_includes/comments.html`: Added logic to sort comments by date.
 - `_layouts/default.html`: Added code to the bottom of the file that:
   - Includes cookie consent prompt.
