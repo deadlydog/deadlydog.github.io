@@ -32,20 +32,17 @@
 		color: white;
 	}
 
-	@media only screen and (max-width: 767px) {
-		/* Reduce max width to prevent text running off-screen on some devices. */
-		#cookie-notice span {
-			width: 80%;
-		}
+	#cookie-notice-buttons {
+		display: inline-block;
 	}
 </style>
 
 <div id="cookie-notice">
-	<div>This website uses cookies to ensure you get the best experience.</div>
-	<div>
+	<span>This website uses cookies to ensure you get the best experience.</span>
+	<span id="cookie-notice-buttons">
 		<a id="cookie-notice-more-info" class="btn btn-primary btn-sm" href="/privacy">More info</a>
 		<a id="cookie-notice-accept" class="btn btn-primary btn-sm">OK</a>
-	</div>
+	</span>
 </div>
 
 <script>
