@@ -10,6 +10,9 @@ Disclaimer: The opinions expressed herein are my own personal opinions and do no
 Daniel Schroeder's blog uses Google Analytics and Microsoft Clarity to track visitor metrics for website statistics (e.g. how many views per month, where people are viewing the website from, most popular pages), and Google AdSense to show ads.
 These services require cookies to function properly.
 
+By using this website you consent to the use of cookies and the collection of data by these services.
+Not sure what cookies are or how to disable them? [Learn more here](https://www.cookiesandyou.com).
+
 You may also comment on a blog post and provide your name and email address.
 The email address is hashed and may be used to notify you of new comments on the blog post you commented on.
 

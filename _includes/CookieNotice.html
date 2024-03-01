@@ -41,11 +41,10 @@
 </style>
 
 <div id="cookie-notice">
-	<div style="margin-bottom: 0.25rem;">Allow using third party cookies and scripts to improve this website.</div>
+	<div>This website uses cookies to ensure you get the best experience.</div>
 	<div>
-		<a id="cookie-notice-accept" class="btn btn-primary btn-sm">Approve</a>
 		<a id="cookie-notice-more-info" class="btn btn-primary btn-sm" href="/privacy">More info</a>
-		<a id="cookie-notice-reject" class="btn btn-primary btn-sm">Deny</a>
+		<a id="cookie-notice-accept" class="btn btn-primary btn-sm">OK</a>
 	</div>
 </div>
 
@@ -80,53 +79,30 @@
 		createCookie(name, "", -1);
 	}
 
-	function RunCodeThatRequiresUserToAcceptCookies()
+	function RunThirdPartyCodeThatUsesCookies()
 	{
-		// Include the code that requires the user to accept cookies before it runs.
-		{% include CodeToRunWhenCookiesAreAccepted.js %}
+		{% include RunThirdPartyCodeThatUsesCookies.js %}
 	}
 
-	// Disable our custom cookie consent banner, as it looks like Google displays its own consent automatically
-	// for countries that require it: https://umbracocommunity.social/@steve_gibe/111925508834045878
-	var useCustomCookieConsentBanner = false;
-	if (useCustomCookieConsentBanner)
+	// Rather than requiring consent, we just display a notice and assume consent if the user continues to use the website.
+	// Google displays its own consent automatically for countries that require it: https://umbracocommunity.social/@steve_gibe/111925508834045878
+	RunThirdPartyCodeThatUsesCookies()
+
+	if (readCookie('cookie-notice-response') != 'accepted')
 	{
-		if (readCookie('cookie-notice-response') == 'accepted')
-		{
-			RunCodeThatRequiresUserToAcceptCookies()
-		}
-		else if (readCookie('cookie-notice-response') == 'rejected')
-		{
-			// The user has already rejected cookies, so do not show the cookie prompt.
-			document.getElementById('cookie-notice').style.display = 'none';
-		}
-		else
-		{
-			// Prompt the user to accept cookies.
-			document.getElementById('cookie-notice').style.display = 'block';
-		}
-	}
-	else
-	{
-		RunCodeThatRequiresUserToAcceptCookies()
+		// Display the cookie notice.
+		document.getElementById('cookie-notice').style.display = 'block';
 	}
 
 	document.getElementById('cookie-notice-accept').addEventListener("click", function ()
 	{
-		// Persist cookie acceptance for 180 days and hide the cookie prompt.
+		// Persist cookie acceptance for 180 days and hide the cookie notice.
 		createCookie('cookie-notice-response', 'accepted', 180);
 		document.getElementById('cookie-notice').style.display = 'none';
 
 		// Reload the page so the analytics scripts, etc. are ran on this page, not just future pages.
-		// I considered just calling the RunCodeThatRequiresUserToAcceptCookies() function here, but was
+		// I considered just calling the RunThirdPartyCodeThatUsesCookies() function here, but was
 		// not sure how that would affect some analytics metrics, like the time to load the page, etc.
 		location.reload();
-	});
-
-	document.getElementById('cookie-notice-reject').addEventListener("click", function ()
-	{
-		// Persist cookie rejection for 1 day so they are not continually prompted while navigating, and hide the cookie prompt.
-		createCookie('cookie-notice-response', 'rejected', 1);
-		document.getElementById('cookie-notice').style.display = 'none';
 	});
 </script>
