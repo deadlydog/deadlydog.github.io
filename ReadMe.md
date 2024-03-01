@@ -84,10 +84,10 @@ This typically meant copying the file from the forked minimal-mistakes repo and 
 - `_data/navigation.yml`: Added Home navigation menu item and commented out Tags.
 - `_includes/analytics-providers/google-gtag.html`:
   - Replaced contents with updated Google Analytics tags added in 2023.
-  - Wrapped the Google Analytics code in a function so it is not run until user accepts cookies consent.
+  - Wrapped the Google Analytics code in a function so we can control if it runs or not based on our cookie consent requirements.
 - `_includes/comments.html`: Added logic to sort comments by date.
 - `_layouts/default.html`: Added code to the bottom of the file that:
-  - Includes cookie consent prompt.
+  - Includes cookie notice prompt.
   - Includes website-level scripts that need to be ran.
 - `_includes/footer/custom.html`: Replaced empty file contents with my own code that:
   - Adds a Donate section.
@@ -107,15 +107,15 @@ Here's a list of files I've added:
 - Everything in the `_assets\Posts`, `_assets\Site`, and `_assets\js` directories.
 - Everything in the `_data\comments` directory.
 - Everything in the `deploy` directory, for defining the deployment pipeline and infrastructure as code.
-- `_includes/CodeToRunWhenCookiesAreAccepted.js`: Code to run when the user accepts the cookie consent prompt.
-- `_includes/CookieConsent.html`: Cookie consent prompt.
+- `_includes/CookieNotice.html`: Cookie notice banner.
 - `_includes/CustomWebsiteLevelCode.html`: Code to include on every page of the site.
   - Includes MS Clarity analytics.
   - Dynamically adds a "Copy to clipboard" button to all code blocks.
   - Add verification link for my Mastodon profile.
-  - Includes the cookie consent prompt.
+  - Includes the cookie notice prompt.
 - `_includes/DonationButtonAndModal.html`: All code for the Donation button and modal components.
 - `_includes/MicrosoftClarityAnalytics.html`: Microsoft Clarity analytics code.
+- `_includes/RunThirdPartyCodeThatUsesCookies.js`: Calls third-party code that uses cookies (e.g. analytics, ads).
 - The `favicon.ico` image.
 - The `.vscode` directory.
 - The `ReadMe.md` file.
