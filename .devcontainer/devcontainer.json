@@ -12,6 +12,9 @@
 		"ghcr.io/devcontainers/features/powershell:1": { }
 	},
 
+	// Run commands after the container is created.
+	"postCreateCommand": "bundle install",
+
 	// Configure tool-specific properties.
 	"customizations": {
 		"vscode": {
@@ -30,9 +33,6 @@
 			]
 		}
 	},
-
-	// Run commands after the container is created.
-	"postCreateCommand": "bundle install",
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	"forwardPorts": [4000]
