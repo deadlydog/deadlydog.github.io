@@ -13,7 +13,7 @@ Automate EVERYTHING!
 
 You can contact me on Twitter [@deadlydog](https://twitter.com/deadlydog), or [send me an email](mailto:deadlydog@hotmail.com).
 
-## 🛠 Things I've Created
+## 🛠 Things I've created
 
 ### 💾 Software
 
@@ -59,6 +59,12 @@ Here are some websites that I've made:
 - (2005) PostYourWebsite.com - Search for other peoples websites, and post your own (no longer exists).
 - (2003) HelpfulPCTools.com - Free tools and advice about general PC maintenance (viruses, spyware, etc.) (no longer exists).
 
+### 📣 Public speaking
+
+Some public speaking I've done outside of work:
+
+- [HackRegina Lunch n' Learn](https://www.eventbrite.ca/e/lunch-n-learn-exploring-dev-containers-and-github-codespaces-tickets-785976245107?src=hackregina) on March 8, 2024: Exploring Dev Containers and GitHub Codespaces ([slide deck](https://github.com/deadlydog/Presentation.DevContainersAndGitHubCodespaces))
+
 ## 🙏 Feedback and kudos
 
 [See what my colleagues have said about me](https://blog.danskingdom.com/feedback) over the years.
@@ -69,6 +75,6 @@ Here are some websites that I've made:
 
 All material found on this blog is offered up under the [Creative Commons 3.0 License](http://creativecommons.org/licenses/by/3.0/). This basically says that you are free to share or change the information provided, as long as you Attribute the original work to me, preferably by linking back to the webpage.
 
-## 🔏 Privacy Policy
+## 🔏 Privacy policy
 
 [View the privacy policy](https://blog.danskingdom.com/privacy).
