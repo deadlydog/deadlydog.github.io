@@ -35,7 +35,7 @@ When writing blog posts and recording videos, I have time to gather my thoughts 
 While chatting live, I don't have that luxury.
 After we were done recording I was soon thinking of all the things that I could have said better, or things that I left out and should have mentioned.
 
-If I was able to edit the podcast, these are some things additional things I would have mentioned:
+If I was able to edit the podcast, these are some additional things I would have mentioned:
 
 ### My [PowerShell tiPS module](https://github.com/deadlydog/PowerShell.tiPS)
 
