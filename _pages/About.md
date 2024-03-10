@@ -63,7 +63,8 @@ Here are some websites that I've made:
 
 Some public speaking I've done outside of work:
 
-- [HackRegina Lunch n' Learn](https://www.eventbrite.ca/e/lunch-n-learn-exploring-dev-containers-and-github-codespaces-tickets-785976245107?src=hackregina) on March 8, 2024: Exploring Dev Containers and GitHub Codespaces ([slide deck](https://github.com/deadlydog/Presentation.DevContainersAndGitHubCodespaces))
+- (March 8, 2024) [HackRegina Lunch n' Learn](https://www.eventbrite.ca/e/lunch-n-learn-exploring-dev-containers-and-github-codespaces-tickets-785976245107?src=hackregina): Exploring Dev Containers and GitHub Codespaces ([slide deck](https://github.com/deadlydog/Presentation.DevContainersAndGitHubCodespaces)).
+- (January 15, 2024) [PowerShell Podcast interview](/I-was-the-guest-for-the-100th-episode-of-The-PowerShell-Podcast/): Episode 100 of the PowerShell Podcast.
 
 ## 🙏 Feedback and kudos
 
@@ -73,8 +74,8 @@ Some public speaking I've done outside of work:
 
 ## © License
 
-All material found on this blog is offered up under the [Creative Commons 3.0 License](http://creativecommons.org/licenses/by/3.0/). This basically says that you are free to share or change the information provided, as long as you Attribute the original work to me, preferably by linking back to the webpage.
+All material found on this blog is offered up under the [Creative Commons 4.0 License](http://creativecommons.org/licenses/by/4.0/). This basically says that you are free to share or change the information provided, as long as you Attribute the original work to me, preferably by linking back to the webpage.
 
 ## 🔏 Privacy policy
 
-[View the privacy policy](https://blog.danskingdom.com/privacy).
+[View the privacy policy](https://blog.danskingdom.com/privacy) for this website.
