@@ -22,7 +22,7 @@ I recently discovered the awesome [Format Files VS Code extension](https://marke
 Typically you would need to open each file in Visual Studio Code and run the `Format Document` command manually, but with this extension you can format all files with a single command.
 This allows you to easily ensure all files are formatted consistently.
 This is especially useful if you have a large codebase and change your code formatting settings.
-e.g. changing your `.editorconfig` or `.prettierrc` settings, or modifying your VS Code code-formatting settings.
+e.g. changing your `.editorconfig` or `.prettierrc` settings, or modifying your VS Code code formatting settings.
 
 The extension still needs to manually open each file in the editor and apply the formatting, so it can take a little while to run, but it sure beats doing it manually.
 I hope you find this extension as helpful as I have.
