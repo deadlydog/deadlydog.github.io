@@ -80,6 +80,8 @@ Due to this, I didn't see too many things from the presentations that I wasn't a
 Almost everything shown was something that I already had experience with, or that I had seen talked about in a social media or blog post at some point.
 Granted, there were often 5 sessions happening simultaneously and I could only attend one, so I'm sure I missed out on many great things and am looking forward to watching the recordings in the coming weeks.
 Also, I talked to many people who were newer to PowerShell (1 - 5 years), or who didn't regularly keep up with the latest tech news, and they were getting a lot of real world value to take home from almost every session.
+The fact that I didn't learn as much from many of the sessions is more of a reflection of my experience level and the particular sessions that I chose to attend, not a reflection of the quality of the content or presenters.
+There were a couple presentations that I did learn quite a lot, such as how to write your own feedback providers, and one on using machine learning in your Prometheus metrics for early anomaly detection and alerting.
 
 Reflecting back, I need to remember to adjust my expectations for this type of conference.
 At conferences like MS Build or Ignite, there are TONS of new product announcements.
@@ -94,9 +96,10 @@ It is a conference by the community, for the community, to share knowledge and e
 And community isn't something that only happens once a year at the Summit; it happens all year long on social media, [the PowerShell forums](https://forums.powershell.org), [the PowerShell Discord server](https://discord.gg/powershell), and blogs.
 Summit offers the opportunity to meet and interact with this great community in person and to dive deep into topics, which is something that is hard to do asynchronously online.
 
-While much of the session content was a good refresher for me, I did still learn a few new things.
+Much of the session content was a good refresher for me, and I did still learn quite a few new things.
 Particularly, there were a number of community modules that I had never heard of, or had heard of but never really explored, and getting to see them in action was great.
 There's a couple that I'll be adding to my toolkit.
+Also, getting to talk with the presenters afterward was valuable as it allowed me to ask questions and dive deeper into the content they delivered.
 
 I must say too that the quality of the presenters was top-notch.
 I was surprised, considering the majority of them are just other community members like myself.
