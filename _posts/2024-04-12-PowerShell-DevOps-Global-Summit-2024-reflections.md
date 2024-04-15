@@ -112,13 +112,13 @@ I was quite nervous beforehand, but had many attendees afterward tell me that th
 I ran a little over my time and had to skip my last two slides, and had a hiccup in my demos where GitHub Actions had a network issue publishing the module to the PowerShell Gallery and had to be reran, but overall I am happy with how everything turned out.
 I had a number of people ask questions afterward, and had some great conversations later with others about the content.
 
-![Dan presenting](/assets/Posts/2024-04-12-PowerShell-DevOps-Global-Summit-2024-Reflections/dan-presenting.jpg)
+![Dan presenting](/assets/Posts/2024-04-12-PowerShell-DevOps-Global-Summit-2024-reflections/dan-presenting.jpg)
 
 Since this was both my first time attending Summit and my first time presenting, I wanted to do something special.
 I created stickers to promote my [tiPS module](https://github.com/deadlydog/PowerShell.tiPS), and created a few t-shirts to give away to those who asked questions in my session.
 
-![tiPS stickers](/assets/Posts/2024-04-12-PowerShell-DevOps-Global-Summit-2024-Reflections/tiPS-sticker.jpg)
-![tiPS t-shirt](/assets/Posts/2024-04-12-PowerShell-DevOps-Global-Summit-2024-Reflections/tiPS-shirt.jpg)
+![tiPS stickers](/assets/Posts/2024-04-12-PowerShell-DevOps-Global-Summit-2024-reflections/tiPS-sticker.jpg)
+![tiPS t-shirt](/assets/Posts/2024-04-12-PowerShell-DevOps-Global-Summit-2024-reflections/tiPS-shirt.jpg)
 
 As a presenter, I'll say that the process of getting set up and ready to present was easy and very smooth.
 I'm looking forward to seeing the feedback that attendees left for me, watching the recording once it is posted in a few weeks, and am hoping to present again next year.
