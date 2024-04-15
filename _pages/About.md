@@ -63,8 +63,9 @@ Here are some websites that I've made:
 
 Some public speaking I've done outside of work:
 
-- (March 8, 2024) [HackRegina Lunch n' Learn](https://www.eventbrite.ca/e/lunch-n-learn-exploring-dev-containers-and-github-codespaces-tickets-785976245107?src=hackregina): Exploring Dev Containers and GitHub Codespaces ([slide deck](https://github.com/deadlydog/Presentation.DevContainersAndGitHubCodespaces)).
-- (January 15, 2024) [PowerShell Podcast interview](/I-was-the-guest-for-the-100th-episode-of-The-PowerShell-Podcast/): Episode 100 of the PowerShell Podcast.
+- April 10, 2024: [PowerShell + DevOps Global Summit North America 2024](https://www.powershellsummit.org): Stop publishing your PowerShell modules. Automate it in 2 minutes! ([slide deck](https://github.com/deadlydog/Presentation.StopManuallyPublishingYourPowerShellModules)).
+- March 8, 2024: [HackRegina Lunch n' Learn](https://www.eventbrite.ca/e/lunch-n-learn-exploring-dev-containers-and-github-codespaces-tickets-785976245107?src=hackregina): Exploring Dev Containers and GitHub Codespaces ([slide deck](https://github.com/deadlydog/Presentation.DevContainersAndGitHubCodespaces)).
+- January 15, 2024: [PowerShell Podcast interview](/I-was-the-guest-for-the-100th-episode-of-The-PowerShell-Podcast/): Episode 100 of the PowerShell Podcast.
 
 ## 🙏 Feedback and kudos
 
