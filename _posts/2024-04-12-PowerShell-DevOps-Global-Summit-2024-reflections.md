@@ -2,7 +2,7 @@
 title: "PowerShell + DevOps Global Summit 2024 reflections"
 permalink: /PowerShell-DevOps-Global-Summit-2024-reflections/
 #date: 2099-01-15T00:00:00-06:00
-#last_modified_at: 2099-01-22
+last_modified_at: 2024-05-07
 comments_locked: false
 toc: false
 categories:
@@ -165,3 +165,5 @@ The week before Summit I spent a few hours with a proof of concept and released 
 It's designed to help make exploring and debugging PowerShell from the terminal a bit quicker and easier.
 It's still in the early stages and I need to add some better defaults and more functionality to it, but am excited to see where it goes.
 Check it out and let me know what you think.
+
+> Update May 2024: I also wrote [this other blog post](https://www.iqmetrix.com/blog/iqmetrix-expertise-in-the-wild-contributing-to-the-powershell-community) for my company if you want to read more about my experience.
