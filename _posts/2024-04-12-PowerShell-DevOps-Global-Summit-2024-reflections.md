@@ -2,7 +2,7 @@
 title: "PowerShell + DevOps Global Summit 2024 reflections"
 permalink: /PowerShell-DevOps-Global-Summit-2024-reflections/
 #date: 2099-01-15T00:00:00-06:00
-last_modified_at: 2024-05-07
+last_modified_at: 2024-05-13
 comments_locked: false
 toc: false
 categories:
@@ -126,6 +126,8 @@ I created stickers to promote my [tiPS module](https://github.com/deadlydog/Powe
 As a presenter, I'll say that the process of getting set up and ready to present was easy and very smooth.
 I'm looking forward to seeing the feedback that attendees left for me, watching the recording once it is posted in a few weeks, and am hoping to present again next year.
 
+> Update May 13, 2024: You can now find the recording of my presentation on the [PowerShell.org YouTube channel here](https://www.youtube.com/watch?v=oM_2sOE9Y6g), and [my slide deck here](https://github.com/deadlydog/Presentation.StopManuallyPublishingYourPowerShellModules).
+
 ## Summary
 
 __So was the conference worth it for me?__
@@ -166,4 +168,4 @@ It's designed to help make exploring and debugging PowerShell from the terminal 
 It's still in the early stages and I need to add some better defaults and more functionality to it, but am excited to see where it goes.
 Check it out and let me know what you think.
 
-> Update May 2024: I also wrote [this other blog post](https://www.iqmetrix.com/blog/iqmetrix-expertise-in-the-wild-contributing-to-the-powershell-community) for my company if you want to read more about my experience.
+> Update May 7, 2024: I also wrote [this other blog post](https://www.iqmetrix.com/blog/iqmetrix-expertise-in-the-wild-contributing-to-the-powershell-community) for my company if you want to read more about my experience.
