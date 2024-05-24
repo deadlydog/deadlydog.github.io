@@ -16,7 +16,7 @@ tags:
 I spin up new PowerShell scripts all the time, whether just for quickly experimenting and testing things out, or for projects that I know will be around for a while.
 There's a few basic things that I like all my scripts to have, so I've created a simple template that I use when creating new scripts.
 
-The template provides:
+The script template provides:
 
 - A basic script structure with `[CmdletBinding()]` enabled.
 - `$InformationPreference` enabled to show `Write-Information` messages.
@@ -24,7 +24,7 @@ The template provides:
 - Uses `Start-Transcript` to log the script output from the last run to a file.
   The log file will have the same name as the script, with `.LastRun.log` appended to it.
 
-Here's the template code:
+Here's the script template code:
 
 ```powershell
 [CmdletBinding()]
