@@ -24,3 +24,6 @@ Set-Content -Path $newPostFilePath -Value $fileContent
 
 # Create a directory to store the assets for the new post.
 New-Item -Path $newPostAssetDirectoryPath -ItemType Directory
+
+# Open the new post file in Visual Studio Code.
+code $newPostFilePath
