@@ -97,7 +97,7 @@ begin {
     if (-not (Test-Path -Path $directoryPath -PathType Container))
     {
       Write-Information "Creating directory '$directoryPath'."
-      New-Item -Path $directoryPath -ItemType Directory > $null
+      New-Item -Path $directoryPath -ItemType Directory -Force > $null
     }
   }
 
