@@ -67,7 +67,8 @@ I also have the template stored as [a GitHub gist here](https://gist.github.com/
 
 I typically define all of my functions in the `begin` block, and then call them from the `process` block as needed.
 This helps keep the primary script code front-and-center at the top of the script, and makes it easier to see what the script is doing at a glance.
-If I need to see the details of a function I can use <kbd>F12</kbd> to jump to the function definition, but often times I just want a high-level overview of what the script is doing, and reading the `process` block provides that.
+If I need to see the details of a function I can use <kbd>F12</kbd> to jump to the function definition.
+Often times I just want a high-level overview of what the script is doing though, and reading the `process` block provides that.
 
 In a traditional script without a `begin` block, you would need to define all of your functions before you call them, meaning you'd have to scroll down and hunt for where the script code actually starts executing commands.
 Following the convention of defining functions in the `begin` block, you can just look at the `process` block to see where the script code starts executing.
