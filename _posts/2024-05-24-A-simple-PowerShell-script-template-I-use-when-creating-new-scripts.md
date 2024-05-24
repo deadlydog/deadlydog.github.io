@@ -135,5 +135,10 @@ Feel free to use it as-is, or modify it to suit your own needs.
 
 The main point is having a boilerplate template to start from can save you time and help ensure that all of your scripts have a consistent feel.
 
+Do you use a template for your scripts?
+Are you going to start after reading this?
+Is there anything you would add or change in the template I provided?
+Let me know in the comments below!
+
 Hopefully you found this useful.
 Happy coding!
