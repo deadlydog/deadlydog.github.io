@@ -24,6 +24,8 @@ The script template provides:
 - Uses `Start-Transcript` to log the script output from the last run to a file.
   The log file will have the same name as the script, with `.LastRun.log` appended to it.
 
+Using a template allows me to get up and running quickly, and ensures all of my scripts have a consistent structure.
+
 Here's the script template code:
 
 ```powershell
@@ -131,7 +133,7 @@ end {
 This template is just my own personal preference, and I'm sure there are other things you may want to add to it.
 Feel free to use it as-is, or modify it to suit your own needs.
 
-The main point is having a boilerplate template to start from can save you time and help ensure that all of your scripts have a consistent structure.
+The main point is having a boilerplate template to start from can save you time and help ensure that all of your scripts have a consistent feel.
 
 Hopefully you found this useful.
 Happy coding!
