@@ -131,6 +131,9 @@ end {
 }
 ```
 
+Were you able to understand what the script does just by reading the `param` and `process` blocks at the top?
+Hopefully you didn't need to read the entire script to understand that it simply writes the provided text to the provided file path.
+
 This template is just my own personal preference, and I'm sure there are other things you may want to add to it.
 Feel free to use it as-is, or modify it to suit your own needs.
 
