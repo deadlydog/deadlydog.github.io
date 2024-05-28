@@ -147,10 +147,10 @@ After running into these issues for a few months, I was able to remember when an
 That's the problem though.
 It took me months to get it engrained which scenarios require the opening brace to be on the same line.
 Even though it's second nature to me now, it's not going to be for everyone, especially those new to PowerShell.
-Why put others through the months (years?) of pain of learning when it's ok to put the opening brace on a new line and when it's not?
+Why put others through months (years?) of pain to learn when it's ok to put the opening brace on a new line and when it's not?
 Why potentially introduce bugs into your scripts, simply for the sake of a brace style?
 
-It's important to note that VS Code / PowerShell does not give any warnings or indications that the code will fail.
+It's important to note that VS Code / PowerShell / PSScriptAnalyzer does not give any warnings or indications that the code will fail.
 It is perfectly valid syntax.
 This is what makes these so dangerous.
 The code will not fail until runtime.
@@ -177,6 +177,11 @@ Here you can see I have it set to OTBS:
 After updating VS Code's PowerShell code formatting setting, you can use the `Format Document` command in VS Code to update the brace style of the current file.
 
 If you want to update all of the scripts in your project at once, check out [the Format Files extension](https://marketplace.visualstudio.com/items?itemName=jbockle.jbockle-format-files).
+
+It's worth noting that VS Code will not automatically change the formatting of the problematic code statements mentioned in the examples above, whether you have Allman or OTBS configured, since it is valid syntax.
+So do not expect running `Format Document` to fix those issues.
+
+The main motivation to reformat your code to use OTBS is so others looking at the code will be more likely to put the opening brace on the same line, since that is how the rest of the script is formatted.
 
 ## Conclusion
 
