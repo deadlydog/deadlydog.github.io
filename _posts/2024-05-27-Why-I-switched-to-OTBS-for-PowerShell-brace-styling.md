@@ -16,7 +16,7 @@ tags:
 Code formatting can be a very personal choice.
 Some languages are very strict and enforce specific indentation and brace styles, while many others allow for different indentation styles to be used, including PowerShell.
 Many languages end up with a defacto style that most people use, often because it is the default style in a popular editor or IDE.
-You should take care when choosing your style though, as sometimes the style can make scripts harder to maintain, or even lead to bugs into your code.
+You should take care when choosing your style though, as sometimes the style can make scripts harder to maintain, or even lead to bugs in your code.
 
 ## Allman and One True Brace Style (OTBS)
 
