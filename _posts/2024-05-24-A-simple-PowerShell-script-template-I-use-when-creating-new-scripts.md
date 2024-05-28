@@ -2,7 +2,7 @@
 title: "A simple PowerShell script template I use when creating new scripts"
 permalink: /A-simple-PowerShell-script-template-I-use-when-creating-new-scripts/
 #date: 2099-01-15T00:00:00-06:00
-#last_modified_at: 2099-01-22
+last_modified_at: 2024-05-28
 comments_locked: false
 toc: false
 categories:
@@ -23,6 +23,8 @@ The script template provides:
 - Displays the time the script started and ended, and how long it took to run.
 - Uses `Start-Transcript` to log the script output from the last run to a file.
   The log file will have the same name as the script, with `.LastRun.log` appended to it.
+  - Logging to a transcript file will incur a small performance hit, so if you need your script to be super performant, and depending on how much output your script generates, you may want to remove this.
+  - If your script outputs sensitive information such as passwords or secrets, you may want to remove this, since they could end up in the unencrypted log file.
 
 Using a template allows me to get up and running quickly, and ensures all of my scripts have a consistent structure.
 
@@ -66,12 +68,14 @@ end {
 I also have the template stored as [a GitHub gist here](https://gist.github.com/deadlydog/d04b5d43170a90d8bc0143373d90010f), which may be more up-to-date than the code in this post.
 
 I typically define all of my functions in the `begin` block, and then call them from the `process` block as needed.
-This helps keep the primary script code front-and-center at the top of the script, and makes it easier to see what the script is doing at a glance.
+I also put the `process` block before the `begin` and `end` blocks.
+This helps keep the primary script code (in the `process` block) front-and-center at the top of the script, and makes it easier to see what the script is doing at a glance.
 If I need to see the details of a function I can use <kbd>F12</kbd> to jump to the function definition.
 Often times I just want a high-level overview of what the script is doing though, and reading the `process` block provides that.
+I like to think of the `process` block like the table of contents or list of chapters in a book; it gives you a quick high-level summary of everything in the book and allows you to jump straight to the section you're interested in, without having to read the entire book.
 
 In a traditional script without a `begin` block, you would need to define all of your functions before you call them, meaning you'd have to scroll down and hunt for where the script code actually starts executing commands.
-Following the convention of defining functions in the `begin` block, you can just look at the `process` block to see where the script code starts executing.
+Following the convention of defining functions in the `begin` block, you can just look at the `process` block to see where the script actually starts executing non-boilerplate code.
 
 Here is a contrived example of how a script using this template might look:
 
@@ -133,6 +137,8 @@ end {
 
 Were you able to understand what the script does just by reading the `param` and `process` blocks at the top?
 Hopefully you didn't need to read the entire script to understand that it simply writes the provided text to the provided file path.
+This is the benefit of putting the `process` block at the top of the script, and functions in the `begin` block.
+Also, often times the code in the `begin` and `end` blocks are complimentary to each other, so it makes sense to keep them together.
 
 This template is just my own personal preference, and I'm sure there are other things you may want to add to it.
 Feel free to use it as-is, or modify it to suit your own needs.
@@ -145,4 +151,4 @@ Is there anything you would add or change in the template I provided?
 Let me know in the comments below!
 
 Hopefully you found this useful.
-Happy coding!
+Happy scripting!
