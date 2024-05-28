@@ -13,10 +13,10 @@ tags:
   - Visual Studio Code
 ---
 
-Code formatting is a very personal choice.
-Wikipedia shows some [common indentation/brace styles](https://en.wikipedia.org/wiki/Indentation_style#Notable_styles).
-While some languages are very strict and enforce specific indentation and brace styles, most languages allow for different indentation styles to be used.
-That said, many languages end up with a defacto style that most people use, usually because it is the default style in a popular editor or IDE.
+Code formatting can be a very personal choice.
+Some languages are very strict and enforce specific indentation and brace styles, while many others allow for different indentation styles to be used, including PowerShell.
+Many languages end up with a defacto style that most people use, often because it is the default style in a popular editor or IDE.
+You should take care when choosing your style though, as sometimes the style can make scripts harder to maintain, or even introduce bugs into your code.
 
 ## Allman and One True Brace Style (OTBS)
 
@@ -29,17 +29,17 @@ Here's an example of the Allman style:
 ```powershell
 function ReplaceDogWithCat ([string[]] $textToPrint)
 {
-  foreach ($text in $textToPrint)
-  {
-    if ($text -eq 'dog')
+    foreach ($text in $textToPrint)
     {
-      Write-Output 'cat'
+        if ($text -eq 'dog')
+        {
+            Write-Output 'cat'
+        }
+        else
+        {
+            Write-Output $text
+        }
     }
-    else
-    {
-      Write-Output $text
-    }
-  }
 }
 ```
 
@@ -48,13 +48,13 @@ Here's the same example formatted using the OTBS style:
 
 ```powershell
 function ReplaceDogWithCat ([string[]] $textToPrint) {
-  foreach ($text in $textToPrint) {
-    if ($text -eq 'dog') {
-      Write-Output 'cat'
-    } else {
-      Write-Output $text
+    foreach ($text in $textToPrint) {
+        if ($text -eq 'dog') {
+            Write-Output 'cat'
+        } else {
+            Write-Output $text
+        }
     }
-  }
 }
 ```
 
@@ -98,46 +98,46 @@ Here are some code examples to illustrate the issue:
 # WORKS: The opening brace on a new line works fine for `foreach` loops.
 foreach ($number in 1..10)
 {
-  $number
+    $number
 }
 
 # WORKS: It works fine for `if` and `switch` statements too.
 if ($number -gt 5)
 {
-  $number
+    $number
 }
 
 # FAILS: This will halt execution to prompt for a script block.
 1..10 | ForEach-Object
 {
-  $_
+    $_
 }
 
 # WORKS: The above needs to be written like this to work correctly:
 1..10 | ForEach-Object {
-  $_
+    $_
 }
 
 # FAILS: This will also halt and prompt the user for a script block.
 1..10 | Where-Object
 {
-  $_ -gt 5
+    $_ -gt 5
 }
 
 # WORKS: The above needs to be written like this to work correctly:
 1..10 | Where-Object {
-  $_ -gt 5
+    $_ -gt 5
 }
 
 # FAILS: This will throw an error that no value was provided for `-ScriptBlock` parameter.
 Invoke-Command -ScriptBlock
 {
-  Get-Process
+    Get-Process
 }
 
 # WORKS: The above needs to be written like this to work correctly:
 Invoke-Command -ScriptBlock {
-  Get-Process
+    Get-Process
 }
 ```
 
@@ -157,11 +157,10 @@ The code will not fail until runtime.
 This means if you have the problematic code in a non-happy path, the script might run completely fine for months before finally hitting that code path and failing.
 
 This is the primary reason I've switched to OTBS for PowerShell.
-I'm not the only person who works on my scripts.
-I'm producing more open-source PowerShell now as well.
-I want to create a pit of success for others working with my code.
-It should be hard to do the wrong thing.
-Using Allman in PowerShell creates a minefield for others to navigate, and simply isn't worth the confusion and potential bugs it introduces.
+I'm not the only person who works on my scripts, and I'm producing more open-source PowerShell these days.
+I want to create a pit of success for others working with my code; it should be hard to do the wrong thing.
+Using Allman in PowerShell means inconsistency in where the opening brace goes, creating a minefield for others to navigate.
+It simply isn't worth the confusion and potential bugs it introduces.
 
 ## Setting the default brace style in VS Code
 
@@ -172,6 +171,17 @@ Here you can see I have it set to OTBS:
 
 ![Visual Studio Code PowerShell code formatting preset setting set to OTBS](/assets/Posts/2024-05-27-Why-I-switched-to-OTBS-for-PowerShell-brace-styling/vs-code-powershell-code-formatting-setting.png)
 
+If you're not ready to make it your default everywhere and just want to enable it for specific projects, or if you're not the only one working on your project, switch to the `Workspace` tab and update the setting there.
+This will create a `.vscode/settings.json` file in your project with the setting in it:
+
+```json
+{
+  "powershell.codeFormatting.preset": "OTBS"
+}
+```
+
+This allows you to commit the setting to source control, ensuring that everyone who works on the project uses the same brace style.
+
 ## Updating your existing scripts
 
 After updating VS Code's PowerShell code formatting setting, you can use the `Format Document` command in VS Code to update the brace style of the current file.
@@ -181,12 +191,13 @@ If you want to update all of the scripts in your project at once, check out [the
 It's worth noting that VS Code will not automatically change the formatting of the problematic code statements mentioned in the examples above, whether you have Allman or OTBS configured, since it is valid syntax.
 So do not expect running `Format Document` to fix those issues.
 
-The main motivation to reformat your code to use OTBS is so others looking at the code will be more likely to put the opening brace on the same line, since that is how the rest of the script is formatted.
+The main motivation to reformat your code to use OTBS is so others looking at the code will be more likely to always put the opening brace on the same line, since that is how the rest of the script is formatted.
 
 ## Conclusion
 
 While code formatting is often just a personal choice, in PowerShell the brace style is not purely cosmetic.
-It has real implications on how easy it is to write and maintain scripts, and can easily lead to bugs if not used correctly.
+It can easily lead to bugs if not used correctly.
+To create a pit of success by not having to remember when the opening brace must be on the same line, switch to using OTBS for PowerShell.
 
 Have you found this information helpful?
 Do you disagree with my reasoning?
