@@ -2,7 +2,7 @@
 title: "Why I switched to OTBS for PowerShell brace styling"
 permalink: /Why-I-switched-to-OTBS-for-PowerShell-brace-styling/
 #date: 2099-01-15T00:00:00-06:00
-#last_modified_at: 2099-01-22
+last_modified_at: 2024-05-29
 comments_locked: false
 toc: false
 categories:
@@ -143,6 +143,7 @@ Invoke-Command -ScriptBlock {
 
 Those last 3 examples require the opening brace `{` to be on the same line as the cmdlet.
 After running into these issues for a few months, I was able to remember when an opening brace is required to be on the same line, and it has become second nature to me.
+It often boils down to whether it is a PowerShell keyword (e.g. if, foreach, switch), a function vs. a cmdlet, and if you are using implicit parameters or not.
 
 That's the problem though.
 It took me months to get it engrained which scenarios require the opening brace to be on the same line.
@@ -161,6 +162,8 @@ I'm not the only person who works on my scripts, and I'm producing more open-sou
 I want to create a pit of success for others working with my code; it should be hard to do the wrong thing.
 Using Allman in PowerShell means inconsistency in where the opening brace goes, creating a minefield for others to navigate.
 It simply isn't worth the confusion and potential bugs it introduces.
+
+If like me you find Allman more readable, you can experiment with inserting a blank line between blocks of code to help visually segregate them (e.g. where you used to have the opening `{` brace in it's own line) and see if that helps.
 
 ## Setting the default brace style in VS Code
 
