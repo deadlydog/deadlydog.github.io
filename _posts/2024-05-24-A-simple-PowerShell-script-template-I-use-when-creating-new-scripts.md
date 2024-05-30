@@ -171,12 +171,12 @@ You may argue that the Synopsis in the comment-based help provided that informat
 The comment-based help should only describe the goal of the script and how to use it, not the individual steps of how it accomplishes that goal, which is what the `process` block can provide.
 I'll note though that the `process` block will only give you that nice high-level overview of the script steps if you write your code for it.
 If you just dump all of the code directly in the `process` block you won't have a nice overview; if you break the steps out into well named functions though, it can be easy to read through and understand the high-level script steps.
-Not everyone will agree with this approach, and that's fine; it's just what I've found works well for me and my team.
+Not everyone will agree wants to write their code this way though, and that's fine; it's just what I've found works well for me and my team, and makes our scripts easier to reason about and maintain.
 
 This template is just my own personal preference, and I'm sure there are other things you may want to add to it.
 Feel free to use it as-is, or modify it to suit your own needs.
 I personally like to keep my template minimal and only include the things that I find myself adding to every script.
-You may want to create an "all the bells and whistles" template to start from, or different templates for different types of scripts.
+You may want to create an "all the bells and whistles" template to start from, or different templates for different types of scripts (e.g. a different template for non-standalone scripts).
 
 The main point is having a boilerplate template to start from can save you time and help ensure that all of your scripts have a consistent feel.
 
