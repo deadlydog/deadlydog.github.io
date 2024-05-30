@@ -168,10 +168,11 @@ This is the benefit of putting the `process` block at the top of the script, and
 Also, often times the code in the `begin` and `end` blocks are complimentary to each other, so it makes sense to keep them together.
 
 You may argue that the Synopsis in the comment-based help provided that information as well, and in this simple trivial example you are correct.
-The comment-based help should only describe the goal of the script and how to use it, not the individual steps of how it accomplishes that goal, which is what the `process` block can provide.
+The comment-based help should only describe the goal of the script and how to use it, not the individual steps of how it accomplishes that goal.
+In longer scripts with many steps, the `process` block can provide the implementation overview or summary.
 I'll note though that the `process` block will only give you that nice high-level overview of the script steps if you write your code for it.
 If you just dump all of the code directly in the `process` block you won't have a nice overview; if you break the steps out into well named functions though, it can be easy to read through and understand the high-level script steps.
-Not everyone will agree wants to write their code this way though, and that's fine; it's just what I've found works well for me and my team, and makes our scripts easier to reason about and maintain.
+Not everyone wants to write their code this way though, and that's fine; it's just what I've found works well for me and my team, making our scripts easier to reason about and maintain.
 
 This template is just my own personal preference, and I'm sure there are other things you may want to add to it.
 Feel free to use it as-is, or modify it to suit your own needs.
