@@ -31,6 +31,10 @@ Using a template allows me to get up and running quickly, and ensures all of my 
 Here's the script template code:
 
 ```powershell
+<#
+  .SYNOPSIS
+  PUT SHORT SCRIPT DESCRIPTION HERE AND ADD ANY ADDITIONAL KEYWORD SECTIONS AS NEEDED (.PARAMETER, .EXAMPLE, ETC.).
+#>
 [CmdletBinding()]
 param (
   # PUT PARAMETER DEFINITIONS HERE AND DELETE THIS COMMENT.
@@ -67,6 +71,10 @@ end {
 
 I also have the template stored as [a GitHub gist here](https://gist.github.com/deadlydog/d04b5d43170a90d8bc0143373d90010f), which may be more up-to-date than the code in this post.
 
+I often use this template to create standalone scripts that I run directly, rather than calling them from other scripts (I would typically create a module instead for those types of reusable functions).
+This is the reason that I set the `$InformationPreference` and `$VerbosePreference` in the `begin` block.
+If you call this script from another script, you may want to remove those lines and rely on the calling script to pass in those preference parameters via the CmdletBinding.
+
 I typically define all of my functions in the `begin` block, and then call them from the `process` block as needed.
 I also put the `process` block before the `begin` and `end` blocks.
 This helps keep the primary script code (in the `process` block) front-and-center at the top of the script, and makes it easier to see what the script is doing at a glance.
@@ -80,6 +88,25 @@ Following the convention of defining functions in the `begin` block, you can jus
 Here is a contrived example of how a script using this template might look:
 
 ```powershell
+<#
+  .SYNOPSIS
+  Writes the specified text to a file.
+
+  .DESCRIPTION
+  This script writes a given text to a specified file, creating the directory if it doesn't exist.
+
+  .PARAMETER TextToWriteToFile
+  The text to write to the file.
+
+  .PARAMETER FilePath
+  The file path to write the text to, overwriting the file if it already exists.
+
+  .EXAMPLE
+  .\Script.ps1 -TextToWriteToFile "Sample Text" -FilePath "C:\Temp\Test.txt"
+
+  .NOTES
+  Ensure that you have the necessary permissions to write to the specified file path.
+#>
 [CmdletBinding()]
 param (
   [Parameter(Mandatory = $false, HelpMessage = 'The text to write to the file.')]
@@ -140,8 +167,16 @@ Hopefully you didn't need to read the entire script to understand that it simply
 This is the benefit of putting the `process` block at the top of the script, and functions in the `begin` block.
 Also, often times the code in the `begin` and `end` blocks are complimentary to each other, so it makes sense to keep them together.
 
+You may argue that the Synopsis in the comment-based help provided that information as well, and in this simple trivial example you are correct.
+The comment-based help should only describe the goal of the script and how to use it, not the individual steps of how it accomplishes that goal, which is what the `process` block can provide.
+I'll note though that the `process` block will only give you that nice high-level overview of the script steps if you write your code for it.
+If you just dump all of the code directly in the `process` block you won't have a nice overview; if you break the steps out into well named functions though, it can be easy to read through and understand the high-level script steps.
+Not everyone will agree with this approach, and that's fine; it's just what I've found works well for me and my team.
+
 This template is just my own personal preference, and I'm sure there are other things you may want to add to it.
 Feel free to use it as-is, or modify it to suit your own needs.
+I personally like to keep my template minimal and only include the things that I find myself adding to every script.
+You may want to create an "all the bells and whistles" template to start from, or different templates for different types of scripts.
 
 The main point is having a boilerplate template to start from can save you time and help ensure that all of your scripts have a consistent feel.
 
