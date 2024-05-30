@@ -2,7 +2,7 @@
 title: "A simple PowerShell script template I use when creating new scripts"
 permalink: /A-simple-PowerShell-script-template-I-use-when-creating-new-scripts/
 #date: 2099-01-15T00:00:00-06:00
-last_modified_at: 2024-05-28
+last_modified_at: 2024-05-29
 comments_locked: false
 toc: false
 categories:
@@ -14,7 +14,7 @@ tags:
 ---
 
 I spin up new PowerShell scripts all the time, whether just for quickly experimenting and testing things out, or for projects that I know will be around for a while.
-There's a few basic things that I like all my scripts to have, so I've created a simple template that I use when creating new scripts.
+There's a few basic things that I like all my scripts to have, so I've created a simple template that I use when creating new standalone scripts.
 
 The script template provides:
 
@@ -72,8 +72,8 @@ end {
 I also have the template stored as [a GitHub gist here](https://gist.github.com/deadlydog/d04b5d43170a90d8bc0143373d90010f), which may be more up-to-date than the code in this post.
 
 I often use this template to create standalone scripts that I run directly, rather than calling them from other scripts (I would typically create a module instead for those types of reusable functions).
-This is the reason that I set the `$InformationPreference` and `$VerbosePreference` in the `begin` block.
-If you call this script from another script, you may want to remove those lines and rely on the calling script to pass in those preference parameters via the CmdletBinding.
+This is the reason that I set the `$InformationPreference` and `$VerbosePreference` in the `begin` block and start a transcript.
+If you're calling the script from another script, you likely want to remove those lines and rely on the calling script to pass in the preference parameters via the CmdletBinding and start the transcript itself.
 
 I typically define all of my functions in the `begin` block, and then call them from the `process` block as needed.
 I also put the `process` block before the `begin` and `end` blocks.
