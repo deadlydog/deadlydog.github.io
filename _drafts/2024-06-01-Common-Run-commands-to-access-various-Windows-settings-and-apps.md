@@ -30,73 +30,74 @@ The Run dialog box will look something like this:
 
 With the Run dialog box open, type in one of the following commands and press `Enter` to open the corresponding Windows setting or app:
 
-| Command                                                             | Description                         |
-| ------------------------------------------------------------------- | ----------------------------------- |
-| .                                                                   | Open the folder of the current user |
-| appwiz.cpl                                                          | Programs and Features               |
-| charmap                                                             | Windows Character Table             |
-| chkdsk                                                              | Check Disk Utility                  |
-| cleanmgr                                                            | Disk Cleanup                        |
-| cmd                                                                 | The Command Prompt                  |
-| compmgmt.msc                                                        | Computer Management                 |
-| control                                                             | Control Panel                       |
-| control admintools                                                  | Administrative Tools                |
-| control desktop                                                     | Personalization                     |
-| control folders                                                     | File Explorer Options               |
-| control folders                                                     | Folder Options                      |
-| control keyboard                                                    | Keyboard Properties                 |
-| control mouse                                                       | Mouse Properties                    |
-| control printers                                                    | Printers and Faxes                  |
-| control schedtasks                                                  | Task Scheduler                      |
-| control userpasswords2                                              | User Accounts                       |
-| control.exe /name Microsoft.NetworkAndSharingCenter                 | Network and Sharing Center          |
-| control.exe /name Microsoft.PowerOptions                            | Power Options                       |
-| control.exe /name Microsoft.System                                  | System                              |
-| control.exe /name Microsoft.SystemProperties                        | System Properties                   |
-| control.exe /name Microsoft.SystemPropertiesAdvanced                | Advanced System Properties          |
-| control.exe /name Microsoft.SystemPropertiesDataExecutionPrevention | Data Execution Prevention           |
-| control.exe /name Microsoft.SystemPropertiesHardware                | Hardware                            |
-| control.exe /name Microsoft.SystemPropertiesPerformance             | Performance Options                 |
-| control.exe /name Microsoft.SystemPropertiesProtection              | System Protection                   |
-| control.exe /name Microsoft.SystemPropertiesRemote                  | Remote                              |
-| control.exe /name Microsoft.WindowsDefender                         | Windows Security                    |
-| control.exe /name Microsoft.WindowsUpdate                           | Windows Update                      |
-| desk.cpl                                                            | Display Properties                  |
-| devmgmt.msc                                                         | Device Manager                      |
-| diskmgmt.msc                                                        | Disk Management                     |
-| dxdiag                                                              | DirectX Diagnostic Tool             |
-| eventvwr.msc                                                        | Event Viewer                        |
-| explorer                                                            | Windows Explorer                    |
-| firewall.cpl                                                        | Windows Firewall                    |
-| gpedit.msc                                                          | Local Group Policy Editor           |
-| inetcpl.cpl                                                         | Internet Properties                 |
-| magnify                                                             | Magnifier                           |
-| main.cpl                                                            | Mouse Settings                      |
-| mdsched                                                             | Windows memory checker              |
-| mmc                                                                 | Microsoft Management Console        |
-| mmsys.cpl                                                           | Sound Properties                    |
-| mrt                                                                 | Malware Removal Tool                |
-| msconfig                                                            | System Configuration                |
-| msinfo32                                                            | System Information                  |
-| mstsc                                                               | Remote Desktop Service              |
-| ncpa.cpl                                                            | Network Connections                 |
-| netplwiz                                                            | User accounts                       |
-| osk                                                                 | On-Screen Keyboard                  |
-| perfmon.msc                                                         | Performance Monitor                 |
-| powercfg.cpl                                                        | Power Options                       |
-| powershell                                                          | Windows PowerShell Console          |
-| psr                                                                 | Steps recorder                      |
-| regedit                                                             | Registry Editor                     |
-| resmon                                                              | Resource Monitor                    |
-| secpol.msc                                                          | Local Security Policy               |
-| services.msc                                                        | Services                            |
-| shutdown                                                            | Windows Shutdown                    |
-| snippingtool                                                        | Screenshot snipping tool            |
-| sysdm.cpl                                                           | System Properties                   |
-| taskmgr                                                             | Task Manager                        |
-| winver                                                              | About Windows                       |
-| wscui.cpl                                                           | Security and Maintenance            |
-| wuaucpl.cpl                                                         | Windows Update                      |
+| Command                                                             | Description                            |
+| ------------------------------------------------------------------- | -------------------------------------- |
+| .                                                                   | Open the folder of the current user    |
+| appwiz.cpl                                                          | Programs and Features                  |
+| charmap                                                             | Windows Character Table                |
+| chkdsk                                                              | Check Disk Utility                     |
+| cleanmgr                                                            | Disk Cleanup                           |
+| cmd                                                                 | The Command Prompt                     |
+| compmgmt.msc                                                        | Computer Management                    |
+| control                                                             | Control Panel                          |
+| control admintools                                                  | Administrative Tools                   |
+| control desktop                                                     | Personalization                        |
+| control folders                                                     | File Explorer Options                  |
+| control folders                                                     | Folder Options                         |
+| control keyboard                                                    | Keyboard Properties                    |
+| control mouse                                                       | Mouse Properties                       |
+| control printers                                                    | Printers and Faxes                     |
+| control schedtasks                                                  | Task Scheduler                         |
+| control userpasswords2                                              | User Accounts                          |
+| control.exe /name Microsoft.NetworkAndSharingCenter                 | Network and Sharing Center             |
+| control.exe /name Microsoft.PowerOptions                            | Power Options                          |
+| control.exe /name Microsoft.System                                  | System                                 |
+| control.exe /name Microsoft.SystemProperties                        | System Properties                      |
+| control.exe /name Microsoft.SystemPropertiesAdvanced                | Advanced System Properties             |
+| control.exe /name Microsoft.SystemPropertiesDataExecutionPrevention | Data Execution Prevention              |
+| control.exe /name Microsoft.SystemPropertiesHardware                | Hardware                               |
+| control.exe /name Microsoft.SystemPropertiesPerformance             | Performance Options                    |
+| control.exe /name Microsoft.SystemPropertiesProtection              | System Protection                      |
+| control.exe /name Microsoft.SystemPropertiesRemote                  | Remote                                 |
+| control.exe /name Microsoft.WindowsDefender                         | Windows Security                       |
+| control.exe /name Microsoft.WindowsUpdate                           | Windows Update                         |
+| desk.cpl                                                            | Display Properties                     |
+| devmgmt.msc                                                         | Device Manager                         |
+| diskmgmt.msc                                                        | Disk Management                        |
+| dxdiag                                                              | DirectX Diagnostic Tool                |
+| eventvwr.msc                                                        | Event Viewer                           |
+| explorer                                                            | Windows Explorer                       |
+| firewall.cpl                                                        | Windows Firewall                       |
+| gpedit.msc                                                          | Local Group Policy Editor              |
+| inetcpl.cpl                                                         | Internet Properties                    |
+| magnify                                                             | Magnifier                              |
+| main.cpl                                                            | Mouse Settings                         |
+| mdsched                                                             | Windows memory checker                 |
+| mmc                                                                 | Microsoft Management Console           |
+| mmsys.cpl                                                           | Sound Properties                       |
+| mrt                                                                 | Malware Removal Tool                   |
+| msconfig                                                            | System Configuration                   |
+| msinfo32                                                            | System Information                     |
+| mstsc                                                               | Remote Desktop Service                 |
+| ncpa.cpl                                                            | Network Connections                    |
+| netplwiz                                                            | User accounts                          |
+| osk                                                                 | On-Screen Keyboard                     |
+| perfmon.msc                                                         | Performance Monitor                    |
+| powercfg.cpl                                                        | Power Options                          |
+| powershell                                                          | Windows PowerShell Console             |
+| psr                                                                 | Steps recorder                         |
+| pwsh                                                                | PowerShell Core Console (if installed) |
+| regedit                                                             | Registry Editor                        |
+| resmon                                                              | Resource Monitor                       |
+| secpol.msc                                                          | Local Security Policy                  |
+| services.msc                                                        | Services                               |
+| shutdown                                                            | Windows Shutdown                       |
+| snippingtool                                                        | Screenshot snipping tool               |
+| sysdm.cpl                                                           | System Properties                      |
+| taskmgr                                                             | Task Manager                           |
+| winver                                                              | About Windows                          |
+| wscui.cpl                                                           | Security and Maintenance               |
+| wuaucpl.cpl                                                         | Windows Update                         |
 
 I've bolded the ones that I personally use the most.
 
