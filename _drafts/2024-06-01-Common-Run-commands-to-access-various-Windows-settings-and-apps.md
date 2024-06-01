@@ -34,11 +34,9 @@ With the Run dialog box open, type in one of the following commands and press `E
 | ------------------------------------------------------------------- | ----------------------------------- |
 | .                                                                   | Open the folder of the current user |
 | appwiz.cpl                                                          | Programs and Features               |
-| appwiz.cpl                                                          | Programs and Features               |
 | charmap                                                             | Windows Character Table             |
 | chkdsk                                                              | Check Disk Utility                  |
 | cleanmgr                                                            | Disk Cleanup                        |
-| cleanmgr                                                            | Clean Disk Manager                  |
 | cmd                                                                 | The Command Prompt                  |
 | compmgmt.msc                                                        | Computer Management                 |
 | control                                                             | Control Panel                       |
