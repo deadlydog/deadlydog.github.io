@@ -7,8 +7,10 @@ comments_locked: false
 toc: false
 categories:
   - Productivity
+  - Windows
 tags:
   - Productivity
+  - Windows
 ---
 
 The Windows search functionality isn't exactly reliable, especially on Windows Server.
@@ -101,4 +103,11 @@ With the Run dialog box open, type in one of the following commands and press `E
 
 I've bolded the ones that I personally use the most.
 
+## Conclusion
+
 This blog article was inspired by [this LinkedIn post](https://www.linkedin.com/feed/update/urn:li:activity:7202019020282245120/) which shows how to define these in a PowerShell function that can be used to search for the command you want.
+
+I hope you find this list of Run commands useful.
+If you have any other commands that you find useful, please share them in the comments below and I might add them to this list.
+
+Happy running!
