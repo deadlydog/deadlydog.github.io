@@ -15,8 +15,8 @@ tags:
 
 There are a lot of different windows for configuring various settings in Windows.
 Unfortunately, finding the right window is not always easy.
-The Windows search functionality isn't always consistent or reliable, especially on Windows Server.
-Many of the configuration windows can be accessed from the Windows Settings menu, but they are often buried several windows deep and get moved around between major Windows updates, so it can be hard to find them.
+The Windows Settings menu often buries settings windows several layers deep, and they are often moved between major Windows updates, so it can be hard to find them.
+The Start menu search functionality isn't always consistent or reliable, especially on Windows Server, and even the Windows Settings search can be hit or miss.
 
 For a consistent way to access many settings and apps regardless of your Windows version, you can use a command prompt or the
 Run dialog box.
