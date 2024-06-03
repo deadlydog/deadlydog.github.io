@@ -105,7 +105,7 @@ A few commands only work from the Run dialog box and are marked as "(Run only)".
 | winver                                          | About Windows                          |
 | wscui.cpl                                       | Security and Maintenance               |
 
-This blog article was inspired by [this LinkedIn post](https://www.linkedin.com/feed/update/urn:li:activity:7202019020282245120/) which shows how to define these in a PowerShell function that can be used to search for the command you want.
+This blog article was inspired by [this LinkedIn post](https://www.linkedin.com/feed/update/urn:li:activity:7202019020282245120/) which shows how to define many of these in a PowerShell function that can be used to search for the command you want.
 
 ## Conclusion
 
