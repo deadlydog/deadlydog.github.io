@@ -1,0 +1,7 @@
+_id: 67063d00-217f-11ef-a9a1-1d9e4e14cdde
+message: "That's a good idea. I did start using a basic template a while ago but I simply copy pasted from onenote. I used to include some meta data like:\r\n\r\n```\r\nWrite-Verbose \"Is Admin = $IsAdmin\"\r\nWrite-Verbose \"Computername = $env:COMPUTERNAME\"\r\nWrite-Verbose \"OS = $((Get-CimInstance Win32_Operatingsystem).Caption)\"\r\nWrite-Verbose \"Host = $($host.Name)\"\r\nWrite-Verbose \"PSVersion = $($PSVersionTable.PSVersion)\"\r\nWrite-Verbose \"Runtime = $(Get-Date)\"\r\n```\r\n\r\nI got this idea from the PowerShell scripting in a month of lunches book. To be honest I never made a template as elaborate as yours."
+name: Adrian
+email: 84f652728e27ad75bc7d1d37c94d58a7
+url: 'https://computerthings.substack.com/'
+hidden: ''
+date: '2024-06-03T08:00:54.902Z'
