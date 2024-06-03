@@ -77,6 +77,7 @@ A few commands only work from the Run dialog box and are marked as "(Run only)".
 | firewall.cpl                                    | Windows Firewall                       |
 | gpedit.msc                                      | Local Group Policy Editor              |
 | inetcpl.cpl                                     | Internet Properties                    |
+| inetmgr                                         | IIS Manager (if installed) (Run only)  |
 | lusrmgr.msc                                     | Local Users and Groups                 |
 | magnify                                         | Magnifier                              |
 | main.cpl                                        | Mouse Settings                         |
