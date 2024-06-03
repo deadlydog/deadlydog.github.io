@@ -1,4 +1,4 @@
-# Run this script to create a new blog post in the _drafts directory and create a directory for its assests as well.
+# Run this script to create a new blog post in the _drafts directory and create a directory for its assets as well.
 
 [string] $title = Read-Host -Prompt "What is the title of the new blog post? (with spaces, capitalization, apostrophes, etc.)"
 
