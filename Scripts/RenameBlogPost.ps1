@@ -28,8 +28,6 @@ if ([string]::IsNullOrEmpty($newPostDate)) {
 [string] $oldPostSanitizedTitle = $oldPostFileNameWithoutExtension.Substring(11) # Trim the date of the front.
 [string] $oldPostAssetDirectoryPath = "$PSScriptRoot\..\assets\Posts\$oldPostFileNameWithoutExtension"
 
-[string] $templatePostFileNameWithoutExtension = '2099-01-15-Template-post'
-
 # Rename the post file.
 Rename-Item -Path $postToRename.FullName -NewName "$newPostFileNameWithoutExtension.md"
 
