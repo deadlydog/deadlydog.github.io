@@ -1,0 +1,7 @@
+_id: df0095d0-226a-11ef-8cef-e764d6f4eebd
+message: "Hey there, i have a script that is supose to open up a sftp connction copy some files and delete the files on the source computer afterwards.\r\nWhen i run the script manually it works fine. Then i tried to automate it. \r\nFirst it just works fine(after a couple of errors: ). Then i had to pause the scheduled task for a period of time. And now i can`t make it work again : (\r\nit is started with admin permissions and executionpolicy bypass etc.\r\nManually it still works fine. With task scheduler i got weird issues.\r\nLike it establish the connection but can`t find the destination path anymore.\r\nIm far away from beeing a pro : ) \r\nMaybe you have a hint for me or maybe a link with some advise how to use task scheduler properly.\r\nGreets from good old germany mate"
+name: Phil
+email: 3c6365aee088a15dcae86c5aec252ead
+url: ''
+hidden: ''
+date: '2024-06-04T12:06:27.936Z'
