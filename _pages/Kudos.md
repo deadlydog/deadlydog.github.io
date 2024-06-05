@@ -9,6 +9,18 @@ It's a nice place I can turn to when I'm not feeling motivated, or when I need a
 
 ## Donations and thank you emails from the community
 
+2024-06-02
+
+$2.00 USD for [NotifyWhenMicrosoftOutlookReminderWindowIsOpen App](https://github.com/deadlydog/NotifyWhenMicrosoftOutlookReminderWindowIsOpen) from Ilan Elron.
+
+---
+
+2024-06-02
+
+$2.00 USD from Pieter Spruit for my blog posts.
+
+---
+
 2023-11-03
 
 Thank you email from Ilona Chodnicka for my [Windows Scheduled Tasks Azure DevOps Extension](https://github.com/deadlydog/AzureDevOps.WindowsScheduledTasks) 😊
@@ -129,7 +141,7 @@ Note from Kevin Finnegan:
 
 2022-01-30
 
-$10.00 USD for NotifyWhenMicrosoftOutlookReminderWindowIsOpen App from Robert Garlough
+$10.00 USD for [NotifyWhenMicrosoftOutlookReminderWindowIsOpen App](https://github.com/deadlydog/NotifyWhenMicrosoftOutlookReminderWindowIsOpen) from Robert Garlough.
 
 ---
 
@@ -186,7 +198,7 @@ Note from Mario Bianchetti:
 >
 > Regards, Erik
 
-$2.00 USD for NotifyWhenMicrosoftOutlookReminderWindowIsOpen App from Erik Mulder
+$2.00 USD for [NotifyWhenMicrosoftOutlookReminderWindowIsOpen App](https://github.com/deadlydog/NotifyWhenMicrosoftOutlookReminderWindowIsOpen) from Erik Mulder.
 
 ---
 
