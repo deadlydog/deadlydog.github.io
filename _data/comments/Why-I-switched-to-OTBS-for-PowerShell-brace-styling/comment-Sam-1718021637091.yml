@@ -1,0 +1,7 @@
+_id: e9339d60-2722-11ef-ad60-bfa35151604a
+message: "I am also \"OTBS for life\", but to be flexible for those around me, an option for Allman style is to use a single back-tick just before the newline. For example, this works for me:\r\n\r\n`\r\n1..10 | Foreach-Object ``\r\n{\r\n    $_\r\n}\r\n`"
+name: Sam
+email: 0e95c0c989946767576d39e59e69ecac
+url: ''
+hidden: ''
+date: '2024-06-10T12:13:57.087Z'
