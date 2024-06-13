@@ -1,0 +1,7 @@
+_id: bce169e0-2970-11ef-b48d-b7ade95e7173
+message: "To be able to use a encrypted password in your script, do the following.\r\nAs a first step get the encrypted string of the password.\r\n$Secure = Read-Host -AsSecureString\r\n$Secure\r\nSystem.Security.SecureString\r\n$Encrypted = ConvertFrom-SecureString -SecureString $Secure\r\n$Encrypted\r\n01000000d0....\r\nNote the whole string in one line and use it in your script as:\r\n$username = 'the username the string was created for'\r\n$Encrypted = '01000000d...' # the whole encrypted string\r\n$securePassword = ConvertTo-SecureString -String $Encrypted\r\n$credential = New-Object System.Management.Automation.PSCredential ($username, $securePassword)\r\nInvoke-Command -ComputerName localhost -Credential $credential -ScriptBlock {\r\n# your code goes here\r\n}"
+name: Stefan Zuban
+email: b1bf2a53232000a5f167cf3abed37ba3
+url: 'https://pennyitsupport.eu'
+hidden: ''
+date: '2024-06-13T10:36:06.076Z'
