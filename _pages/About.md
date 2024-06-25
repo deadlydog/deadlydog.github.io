@@ -66,7 +66,7 @@ Some public speaking I've done outside of work:
 - June 12, 2024: [Pacific PowerShell User Group: tiPS Welcome](https://www.meetup.com/pacific-powershell-user-group/events/301530283/) ([slide deck](https://github.com/deadlydog/Presentation.tiPSWelcome))
 - April 10, 2024: [PowerShell + DevOps Global Summit North America 2024](https://www.powershellsummit.org): Stop publishing your PowerShell modules. Automate it in 2 minutes! ([video recording](https://www.youtube.com/watch?v=oM_2sOE9Y6g) and [slide deck](https://github.com/deadlydog/Presentation.StopManuallyPublishingYourPowerShellModules)).
 - March 8, 2024: [HackRegina Lunch n' Learn: Exploring Dev Containers and GitHub Codespaces](https://www.eventbrite.ca/e/lunch-n-learn-exploring-dev-containers-and-github-codespaces-tickets-785976245107?src=hackregina) ([slide deck](https://github.com/deadlydog/Presentation.DevContainersAndGitHubCodespaces)).
-- January 15, 2024: [PowerShell Podcast interview](/I-was-the-guest-for-the-100th-episode-of-The-PowerShell-Podcast/): Episode 100 of the PowerShell Podcast.
+- January 15, 2024: [PowerShell Podcast interview](/I-was-the-guest-for-the-100th-episode-of-The-PowerShell-Podcast/): Episode 100 of the PowerShell Podcast ([video recording](https://youtu.be/sBpm_R1MQ38?si=sEduyCx8ONY3NfNC)).
 
 ## 🙏 Feedback and kudos
 
