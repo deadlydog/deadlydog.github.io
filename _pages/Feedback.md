@@ -9,6 +9,14 @@ This page is a compilation of that feedback.
 
 ## What my colleagues have to say about me
 
+2024-06-06 - From Maryam Bagherzadeh in Slack:
+
+> Thanks Dan!
+> I'm grateful for our 1-1s, your insights and perspectives!
+> You are a great mentor Dan, I'd recommend you to keep that going, share your knowledge, perspectives and greatness with other devs/mentees too :slightly_smiling_face:
+
+---
+
 2024-01-15 - Anonymous feedback from 4 individuals on a lunch and learn presentation I gave on Dev Containers and GitHub Codespaces:
 
 Individual 1:
