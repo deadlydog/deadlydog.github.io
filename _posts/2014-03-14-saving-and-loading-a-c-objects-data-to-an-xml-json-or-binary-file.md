@@ -29,6 +29,9 @@ The follow code (without examples of how to use it) [is also available here](htt
 
 ## Writing and Reading an object to / from a Binary file
 
+> UPDATE: BinaryFormatter is being decommissioned due to security vulnerabilities it introduces, so it should no longer be used.
+> [Read more on the MS docs here](https://learn.microsoft.com/en-us/dotnet/standard/serialization/binaryformatter-security-guide)
+
 * Writes and reads ALL object properties and variables to / from the file (i.e. public, protected, internal, and private).
 * The data saved to the file is not human readable, and thus cannot be edited outside of your application.
 * Have to decorate class (and all classes that it contains) with a __[Serializable]__ attribute.
@@ -210,6 +213,10 @@ List<Person> people = XmlSerialization.ReadFromXmlFile<List<Person>>("C:\people.
 ```
 
 ## Writing and Reading an object to / from a Json file (using the [Newtonsoft.Json](http://james.newtonking.com/json) assembly in the [Json.NET NuGet package](http://www.nuget.org/packages/Newtonsoft.Json/))
+
+> UPDATE: As an alternative to Newtonsoft.Json, the `System.Text.Json` class is included out of the box starting in .NET Core 3.
+> If it is not available in your .NET version, you can use [the System.Text.Json NuGet package](https://www.nuget.org/packages/System.Text.Json).
+> See the [Json.NET to System.Text.Json migration guide](https://learn.microsoft.com/en-us/dotnet/standard/serialization/system-text-json/migrate-from-newtonsoft) for more information.
 
 * Only writes and reads the Public properties and variables to / from the file.
 * Classes to be serialized must contain a public parameterless constructor.
