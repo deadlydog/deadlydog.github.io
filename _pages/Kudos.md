@@ -9,6 +9,12 @@ It's a nice place I can turn to when I'm not feeling motivated, or when I need a
 
 ## Donations and thank you emails from the community
 
+2024-07-13
+
+$5.00/month USD [GitHub Sponsorship](https://github.com/sponsors/deadlydog) from @StartAutomating (James Brundage) for my open-source software and blog content.
+
+---
+
 2024-06-02
 
 $2.00 USD for [NotifyWhenMicrosoftOutlookReminderWindowIsOpen App](https://github.com/deadlydog/NotifyWhenMicrosoftOutlookReminderWindowIsOpen) from Ilan Elron.
