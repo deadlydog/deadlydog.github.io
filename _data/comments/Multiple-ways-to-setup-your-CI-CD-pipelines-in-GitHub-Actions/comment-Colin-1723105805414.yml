@@ -1,0 +1,7 @@
+_id: 69a3d260-5560-11ef-9de1-3f4b0ef3b059
+message: "I've been using Azure DevOps for some years now and have started using GitHub actions. One thing that quickly irked is the lack of a concept of \"stages\" in GH action workflows.\r\n\r\nQuite often, I find that a \"deployment\" to an environment involves running multiple jobs (infrastructure, database, application code, etc.). In AzDO, I can logically group that collection of jobs into a \"stage\", have a single set of approval gates for all the jobs in the stage... and can even apply default values to be used by all the jobs in a stage (e.g. the agent pool).\r\n\r\nI can see how your recommended approach allows us to create a reusable workflow (/template) that contains all the jobs needed to deploy to an environment. However, in the actual deployment workflow runs, there doesn't seem to be any way of seeing the jobs related to a single environment logically grouped in any way (other than a naming convention).\r\n\r\nAs such, there doesn't appear to be a way to easily visualise the deployment flow through the environments as you can in AzDO. Not only this but - since approvals are at the job level - it seems like you would have to provide multiple approvals: One for each job in the group.\r\n\r\nDoes GitHub actions support any other means of achieving what Stages give us in AzDO?"
+name: Colin
+email: 6c4d3add0af9c5ea2c9e3e1406ff122b
+url: ''
+hidden: ''
+date: '2024-08-08T08:30:05.410Z'
