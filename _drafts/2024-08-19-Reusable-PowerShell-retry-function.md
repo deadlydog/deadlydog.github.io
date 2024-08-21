@@ -405,11 +405,12 @@ function Invoke-ScriptBlockWithRetries {
       }
 
       if ($shouldRetry) {
-        # If the errorMessage contains one of the errors that should not be retried, then throw the error.
+        # If the errorMessage contains one of the errors that should not be retried, then do not retry.
         foreach ($errorToNotRetry in $ErrorsToNotRetry) {
           if ($errorMessage -like "*$errorToNotRetry*" -or $errorDetails -like "*$errorToNotRetry*") {
             Write-Verbose "The string '$errorToNotRetry' was found in the error message, so not retrying."
             $shouldRetry = $false
+            break # Break out of the foreach-loop since we found a match.
           }
         }
       }
@@ -433,6 +434,8 @@ function Invoke-ScriptBlockWithRetries {
   }
 }
 ```
+
+You can also [find this implementation and examples on my GitHub gist here](https://gist.github.com/deadlydog/620808036d309c8fa2606f32e5ef2f42).
 
 ## Conclusion
 
