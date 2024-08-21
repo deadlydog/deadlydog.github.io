@@ -292,11 +292,7 @@ This will only retry if the service "SomeService" exists.
 If it doesn't, the error message "Cannot find any service with service name 'SomeService'." would be returned and the function won't bother retrying.
 
 ```powershell
-[scriptblock] $exampleThatDoesNotReturnData = {
-  Stop-Service -Name "SomeService"
-}
-
-Invoke-ScriptBlockWithRetries -ScriptBlock $exampleThatDoesNotReturnData -ErrorsToNotRetry 'Cannot find any service with service name'
+Invoke-ScriptBlockWithRetries { Stop-Service -Name "SomeService" } -ErrorsToNotRetry 'Cannot find any service with service name'
 ```
 
 #### Example 2: Validate a web request was successful
@@ -351,6 +347,20 @@ In order to same time, specify not to retry on these errors:
 )
 
 Invoke-ScriptBlockWithRetries -ScriptBlock $exampleThatReturnsData -ErrorsToNotRetry $noRetryMessages
+```
+
+### Example 5: Perform multiple actions
+
+Because we use a scriptblock, we can perform multiple actions and if any of them fail, the entire scriptblock will be retried:
+
+```powershell
+[scripblock] $getDataAndWriteItToAFileAndSendSlackMessage = {
+  [string] $data = Invoke-RestMethod -Uri 'https://SomeApi.com/data'
+  $data | Set-Content -Path 'C:\temp\data.txt'
+  Send-SlackMessage -Message "Data was successfully retrieved and saved to 'C:\temp\data.txt'." -Channel '#general'
+}
+
+Invoke-ScriptBlockWithRetries -ScriptBlock $getDataAndWriteItToAFileAndSendSlackMessage
 ```
 
 ## Even more options
