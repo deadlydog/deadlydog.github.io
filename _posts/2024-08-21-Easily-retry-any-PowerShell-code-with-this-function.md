@@ -126,7 +126,7 @@ Set-Content -Path $newFileLocation -Value $newFileContents -ErrorAction Stop
 This would ensure that any errors written by the `Set-Content` cmdlet would be treated as terminating errors (e.g. thrown exceptions) and would get retried.
 Having to add `-ErrorAction Stop` to every cmdlet is tedious and error prone though.
 
-A better way we can address this by adding a check for non-terminating errors and throwing them if they occur by making use of the `-ErrorVariable` parameter on our `Invoke-Command`:
+A better way we can address this is to add a check for non-terminating errors and throw them if they occur, by making use of the `-ErrorVariable` parameter on our `Invoke-Command`:
 
 ```powershell
 function Invoke-ScriptBlockWithRetries {
@@ -279,6 +279,9 @@ Success
 
 If you do not want non-terminating errors to be retried (e.g. the `Write-Error` cases in the `$flakyAction` above), provide the `-DoNotRetryNonTerminatingErrors` switch parameter.
 
+You may have noticed that the verbose output includes the error message and error details.
+This is because some cmdlets, such as `Invoke-WebRequest`, sometimes put the error message in the ErrorDetails property.
+
 ### More examples
 
 Here are some more practical examples:
@@ -286,7 +289,7 @@ Here are some more practical examples:
 #### Example 1: Stop a service if it exists
 
 This will only retry if the service "SomeService" exists.
-If it doesn't, the error message "Cannot find any service with service name 'SomeService'." would be returned and we won't bother retrying.
+If it doesn't, the error message "Cannot find any service with service name 'SomeService'." would be returned and the function won't bother retrying.
 
 ```powershell
 [scriptblock] $exampleThatDoesNotReturnData = {
@@ -353,7 +356,7 @@ Invoke-ScriptBlockWithRetries -ScriptBlock $exampleThatReturnsData -ErrorsToNotR
 ## Even more options
 
 One caveat with the above implementation is that non-terminating errors will be thrown as terminating errors if they are still failing after all of the retries, which may not be the desired behavior.
-I typically prefer to have all errors thrown, as it allows for a single way to handle any errors produced by the script block (i.e. with a try-catch block).
+I typically prefer to have all persisting errors thrown, as it allows for a single way to handle any errors produced by the script block (i.e. with a try-catch block).
 
 For those that do not want this behaviour, I offer the following implementation that is not quite as straightforward, but provides a `DoNotThrowNonTerminatingErrors` parameter that allows for non-terminating errors to not be thrown if they are still failing after all of the retries:
 
