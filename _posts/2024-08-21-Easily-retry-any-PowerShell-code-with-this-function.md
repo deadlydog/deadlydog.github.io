@@ -11,12 +11,12 @@ tags:
   - PowerShell
 ---
 
-Performing retries to make your scripts more resilient is a common pattern.
-By leveraging a PowerShell `ScriptBlock`, we can create a function and avoid constantly rewriting the same retry logic again and again.
+Performing retries to make your code more resilient is a common pattern.
+By leveraging a PowerShell `ScriptBlock`, we can create a function to avoid constantly rewriting the same retry logic again and again.
 
 ## TL;DR
 
-This post shows how you can build a PowerShell function to easily retry any PowerShell code.
+This post shows how you can build a PowerShell function to easily retry any PowerShell code that produces a terminating or non-terminating error.
 If you want to skip the explanation and evolution of the code, jump to the bottom of the post to see the final function and examples, or [view them on my GitHub gist here](https://gist.github.com/deadlydog/620808036d309c8fa2606f32e5ef2f42).
 
 ## Traditional retry logic
@@ -92,7 +92,7 @@ Invoke-ScriptBlockWithRetries -ScriptBlock { Do-AnotherThing } -MaxNumberOfAttem
 # You can also capture the output of the script block.
 $resultOfDoSomeOtherThing = Invoke-ScriptBlockWithRetries -ScriptBlock { Do-SomeOtherThing }
 
-# Your script block can contain multiple lines of code, and can be defined as a variable.
+# The script block can contain multiple lines of code, and can be defined as a variable.
 [scriptblock] $action = {
   [string] $fileLocation = "C:\temp\file.txt"
   [string] $fileContents = Get-Content -Path $fileLocation
