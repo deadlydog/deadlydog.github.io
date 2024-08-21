@@ -332,8 +332,8 @@ try {
 
 ### Example 4: Do not retry expected errors
 
-There may be certain errors that are expected in certain situations, or that you know a retry will not help with.
-In order to same time, specify not to retry on these errors:
+There may be certain errors that are expected in certain situations, or where you know a retry will not help.
+To save time, specify not to retry on these errors:
 
 ```powershell
 [scriptblock] $exampleThatReturnsData = {
