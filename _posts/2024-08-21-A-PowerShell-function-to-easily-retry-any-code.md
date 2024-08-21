@@ -1,6 +1,6 @@
 ---
-title: "Easily retry any PowerShell code with this function"
-permalink: /Easily-retry-any-PowerShell-code-with-this-function/
+title: "A PowerShell function to easily retry any code"
+permalink: /A-PowerShell-function-to-easily-retry-any-code/
 #date: 2099-01-15T00:00:00-06:00
 #last_modified_at: 2099-01-22
 comments_locked: false
