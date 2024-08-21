@@ -9,6 +9,15 @@ It's a nice place I can turn to when I'm not feeling motivated, or when I need a
 
 ## Donations and thank you emails from the community
 
+2024-08-19
+
+$15.00 USD from James Lennon for [Path Length Checker app](https://github.com/deadlydog/PathLengthChecker).
+
+> Path Length Checker came in very handy recently.
+> Thanks!
+
+---
+
 2024-07-13
 
 $5.00/month USD [GitHub Sponsorship](https://github.com/sponsors/deadlydog) from @StartAutomating (James Brundage) for my open-source software and blog content.
