@@ -17,7 +17,7 @@ By leveraging a PowerShell `ScriptBlock`, we can create a function to avoid cons
 ## TL;DR
 
 This post shows how you can build a PowerShell function to easily retry any PowerShell code that produces a terminating or non-terminating error.
-If you want to skip the explanation and evolution of the code, jump to the bottom of the post to see the final function and examples, or [view them on my GitHub gist here](https://gist.github.com/deadlydog/620808036d309c8fa2606f32e5ef2f42).
+If you want to skip the explanation and evolution of the code, [jump to the bottom of this post](#more-examples) to see the final function and examples, or [view them on my GitHub gist here](https://gist.github.com/deadlydog/620808036d309c8fa2606f32e5ef2f42).
 
 ## Traditional retry logic
 
