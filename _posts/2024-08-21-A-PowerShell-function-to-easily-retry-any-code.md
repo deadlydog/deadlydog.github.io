@@ -308,7 +308,7 @@ if ($result.StatusCode -eq 200) {
 }
 ```
 
-NOTE: PowerShell 6+ have built-in Retry parameters on the [Invoke-WebRequest](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/invoke-webrequest) and [Invoke-RestMethod](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/invoke-restmethod) cmdlets that could be used instead of this function.
+Note: PowerShell 6+ have built-in Retry parameters on the [Invoke-WebRequest](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/invoke-webrequest) and [Invoke-RestMethod](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/invoke-restmethod) cmdlets that could be used instead.
 
 #### Example 3: Dealing with failures
 
