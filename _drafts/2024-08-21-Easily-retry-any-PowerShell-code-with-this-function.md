@@ -14,6 +14,11 @@ tags:
 Performing retries to make your scripts more resilient is a common pattern.
 By leveraging a PowerShell `ScriptBlock`, we can create a function and avoid constantly rewriting the same retry logic again and again.
 
+## TL;DR
+
+This post shows how you can build a PowerShell function to easily retry any PowerShell code.
+If you want to skip the explanation and evolution of the code, jump to the bottom of the post to see the final function and examples, or [view them on my GitHub gist here](https://gist.github.com/deadlydog/620808036d309c8fa2606f32e5ef2f42).
+
 ## Traditional retry logic
 
 Here's the traditional way that you might write some code with retry logic:
@@ -348,8 +353,8 @@ Invoke-ScriptBlockWithRetries -ScriptBlock $exampleThatReturnsData -ErrorsToNotR
 ## Even more options
 
 One caveat with the above implementation is that non-terminating errors will be thrown as terminating errors if they are still failing after all of the retries, which may not be the desired behavior.
-
 I typically prefer to have all errors thrown, as it allows for a single way to handle any errors produced by the script block (i.e. with a try-catch block).
+
 For those that do not want this behaviour, I offer the following implementation that is not quite as straightforward, but provides a `DoNotThrowNonTerminatingErrors` parameter that allows for non-terminating errors to not be thrown if they are still failing after all of the retries:
 
 ```powershell
