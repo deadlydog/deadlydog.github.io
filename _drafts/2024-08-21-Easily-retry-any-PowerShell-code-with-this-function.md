@@ -447,8 +447,8 @@ You can also [find this implementation and examples on my GitHub gist here](http
 By using a function like `Invoke-ScriptBlockWithRetries`, you can make your scripts more resilient to failures and avoid repeating the same retry logic over and over.
 
 This is a function that I use in many of my scripts.
-Feel free to use it as-is, or update it with other improvements or to suit your needs.
+Feel free to use it as-is, or update it to suit your needs.
 Have feedback or suggestions?
-Leave a comment below.
+Let me know by leaving a comment below.
 
 Happy coding!
