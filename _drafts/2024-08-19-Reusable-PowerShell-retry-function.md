@@ -253,6 +253,25 @@ Here is a contrived example of how you might use the updated function:
 Invoke-ScriptBlockWithRetries -ScriptBlock $flakyAction -MaxNumberOfAttempts 10 -MillisecondsToWaitBetweenAttempts 100 -ExponentialBackoff -ErrorsToNotRetry "DoNotRetry" -Verbose
 ```
 
+And here is the output you might see when running the above code, where it first fails with an exception, and then fails with an error, and succeeds on the 3rd attempt:
+
+```plaintext
+VERBOSE: Attempt number '1' of '10' failed.
+Error: System.Management.Automation.RuntimeException: Exception
+ErrorDetails:
+VERBOSE: Waiting '100' milliseconds before next attempt.
+Invoke-ScriptBlockWithRetries: C:\dev\Git\iQ\RQ.ClientCancellationProcess\Test.ps1:89:1
+Line |
+  89 |  Invoke-ScriptBlockWithRetries -ScriptBlock $flakyAction -MaxNumberOfA …
+     |  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | Error
+VERBOSE: Attempt number '2' of '10' failed.
+Error: System.Management.Automation.RuntimeException: Error
+ErrorDetails:
+VERBOSE: Waiting '200' milliseconds before next attempt.
+Success
+```
+
 If you do not want non-terminating errors to be retried (e.g. the `Write-Error` cases in the `$flakyAction` above), provide the `-DoNotRetryNonTerminatingErrors` switch parameter.
 
 ### More examples
