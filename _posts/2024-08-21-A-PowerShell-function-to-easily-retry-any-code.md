@@ -368,7 +368,7 @@ Invoke-ScriptBlockWithRetries -ScriptBlock $getDataAndWriteItToAFileAndSendSlack
 One caveat with the above implementation is that non-terminating errors will be thrown as terminating errors if they are still failing after all of the retries, which may not be the desired behavior.
 I typically prefer to have all persisting errors thrown, as it allows for a single way to handle any errors produced by the script block (i.e. with a try-catch block).
 
-For those that do not want this behaviour, I offer the following implementation that is not quite as straightforward, but provides a `DoNotThrowNonTerminatingErrors` parameter that allows for non-terminating errors to not be thrown if they are still failing after all of the retries:
+For those that do not want this behaviour, I offer this final implementation that is not quite as straightforward, but provides an additional `DoNotThrowNonTerminatingErrors` parameter that allows for non-terminating errors to not be thrown if they are still failing after all of the retries:
 
 ```powershell
 function Invoke-ScriptBlockWithRetries {
