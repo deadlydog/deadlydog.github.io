@@ -1,0 +1,11 @@
+_id: dda22cc0-75b8-11ef-95b0-27dbd4969282
+message: >-
+  The marketplace page seems to imply you need to install additional language
+  formatters for each language (e.g. C# FixFormat - C# for C#). But Visual
+  Studio has built in formatting for most of the languages it supports. Does it
+  work without additional downloads?
+name: Colin Carter
+email: 232bbd2cbf04a728f33dcfde91121659
+url: ''
+hidden: ''
+date: '2024-09-18T12:23:53.063Z'
