@@ -1,0 +1,11 @@
+_id: 43068ce0-879e-11ef-a1d5-994eb986e195
+message: >-
+  I store my classes in seperate.ps files then dot source them in my psm1 file.
+  I use a standard power shell function e.g. new-myclassObject, to wrap the
+  class instatiator ( [myclass]::new() ) which makes the class discoverable and
+  allows me to use comment based help.
+name: Oswald
+email: 0eee9b60c8bd600e121be9093155471e
+url: ''
+hidden: ''
+date: '2024-10-11T06:58:47.449Z'
