@@ -1,0 +1,7 @@
+_id: 014741f0-8979-11ef-ba89-a3e984ec2224
+message: "Hey,\r\nactually there is a way to have your classes and enums exported even with using the normal Import-Module Cmdlet. It is described in https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_classes?view=powershell-7.4#exporting-classes-with-type-accelerators (and also works with PS 5.1). I have a Classes subfolder in my module path with the classes as .ps1 files and then i dot source them from the .psm1. Classes and enums are then also available outsite the module."
+name: Jannis
+email: 340fdd492c349d03d3c96313261ce5b9
+url: ''
+hidden: ''
+date: '2024-10-13T15:37:08.201Z'
