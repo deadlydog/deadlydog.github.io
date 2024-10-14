@@ -80,7 +80,7 @@ You can get a list of all of the built-in type accelerators for your PowerShell 
 [PSObject].Assembly.GetType('System.Management.Automation.TypeAccelerators')::Get
 ```
 
-![Get all type accelerators](/assets/Posts/2024-10-13-Type-less-by-using-PowerShell-type-accelerators/PowerShell-get-all-type-accelerators.png)
+![Get all type accelerators](/assets/Posts/2024-10-14-Type-less-by-using-PowerShell-type-accelerators/PowerShell-get-all-type-accelerators.png)
 
 This is similar to running `Get-Alias` to get a list of all cmdlet aliases, only these are for class/enum types.
 
