@@ -113,7 +113,7 @@ See [the MS documentation](https://learn.microsoft.com/en-us/powershell/module/m
 ## Using namespaces instead of type accelerators
 
 The [built-in type accelerators](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_type_accelerators) are great for common types, and there are quite a few of them.
-If you find yourself using .NET types that do not have type accelerators defined, and do not want to type out the fully defined type name, you can instead use the `using namespace` statement to import the namespace and then use the type name without the fully qualified name.
+If you find yourself using .NET types that do not have type accelerators defined, instead of creating custom type accelerators you can use the `using namespace` statement to import the namespace, and then use all of the types in that namespace without needing the fully qualified name.
 
 Here's an example of using the `using namespace` statement to import the `System.Net.Http` namespace and then use the `HttpClient` class without the fully qualified name:
 
