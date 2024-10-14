@@ -11,18 +11,18 @@ $postToRename = $existingPostFiles |
 
 Write-Output "The following post will be renamed: $($postToRename.Name)"
 
-[string] $title = Read-Host -Prompt "What is the new title of the blog post? (with spaces, capitalization, apostrophes, etc.). Leave blank to use the current title, but potentially a different date."
+[string] $newPostTitle = Read-Host -Prompt "What is the new title of the blog post? (with spaces, capitalization, apostrophes, etc.). Leave blank to use the current title, but potentially a different date."
 [string] $newPostDate = Read-Host -Prompt "What should the date of the blog post be? (yyyy-MM-dd). Leave blank to use today's date."
 
-if ([string]::IsNullOrWhiteSpace(($title)) {
-	$title = $postToRename.Name.Substring(11).Replace("-", " ")
+if ([string]::IsNullOrWhiteSpace($newPostTitle) {
+	$newPostTitle = $postToRename.Name.Substring(10)
 }
 
 if ([string]::IsNullOrWhiteSpace($newPostDate)) {
 	$newPostDate = Get-Date -Format 'yyyy-MM-dd'
 }
 
-[string] $specialCharactersRemovedTitle = $title -replace "[+']", ""
+[string] $specialCharactersRemovedTitle = $newPostTitle -replace "[+']", ""
 [string] $doubleSpacesRemovedTitle = $specialCharactersRemovedTitle -replace "\s+", " "
 [string] $sanitizedTitle = $doubleSpacesRemovedTitle -replace "[^a-zA-Z0-9-]", "-"
 [string] $newPostFileNameWithoutExtension = "$newPostDate-$sanitizedTitle"
@@ -38,7 +38,7 @@ Rename-Item -Path $postToRename.FullName -NewName "$newPostFileNameWithoutExtens
 # Update the post content with the new post title.
 $fileContent = Get-Content -Path $newPostFilePath
 $fileContent = $fileContent -replace $oldPostFileNameWithoutExtension, $newPostFileNameWithoutExtension
-$fileContent = $fileContent -replace '^title: \".+\"', "title: ""$title""" # Regex replace the entire title line since we don't know the exact format of the post title.
+$fileContent = $fileContent -replace '^title: \".+\"', "title: ""$newPostTitle""" # Regex replace the entire title line since we don't know the exact format of the post title.
 $fileContent = $fileContent -replace $oldPostSanitizedTitle, $sanitizedTitle
 Set-Content -Path $newPostFilePath -Value $fileContent
 
