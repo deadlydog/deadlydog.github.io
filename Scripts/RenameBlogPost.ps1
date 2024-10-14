@@ -11,8 +11,12 @@ $postToRename = $existingPostFiles |
 
 Write-Output "The following post will be renamed: $($postToRename.Name)"
 
-[string] $title = Read-Host -Prompt "What is the new title of the blog post? (with spaces, capitalization, apostrophes, etc.)"
+[string] $title = Read-Host -Prompt "What is the new title of the blog post? (with spaces, capitalization, apostrophes, etc.). Leave blank to use the current title, but potentially a different date."
 [string] $newPostDate = Read-Host -Prompt "What should the date of the blog post be? (yyyy-MM-dd). Leave blank to use today's date."
+
+if ([string]::IsNullOrEmpty($title)) {
+	$title = $postToRename.Name.Substring(11).Replace("-", " ")
+}
 
 if ([string]::IsNullOrEmpty($newPostDate)) {
 	$newPostDate = Get-Date -Format 'yyyy-MM-dd'
