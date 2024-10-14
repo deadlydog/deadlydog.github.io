@@ -139,6 +139,6 @@ Type accelerators are a great way to save keystrokes.
 There are built-in aliases for many .NET types, and you can create your own custom type accelerators as well.
 If you find yourself using a .NET type often, consider using it's type accelerator, or including a `using namespace` statement to import it's namespace.
 Just remember that if you include a custom type accelerator or namespace in your `$Profile`, it may not be available on other machines.
-For more information about type accelerators, check out [this amazing blog by 4syspos](https://4sysops.com/archives/using-powershell-type-accelerators/)
+For more information and examples of using type accelerators, check out [this awesome blog post by 4syspos](https://4sysops.com/archives/using-powershell-type-accelerators/).
 
 Happy scripting!
