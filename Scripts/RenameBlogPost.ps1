@@ -15,7 +15,7 @@ Write-Output "The following post will be renamed: $($postToRename.Name)"
 [string] $newPostDate = Read-Host -Prompt "What should the date of the blog post be? (yyyy-MM-dd). Leave blank to use today's date"
 
 if ([string]::IsNullOrWhiteSpace($newPostTitle)) {
-	$newPostTitle = $postToRename.Name.Substring(10)
+	$newPostTitle = $postToRename.Name.Substring(10) # The first 10 characters are the date: yyyy-MM-dd
 }
 
 if ([string]::IsNullOrWhiteSpace($newPostDate)) {
