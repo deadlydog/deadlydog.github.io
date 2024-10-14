@@ -70,7 +70,7 @@ The first two examples don't save too many keystrokes, but ones like `[pscredent
 Before understanding that they are simply an alias, I would do a Google lookup for the full type name every time I needed to use a non-common one, to make sure it would work on not only my machine, but others' as well.
 Knowing that they are aliases built into the language gives me confidence to use them in my scripts, regardless of the machine they're run on.
 
-Be sure to check out [the full list of built-in type accelerators in the MS docs](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_type_accelerators).
+Be sure to check out [the full list of built-in type accelerators in the MS docs](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_type_accelerators), as there are quite a few.
 
 ## Get all type accelerators
 
@@ -112,15 +112,15 @@ See [the MS documentation](https://learn.microsoft.com/en-us/powershell/module/m
 
 ## Using namespaces instead of type accelerators
 
-The [built-in type accelerators](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_type_accelerators) are great for common types, and there are quite a few of them.
-If you find yourself using .NET types that do not have type accelerators defined, instead of creating custom type accelerators you can use the `using namespace` statement to import the namespace, and then use all of the types in that namespace without needing the fully qualified name.
+Rather than creating a bunch of custom type accelerators for .NET types that don't have built-in ones, you can instead use the `using namespace` statement to import an entire namespace and then use the types in that namespace without needing the fully qualified name.
 
-Here's an example of using the `using namespace` statement to import the `System.Net.Http` namespace and then use the `HttpClient` class without the fully qualified name:
+Here's an example of using the `using namespace` statement to import the `System.Net.Http` namespace and then use the `HttpClient` and `HttpRequestHeaders` classes without the fully qualified name:
 
 ```powershell
 using namespace System.Net.Http
 
 $myHttpClient = [HttpClient]::new() # Instead of [System.Net.Http.HttpClient]::new()
+$headers = [HttpRequestHeaders]::new() # Instead of [System.Net.Http.Headers.HttpRequestHeaders]::new()
 ```
 
 A common one that I find myself using is:
