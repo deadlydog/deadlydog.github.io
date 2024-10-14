@@ -14,9 +14,9 @@ tags:
 ---
 
 I had heard the PowerShell term "type accelerators" a few times, but never really knew what that meant.
-I finally decided to check out [the About Type Accelerators docs](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_type_accelerators) and it turns out they're simply aliases for .NET types.
+I finally decided to check out [the about_Type_Accelerators docs](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_type_accelerators) and it turns out they're simply aliases for .NET types.
 
-Just like you might define an alias for a command or a function, you can define an alias for a .NET class or enum type, only it's called a "type accelerator".
+Just like you might define an alias for a function, you can define an alias for a .NET class or enum type, only it's called a "type accelerator".
 It turns out that I (and probably you) had been using them all along without realizing it.
 
 ## Built-in type accelerators
