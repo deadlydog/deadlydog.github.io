@@ -34,6 +34,7 @@ Here are some common built-in type accelerators:
 [regex] # Instead of [System.Text.RegularExpressions.Regex]
 [pscredential] # Instead of [System.Management.Automation.PSCredential]
 [pscustomobject] # Instead of [System.Management.Automation.PSCustomObject]
+[ipaddress] # Instead of [System.Net.IPAddress]
 ```
 
 So the following two lines are equivalent:
