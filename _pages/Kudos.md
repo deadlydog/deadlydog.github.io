@@ -9,6 +9,14 @@ It's a nice place I can turn to when I'm not feeling motivated, or when I need a
 
 ## Donations and thank you emails from the community
 
+2024-10-14
+
+$10.00 USD from Gilbert Sanchez for [my blog](/).
+
+> "It's one poutine Michael. What could it cost, 10 dollars?"
+
+---
+
 2024-08-19
 
 $15.00 USD from James Lennon for [Path Length Checker app](https://github.com/deadlydog/PathLengthChecker).
