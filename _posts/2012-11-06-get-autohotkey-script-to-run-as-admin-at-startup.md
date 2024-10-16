@@ -15,9 +15,9 @@ tags:
   - Windows 8
 ---
 
-__Update__: Before you go running your script as an admin, see if [this less obtrusive fix](https://blog.danskingdom.com/get-autohotkey-to-interact-with-admin-windows-without-running-ahk-script-as-admin/) will solve your problems.
+__Update__: Before you go running your script as an admin, see if [this less obtrusive fix](/get-autohotkey-to-interact-with-admin-windows-without-running-ahk-script-as-admin/) will solve your problems.
 
-A few weeks back I posted [some problems with running AutoHotkey (AHK) in Windows 8, and that the solution was to run your AHK script as admin](https://blog.danskingdom.com/autohotkey-cannot-interact-with-windows-8-windowsor-can-it/). I also showed how to have the script start automatically when you logged into Windows. What I didn't realize at the time though was that the method only worked for launching my AHK script as an admin because I had disabled UAC in the registry (which prevents most Metro apps from working in Windows 8, and likely isn't acceptable for most people).
+A few weeks back I posted [some problems with running AutoHotkey (AHK) in Windows 8, and that the solution was to run your AHK script as admin](/autohotkey-cannot-interact-with-windows-8-windowsor-can-it/). I also showed how to have the script start automatically when you logged into Windows. What I didn't realize at the time though was that the method only worked for launching my AHK script as an admin because I had disabled UAC in the registry (which prevents most Metro apps from working in Windows 8, and likely isn't acceptable for most people).
 
 So here is a Windows 8, UAC-friendly method to automatically launch your AHK scripts as admin at startup (also works in previous versions of Windows). The trick is to use the Task Scheduler:
 

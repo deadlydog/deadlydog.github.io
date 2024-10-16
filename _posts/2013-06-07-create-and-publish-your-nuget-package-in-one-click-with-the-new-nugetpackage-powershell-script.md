@@ -31,7 +31,7 @@ This makes packing and pushing your NuGet packages quick and easy, whether doing
 
 [Go to the codeplex page](https://newnugetpackage.codeplex.com/) to download the script and start automating your NuGet package creating today. The [codeplex documentation](https://newnugetpackage.codeplex.com/documentation) describes the script in much more detail, as well as step by step instructions on how to get setup to start using it.
 
-[UPDATE] I have also used this script in a new NuGet package that will automatically create a NuGet package for your own projects without you having to do anything. [Read about it here](https://blog.danskingdom.com/automatically-create-your-projects-nuget-package-every-time-it-builds-via-nuget/). [/UPDATE]
+[UPDATE] I have also used this script in a new NuGet package that will automatically create a NuGet package for your own projects without you having to do anything. [Read about it here](/automatically-create-your-projects-nuget-package-every-time-it-builds-via-nuget/). [/UPDATE]
 
 ## Additional NuGet Information
 

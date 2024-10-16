@@ -13,7 +13,7 @@ tags:
   - WordPress
 ---
 
-When trying to upload [my last blog post](https://blog.danskingdom.com/launch-visual-studio-checkin-window-with-a-keystroke/) from Windows Live Writer (WLW) to WordPress (WP) I received the following error:
+When trying to upload [my last blog post](/launch-visual-studio-checkin-window-with-a-keystroke/) from Windows Live Writer (WLW) to WordPress (WP) I received the following error:
 
 > Network Connection Error
 > Error attempting to connect to blog at:
@@ -36,7 +36,7 @@ Happy coding!
 
 ## Update
 
-I’ve ran into this problem again when trying to post [this](https://blog.danskingdom.com/get-autohotkey-to-interact-with-admin-windows-without-running-ahk-script-as-admin/) article. 3 different spots in the article were causing the problem. Here is the source of the article with what broke it, and what worked:
+I’ve ran into this problem again when trying to post [this](/get-autohotkey-to-interact-with-admin-windows-without-running-ahk-script-as-admin/) article. 3 different spots in the article were causing the problem. Here is the source of the article with what broke it, and what worked:
 
 1. This broke:
 

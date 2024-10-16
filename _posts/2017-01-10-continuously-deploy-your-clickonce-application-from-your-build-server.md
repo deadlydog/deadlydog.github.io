@@ -45,7 +45,7 @@ The next difference is that you will want to copy that "app.publish" directory t
 
 So we copy the files into the build artifacts directory, and then the Publish Build Artifacts step at the end will copy those files to wherever you’ve specified; in my case it’s a network share.
 
-If you like you can now run the build and see if it succeeds. If the build fails with an error relating to an expired certificate or pfx file, see [my other blog post on importing the required certificate on the build server at build-time](https://blog.danskingdom.com/creating-a-pfx-certificate-and-applying-it-on-the-build-server-at-build-time/), which involves adding one more "Import-PfxCertificate.ps1" build step before the MSBuild step.
+If you like you can now run the build and see if it succeeds. If the build fails with an error relating to an expired certificate or pfx file, see [my other blog post on importing the required certificate on the build server at build-time](/creating-a-pfx-certificate-and-applying-it-on-the-build-server-at-build-time/), which involves adding one more "Import-PfxCertificate.ps1" build step before the MSBuild step.
 
 For completeness sake, this is what my Publish Build Artifacts step looks like in VSTS, and you’ll also notice the "Import-PfxCertificate.ps1" step before the MSBuild step as well:
 

@@ -17,7 +17,7 @@ tags:
   - TFS
 ---
 
-__Update:__ I show how to have your checkin policies automatically update the registry keys shown in this blog post [on this newer blog post](https://blog.danskingdom.com/template-solution-for-deploying-tfs-checkin-policies-to-multiple-versions-of-visual-studio-and-having-them-automatically-work-from-tf-exe-checkin-too/). If you are not the person creating the checkin policies though, then you will still need to use the technique shown in this post.
+__Update:__ I show how to have your checkin policies automatically update the registry keys shown in this blog post [on this newer blog post](/template-solution-for-deploying-tfs-checkin-policies-to-multiple-versions-of-visual-studio-and-having-them-automatically-work-from-tf-exe-checkin-too/). If you are not the person creating the checkin policies though, then you will still need to use the technique shown in this post.
 
 I frequently check code into TFS from the command line, instead of from Visual Studio (VS), for a number of reasons:
 

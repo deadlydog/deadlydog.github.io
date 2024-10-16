@@ -79,7 +79,7 @@ SetTimer, CloseZoomWindowsAfterJoiningAMeeting, 500
 __NOTE__: This script assumes you've checked the box in your browser that says something to the effect of "Always open links of this type automatically".
 If you haven't, then you'll need to manually click the "Open" button in your browser every time; only this script will close the tab before you have a chance to click the Open button.
 
-If you're not familiar with AutoHotkey or how to use it, check out [this post](https://blog.danskingdom.com/Get-up-and-running-with-AutoHotkey) to get familiar with it and how you can automate away many daily annoyances like this one.
+If you're not familiar with AutoHotkey or how to use it, check out [this post](/Get-up-and-running-with-AutoHotkey) to get familiar with it and how you can automate away many daily annoyances like this one.
 
 ## I don't know what that gobbledygook code above means
 
@@ -87,6 +87,6 @@ If programming code scares you, or you're just feeling lazy, go ahead and [downl
 It simply runs [the above script](https://github.com/deadlydog/CloseZoomWindowsAfterJoiningMeeting/blob/master/src/CloseZoomWindowsAfterJoiningMeeting.ahk) for you without requiring you to install AutoHotkey or write any code.
 Just double-click the executable to run it.
 
-You'll likely also want to check out [how to run it automatically when you log into Windows](https://blog.danskingdom.com/Get-up-and-running-with-AutoHotkey/#run-scripts-automatically-at-startup) so that you don't need to manually run it every time you restart your computer.
+You'll likely also want to check out [how to run it automatically when you log into Windows](/Get-up-and-running-with-AutoHotkey/#run-scripts-automatically-at-startup) so that you don't need to manually run it every time you restart your computer.
 
 Happy Zooming!

@@ -18,7 +18,7 @@ tags:
 When an app running as Admin has focus, you may not be able to trigger your AutoHotkey (AHK) scripts, hotkeys, and hotstrings.
 This is a security feature of Windows where non-elevated apps cannot interact with elevated apps.
 
-This can be frustrating and I have [blogged about other ways](https://blog.danskingdom.com/get-autohotkey-to-interact-with-admin-windows-without-running-ahk-script-as-admin/) to get around this issue in the past, but the method described in this post is now my preferred approach.
+This can be frustrating and I have [blogged about other ways](/get-autohotkey-to-interact-with-admin-windows-without-running-ahk-script-as-admin/) to get around this issue in the past, but the method described in this post is now my preferred approach.
 
 [The AutoHotkey documentation](https://www.autohotkey.com/docs/v1/FAQ.htm#uac) explains the issue in more detail, as well as common ways to work around it.
 The most common workaround is to [run your AHK script with UI Access](https://www.autohotkey.com/docs/v1/Program.htm#Installer_uiAccess).

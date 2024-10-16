@@ -106,7 +106,7 @@ Compiled assembly C# classes are the fastest to import every time, since the cod
 
 ## Other considerations
 
-In [this post](https://blog.danskingdom.com/How-and-where-to-properly-define-classes-and-enums-in-your-PowerShell-modules/) I looked at the usability implications of using PowerShell classes vs Inline C# classes.
+In [this post](/How-and-where-to-properly-define-classes-and-enums-in-your-PowerShell-modules/) I looked at the usability implications of using PowerShell classes vs Inline C# classes.
 You can read the post for more details, but the takeaways are:
 
 - If creating a module with PowerShell classes, you _must_ define them directly in the .psm1 file; they cannot be defined in another file and dot-sourced into the .psm1 file.
@@ -162,7 +162,7 @@ This will allow you to step through and debug the complex code, and write to all
 
 It is possible to create modules and cmdlets entirely in C# instead of PowerShell.
 This gives you all of the benefits that come with writing C#: strongly typed code, compiler checking, great development tools, etc.
-For more information on how to do this, [check out my other blog post](https://blog.danskingdom.com/Create-and-test-PowerShell-Core-cmdlets-in-CSharp/).
+For more information on how to do this, [check out my other blog post](/Create-and-test-PowerShell-Core-cmdlets-in-CSharp/).
 
 ## Conclusion
 

@@ -92,7 +92,7 @@ So now you can run your PowerShell scripts from File Explorer regardless of whet
 
 ## Bonus: Keep PowerShell console open when script is ran from File Explorer
 
-__Update__ - This Bonus section now has its own [updated dedicated post here](https://blog.danskingdom.com/keep-powershell-console-window-open-after-script-finishes-running/) that you should use instead.
+__Update__ - This Bonus section now has its own [updated dedicated post here](/keep-powershell-console-window-open-after-script-finishes-running/) that you should use instead.
 
 When running a script by double-clicking it, if the script completes very quickly the user will see the PowerShell console appear very briefly and then disappear. If the script gives output that the user wants to see, or if it throws an error, the user won’t have time to read the text. The typical work around is to open the PowerShell console and manually run the script. The other option is to adjust our new registry key value a bit.
 

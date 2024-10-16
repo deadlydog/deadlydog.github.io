@@ -117,7 +117,7 @@ function Test-Output { Get-Process PowerShell, none; Write-Warning "Test!"; Writ
 Test-Output *> Test-Output.txt
 ```
 
-### Explicitly set parameter set variable values when not defined ([source](https://blog.danskingdom.com/always-explicitly-set-your-parameter-set-variables-for-powershell-v2-0-compatibility/))
+### Explicitly set parameter set variable values when not defined ([source](/always-explicitly-set-your-parameter-set-variables-for-powershell-v2-0-compatibility/))
 
 PS v2.0 will throw an error if you try and access a parameter set parameter that has not been defined. The solution is to give it a default value when it is not defined. Specify the Private scope in case a variable with the same name exists in the global scope or an inherited scope:
 

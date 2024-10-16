@@ -15,13 +15,13 @@ tags:
   - Windows Explorer
 ---
 
-I originally included this as a small bonus section at the end of [my other post about fixing the issue of not being able to run a PowerShell script whose path contains a space](https://blog.danskingdom.com/fix-problem-where-windows-powershell-cannot-run-script-whose-path-contains-spaces/), but thought this deserved its own dedicated post.
+I originally included this as a small bonus section at the end of [my other post about fixing the issue of not being able to run a PowerShell script whose path contains a space](/fix-problem-where-windows-powershell-cannot-run-script-whose-path-contains-spaces/), but thought this deserved its own dedicated post.
 
 When running a script by double-clicking it, or by right-clicking it and choosing Run With PowerShell or Open With Windows PowerShell, if the script completes very quickly the user will see the PowerShell console appear very briefly and then disappear.  If the script gives output that the user wants to see, or if it throws an error, the user won’t have time to read the text.  We have 3 solutions to fix this so that the PowerShell console stays open after the script has finished running:
 
 ## 1. One-time solution
 
-Open a PowerShell console and manually run the script from the command line. I show how to do this a bit [in this post](https://blog.danskingdom.com/fix-problem-where-windows-powershell-cannot-run-script-whose-path-contains-spaces/), as the PowerShell syntax to run a script from the command-line is not straight-forward if you’ve never done it before.
+Open a PowerShell console and manually run the script from the command line. I show how to do this a bit [in this post](/fix-problem-where-windows-powershell-cannot-run-script-whose-path-contains-spaces/), as the PowerShell syntax to run a script from the command-line is not straight-forward if you’ve never done it before.
 
 The other way is to launch the PowerShell process from the Run box (Windows Key + R) or command prompt using the __-NoExit__ switch and passing in the path to the PowerShell file.
 
@@ -64,7 +64,7 @@ Default Value: "C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe" "-Com
 Desired Value: "C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe" -NoExit "-Command" "if((Get-ExecutionPolicy ) -ne 'AllSigned') { Set-ExecutionPolicy -Scope Process Bypass }; & \"%1\""
 ```
 
-The Desired Values add the –NoExit switch, as well wrap the %1 in double quotes to [allow the script to still run even if it’s path contains spaces](https://blog.danskingdom.com/fix-problem-where-windows-powershell-cannot-run-script-whose-path-contains-spaces/).
+The Desired Values add the –NoExit switch, as well wrap the %1 in double quotes to [allow the script to still run even if it’s path contains spaces](/fix-problem-where-windows-powershell-cannot-run-script-whose-path-contains-spaces/).
 
 If you want to open the registry and manually make the change you can, or here is the registry script that we can run to make the change automatically for us:
 

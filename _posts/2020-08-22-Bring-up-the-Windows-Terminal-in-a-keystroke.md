@@ -72,7 +72,7 @@ While this will allow you to launch the Windows Terminal with a custom keyboard 
 ## Method 4: Switch to Windows Terminal via keyboard shortcut and AutoHotkey
 
 To use a custom keyboard shortcut to both launch the Windows Terminal, as well as simply switch to the Windows Terminal window if it's already open, I use [AutoHotkey](https://www.autohotkey.com).
-I've [blogged about AutoHotkey in the past](https://blog.danskingdom.com/categories/#autohotkey), and if you've never used it you really should check it out.
+I've [blogged about AutoHotkey in the past](/categories/#autohotkey), and if you've never used it you really should check it out.
 
 In a new or existing AutoHotkey script, you can define this function and hotkey:
 
@@ -132,7 +132,7 @@ If you want the Windows Terminal launched as an elevated command prompt (i.e. as
 Run, *RunAs wt
 ```
 
-Also, if you haven't already, you'll want to [follow these steps to digitally sign your AutoHotkey executable](https://blog.danskingdom.com/2020-09-28-Get-up-and-running-with-AutoHotkey.md#allow-ahk-to-interact-with-apps-running-as-admin) to allow AutoHotkey scripts to be able to interact with applications running as Admin.
+Also, if you haven't already, you'll want to [follow these steps to digitally sign your AutoHotkey executable](/2020-09-28-Get-up-and-running-with-AutoHotkey.md#allow-ahk-to-interact-with-apps-running-as-admin) to allow AutoHotkey scripts to be able to interact with applications running as Admin.
 Without this, the AutoHotkey script will not be able to minimize the Windows Terminal.
 
 ### Getting the AutoHotkey script running
@@ -150,7 +150,7 @@ You'll also likely want to have your script startup automatically with Windows s
 This is as easy as dropping the .ahk file (or a shortcut to it) in your `shell:Startup` directory.
 Windows will automatically run all files in this directory every time you log in.
 
-For more detailed instructions and information, [see this post](https://blog.danskingdom.com/Get-up-and-running-with-AutoHotkey/)
+For more detailed instructions and information, [see this post](/Get-up-and-running-with-AutoHotkey/)
 
 ## Conclusion
 

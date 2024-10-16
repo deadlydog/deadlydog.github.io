@@ -25,6 +25,6 @@ Now every time you debug a PowerShell script, it will first create a new tempora
 No more manually restarting your PowerShell terminals when developing classes or binary modules!
 
 I hope you find this useful.
-For more Visual Studio Code settings you might want to tweak, [check out this post](https://blog.danskingdom.com/Visual-Studio-Code-default-settings-to-change/).
+For more Visual Studio Code settings you might want to tweak, [check out this post](/Visual-Studio-Code-default-settings-to-change/).
 
 Happy coding!

@@ -15,7 +15,7 @@ tags:
   - Windows PowerShell ISE
 ---
 
-In the preamble of [an earlier post](https://blog.danskingdom.com/powershell-ise-multiline-comment-and-uncomment-done-right-and-other-ise-gui-must-haves/) I mentioned that one of the little things that bugs me about Windows PowerShell ISE is that you can add tabs to the start of a line, but not to the end of a line. This is likely because it would interfere with the tab-completion feature. I still like to be able to put tabs on the end of my code lines though so that I can easily line up my comments, like this:
+In the preamble of [an earlier post](/powershell-ise-multiline-comment-and-uncomment-done-right-and-other-ise-gui-must-haves/) I mentioned that one of the little things that bugs me about Windows PowerShell ISE is that you can add tabs to the start of a line, but not to the end of a line. This is likely because it would interfere with the tab-completion feature. I still like to be able to put tabs on the end of my code lines though so that I can easily line up my comments, like this:
 
 ```powershell
 $processes = Get-Process # Get all of the processes.

@@ -95,7 +95,7 @@ To digitally sign the AutoHotkey executable:
 1. Click `Yes` when prompted to `Run With UI Access`.
 
 That's it; AutoHotkey should now be able to interact with all windows/applications, even ones running as admin.
-I've blogged about this in the past, so if you're interested you can [see this post](https://blog.danskingdom.com/get-autohotkey-to-interact-with-admin-windows-without-running-ahk-script-as-admin) for more background information.
+I've blogged about this in the past, so if you're interested you can [see this post](/get-autohotkey-to-interact-with-admin-windows-without-running-ahk-script-as-admin) for more background information.
 
 ## Transform your script into an executable
 
@@ -139,7 +139,7 @@ To give a few examples of the types of things you can do with AutoHotkey:
 [Lifehack has a few more useful script examples](https://www.lifehack.org/articles/featured/10-ways-to-use-autohotkey-to-rock-your-keyboard.html) if you'd like to check them out.
 
 You can do way more than quick one-line scripts as well.
-For example, if you use Zoom [check out this post](https://blog.danskingdom.com/Close-those-superfluous-Zoom-windows-automatically) that gives an AHK script that will close excess Zoom windows.
+For example, if you use Zoom [check out this post](/Close-those-superfluous-Zoom-windows-automatically) that gives an AHK script that will close excess Zoom windows.
 Hopefully these examples will peek your curiosity 😊
 
 ## Conclusion

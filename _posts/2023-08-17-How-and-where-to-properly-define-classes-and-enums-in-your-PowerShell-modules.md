@@ -38,7 +38,7 @@ If you do not follow these 2 rules with PowerShell native classes/enums, then yo
 
 > Unable to find type [MyClass/MyEnum]
 
-I also discuss the pros and cons of the different ways to define classes and enums in PowerShell [in this post](https://blog.danskingdom.com/PowerShell-class-definition-pros-cons-and-performance-comparison/).
+I also discuss the pros and cons of the different ways to define classes and enums in PowerShell [in this post](/PowerShell-class-definition-pros-cons-and-performance-comparison/).
 
 ## What is a PowerShell native class and enum?
 
@@ -218,7 +218,7 @@ I created [this PR](https://github.com/MicrosoftDocs/PowerShell-Docs/pull/10343)
 As you can see from the need of this article, as well as all of the possible answers to [this Stack Overflow question](https://stackoverflow.com/questions/31051103/how-to-export-a-class-in-a-powershell-v5-module) on how to export classes from a module, working with PowerShell native classes in modules is not as clear and straightforward as it could be.
 
 Also, old class versions are kept in memory until the PowerShell session is restarted, which can make developing with classes a bit of a pain.
-[Checkout this post](https://blog.danskingdom.com/Automatically-create-new-sessions-to-improve-PowerShell-development-with-classes-in-VS-Code/) for how to have VS Code automatically create a new PowerShell session for you when you debug your script, so you don't have to manually restart your session every time you make a change to your class.
+[Checkout this post](/Automatically-create-new-sessions-to-improve-PowerShell-development-with-classes-in-VS-Code/) for how to have VS Code automatically create a new PowerShell session for you when you debug your script, so you don't have to manually restart your session every time you make a change to your class.
 
 Classes and enums are extremely useful, so I hope that PowerShell will continue to improve the experience of using them.
 
@@ -226,11 +226,11 @@ Classes and enums are extremely useful, so I hope that PowerShell will continue 
 
 It is possible to create modules and cmdlets entirely in C# instead of PowerShell.
 This allows you to structure all of your code files however you want.
-For more information on how to do this, [check out my other blog post](https://blog.danskingdom.com/Create-and-test-PowerShell-Core-cmdlets-in-CSharp/).
+For more information on how to do this, [check out my other blog post](/Create-and-test-PowerShell-Core-cmdlets-in-CSharp/).
 
 ### PowerShell class definition comparison
 
-I discuss the pros and cons of the different ways to define classes and enums in PowerShell [in this post](https://blog.danskingdom.com/PowerShell-class-definition-pros-cons-and-performance-comparison/).
+I discuss the pros and cons of the different ways to define classes and enums in PowerShell [in this post](/PowerShell-class-definition-pros-cons-and-performance-comparison/).
 
 ## Conclusion
 

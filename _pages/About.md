@@ -53,7 +53,7 @@ You can see all of the videos I've made on [my YouTube channel](https://www.yout
 
 Here are some websites that I've made:
 
-- (Current) [Blog.DansKingdom.com](https://blog.danskingdom.com) - My personal programming blog (the website you're on right now).
+- (Current) [Blog.DansKingdom.com](/) - My personal programming blog (the website you're on right now).
 - (2009) [XnaParticles.com](http://www.xnaparticles.com/) - The project home of my Dynamic Particle System Framework.
 - (2008) TheHotMap.com - An interactive search engine interface. This was created by myself and one other person (no longer exists).
 - (2007) [DansKingdom.com](http://danskingdom.com/) - My personal site (very old and outdated).
@@ -72,9 +72,9 @@ Some public speaking I've done outside of work:
 
 ## 🙏 Feedback and kudos
 
-[See what my colleagues have said about me](https://blog.danskingdom.com/feedback) over the years.
+[See what my colleagues have said about me](/feedback) over the years.
 
-[Check out some thank-yous and donations I've received](https://blog.danskingdom.com/kudos) from users of my open source software.
+[Check out some thank-yous and donations I've received](/kudos) from users of my open source software.
 
 ## © License
 
@@ -82,4 +82,4 @@ All material found on this blog is offered up under the [Creative Commons 4.0 Li
 
 ## 🔏 Privacy policy
 
-[View the privacy policy](https://blog.danskingdom.com/privacy) for this website.
+[View the privacy policy](/privacy) for this website.

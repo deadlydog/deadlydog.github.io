@@ -22,7 +22,7 @@ There is still a problem however.  __Every time I publish a new version of the 
 
 To get around this I created a PowerShell script that keeps the MinimumRequiredVersion up to date, and I call it from a Post-Build event.  This allows me to never have to worry about manually setting the Minimum Required Version, since it gets updated automatically after every successful build.
 
-__Update__: I've improved upon the powershell script below and created [a NuGet package that handles all of the setup/installation for you](https://nuget.org/packages/AutoUpdateProjectsMinimumRequiredClickOnceVersion), as described [in my newer post](https://blog.danskingdom.com/force-your-clickonce-app-to-update-without-prompting-user-now-on-nuget/).
+__Update__: I've improved upon the powershell script below and created [a NuGet package that handles all of the setup/installation for you](https://nuget.org/packages/AutoUpdateProjectsMinimumRequiredClickOnceVersion), as described [in my newer post](/force-your-clickonce-app-to-update-without-prompting-user-now-on-nuget/).
 
 Here is the powershell script:
 
