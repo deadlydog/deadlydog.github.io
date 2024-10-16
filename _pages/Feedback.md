@@ -9,15 +9,17 @@ This page is a compilation of that feedback.
 
 ## What my colleagues have to say about me
 
-2024-06-06 - From Maryam Bagherzadeh in Slack:
+### 2024-06-06
+
+From Maryam Bagherzadeh in Slack:
 
 > Thanks Dan!
 > I'm grateful for our 1-1s, your insights and perspectives!
 > You are a great mentor Dan, I'd recommend you to keep that going, share your knowledge, perspectives and greatness with other devs/mentees too :slightly_smiling_face:
 
----
+### 2024-01-15
 
-2024-01-15 - Anonymous feedback from 4 individuals on a lunch and learn presentation I gave on Dev Containers and GitHub Codespaces:
+Anonymous feedback from 4 individuals on a lunch and learn presentation I gave on Dev Containers and GitHub Codespaces:
 
 Individual 1:
 
@@ -38,15 +40,15 @@ Individual 4:
 
 > Great balance in supporting explanations with slides and practical demonstrations.
 
----
+### 2023-05-03
 
-2023-05-03 - PDLG (Product Development Leadership Group) and Development Leads in Slack:
+PDLG (Product Development Leadership Group) and Development Leads in Slack:
 
 > Dan is an amazing gift to us
 
----
+### 2022-11-08
 
-2022-11-08 - Steven Swab in Slack:
+Steven Swab in Slack:
 
 > I wanted to give @deadlydog-DanSchroeder a shout out for exemplifying a number of our core values.
 > He's a `High-horsepower` guy who `Delivers Results` and demonstrates excellent `Servant Leadership`.
@@ -60,9 +62,7 @@ Reply from Maryam Bagherzadeh:
 
 > @deadlydog-DanSchroeder is great! Knowledgeable, helpful plus humble!
 
----
-
-2021 Employee of the Year
+### 2021 Employee of the Year
 
 > In preparing this description of our Employee of the Year winner I asked a few folks for input.
 > In each response the central theme was "helping".
@@ -92,9 +92,7 @@ Reply from Maryam Bagherzadeh:
 > I want to offer an enormous congratulations and, a bright bright spotlight, to our 2021 Employee of the Year….
 > Dan Schroeder.
 
----
-
-2021 Q4 SLICCE Nomination from Shahram Koukia
+### 2021 Q4 SLICCE Nomination from Shahram Koukia
 
 > I firmly believe that Dan is iQmetrix MVP, for many reasons.
 > I have had the privilege of working with Dan for almost two years now, and anyone who works with him knows he's the best, personally and professionally.
@@ -104,39 +102,29 @@ Reply from Maryam Bagherzadeh:
 > Don’t get me started on his technical expertise and abilities, he is simply amazing! If it wasn’t for Dan, we could not have done the Toronto and Philly migration, he pushed through, put his sweat and blood into the work, he was also the one pulling everyone along.
 > He’s not human, he can’t be.
 
----
-
-2021 Q4 SLICCE Nomination from Cathy McKay
+### 2021 Q4 SLICCE Nomination from Cathy McKay
 
 > Dan continuously takes on new tasks to help his peers and clients.
 > He has been instrumental in helping many teams with their move out of the Philly data center and making sure the application tier of the project was moved on time.
 > Dan is always professional when dealing with others, you can see the respect he has earned within the company in the way the conversations he's involved in evolve.
 > When he is giving an opinion others want to hear it but they feel they can ask questions and work through challenges with Dan's help.
 
----
-
-2021 Q2 SLICCE Nomination from Farshad Hadei
+### 2021 Q2 SLICCE Nomination from Farshad Hadei
 
 > Because he has all in one and is able to do everything that normally takes a few teams to do!
 
----
-
-2021 Q2 SLICCE Nomination from Vincent Langevin
+### 2021 Q2 SLICCE Nomination from Vincent Langevin
 
 > Dan is showing true community by helping out the Windows Desktop Tech Stack Team right now!
 > During the Philadelphia Migration Windows Desktop Tech Stack had a TON of services to update and deploy to the new datacenter, and to help ensure that we meet the deadlines that we were given, Dan has graciously given some of his time to help the team out and get a few of our services updated and deployed!
 > Without Dan's tireless effort we definitely couldn't have done it!”
 
----
-
-2021 Q1 SLICCE Nomination from Adam Weibe
+### 2021 Q1 SLICCE Nomination from Adam Weibe
 
 > His experience, knowledge, and willingness to help make Dan an invaluable resource to many different teams at iQmetrix.
 > Thanks for all that you do Dan!”
 
----
-
-2020 Q4 SLICCE Nomination from Shahram Koukia:
+### 2020 Q4 SLICCE Nomination from Shahram Koukia
 
 > Dan checks all the boxes in “SLICCE” for me; He’s the most positive person I know.
 > He always focuses on positives.
@@ -144,9 +132,7 @@ Reply from Maryam Bagherzadeh:
 > I believe he represents the best of iQmetrix and a real asset.
 > I am surprised he’s already not the employee of the year.
 
----
-
-2020 Q4 SLICCE Nomination from Cathy McKay:
+### 2020 Q4 SLICCE Nomination from Cathy McKay
 
 > Dan is so many of these attributes.
 > He is amazing to work with as he is always ready and willing to help with speed and agility.
@@ -156,9 +142,7 @@ Reply from Maryam Bagherzadeh:
 > I would like to recognize Dan for all the work and effort he puts in on a daily basis.
 > Keep up the great work!”
 
----
-
-Dexter (circa 2019):
+### From Dexter (circa 2019)
 
 > Dan is always helpful and always provides a ton of insight into what he sees, and where he sees it, so that not only am I getting the help I need, but also learning where to look and what to look for when situations arise.
 > I wish everyone provided as much insight and context into the help they are giving, because that in turn allows us to learn and not just be told that it's fixed, thus I can also share that knowledge.
@@ -167,9 +151,7 @@ Dexter (circa 2019):
 >
 > Dan is a great resource and I appreciate the assistance I get from him in every interaction.
 
----
-
-Tyler Foraie (circa 2018):
+### From Tyler Foraie (circa 2018)
 
 > Dan is the man.
 > He's always available to lend a hand, and always jumping in when there is an issue.
@@ -180,9 +162,7 @@ Tyler Foraie (circa 2018):
 >
 > I believe Dan is an asset to this company in both his knowledge of how things work and how he treats his coworkers with respect.
 
----
-
-Kelly Jardine (circa 2018):
+### From Kelly Jardine (circa 2018)
 
 > WHEN WAS THIS PERSON AT THEIR BEST?
 >
@@ -198,9 +178,7 @@ Kelly Jardine (circa 2018):
 > The way he takes his time to figure out what is best for the company and clients should not be changed.
 > He is thoughtful in everything he does and says.
 
----
-
-Vincent Langevin (circa 2017):
+### From Vincent Langevin (circa 2017)
 
 > Dan is a great leader and pillar of iQmetrix.
 > He works tireless behind the scenes to ensure that the infrastructure that RQ, the Hub, and the many intricate interdependencies are running smoothly and effectively.
@@ -209,24 +187,18 @@ Vincent Langevin (circa 2017):
 > I am always amazed at his cool temperance and ability to come up with the solution that is needed.
 > It has been an honour and pleasure to be in his circle while he was manning the helm.
 
----
-
-Donny Lu (circa 2017):
+### From Donny Lu (circa 2017)
 
 > Thanks for all your help and the things you taught me while I was there.
 > You are an inspiration for me to always make life easier for people around me wherever my career goes.
 > Stay awesome!”
 
----
-
-Tobias Bohm (circa 2017):
+### From Tobias Bohm (circa 2017)
 
 > I really enjoyed working with you.
 > You're always eager to help and extremely professional and reliable.
 
----
-
-Barry Tran (circa 2015):
+### From Barry Tran (circa 2015)
 
 > The RQ team goes to him for questions on everything.
 > He's proven to be a great mentor for me in my new role, and is always willing to look over my work.
@@ -234,28 +206,22 @@ Barry Tran (circa 2015):
 >
 > He's also great on the trampoline.
 
----
-
-Kelly Jardine (circa 2014):
+### From Kelly Jardine (circa 2014)
 
 > I nominate Dan because he deserves to be recognized for his character, speed and agility.
 > He is always available to assist others.
 > He has a wealth of knowledge in areas I lack and he never dismisses my silly questions when trying to understand.
 > He always gives extra effort and is quick to reply (even though I call him out on ignoring me).
 >
-> Thanks for all that you do Dan!”
+> Thanks for all that you do Dan!
 
----
-
-Unknown (I didn't record the person's name ☹) (circa 2013):
+### From Unknown (I didn't record the person's name ☹) (circa 2013)
 
 > Dan is always willing to help out with any problem or question someone brings forward.
 > Also, Dan is always very thankful to everyone he works with and expresses that all the time.
 > It doesn't hurt when he brings donuts for the whole floor either.
 
----
-
-Julian Rendell (circa 2012):
+### From Julian Rendell (circa 2012)
 
 >Dan always shows great character, and sense of community- from being SLICCE nominator of the year in 2011, to his dedication to making sure the right things end up at the right time in the right place, working, ah, just right.
 > He treats all teams and projects, even those in other offices with the same care and attention to detail.
@@ -269,9 +235,7 @@ Julian Rendell (circa 2012):
 >
 > Finally, given all the traits and characteristics exhibited at work, I'm sure Dan very carefully balances his lifestyle to ensure his roles as parent and partner are never neglected.
 
----
-
-Kathy Chenglath (circa 2012):
+### From Kathy Chenglath (circa 2012)
 
 > I feel like Dan is someone that is a quiet unsung hero.
 > Being the Nominator of the Year last year showed that he always takes the time to recognize his peers when he himself deserves recognition as well.
@@ -288,9 +252,7 @@ Kathy Chenglath (circa 2012):
 >
 > All in all Dan has proven that he's an important asset to the team that we can all count on and demonstrates the company values effortlessly :)
 
----
-
-Ken Konkel (circa 2011):
+### From Ken Konkel (circa 2011)
 
 > Dan has so many qualities that make him one of the most valuable resources on the development team.
 > He is always thinking of others first, and always makes sure that someone else’s work gets done before his own.
@@ -304,7 +266,7 @@ Ken Konkel (circa 2011):
 > He is always looking for new and innovative ways to make what we do better in order to help the team.
 > Dan is someone who we all look up to for both his character and abilities.
 
----
+### Fun fact
 
 For a long while circa 2011 I was responsible for merging our various code branches during a code freeze to create new versions of our flagship product.
 That's when the team made this gem 😊

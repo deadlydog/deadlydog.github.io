@@ -9,42 +9,32 @@ It's a nice place I can turn to when I'm not feeling motivated, or when I need a
 
 ## Donations and thank you emails from the community
 
-2024-10-14
+### 2024-10-14
 
-$10.00 USD from Gilbert Sanchez for [my blog](/).
+$10.00 USD from Gilbert Sanchez for [my blog](https://blog.danskingdom.com).
 
 > "It's one poutine Michael. What could it cost, 10 dollars?"
 
----
-
-2024-08-19
+### 2024-08-19
 
 $15.00 USD from James Lennon for [Path Length Checker app](https://github.com/deadlydog/PathLengthChecker).
 
 > Path Length Checker came in very handy recently.
 > Thanks!
 
----
-
-2024-07-13
+### 2024-07-13
 
 $5.00/month USD [GitHub Sponsorship](https://github.com/sponsors/deadlydog) from @StartAutomating (James Brundage) for my open-source software and blog content.
 
----
-
-2024-06-02
+### 2024-06-02
 
 $2.00 USD for [NotifyWhenMicrosoftOutlookReminderWindowIsOpen App](https://github.com/deadlydog/NotifyWhenMicrosoftOutlookReminderWindowIsOpen) from Ilan Elron.
 
----
+### 2024-06-02 Again
 
-2024-06-02
+$2.00 USD from Pieter Spruit for [my blog](https://blog.danskingdom.com).
 
-$2.00 USD from Pieter Spruit for my blog posts.
-
----
-
-2023-11-03
+### 2023-11-03
 
 Thank you email from Ilona Chodnicka for my [Windows Scheduled Tasks Azure DevOps Extension](https://github.com/deadlydog/AzureDevOps.WindowsScheduledTasks) 😊
 
@@ -61,15 +51,11 @@ Thank you email from Ilona Chodnicka for my [Windows Scheduled Tasks Azure DevOp
 >
 > Ilona Chodnicka (she/her)
 
----
-
-2023-08-21
+### 2023-08-21
 
 $5.00 USD from Curtis Seegobin for [Path Length Checker app](https://github.com/deadlydog/PathLengthChecker).
 
----
-
-2023-08-04
+### 2023-08-04
 
 $5.00 USD from James Prichard for [Path Length Checker app](https://github.com/deadlydog/PathLengthChecker).
 
@@ -80,9 +66,7 @@ $5.00 USD from James Prichard for [Path Length Checker app](https://github.com/d
 > Super fast.
 > Just what I needed.
 
----
-
-2023-03-21
+### 2023-03-21
 
 $5.00 USD from Josh Jones for my blog posts.
 
@@ -90,29 +74,21 @@ $5.00 USD from Josh Jones for my blog posts.
 > I'm a PowerShell enthusiast (and dabbler in AHK).
 > I'm currently learning C#/dotnet and it's been very helpful :)
 
----
-
-2023-02-28
+### 2023-02-28
 
 $5.00 USD from Edward Eastman for [CloseZoomWindowsAfterJoiningMeeting](https://github.com/deadlydog/CloseZoomWindowsAfterJoiningMeeting).
 
 > Thank you for the AHK code to close Zoom launch windows.
 
----
-
-2022-12-31
+### 2022-12-31
 
 $2.00 USD from George Georgevits for [Path Length Checker app](https://github.com/deadlydog/PathLengthChecker).
 
----
-
-2022-07-24
+### 2022-07-24
 
 $2.00 USD from Tim Liepelt for [Path Length Checker app](https://github.com/deadlydog/PathLengthChecker).
 
----
-
-2022-06-30
+### 2022-06-30
 
 $100.00 USD from Shane Spear for [Path Length Checker app](https://github.com/deadlydog/PathLengthChecker).
 
@@ -120,9 +96,7 @@ $100.00 USD from Shane Spear for [Path Length Checker app](https://github.com/de
 > We used it this week to search for a needle in a haystack (300 files out of 9600 needed to be shortened to 255 characters).
 > We appreciate your work.
 
----
-
-2022-04-19
+### 2022-04-19
 
 Thomas Goddard has sent you $60.41 CAD
 
@@ -131,9 +105,7 @@ Note from Thomas Goddard:
 > Path Length Checker v1.11.7 - This tool was perfect for what I needed.
 > Thank you!
 
----
-
-2022-04-15
+### 2022-04-15
 
 > Regarding [Path Length Checker app](https://github.com/deadlydog/PathLengthChecker)
 >
@@ -149,9 +121,7 @@ Note from Thomas Goddard:
 >
 > David
 
----
-
-2022-03-02
+### 2022-03-02
 
 Kevin Finnegan has sent you $10.00 CAD
 
@@ -160,15 +130,11 @@ Note from Kevin Finnegan:
 > For your work on the Windows Scheduled Tasks Azure DevOps Extension.
 > Proven very useful for our team.
 
----
-
-2022-01-30
+### 2022-01-30
 
 $10.00 USD for [NotifyWhenMicrosoftOutlookReminderWindowIsOpen App](https://github.com/deadlydog/NotifyWhenMicrosoftOutlookReminderWindowIsOpen) from Robert Garlough.
 
----
-
-2022-01-12
+### 2022-01-12
 
 Cristian D Suarez Huertas has sent you $12.06 CAD
 
@@ -176,9 +142,7 @@ Note from Cristian D Suarez Huertas:
 
 > thank you Invoke-MsBuild is very useful
 
----
-
-2021-12-23
+### 2021-12-23
 
 Jakob Baumann sent you $2.00 USD.
 
@@ -186,9 +150,7 @@ Note from Jakob Baumann:
 
 > For MoveFilesIntoDateDirectories
 
----
-
-2021-12-01
+### 2021-12-01
 
 > Dan,
 >
@@ -199,9 +161,7 @@ Note from Jakob Baumann:
 >
 > Mike
 
----
-
-2021-10-21
+### 2021-10-21
 
 Mario Bianchetti has sent you $27.68 CAD
 
@@ -209,9 +169,7 @@ Note from Mario Bianchetti:
 
 > Good boy You made a really useful program
 
----
-
-2021-09-17
+### 2021-09-17
 
 > Hi Daniel,
 >
@@ -223,15 +181,11 @@ Note from Mario Bianchetti:
 
 $2.00 USD for [NotifyWhenMicrosoftOutlookReminderWindowIsOpen App](https://github.com/deadlydog/NotifyWhenMicrosoftOutlookReminderWindowIsOpen) from Erik Mulder.
 
----
-
-2021-07-15
+### 2021-07-15
 
 eva whitney sent you $5.00 USD.
 
----
-
-2021-05-17
+### 2021-05-17
 
 > Hi Daniel,
 >
@@ -248,9 +202,7 @@ eva whitney sent you $5.00 USD.
 >
 > David Noll
 
----
-
-2021-04-25
+### 2021-04-25
 
 Jill Kolodin sent you $11.96 CAD.
 
@@ -258,15 +210,11 @@ Note from Jill Kolodin:
 
 > PathLengthChecker GUI and Powershell worked great for me. Thank you.
 
----
-
-2021-02-23
+### 2021-02-23
 
 John-Paul Caldwell sent you $5.00 CAD.
 
----
-
-2021-02-08
+### 2021-02-08
 
 Sergejs Luckinskis sent you $5.00 USD.
 
@@ -274,9 +222,7 @@ Note from Sergejs Luckinskis:
 
 > Pathfinder rules!
 
----
-
-2021-02-03
+### 2021-02-03
 
 > Dear Daniel,
 >
@@ -289,9 +235,7 @@ Note from Sergejs Luckinskis:
 >
 > David Noll
 
----
-
-2021-01-12
+### 2021-01-12
 
 > Hi Daniel!
 > I came across your blog post about saving object data to a binary file in c# while I was searching for an easy way to properly save instances of objects in c# for a MonoGame project I've been working on for a while, and it's been incredibly helpful!
@@ -301,8 +245,6 @@ Note from Sergejs Luckinskis:
 >
 > D'Anyil (Yes, pronounced the same as your name!)
 
----
-
-2020-12-03
+### 2020-12-03
 
 Joshua Huggins sent you $10.00 USD.
