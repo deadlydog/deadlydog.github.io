@@ -9,6 +9,19 @@ It's a nice place I can turn to when I'm not feeling motivated, or when I need a
 
 ## Donations and thank you emails from the community
 
+### 2024-10-24
+
+Email from Valentin for [Path Length Checker app](https://github.com/deadlydog/PathLengthChecker).
+
+> Hi,
+>
+> Thank you very much for making path length checker.
+> I have been looking for a way to check the path lengths on my computer and it has been a life saver!
+>
+> Best regards,
+>
+> Valentin
+
 ### 2024-10-14
 
 $10.00 USD from Gilbert Sanchez for [my blog](https://blog.danskingdom.com).
