@@ -38,7 +38,7 @@ That seemed simple enough.
 So I did that, and everything compiled fine.
 Nice! 💪
 
-However, I then ran my integration tests and saw a lot of failures 😭.
+However, I then ran the integration tests and saw a lot of failures 😭.
 
 > NOTE: Be weary of runtime issues after migrating.
 > Be sure to test your application.
