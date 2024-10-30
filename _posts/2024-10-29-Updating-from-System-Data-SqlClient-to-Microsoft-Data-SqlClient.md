@@ -58,6 +58,7 @@ unhandled_exception_InvalidCastException
 ```
 
 After a few hours of unravelling the app and debugging it, I finally came across [this comment on a GitHub issue](https://github.com/dotnet/SqlClient/issues/323#issuecomment-556775371) mentioning that in addition to updating the `using System.Data.SqlClient;` statements, I also needed to update the `using Microsoft.SqlServer.Server;` statements to `using Microsoft.Data.SqlClient.Server;`.
+I also found [this Stack Overflow answer](https://stackoverflow.com/a/61713249/602585) that mentioned the same thing.
 
 The final problem I ran into was some of the unit tests compared the SQL connection string to ensure it had all of the expected properties and values.
 It seems that the `SqlConnectionStringBuilder.ConnectionString` property in `Microsoft.Data.SqlClient.` changed the formatting to use spaces in the connection string properties, so `ApplicationIntent` becomes `Application Intent`, and `MultiSubnetFailover` becomes `Multi Subnet Failover`.
