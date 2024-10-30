@@ -16,13 +16,13 @@ tags:
 ---
 
 Over the past couple days I've been updating a .NET 8 solution from using `System.Data.SqlClient` to `Microsoft.Data.SqlClient`.
-The reason for this, besides the fact that [System.Data.SqlClient is now deprecated](https://techcommunity.microsoft.com/t5/sql-server-blog/announcement-system-data-sqlclient-package-is-now-deprecated/ba-p/4227205), is that I wanted to see SQL performance counter metrics, such as how many active SQL connections my app was using.
+The reason for this, besides the fact that [the System.Data.SqlClient NuGet package is now deprecated](https://techcommunity.microsoft.com/t5/sql-server-blog/announcement-system-data-sqlclient-package-is-now-deprecated/ba-p/4227205), is that I wanted to see SQL performance counter metrics, such as how many active SQL connections my app was using.
 `System.Data.SqlClient` supports performance counters on .NET Framework apps, but not .NET Core apps.
-To [get SqlClient metrics in .NET Core apps](https://learn.microsoft.com/en-us/sql/connect/ado-net/event-counters), you need to use `Microsoft.Data.SqlClient`.
+To [get SqlClient metrics in .NET Core apps](https://learn.microsoft.com/en-us/sql/connect/ado-net/event-counters), you need to use [the `Microsoft.Data.SqlClient` NuGet package](https://www.nuget.org/packages/Microsoft.Data.SqlClient).
 
 > NOTE: Only the `System.Data.SqlClient` NuGet package is deprecated, not the `System.Data.SqlClient` namespace in .NET Framework.
 > This means it only affects .NET Core apps, not .NET Framework apps.
-> That said, .NET Framework apps can still benefit from using `Microsoft.Data.SqlClient`, as that's where development is happening for new features and performance improvements.
+> That said, .NET Framework apps can still benefit from using `Microsoft.Data.SqlClient` instead, as that's where development is happening for new features and performance improvements.
 
 ## TL;DR
 
