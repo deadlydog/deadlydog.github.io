@@ -31,7 +31,7 @@ The team also plans to automate much of the migration process with the [.NET Upg
 [Microsoft.Data.SqlClient was introduced in 2019](https://devblogs.microsoft.com/dotnet/introducing-the-new-microsoftdatasqlclient/), and skimming [the GitHub migration guide issue](https://github.com/dotnet/SqlClient/issues/2778) said to simply:
 
 - Add the `Microsoft.Data.SqlClient` NuGet package to your project and 
-- Replace `using System.Data.SqlClient;` with `using Microsoft.Data.SqlClient;`.
+- Replace `using System.Data.SqlClient;` with `using Microsoft.Data.SqlClient;`
 
 That seemed simple enough.
 
