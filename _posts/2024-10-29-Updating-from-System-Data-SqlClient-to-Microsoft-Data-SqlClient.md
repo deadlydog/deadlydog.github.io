@@ -28,7 +28,11 @@ The team also plans to automate much of the migration process with the [.NET Upg
 
 ## My journey
 
-[Microsoft.Data.SqlClient was introduced in 2019](https://devblogs.microsoft.com/dotnet/introducing-the-new-microsoftdatasqlclient/), and skimming [the GitHub migration guide issue](https://github.com/dotnet/SqlClient/issues/2778) said to simply add the `Microsoft.Data.SqlClient` NuGet package to your projects and update the `using` statements from `System.Data.SqlClient` to `Microsoft.Data.SqlClient`.
+[Microsoft.Data.SqlClient was introduced in 2019](https://devblogs.microsoft.com/dotnet/introducing-the-new-microsoftdatasqlclient/), and skimming [the GitHub migration guide issue](https://github.com/dotnet/SqlClient/issues/2778) said to simply:
+
+- Add the `Microsoft.Data.SqlClient` NuGet package to your project and 
+- Replace `using System.Data.SqlClient;` with `using Microsoft.Data.SqlClient;`.
+
 That seemed simple enough.
 
 So I did that, and everything compiled fine.
@@ -57,14 +61,14 @@ Failed to convert parameter value from a SqlDataRecord[] to a IEnumerable`1.
 unhandled_exception_InvalidCastException
 ```
 
-After a few hours of unravelling the app and debugging it, I finally came across [this comment on a GitHub issue](https://github.com/dotnet/SqlClient/issues/323#issuecomment-556775371) mentioning that in addition to updating the `using System.Data.SqlClient;` statements, I also needed to update the `using Microsoft.SqlServer.Server;` statements to `using Microsoft.Data.SqlClient.Server;`.
+After a few hours of unravelling and debugging the app, I came across [this comment on a GitHub issue](https://github.com/dotnet/SqlClient/issues/323#issuecomment-556775371) mentioning that in addition to updating the `using System.Data.SqlClient;` statements, I also needed to update the `using Microsoft.SqlServer.Server;` statements to `using Microsoft.Data.SqlClient.Server;`.
 I also found [this Stack Overflow answer](https://stackoverflow.com/a/61713249/602585) that mentioned the same thing.
 
 The final problem I ran into was some of the unit tests compared the SQL connection string to ensure it had all of the expected properties and values.
 It seems that the `SqlConnectionStringBuilder.ConnectionString` property in `Microsoft.Data.SqlClient.` changed the formatting to use spaces in the connection string properties, so `ApplicationIntent` becomes `Application Intent`, and `MultiSubnetFailover` becomes `Multi Subnet Failover`.
 It's a very minor change that doesn't affect the functionality of the connection string, but I thought I'd mention it.
 
-After making these changes, everything worked as expected.
+After making these changes, everything worked as expected 🙌.
 
 Later I noticed I had overlooked [this migration cheat sheet](https://github.com/dotnet/SqlClient/blob/main/porting-cheat-sheet.md) that was linked to from the deprecation announcement page 🤦‍♂️.
 It includes the first two changes I mentioned above, as well as a few others that I didn't run into.
