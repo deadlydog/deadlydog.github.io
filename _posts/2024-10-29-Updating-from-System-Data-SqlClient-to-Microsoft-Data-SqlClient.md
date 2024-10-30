@@ -20,6 +20,10 @@ The reason for this, besides the fact that [System.Data.SqlClient is now depreca
 `System.Data.SqlClient` supports performance counters on .NET Framework apps, but not .NET Core apps.
 To [get SqlClient metrics in .NET Core apps](https://learn.microsoft.com/en-us/sql/connect/ado-net/event-counters), you need to use `Microsoft.Data.SqlClient`.
 
+> NOTE: Only the `System.Data.SqlClient` NuGet package is deprecated, not the `System.Data.SqlClient` namespace in .NET Framework.
+> This means it only affects .NET Core apps, not .NET Framework apps.
+> That said, .NET Framework apps can still benefit from using `Microsoft.Data.SqlClient`, as that's where development is happening for new features and performance improvements.
+
 ## TL;DR
 
 The SqlClient GitHub repo has a [migration cheat sheet](https://github.com/dotnet/SqlClient/blob/main/porting-cheat-sheet.md) for everything that you will need to change when migrating from `System.Data.SqlClient` to `Microsoft.Data.SqlClient`.
@@ -30,7 +34,7 @@ The team also plans to automate much of the migration process with the [.NET Upg
 
 [Microsoft.Data.SqlClient was introduced in 2019](https://devblogs.microsoft.com/dotnet/introducing-the-new-microsoftdatasqlclient/), and skimming [the GitHub migration guide issue](https://github.com/dotnet/SqlClient/issues/2778) said to simply:
 
-- Add the `Microsoft.Data.SqlClient` NuGet package to your project and 
+- Add the `Microsoft.Data.SqlClient` NuGet package to your project and
 - Replace `using System.Data.SqlClient;` with `using Microsoft.Data.SqlClient;`
 
 That seemed simple enough.
