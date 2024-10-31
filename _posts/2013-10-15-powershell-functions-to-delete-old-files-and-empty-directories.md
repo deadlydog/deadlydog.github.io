@@ -1,6 +1,7 @@
 ---
 title: PowerShell Functions To Delete Old Files And Empty Directories
 date: 2013-10-15T17:38:12-06:00
+last_modified_at: 2024-10-31
 permalink: /powershell-functions-to-delete-old-files-and-empty-directories/
 categories:
   - PowerShell
@@ -27,12 +28,13 @@ I thought I’d share some PowerShell (PS) functions that I wrote for some clean
 # If -OnlyDeleteDirectoriesNotModifiedAfterDate is provided, empty folders will only be deleted if they have not been written to after the given date.
 function Remove-EmptyDirectories([parameter(Mandatory)][ValidateScript({Test-Path $_})][string] $Path, [switch] $DeletePathIfEmpty, [DateTime] $OnlyDeleteDirectoriesCreatedBeforeDate = [DateTime]::MaxValue, [DateTime] $OnlyDeleteDirectoriesNotModifiedAfterDate = [DateTime]::MaxValue, [switch] $OutputDeletedPaths, [switch] $WhatIf)
 {
-    Get-ChildItem -Path $Path -Recurse -Force -Directory | Where-Object { (Get-ChildItem -Path $_.FullName -Recurse -Force -File) -eq $null } |
+    Get-ChildItem -Path $Path -Recurse -Force -Directory | Where-Object { $null -eq (Get-ChildItem -Path $_.FullName -Recurse -Force -File) } |
         Where-Object { $_.CreationTime -lt $OnlyDeleteDirectoriesCreatedBeforeDate -and $_.LastWriteTime -lt $OnlyDeleteDirectoriesNotModifiedAfterDate } |
+        Sort-Object { $_.FullName } -Descending | # Sort directories to ensure we delete child directories before parent directories.
         ForEach-Object { if ($OutputDeletedPaths) { Write-Output $_.FullName } Remove-Item -Path $_.FullName -Force -WhatIf:$WhatIf }
 
     # If we should delete the given path when it is empty, and it is a directory, and it is empty, and it meets the date requirements, then delete it.
-    if ($DeletePathIfEmpty -and (Test-Path -Path $Path -PathType Container) -and (Get-ChildItem -Path $Path -Force) -eq $null -and
+    if ($DeletePathIfEmpty -and (Test-Path -Path $Path -PathType Container) -and $null -eq (Get-ChildItem -Path $Path -Force) -and
         ((Get-Item $Path).CreationTime -lt $OnlyDeleteDirectoriesCreatedBeforeDate) -and ((Get-Item $Path).LastWriteTime -lt $OnlyDeleteDirectoriesNotModifiedAfterDate))
     { if ($OutputDeletedPaths) { Write-Output $Path } Remove-Item -Path $Path -Force -WhatIf:$WhatIf }
 }
@@ -100,12 +102,13 @@ As promised, here are the slower PS v2.0 compatible functions. The main differen
 # If -OnlyDeleteDirectoriesNotModifiedAfterDate is provided, empty folders will only be deleted if they have not been written to after the given date.
 function Remove-EmptyDirectories([parameter(Mandatory=$true)][ValidateScript({Test-Path $_})][string] $Path, [switch] $DeletePathIfEmpty, [DateTime] $OnlyDeleteDirectoriesCreatedBeforeDate = [DateTime]::MaxValue, [DateTime] $OnlyDeleteDirectoriesNotModifiedAfterDate = [DateTime]::MaxValue, [switch] $OutputDeletedPaths, [switch] $WhatIf)
 {
-    Get-ChildItem -Path $Path -Recurse -Force | Where-Object { $_.PSIsContainer -and (Get-ChildItem -Path $_.FullName -Recurse -Force | Where-Object { !$_.PSIsContainer }) -eq $null } |
+    Get-ChildItem -Path $Path -Recurse -Force | Where-Object { $_.PSIsContainer -and $null -eq (Get-ChildItem -Path $_.FullName -Recurse -Force | Where-Object { !$_.PSIsContainer }) } |
         Where-Object { $_.CreationTime -lt $OnlyDeleteDirectoriesCreatedBeforeDate -and $_.LastWriteTime -lt $OnlyDeleteDirectoriesNotModifiedAfterDate } |
+        Sort-Object { $_.FullName } -Descending | # Sort directories to ensure we delete child directories before parent directories.
         ForEach-Object { if ($OutputDeletedPaths) { Write-Output $_.FullName } Remove-Item -Path $_.FullName -Force -WhatIf:$WhatIf }
 
     # If we should delete the given path when it is empty, and it is a directory, and it is empty, and it meets the date requirements, then delete it.
-    if ($DeletePathIfEmpty -and (Test-Path -Path $Path -PathType Container) -and (Get-ChildItem -Path $Path -Force) -eq $null -and
+    if ($DeletePathIfEmpty -and (Test-Path -Path $Path -PathType Container) -and $null -eq (Get-ChildItem -Path $Path -Force) -and
         ((Get-Item $Path).CreationTime -lt $OnlyDeleteDirectoriesCreatedBeforeDate) -and ((Get-Item $Path).LastWriteTime -lt $OnlyDeleteDirectoriesNotModifiedAfterDate))
     { if ($OutputDeletedPaths) { Write-Output $Path } Remove-Item -Path $Path -Force -WhatIf:$WhatIf }
 }
