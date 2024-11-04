@@ -2,7 +2,7 @@
 title: "Updating from System.Data.SqlClient to Microsoft.Data.SqlClient"
 permalink: /Updating-from-System-Data-SqlClient-to-Microsoft-Data-SqlClient/
 #date: 2099-01-15T00:00:00-06:00
-#last_modified_at: 2099-01-22
+last_modified_at: 2024-11-04
 comments_locked: false
 toc: false
 categories:
@@ -47,6 +47,8 @@ However, I then ran the integration tests and saw a lot of failures 😭.
 > NOTE: Be weary of runtime issues after migrating.
 > Be sure to test your application.
 
+### Issue 1: Connection error
+
 The first error I encountered was an issue connecting to the SQL database:
 
 ```text
@@ -58,6 +60,8 @@ A connection was successfully established with the server, but then an error occ
 All connections are now encrypted by default, and the server's certificate must be trusted.
 If you are connecting to a SQL Server that is using a self-signed certificate, you will need to add the certificate to the trusted root certificate store on the machine running the application, or (not recommended) adjust the connection string to either use `Encrypt=False` or `TrustServerCertificate=True`.
 
+## Issue 2: Additional namespaces to change
+
 The next error I ran into was:
 
 ```text
@@ -68,9 +72,22 @@ unhandled_exception_InvalidCastException
 After a few hours of unravelling and debugging the app, I came across [this comment on a GitHub issue](https://github.com/dotnet/SqlClient/issues/323#issuecomment-556775371) mentioning that in addition to updating the `using System.Data.SqlClient;` statements, I also needed to update the `using Microsoft.SqlServer.Server;` statements to `using Microsoft.Data.SqlClient.Server;`.
 I also found [this Stack Overflow answer](https://stackoverflow.com/a/61713249/602585) that mentioned the same thing.
 
+### Issue 3: Connection string formatting
+
 The final problem I ran into was some of the unit tests compared the SQL connection string to ensure it had all of the expected properties and values.
 It seems that the `SqlConnectionStringBuilder.ConnectionString` property in `Microsoft.Data.SqlClient.` changed the formatting to use spaces in the connection string properties, so `ApplicationIntent` becomes `Application Intent`, and `MultiSubnetFailover` becomes `Multi Subnet Failover`.
-It's a very minor change that doesn't affect the functionality of the connection string, but I thought I'd mention it.
+It's a breaking change that most likely won't affect your app, unless your app is used to build or return connection strings for other apps.
+
+The problem is that [the System.Data.SqlClient Connection String](https://learn.microsoft.com/en-us/dotnet/api/microsoft.data.sqlclient.sqlconnection.connectionstring) does not support the spaces, but [the Microsoft.Data.SqlClient Connection String](https://learn.microsoft.com/en-us/dotnet/api/system.data.sqlclient.sqlconnection.connectionstring) does.
+So if an app using `System.Data.SqlClient` tries to connect using a connection string provided by `Microsoft.Data.SqlClient`, it will fail with an error message like the following:
+
+```text
+Keyword not supported: 'application intent'
+```
+
+Your options here are to either update all of your apps to use `Microsoft.Data.SqlClient`, or put code in place to ensure spaces are removed from the connection string keywords.
+
+## Conclusion
 
 After making these changes, everything worked as expected 🙌.
 
