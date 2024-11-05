@@ -87,7 +87,7 @@ Keyword not supported: 'application intent'
 
 Your options here are to either update all of your apps to use `Microsoft.Data.SqlClient`, or put code in place to ensure spaces are removed from the connection string keywords.
 
-I opened [this GitHug issue](https://github.com/dotnet/SqlClient/issues/2974) to see if MS will consider using the backward-compatible keywords, and created [this PR](https://github.com/dotnet/SqlClient/pull/2975) to get the migration cheat sheet (mentioned below) updated to mention this problem.
+I opened [this GitHub issue](https://github.com/dotnet/SqlClient/issues/2974) to see if MS will consider using the backward-compatible keywords, and created [this PR](https://github.com/dotnet/SqlClient/pull/2975) to update the migration cheat sheet (mentioned below) with this problem.
 
 ## Conclusion
 
