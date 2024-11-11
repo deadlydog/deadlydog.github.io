@@ -115,7 +115,7 @@ See [the MS documentation](https://learn.microsoft.com/en-us/powershell/module/m
 
 Rather than creating a bunch of custom type accelerators for .NET types that don't have built-in ones, you can instead use the `using namespace` statement to import an entire namespace and then use the types in that namespace without needing the fully qualified name.
 
-Here's an example of using the `using namespace` statement to import the `System.Net.Http` namespace and then use the `HttpClient` and `HttpRequestHeaders` classes without the fully qualified name:
+Here's an example of using the `using namespace` statement to import the `System.Net.Http` namespace and then using the `HttpClient` and `HttpRequestHeaders` classes without the fully qualified name:
 
 ```powershell
 using namespace System.Net.Http
