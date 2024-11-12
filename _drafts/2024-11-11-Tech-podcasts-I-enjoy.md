@@ -43,7 +43,7 @@ This is a list of non-technical podcasts that your spouse or even your kids migh
 Interesting true stories:
 
 - [Corecursive](https://corecursive.com): This podcast is hosted by Adam Gordon Bell.
-  Adam will either have a guest on the show to tell their story, or sometimes he will just tell someone's story himself, of doing something notable in the tech industry, such as creating the JSON spec, porting Doom for a gaming console, or shadow-working on the Apple campus without them knowing or getting paid in hopes of shipping their software with the Mac OS.
+  Adam will either have a guest on the show to tell their story, or sometimes he will just tell someone's story himself, of doing something notable in the tech industry, such as creating the JSON spec, porting Doom to a gaming console, or shadow-working on the Apple campus without them knowing or getting paid in hopes of shipping their software with the Mac OS.
   I really like this podcast, as it is essentially a collection of interesting true stories about people who have done something in the tech industry.
   The stories may have happened 50 years ago or 5 years ago, and they are all interesting and well told.
   It is a great way to hear stories from other software developers and get a history of what has changed over the years, and to learn about the different paths people have taken to get into the tech industry.
