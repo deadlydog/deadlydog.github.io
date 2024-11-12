@@ -67,4 +67,4 @@ Level-up your engineering soft skills:
 
 Add an image to make preview links more appealing
 
-![Example image](/assets/Posts/2024-11-03-Tech-podcasts-I-enjoy/image-name.png)
+![Example image](/assets/Posts/2024-11-11-Tech-podcasts-I-enjoy/image-name.png)
