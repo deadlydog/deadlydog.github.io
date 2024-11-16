@@ -11,7 +11,7 @@ This page is a compilation of that feedback.
 
 ### 2024-10-21
 
-Comments from my lead Jason Collinge on my performance review:
+Comments from my lead Jason Collinge:
 
 > Dan is always flexible and able to take on any task thrown his way.
 >
