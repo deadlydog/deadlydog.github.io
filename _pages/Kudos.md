@@ -9,9 +9,13 @@ It's a nice place I can turn to when I'm not feeling motivated, or when I need a
 
 ## Donations and thank you emails from the community
 
+### 2024-11-15
+
+$2.00 USD from Adrian Muscat for my [PowerShell tiPS module](https://github.com/deadlydog/PowerShell.tiPS).
+
 ### 2024-10-24
 
-Email from Valentin for [Path Length Checker app](https://github.com/deadlydog/PathLengthChecker).
+Email from Valentin for my [Path Length Checker app](https://github.com/deadlydog/PathLengthChecker).
 
 > Hi,
 >
@@ -30,7 +34,7 @@ $10.00 USD from Gilbert Sanchez for [my blog](https://blog.danskingdom.com).
 
 ### 2024-08-19
 
-$15.00 USD from James Lennon for [Path Length Checker app](https://github.com/deadlydog/PathLengthChecker).
+$15.00 USD from James Lennon for my [Path Length Checker app](https://github.com/deadlydog/PathLengthChecker).
 
 > Path Length Checker came in very handy recently.
 > Thanks!
@@ -41,7 +45,7 @@ $5.00/month USD [GitHub Sponsorship](https://github.com/sponsors/deadlydog) from
 
 ### 2024-06-02
 
-$2.00 USD for [NotifyWhenMicrosoftOutlookReminderWindowIsOpen App](https://github.com/deadlydog/NotifyWhenMicrosoftOutlookReminderWindowIsOpen) from Ilan Elron.
+$2.00 USD for my [NotifyWhenMicrosoftOutlookReminderWindowIsOpen App](https://github.com/deadlydog/NotifyWhenMicrosoftOutlookReminderWindowIsOpen) from Ilan Elron.
 
 ### 2024-06-02 Again
 
@@ -66,11 +70,11 @@ Thank you email from Ilona Chodnicka for my [Windows Scheduled Tasks Azure DevOp
 
 ### 2023-08-21
 
-$5.00 USD from Curtis Seegobin for [Path Length Checker app](https://github.com/deadlydog/PathLengthChecker).
+$5.00 USD from Curtis Seegobin for my [Path Length Checker app](https://github.com/deadlydog/PathLengthChecker).
 
 ### 2023-08-04
 
-$5.00 USD from James Prichard for [Path Length Checker app](https://github.com/deadlydog/PathLengthChecker).
+$5.00 USD from James Prichard for my [Path Length Checker app](https://github.com/deadlydog/PathLengthChecker).
 
 > Thanks, Daniel!
 > Used it to see if I had any file names over 260 characters before doing my first OneDrive Desktop backup.
@@ -95,15 +99,15 @@ $5.00 USD from Edward Eastman for [CloseZoomWindowsAfterJoiningMeeting](https://
 
 ### 2022-12-31
 
-$2.00 USD from George Georgevits for [Path Length Checker app](https://github.com/deadlydog/PathLengthChecker).
+$2.00 USD from George Georgevits for my [Path Length Checker app](https://github.com/deadlydog/PathLengthChecker).
 
 ### 2022-07-24
 
-$2.00 USD from Tim Liepelt for [Path Length Checker app](https://github.com/deadlydog/PathLengthChecker).
+$2.00 USD from Tim Liepelt for my [Path Length Checker app](https://github.com/deadlydog/PathLengthChecker).
 
 ### 2022-06-30
 
-$100.00 USD from Shane Spear for [Path Length Checker app](https://github.com/deadlydog/PathLengthChecker).
+$100.00 USD from Shane Spear for my [Path Length Checker app](https://github.com/deadlydog/PathLengthChecker).
 
 > Thank you Daniel for providing this tool!
 > We used it this week to search for a needle in a haystack (300 files out of 9600 needed to be shortened to 255 characters).
@@ -145,7 +149,7 @@ Note from Kevin Finnegan:
 
 ### 2022-01-30
 
-$10.00 USD for [NotifyWhenMicrosoftOutlookReminderWindowIsOpen App](https://github.com/deadlydog/NotifyWhenMicrosoftOutlookReminderWindowIsOpen) from Robert Garlough.
+$10.00 USD for my [NotifyWhenMicrosoftOutlookReminderWindowIsOpen App](https://github.com/deadlydog/NotifyWhenMicrosoftOutlookReminderWindowIsOpen) from Robert Garlough.
 
 ### 2022-01-12
 
@@ -167,7 +171,7 @@ Note from Jakob Baumann:
 
 > Dan,
 >
-> Just to say thanks – what an excellent tool your Path Length Checker is.
+> Just to say thanks - what an excellent tool your Path Length Checker is.
 > We are, at long last, starting to sort out our extensive collection of digital images and the Checker is most helpful!
 >
 > Kind regards,
@@ -192,7 +196,7 @@ Note from Mario Bianchetti:
 >
 > Regards, Erik
 
-$2.00 USD for [NotifyWhenMicrosoftOutlookReminderWindowIsOpen App](https://github.com/deadlydog/NotifyWhenMicrosoftOutlookReminderWindowIsOpen) from Erik Mulder.
+$2.00 USD for my [NotifyWhenMicrosoftOutlookReminderWindowIsOpen App](https://github.com/deadlydog/NotifyWhenMicrosoftOutlookReminderWindowIsOpen) from Erik Mulder.
 
 ### 2021-07-15
 
