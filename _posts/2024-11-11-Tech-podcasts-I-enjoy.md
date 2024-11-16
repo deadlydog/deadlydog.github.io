@@ -55,7 +55,8 @@ Level-up your engineering soft skills:
 - [Soft Skills Engineering](https://softskills.audio): This podcast is hosted by Dave Smith and Jamison Dance, and is a great way to get career advice and hear stories from other software developers.
   The hosts read questions submitted by listeners, such as how to ask for a promotion, deal with a difficult coworker, or get your voice heard in the company, and then give their advice on how to handle the situation.
   You can submit your own questions for them on their website.
-- [Developing Up](https://www.developingup.com): This podcast is no longer recoding new episodes, but still has a lot of great advice nonetheless. Like the Soft Skills Engineering podcast, Developing Up discusses many of the processes around being a software engineer (code reviews, pair programming, security, working remotely, career advice) that remain true over time.
+- [Developing Up](https://www.developingup.com): This podcast is no longer recoding new episodes, but still has a lot of great advice nonetheless.
+  Like the Soft Skills Engineering podcast, Developing Up discusses many of the processes around being a software engineer (code reviews, pair programming, security, working remotely, career advice) that remain true over time.
 
 Other podcasts:
 
