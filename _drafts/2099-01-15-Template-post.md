@@ -16,6 +16,7 @@ tags:
 Start with a brief description of the post to entice readers to continue.
 
 Use headers to organize your post, if it's long enough.
+Include a TL;DR if appropriate.
 
 End with a brief conclusion.
 
