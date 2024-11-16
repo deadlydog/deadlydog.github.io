@@ -9,6 +9,46 @@ This page is a compilation of that feedback.
 
 ## What my colleagues have to say about me
 
+### 2024-10-21
+
+Comments from my lead Jason Collinge on my performance review:
+
+> Dan is always flexible and able to take on any task thrown his way.
+>
+> Dan is a strong collaborator and makes those around him better.
+>
+> Dan is always positive, helpful, and a pleasure to work with.
+>
+> Dan is extremely effective. Any tasks you give him you can be sure will get done and get done well.
+>
+> So much of Dan's impact is behind the scenes.
+> I can't help but think we're not doing enough to help him make a bigger and more visible impact.
+>
+> Dan is always amazing in his role.
+>
+> Dan takes feedback very well.
+> He always has a sunny and positive attitude.
+>
+> Dan keeps the gears turning even when no one else notices.
+>
+> Dan always does high quality work and documents it.
+> You can be sure anything he touches is better than before he was involved.
+>
+> Dan managed whole aspects of the Denver migration on his own while still stepping up routinely to help others.
+> He also stepped in to manage a lot of what Andy was doing while we had him borrowed from the dev side and made sure that time was used effectively.
+>
+> Dan tends to disappear into the background, just getting stuff done.
+> While this is extremely helpful, I know Dan could have a bigger impact if he spent a bit more time thinking strategically.
+> I'd like to see him propose some projects or ideas that have a longer term impact, especially around reducing manual workloads.
+>
+> Dan is great at what he does.
+>
+> Dan is one of those people who is super easy to work with.
+> He always has a positive attitude, he manages his time well, and he is extremely smart and capable.
+> I do think that if Dan is interested, there are ways he could step up his game and increase his impact in the organization.
+> They might require him to be a little less hands on though, which maybe he's not as interested in.
+> It's certainly something to discuss.
+
 ### 2024-06-06
 
 From Maryam Bagherzadeh in Slack:
