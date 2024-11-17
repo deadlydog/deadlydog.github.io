@@ -34,7 +34,7 @@ Treating warnings as errors is not on by default, but enabling it is a common pr
 This new NuGet audit feature means that if you have `TreatWarningsAsErrors` enabled, your code may no longer compile, even if you haven't changed the code.
 Some examples of when this could happen include:
 
-- You update Visual Studio / NuGet on your local machine, so you can no longer build the code locally.
+- You update Visual Studio / NuGet on your local machine to a version generates new vulnerability warnings, so you can no longer build the code locally.
 - Your build server updates Visual Studio / NuGet, so the build server can no longer build the code (e.g. GitHub or Azure DevOps agents).
 - A vulnerability is discovered in a NuGet package that your project uses and it is added to <https://github.com/advisories/>.
 
@@ -53,7 +53,7 @@ A few reasons why include:
 
 - The latest version of the NuGet package (or one of its dependencies) has a vulnerability.
 - The NuGet package is no longer maintained, so there is no new version to update to.
-- Newer versions of the NuGet package (or one of its dependencies) have a breaking change that would require significant code changes, and you do not have the time or resources to dedicate to making and testing those changes.
+- Newer versions of the NuGet package (or one of its dependencies) have a breaking change that would require significant code changes, and you do not have the time or resources to dedicate to making and testing those changes right now.
 
 ### When updating the NuGet package is not a viable solution
 
