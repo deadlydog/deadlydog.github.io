@@ -15,6 +15,8 @@ tags:
   - Capitals
 ---
 
+__TL;DR__: If you enable "Treat warnings as errors" in your .NET projects, NuGet audit warnings for security vulnerabilities may break your build, but there are ways to work around it if needed.
+
 Visual Studio 2022 v17.8 and NuGet 6.8 introduced a wonderful security feature that will generate warnings for NuGet packages that your projects reference that have known security vulnerabilities.
 Visual Studio v17.12 and NuGet v6.12 took this further by also generating warnings for vulnerable transitive dependencies those packages depend on ([see the VS release notes](https://learn.microsoft.com/en-us/visualstudio/releases/2022/release-notes#net)).
 This gives developers better insight into potential security risks in their software, and can prompt them to update NuGet packages to a more secure version.
@@ -75,6 +77,7 @@ These are listed in order of most recommended to least recommended:
     ![Screenshot of modifying the .csproj file in Visual Studio](/assets/Posts/2024-11-16-Prevent-NuGet-package-vulnerabilities-from-breaking-the-build/enable-treat-warnings-as-errors-and-ignore-nuget-audit-warnings-in-visual-studio.png)
 
 - __Suppress specific NuGet audit advisories__: The next best solution is to ignore just the specific NuGet package advisory that you are not able to workaround.
+  A potential downside is that because you will no longer get a warning, you may forget the package has a vulnerability.
   Here is an example of the code to add to your .csproj file to exclude the specific log4net advisory mentioned earlier:
 
   ```xml
@@ -85,7 +88,7 @@ These are listed in order of most recommended to least recommended:
 
   See [the NuGet audit docs](https://learn.microsoft.com/en-us/nuget/concepts/auditing-packages#excluding-advisories) for more information.
 
-- __Disable TreatWarningsAsErrors__: This is not ideal, as it will prevent you from being forced to fix code quality issues and security vulnerabilities.
+- __Disable TreatWarningsAsErrors__: This is not ideal, as it will prevent you from being _forced_ to fix code quality issues and security vulnerabilities, which some people and companies prefer.
   [See the MS docs for how to enable or disable it](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/compiler-options/errors-warnings#treatwarningsaserrors)
 - __Disable the NuGet audit feature__: This is not recommended, as it will prevent you from being notified of security vulnerabilities.
   [See the MS docs for how to disable it, or have it ignore transitive dependencies](https://learn.microsoft.com/en-us/nuget/concepts/auditing-packages#configuring-nuget-audit).
