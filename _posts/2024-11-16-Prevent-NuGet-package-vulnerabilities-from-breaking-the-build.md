@@ -72,6 +72,8 @@ These are listed in order of most recommended to least recommended:
     <WarningsNotAsErrors>NU1902,NU1903,NU1904</WarningsNotAsErrors>
     ```
 
+    These are the 3 NuGet audit warning codes that I encountered, but there may be others.
+
     If you are editing the .csproj file by hand, you will want to add it to the `<PropertyGroup>` section of both your `Debug` and `Release` configurations.
 
     Here is a screenshot of modifying the project properties in Visual Studio to enable "Treat warnings as errors" and prevent NuGet audit warnings from being treated as errors:
@@ -83,9 +85,12 @@ These are listed in order of most recommended to least recommended:
   Here is an example of the code to add to your .csproj file to exclude the specific log4net advisory mentioned earlier:
 
   ```xml
-  <ItemGroup>
-    <NuGetAuditSuppress Include="https://github.com/advisories/GHSA-2cwj-8chv-9pp9" />
-  </ItemGroup>
+  <Project Sdk="Microsoft.NET.Sdk">
+    <!--  other parts of the project left out of this example -->
+    <ItemGroup>
+      <NuGetAuditSuppress Include="https://github.com/advisories/GHSA-2cwj-8chv-9pp9" />
+    </ItemGroup>
+  </Project>
   ```
 
   See [the NuGet audit docs](https://learn.microsoft.com/en-us/nuget/concepts/auditing-packages#excluding-advisories) for more information.
@@ -101,6 +106,8 @@ If you have 10s or 100s of projects though, it can be a pain to update them all.
 
 A better solution is to leverage a `Directory.Build.props` file to apply the changes to all projects in a directory.
 You can read more about Directory.Build.props and how to use it [on the MS docs here](https://learn.microsoft.com/en-us/visualstudio/msbuild/customize-by-directory).
+
+You can find more information about potential actions to take when you encounter a vulnerable dependency in [the NuGet audits docs here](https://learn.microsoft.com/en-us/nuget/concepts/auditing-packages#actions-when-packages-with-known-vulnerabilities-are-reported), and [this MS blog post](https://devblogs.microsoft.com/nuget/nugetaudit-2-0-elevating-security-and-trust-in-package-management/).
 
 ## Conclusion
 
