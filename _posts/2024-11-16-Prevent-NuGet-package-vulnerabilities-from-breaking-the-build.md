@@ -69,14 +69,14 @@ These are listed in order of most recommended to least recommended:
   - Add the following to your project file (.csproj) to treat the NuGet audit warnings as warnings instead of errors:
 
     ```xml
-    <WarningsNotAsErrors>NU1902,NU1903,NU1904</WarningsNotAsErrors>
+    <WarningsNotAsErrors>NU1901,NU1902,NU1903,NU1904</WarningsNotAsErrors>
     ```
 
     These are the 3 NuGet audit warning codes that I encountered, but there may be others.
 
     If you are editing the .csproj file by hand, you will want to add it to the `<PropertyGroup>` section of both your `Debug` and `Release` configurations.
 
-    Here is a screenshot of modifying the project properties in Visual Studio to enable "Treat warnings as errors" and prevent NuGet audit warnings from being treated as errors:
+    Here is a screenshot of modifying the project properties in Visual Studio to enable "Treat warnings as errors" and prevent NuGet audit warnings from being treated as errors (I forgot to add NU1901 in the screenshot):
 
     ![Screenshot of modifying the .csproj file in Visual Studio](/assets/Posts/2024-11-16-Prevent-NuGet-package-vulnerabilities-from-breaking-the-build/enable-treat-warnings-as-errors-and-ignore-nuget-audit-warnings-in-visual-studio.png)
 
@@ -106,6 +106,8 @@ If you have 10s or 100s of projects though, it can be a pain to update them all.
 
 A better solution is to leverage a `Directory.Build.props` file to apply the changes to all projects in a directory.
 You can read more about Directory.Build.props and how to use it [on the MS docs here](https://learn.microsoft.com/en-us/visualstudio/msbuild/customize-by-directory).
+
+[This MS doc](https://learn.microsoft.com/en-us/dotnet/core/compatibility/sdk/9.0/nugetaudit-transitive-packages) has more information on some of the workarounds mentioned above.
 
 You can find more information about potential actions to take when you encounter a vulnerable dependency in [the NuGet audits docs here](https://learn.microsoft.com/en-us/nuget/concepts/auditing-packages#actions-when-packages-with-known-vulnerabilities-are-reported), and [this MS blog post](https://devblogs.microsoft.com/nuget/nugetaudit-2-0-elevating-security-and-trust-in-package-management/).
 
