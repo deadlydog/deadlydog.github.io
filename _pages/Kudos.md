@@ -15,7 +15,7 @@ $25.00 USD from Larry Berkbigler for my [Path Length Checker app](https://github
 
 ### 2024-11-15
 
-$2.00 USD from Adrian Muscat for my [PowerShell tiPS module](https://github.com/deadlydog/PowerShell.tiPS).
+$2.00/month USD recurring donation from Adrian Muscat for my [PowerShell tiPS module](https://github.com/deadlydog/PowerShell.tiPS).
 
 ### 2024-10-24
 
