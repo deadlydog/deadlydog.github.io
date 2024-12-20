@@ -1,0 +1,7 @@
+_id: acfabb00-bef6-11ef-acc1-37514b76e95e
+message: "Great article, thanks from me learning GH after ADO :((((.\r\n\r\nCan you please clarify 4 and 5 options?\r\nDo I understand correctly that in these scenarios build and deploy pipelines are different and do not overlap in terms of runtime? Meaning, build pipeline will do its build stuff, and deployment pipeline will duplicate build pipeline work (yes using the same build code, but will generate different artifact) and then do its deploy stuff.\r\n\r\nIs that correct?"
+name: Ulad
+email: 38e7ebb9b0c3704d4ba2ab4c3162a828
+url: ''
+hidden: ''
+date: '2024-12-20T17:20:14.880Z'
