@@ -1,0 +1,7 @@
+_id: f5e9e880-d19e-11ef-bc2a-85d579b83554
+message: "I don't know when this feature appeared, but as of Windows 11 24H2 and Terminal version 1.21.3231.0, Terminal itself has a hide/show keyboard shortcut that I discovered by accident, and I cannot find documented any where.\r\n\r\nFirst, you need to open Terminal from the Start Menu. Once open, press Win + ` (on a UK keyboard that is the key at the left end of the numbers, not sure about a US keyboard) whereupon a border-less Terminal will appear occupying the top-half of the screen.\r\n\r\nAt this point, you can close the initial, bordered Terminal window, then use Win + ` to instantly minimize the borderless Terminal to the System Tray or open it again."
+name: Richard
+email: 3ec055e4357bd5869e57869aa658f876
+url: ''
+hidden: ''
+date: '2025-01-13T11:10:13.769Z'
