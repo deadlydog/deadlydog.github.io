@@ -2,7 +2,7 @@
 title: "Common Run commands to access various Windows settings and apps"
 permalink: /Common-Run-commands-to-access-various-Windows-settings-and-apps/
 #date: 2099-01-15T00:00:00-06:00
-last_modified_at: 2024-06-05
+last_modified_at: 2025-01-14
 comments_locked: false
 toc: false
 categories:
@@ -52,6 +52,8 @@ A few commands only work from the Run dialog box and are marked as "(Run only)".
 | .                                               | Open current user folder (Run only)        |
 | appwiz.cpl                                      | Programs and Features                      |
 | C: (or any file or directory path)              | Open the specified file or path (Run only) |
+| certlm.msc                                      | Certificate Manager (Local Computer)       |
+| certmgr.msc                                     | Certificate Manager (Current User)         |
 | charmap                                         | Character Map                              |
 | cleanmgr                                        | Disk Cleanup                               |
 | cmd                                             | Command Prompt                             |
