@@ -12,7 +12,7 @@ Automate EVERYTHING!
 
 ## 💬 Contact
 
-You can contact me on Twitter [@deadlydog](https://twitter.com/deadlydog), or [send me an email](mailto:deadlydog@hotmail.com).
+You can contact me on [Bluesky @deadlydog](https://bsky.app/profile/deadlydog.bsky.social), [X / Twitter @deadlydog](https://twitter.com/deadlydog), or [send me an email](mailto:deadlydog@hotmail.com).
 
 ## 🛠 Things I've created
 
