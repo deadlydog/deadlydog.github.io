@@ -19,9 +19,9 @@ Windows has a ton of native features and keyboard shortcuts that can make it mor
 Below are some of my favorites.
 
 As I discover more I'll add them here, so be sure to check back from time to time.
-Also, if you have any favorites that I don't have listed here, please let me know in the comments below.
+Also, if you have a favourite that I don't have listed here, please let me know in the comments below.
 
-## Things I modify after a fresh Windows install
+## Registry tweaks that don't have a GUI setting
 
 Some commands shown below may need to be ran from an elevated PowerShell prompt (i.e. run PowerShell as an Administrator), otherwise you may get an error like `Requested registry access is not allowed`.
 
@@ -82,6 +82,8 @@ Right-click context menu with all options shown:
 
 ![Right-click context menu with all options shown](/assets/Posts/2025-01-24-Windows-tips-and-tricks/right-click-context-menu-with-all-options-shown.png)
 
+> NOTE: Windows 11 updated to allow pressing <kbd>Shift</kbd> + <kdb>Right-click</kdb> to show all options in the context menu, so you may prefer to do that over using this registry tweak.
+
 ### Speed up the right-click context menu
 
 When you right-click on a file or folder, the `Send to` menu discovers all of the apps and connected devices you can send the file to, before it actually shows the menu.
@@ -95,15 +97,65 @@ Set-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer
 
 [Source](https://www.winhelponline.com/blog/hidden-registry-settings-sendto-menu-windows-7/)
 
+## Windows settings
 
+### Show hidden files and folders
+
+By default, Windows hides hidden files and folders.
+
+
+### Show file extensions
+
+By default, Windows hides file extensions for known file types.
+
+
+### Show where the mouse cursor is
+
+When you press the <kbd>Ctrl</kbd> key, Windows will show you where the mouse cursor is by circling it.
+
+Bonus: See the Microsoft PowerToys section to allow spotlighting the mouse cursor when you press the <kbd>Ctrl</kbd> key twice.
+
+## Windows features
+
+### Show multiple time zones in the taskbar clock
+
+### Use the Windows Sandbox to test software and settings safely
 
 ## Keyboard shortcuts
 
 
 
-## Task bar shortcuts
+## Taskbar shortcuts
 
 There are a few shortcuts you can use with the task bar:
 
 - <kbd>Shift</kbd> + <kbd>Left-click</kbd>: Opens another instance of the application
 - <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Left-click</kbd>: Opens another instance of the application as an administrator
+
+## Microsoft PowerToys
+
+Microsoft PowerToys is an application that adds a ton of great features to Windows, and it is being updated all the time.
+
+See the [Microsoft PowerToys docs](https://learn.microsoft.com/en-us/windows/powertoys/) for extensive documentation on all of the features, and how to install and configure them.
+
+You can install PowerToys by running the following command in a terminal, such as PowerShell:
+
+```cmd
+winget install --id Microsoft.PowerToys --source winget
+```
+
+A few of my favourite features are:
+
+- Always On Top: Keep a window always on top of others.
+- Find My Mouse: Spotlight the mouse cursor when you press the <kbd>Ctrl</kbd> key twice.
+- File Locksmith: Easily unlock files that are in use by other processes.
+- Image Resizer: Resize images quickly and easily.
+- Color Picker: Get the RGB, HEX, and HSL values of any color on the screen.
+
+## Conclusion
+
+I hope you found some of these tips and settings helpful.
+Have a favourite or one that I didn't mention?
+Let me know in the comments!
+
+Happy customizing!
