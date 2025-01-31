@@ -58,11 +58,13 @@ There are a few shortcuts you can use with the task bar:
 
 ## Registry tweaks that don't have a GUI setting
 
-Some commands shown below may need to be ran from an elevated PowerShell prompt (i.e. run PowerShell as an Administrator), otherwise you may get an error like `Requested registry access is not allowed`.
-
 > NOTE: Modifying the registry can be dangerous if you don't know what you're doing, so be sure to [backup your registry](https://www.tweaking.com/how-to-backup-whole-registry-in-windows-10-step-by-step-guide/) before making any changes.
 
 I include PowerShell commands instead of manual steps for modifying the registry to help ensure that only the intended keys are modified.
+
+Some commands shown below may need to be ran from an elevated PowerShell prompt (i.e. run PowerShell as an Administrator), otherwise you may get an error like `Requested registry access is not allowed`.
+
+Also, you may need to restart your computer for some changes to take effect.
 
 ### Disable searching the web in the Start Menu search
 
@@ -117,7 +119,7 @@ Right-click context menu with all options shown:
 
 ![Right-click context menu with all options shown](/assets/Posts/2025-01-24-Windows-tips-and-tricks/right-click-context-menu-with-all-options-shown.png)
 
-> NOTE: Windows 11 updated to allow pressing <kbd>Shift</kbd> + <kdb>Right-click</kdb> to show all options in the context menu, so you may prefer to do that over using this registry tweak.
+> NOTE: Windows 11 updated to allow pressing <kbd>Shift</kbd> + <kbd>Right-click</kbd> to show all options in the context menu, so you may prefer to do that over using this registry tweak.
 
 ### Speed up the right-click context menu
 
