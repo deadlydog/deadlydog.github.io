@@ -21,6 +21,41 @@ Below are some of my favorites.
 As I discover more I'll add them here, so be sure to check back from time to time.
 Also, if you have a favourite that I don't have listed here, please let me know in the comments below.
 
+## Windows settings
+
+### Show hidden files and folders
+
+By default, Windows hides hidden files and folders.
+
+
+### Show file extensions
+
+By default, Windows hides file extensions for known file types.
+
+
+### Show where the mouse cursor is
+
+When you press the <kbd>Ctrl</kbd> key, Windows will show you where the mouse cursor is by circling it.
+
+Bonus: See the Microsoft PowerToys section to allow spotlighting the mouse cursor when you press the <kbd>Ctrl</kbd> key twice.
+
+## Windows features
+
+### Show multiple time zones in the taskbar clock
+
+### Use the Windows Sandbox to test software and settings safely
+
+## Keyboard shortcuts
+
+
+
+## Taskbar shortcuts
+
+There are a few shortcuts you can use with the task bar:
+
+- <kbd>Shift</kbd> + <kbd>Left-click</kbd>: Opens another instance of the application
+- <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Left-click</kbd>: Opens another instance of the application as an administrator
+
 ## Registry tweaks that don't have a GUI setting
 
 Some commands shown below may need to be ran from an elevated PowerShell prompt (i.e. run PowerShell as an Administrator), otherwise you may get an error like `Requested registry access is not allowed`.
@@ -97,52 +132,15 @@ Set-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer
 
 [Source](https://www.winhelponline.com/blog/hidden-registry-settings-sendto-menu-windows-7/)
 
-## Windows settings
+## Bonus: Microsoft PowerToys
 
-### Show hidden files and folders
-
-By default, Windows hides hidden files and folders.
-
-
-### Show file extensions
-
-By default, Windows hides file extensions for known file types.
-
-
-### Show where the mouse cursor is
-
-When you press the <kbd>Ctrl</kbd> key, Windows will show you where the mouse cursor is by circling it.
-
-Bonus: See the Microsoft PowerToys section to allow spotlighting the mouse cursor when you press the <kbd>Ctrl</kbd> key twice.
-
-## Windows features
-
-### Show multiple time zones in the taskbar clock
-
-### Use the Windows Sandbox to test software and settings safely
-
-## Keyboard shortcuts
-
-
-
-## Taskbar shortcuts
-
-There are a few shortcuts you can use with the task bar:
-
-- <kbd>Shift</kbd> + <kbd>Left-click</kbd>: Opens another instance of the application
-- <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Left-click</kbd>: Opens another instance of the application as an administrator
-
-## Microsoft PowerToys
+I was planning to keep this post to only native Windows features and settings, but I couldn't resist including Microsoft PowerToys.
+PowerToys is kind of Microsoft's way of quickly experimenting and iterating on features that _should_ be in Windows, but aren't.
+If a feature gets popular enough, it may be included in Windows natively.
 
 Microsoft PowerToys is an application that adds a ton of great features to Windows, and it is being updated all the time.
 
 See the [Microsoft PowerToys docs](https://learn.microsoft.com/en-us/windows/powertoys/) for extensive documentation on all of the features, and how to install and configure them.
-
-You can install PowerToys by running the following command in a terminal, such as PowerShell:
-
-```cmd
-winget install --id Microsoft.PowerToys --source winget
-```
 
 A few of my favourite features are:
 
@@ -151,6 +149,12 @@ A few of my favourite features are:
 - File Locksmith: Easily unlock files that are in use by other processes.
 - Image Resizer: Resize images quickly and easily.
 - Color Picker: Get the RGB, HEX, and HSL values of any color on the screen.
+
+You can install PowerToys by running the following command in a terminal, such as PowerShell:
+
+```cmd
+winget install --id Microsoft.PowerToys --source winget
+```
 
 ## Conclusion
 
