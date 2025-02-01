@@ -49,11 +49,31 @@ Below are screenshots showing how a directory in File Explorer might look before
 
 ![After showing hidden files and file extensions](/assets/Posts/2025-01-24-Windows-tips-and-tricks/directory-after-showing-hidden-files-and-file-extensions.png)
 
-### Show where the mouse cursor is
+### Show where the mouse cursor is with the <kbd>Ctrl</kbd> key
 
-When you press the <kbd>Ctrl</kbd> key, Windows will show you where the mouse cursor is by circling it.
+If you have multiple monitors, it's easy to lose the mouse cursor.
+Windows has a feature that when you press the <kbd>Ctrl</kbd> key, it will show you where the mouse cursor is by briefly circling it.
 
-Bonus: See the Microsoft PowerToys section to allow spotlighting the mouse cursor when you press the <kbd>Ctrl</kbd> key twice.
+To enable this feature:
+
+1. Use the Start Menu to search for `Mouse settings`.
+1. In the Mouse settings window, open the `Additional mouse settings`, which should pop up the `Mouse Properties` window.
+1. Click on the `Pointer Options` tab.
+1. Enable `Show location of pointer when I press the CTRL key`.
+
+![Windows showing where the mouse cursor is](/assets/Posts/2025-01-24-Windows-tips-and-tricks/show-where-mouse-cursor-is.gif)
+
+Bonus: See the Microsoft PowerToys section at the end to allow spotlighting the mouse cursor when you press the <kbd>Ctrl</kbd> key twice.
+
+### Make the mouse cursor larger and change the color
+
+Having a large resolution on a small monitor can make it difficult to see the mouse cursor.
+I like to enlarge my cursor a bit, and change the color to make it stand out so it's easier to see.
+
+To adjust your mouse cursor settings, use the Start Menu to search for `Mouse pointer size`.
+There you can adjust the size and color of the mouse cursor.
+
+![Windows mouse cursor settings](/assets/Posts/2025-01-24-Windows-tips-and-tricks/windows-mouse-pointer-size-settings.png)
 
 ## Windows features
 
