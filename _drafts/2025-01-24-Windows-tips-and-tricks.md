@@ -190,7 +190,7 @@ A few of my favourite features are:
 
 You can install PowerToys by running the following command in a terminal, such as PowerShell:
 
-```cmd
+```shell
 winget install --id Microsoft.PowerToys --source winget
 ```
 
