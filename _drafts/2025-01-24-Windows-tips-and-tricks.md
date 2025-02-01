@@ -23,15 +23,31 @@ Also, if you have a favourite that I don't have listed here, please let me know 
 
 ## Windows settings
 
-### Show hidden files and folders
+### Show hidden files and folders and file extensions
 
-By default, Windows hides hidden files and folders.
+By default, File Explorer will not show hidden files and folders, nor show file extensions for known file types.
+I don't like Windows hiding things from me, so I always enable these settings.
 
+To enable the settings:
 
-### Show file extensions
+1. Open File Explorer Options.
+   - You can search for it in the Start Menu, or find it in File Explorer by clicking the `View` tab, then `Options` on the right side, or the `...` button then `Options`, depending on your version of Windows.
+1. Click on the `View` tab.
+1. Under `Advanced settings`, find the following settings:
+   - Enable `Show hidden files, folders, and drives`
+   - Disable `Hide extensions for known file types`
+1. Click `Apply` to apply it to the current folder.
+1. Click `Apply to Folders` to apply it to all folders.
 
-By default, Windows hides file extensions for known file types.
+![Screenshot showing how to enable showing hidden files and file extensions](/assets/Posts/2025-01-24-Windows-tips-and-tricks/steps-to-show-hidden-files-and-file-extensions.png)
 
+The last step of clicking the `Apply to Folders` button is important so that you do not have to do this for every folder you open.
+
+Below are screenshots showing how a directory in File Explorer might look before and after making these changes:
+
+![Before showing hidden files and file extensions](/assets/Posts/2025-01-24-Windows-tips-and-tricks/directory-before-showing-hidden-files-and-file-extensions.png)
+
+![After showing hidden files and file extensions](/assets/Posts/2025-01-24-Windows-tips-and-tricks/directory-after-showing-hidden-files-and-file-extensions.png)
 
 ### Show where the mouse cursor is
 
