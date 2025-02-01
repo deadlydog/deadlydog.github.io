@@ -41,7 +41,7 @@ To enable the settings:
 
 ![Screenshot showing how to enable showing hidden files and file extensions](/assets/Posts/2025-01-24-Windows-tips-and-tricks/steps-to-show-hidden-files-and-file-extensions.png)
 
-The last step of clicking the `Apply to Folders` button is important so that you do not have to do this for every folder you open.
+The last step of clicking the `Apply to Folders` button is important so that you don't have to do this for every folder you open.
 
 Below are screenshots showing how a directory in File Explorer might look before and after making these changes:
 
