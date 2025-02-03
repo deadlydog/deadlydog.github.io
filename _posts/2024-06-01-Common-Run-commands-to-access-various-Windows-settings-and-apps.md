@@ -74,6 +74,7 @@ A few commands only work from the Run dialog box and are marked as "(Run only)".
 | desk.cpl                                        | Display Properties                         |
 | devmgmt.msc                                     | Device Manager                             |
 | diskmgmt.msc                                    | Disk Management                            |
+| dsa.msc                                         | Active Directory Users and Computers       |
 | dxdiag                                          | DirectX Diagnostic Tool                    |
 | eventvwr.msc                                    | Event Viewer                               |
 | explorer                                        | Windows Explorer                           |
