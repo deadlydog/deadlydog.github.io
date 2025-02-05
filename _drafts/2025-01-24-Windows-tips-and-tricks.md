@@ -149,7 +149,7 @@ Note that it also disables Copilot, which may or may not be desired.
 
 ### Always open "More options" context menu in Windows 11+
 
-Windows 11 modified the right-click context menu to only show a few options by default, and you have to click "More options" to see the rest.
+Windows 11 modified the right-click context menu to only show a few options by default, and you have to click "Show more options" to see the rest.
 I prefer the previous Windows behavior where all options are shown by default.
 
 Below are screenshots of the context menu before and after running the command.
@@ -189,7 +189,7 @@ From a PowerShell prompt, run the following command:
 Set-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer" -Name "DelaySendToMenuBuild" -Value 1 -Type DWord
 ```
 
-[Source](https://www.winhelponline.com/blog/hidden-registry-settings-sendto-menu-windows-7/)
+[Source and more info](https://www.winhelponline.com/blog/hidden-registry-settings-sendto-menu-windows-7/)
 
 ## Bonus: Microsoft PowerToys
 
