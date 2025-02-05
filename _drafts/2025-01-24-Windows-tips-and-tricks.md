@@ -28,11 +28,17 @@ Also, if you have a favourite that I don't have listed here, please let me know 
 By default, File Explorer will not show hidden files and folders, nor show file extensions for known file types.
 I don't like Windows hiding things from me, so I always enable these settings.
 
+Below are screenshots showing how a directory in File Explorer might look before and after making the changes:
+
+![Before showing hidden files and file extensions](/assets/Posts/2025-01-24-Windows-tips-and-tricks/directory-before-showing-hidden-files-and-file-extensions.png)
+
+![After showing hidden files and file extensions](/assets/Posts/2025-01-24-Windows-tips-and-tricks/directory-after-showing-hidden-files-and-file-extensions.png)
+
 To enable the settings:
 
 1. Open File Explorer Options.
-   - You can search for it in the Start Menu, or find it in File Explorer by clicking the `View` tab, then `Options` on the right side, or the `...` button then `Options`, depending on your version of Windows.
-1. Click on the `View` tab.
+   - You can search for `File Explorer Options` in the Start Menu, or find it in File Explorer by clicking the `View` tab, then `Options` on the right side (Windows 10), or the `...` button then `Options` (Windows 11).
+1. In the Folder Options window, click on the `View` tab.
 1. Under `Advanced settings`, find the following settings:
    - Enable `Show hidden files, folders, and drives`
    - Disable `Hide extensions for known file types`
@@ -43,16 +49,12 @@ To enable the settings:
 
 The last step of clicking the `Apply to Folders` button is important so that you don't have to do this for every folder you open.
 
-Below are screenshots showing how a directory in File Explorer might look before and after making these changes:
-
-![Before showing hidden files and file extensions](/assets/Posts/2025-01-24-Windows-tips-and-tricks/directory-before-showing-hidden-files-and-file-extensions.png)
-
-![After showing hidden files and file extensions](/assets/Posts/2025-01-24-Windows-tips-and-tricks/directory-after-showing-hidden-files-and-file-extensions.png)
-
 ### Show where the mouse cursor is with the <kbd>Ctrl</kbd> key
 
 If you have multiple monitors, it's easy to lose the mouse cursor.
 Windows has a feature that when you press the <kbd>Ctrl</kbd> key, it will show you where the mouse cursor is by briefly circling it.
+
+![Windows showing where the mouse cursor is](/assets/Posts/2025-01-24-Windows-tips-and-tricks/show-where-mouse-cursor-is.gif)
 
 To enable this feature:
 
@@ -61,7 +63,7 @@ To enable this feature:
 1. Click on the `Pointer Options` tab.
 1. Enable `Show location of pointer when I press the CTRL key`.
 
-![Windows showing where the mouse cursor is](/assets/Posts/2025-01-24-Windows-tips-and-tricks/show-where-mouse-cursor-is.gif)
+![Mouse properties window showing how to enable showing the mouse cursor location](/assets/Posts/2025-01-24-Windows-tips-and-tricks/mouse-properties-window-enabling-show-location-of-pointer-with-ctrl-key.png)
 
 Bonus: See the Microsoft PowerToys section at the end to allow spotlighting the mouse cursor when you press the <kbd>Ctrl</kbd> key twice.
 
@@ -92,6 +94,25 @@ There are a few shortcuts you can use with the task bar:
 - <kbd>Shift</kbd> + <kbd>Left-click</kbd>: Opens another instance of the application
 - <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Left-click</kbd>: Opens another instance of the application as an administrator
 
+## File Explorer shortcuts
+
+- <kbd>Alt</kbd> + <kbd>Up Arrow</kbd>: Go up one level in the folder hierarchy
+- <kbd>Alt</kbd> + <kbd>Left Arrow</kbd>: Go back
+- <kbd>Alt</kbd> + <kbd>Right Arrow</kbd>: Go forward
+
+In the address bar, you can type:
+
+- `cmd` to open a command prompt in the current directory
+- `pwsh` to open a PowerShell 7+ prompt in the current directory, if you have it installed.
+- `shell:startup` to open the Startup folder
+- `shell:sendto` to open the SendTo folder
+- `shell:common startup` to open the Startup folder for all users
+- `shell:common sendto` to open the SendTo folder for all users
+- `shell:desktop` to open the Desktop folder
+- `shell:downloads` to open the Downloads folder
+
+See [my YouTube video on File Explorer shortcuts](https://youtu.be/-ixXAB2Gc0M?si=1lJ7Bx7UJqAQ6U5O) for more!
+
 ## Registry tweaks that don't have a GUI setting
 
 > NOTE: Modifying the registry can be dangerous if you don't know what you're doing, so be sure to [backup your registry](https://www.tweaking.com/how-to-backup-whole-registry-in-windows-10-step-by-step-guide/) before making any changes.
@@ -106,6 +127,12 @@ Also, you may need to restart your computer for some changes to take effect.
 
 When I search from the Start Menu, I want it to only search my local machine.
 
+Here are screenshots before and after disabling the web search:
+
+![Before disabling web search](/assets/Posts/2025-01-24-Windows-tips-and-tricks/start-menu-search-before-disabling-web-search.png)
+
+![After disabling web search](/assets/Posts/2025-01-24-Windows-tips-and-tricks/start-menu-search-after-disabling-web-search.png)
+
 From a PowerShell prompt, run the following command to disable web search in the Start Menu:
 
 ```powershell
@@ -118,18 +145,22 @@ To revert back to the default behavior, run:
 Set-ItemProperty -Path "HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Search" -Name "BingSearchEnabled" -Value 1 -Type DWord
 ```
 
-Here are screenshots before and after disabling the web search:
-
-![Before disabling web search](/assets/Posts/2025-01-24-Windows-tips-and-tricks/start-menu-search-before-disabling-web-search.png)
-
-![After disabling web search](/assets/Posts/2025-01-24-Windows-tips-and-tricks/start-menu-search-after-disabling-web-search.png)
-
 Note that it also disables Copilot, which may or may not be desired.
 
 ### Always open "More options" context menu in Windows 11+
 
 Windows 11 modified the right-click context menu to only show a few options by default, and you have to click "More options" to see the rest.
 I prefer the previous Windows behavior where all options are shown by default.
+
+Below are screenshots of the context menu before and after running the command.
+
+Default right-click context menu:
+
+![Default right-click context menu](/assets/Posts/2025-01-24-Windows-tips-and-tricks/right-click-context-menu-default.png)
+
+Right-click context menu with all options shown:
+
+![Right-click context menu with all options shown](/assets/Posts/2025-01-24-Windows-tips-and-tricks/right-click-context-menu-with-all-options-shown.png)
 
 From a PowerShell prompt, run the following command to always show all options in the context menu:
 
@@ -144,16 +175,6 @@ reg.exe delete "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a
 ```
 
 [Source and more info](https://www.elevenforum.com/t/disable-show-more-options-context-menu-in-windows-11.1589/)
-
-Below are screenshots of the context menu before and after running the command.
-
-Default right-click context menu:
-
-![Default right-click context menu](/assets/Posts/2025-01-24-Windows-tips-and-tricks/right-click-context-menu-default.png)
-
-Right-click context menu with all options shown:
-
-![Right-click context menu with all options shown](/assets/Posts/2025-01-24-Windows-tips-and-tricks/right-click-context-menu-with-all-options-shown.png)
 
 > NOTE: Windows 11 updated to allow pressing <kbd>Shift</kbd> + <kbd>Right-click</kbd> to show all options in the context menu, so you may prefer to do that over using this registry tweak.
 
