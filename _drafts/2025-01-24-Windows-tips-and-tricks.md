@@ -77,13 +77,17 @@ There you can adjust the size and color of the mouse cursor.
 
 ![Windows mouse cursor settings](/assets/Posts/2025-01-24-Windows-tips-and-tricks/windows-mouse-pointer-size-settings.png)
 
+### Shift the Start Menu to the left in the taskbar
+
+### Never group taskbar icons
+
 ## Windows features
 
 ### Show multiple time zones in the taskbar clock
 
 ### Use the Windows Sandbox to test software and settings safely
 
-## Keyboard shortcuts
+## Keyboard shortcuts (maybe move shortcuts to their own post)
 
 
 
@@ -93,6 +97,7 @@ There are a few shortcuts you can use with the task bar:
 
 - <kbd>Shift</kbd> + <kbd>Left-click</kbd>: Opens another instance of the application
 - <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Left-click</kbd>: Opens another instance of the application as an administrator
+- <kdd>Shift</kdd> + <kbd>Right-click</kbd>: Show additional context menu options, such as Run As Admin or a Different User
 
 ## File Explorer shortcuts
 
@@ -191,6 +196,28 @@ Set-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer
 
 [Source and more info](https://www.winhelponline.com/blog/hidden-registry-settings-sendto-menu-windows-7/)
 
+### Disable delay of startup apps
+
+Windows puts a delay of 10 seconds before it starts launching apps in the Startup folder.
+
+To disable this delay, from a PowerShell prompt, run the following command:
+
+```powershell
+$registryPath = "HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Serialize"
+if (-not (Test-Path $registryPath)) {
+    New-Item -Path $registryPath -Force
+}
+Set-ItemProperty -Path $registryPath -Name "Startupdelayinmsec" -Value 0 -Type DWord
+```
+
+To re-enable the delay, run:
+
+```powershell
+Remove-ItemProperty -Path "HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Serialize" -Name "Startupdelayinmsec"
+```
+
+[Source and more info](https://www.elevenforum.com/t/enable-or-disable-delay-of-running-startup-apps-in-windows-11.9144/)
+
 ## Bonus: Microsoft PowerToys
 
 I was planning to keep this post to only native Windows features and settings, but I couldn't resist including Microsoft PowerToys.
@@ -217,7 +244,7 @@ winget install --id Microsoft.PowerToys --source winget
 
 ## Conclusion
 
-I hope you found some of these tips and settings helpful.
+I hope you found some of these settings and features helpful.
 Have a favourite or one that I didn't mention?
 Let me know in the comments!
 
