@@ -82,6 +82,7 @@ This fixed the runtime crash and got everything back on track in time for my rel
 ### A proper fix
 
 While updating the assembly binding redirect to use the older version of the assembly fixed the issue, it's kind of a hacky solution.
+If we update the NuGet package to a newer version, NuGet will automatically update the assembly binding redirect version and things will break again.
 A better solution would be to find out why the older version of the assembly was being copied into the artifacts and fix it.
 
 I had already confirmed that all projects in the solution were referencing the same version of the `System.Memory` NuGet package, so I knew that wasn't the issue.
@@ -129,6 +130,7 @@ The test projects did not reference the `System.Memory` NuGet package, so when t
 Then somehow the assembly from one of the test projects was being copied into the artifacts.
 
 The solution was to add a reference to the `System.Memory` NuGet package to each of the test projects that needed it so they would bring in the correct version of the assembly.
+I then reverted the change I had made to the assembly binding redirect in the `app.config` file, and now it can be automatically managed by NuGet again.
 
 ## Conclusion
 
