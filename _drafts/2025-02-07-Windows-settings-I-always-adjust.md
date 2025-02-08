@@ -16,15 +16,15 @@ tags:
 ---
 
 Windows has a ton of native settings and features that can make it more pleasant and efficient to use.
-Below are some of my favorites that I always adjust from their default settings.
-These are all personal preference, so use whatever works best for you.
+Below are some of my favorites that I always adjust after a fresh Windows install.
+These are all personal preference, and I show the settings I like, but use whatever works best for you.
 
-This post was written with Windows 11 in mind, so some of the settings may not be available in other versions of Windows, or you may need to find them in a different way.
+This post was written with Windows 11 in mind, so some of the settings may not be available in other versions of Windows, or you may need to access them differently.
 
 As I discover more awesome settings I'll add them here, so be sure to check back from time to time.
 Also, if you have a favourite that I don't have listed here, please let me know in the comments below.
 
-## Windows settings
+## General settings
 
 ### Show hidden files and folders and file extensions
 
@@ -80,7 +80,7 @@ There you can adjust the size and color of the mouse cursor.
 
 ![Windows mouse cursor settings](/assets/Posts/2025-02-07-Windows-settings-I-always-adjust/windows-mouse-pointer-size-settings.png)
 
-### Taskbar settings
+## Taskbar settings
 
 The Windows taskbar has many settings that can be adjusted.
 
@@ -90,25 +90,25 @@ To open the taskbar settings window:
 
 ![Taskbar settings I always adjust](/assets/Posts/2025-02-07-Windows-settings-I-always-adjust/taskbar-settings-to-hide-search-task-view-and-widgets.png)
 
-#### Hide the search box from the taskbar
+### Hide the search box from the taskbar
 
 When I want to search, I use the <kbd>Windows</kbd> key and start typing, so I don't like the search box taking up space on the taskbar.
 
 In the taskbar settings window, in the `Taskbar items` section, change the `Search` to `Hide`.
 
-#### Hide the task view button
+### Hide the task view button
 
 I don't use multiple task views, and use <kbd>Alt</kbd> + <kbd>Tab</kbd> to switch between windows, so I hide the task view button.
 
 In the taskbar settings window, in the `Taskbar items` section, toggle the `Task view` to `Off`.
 
-#### Disable widgets
+### Disable widgets
 
 I don't use the widgets on the taskbar and find them distracting, so I disable them.
 
 In the taskbar settings window, in the `Taskbar items` section, toggle the `Widgets` to `Off`.
 
-#### Decide which system tray icons to always show
+### Decide which system tray icons to always show
 
 The system tray is the area on the right side of the taskbar where you can see the time, volume, network status, and other system icons.
 There are some tray icons that I always want to see, and others that I don't care about.
@@ -116,14 +116,14 @@ You can control which ones are always shown, and which ones are hidden behind th
 
 In the taskbar settings window, expand the `Other system tray icons` section, then toggle `On` the apps that you want to always show, and `Off` the ones to hide.
 
-#### Shift the Start Menu to the left
+### Shift the Start Menu to the left
 
 Windows 11 moved the Start Menu to the center of the taskbar by default.
 I prefer the previous Windows behaviour where it was on the left.
 
 In the taskbar settings window, in the `Taskbar behaviors` section, change the `Taskbar alignment` to `Left`.
 
-#### Never group taskbar icons
+### Never group taskbar icons
 
 I like to see all of my taskbar icons including their labels, so I disable grouping them so it's easy to see which is which and select the one I want.
 
