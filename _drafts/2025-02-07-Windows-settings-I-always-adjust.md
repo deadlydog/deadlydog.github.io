@@ -1,6 +1,6 @@
 ---
-title: "Windows tips and tricks"
-permalink: /Windows-tips-and-tricks/
+title: "Windows settings I always adjust"
+permalink: /Windows-settings-I-always-adjust/
 #date: 2099-01-15T00:00:00-06:00
 #last_modified_at: 2099-01-22
 comments_locked: false
@@ -30,9 +30,9 @@ I don't like Windows hiding things from me, so I always enable these settings.
 
 Below are screenshots showing how a directory in File Explorer might look before and after making the changes:
 
-![Before showing hidden files and file extensions](/assets/Posts/2025-01-24-Windows-tips-and-tricks/directory-before-showing-hidden-files-and-file-extensions.png)
+![Before showing hidden files and file extensions](/assets/Posts/2025-02-07-Windows-settings-I-always-adjust/directory-before-showing-hidden-files-and-file-extensions.png)
 
-![After showing hidden files and file extensions](/assets/Posts/2025-01-24-Windows-tips-and-tricks/directory-after-showing-hidden-files-and-file-extensions.png)
+![After showing hidden files and file extensions](/assets/Posts/2025-02-07-Windows-settings-I-always-adjust/directory-after-showing-hidden-files-and-file-extensions.png)
 
 To enable the settings:
 
@@ -45,7 +45,7 @@ To enable the settings:
 1. Click `Apply` to apply it to the current folder.
 1. Click `Apply to Folders` to apply it to all folders.
 
-![Screenshot showing how to enable showing hidden files and file extensions](/assets/Posts/2025-01-24-Windows-tips-and-tricks/steps-to-show-hidden-files-and-file-extensions.png)
+![Screenshot showing how to enable showing hidden files and file extensions](/assets/Posts/2025-02-07-Windows-settings-I-always-adjust/steps-to-show-hidden-files-and-file-extensions.png)
 
 The last step of clicking the `Apply to Folders` button is important so that you don't have to do this for every folder you open.
 
@@ -54,7 +54,7 @@ The last step of clicking the `Apply to Folders` button is important so that you
 If you have multiple monitors, it's easy to lose the mouse cursor.
 Windows has a feature that when you press the <kbd>Ctrl</kbd> key, it will show you where the mouse cursor is by briefly circling it.
 
-![Windows showing where the mouse cursor is](/assets/Posts/2025-01-24-Windows-tips-and-tricks/show-where-mouse-cursor-is.gif)
+![Windows showing where the mouse cursor is](/assets/Posts/2025-02-07-Windows-settings-I-always-adjust/show-where-mouse-cursor-is.gif)
 
 To enable this feature:
 
@@ -63,7 +63,7 @@ To enable this feature:
 1. Click on the `Pointer Options` tab.
 1. Enable `Show location of pointer when I press the CTRL key`.
 
-![Mouse properties window showing how to enable showing the mouse cursor location](/assets/Posts/2025-01-24-Windows-tips-and-tricks/mouse-properties-window-enabling-show-location-of-pointer-with-ctrl-key.png)
+![Mouse properties window showing how to enable showing the mouse cursor location](/assets/Posts/2025-02-07-Windows-settings-I-always-adjust/mouse-properties-window-enabling-show-location-of-pointer-with-ctrl-key.png)
 
 Bonus: See the Microsoft PowerToys section at the end to allow spotlighting the mouse cursor when you press the <kbd>Ctrl</kbd> key twice.
 
@@ -75,7 +75,7 @@ I like to enlarge my cursor a bit, and change the color to make it stand out so 
 To adjust your mouse cursor settings, use the Start Menu to search for `Mouse pointer size`.
 There you can adjust the size and color of the mouse cursor.
 
-![Windows mouse cursor settings](/assets/Posts/2025-01-24-Windows-tips-and-tricks/windows-mouse-pointer-size-settings.png)
+![Windows mouse cursor settings](/assets/Posts/2025-02-07-Windows-settings-I-always-adjust/windows-mouse-pointer-size-settings.png)
 
 ### Shift the Start Menu to the left in the taskbar
 
@@ -103,9 +103,9 @@ When I search from the Start Menu, I want it to only search my local machine.
 
 Here are screenshots before and after disabling the web search:
 
-![Before disabling web search](/assets/Posts/2025-01-24-Windows-tips-and-tricks/start-menu-search-before-disabling-web-search.png)
+![Before disabling web search](/assets/Posts/2025-02-07-Windows-settings-I-always-adjust/start-menu-search-before-disabling-web-search.png)
 
-![After disabling web search](/assets/Posts/2025-01-24-Windows-tips-and-tricks/start-menu-search-after-disabling-web-search.png)
+![After disabling web search](/assets/Posts/2025-02-07-Windows-settings-I-always-adjust/start-menu-search-after-disabling-web-search.png)
 
 From a PowerShell prompt, run the following command to disable web search in the Start Menu:
 
@@ -130,11 +130,11 @@ Below are screenshots of the context menu before and after running the command.
 
 Default right-click context menu:
 
-![Default right-click context menu](/assets/Posts/2025-01-24-Windows-tips-and-tricks/right-click-context-menu-default.png)
+![Default right-click context menu](/assets/Posts/2025-02-07-Windows-settings-I-always-adjust/right-click-context-menu-default.png)
 
 Right-click context menu with all options shown:
 
-![Right-click context menu with all options shown](/assets/Posts/2025-01-24-Windows-tips-and-tricks/right-click-context-menu-with-all-options-shown.png)
+![Right-click context menu with all options shown](/assets/Posts/2025-02-07-Windows-settings-I-always-adjust/right-click-context-menu-with-all-options-shown.png)
 
 From a PowerShell prompt, run the following command to always show all options in the context menu:
 
