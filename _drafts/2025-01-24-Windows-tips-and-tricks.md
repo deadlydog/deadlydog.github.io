@@ -87,37 +87,6 @@ There you can adjust the size and color of the mouse cursor.
 
 ### Use the Windows Sandbox to test software and settings safely
 
-## Keyboard shortcuts (maybe move shortcuts to their own post)
-
-
-
-## Taskbar shortcuts
-
-There are a few shortcuts you can use with the task bar:
-
-- <kbd>Shift</kbd> + <kbd>Left-click</kbd>: Opens another instance of the application
-- <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Left-click</kbd>: Opens another instance of the application as an administrator
-- <kdd>Shift</kdd> + <kbd>Right-click</kbd>: Show additional context menu options, such as Run As Admin or a Different User
-
-## File Explorer shortcuts
-
-- <kbd>Alt</kbd> + <kbd>Up Arrow</kbd>: Go up one level in the folder hierarchy
-- <kbd>Alt</kbd> + <kbd>Left Arrow</kbd>: Go back
-- <kbd>Alt</kbd> + <kbd>Right Arrow</kbd>: Go forward
-
-In the address bar, you can type:
-
-- `cmd` to open a command prompt in the current directory
-- `pwsh` to open a PowerShell 7+ prompt in the current directory, if you have it installed.
-- `shell:startup` to open the Startup folder
-- `shell:sendto` to open the SendTo folder
-- `shell:common startup` to open the Startup folder for all users
-- `shell:common sendto` to open the SendTo folder for all users
-- `shell:desktop` to open the Desktop folder
-- `shell:downloads` to open the Downloads folder
-
-See [my YouTube video on File Explorer shortcuts](https://youtu.be/-ixXAB2Gc0M?si=1lJ7Bx7UJqAQ6U5O) for more!
-
 ## Registry tweaks that don't have a GUI setting
 
 > NOTE: Modifying the registry can be dangerous if you don't know what you're doing, so be sure to [backup your registry](https://www.tweaking.com/how-to-backup-whole-registry-in-windows-10-step-by-step-guide/) before making any changes.
