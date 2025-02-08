@@ -92,13 +92,14 @@ To open the taskbar settings window:
 
 ### Hide the search box from the taskbar
 
-When I want to search, I use the <kbd>Windows</kbd> key and start typing, so I don't like the search box taking up space on the taskbar.
+When I want to search, I use the <kbd>Win</kbd> key and start typing, so I don't like the search box taking up space on the taskbar.
 
 In the taskbar settings window, in the `Taskbar items` section, change the `Search` to `Hide`.
 
 ### Hide the task view button
 
 I don't use multiple task views, and use <kbd>Alt</kbd> + <kbd>Tab</kbd> to switch between windows, so I hide the task view button.
+You can also use <kbd>Win</kbd> + <kbd>Tab</kbd> to open the task view.
 
 In the taskbar settings window, in the `Taskbar items` section, toggle the `Task view` to `Off`.
 
@@ -116,6 +117,8 @@ You can control which ones are always shown, and which ones are hidden behind th
 
 In the taskbar settings window, expand the `Other system tray icons` section, then toggle `On` the apps that you want to always show, and `Off` the ones to hide.
 
+![System tray icons](/assets/Posts/2025-02-08-Windows-settings-I-always-change-after-a-clean-install/system-tray-icons.png)
+
 ### Shift the Start Menu to the left
 
 Windows 11 moved the Start Menu to the center of the taskbar by default.
@@ -123,9 +126,17 @@ I prefer the previous Windows behaviour where it was on the left.
 
 In the taskbar settings window, in the `Taskbar behaviors` section, change the `Taskbar alignment` to `Left`.
 
-### Never group taskbar icons
+### Never group taskbar buttons
 
-I like to see all of my taskbar icons including their labels, so I disable grouping them so it's easy to see which is which and select the one I want.
+I like to see all of my taskbar buttons including their labels, so I disable grouping them so it's easy to see which ones are open and quickly select the one I want.
+
+Here is a screenshot of the taskbar with the buttons combined:
+
+![Taskbar with combined taskbar icons](/assets/Posts/2025-02-08-Windows-settings-I-always-change-after-a-clean-install/taskbar-buttons-combined.png)
+
+And the same taskbar with the buttons not combined:
+
+![Taskbar with taskbar icons never combined](/assets/Posts/2025-02-08-Windows-settings-I-always-change-after-a-clean-install/taskbar-buttons-never-combined.png)
 
 In the taskbar settings window, in the `Taskbar behaviors` section, change the `Combine taskbar buttons and hide labels` to `Never`.
 
