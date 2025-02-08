@@ -127,7 +127,7 @@ Version FilePath
 
 You can see that all of the test projects were bringing in the older version of the assembly, while the main projects were bringing in the newer version.
 The test projects did not reference the `System.Memory` NuGet package, so when they needed the `System.Memory.dll` assembly they must have just been copying the older version from the GAC (Global Assembly Cache).
-Then somehow the assembly from one of the test projects was being copied into the artifacts.
+Then somehow the assembly from one of the test projects was being copied into the artifacts; unfortunately, this particular solution has a non-standard build process.
 
 The solution was to add a reference to the `System.Memory` NuGet package to each of the test projects that needed it so they would bring in the correct version of the assembly.
 I then reverted the change I had made to the assembly binding redirect in the `app.config` file, and now it can be automatically managed by NuGet again.
