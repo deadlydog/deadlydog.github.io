@@ -17,6 +17,7 @@ tags:
 
 Windows has a ton of native settings and features that can make it more pleasant and efficient to use.
 Below are some of my favorites that I always adjust from their default settings.
+These are all personal preference, so use whatever works best for you.
 
 As I discover more I'll add them here, so be sure to check back from time to time.
 Also, if you have a favourite that I don't have listed here, please let me know in the comments below.
@@ -77,9 +78,56 @@ There you can adjust the size and color of the mouse cursor.
 
 ![Windows mouse cursor settings](/assets/Posts/2025-02-07-Windows-settings-I-always-adjust/windows-mouse-pointer-size-settings.png)
 
-### Shift the Start Menu to the left in the taskbar
+### Taskbar settings
 
-### Never group taskbar icons
+The Windows taskbar has many settings that can be adjusted.
+
+To open the taskbar settings window:
+
+1. Right-click on the taskbar and choose `Taskbar settings`, or you can search the Start Menu for `Taskbar settings`.
+
+![Taskbar settings I always adjust](/assets/Posts/2025-02-07-Windows-settings-I-always-adjust/taskbar-settings-to-hide-search-task-view-and-widgets.png)
+
+#### Hide the search box from the taskbar
+
+When I want to search, I use the <kbd>Windows</kbd> key and start typing, so I don't like the search box taking up space on the taskbar.
+
+In the taskbar settings window, in the `Taskbar items` section, change the `Search` to `Hide`.
+
+#### Hide the task view button
+
+I don't use multiple task views, and use <kbd>Alt</kbd> + <kbd>Tab</kbd> to switch between windows, so I hide the task view button.
+
+In the taskbar settings window, in the `Taskbar items` section, toggle the `Task view` to `Off`.
+
+#### Disable widgets
+
+I don't use the widgets on the taskbar and find them distracting, so I disable them.
+
+In the taskbar settings window, in the `Taskbar items` section, toggle the `Widgets` to `Off`.
+
+#### Decide which system tray icons to always show
+
+The system tray is the area on the right side of the taskbar where you can see the time, volume, network status, and other system icons.
+There are some tray icons that I always want to see, and others that I don't care about.
+You can control which ones are always shown, and which ones are hidden behind the `Show hidden icons` button to save space on the taskbar.
+
+In the taskbar settings window, expand the `Other system tray icons` section, then toggle `On` the apps that you want to always show, and `Off` the ones to hide.
+
+#### Shift the Start Menu to the left
+
+Windows 11 moved the Start Menu to the center of the taskbar by default.
+I prefer the previous Windows behaviour where it was on the left.
+
+In the taskbar settings window, in the `Taskbar behaviors` section, change the `Taskbar alignment` to `Left`.
+
+#### Never group taskbar icons
+
+I like to see all of my taskbar icons including their labels, so I disable grouping them so it's easy to see which is which and select the one I want.
+
+In the taskbar settings window, in the `Taskbar behaviors` section, change the `Combine taskbar buttons and hide labels` to `Never`.
+
+![Taskbar settings to never group taskbar icons](/assets/Posts/2025-02-07-Windows-settings-I-always-adjust/taskbar-settings-never-combine-taskbar-buttons.png)
 
 ## Windows features
 
