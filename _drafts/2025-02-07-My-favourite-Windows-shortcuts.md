@@ -13,7 +13,14 @@ tags:
   - Capitals
 ---
 
-## Keyboard shortcuts (maybe move shortcuts to their own post)
+Windows has a ton of keyboard shortcuts that can help you be more efficient.
+Below are some of my favourites.
+
+Note that <kbd>Win</kbd> is the Windows key.
+
+## Windows shortcuts
+
+You can use the following shortcuts regardless of the application you're using:
 
 - <kbd>Alt</kbd> + <kbd>Tab</kbd>: Switch between open windows
 - <kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd>Tab</kbd>: Switch between open windows in reverse
@@ -32,6 +39,8 @@ There are a few shortcuts you can use with the task bar:
 - <kdd>Shift</kdd> + <kbd>Right-click</kbd>: Show additional context menu options, such as Run As Admin or a Different User
 
 ## File Explorer shortcuts
+
+When in the File Explorer, you can use the following shortcuts:
 
 - <kbd>Alt</kbd> + <kbd>Up Arrow</kbd>: Go up one level in the folder hierarchy
 - <kbd>Alt</kbd> + <kbd>Left Arrow</kbd>: Go back
