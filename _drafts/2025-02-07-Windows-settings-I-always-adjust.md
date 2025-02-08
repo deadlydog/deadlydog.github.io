@@ -19,7 +19,9 @@ Windows has a ton of native settings and features that can make it more pleasant
 Below are some of my favorites that I always adjust from their default settings.
 These are all personal preference, so use whatever works best for you.
 
-As I discover more I'll add them here, so be sure to check back from time to time.
+This post was written with Windows 11 in mind, so some of the settings may not be available in other versions of Windows, or you may need to find them in a different way.
+
+As I discover more awesome settings I'll add them here, so be sure to check back from time to time.
 Also, if you have a favourite that I don't have listed here, please let me know in the comments below.
 
 ## Windows settings
@@ -133,7 +135,29 @@ In the taskbar settings window, in the `Taskbar behaviors` section, change the `
 
 ### Show multiple time zones in the taskbar clock
 
+You can configure multiple time zones to show in the taskbar clock when you hover over it or click on it.
+This is great if you work with people in different time zones, travel frequently, or are a software developer and just want to know what the current UTC time is 😄.
+
+To add additional time zones:
+
+1. Right-click on the taskbar clock and choose `Adjust date/time`.
+   1. You can also search the Start Menu for `Date & time settings`.
+1. In the `Date & time` settings window, scroll down and click on the `Additional clocks` section.
+1. The `Date and Time` window should open, allowing you to add up to 2 additional clocks and give them friendly names.
+
+![Date and Time settings with additional clocks](/assets/Posts/2025-02-07-Windows-settings-I-always-adjust/date-and-time-settings-additional-clocks.png)
+
+The result when hovering the mouse over the clock:
+
+![Hovering over the clock to show additional time zones](/assets/Posts/2025-02-07-Windows-settings-I-always-adjust/date-and-time-additional-clocks-hover.png)
+
+And when clicking on the clock:
+
+![Clicking on the clock to show additional time zones](/assets/Posts/2025-02-07-Windows-settings-I-always-adjust/date-and-time-additional-clocks-click.png)
+
 ### Use the Windows Sandbox to test software and settings safely
+
+
 
 ## Registry tweaks that don't have a GUI setting
 
