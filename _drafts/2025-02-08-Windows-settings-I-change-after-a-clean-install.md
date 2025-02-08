@@ -1,6 +1,6 @@
 ---
-title: "Windows settings I always change after a clean install"
-permalink: /Windows-settings-I-always-change-after-a-clean-install/
+title: "Windows settings I change after a clean install"
+permalink: /Windows-settings-I-change-after-a-clean-install/
 #date: 2099-01-15T00:00:00-06:00
 #last_modified_at: 2099-01-22
 comments_locked: false
@@ -33,9 +33,9 @@ I don't like Windows hiding things from me, so I always enable these settings.
 
 Below are screenshots showing how a directory in File Explorer might look before and after making the changes:
 
-![Before showing hidden files and file extensions](/assets/Posts/2025-02-08-Windows-settings-I-always-change-after-a-clean-install/directory-before-showing-hidden-files-and-file-extensions.png)
+![Before showing hidden files and file extensions](/assets/Posts/2025-02-08-Windows-settings-I-change-after-a-clean-install/directory-before-showing-hidden-files-and-file-extensions.png)
 
-![After showing hidden files and file extensions](/assets/Posts/2025-02-08-Windows-settings-I-always-change-after-a-clean-install/directory-after-showing-hidden-files-and-file-extensions.png)
+![After showing hidden files and file extensions](/assets/Posts/2025-02-08-Windows-settings-I-change-after-a-clean-install/directory-after-showing-hidden-files-and-file-extensions.png)
 
 To enable the settings:
 
@@ -48,7 +48,7 @@ To enable the settings:
 1. Click `Apply` to apply it to the current folder.
 1. Click `Apply to Folders` to apply it to all folders.
 
-![Screenshot showing how to enable showing hidden files and file extensions](/assets/Posts/2025-02-08-Windows-settings-I-always-change-after-a-clean-install/steps-to-show-hidden-files-and-file-extensions.png)
+![Screenshot showing how to enable showing hidden files and file extensions](/assets/Posts/2025-02-08-Windows-settings-I-change-after-a-clean-install/steps-to-show-hidden-files-and-file-extensions.png)
 
 The last step of clicking the `Apply to Folders` button is important so that you don't have to do this for every folder you open.
 
@@ -57,7 +57,7 @@ The last step of clicking the `Apply to Folders` button is important so that you
 If you have multiple monitors, it's easy to lose the mouse cursor.
 Windows has a feature that when you press the <kbd>Ctrl</kbd> key, it will show you where the mouse cursor is by briefly circling it.
 
-![Windows showing where the mouse cursor is](/assets/Posts/2025-02-08-Windows-settings-I-always-change-after-a-clean-install/show-where-mouse-cursor-is.gif)
+![Windows showing where the mouse cursor is](/assets/Posts/2025-02-08-Windows-settings-I-change-after-a-clean-install/show-where-mouse-cursor-is.gif)
 
 To enable this feature:
 
@@ -66,7 +66,7 @@ To enable this feature:
 1. Click on the `Pointer Options` tab.
 1. Enable `Show location of pointer when I press the CTRL key`.
 
-![Mouse properties window showing how to enable showing the mouse cursor location](/assets/Posts/2025-02-08-Windows-settings-I-always-change-after-a-clean-install/mouse-properties-window-enabling-show-location-of-pointer-with-ctrl-key.png)
+![Mouse properties window showing how to enable showing the mouse cursor location](/assets/Posts/2025-02-08-Windows-settings-I-change-after-a-clean-install/mouse-properties-window-enabling-show-location-of-pointer-with-ctrl-key.png)
 
 Bonus: See the Microsoft PowerToys section at the end to allow spotlighting the mouse cursor when you press the <kbd>Ctrl</kbd> key twice.
 
@@ -78,7 +78,7 @@ I like to enlarge my cursor a bit, and change the color to make it stand out so 
 To adjust your mouse cursor settings, use the Start Menu to search for `Mouse pointer size`.
 There you can adjust the size and color of the mouse cursor.
 
-![Windows mouse cursor settings](/assets/Posts/2025-02-08-Windows-settings-I-always-change-after-a-clean-install/windows-mouse-pointer-size-settings.png)
+![Windows mouse cursor settings](/assets/Posts/2025-02-08-Windows-settings-I-change-after-a-clean-install/windows-mouse-pointer-size-settings.png)
 
 ## Taskbar settings
 
@@ -88,7 +88,7 @@ To open the taskbar settings window:
 
 1. Right-click on the taskbar and choose `Taskbar settings`, or you can search the Start Menu for `Taskbar settings`.
 
-![Taskbar settings I always adjust](/assets/Posts/2025-02-08-Windows-settings-I-always-change-after-a-clean-install/taskbar-settings-to-hide-search-task-view-and-widgets.png)
+![Taskbar settings I always adjust](/assets/Posts/2025-02-08-Windows-settings-I-change-after-a-clean-install/taskbar-settings-to-hide-search-task-view-and-widgets.png)
 
 ### Hide the search box from the taskbar
 
@@ -117,7 +117,7 @@ You can control which ones are always shown, and which ones are hidden behind th
 
 In the taskbar settings window, expand the `Other system tray icons` section, then toggle `On` the apps that you want to always show, and `Off` the ones to hide.
 
-![System tray icons](/assets/Posts/2025-02-08-Windows-settings-I-always-change-after-a-clean-install/system-tray-icons.png)
+![System tray icons](/assets/Posts/2025-02-08-Windows-settings-I-change-after-a-clean-install/system-tray-icons.png)
 
 ### Shift the Start Menu to the left
 
@@ -132,15 +132,15 @@ I like to see all of my taskbar buttons including their labels, so I disable gro
 
 Here is a screenshot of the taskbar with the buttons combined:
 
-![Taskbar with combined taskbar icons](/assets/Posts/2025-02-08-Windows-settings-I-always-change-after-a-clean-install/taskbar-buttons-combined.png)
+![Taskbar with combined taskbar icons](/assets/Posts/2025-02-08-Windows-settings-I-change-after-a-clean-install/taskbar-buttons-combined.png)
 
 And the same taskbar with the buttons not combined:
 
-![Taskbar with taskbar icons never combined](/assets/Posts/2025-02-08-Windows-settings-I-always-change-after-a-clean-install/taskbar-buttons-never-combined.png)
+![Taskbar with taskbar icons never combined](/assets/Posts/2025-02-08-Windows-settings-I-change-after-a-clean-install/taskbar-buttons-never-combined.png)
 
 In the taskbar settings window, in the `Taskbar behaviors` section, change the `Combine taskbar buttons and hide labels` to `Never`.
 
-![Taskbar settings to never group taskbar icons](/assets/Posts/2025-02-08-Windows-settings-I-always-change-after-a-clean-install/taskbar-settings-never-combine-taskbar-buttons.png)
+![Taskbar settings to never group taskbar icons](/assets/Posts/2025-02-08-Windows-settings-I-change-after-a-clean-install/taskbar-settings-never-combine-taskbar-buttons.png)
 
 ## Windows features
 
@@ -156,15 +156,15 @@ To add additional time zones:
 1. In the `Date & time` settings window, scroll down and click on the `Additional clocks` section.
 1. The `Date and Time` window should open, allowing you to add up to 2 additional clocks and give them friendly names.
 
-![Date and Time settings with additional clocks](/assets/Posts/2025-02-08-Windows-settings-I-always-change-after-a-clean-install/date-and-time-settings-additional-clocks.png)
+![Date and Time settings with additional clocks](/assets/Posts/2025-02-08-Windows-settings-I-change-after-a-clean-install/date-and-time-settings-additional-clocks.png)
 
 The result when hovering the mouse over the clock:
 
-![Hovering over the clock to show additional time zones](/assets/Posts/2025-02-08-Windows-settings-I-always-change-after-a-clean-install/date-and-time-additional-clocks-hover.png)
+![Hovering over the clock to show additional time zones](/assets/Posts/2025-02-08-Windows-settings-I-change-after-a-clean-install/date-and-time-additional-clocks-hover.png)
 
 And when clicking on the clock:
 
-![Clicking on the clock to show additional time zones](/assets/Posts/2025-02-08-Windows-settings-I-always-change-after-a-clean-install/date-and-time-additional-clocks-click.png)
+![Clicking on the clock to show additional time zones](/assets/Posts/2025-02-08-Windows-settings-I-change-after-a-clean-install/date-and-time-additional-clocks-click.png)
 
 ### Use the Windows Sandbox to test software and settings safely
 
@@ -181,11 +181,11 @@ The Windows Sandbox app is not installed by default, so you may need to install 
 1. Click `OK` to install it.
 1. Restart your computer if prompted.
 
-![The Windows Features window showing Windows Sandbox enabled](/assets/Posts/2025-02-08-Windows-settings-I-always-change-after-a-clean-install/windows-features-enable-windows-sandbox.png)
+![The Windows Features window showing Windows Sandbox enabled](/assets/Posts/2025-02-08-Windows-settings-I-change-after-a-clean-install/windows-features-enable-windows-sandbox.png)
 
 Now search for `Windows Sandbox` in the Start Menu to open the app.
 
-![Windows Sandbox app](/assets/Posts/2025-02-08-Windows-settings-I-always-change-after-a-clean-install/windows-sandbox-app.png)
+![Windows Sandbox app](/assets/Posts/2025-02-08-Windows-settings-I-change-after-a-clean-install/windows-sandbox-app.png)
 
 ## Registry tweaks that don't have a GUI setting
 
@@ -203,9 +203,9 @@ When I search from the Start Menu, I want it to only search my local machine.
 
 Here are screenshots before and after disabling the web search:
 
-![Before disabling web search](/assets/Posts/2025-02-08-Windows-settings-I-always-change-after-a-clean-install/start-menu-search-before-disabling-web-search.png)
+![Before disabling web search](/assets/Posts/2025-02-08-Windows-settings-I-change-after-a-clean-install/start-menu-search-before-disabling-web-search.png)
 
-![After disabling web search](/assets/Posts/2025-02-08-Windows-settings-I-always-change-after-a-clean-install/start-menu-search-after-disabling-web-search.png)
+![After disabling web search](/assets/Posts/2025-02-08-Windows-settings-I-change-after-a-clean-install/start-menu-search-after-disabling-web-search.png)
 
 From a PowerShell prompt, run the following command to disable web search in the Start Menu:
 
@@ -230,11 +230,11 @@ Below are screenshots of the context menu before and after running the command.
 
 Default right-click context menu:
 
-![Default right-click context menu](/assets/Posts/2025-02-08-Windows-settings-I-always-change-after-a-clean-install/right-click-context-menu-default.png)
+![Default right-click context menu](/assets/Posts/2025-02-08-Windows-settings-I-change-after-a-clean-install/right-click-context-menu-default.png)
 
 Right-click context menu with all options shown:
 
-![Right-click context menu with all options shown](/assets/Posts/2025-02-08-Windows-settings-I-always-change-after-a-clean-install/right-click-context-menu-with-all-options-shown.png)
+![Right-click context menu with all options shown](/assets/Posts/2025-02-08-Windows-settings-I-change-after-a-clean-install/right-click-context-menu-with-all-options-shown.png)
 
 From a PowerShell prompt, run the following command to always show all options in the context menu:
 
