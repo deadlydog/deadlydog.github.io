@@ -15,8 +15,8 @@ tags:
   - Shortcuts
 ---
 
-Windows has a ton of native features and keyboard shortcuts that can make it more pleasant and efficient to use.
-Below are some of my favorites.
+Windows has a ton of native settings and features that can make it more pleasant and efficient to use.
+Below are some of my favorites that I always adjust from their default settings.
 
 As I discover more I'll add them here, so be sure to check back from time to time.
 Also, if you have a favourite that I don't have listed here, please let me know in the comments below.
