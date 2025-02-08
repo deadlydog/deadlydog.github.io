@@ -170,7 +170,7 @@ The Windows Sandbox app is not installed by default, so you may need to install 
 1. Click `OK` to install it.
 1. Restart your computer if prompted.
 
-Now to open the Windows Sandbox app, search for `Windows Sandbox` in the Start Menu.
+Now search for `Windows Sandbox` in the Start Menu to open the app.
 
 ![Windows Sandbox app](/assets/Posts/2025-02-07-Windows-settings-I-always-adjust/windows-sandbox-app.png)
 
