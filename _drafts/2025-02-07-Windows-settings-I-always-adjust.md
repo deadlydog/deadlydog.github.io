@@ -157,7 +157,22 @@ And when clicking on the clock:
 
 ### Use the Windows Sandbox to test software and settings safely
 
+Windows includes an app called `Windows Sandbox`.
+When you open the Windows Sandbox app, it creates a clean virtual environment that looks like a fresh install of Windows.
+Here you can experiment with software, settings, or files without affecting your main system, and when you close the app everything is erased.
+This is great for testing software or settings that you're not sure about, without risking your main system.
+Just be sure not to save anything important in the Windows Sandbox, as it will be erased when you close it.
 
+The Windows Sandbox app is not installed by default, so you may need to install it from the Windows Features:
+
+1. Search the Start Menu for `Windows Features`, and choose `Turn Windows features on or off`.
+1. In the Windows Features window, scroll down and enable `Windows Sandbox`.
+1. Click `OK` to install it.
+1. Restart your computer if prompted.
+
+Now to open the Windows Sandbox app, search for `Windows Sandbox` in the Start Menu.
+
+![Windows Sandbox app](/assets/Posts/2025-02-07-Windows-settings-I-always-adjust/windows-sandbox-app.png)
 
 ## Registry tweaks that don't have a GUI setting
 
