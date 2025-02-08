@@ -15,7 +15,13 @@ tags:
 
 ## Keyboard shortcuts (maybe move shortcuts to their own post)
 
-
+- <kbd>Alt</kbd> + <kbd>Tab</kbd>: Switch between open windows
+- <kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd>Tab</kbd>: Switch between open windows in reverse
+- <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Esc</kbd>: Open Task Manager
+- <kbd>Win</kbd> + <kbd>Shift</kbd> + <kbd>Left</kbd>/<kbd>Right</kbd>: Move the current window to the left or right monitor
+- <kbd>Win</kbd> + <kbd>Down</kbd>: Minimize the current window
+- <kbd>Win</kbd> + <kbd>Up</kbd>: Maximize the current window
+- <kbd>Win</kbd> + <kbd>Left</kbd>/<kbd>Right</kbd>: Snap the current window to the left or right side of the screen
 
 ## Taskbar shortcuts
 
@@ -59,7 +65,3 @@ Your regular markdown goes here. It also supports HTML :)
 Try to include at least one image, as it makes preview links more appealing since the first image often gets used as the preview image:
 
 ![Example image](/assets/Posts/2025-02-07-My-favourite-Windows-shortcuts/image-name.png)
-
-Posts in this _drafts directory will not show up on the website unless you build using `--draft` when compiling:
-
-> bundle exec jekyll serve --incremental --draft
