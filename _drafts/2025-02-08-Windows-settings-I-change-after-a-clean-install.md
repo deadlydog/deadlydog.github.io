@@ -16,7 +16,7 @@ tags:
 ---
 
 Windows has a ton of native settings and features that can make it more pleasant and efficient to use.
-Below are some of my favorites that I always adjust after a fresh Windows install.
+Below are some of my favorites that I always adjust after a fresh install of Windows.
 These are all personal preference, and I show the settings I like, but use whatever works best for you.
 
 This post was written with Windows 11 in mind, so some of the settings may not be available in other versions of Windows, or you may need to access them differently.
