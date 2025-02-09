@@ -133,7 +133,7 @@ You can find the code and documentation for my Staticman instance [here](https:/
 
 By default Jekyll uses `Rouge` for syntax highlighting of code blocks.
 See [this page][JekyllRogueSyntaxHighlighterSupportedLanguagesUrl] for the list of supported languages.
-e.g. `csharp`, `css`, `html`, `http`, `ini`, `json`, `liquid`, `markdown`, `powershell`, `sql`, `text`, `xml`, `yaml`, and many more.
+e.g. `csharp`, `css`, `html`, `http`, `ini`, `json`, `json-doc`, `liquid`, `markdown`, `powershell`, `php`, `shell`, `sql`, `text`, `xml`, `yaml`, and many more.
 
 We may want to look at [replacing `Rouge` with `Pygments`][HowToUsePygmentsSyntaxHighlighterWithJekyll] to get [support for more languages][JekyllPygmentsSyntaxHighlighterSupportedLanguagesUrl], like AutoHotkey and batch files. Unfortunately GitHub Pages only supports Rouge at this time (June 2019) so we have to stick with it, but that may change in the future. There are open issues to add more languages to Rouge though, like [Batch][RougeBatchSyntaxHighlightingSupportIssueUrl] and [AutoHotkey][RougeAutoHotkeySyntaxHighlightingSupportIssueUrl] files.
 
