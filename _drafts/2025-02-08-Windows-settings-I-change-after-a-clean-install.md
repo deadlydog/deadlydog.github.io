@@ -189,7 +189,9 @@ Now search for `Windows Sandbox` in the Start Menu to open the app.
 
 ## Registry tweaks that don't have a GUI setting
 
-> NOTE: Modifying the registry can be dangerous if you don't know what you're doing, so be sure to [backup your registry](https://www.tweaking.com/how-to-backup-whole-registry-in-windows-10-step-by-step-guide/) before making any changes.
+> NOTE: Modifying the registry can be dangerous if you don't know what you're doing, so be sure to [backup your registry](https://www.tweaking.com/how-to-backup-whole-registry-in-windows-10-step-by-step-guide/) before making any manual changes.
+>
+> You can try the commands below in the Windows Sandbox first to see if you like the changes.
 
 I provide terminal commands instead of manual point-and-click steps for modifying the registry to help ensure that only the intended keys are modified.
 You can run these commands in PowerShell or Command Prompt.
@@ -198,6 +200,8 @@ Some commands shown below may need to be ran from an elevated terminal (e.g. run
 Also, you may need to restart your computer for some changes to take effect.
 
 If you are curious about the syntax of the registry commands, you can find [the reg.exe MS docs here](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/reg).
+
+If you want to easily apply all of the registry tweaks below, simply [download this .reg file](/assets/Posts/2025-02-08-Windows-settings-I-change-after-a-clean-install/All_registry_changes.reg) and double-click it to run it.
 
 ### Disable searching the web in the Start Menu search
 
