@@ -6,13 +6,13 @@ permalink: /Windows-settings-I-change-after-a-clean-install/
 comments_locked: false
 toc: true
 categories:
-  - Windows
+  - Performance
   - Productivity
-  - Shortcuts
+  - Windows
 tags:
-  - Windows
+  - Performance
   - Productivity
-  - Shortcuts
+  - Windows
 ---
 
 Windows has a ton of native settings and features that can make it more pleasant and efficient to use.
