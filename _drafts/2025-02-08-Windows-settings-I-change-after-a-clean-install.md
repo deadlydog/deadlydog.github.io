@@ -191,11 +191,13 @@ Now search for `Windows Sandbox` in the Start Menu to open the app.
 
 > NOTE: Modifying the registry can be dangerous if you don't know what you're doing, so be sure to [backup your registry](https://www.tweaking.com/how-to-backup-whole-registry-in-windows-10-step-by-step-guide/) before making any changes.
 
-I include PowerShell commands instead of manual steps for modifying the registry to help ensure that only the intended keys are modified.
+I provide terminal commands instead of manual point-and-click steps for modifying the registry to help ensure that only the intended keys are modified.
+You can run these commands in PowerShell or Command Prompt.
 
-Some commands shown below may need to be ran from an elevated PowerShell prompt (i.e. run PowerShell as an Administrator), otherwise you may get an error like `Requested registry access is not allowed`.
-
+Some commands shown below may need to be ran from an elevated terminal (e.g. run PowerShell as an Administrator), otherwise you may get an error like `Requested registry access is not allowed`.
 Also, you may need to restart your computer for some changes to take effect.
+
+If you are curious about the syntax of the registry commands, you can find [the reg.exe MS docs here](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/reg).
 
 ### Disable searching the web in the Start Menu search
 
@@ -207,16 +209,16 @@ Here are screenshots before and after disabling the web search:
 
 ![After disabling web search](/assets/Posts/2025-02-08-Windows-settings-I-change-after-a-clean-install/start-menu-search-after-disabling-web-search.png)
 
-From a PowerShell prompt, run the following command to disable web search in the Start Menu:
+Run the following command to disable web search in the Start Menu:
 
 ```powershell
-Set-ItemProperty -Path "HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Search" -Name "BingSearchEnabled" -Value 0 -Type DWord
+reg.exe add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Search" /v BingSearchEnabled /t REG_DWORD /d 0 /f
 ```
 
 To revert back to the default behavior, run:
 
 ```powershell
-Set-ItemProperty -Path "HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Search" -Name "BingSearchEnabled" -Value 1 -Type DWord
+reg.exe delete "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Search" /v BingSearchEnabled /f
 ```
 
 Note that it also disables Copilot, which may or may not be desired.
@@ -236,7 +238,7 @@ Right-click context menu with all options shown:
 
 ![Right-click context menu with all options shown](/assets/Posts/2025-02-08-Windows-settings-I-change-after-a-clean-install/right-click-context-menu-with-all-options-shown.png)
 
-From a PowerShell prompt, run the following command to always show all options in the context menu:
+Run the following command to always show all options in the context menu:
 
 ```powershell
 reg.exe add "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32" /f /ve
@@ -257,10 +259,16 @@ reg.exe delete "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a
 When you right-click on a file or folder, the `Send to` menu discovers all of the apps and connected devices you can send the file to, before it actually shows the menu.
 We can change this so that it does not enumerate devices until you hover over the `Send to` menu.
 
-From a PowerShell prompt, run the following command:
+Run the following command to delay Send To from looking for devices right away:
 
 ```powershell
-Set-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer" -Name "DelaySendToMenuBuild" -Value 1 -Type DWord
+reg.exe add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer" /v DelaySendToMenuBuild /t REG_DWORD /d 1 /f
+```
+
+To revert back to the default behavior, run:
+
+```powershell
+reg.exe delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer" /v DelaySendToMenuBuild /f
 ```
 
 [Source and more info](https://www.winhelponline.com/blog/hidden-registry-settings-sendto-menu-windows-7/)
@@ -269,20 +277,16 @@ Set-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer
 
 Windows puts a delay of 10 seconds before it starts launching apps in the Startup folder.
 
-To disable this delay, from a PowerShell prompt, run the following command:
+Run the following command to disable the startup apps delay:
 
 ```powershell
-$registryPath = "HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Serialize"
-if (-not (Test-Path $registryPath)) {
-    New-Item -Path $registryPath -Force
-}
-Set-ItemProperty -Path $registryPath -Name "Startupdelayinmsec" -Value 0 -Type DWord
+reg.exe add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Serialize" /v Startupdelayinmsec /t REG_DWORD /d 0 /f
 ```
 
-To re-enable the delay, run:
+To revert back to the default behavior, run:
 
 ```powershell
-Remove-ItemProperty -Path "HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Serialize" -Name "Startupdelayinmsec"
+reg.exe delete "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Serialize" /v Startupdelayinmsec /f
 ```
 
 [Source and more info](https://www.elevenforum.com/t/enable-or-disable-delay-of-running-startup-apps-in-windows-11.9144/)
