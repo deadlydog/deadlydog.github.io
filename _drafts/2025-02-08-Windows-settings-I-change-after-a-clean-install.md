@@ -109,6 +109,8 @@ I don't use the widgets on the taskbar and find them distracting, so I disable t
 
 In the taskbar settings window, in the `Taskbar items` section, toggle the `Widgets` to `Off`.
 
+![Screenshot showing the widgets, search box, and task view button on the taskbar](/assets/Posts/2025-02-08-Windows-settings-I-change-after-a-clean-install/task-bar-widgets-search-box-and-task-view.png)
+
 ### Decide which system tray icons to always show
 
 The system tray is the area on the right side of the taskbar where you can see the time, volume, network status, and other system icons.
