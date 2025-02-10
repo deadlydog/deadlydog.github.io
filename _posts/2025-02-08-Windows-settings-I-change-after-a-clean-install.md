@@ -121,6 +121,8 @@ In the taskbar settings window, expand the `Other system tray icons` section, th
 
 ![System tray icons](/assets/Posts/2025-02-08-Windows-settings-I-change-after-a-clean-install/system-tray-icons.png)
 
+You can also simply drag-and-drop the system tray icons to/from the hidden area to control which ones are always shown.
+
 ### Shift the Start Menu to the left
 
 Windows 11 moved the Start Menu to the center of the taskbar by default.
