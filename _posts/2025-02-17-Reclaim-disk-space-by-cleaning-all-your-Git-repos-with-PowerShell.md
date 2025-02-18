@@ -24,7 +24,7 @@ Luckily, we can automate this process using PowerShell.
 
 ## Clean all repos using the GitClean PowerShell module
 
-To make it easy to clean all your Git repositories, I created [the GitClean PowerShell module](https://github.com/deadlydog/PowerShell.GitClean).
+To make it easy to clean all your Git repositories, I created the cross-platform [GitClean PowerShell module](https://github.com/deadlydog/PowerShell.GitClean).
 
 Assuming all of your Git repositories are located under a common root folder, `C:\dev\Git` for example, you can install the module and clean all your repos with the following PowerShell code:
 
