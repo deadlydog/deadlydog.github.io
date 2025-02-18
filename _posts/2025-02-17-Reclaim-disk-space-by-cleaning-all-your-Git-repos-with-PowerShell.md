@@ -73,7 +73,7 @@ Get-ChildItem -Path $rootDirectoryPath -Recurse -Depth 3 -Force -Directory -Filt
     }
 ```
 
-You can [download the script here](/assets/Posts/2025-02-17-Reclaim-disk-space-by-cleaning-all-your-Git-repos-with-PowerShell/CleanGitRepositories.ps1).
+You can [download this snippet as a script here](/assets/Posts/2025-02-17-Reclaim-disk-space-by-cleaning-all-your-Git-repos-with-PowerShell/CleanGitRepositories.ps1).
 
 This won't give you the nice progress bars and detailed information that the GitClean module does, but it will get the job done.
 
