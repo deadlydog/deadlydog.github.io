@@ -41,7 +41,7 @@ Once you've downloaded and unzipped the font, you can double-click the appropria
 
 Here is a screenshot of installing the `CaskaydiaCoveNerdFontMono-Regular.ttf` file font:
 
-![Installing a font](/assets/Posts/2023-06-29-Update-your-terminal-prompt-and-font-in-Windows-Terminal-and-VS-Code-and-Visual-Studio/install-font-screenshot.png
+![Installing a font](/assets/Posts/2023-06-29-Update-your-terminal-prompt-and-font-in-Windows-Terminal-and-VS-Code-and-Visual-Studio/install-font-screenshot.png)
 
 You can to install several fonts if you like so that you have a few to choose from in your applications.
 
