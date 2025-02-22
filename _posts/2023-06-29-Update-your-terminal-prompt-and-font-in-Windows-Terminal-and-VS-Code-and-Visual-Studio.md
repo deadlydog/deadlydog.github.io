@@ -44,6 +44,7 @@ Here is a screenshot of installing the `CaskaydiaCoveNerdFontMono-Regular.ttf` f
 ![Installing a font](/assets/Posts/2023-06-29-Update-your-terminal-prompt-and-font-in-Windows-Terminal-and-VS-Code-and-Visual-Studio/install-font-screenshot.png)
 
 You can to install several fonts if you like so that you have a few to choose from in your applications.
+If you want to install many fonts at once, you can select multiple .ttf files and then right-click and select `Install` from the context menu.
 
 I personally like `Mono` fonts for my code and terminal, as I find them easier to read and better for aligning code.
 Mono fonts use the same width for all characters (e.g. the `i` character will take the same amount of space as the `w` character).
