@@ -89,7 +89,7 @@ Result:
 
 ![Result of enabling the Show Invisible Characters setting](/assets/Posts/2023-03-14-Visual-Studio-Code-default-settings-to-change/show-invisible-characters-settings-result.png)
 
-Note: There are separate settings for the `Markdown` and `PlainText` languages, which are `false` by default, so be sure to enable all of them.
+__Note:__ There are separate settings for the `Markdown` and `PlainText` languages, which are `false` by default, so be sure to enable all of them.
 
 ![Screenshot showing there are multiple language settings for showing invisible characters](/assets/Posts/2023-03-14-Visual-Studio-Code-default-settings-to-change/show-invisible-characters-multiple-settings.png)
 
@@ -402,12 +402,12 @@ Both of these fonts support ligatures, and can be downloaded for free from [Nerd
 
 You can specify multiple fonts, and VS Code will use the first one that is available on your machine.
 
-GUI setting: `Editor: Font Family` to `'CaskaydiaCove Nerd Font',Consolas, 'Courier New', monospace`.
+GUI setting: `Editor: Font Family` to `'CaskaydiaCove Nerd Font Mono',Consolas, 'Courier New', monospace`.
 
 JSON setting:
 
 ```json
-"editor.fontFamily": "'CaskaydiaCove Nerd Font',Consolas, 'Courier New', monospace",
+"editor.fontFamily": "'CaskaydiaCove Nerd Font Mono',Consolas, 'Courier New', monospace",
 ```
 
 ### Editor font ligatures
@@ -598,7 +598,7 @@ JSON setting:
 "files.trimTrailingWhitespace": true,
 ```
 
-Note: When working in source controlled files, this can sometimes make the file diff very large if the diff viewer is not configured to ignore whitespace changes.
+__Note:__ When working in source controlled files, this can sometimes make the file diff very large if the diff viewer is not configured to ignore whitespace changes.
 
 ### Insert final newline
 
@@ -809,6 +809,7 @@ JSON setting:
 ### Auto stash
 
 Automatically stash your changes before pulling, and restore them after the pull succeeds.
+Without this, you may be presented with a prompt or error if you have uncommitted changes and try to pull.
 
 GUI setting: `Git: Auto Stash` to `true`.
 
