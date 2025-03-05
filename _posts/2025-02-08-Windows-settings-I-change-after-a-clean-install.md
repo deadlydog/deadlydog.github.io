@@ -26,7 +26,19 @@ Also, if you have a favourite that I don't have listed here, please let me know 
 
 ## General settings
 
-### Show hidden files and folders and file extensions
+### Have File Explorer open to the This PC view
+
+By default, File Explorer opens to the Home view, which shows your most used folders and files.
+I prefer to show the This PC view each time I open File Explorer.
+
+To change the default view of File Explorer to This PC:
+
+1. In the Start Menu, search for `File Explorer Options` and open it.
+1. In the File Explorer Options window, change the `Open File Explorer to` setting to `This PC`.
+
+![File Explorer Options window to change the default view to This PC](/assets/Posts/2025-02-08-Windows-settings-I-change-after-a-clean-install/file-explorer-options-default-to-this-pc-view.png)
+
+### Show hidden files and folders and file extensions in File Explorer
 
 By default, File Explorer will not show hidden files and folders, nor show file extensions for known file types.
 I don't like Windows hiding things from me, so I always enable these settings.
