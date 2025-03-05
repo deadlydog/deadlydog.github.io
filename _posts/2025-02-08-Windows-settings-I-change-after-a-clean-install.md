@@ -78,7 +78,20 @@ I like to enlarge my cursor a bit, and change the color to make it stand out so 
 To adjust your mouse cursor settings, use the Start Menu to search for `Mouse pointer size`.
 There you can adjust the size and color of the mouse cursor.
 
-![Windows mouse cursor settings](/assets/Posts/2025-02-08-Windows-settings-I-change-after-a-clean-install/windows-mouse-pointer-size-settings.png)
+![Windows mouse cursor settings](/assets/Posts/2025-02-08-Windows-settings-I-change-after-a-clean-install/mouse-pointer-size-settings.png)
+
+### Disable the Touchpad when using a mouse
+
+When using Windows on a laptop without an external keyboard, I sometimes accidentally touch the touchpad while typing, which causes the cursor to jump around.
+To prevent this, I disable the touchpad when a mouse is connected.
+
+To disable the touchpad when a mouse is connected:
+
+1. Use the Start Menu to search for `Touchpad settings`.
+1. Expand the `Touchpad` section.
+1. Uncheck `Leave touchpad on when a mouse is connected`.
+
+![Touchpad settings to disable the touchpad when a mouse is connected](/assets/Posts/2025-02-08-Windows-settings-I-change-after-a-clean-install/touchpad-disable-when-mouse-is-connected.png)
 
 ## Taskbar settings
 
