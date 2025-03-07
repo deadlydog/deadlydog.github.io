@@ -28,10 +28,16 @@ Also, if you have a favourite that I don't have listed here, please let me know 
 
 ### Have File Explorer open to the This PC view
 
-By default, File Explorer opens to the Home view, which shows your most used folders and files.
-I prefer to show the This PC view each time I open File Explorer.
+By default, File Explorer opens to the `Home` view, which shows a bunch of things, such as your most used folders and files.
+I find that view very cluttered, and often just want to get into the root of one of my drives, so I prefer to start at the `This PC` view.
 
-To change the default view of File Explorer to This PC:
+The default `Home` view vs. the `This PC` view:
+
+![File Explorer Home view](/assets/Posts/2025-02-08-Windows-settings-I-change-after-a-clean-install/file-explorer-home-view.png)
+
+![File Explorer This PC view](/assets/Posts/2025-02-08-Windows-settings-I-change-after-a-clean-install/file-explorer-this-pc-view.png)
+
+To change the default view of File Explorer to `This PC`:
 
 1. In the Start Menu, search for `File Explorer Options` and open it.
 1. In the File Explorer Options window, change the `Open File Explorer to` setting to `This PC`.
