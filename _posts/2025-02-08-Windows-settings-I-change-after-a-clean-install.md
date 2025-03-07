@@ -31,7 +31,7 @@ Also, if you have a favourite that I don't have listed here, please let me know 
 By default, File Explorer opens to the `Home` view, which shows a bunch of things, such as your most used folders and files.
 I find that view very cluttered, and often just want to get into the root of one of my drives, so I prefer to start at the `This PC` view.
 
-The default `Home` view vs. the `This PC` view:
+Below are screenshots of the default `Home` view and the `This PC` view:
 
 ![File Explorer Home view](/assets/Posts/2025-02-08-Windows-settings-I-change-after-a-clean-install/file-explorer-home-view.png)
 
