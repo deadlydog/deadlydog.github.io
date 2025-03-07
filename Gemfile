@@ -21,7 +21,7 @@ group :jekyll_plugins do
   gem "jekyll-sitemap"
   gem "jekyll-gist"
   gem "jekyll-feed"
-  gem "jemoji"
+#   gem "jemoji" # Disable until this is fixed to be compatible with Ruby v3.3. See: https://github.com/jekyll/jekyll/issues/9733
   gem "jekyll-include-cache"
   gem "jekyll-algolia"
 end

@@ -272,7 +272,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
-  - jemoji
+  # - jemoji # Disable until this is fixed to be compatible with Ruby v3.3. See: https://github.com/jekyll/jekyll/issues/9733
   - jekyll-include-cache
 
 # Mimic GitHub Pages with --safe
