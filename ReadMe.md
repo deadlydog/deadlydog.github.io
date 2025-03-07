@@ -9,13 +9,26 @@ I currently use the [Minimal Mistakes theme][MinimalMistakesThemeGitHubRepoUrl].
 
 ## Running Jekyll locally
 
+If you have Docker installed, you can open this repo is VS Code or a GitHub Codespace by using the provided DevContainer.
+
+To run the site, you can run the "Start Jekyll in PowerShell Integrated Console" launch configuration from the VS Code Run and Debug pane.
+
+If you want to run on your local machine without using the DevContainer, follow the steps below.
+
 ### Prerequisites
 
-1. Install [Ruby][RubyInstallerDownloadPageUrl] v2.5 (some gems don't support v2.6 yet), as well as have it install MSYS2 after installation.
+1. Install [Ruby + Devkit][RubyInstallerDownloadPageUrl] v3.3 (or whichever is recommended on the site), as well as have it install MSYS2 after installation.
    - Use `ruby -v` to see which version is installed.
+   - You may need to restart your computer before the VS Code terminal recognizes Ruby.
+1. Ensure everything is up-to-date by running `gem update --system`.
+   - If you get the error `You must add /O=Cisco/CN=Cisco Umbrella Root CA to your local trusted store`, then follow the instructions at <https://bundler.io/guides/rubygems_tls_ssl_troubleshooting_guide.html#updating-ca-certificates> to fix it.
+     - Basically download the .pem certificate file and drop it in the `ssl_certs` directory, then restart your PC.
+       - e.g. C:\Ruby33-x64\lib\ruby\3.3.0\rubygems\ssl_certs
+   - If that does not work, manually install the Cisco Umbrella Root CA certificate by following the instructions at <https://docs.umbrella.com/deployment-msp/docs/install-the-cisco-umbrella-root-certificate>, then restart your PC.
+   - If that still does not work, run the following command to have Ruby ignore using SSL for this repo:
+     - `bundle config ssl_verify_mode 0 && echo ":ssl_verify_mode: 0" > ~/.gemrc`
 1. Install the Jekyll gem using `gem install jekyll bundler`
    - Use `jekyll -v` to see which version of jekyll is installed.
-   - You may need to restart your computer before the VS Code terminal recognizes Ruby.
 1. Run `bundle install` in the repository directory to install all of the required gems.
 
 ### Run Jekyll locally
