@@ -201,7 +201,7 @@ To change the desktop background image:
 
 ## Power settings
 
-### Screen and sleep settings
+### Don't turn off the screen and go to sleep so fast
 
 Windows will often turn the monitor off or put the computer to sleep after a short period of inactivity, such as 5 or 15 minutes depending on if it is on battery or not.
 I like to extend this time so that if I walk away from my computer for a little while, it's less likely to be asleep when I come back.
@@ -212,13 +212,13 @@ To change the power settings:
 1. Expand the `Screen and sleep` section if needed.
 1. Adjust when the computer turns off the screen and goes to sleep to your liking.
 
-### Power mode settings
+### Turn on enhanced performance power mode
 
 In that same `Power, sleep, and battery settings` window, you can adjust the `Power mode` to prioritize performance over battery life and energy efficiency if you like.
 
 ![Windows power settings](/assets/Posts/2025-02-08-Windows-settings-I-change-after-a-clean-install/power-settings.png)
 
-### Power button and close lid settings
+### Turn the computer off when I press the power button
 
 By default, Windows will put the computer to sleep when you close the lid, or press the power button.
 I prefer to have the computer actually shut down when I press the power button.
