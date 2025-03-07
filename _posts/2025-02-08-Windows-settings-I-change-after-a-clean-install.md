@@ -24,7 +24,7 @@ This post was written with Windows 11 in mind, so some of the settings may not b
 As I discover more awesome settings I'll add them here, so be sure to check back from time to time.
 Also, if you have a favourite that I don't have listed here, please let me know in the comments below.
 
-## General settings
+## File Explorer settings
 
 ### Have File Explorer open to the This PC view
 
@@ -69,6 +69,8 @@ To enable the settings:
 ![Screenshot showing how to enable showing hidden files and file extensions](/assets/Posts/2025-02-08-Windows-settings-I-change-after-a-clean-install/steps-to-show-hidden-files-and-file-extensions.png)
 
 The last step of clicking the `Apply to Folders` button is important so that you don't have to do this for every folder you open.
+
+## Mouse settings
 
 ### Show where the mouse cursor is with the <kbd>Ctrl</kbd> key
 
@@ -176,6 +178,59 @@ And the same taskbar with the buttons not combined:
 In the taskbar settings window, in the `Taskbar behaviors` section, change the `Combine taskbar buttons and hide labels` to `Never`.
 
 ![Taskbar settings to never group taskbar icons](/assets/Posts/2025-02-08-Windows-settings-I-change-after-a-clean-install/taskbar-settings-never-combine-taskbar-buttons.png)
+
+## Desktop settings
+
+### Change your desktop background image
+
+By default Windows will often display a different desktop background image each day from Bing.
+I actually quite like this functionality for my personal computer, but prefer to have a static image on my work computer where I often do screen sharing.
+You may also want to adjust the desktop image if you remote desktop to other computers regularly, so that it's easy to tell when you are working on your local computer or a remote one.
+
+To change the desktop background image:
+
+1. Right-click on the desktop and choose `Personalize`.
+1. In the Personalization settings window, click on `Background`.
+   1. You could also get here by searching the Start Menu for `Background image settings`.
+1. In the `Personalize your background` section, choose `Picture` from the dropdown.
+   1. If you want to cycle through multiple images, you can choose `Slideshow` instead.
+1. Click the `Browse` button to select a picture or directory from your computer.
+1. You may want to change the `Choose a fit` setting to `Fill`, `Fit`, or `Stretch` to make the image look better on your screen.
+
+![Windows background image settings](/assets/Posts/2025-02-08-Windows-settings-I-change-after-a-clean-install/personalize-background-image-settings.png)
+
+## Power settings
+
+### Screen and sleep settings
+
+Windows will often turn the monitor off or put the computer to sleep after a short period of inactivity, such as 5 or 15 minutes depending on if it is on battery or not.
+I like to extend this time so that if I walk away from my computer for a little while, it's less likely to be asleep when I come back.
+
+To change the power settings:
+
+1. Use the Start Menu to search for `Power settings` and open the `Power, sleep, and battery settings`.
+1. Expand the `Screen and sleep` section if needed.
+1. Adjust when the computer turns off the screen and goes to sleep to your liking.
+
+### Power mode settings
+
+In that same `Power, sleep, and battery settings` window, you can adjust the `Power mode` to prioritize performance over battery life and energy efficiency if you like.
+
+![Windows power settings](/assets/Posts/2025-02-08-Windows-settings-I-change-after-a-clean-install/power-settings.png)
+
+### Power button and close lid settings
+
+By default, Windows will put the computer to sleep when you close the lid, or press the power button.
+I prefer to have the computer actually shut down when I press the power button.
+You may want your laptop to do nothing when the lid is closed, so it keeps running.
+
+To change the power button and lid settings:
+
+1. Use the Start Menu to search for `Close lid` and open the `Change what closing the lid does` option.
+1. Adjust the `When I close the lid` and `When I press the power button` settings to your liking.
+1. Click `Save changes` to apply the settings.
+
+![Power button and lid settings](/assets/Posts/2025-02-08-Windows-settings-I-change-after-a-clean-install/power-button-and-lid-settings.png)
 
 ## Windows features
 
