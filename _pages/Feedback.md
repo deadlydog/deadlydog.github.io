@@ -14,7 +14,7 @@ This page is a compilation of that feedback.
 As part of an organization-wide AI Symposium, I gave a 45 minute presentation on how to use GitHub Copilot in Visual Studio and VS Code for Developers.
 Out of 19 responses, my presentation received a rating of `9.37` out of 10.
 
-Here are the comments from the session:
+Here are the anonymous comments from the presentation:
 
 > "Dan's presentation was by far the best / most practical / most instructive (and I'm not even a developer)."
 
