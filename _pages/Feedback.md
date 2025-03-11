@@ -9,6 +9,31 @@ This page is a compilation of that feedback.
 
 ## What my colleagues have to say about me
 
+### 2025-03-10
+
+As part of an organization-wide AI Symposium, I gave a 45 minute presentation on how to use GitHub Copilot in Visual Studio and VS Code for Developers.
+Out of 19 responses, my presentation received a rating of `9.37` out of 10.
+
+Here are the comments from the session:
+
+> "Dan's presentation was by far the best / most practical / most instructive (and I'm not even a developer)."
+
+> "The practical tips provided and tricks that were showcased in the Github Copilot for Developers presentation [were most valuable or insightful during the symposium].
+> I've already adopted some of them into my daily workflows both professionally and personally."
+
+> "Dan's practical examples and runthrough with GitHub Copilot was great.
+> Covered lots of features in a short span while also mentioning the limitations of the tooling."
+
+> "I hadn't explicitly used GitHub CoPilot in Visual Studio/VS Code before so Dan's demonstrations of how easy to use they are was most useful"
+
+> "Dan's presentation was interesting, but seeing how the AI worked made me less interested in using it."
+
+And from the symposium organizer afterward:
+
+> You got a really solid score and plenty of people (in the survey and just through my travels) commented on how valuable it was.
+> Great job!
+> :celebrate:
+
 ### 2024-10-21
 
 Comments from my lead Jason Collinge:
