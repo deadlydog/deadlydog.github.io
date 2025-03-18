@@ -9,6 +9,27 @@ It's a nice place I can turn to when I'm not feeling motivated, or when I need a
 
 ## Donations and thank you emails from the community
 
+### 2025-03-18
+
+$2.00 USD from François Dubois for my [PowerShell tiPS module](https://github.com/deadlydog/PowerShell.tiPS).
+
+> THX FOR THE tiPS, HERE IS A TIP
+
+### 2025-03-17
+
+Redditor user enjoyjocel [created this post](https://www.reddit.com/r/PowerShell/comments/1jdffgt/i_really_love_tips/) regarding my [PowerShell tiPS module](https://github.com/deadlydog/PowerShell.tiPS).
+
+> I really LOVE tiPS
+>
+> https://github.com/deadlydog/PowerShell.tiPS
+>
+> Ever since I let this load up in my profile at startup, I spend at least once a day to actually read the tip.
+> And every time, I discover tons of stuff on how things can be written better, or how I can have a better development environment, or things that will make my life easy.
+> Loads of pretty awesome stuff everyday.
+> Today it I learnt about PSREADLINE and its predictive autocompletion based on history.
+> It prompted me to just share this cause its awesome.
+> Thank you Deadlydog!
+
 ### 2024-12-28
 
 $5.00 USD from William Broomfield for my [Path Length Checker app](https://github.com/deadlydog/PathLengthChecker).
