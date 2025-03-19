@@ -6,20 +6,41 @@ permalink: /My-favourite-git-aliases/
 comments_locked: false
 toc: false
 categories:
-  - Blog
+  - Git
 tags:
-  - Should all
-  - Start with
-  - Capitals
+  - Git
 ---
 
-Start with a brief description of the post to entice readers to continue.
+Git is super powerful, but can also be confusing.
+It has so many commands, and I typically only regularly use maybe 5% of them.
 
-Use headers to organize your post, if it's long enough.
+To make it both easier to remember commands I rarely use, and to reduce the number of keystrokes needed to execute the ones I use all the time, I use Git aliases.
 
-End with a brief conclusion.
+## Show me the code!
 
-Your regular markdown goes here. It also supports HTML :)
+I go over each alias in detail below, but here's the alias section taken directly from my root .gitconfig file in my user directory. e.g. `C:\Users\[Your Name]\.gitconfig`.
+
+```text
+[alias]
+  alias = !echo 'git config --get-regexp ^alias\\.' && git config --get-regexp ^alias\\.
+  ac = !echo 'git add -A , git commit -m' && git add -A && git commit -m
+  b = !echo 'git branch' && git branch
+  browse = !echo 'start `git config remote.origin.url`' && start `git config remote.origin.url`
+  co = !echo 'git checkout' && git checkout
+  commit-empty = !echo 'git commit --allow-empty -m \"chore: Empty commit to re-trigger build\"' && git commit --allow-empty -m \"chore: Empty commit to re-trigger build\"
+  delete-local-branches-already-merged-in-remote = !echo 'git branch --merged | egrep -i -v(main|master|develop|dev|staging|release)| xargs -r git branch -d' && git branch --merged | egrep -i -v '(main|master|develop|dev|staging|release)' | xargs -r git branch -d
+  delete-local-branches-already-merged-in-remote-what-if = !echo 'git branch --merged | egrep -i -v(main|master|develop|dev|staging|release)//| xargs -r git branch -d' && git branch --merged | egrep -i -v '(main|master|develop|dev|staging|release)'
+  delete-local-tags = !echo 'git tag -l | xargs git tag -d && git fetch --tags' && git tag -l | xargs git tag -d && git fetch --tags
+  delete-stale-remote-tracking-branches-from-local = !echo 'git remote prune origin' && git remote prune origin
+  ge = !echo 'GitExtensions' && GitExtensions
+  gec = !echo 'GitExtensions commit' && GitExtensions commit
+  history = !echo 'git log --oneline --graph --decorate --all' && git log --oneline --graph --decorate --all
+  s = !echo 'git status' && git status
+  pushf = !echo 'git push --force-with-lease' && git push --force-with-lease
+  pushnew = !echo 'git push --set-upstream origin branch_name' && git push --set-upstream origin `git symbolic-ref --short HEAD`
+```
+
+
 
 ![Example image](/assets/Posts/2024-05-08-My-favourite-git-aliases/image-name.png)
 
