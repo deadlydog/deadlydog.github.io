@@ -38,6 +38,7 @@ I go over each alias in detail below, but here's the alias section taken directl
   s = !echo 'git status' && git status
   pushf = !echo 'git push --force-with-lease' && git push --force-with-lease
   pushnew = !echo 'git push --set-upstream origin branch_name' && git push --set-upstream origin `git symbolic-ref --short HEAD`
+  stashall = !echo 'git stash push --include-untracked' && git stash push --include-untracked
 ```
 
 
