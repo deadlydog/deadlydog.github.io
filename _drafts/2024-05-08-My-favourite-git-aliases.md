@@ -11,8 +11,8 @@ tags:
   - Git
 ---
 
-Git is super powerful, but can also be confusing.
-It has so many commands, and I typically only regularly use maybe 5% of them.
+Git is super powerful, but can also be confusing, especially when using the command line interface.
+It has so many commands, and I only regularly use a handful of them.
 
 To make it both easier to remember commands I rarely use, and to reduce the number of keystrokes needed to execute the ones I use all the time, I use Git aliases.
 
@@ -22,7 +22,7 @@ I go over each alias in detail below, but here's the alias section taken directl
 e.g. `C:\Users\[Your Name]\.gitconfig`.
 This may be `~/.gitconfig` on Linux/Mac.
 
-```text
+```shell
 [alias]
   alias = !echo 'git config --get-regexp ^alias\\.' && git config --get-regexp ^alias\\.
   ac = !echo 'git add -A , git commit -m' && git add -A && git commit -m
@@ -55,16 +55,16 @@ To add these aliases to your global `.gitconfig` file, you can either:
 1. Use the `git config` command to add them one by one.
    - For example, to add the `ac` alias, you can run the following command in your terminal:
 
-    ```shell
-    git config --global alias.ac '!echo "git add -A , git commit -m" && git add -A && git commit -m'
-    ```
+      ```shell
+      git config --global alias.ac '!echo "git add -A , git commit -m" && git add -A && git commit -m'
+      ```
 
-1. Open the file in a text editor and add them manually.
+1. To mass edit, open the file in a text editor and add them manually.
    - To open the file in the default editor, use the following command:
 
-    ```shell
-    git config edit --global
-    ```
+      ```shell
+      git config edit --global
+      ```
 
 ## Individual aliases in detail
 
