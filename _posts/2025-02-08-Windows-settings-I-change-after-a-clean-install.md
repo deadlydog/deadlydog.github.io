@@ -111,18 +111,18 @@ To disable the touchpad when a mouse is connected:
 1. Expand the `Touchpad` section.
 1. Uncheck `Leave touchpad on when a mouse is connected`.
 
-### Change Touchpad triple-tap to right-click
+### Change Touchpad triple-tap to middle-click
 
 By default Windows opens the Windows search when you triple-tap the touchpad.
 That's what the Windows key is for.
-Instead, I prefer to have the triple-tap act as a right-click.
+Instead, I prefer to have the triple-tap act as a middle-click.
 
-To change the touchpad triple-tap to right-click:
+To change the touchpad triple-tap to middle-click:
 
 1. In the touchpad settings window, expand the `Three-finger gestures` section.
-1. Change the `Taps` dropdown to `Right-click`.
+1. Change the `Taps` dropdown to `Middle mouse button`.
 
-![Touchpad settings to disable the touchpad when a mouse is connected and set triple-tap to right-click](/assets/Posts/2025-02-08-Windows-settings-I-change-after-a-clean-install/touchpad-disable-when-mouse-is-connected-and-set-triple-tap-to-right-click.png)
+![Touchpad settings to disable the touchpad when a mouse is connected and set triple-tap to middle-click](/assets/Posts/2025-02-08-Windows-settings-I-change-after-a-clean-install/touchpad-disable-when-mouse-is-connected-and-set-triple-tap-to-middle-click.png)
 
 ## Taskbar settings
 
