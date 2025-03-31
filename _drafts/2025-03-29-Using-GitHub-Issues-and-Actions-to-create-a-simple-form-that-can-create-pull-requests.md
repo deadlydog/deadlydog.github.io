@@ -25,7 +25,7 @@ I wasn't sure if it would be possible to do that without exposing a personal acc
 I didn't really want to pay to setup a server/function/lambda just to handle the form submission with the PAT either.
 
 Then I saw [this blog post on GitHub IssueOps](https://github.blog/engineering/issueops-automate-ci-cd-and-more-with-github-issues-and-actions/), which reminded me that using GitHub Issues and Actions was an option.
-I did not use the IssueOps app, as it would involve more setup and complexity than I wanted for my simple use case, but the concept is the same.
+I did not use the IssueOps app suggested in the blog post, as it would involve more setup and complexity than I wanted for my simple use case, but the concept is the same.
 
 ## Creating the GitHub Issue Template
 
