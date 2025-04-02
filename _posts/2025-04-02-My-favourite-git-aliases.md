@@ -7,8 +7,10 @@ comments_locked: false
 toc: false
 categories:
   - Git
+  - Productivity
 tags:
   - Git
+  - Productivity
 ---
 
 Git is super powerful, but can also be confusing, especially when using the command line interface (CLI).
