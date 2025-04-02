@@ -11,7 +11,7 @@ tags:
   - Git
 ---
 
-Git is super powerful, but can also be confusing, especially when using the command line interface.
+Git is super powerful, but can also be confusing, especially when using the command line interface (CLI).
 It has so many commands, and I only regularly use a handful of them.
 
 To make it both easier to remember commands I rarely use, and to reduce the number of keystrokes needed to execute the ones I use all the time, I use Git aliases.
@@ -19,8 +19,7 @@ To make it both easier to remember commands I rarely use, and to reduce the numb
 ## Show me the code!
 
 I go over each alias in detail below, but here's the alias section taken directly from my current global `.gitconfig` file in my user directory.
-e.g. `C:\Users\[Your Name]\.gitconfig`.
-This may be `~/.gitconfig` on Linux/Mac.
+e.g. `C:\Users\[Your Name]\.gitconfig` on Windows, or `~/.gitconfig` on Linux/Mac.
 
 ```shell
 [alias]
@@ -100,6 +99,9 @@ browse = !echo 'start `git config remote.origin.url`' && start `git config remot
 Typing `git browse` will open the remote repository in your default web browser.
 
 __Tip:__ Use this to open the repository in GitHub or Azure DevOps to create pull requests after committing changes to a branch and pushing them up, if you prefer the PR creation web experience to the IDE experience.
+
+__Note:__ `start` is a Windows command to open a file or URL in the default application.
+You may need to adjust this for the Linux/Mac equivalent, which is may be `open` for Mac and `xdg-open` for Linux.
 
 ---
 
@@ -234,10 +236,16 @@ stashall = git stash push --include-untracked
 Typing `git stashall` will stash all changes in your working directory, including untracked files.
 This is useful when you want to temporarily save your changes without committing them, and you want to include untracked files as well.
 
+## Why aren't you using PowerShell commands in the alias?
+
+I'm a huge proponent of PowerShell, so you may be wondering why I'm using unix commands like `xargs` and `egrep` in my aliases.
+The main reason is that PowerShell is not installed by default on Linux and Mac.
+Git Bash is installed with Git though, so I believe the aliases should work on all platforms and in non-PowerShell shells.
+
 ## Conclusion
 
 I use these aliases to make my life easier when working with Git on the command line.
-Hopefully you've found some of them useful, or they've inspired you to create one not listed here.
+Hopefully you've found some of them useful, or they've inspired you to create new ones not listed here.
 Feel free to customize these aliases to fit your preferences.
 
 If you have suggestions for other aliases, please leave a comment below!
