@@ -93,7 +93,7 @@ This is a simple alias that just saves a few keystrokes.
 ---
 
 ```shell
-browse = !echo 'start `git config remote.origin.url`' && start `git config remote.origin.url`
+browse = start `git config remote.origin.url`
 ```
 
 Typing `git browse` will open the remote repository in your default web browser.
