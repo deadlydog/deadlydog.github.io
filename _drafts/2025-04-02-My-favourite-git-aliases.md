@@ -193,11 +193,11 @@ Typing `git history` will show you a more compact representation of the commit h
 
 Here is a sample output of the `git history` alias:
 
-![Git history alias output](/assets/Posts/2024-05-08-My-favourite-git-aliases/git-history-alias-command-output.png)
+![Git history alias output](/assets/Posts/2025-04-02-My-favourite-git-aliases/git-history-alias-command-output.png)
 
 Compare that to the default `git log` output:
 
-![Git log output](/assets/Posts/2024-05-08-My-favourite-git-aliases/git-log-default-command-output.png)
+![Git log output](/assets/Posts/2025-04-02-My-favourite-git-aliases/git-log-default-command-output.png)
 
 ---
 
