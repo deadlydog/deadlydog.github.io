@@ -88,7 +88,7 @@ b = git branch
 ```
 
 Typing `git b` will show you all the branches in your local repository.
-This is a simple alias that just saves a few keystrokes.
+This alias just saves a few keystrokes.
 
 ---
 
@@ -98,7 +98,7 @@ browse = start `git config remote.origin.url`
 
 Typing `git browse` will open the remote repository in your default web browser.
 
-__Tip:__ Use this to open the repository in GitHub or Azure DevOps to create pull requests after committing changes to a branch and pushing them up, if you prefer the PR creation web experience to the IDE experience.
+__Tip:__ Use this to open the repository in GitHub, Azure DevOps, Bitbucket, etc. to create pull requests after committing changes to a branch and pushing them up, if you prefer the PR creation web experience to the IDE experience.
 
 __Note:__ `start` is a Windows command to open a file or URL in the default application.
 You may need to adjust this for the Linux/Mac equivalent, which is may be `open` for Mac and `xdg-open` for Linux.
@@ -110,7 +110,7 @@ co = git checkout
 ```
 
 Typing `git co branch_name` will switch to the specified branch.
-This is a simple alias that just saves a few keystrokes.
+This alias just saves a few keystrokes.
 
 ---
 
@@ -132,6 +132,8 @@ This is useful for cleaning up your local branches after merging pull requests.
 
 __Tip:__ Change the branches in the `egrep` command to match your own branch names that you never want it to delete.
 
+__Tip:__ If you don't like the long verbose alias name, give it a new one! 😊
+
 ---
 
 ```shell
@@ -146,7 +148,7 @@ Typing `git delete-local-branches-already-merged-in-remote-what-if` will show yo
 delete-local-tags = git tag -l | xargs git tag -d && git fetch --tags
 ```
 
-Typing `git delete-local-tags` will delete all local tags and fetch the latest tags from the remote repository, ensuring that your local tags exactly match the remotes.
+Typing `git delete-local-tags` will delete all local tags and fetch the latest tags from the remote repository, ensuring that your local tags exactly match the remote's.
 
 ---
 
@@ -168,7 +170,7 @@ This requires having [GitExtensions](https://gitextensions.github.io/) installed
 
 I use this when I'm not in an IDE, like VS Code, and want to view the history of branches and view their commits and diffs.
 
-__Tip:__ If you prefer a different IDE over GitExtensions, you may be able to replace `GitExtensions` with the name of your preferred IDE.
+__Tip:__ If you prefer a different git tool over GitExtensions, you may be able to replace `GitExtensions` with the name of your preferred tool.
 
 ---
 
@@ -179,9 +181,9 @@ gec = GitExtensions commit
 Typing `git gec` will open the GitExtensions GUI for committing changes in the current repository.
 Again, this requires having [GitExtensions](https://gitextensions.github.io/) installed on your machine.
 
-I use this when I'm in the terminal and want a more rich and easy diff and commit experience than the command line provides.
+I use this when I'm in the terminal and want a more rich and easy diff, stage, and commit experience than the command line provides.
 
-__Tip:__ Again, if you prefer a different IDE over GitExtensions, you may be able to use it if it accepts command line arguments.
+__Tip:__ Again, if you prefer a different git tool over GitExtensions, you may be able to use it if it accepts command line arguments.
 
 ---
 
@@ -206,7 +208,7 @@ s = git status
 ```
 
 Typing `git s` will show you the status of your current branch, including any uncommitted changes and the current branch name.
-This is a simple alias that just saves a few keystrokes.
+This alias just saves a few keystrokes.
 
 ---
 
@@ -214,7 +216,7 @@ This is a simple alias that just saves a few keystrokes.
 pushf = git push --force-with-lease
 ```
 
-Typing `git pushf` will push your changes to the remote repository, forcing the push with lease.
+Typing `git pushf` will force push your changes to the remote repository, with a lease.
 This is useful when you need to overwrite the remote branch with your local changes, but you want to ensure that you don't accidentally overwrite someone else's changes by forgetting to add `--force-with-lease`.
 
 ---
