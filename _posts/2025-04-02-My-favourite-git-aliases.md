@@ -2,7 +2,7 @@
 title: "My favourite git aliases"
 permalink: /My-favourite-git-aliases/
 #date: 2099-01-15T00:00:00-06:00
-#last_modified_at: 2099-01-22
+last_modified_at: 2025-04-03
 comments_locked: false
 toc: false
 categories:
@@ -37,6 +37,7 @@ e.g. `C:\Users\[Your Name]\.gitconfig` on Windows, or `~/.gitconfig` on Linux/Ma
   delete-stale-remote-tracking-branches-from-local = !echo 'git remote prune origin' && git remote prune origin
   ge = !echo 'GitExtensions .' && GitExtensions .
   gec = !echo 'GitExtensions commit' && GitExtensions commit
+  gtfo = !echo 'git reset --hard , git clean -xfd' && git reset --hard && git clean -xfd
   history = !echo 'git log --oneline --graph --decorate --all' && git log --oneline --graph --decorate --all
   s = !echo 'git status' && git status
   pushf = !echo 'git push --force-with-lease' && git push --force-with-lease
@@ -186,6 +187,14 @@ Again, this requires having [GitExtensions](https://gitextensions.github.io/) in
 I use this when I'm in the terminal and want a more rich and easy diff, stage, and commit experience than the command line provides.
 
 __Tip:__ Again, if you prefer a different git tool over GitExtensions, you may be able to use it if it accepts command line arguments.
+
+---
+
+```shell
+gtfo = git reset --hard && git clean -xfd
+```
+
+Typing `git gtfo` will reset your current branch to the last commit, deleting any uncommitted changes and removing all untracked files and directories.
 
 ---
 
