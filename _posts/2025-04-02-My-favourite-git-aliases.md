@@ -2,7 +2,7 @@
 title: "My favourite git aliases"
 permalink: /My-favourite-git-aliases/
 #date: 2099-01-15T00:00:00-06:00
-last_modified_at: 2025-04-03
+last_modified_at: 2025-04-09
 comments_locked: false
 toc: false
 categories:
@@ -28,7 +28,7 @@ e.g. `C:\Users\[Your Name]\.gitconfig` on Windows, or `~/.gitconfig` on Linux/Ma
   alias = !echo 'git config --get-regexp ^alias\\.' && git config --get-regexp ^alias\\.
   ac = !echo 'git add -A , git commit -m' && git add -A && git commit -m
   b = !echo 'git branch' && git branch
-  browse = !echo 'start `git config remote.origin.url`' && start `git config remote.origin.url`
+  browse = !echo 'start `git config get remote.origin.url`' && start `git config get remote.origin.url`
   co = !echo 'git checkout' && git checkout
   commit-empty = !echo 'git commit --allow-empty -m \"chore: Empty commit to re-trigger build\"' && git commit --allow-empty -m \"chore: Empty commit to re-trigger build\"
   delete-local-branches-already-merged-in-remote = !echo 'git branch --merged | egrep -i -v(main|master|develop|dev|staging|release)| xargs -r git branch -d' && git branch --merged | egrep -i -v '(main|master|develop|dev|staging|release)' | xargs -r git branch -d
@@ -96,7 +96,7 @@ This alias just saves a few keystrokes.
 ---
 
 ```shell
-browse = start `git config remote.origin.url`
+browse = start `git config get remote.origin.url`
 ```
 
 Typing `git browse` will open the remote repository in your default web browser.
