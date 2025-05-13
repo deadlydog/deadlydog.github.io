@@ -2,7 +2,7 @@
 title: "Tech podcasts I enjoy"
 permalink: /Tech-podcasts-I-enjoy/
 #date: 2099-01-15T00:00:00-06:00
-#last_modified_at: 2099-01-22
+last_modified_at: 2025-05-12
 comments_locked: false
 toc: false
 categories:
@@ -35,6 +35,8 @@ Here are some technical podcasts that are great for software developers and IT p
   They have interviewed many of the top names in the .NET community, and have a large back catalog of episodes that you can listen to.
 - [The Modern .NET Show](https://dotnetcore.show): This podcast is hosted by Jamie Taylor, and he interviews guests from the .NET community.
   Jamie's podcast is a great way to stay up-to-date with the latest .NET features and technology, and hear from others who are using .NET in their day-to-day work.
+- [Run As Radio](https://www.runasradio.com/): This podcast is hosted by Richard Campbell and has nearly 1000 episodes, with a new one each week.
+  He interviews guests from the IT community on a wide range of topics, and is a great way to keep up-to-date with the latest trends and tools in the IT industry.
 
 ## Non-technical podcasts
 
