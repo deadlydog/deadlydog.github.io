@@ -114,7 +114,7 @@ author:
     #   url: "https://your-website.com"
     - label: "Bluesky"
       icon: "fab fa-fw fa-bluesky"
-      url: "https://bsky.app/profile/deadlydog.bsky.social"
+      url: "https://bsky.app/profile/danskingdom.com"
     - label: "Mastodon"
       icon: "fab fa-fw fa-mastodon"
       url: "https://hachyderm.io/@deadlydog"
@@ -151,7 +151,7 @@ footer:
   links:
     - label: "Bluesky"
       icon: "fab fa-fw fa-bluesky"
-      url: "https://bsky.app/profile/deadlydog.bsky.social"
+      url: "https://bsky.app/profile/danskingdom.com"
     - label: "Mastodon"
       icon: "fab fa-fw fa-mastodon"
       url: "https://hachyderm.io/@deadlydog"
