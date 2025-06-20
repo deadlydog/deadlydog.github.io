@@ -1,0 +1,12 @@
+_id: cdd54f90-4dba-11f0-ab47-19f18c19d3da
+message: >-
+  Thanks for the tips. I got to your same conclusion of using inheritance over
+  composition (for once), and you gave me the confidence that I needed to make
+  the choice. I'd like to add one quick tip, if you don't want to declare
+  `TItem` for every `RadzenDataGridColumn` add `@attribute
+  [CascadingTypeParameter("TItem")]` to the `StandardRadzenDataGrid` component.
+name: Matt90hz
+email: 12bc888de609323c2605db6394d69080
+url: ''
+hidden: ''
+date: '2025-06-20T09:41:56.713Z'
