@@ -6,15 +6,19 @@ permalink: /My-favourite-Windows-shortcuts/
 comments_locked: false
 toc: false
 categories:
-  - Blog
+  - Windows
+  - Productivity
+  - Shortcuts
 tags:
-  - Should all
-  - Start with
-  - Capitals
+  - Windows
+  - Productivity
+  - Shortcuts
 ---
 
 Windows has a ton of keyboard shortcuts that can help you be more efficient.
 Below are some of my favourites.
+
+![Windows shortcuts cartoon image](/assets/Posts/2025-02-07-My-favourit-Windows-shortcuts/windows-shortcuts-cartoon-image.png)
 
 Note that <kbd>Win</kbd> is the Windows key.
 
