@@ -2,7 +2,7 @@
 title: "Tech podcasts I enjoy"
 permalink: /Tech-podcasts-I-enjoy/
 #date: 2099-01-15T00:00:00-06:00
-last_modified_at: 2025-05-12
+last_modified_at: 2025-06-27
 comments_locked: false
 toc: false
 categories:
@@ -51,6 +51,8 @@ Interesting true stories:
   It is a great way to hear stories from other software developers and get a history of what has changed over the years, and to learn about the different paths people have taken to get into the tech industry.
 - [Darknet Diaries](https://darknetdiaries.com): This podcast is hosted by Jack Rhysider, and is a collection of true stories about hackers, malware, and cyber security.
   Like the Corecursive podcast, it focuses on telling true stories, but about anything related to cyber security or the darker side of the web, such as the story of the guy who hacked the FBI, or the judge who spent months/years posing online as a terrorist in order to gain intel and alert the authorities before a terrorist plan could be executed.
+- [The Pragmatic Engineer](https://www.youtube.com/@pragmaticengineer): This podcast is hosted by Gergely Orosz.
+  Gergely typically interviews a guest on the show where they talk about the history of a company, product, or technology, such as how Microsoft evolved over the years from the 1980s to today, or how GitHub got started and has grown and changed over time.
 
 Level-up your engineering soft skills:
 
