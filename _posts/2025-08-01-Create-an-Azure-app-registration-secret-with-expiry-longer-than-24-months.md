@@ -25,7 +25,7 @@ az ad app credential reset --id <app-id> --years 5
 This will create a new secret on the app registration and output the `password`, which is the secret value.
 Be sure to copy the value and store it somewhere secure, such as an Azure Key Vault, as you will not be able to retrieve it again.
 
-You can do the same operation in PowerShell using the `Az` PowerShell module and [the New-AzADAppCredential cmdlet](https://learn.microsoft.com/en-us/powershell/module/az.resources/new-azadappcredential), but you must use the app registration's Object ID instead of the Application ID.:
+You can do the same operation in PowerShell using the `Az` PowerShell module (specifically the `Az.Resources` module) and [the New-AzADAppCredential cmdlet](https://learn.microsoft.com/en-us/powershell/module/az.resources/new-azadappcredential), but you must use the app registration's Object ID instead of the Application ID:
 
 ```powershell
 $startDate = (Get-Date)
