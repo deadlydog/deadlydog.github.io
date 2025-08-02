@@ -23,7 +23,7 @@ To create an Azure app registration (i.e. service principal) secret with an expi
 Here's an example command that creates a secret with a 5 year expiry, where `<app-id>` is the Application (Client) ID of your app registration:
 
 ```bash
-az ad app credential reset --id <app-id> --years 5
+az ad app credential reset --id <application-id> --years 5
 ```
 
 This will create a new secret on the app registration and output the `password`, which is the secret value.
