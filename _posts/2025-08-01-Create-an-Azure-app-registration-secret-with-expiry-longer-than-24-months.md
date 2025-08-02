@@ -20,7 +20,7 @@ However, there are scenarios where you might want a secret that lasts longer tha
 > A better approach is to use short-lived secrets and automate rotating them regularly.
 
 To create an Azure app registration (i.e. service principal) secret with an expiry longer than 2 years, you can use [the Azure CLI](https://learn.microsoft.com/en-us/cli/azure/?view=azure-cli-latest).
-Here's an example command that creates a secret with a 5 year expiry, where `<app-id>` is the Application (Client) ID of your app registration:
+Here's an example command that creates a secret with a 5 year expiry, where `<application-id>` is the Application (Client) ID of your app registration:
 
 ```bash
 az ad app credential reset --id <application-id> --years 5
