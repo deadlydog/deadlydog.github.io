@@ -15,6 +15,10 @@ The Azure portal allows you to create app registration secrets with a maximum ex
 This follows the security best practice of forcing you to rotate secrets regularly to minimize the risk of exposure.
 However, there are scenarios where you might want a secret that lasts longer than this limit.
 
+> NOTE: Using long-lived secrets can increase the risk of exposure, so it's typically not recommended for production applications.
+> Especially for secrets that would grant access to sensitive resources or data, or that have high privileges.
+> A better approach is to use short-lived secrets and automate rotating secrets regularly.
+
 To create an Azure app registration (i.e. service principal) secret with an expiry longer than 2 years, you can use [the Azure CLI](https://learn.microsoft.com/en-us/cli/azure/?view=azure-cli-latest).
 Here's an example command that creates a secret with a 5 year expiry, where `<app-id>` is the Application (Client) ID of your app registration:
 
