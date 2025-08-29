@@ -18,7 +18,7 @@ However, there are scenarios where you might want a secret that lasts longer tha
 > NOTE: Using long-lived secrets can increase the risk of exposure, so it's typically not recommended for production applications.
 > Especially for secrets that would grant access to sensitive resources or data, or that have high privileges.
 > A better approach is to use short-lived secrets and automate rotating them regularly.
-> Even better, use [Federated Identity Credentials](https://azure.github.io/azure-workload-identity/docs/topics/federated-identity-credential.html) and avoid secrets and expirations altogether.
+> Even better, use [Federated Identity Credentials](https://learn.microsoft.com/en-us/graph/api/resources/federatedidentitycredentials-overview) and avoid secrets and expirations altogether.
 
 To create an Azure app registration (i.e. service principal) secret with an expiry longer than 2 years, you can use [the Azure CLI](https://learn.microsoft.com/en-us/cli/azure/?view=azure-cli-latest).
 Here's an example command that creates a secret with a 5 year expiry, where `<application-id>` is the Application (Client) ID of your app registration:
