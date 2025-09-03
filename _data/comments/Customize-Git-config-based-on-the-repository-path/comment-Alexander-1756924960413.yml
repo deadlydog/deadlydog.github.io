@@ -1,0 +1,7 @@
+_id: c4cf9970-88f5-11f0-bfdd-f39133a07228
+message: "Thanks for the post. It turns out that `/**` is not even recognized sometimes. This is not recognized when accessing any of my repos.\r\n\r\n> [credential \"https://github.com/akostadinov/**\"]\r\n\r\nBut this is:\r\n\r\n> [credential \"https://github.com/akostadinov/\"]\r\n\r\nI also don't see this documented."
+name: Alexander
+email: 6cb1b2c58abc2116f910ec9253ee387f
+url: 'https://rboci.blogspot.com'
+hidden: ''
+date: '2025-09-03T18:42:40.409Z'
