@@ -145,6 +145,9 @@ author:
     # - label: "Instagram"
     #   icon: "fab fa-fw fa-instagram"
     #   url: "https://instagram.com/"
+    # - label: "Reddit"
+    #   icon: "fab fa-fw fa-reddit-square"
+    #   url: "https://www.reddit.com/user/deadlydogDan"
 
 # Site Footer
 footer:
