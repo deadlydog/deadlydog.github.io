@@ -10,6 +10,8 @@ I have a passion for software development, and have created some video games, we
 I'm also a [dual Microsoft MVP in PowerShell and DevOps](https://mvp.microsoft.com/en-US/MVP/profile/04657009-3dd0-4b39-abb5-6a0bb7f80949).
 Automate EVERYTHING!
 
+[![Microsoft MVP badge](/assets/Pages/About/Microsoft-MVP-badge.png)](https://mvp.microsoft.com/en-US/MVP/profile/04657009-3dd0-4b39-abb5-6a0bb7f80949)
+
 ## 💬 Contact
 
 You can contact me on [Bluesky @deadlydog](https://bsky.app/profile/deadlydog.bsky.social), [X / Twitter @deadlydog](https://twitter.com/deadlydog), or [send me an email](mailto:deadlydog@hotmail.com).
