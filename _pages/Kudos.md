@@ -9,6 +9,14 @@ It's a nice place I can turn to when I'm not feeling motivated, or when I need a
 
 ## Donations and thank you emails from the community
 
+### 2025-09-10
+
+$23.33 CAD from Steven Denise from France for my [Path Length Checker app](https://github.com/deadlydog/PathLengthChecker).
+
+> Hi Daniel, Thank you very much for PathLengthChecker, it's an awesome tool!
+> Wish you the best!
+> Kind regards, Steven
+
 ### 2025-03-18
 
 $2.00 USD from François Dubois for my [PowerShell tiPS module](https://github.com/deadlydog/PowerShell.tiPS).
