@@ -9,6 +9,17 @@ It's a nice place I can turn to when I'm not feeling motivated, or when I need a
 
 ## Donations and thank you emails from the community
 
+### 2025-09-13
+
+$1.00 CAN from Davide Bleve for my [Path Length Checker app](https://github.com/deadlydog/PathLengthChecker).
+
+> Hello dear computer genius friend.
+> Your program is fantastic.
+> For now I can only donate so little because I'm poor.
+> I really hope to be able to donate more in the future because you deserve it!
+> Good Luck.
+> I from Italy.
+
 ### 2025-09-10
 
 $23.33 CAD from Steven Denise from France for my [Path Length Checker app](https://github.com/deadlydog/PathLengthChecker).
