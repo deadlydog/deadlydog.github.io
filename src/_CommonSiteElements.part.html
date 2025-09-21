@@ -4,12 +4,16 @@
 
 <div id="Menu">
 	<ul>
-        <li><a href="GamesIveMade.php" <?php if ($SelectedTab == "Games"){print("class='SelectedTab'");}?>>Games I've Made</a></li>
-        <li><a href="AppsIveMade.php" <?php if ($SelectedTab == "Apps"){print("class='SelectedTab'");}?>>Apps I've Made</a></li>
-        <li><a href="WebsitesIveMade.php" <?php if ($SelectedTab == "Websites"){print("class='SelectedTab'");}?>>Websites I've Made</a></li>
-        <!-- <li><a href="WebsitesILike.php" <?php if ($SelectedTab == "WebsitesILike"){print("class='SelectedTab'");}?>>Websites I Like</a></li> -->
-        <li><a href="index.php" <?php if ($SelectedTab == "AboutMe"){print("class='SelectedTab'");}?>>About Me</a></li>
+		<li><a href="GamesIveMade.php" id="GamesTab">Games I've Made</a></li>
+		<li><a href="AppsIveMade.php" id="AppsTab">Apps I've Made</a></li>
+		<li><a href="WebsitesIveMade.php" id="WebsitesTab">Websites I've Made</a></li>
+		<!-- <li><a href="WebsitesILike.php" id="WebsitesILikeTab">Websites I Like</a></li> -->
+		<li><a href="index.php" id="AboutMeTab">About Me</a></li>
 	</ul>
+	<!-- Set the selected tab based on the global Javascript variable, which should be set before injecting this file. -->
+	<script lang="javascript">
+		document.getElementById(CommonSiteElements_SelectedTab).className = "SelectedTab";
+	</script>
 </div>
 <div class="Clear"></div>
 

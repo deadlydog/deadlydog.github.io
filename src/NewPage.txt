@@ -6,8 +6,12 @@
 </head>
 
 <body>
-<?php $SelectedTab = "TAB_NAME_GOES_HERE"; ?>
+
+<script lang="javascript">
+	var CommonSiteElements_SelectedTab = 'TAB_NAME_GOES_HERE';
+</script>
 <custom_inject_during_build "./_CommonSiteElements.part.html" />
+
 <div id="Content">
 
 <!-- PUT PAGE CONTENT HERE -->
