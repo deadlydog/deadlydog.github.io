@@ -2,19 +2,19 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <title>Daniel Schroeder's Website - Other Sites I Like</title>
-<?php include "_HTMLHead.php"; // Includes the Head information ?>
+<custom_inject_during_build "./_HTMLHead.part.html" />
 </head>
 
 <body>
 <?php $SelectedTab = "WebsitesILike"; ?>
-<?php include '_CommonSiteElements.php'; ?>
+<custom_inject_during_build "./_CommonSiteElements.part.html" />
 
 <div id="Content">
 
 <h1>Websites I Like</h1>
 
 <ul>
-	<li><a href="http://www.digg.com" target="_blank">Digg.com</a> - There's always something interesting on Digg</li>	
+	<li><a href="http://www.digg.com" target="_blank">Digg.com</a> - There's always something interesting on Digg</li>
 	<li><a href="http://www.fark.com" target="_blank">Fark.com</a> - Funny and interesting news</li>
 	<li><a href="http://www.slashdot.org" target="_blank">Slashdot.org</a> - Like it's title says, News for Nerds</li>
 </ul>
@@ -22,7 +22,7 @@
 	<li><a href="http://www.gamedev.net" target="_blank">GameDev.net</a> - Video game development website</li>
 	<li><a href="http://www.gamasutra.com" target="_blank">GamaSutra.com</a> - Another video game development website</li>
     <li><a href="http://creators.xna.com" target="_blank">XNA Creators Club</a> - Learn to create video games for Windows, the XBox 360, and the Zune.....Sweet ;-)
-</ul>	
+</ul>
 <ul>
 	<li><a href="http://www.ncix.com" target="_blank">NCIX.com</a> - Canadian computer parts retail store</li>
 	<li><a href="http://www.tigerdirect.ca" target="_blank">TigerDirect.ca</a> - Another Canadian pc parts store</li>
@@ -42,6 +42,6 @@
 
 </div>
 
-<?php include '_Footer.php'; ?>
+<custom_inject_during_build "./_Footer.part.html" />
 </body>
 </html>

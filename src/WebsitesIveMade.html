@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <title>Daniel Schroeder's Website - Websites I've Made</title>
-<?php include "_HTMLHead.php"; // Includes the Head information ?>
+<custom_inject_during_build "./_HTMLHead.part.html" />
 </head>
 
 <body>
 <?php $SelectedTab = "Websites"; ?>
-<?php include '_CommonSiteElements.php'; ?>
+<custom_inject_during_build "./_CommonSiteElements.part.html" />
 
 <div id="Content">
 
@@ -25,6 +25,6 @@
 
 </div>
 
-<?php include '_Footer.php'; ?>
+<custom_inject_during_build "./_Footer.part.html" />
 </body>
 </html>

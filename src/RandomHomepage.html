@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<?php include "_HTMLHead.php"; // Includes the Head information ?>
+<custom_inject_during_build "./_HTMLHead.part.html" />
 <script type="text/javascript">
 function LoadRandomPage()
 {
@@ -16,14 +16,14 @@ function LoadRandomPage()
 								  "http://www.digg.com/",
 								  "http://www.reddit.com/",
 								  "http://www.engadget.com/");
-	
+
 	// Random Number decides which page to load
 	RandomNumber = Math.floor((Math.random() * HomepageArray.length));
-	
+
 	// Specifiy URL to load and Target to load to
 	var URL = HomepageArray[RandomNumber];
 	var Target = "_self";
-	
+
 	// Load the page
 	window.open(URL, Target);
 }
@@ -31,7 +31,7 @@ function LoadRandomPage()
 </head>
 
 <body onload="LoadRandomPage()">
-<?php include '_CommonSiteElements.php'; ?>
+<custom_inject_during_build "./_CommonSiteElements.part.html" />
 <div id="Content">
 <h1>Loading Random Homepage</h1>
 
@@ -68,6 +68,6 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </div>
 
 <?php $bDoNotUseGoogleAnalytics = true;	// Specify to not log google analytics for this page since it is accessed so often ?>
-<?php include '_Footer.php'; ?>
+<custom_inject_during_build "./_Footer.part.html" />
 </body>
 </html>
