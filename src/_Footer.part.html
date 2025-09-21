@@ -17,7 +17,11 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 <div class="Clear"></div>
 
 <div id="Footer">
-This page was last updated on <?php print(date("M j, Y", getlastmod())); ?>
+	This page was last updated on <span id="PageLastUpdatedDate" />.
+	<script type="text/javascript">
+		var lastModDate = new Date(document.lastModified);
+		document.getElementById("PageLastUpdatedDate").innerHTML = lastModDate.toLocaleDateString();
+	</script>
 </div>
 
 <?php
