@@ -24,18 +24,13 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 	</script>
 </div>
 
-<?php
-if ($bDoNotUseGoogleAnalytics != true)
-{
-?>	<!--Code for Google Analytics -->
-	<!-- Google tag (gtag.js) -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-1L0FKHXCMW"></script>
-	<script>
+<!--Code for Google Analytics -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1L0FKHXCMW"></script>
+<script>
 	window.dataLayer = window.dataLayer || [];
 	function gtag(){dataLayer.push(arguments);}
 	gtag('js', new Date());
 
 	gtag('config', 'G-1L0FKHXCMW');
-	</script>
-<?php
-} ?>
+</script>
