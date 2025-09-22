@@ -29,15 +29,25 @@ steps:
   clean: true
 
 - task: PowerShell@2
-  displayName: Run Build Script
+  displayName: Run build script
   inputs:
     targetType: 'inline'
     script: |
       & './build/BuildWebsite.ps1' -WebsiteRootDirectoryPath './src' -OutputDirectoryPath './_WebsiteBuildOutput'
 
 - task: PublishBuildArtifacts@1
-  displayName: Publish Website Build Output
+  displayName: Publish website build output
   inputs:
     PathtoPublish: './_WebsiteBuildOutput'
     ArtifactName: 'WebsiteBuildOutput'
     publishLocation: 'Container'
+
+- task: AzureFileCopy@6
+  displayName: Deploy website to Azure
+  inputs:
+    SourcePath: './_WebsiteBuildOutput'
+    azureSubscription: 'DansKingdomWebsite'
+    Destination: 'AzureBlob'
+    storage: 'danskingdomwebsite'
+    ContainerName: '$web'
+    CleanTargetBeforeCopy: true
