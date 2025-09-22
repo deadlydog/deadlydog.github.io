@@ -48,7 +48,7 @@ steps:
 - task: AzureFileCopy@6
   displayName: Deploy website to Azure
   inputs:
-    SourcePath: './_WebsiteBuildOutput'
+    SourcePath: './_WebsiteBuildOutput/*'
     azureSubscription: 'DansKingdomWebsite'
     Destination: 'AzureBlob'
     storage: 'danskingdomwebsite'
