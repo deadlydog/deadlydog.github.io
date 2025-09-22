@@ -1,0 +1,20 @@
+<!-- Common Site Elements -->
+<div id="Title"><img src="./Images/Theme/Logo.jpg" /></div>
+<div class="Clear"></div>
+
+<div id="Menu">
+	<ul>
+		<li><a href="GamesIveMade.html" id="GamesTab">Games I've Made</a></li>
+		<li><a href="AppsIveMade.html" id="AppsTab">Apps I've Made</a></li>
+		<li><a href="WebsitesIveMade.html" id="WebsitesTab">Websites I've Made</a></li>
+		<!-- <li><a href="WebsitesILike.html" id="WebsitesILikeTab">Websites I Like</a></li> -->
+		<li><a href="index.html" id="AboutMeTab">About Me</a></li>
+	</ul>
+	<!-- Set the selected tab based on the global Javascript variable, which should be set before injecting this file. -->
+	<script lang="javascript">
+		document.getElementById(CommonSiteElements_SelectedTab).className = "SelectedTab";
+	</script>
+</div>
+<div class="Clear"></div>
+
+<div id="ContentWrapper">

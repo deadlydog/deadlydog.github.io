@@ -2,18 +2,22 @@
 <html>
 <head>
 <title>Daniel Schroeder's Website</title>
-<?php include "_HTMLHead.php"; // Includes the Head information ?>
+<custom_inject_during_build "./_HTMLHead.part.html" />
 </head>
 
 <body>
-<?php $SelectedTab = "TAB_NAME_GOES_HERE"; ?>
-<?php include '_CommonSiteElements.php'; ?>
+
+<script lang="javascript">
+	var CommonSiteElements_SelectedTab = 'TAB_NAME_GOES_HERE';
+</script>
+<custom_inject_during_build "./_CommonSiteElements.part.html" />
+
 <div id="Content">
 
 <!-- PUT PAGE CONTENT HERE -->
 
 </div>
 
-<?php include '_Footer.php'; ?>
+<custom_inject_during_build "./_Footer.part.html" />
 </body>
 </html>

@@ -2,12 +2,15 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <title>Welcome to Daniel Schroeder's Website</title>
-<?php include "_HTMLHead.php"; // Includes the Head information ?>
+<custom_inject_during_build "./_HTMLHead.part.html" />
 </head>
 
 <body>
-<?php $SelectedTab = "AboutMe"; ?>
-<?php include '_CommonSiteElements.php'; ?>
+
+<script lang="javascript">
+	var CommonSiteElements_SelectedTab = 'AboutMeTab';
+</script>
+<custom_inject_during_build "./_CommonSiteElements.part.html" />
 
 <div id="Content">
 <h1>Welcome to Daniel Schroeder's Website</h1>
@@ -31,6 +34,6 @@ I enjoy creating video games and websites, and have a passion for programming.</
 
 </div>
 
-<?php include '_Footer.php'; ?>
+<custom_inject_during_build "./_Footer.part.html" />
 </body>
 </html>

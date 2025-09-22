@@ -1,3 +1,7 @@
+# Build default output directory and log file.
+_WebsiteBuildOutput/
+build/*.log
+
 *.cache
 *.cachefile
 *.docstates
