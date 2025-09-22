@@ -15,6 +15,9 @@ variables:
   version.Patch: $[counter(variables['version.MajorMinor'], 0)]
   versionNumber: '$(version.MajorMinor).$(version.Patch)'
 
+pool:
+  vmImage: windows-latest # The AzureFileCopy task requires Windows.
+
 steps:
 - task: PowerShell@2
   displayName: Set the name of the build (i.e. the Build.BuildNumber)
@@ -36,7 +39,7 @@ steps:
       & './build/BuildWebsite.ps1' -WebsiteRootDirectoryPath './src' -OutputDirectoryPath './_WebsiteBuildOutput'
 
 - task: PublishBuildArtifacts@1
-  displayName: Publish website build output
+  displayName: Publish website build artifact
   inputs:
     PathtoPublish: './_WebsiteBuildOutput'
     ArtifactName: 'WebsiteBuildOutput'
