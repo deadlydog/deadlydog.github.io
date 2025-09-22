@@ -29,7 +29,7 @@ steps:
       Write-Host "##vso[build.updatebuildnumber]$buildName"
 
 - checkout: self
-  clean: true
+  fetchDepth: 1 # Only fetch the latest commit without all the history to speed up the checkout.
 
 - task: PowerShell@2
   displayName: Run build script
