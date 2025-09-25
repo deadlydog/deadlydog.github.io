@@ -38,6 +38,8 @@ Here are some technical podcasts that are great for software developers and IT p
 - [Run As Radio](https://www.runasradio.com/): This podcast is hosted by Richard Campbell and has nearly 1000 episodes, with a new one each week.
   He interviews guests from the IT community on a wide range of topics, and is a great way to keep up-to-date with the latest trends and tools in the IT industry.
 
+Some of these podcasts often provide discount codes for upcoming conferences, which can save you hundreds of dollars off registration.
+
 ## Non-technical podcasts
 
 This is a list of non-technical podcasts that your spouse or even your kids might enjoy, where you don't need to be a software developer or IT pro to understand what they are talking about or find it interesting:
