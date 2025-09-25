@@ -17,6 +17,9 @@ tags:
 
 Windows has a ton of keyboard shortcuts that can help you be more efficient.
 Below are some of my favourites.
+
+![Windows shortcuts cartoon image](/assets/Posts/2025-09-24-My-favourit-Windows-shortcuts/windows-shortcuts-cartoon-image.png)
+
 Note that <kbd>Win</kbd> is the Windows key.
 
 ## Windows shortcuts
@@ -43,9 +46,18 @@ You can use the following shortcuts regardless of the application you're in:
 - <kbd>Win</kbd> + <kbd>L</kbd>: Lock the computer.
 - <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Esc</kbd>: Open Task Manager.
 
-- <kbd>Win</kbd> + <kbd>V</kbd>: Open Clipboard history.
+- <kbd>Win</kbd> + <kbd>V</kbd>: Open Clipboard history to paste things copied in the past.
   - It's nice that this is built into Windows 10+, but I prefer to use [Ditto Clipboard Manager](https://sabrogden.github.io/Ditto/) instead.
   See my [YouTube video on using Ditto](https://youtu.be/bBvKvJfWw2c?si=VCoUFqnJAV5VwnAn), and the [followup video showing more features](https://youtu.be/0fRL6PFGckM?si=wILKOwQg1msrnVVN).
+- <kbd>Win</kbd> + <kbd>Period</kbd>, or <kbd>Win</kbd> + <kbd>Semicolon</kbd>: Open the emoji picker.
+- <kbd>Win</kbd> + <kbd>Shift</kbd> + <kbd>S</kbd>: Take a screenshot of part of the screen and edit it with the Snipping Tool.
+  - I prefer to use [ShareX](https://getsharex.com) instead, which has many more features.
+  - Windows 11 has greatly improved the Snipping Tool, including adding shapes to the image editor and the ability to take video as well.
+  It is a great built-in option if you don't want to install a third-party app.
+  - On Windows 10 I would recommend [Greenshot](https://getgreenshot.org) if you don't want all of the advanced features of ShareX.
+
+- <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Win</kbd> + <kbd>B</kbd>: Restart the graphics driver.
+  - This is useful if your screen is not drawing properly or one of your monitors stops working.
 
 Applications that support multiple tabs (e.g. web browsers, text editors, File Explorer on Windows 11+) often support:
 
@@ -71,17 +83,19 @@ When in the File Explorer, you can use the following shortcuts:
 - <kbd>Alt</kbd> + <kbd>Left Arrow</kbd>: Go back.
 - <kbd>Alt</kbd> + <kbd>Right Arrow</kbd>: Go forward.
 
-- <kbd>Ctrl</kbd> + <kbd>N</kbd>: Open a new File Explorer window.
+- <kbd>Ctrl</kbd> + <kbd>N</kbd>: Open a new File Explorer window at the current folder.
 - <kbd>Ctrl</kbd> + <kbd>T</kbd>: Open a new tab (Windows 11+).
+- <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>N</kbd>: Create a new folder.
 
 - <kbd>Alt</kbd> + <kbd>D</kbd>: Focus the address bar.
 - <kbd>Alt</kbd> + <kbd>Enter</kbd>: Show properties for the selected file/folder.
 - <kbd>F2</kbd>: Rename the selected file/folder.
+- <kbd>Shift</kbd> + <kbd>Delete</kbd>: Permanently delete the selected items without moving them to the Recycle Bin.
 
 - <kbd>Ctrl</kbd> + <kbd>A</kbd>: Select all items in the current view.
 - Hold <kbd>Shift</kbd> and click to select a range of items.
 - Hold <kbd>Ctrl</kbd> and click to select multiple individual items.
-- <kbd>Shift</kbd> + <kbd>Delete</kbd>: Permanently delete the selected items without moving them to the Recycle Bin.
+- Just start typing the name of a file or folder to quickly jump to and select it.
 
 Many of the above shortcuts also work in other applications, such as web browsers and text editors.
 
@@ -89,9 +103,9 @@ In the File Explorer address bar, you can type:
 
 - `cmd` to open a command prompt in the current directory.
 - `pwsh` to open a PowerShell 7+ prompt in the current directory, if you have it installed.
-- `shell:startup` to open the Startup folder.
+- `shell:startup` to open the Startup folder of the current user.
   - Placing a shortcut to an application in this folder will make it start automatically when you log in.
-- `shell:sendto` to open the SendTo folder.
+- `shell:sendto` to open the SendTo folder of the current user.
   - Placing a shortcut to an application in this folder will make it appear in the Send To context menu when you right-click a file or folder.
 - `shell:common startup` to open the Startup folder for all users.
 - `shell:common sendto` to open the SendTo folder for all users.
@@ -100,6 +114,8 @@ In the File Explorer address bar, you can type:
 
 See [my YouTube video on File Explorer shortcuts](https://youtu.be/-ixXAB2Gc0M?si=1lJ7Bx7UJqAQ6U5O) for more!
 
+![File Explorer address bar](/assets/Posts/2025-09-24-My-favourit-Windows-shortcuts/file-explorer-address-bar.png)
+
 ## Conclusion
 
 Learning and using keyboard shortcuts can significantly improve your productivity.
@@ -107,5 +123,3 @@ Try to incorporate a few of these shortcuts into your daily routine.
 
 Know of a great shortcut that I missed?
 Please let me know in the comments!
-
-![Windows shortcuts cartoon image](/assets/Posts/2025-09-24-My-favourit-Windows-shortcuts/windows-shortcuts-cartoon-image.png)
