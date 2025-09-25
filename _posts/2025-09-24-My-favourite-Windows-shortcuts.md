@@ -91,7 +91,7 @@ When in the File Explorer, you can use the following shortcuts:
 - <kbd>Ctrl</kbd> + <kbd>T</kbd>: Open a new tab (Windows 11+).
 - <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>N</kbd>: Create a new folder.
 
-- <kbd>Alt</kbd> + <kbd>D</kbd>: Focus the address bar.
+- <kbd>Alt</kbd> + <kbd>D</kbd>: Focus the address bar so you can type in it.
 - <kbd>Alt</kbd> + <kbd>Enter</kbd>: Show properties for the selected file/folder.
 - <kbd>F2</kbd>: Rename the selected file/folder.
 - <kbd>Shift</kbd> + <kbd>Delete</kbd>: Permanently delete the selected items without moving them to the Recycle Bin.
