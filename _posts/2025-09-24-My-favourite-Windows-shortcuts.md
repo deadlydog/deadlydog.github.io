@@ -80,9 +80,9 @@ There are a few shortcuts you can use when clicking on an application in the tas
 
 When in the File Explorer, you can use the following shortcuts:
 
-- <kbd>Alt</kbd> + <kbd>Up Arrow</kbd>: Go up one level in the folder hierarchy.
-- <kbd>Alt</kbd> + <kbd>Left Arrow</kbd>: Go back.
-- <kbd>Alt</kbd> + <kbd>Right Arrow</kbd>: Go forward.
+- <kbd>Alt</kbd> + <kbd>Up</kbd>: Go up one level in the folder hierarchy.
+- <kbd>Alt</kbd> + <kbd>Left</kbd>: Go back.
+- <kbd>Alt</kbd> + <kbd>Right</kbd>: Go forward.
 
 - <kbd>Ctrl</kbd> + <kbd>N</kbd>: Open a new File Explorer window at the current folder.
 - <kbd>Ctrl</kbd> + <kbd>T</kbd>: Open a new tab (Windows 11+).
