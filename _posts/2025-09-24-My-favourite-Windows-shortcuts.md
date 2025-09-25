@@ -102,8 +102,8 @@ Many of the above shortcuts also work in other applications, such as web browser
 
 In the File Explorer address bar, you can type:
 
-- `cmd` to open a command prompt in the current directory.
-- `pwsh` to open a PowerShell 7+ prompt in the current directory, if you have it installed.
+- `cmd` to open a command prompt in the current folder.
+- `pwsh` to open a PowerShell 7+ prompt in the current folder, if you have it installed.
 - `shell:startup` to open the Startup folder of the current user.
   - Placing a shortcut to an application in this folder will make it start automatically when you log in.
 - `shell:sendto` to open the SendTo folder of the current user.
