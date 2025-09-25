@@ -45,11 +45,12 @@ You can use the following shortcuts regardless of the application you're in:
 - <kbd>Win</kbd> + <kbd>I</kbd>: Open Settings.
 - <kbd>Win</kbd> + <kbd>L</kbd>: Lock the computer.
 - <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Esc</kbd>: Open Task Manager.
+- <kbd>Win</kbd> + <kbd>Period</kbd>, or <kbd>Win</kbd> + <kbd>Semicolon</kbd>: Open the emoji picker 🤩.
+  - Once in the emoji picker, type to search, use <kbd>Shift</kbd> + Arrow keys to navigate, <kbd>Enter</kbd> to insert the emoji, and <kbd>Esc</kbd> to close the picker.
 
 - <kbd>Win</kbd> + <kbd>V</kbd>: Open Clipboard history to paste things copied in the past.
   - It's nice that this is built into Windows 10+, but I prefer to use [Ditto Clipboard Manager](https://sabrogden.github.io/Ditto/) instead.
   See my [YouTube video on using Ditto](https://youtu.be/bBvKvJfWw2c?si=VCoUFqnJAV5VwnAn), and the [followup video showing more features](https://youtu.be/0fRL6PFGckM?si=wILKOwQg1msrnVVN).
-- <kbd>Win</kbd> + <kbd>Period</kbd>, or <kbd>Win</kbd> + <kbd>Semicolon</kbd>: Open the emoji picker.
 - <kbd>Win</kbd> + <kbd>Shift</kbd> + <kbd>S</kbd>: Take a screenshot of part of the screen and edit it with the Snipping Tool.
   - I prefer to use [ShareX](https://getsharex.com) instead, which has many more features.
   - Windows 11 has greatly improved the Snipping Tool, including adding shapes to the image editor and the ability to take video as well.
