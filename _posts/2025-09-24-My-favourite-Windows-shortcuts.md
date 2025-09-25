@@ -70,11 +70,20 @@ When in the File Explorer, you can use the following shortcuts:
 - <kbd>Alt</kbd> + <kbd>Up Arrow</kbd>: Go up one level in the folder hierarchy.
 - <kbd>Alt</kbd> + <kbd>Left Arrow</kbd>: Go back.
 - <kbd>Alt</kbd> + <kbd>Right Arrow</kbd>: Go forward.
+
+- <kbd>Ctrl</kbd> + <kbd>N</kbd>: Open a new File Explorer window.
+- <kbd>Ctrl</kbd> + <kbd>T</kbd>: Open a new tab (Windows 11+).
+
 - <kbd>Alt</kbd> + <kbd>D</kbd>: Focus the address bar.
 - <kbd>Alt</kbd> + <kbd>Enter</kbd>: Show properties for the selected file/folder.
 - <kbd>F2</kbd>: Rename the selected file/folder.
 
-The above shortcuts also work in many other applications, such as web browsers and text editors.
+- <kbd>Ctrl</kbd> + <kbd>A</kbd>: Select all items in the current view.
+- Hold <kbd>Shift</kbd> and click to select a range of items.
+- Hold <kbd>Ctrl</kbd> and click to select multiple individual items.
+- <kbd>Shift</kbd> + <kbd>Delete</kbd>: Permanently delete the selected items without moving them to the Recycle Bin.
+
+Many of the above shortcuts also work in other applications, such as web browsers and text editors.
 
 In the File Explorer address bar, you can type:
 
