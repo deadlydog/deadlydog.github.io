@@ -70,7 +70,7 @@ The functionality may vary depending on the application though.
 ## Taskbar shortcuts
 
 The taskbar is the bar typically at the bottom of the screen that contains the Start button, pinned applications, open windows, and the system tray.
-There are a few shortcuts you can use with the task bar:
+There are a few shortcuts you can use when clicking on an application in the task bar:
 
 - <kbd>Shift</kbd> + <kbd>Left-click</kbd>: Opens another instance of the application.
 - <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Left-click</kbd>: Opens another instance of the application as an administrator.
