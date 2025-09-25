@@ -99,4 +99,4 @@ Try to incorporate a few of these shortcuts into your daily routine and see how 
 Know of a great shortcut that I missed?
 Please let me know in the comments!
 
-![Windows shortcuts cartoon image](/assets/Posts/2025-02-07-My-favourit-Windows-shortcuts/windows-shortcuts-cartoon-image.png)
+![Windows shortcuts cartoon image](/assets/Posts/2025-09-24-My-favourit-Windows-shortcuts/windows-shortcuts-cartoon-image.png)
