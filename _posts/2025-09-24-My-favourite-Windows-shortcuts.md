@@ -71,8 +71,8 @@ When in the File Explorer, you can use the following shortcuts:
 - <kbd>Alt</kbd> + <kbd>Left Arrow</kbd>: Go back.
 - <kbd>Alt</kbd> + <kbd>Right Arrow</kbd>: Go forward.
 - <kbd>Alt</kbd> + <kbd>D</kbd>: Focus the address bar.
-- <kbd>Alt</kbd> + <kbd>Enter</kbd>: Show properties for the selected item.
-- <kbd>F2</kbd>: Rename the selected item.
+- <kbd>Alt</kbd> + <kbd>Enter</kbd>: Show properties for the selected file/folder.
+- <kbd>F2</kbd>: Rename the selected file/folder.
 
 The above shortcuts also work in many other applications, such as web browsers and text editors.
 
@@ -94,7 +94,7 @@ See [my YouTube video on File Explorer shortcuts](https://youtu.be/-ixXAB2Gc0M?s
 ## Conclusion
 
 Learning and using keyboard shortcuts can significantly improve your productivity.
-Try to incorporate a few of these shortcuts into your daily routine and see how they can help you.
+Try to incorporate a few of these shortcuts into your daily routine.
 
 Know of a great shortcut that I missed?
 Please let me know in the comments!
