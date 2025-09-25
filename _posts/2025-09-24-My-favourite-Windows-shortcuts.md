@@ -58,7 +58,7 @@ You can use the following shortcuts regardless of the application you're in:
   - On Windows 10 I would recommend [Greenshot](https://getgreenshot.org) if you don't want all of the advanced features of ShareX.
 
 - <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Win</kbd> + <kbd>B</kbd>: Restart the graphics driver.
-  - This is useful if your screen is not drawing properly or one of your monitors stops working.
+  - This is useful if your screen is not drawing properly or one of your monitors stops displaying.
 
 Applications that support multiple tabs (e.g. web browsers, text editors, File Explorer on Windows 11+) often support:
 
