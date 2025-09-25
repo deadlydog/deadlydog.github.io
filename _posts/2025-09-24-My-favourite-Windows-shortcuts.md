@@ -45,6 +45,9 @@ You can use the following shortcuts regardless of the application you're in:
 - <kbd>Win</kbd> + <kbd>I</kbd>: Open Settings.
 - <kbd>Win</kbd> + <kbd>L</kbd>: Lock the computer.
 - <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Esc</kbd>: Open Task Manager.
+- <kbd>Win</kbd> + <kbd>X</kbd>: Open the Quick Link menu.
+  - Contains links to many system tools, such as Installed Apps, Device Manager, Sign out, Shut down etc.
+  - I often use <kbd>Win</kbd> + <kbd>X</kbd> followed by <kbd>A</kbd> to open an elevated terminal window.
 - <kbd>Win</kbd> + <kbd>Period</kbd>, or <kbd>Win</kbd> + <kbd>Semicolon</kbd>: Open the emoji picker 🤩.
   - Once in the emoji picker, type to search, use <kbd>Shift</kbd> + Arrow keys to navigate, <kbd>Enter</kbd> to insert the emoji, and <kbd>Esc</kbd> to close the picker.
 
