@@ -2,7 +2,7 @@
 title: "My favourite Windows shortcuts"
 permalink: /My-favourite-Windows-shortcuts/
 #date: 2099-01-15T00:00:00-06:00
-#last_modified_at: 2099-01-22
+last_modified_at: 2025-09-26
 comments_locked: false
 toc: false
 categories:
@@ -30,7 +30,7 @@ You can use the following shortcuts regardless of the application you're in:
 - <kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd>Tab</kbd>: Cycle between open windows in reverse.
 
 - <kbd>Win</kbd> + <kbd>Up</kbd>: Maximize the current window.
-- <kbd>Win</kbd> + <kbd>Down</kbd>: Minimize the current window.
+- <kbd>Win</kbd> + <kbd>Down</kbd>: Restore / Minimize the current window.
 - <kbd>Win</kbd> + <kbd>D</kbd>: Minimize all windows; press again to restore all windows.
 - <kbd>Win</kbd> + <kbd>Left</kbd> / <kbd>Right</kbd>: Snap the current window to the left or right side of the screen.
 - <kbd>Win</kbd> + <kbd>Shift</kbd> + <kbd>Left</kbd> / <kbd>Right</kbd>: Move the current window to the left or right monitor (only works with multiple monitors set up).
@@ -45,8 +45,15 @@ You can use the following shortcuts regardless of the application you're in:
 - <kbd>Win</kbd> + <kbd>I</kbd>: Open Settings.
 - <kbd>Win</kbd> + <kbd>L</kbd>: Lock the computer.
 - <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Esc</kbd>: Open Task Manager.
+
+- <kbd>Win</kbd> + <kbd>A</kbd>: Open the Action Center.
+  - Contains controls for Wi-Fi, Bluetooth, Airplane mode, volume, brightness, and more.
+
+    ![Action Center image](/assets/Posts/2025-09-24-My-favourit-Windows-shortcuts/windows-action-center.png)
 - <kbd>Win</kbd> + <kbd>X</kbd>: Open the Quick Link menu.
   - Contains links to many system tools, such as Installed Apps, Device Manager, Sign out, Shut down etc.
+
+    ![Quick Link menu image](/assets/Posts/2025-09-24-My-favourit-Windows-shortcuts/windows-quick-links-menu.png)
   - I often use <kbd>Win</kbd> + <kbd>X</kbd> followed by <kbd>A</kbd> to open an elevated terminal window.
 - <kbd>Win</kbd> + <kbd>Period</kbd>, or <kbd>Win</kbd> + <kbd>Semicolon</kbd>: Open the emoji picker 🤩.
   - Once in the emoji picker, type to search, use <kbd>Shift</kbd> + Arrow keys to navigate, <kbd>Enter</kbd> to insert the emoji, and <kbd>Esc</kbd> to close the picker.
