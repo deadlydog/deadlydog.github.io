@@ -24,6 +24,8 @@ This post was written with Windows 11 in mind, so some of the settings may not b
 As I discover more awesome settings I'll add them here, so be sure to check back from time to time.
 Also, if you have a favourite that I don't have listed here, please let me know in the comments below.
 
+> If you enjoy this post, check out my [My favourite Windows shortcuts](https://blog.danskingdom.com/My-favourite-Windows-shortcuts/) post.
+
 ## File Explorer settings
 
 ### Have File Explorer open to the This PC view

@@ -22,6 +22,8 @@ Below are some of my favourites.
 
 Note that <kbd>Win</kbd> is the Windows key.
 
+> If you enjoy this post, check out my [Windows settings I change after a clean install](https://blog.danskingdom.com/Windows-settings-I-change-after-a-clean-install/) post.
+
 ## Windows shortcuts
 
 You can use the following shortcuts regardless of the application you're in:
