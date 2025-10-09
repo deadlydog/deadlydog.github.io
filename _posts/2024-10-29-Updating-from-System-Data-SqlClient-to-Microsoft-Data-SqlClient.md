@@ -75,7 +75,7 @@ I also found [this Stack Overflow answer](https://stackoverflow.com/a/61713249/6
 ### Issue 3: Connection string formatting
 
 The final problem I ran into was some of the unit tests compared the SQL connection string to ensure it had all of the expected properties and values.
-It seems that the `SqlConnectionStringBuilder.ConnectionString` property in `Microsoft.Data.SqlClient.` changed the formatting to use spaces in the connection string properties, so `ApplicationIntent` becomes `Application Intent`, and `MultiSubnetFailover` becomes `Multi Subnet Failover`.
+It seems that the `SqlConnectionStringBuilder.ConnectionString` property in `Microsoft.Data.SqlClient` changed the formatting to use spaces in the connection string properties, so `ApplicationIntent` becomes `Application Intent`, and `MultiSubnetFailover` becomes `Multi Subnet Failover`.
 It's a breaking change that most likely won't affect your app, unless your app is used to build or return connection strings for other apps.
 
 The problem is that [the System.Data.SqlClient Connection String](https://learn.microsoft.com/en-us/dotnet/api/microsoft.data.sqlclient.sqlconnection.connectionstring) does not support the spaces, but [the Microsoft.Data.SqlClient Connection String](https://learn.microsoft.com/en-us/dotnet/api/system.data.sqlclient.sqlconnection.connectionstring) does.
