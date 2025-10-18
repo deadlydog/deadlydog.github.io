@@ -1,6 +1,6 @@
 ---
-title: "Should Observability replace custom error messages?"
-permalink: /Should-Observability-replace-custom-error-messages-/
+title: "Should observability replace custom error messages?"
+permalink: /Should-observability-replace-custom-error-messages-/
 #date: 2099-01-15T00:00:00-06:00
 #last_modified_at: 2099-01-22
 comments_locked: false
@@ -104,4 +104,4 @@ Even if it's not an error message the end-user will see, it can still be tremend
 
 So the next time you're calling a method that you know may potentially thrown an exception, consider whether catching and re-throwing the exception with additional context information may be beneficial.
 
-<!-- ![Example image](/assets/Posts/2025-10-12-Should-Observability-replace-custom-error-messages-/image-name.png) -->
+<!-- ![Example image](/assets/Posts/2025-10-18-Should-observability-replace-custom-error-messages-/image-name.png) -->
