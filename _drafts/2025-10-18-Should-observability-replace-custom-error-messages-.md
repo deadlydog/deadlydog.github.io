@@ -24,19 +24,67 @@ I've written about this very subject, so I commented with a link to [my blog pos
 
 This got me thinking about whether observability tools can truly replace good custom error messages.
 
-## Observability is awesome, but is it a silver bullet?
+## Observability is awesome
+
+If you're not familiar with [OpenTelemetry](https://opentelemetry.io) (OTEL), it's a standard set of APIs for collecting metrics, traces, and logs from your application, giving you observability into its behavior.
+You create spans to track how long an operation takes, and add attributes to those spans to provide additional context.
+The attributes can be things specific to the operation, such as the user or items involved in the operation, or more general information, such as the environment, version of the application, or the operating system it's running on.
+
+You then export the OTEL data into an observability tool, which allows you to visualize and query the data.
+This allows you to answer questions like:
+
+- Which company, user, or region has the most failed requests this week?
+- What is the average response time for requests to a specific endpoint?
+  Which endpoints are the slowest?
+- What do failing requests have in common? e.g. a specific user, company, server, region, browser, app version, etc.
+- What were the headers, parameters, or payload of a specific request?
+
+It also allows for distributed tracing, letting you see how individual requests flow through your application and its dependencies (e.g. other services, database calls, etc.), allowing you to pinpoint where things went wrong or spot potential bottlenecks between components.
 
 There's no question that adding OTEL instrumentation to your application can provide valuable insights into its behavior.
 It provides additional information, allowing you to troubleshoot issues and spot trends before they become problems.
 When possible, you should absolutely add OTEL instrumentation to your application.
 
-Should observability replace custom error messages though?
+## Should observability replace custom error messages though?
 
 To be clear, I'm not talking about simply catching an exception and rewriting it with a more user-friendly message.
 I'm talking about including specific data that may have led to the error, such as the parameter values that were used, the dataset that was being queried, or any other relevant context that could aid in troubleshooting.
-As with all logging though, be mindful of not including sensitive information in error messages, such as passwords or personal data.
 
-I would argue that custom error messages are still valuable, for a number of reasons:
+Here's some typical code that would throw an exception with a generic error message:
+
+```csharp
+var people = new List<string> { "Alfred Archer", "Billy Baller", "Billy Bob", "Cathy Carter" };
+var name = "Zane";
+
+// Throws generic exception: System.InvalidOperationException: Sequence contains no matching element
+var zane = people.First(x => x.StartsWith(name));
+```
+
+And modified code that provides a more descriptive custom error message:
+
+```csharp
+var people = new List<string> { "Alfred Archer", "Billy Baller", "Billy Bob", "Cathy Carter" };
+var name = "Zane";
+
+try
+{
+    var zane = people.First(x => x.StartsWith(name));
+}
+catch (InvalidOperationException ex)
+{
+    throw new PersonNotFoundException($"Could not find a person named '{name}' in the people list.", ex);
+}
+```
+
+Notice that the custom error message provides the name of the person that was being searched for, which can be tremendously helpful when troubleshooting.
+It makes it easy to know the exact name, and verify there were no typos or unexpected characters.
+e.g. They searched for " Zane " (with spaces), or "Zone" instead of "Zane".
+
+> Be mindful to not include sensitive information in error messages, such as passwords or personal data.
+
+We could have also added OTEL instrumentation to the code, creating a span for the operation and adding attributes for the name being searched for.
+
+Even if we had added OTEL instrumentation, I would argue that custom error messages are still valuable for a number of reasons:
 
 ### Quicker troubleshooting
 
@@ -54,8 +102,8 @@ I would argue that custom error messages are still valuable, for a number of rea
 
 - Observability tooling relies on the data that is sent to it.
   If the necessary data is not being captured, it may not be available when you need it.
-- Custom error messages can provide additional context that may not be captured by the observability tooling.
-  - For example, a custom error message can include the parameters that were used for a specific query, or the dataset that was being queried.
+- Custom error messages can provide additional context only when its needed.
+  - For example, a custom error message may include the parameters that were used for a specific query, or the dataset that was being queried, whereas you may not want to log that information for every request in your observability tooling.
 - Do you have every component in the chain instrumented?
   - If your application calls an external service or third-party library that is not instrumented, it may not have the necessary data to help troubleshoot an issue.
 
@@ -87,12 +135,12 @@ I would argue that custom error messages are still valuable, for a number of rea
 ### The type of application matters
 
 - Do users expect a desktop/mobile application to be sending observability data over the network?
-- Do users expect your app to store all of that observability data locally?
+- If not stored remotely, do users expect your app to store all of that observability data locally?
 - Users may not want an application to send or store observability data at all, due to privacy, data usage, or performance concerns.
 
 ## Conclusion
 
-It probably seems obvious that it's preferable to include information in error message that can help troubleshoot the issue.
+It probably seems obvious that it's preferable to include information in the error message that can help troubleshoot the issue.
 I can't tell you though how many times I've been frustrated, both as a user and as a developer, by generic error messages that provide no context about what went wrong.
 
 I'm of the opinion that the more information you can provide when an error occurs, the better.
@@ -102,6 +150,6 @@ However, there's no guarantee that it will provide the same information that a w
 A developer spending an extra couple of minutes writing a custom error message that provides additional context can save hours, even days, of troubleshooting time later on.
 Even if it's not an error message the end-user will see, it can still be tremendously helpful for developers and support staff.
 
-So the next time you're calling a method that you know may potentially thrown an exception, consider whether catching and re-throwing the exception with additional context information may be beneficial.
+So the next time you're performing an operation that may potentially throw an exception, consider whether catching and re-throwing the exception with additional context information may be beneficial.
 
-<!-- ![Example image](/assets/Posts/2025-10-18-Should-observability-replace-custom-error-messages-/image-name.png) -->
+Happy coding!
