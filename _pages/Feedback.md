@@ -9,6 +9,16 @@ This page is a compilation of that feedback.
 
 ## What my colleagues have to say about me
 
+### 2025-10-30
+
+A shout out from Brenden Petracek in Slack in regards to implementing a quick workaround to allow our clients to be able to log in when Azure Front Door went down.
+This quote was part of a longer message from Brenden praising everyone involved:
+
+> @DanSchroeder You're the best!
+> As soon as we started cooking on this, I knew you'd be the guy to make it all happen.
+> You get incredible things done fast, and it blows my mind every time.
+> Thank you.
+
 ### 2025-03-10
 
 As part of an organization-wide AI Symposium, I gave a 45 minute presentation on how to use GitHub Copilot in Visual Studio and VS Code for Developers.
