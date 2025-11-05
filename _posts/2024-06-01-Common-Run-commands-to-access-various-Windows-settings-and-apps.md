@@ -2,7 +2,7 @@
 title: "Common Run commands to access various Windows settings and apps"
 permalink: /Common-Run-commands-to-access-various-Windows-settings-and-apps/
 #date: 2099-01-15T00:00:00-06:00
-last_modified_at: 2025-01-14
+last_modified_at: 2025-11-05
 comments_locked: false
 toc: false
 categories:
@@ -105,6 +105,13 @@ A few commands only work from the Run dialog box and are marked as "(Run only)".
 | resmon                                          | Resource Monitor                           |
 | secpol.msc                                      | Local Security Policy                      |
 | services.msc                                    | Services                                   |
+| shell:appsFolder                                | Applications folder (see installed apps)   |
+| shell:desktop                                   | Desktop folder                             |
+| shell:downloads                                 | Downloads folder                           |
+| shell:sendto                                    | SendTo folder of the current user          |
+| shell:common sendto                             | SendTo folder for all users                |
+| shell:startup                                   | Startup folder of the current user         |
+| shell:common startup                            | Startup folder for all users               |
 | shutdown /r /t 0                                | Restart Windows without confirmation       |
 | shutdown /s /t 0                                | Shut down Windows without confirmation     |
 | snippingtool                                    | Screenshot Snipping Tool                   |
