@@ -20,6 +20,10 @@ Include a TL;DR if appropriate.
 
 End with a brief conclusion.
 
+Prefer small paragraphs over long ones for readability.
+It's much easier to read and to find your place if the reader gets distracted.
+4 or 5 sentences max.
+
 Your regular markdown goes here. It also supports HTML :)
 
 Try to include at least one image, as it makes preview links more appealing since the first image often gets used as the preview image:
