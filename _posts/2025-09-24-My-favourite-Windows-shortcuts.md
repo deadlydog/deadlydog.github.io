@@ -2,7 +2,7 @@
 title: "My favourite Windows shortcuts"
 permalink: /My-favourite-Windows-shortcuts/
 #date: 2099-01-15T00:00:00-06:00
-last_modified_at: 2025-09-26
+last_modified_at: 2025-11-05
 comments_locked: false
 toc: false
 categories:
@@ -112,7 +112,7 @@ When in the File Explorer, you can use the following shortcuts:
 
 Many of the above shortcuts also work in other applications, such as web browsers and text editors.
 
-In the File Explorer address bar, you can type:
+In the File Explorer address bar (or the Run dialog window), you can type:
 
 - `cmd` to open a command prompt in the current folder.
 - `pwsh` to open a PowerShell 7+ prompt in the current folder, if you have it installed.
@@ -124,6 +124,7 @@ In the File Explorer address bar, you can type:
 - `shell:common sendto` to open the SendTo folder for all users.
 - `shell:desktop` to open the Desktop folder.
 - `shell:downloads` to open the Downloads folder.
+- `shell:appsfolder` to see all installed applications, including hidden ones, and right-click to uninstall ones you don't need.
 
 See [my YouTube video on File Explorer shortcuts](https://youtu.be/-ixXAB2Gc0M?si=1lJ7Bx7UJqAQ6U5O) for more!
 
