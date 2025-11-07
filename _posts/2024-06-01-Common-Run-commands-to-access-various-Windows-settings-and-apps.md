@@ -2,7 +2,7 @@
 title: "Common Run commands to access various Windows settings and apps"
 permalink: /Common-Run-commands-to-access-various-Windows-settings-and-apps/
 #date: 2099-01-15T00:00:00-06:00
-last_modified_at: 2025-11-05
+last_modified_at: 2025-11-07
 comments_locked: false
 toc: false
 categories:
@@ -117,6 +117,8 @@ A few commands only work from the Run dialog box and are marked as "(Run only)".
 | snippingtool                                    | Screenshot Snipping Tool                   |
 | sysdm.cpl                                       | System Properties                          |
 | taskmgr                                         | Task Manager                               |
+| temp                                            | Temp folder of Windows (Run only)          |
+| %temp%                                          | Temp folder of the current user (Run only) |
 | winver                                          | About Windows                              |
 | wscui.cpl                                       | Security and Maintenance                   |
 
