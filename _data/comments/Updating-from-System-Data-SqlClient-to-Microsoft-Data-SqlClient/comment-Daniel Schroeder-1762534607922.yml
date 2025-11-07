@@ -1,0 +1,11 @@
+_id: bf3cb410-bbfa-11f0-bc17-cd29f0cba837
+message: >-
+  David, the System.Data namespace is not deprecated, so you can continue using
+  System.Data.DataTable without worry. It's only the System.Data.SqlClient NuGet
+  package that is deprecated and should be switched to the
+  Microsoft.Data.SqlClient NuGet package.
+name: Daniel Schroeder
+email: c8addda594c8b338f1e3934e73505d0c
+url: 'https://blog.danskingdom.com'
+hidden: ''
+date: '2025-11-07T16:56:47.921Z'
