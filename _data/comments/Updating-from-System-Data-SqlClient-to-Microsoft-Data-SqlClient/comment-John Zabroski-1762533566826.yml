@@ -1,0 +1,12 @@
+_id: 52bb1040-bbf8-11f0-a827-bbe796655035
+message: >-
+  Thank you so much for the SqlMetadata/SqlDataRecord solution. I similarly
+  wasted hours due to very poor Microsoft documentation; System.Data.SqlClient's
+  Microsoft.SqlServer.Server.SqlDataRecord type says to use
+  Microsoft.SqlServer.Server.SqlDataRecord instead, referring to nuget package
+  Microsoft.SqlServer.Server; but that is not the right type!
+name: John Zabroski
+email: 0c2cea78a2e9da9add2f8988d0f45700
+url: ''
+hidden: ''
+date: '2025-11-07T16:39:26.822Z'
