@@ -21,6 +21,6 @@ Note that the email recipients will not be able to see who else the email was se
 ![Screenshot of an Outlook email using the BCC field to send email to all staff](/assets/Posts/2012/10/outlook-email-bcc-all-staff-screenshot.png)
 
 Obviously, you will not want to use this _all_ the time; there are some times when you _want_ a group discussion to occur over email.
-But for those other times, you can use this trick, such as when sending a NWR (Non-Work Related) email about the car you are selling, asking everyone what a good local restaurant near by is, collecting personal info from people, or sharing a handy program or trick you learnt about (such as this one 😉).
+But for those other times you can use this trick, such as when sending a NWR (Non-Work Related) email about the car you are selling, asking everyone what a good local restaurant near by is, collecting personal info from people, or sharing a handy program or trick you learnt about (such as this one 😉).
 This trick can save everybody frustration and avoid wasting their time.
 Trust me, your coworkers will thank you; mine did 😊
