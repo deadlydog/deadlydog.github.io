@@ -16,7 +16,7 @@ A co-worker of mine made an ingenious off-hand comment to me one day of how to a
 Simply place the email addresses of everybody that you are sending the email to in the `BCC` field (_not_ the `CC` field), and in the `TO` field put _your_ email address.
 So everybody still gets the email, and if anyone does a Reply or Reply All back, _only you_ are notified.
 You can then determine if a followup email to the entire group is warranted.
-Note that the email recipients will not be able to see who else the email was sent it to, so you may want to include that info in the subject or email body.
+Note that the email recipients will not be able to see who else the email was sent it to, so you may want to include that info in the email subject or body.
 
 ![Screenshot of an Outlook email using the BCC field to send email to all staff](/assets/Posts/2012/10/outlook-email-bcc-all-staff-screenshot.png)
 
