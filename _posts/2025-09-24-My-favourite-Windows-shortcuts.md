@@ -2,7 +2,7 @@
 title: "My favourite Windows shortcuts"
 permalink: /My-favourite-Windows-shortcuts/
 #date: 2099-01-15T00:00:00-06:00
-last_modified_at: 2025-11-05
+last_modified_at: 2025-11-17
 comments_locked: false
 toc: false
 categories:
@@ -33,14 +33,15 @@ You can use the following shortcuts regardless of the application you're in:
 
 - <kbd>Win</kbd> + <kbd>Up</kbd>: Maximize the current window.
 - <kbd>Win</kbd> + <kbd>Down</kbd>: Restore / Minimize the current window.
-- <kbd>Win</kbd> + <kbd>D</kbd>: Minimize all windows; press again to restore all windows.
 - <kbd>Win</kbd> + <kbd>Left</kbd> / <kbd>Right</kbd>: Snap the current window to the left or right side of the screen.
 - <kbd>Win</kbd> + <kbd>Shift</kbd> + <kbd>Left</kbd> / <kbd>Right</kbd>: Move the current window to the left or right monitor (only works with multiple monitors set up).
+- <kbd>Win</kbd> + <kbd>Alt</kbd> + <kbd>Left</kbd> / <kbd>Right</kbd> / <kbd>Up</kbd> / <kbd>Down</kbd>: Snap the current window to a specific quadrant of the screen (Windows 11 only).
 
 - <kbd>Win</kbd> + <kbd>Tab</kbd>: Open Task View to see all virtual desktops and all windows in the current virtual desktop.
 - <kbd>Win</kbd> + <kbd>Ctrl</kbd> + <kbd>D</kbd>: Create a new virtual desktop.
 - <kbd>Win</kbd> + <kbd>Ctrl</kbd> + <kbd>Left</kbd> / <kbd>Right</kbd>: Switch between virtual desktops.
 
+- <kbd>Win</kbd> + <kbd>D</kbd>: Minimize all windows; press again to restore all windows.
 - <kbd>Win</kbd> + <kbd>E</kbd>: Open File Explorer.
 - <kbd>Win</kbd> + <kbd>R</kbd>: Open the Run dialog.
 - <kbd>Win</kbd> + <kbd>P</kbd>: Open the Project menu (for connecting to external displays).
