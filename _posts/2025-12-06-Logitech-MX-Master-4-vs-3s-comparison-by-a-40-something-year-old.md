@@ -84,6 +84,7 @@ Below is a breakdown of how I found the MX Master 4 compared to the 3s.
   - In the 3s, you have to press the thumb button _down_, allowing you to easily pick up the mouse (by squeezing your thumb in) without accidentally pressing the button.
   - The 4 is both heavier and smoother than the 3s.
   Even with the textured bumps on the thumb button, it's quite slippery, making the thumb slide when picking it up and forcing you to grip it tighter, leading to accidental presses.
+  - I found this mentioned in several other online reviews as well, so I know it's not just me.
   - I switch the thumb button to media controls (the default action is the Actions Ring), so more than once I accidentally pressed the thumb button while adjusting the mouse position on my desk and started playing music while on a video call (embarrassing! 🫠).
 - The gesture button is a bit hard to reach with my thumb.
   - It's not a huge issue, but I noticed myself consciously thinking about reaching for it.
