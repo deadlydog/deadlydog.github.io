@@ -57,19 +57,28 @@ MX 4 Cons:
 - The thumb button can be pressed both down or in, so I often press it in by accident when adjusting the mouse to a new position on my desk.
   - In the MX 3s, you have to press the thumb button __down__, allowing you to easily pick up the mouse without accidentally pressing the button.
   - The MX 4 is both heavier and smoother than the 3s, making the thumb slide more when picking it up and forcing you to grip it harder, leading to more accidental presses.
-  - I like using the thumb button for media controls, so more than once I accidentally pressed the thumb button while adjusting the mouse position on my desk and started playing music while in a video call.
+  - I switch the thumb button to media controls (the default action is the actions ring), so more than once I accidentally pressed the thumb button while adjusting the mouse position on my desk and started playing music while in a video call.
 - The scroll wheel button to switch between ratchet and free-spin modes makes a noticeable click sound (doesn't bother me though)
 - Not great polling speeds for high-speed gaming, but that's not a big concern for me as I mainly use it for productivity, and the games I do play don't depend on low millisecond response times.
 
 The feel of the mouse in my hand is very similar.
 The MX 3s is a bit grippier due to the rubberized surface, while the MX 4 has a smoother plastic finish.
 The shape is nearly identical, with only very minor differences.
-If I didn't have them side-by-side, it would be hard to tell which is which, aside from the weight difference and the feel of the thumb button.
+
+If I didn't feel them side-by-side, it would be hard to tell which is which, aside from the weight difference and the feel of the thumb button.
 If you like the feel of the MX 3s, you'll likely like the MX 4 as well.
+
+Here's a few pics to visually compare the two, with the 3s being the black one and the 4 the graphite (grey) one:
+
+![Top view](/assets/Posts/2025-12-04-A-regular-guys-comparison-of-the-Logitech-MX-Master-3s-vs-4-mouse/mice-top-view.jpeg)
+![Back view](/assets/Posts/2025-12-04-A-regular-guys-comparison-of-the-Logitech-MX-Master-3s-vs-4-mouse/mice-back-view.jpeg)
+![Left side view](/assets/Posts/2025-12-04-A-regular-guys-comparison-of-the-Logitech-MX-Master-3s-vs-4-mouse/mice-left-side.jpeg)
+![Right side view](/assets/Posts/2025-12-04-A-regular-guys-comparison-of-the-Logitech-MX-Master-3s-vs-4-mouse/mice-right-side.jpeg)
+![Side profile view](/assets/Posts/2025-12-04-A-regular-guys-comparison-of-the-Logitech-MX-Master-3s-vs-4-mouse/mice-side-profile.jpeg)
 
 ## Conclusion
 
-While I quite liked the MX Master 4, especially for the extra programmable button, the wrist pain and accidental thumb button presses were a deal-breaker for me.
+While I quite liked the MX Master 4, especially for the extra programmable button, the wrist pain due to increased weight and accidental thumb button presses were a deal-breaker for me.
 If I was still in my 20s and hadn't developed wrist pain, I likely would have kept the MX 4.
 
 ![Example image](/assets/Posts/2025-12-04-A-regular-guys-comparison-of-the-Logitech-MX-Master-3s-vs-4-mouse/image-name.png)
