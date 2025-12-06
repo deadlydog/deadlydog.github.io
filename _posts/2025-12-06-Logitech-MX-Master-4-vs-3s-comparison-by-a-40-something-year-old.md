@@ -121,6 +121,6 @@ While I quite liked the MX Master 4, especially for the extra programmable butto
 I ended up returning my MX Master 4 and will likely be ordering another 3s if the click issues return.
 If I was still in my 20s and hadn't developed wrist pain, I likely would have kept the MX 4.
 
-If Logitech releases a followup version that's a bit lighter and has a grippier thumb button, I would try it out again.
+If Logitech releases a followup version that's a bit lighter and addresses the accidental thumb button presses, I would try it out again.
 
 I don't often do product reviews or comparisons, so if you enjoyed this leave a comment and let me know!
