@@ -87,7 +87,7 @@ Below is a breakdown of how I found the MX Master 4 compared to the 3s.
   - I found this mentioned in several other online reviews as well, so I know it's not just me.
   - I switch the thumb button to media controls (the default action is the Actions Ring), so more than once I accidentally pressed the thumb button while adjusting the mouse position on my desk and started playing music while on a video call (embarrassing! 🫠).
 - The gesture button is a bit hard to reach with my thumb.
-  - It's not a huge issue, but I noticed myself consciously thinking about reaching for it.
+  - It's not a huge issue, but I noticed myself having to consciously think about reaching for it.
   That could change and become muscle memory over time though.
 - The scroll wheel button to switch between ratchet and free-spin modes makes a noticeable click sound, where it is silent on the 3s.
   This doesn't really bother me though; just something I noticed.
