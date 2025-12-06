@@ -123,4 +123,4 @@ If I was still in my 20s and hadn't developed wrist pain, I likely would have ke
 
 If Logitech releases a followup version that's a bit lighter and has a grippier thumb button, I would try it out again.
 
-I don't often do product reviews or comparisons, so if you enjoyed this comparison leave a comment below and let me know!
+I don't often do product reviews or comparisons, so if you enjoyed this leave a comment and let me know!
