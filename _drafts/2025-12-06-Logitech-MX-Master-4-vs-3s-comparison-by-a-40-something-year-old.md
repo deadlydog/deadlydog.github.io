@@ -1,6 +1,6 @@
 ---
-title: "Logitech MX Master 3s vs 4 comparison by a 40 something year old"
-permalink: /Logitech-MX-Master-3s-vs-4-comparison-by-a-40-something-year-old/
+title: "Logitech MX Master 4 vs 3s comparison by a 40 something year old"
+permalink: /Logitech-MX-Master-4-vs-3s-comparison-by-a-40-something-year-old/
 #date: 2099-01-15T00:00:00-06:00
 #last_modified_at: 2099-01-22
 comments_locked: false
@@ -108,11 +108,11 @@ Others have commented that if you need high polling rates, neither of these mice
 
 Here's a few pics to visually compare the two, with the 3s being the black one (bottom/left) and the 4 the graphite (grey) one:
 
-![Top view](/assets/Posts/2025-12-06-Logitech-MX-Master-3s-vs-4-comparison-by-a-40-something-year-old/mice-top-view.jpeg)
-![Back view](/assets/Posts/2025-12-06-Logitech-MX-Master-3s-vs-4-comparison-by-a-40-something-year-old/mice-back-view.jpeg)
-![Left side view](/assets/Posts/2025-12-06-Logitech-MX-Master-3s-vs-4-comparison-by-a-40-something-year-old/mice-left-side.jpeg)
-![Right side view](/assets/Posts/2025-12-06-Logitech-MX-Master-3s-vs-4-comparison-by-a-40-something-year-old/mice-right-side.jpeg)
-![Side profile view](/assets/Posts/2025-12-06-Logitech-MX-Master-3s-vs-4-comparison-by-a-40-something-year-old/mice-side-profile.jpeg)
+![Top view](/assets/Posts/2025-12-06-Logitech-MX-Master-4-vs-3s-comparison-by-a-40-something-year-old/mice-top-view.jpeg)
+![Back view](/assets/Posts/2025-12-06-Logitech-MX-Master-4-vs-3s-comparison-by-a-40-something-year-old/mice-back-view.jpeg)
+![Left side view](/assets/Posts/2025-12-06-Logitech-MX-Master-4-vs-3s-comparison-by-a-40-something-year-old/mice-left-side.jpeg)
+![Right side view](/assets/Posts/2025-12-06-Logitech-MX-Master-4-vs-3s-comparison-by-a-40-something-year-old/mice-right-side.jpeg)
+![Side profile view](/assets/Posts/2025-12-06-Logitech-MX-Master-4-vs-3s-comparison-by-a-40-something-year-old/mice-side-profile.jpeg)
 
 ## Conclusion
 
