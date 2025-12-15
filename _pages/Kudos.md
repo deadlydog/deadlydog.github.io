@@ -9,6 +9,12 @@ It's a nice place I can turn to when I'm not feeling motivated, or when I need a
 
 ## Donations and thank you emails from the community
 
+### 2025-12-14
+
+$10.00 USD from Andreas Gehrke for [my blog](https://blog.danskingdom.com).
+
+> Drop the ads 😀
+
 ### 2025-11-21
 
 $30.00 USD from Larry Berkbigler for my [Path Length Checker app](https://github.com/deadlydog/PathLengthChecker).
