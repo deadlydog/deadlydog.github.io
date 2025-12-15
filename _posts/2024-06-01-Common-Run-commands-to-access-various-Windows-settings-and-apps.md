@@ -2,7 +2,7 @@
 title: "Common Run commands to access various Windows settings and apps"
 permalink: /Common-Run-commands-to-access-various-Windows-settings-and-apps/
 #date: 2099-01-15T00:00:00-06:00
-last_modified_at: 2025-11-07
+last_modified_at: 2025-12-15
 comments_locked: false
 toc: false
 categories:
@@ -45,82 +45,82 @@ Here are two ways to do that:
 With either a command prompt or the Run dialog box open, type in one of the following commands and press `Enter` to open the corresponding Windows setting or app.
 
 Note: If using a command prompt, it may need to be running As Admin to open some of these settings windows.
-A few commands only work from the Run dialog box and are marked as "(Run only)".
+A few commands only work from the Run dialog box and are marked as `(Run only)`.
 
-| Command                                         | Description                                |
-| ----------------------------------------------- | ------------------------------------------ |
-| .                                               | Open current user folder (Run only)        |
-| appwiz.cpl                                      | Programs and Features                      |
-| C: (or any file or directory path)              | Open the specified file or path (Run only) |
-| certlm.msc                                      | Certificate Manager (Local Computer)       |
-| certmgr.msc                                     | Certificate Manager (Current User)         |
-| charmap                                         | Character Map                              |
-| cleanmgr                                        | Disk Cleanup                               |
-| cmd                                             | Command Prompt                             |
-| compmgmt.msc                                    | Computer Management                        |
-| control                                         | Control Panel                              |
-| control admintools                              | Administrative Tools                       |
-| control desktop                                 | Personalization                            |
-| control folders                                 | File Explorer Options                      |
-| control keyboard                                | Keyboard Properties                        |
-| control mouse                                   | Mouse Properties                           |
-| control printers                                | Printers and Faxes                         |
-| control schedtasks                              | Task Scheduler                             |
-| control userpasswords2                          | User Accounts                              |
-| control /name Microsoft.NetworkAndSharingCenter | Network and Sharing Center                 |
-| control /name Microsoft.PowerOptions            | Power Options                              |
-| control /name Microsoft.System                  | System                                     |
-| control /name Microsoft.WindowsUpdate           | Windows Update                             |
-| desk.cpl                                        | Display Properties                         |
-| devmgmt.msc                                     | Device Manager                             |
-| diskmgmt.msc                                    | Disk Management                            |
-| dsa.msc                                         | Active Directory Users and Computers       |
-| dxdiag                                          | DirectX Diagnostic Tool                    |
-| eventvwr.msc                                    | Event Viewer                               |
-| explorer                                        | Windows Explorer                           |
-| firewall.cpl                                    | Windows Firewall                           |
-| gpedit.msc                                      | Local Group Policy Editor                  |
-| inetcpl.cpl                                     | Internet Properties                        |
-| inetmgr                                         | IIS Manager (if installed) (Run only)      |
-| logoff                                          | Log out of Windows without confirmation    |
-| lusrmgr.msc                                     | Local Users and Groups                     |
-| magnify                                         | Magnifier                                  |
-| main.cpl                                        | Mouse Settings                             |
-| mdsched                                         | Windows Memory Diagnostic                  |
-| mmc                                             | Microsoft Management Console               |
-| mmsys.cpl                                       | Sound Properties                           |
-| mrt                                             | Malware Removal Tool                       |
-| msconfig                                        | System Configuration                       |
-| msinfo32                                        | System Information                         |
-| mstsc                                           | Remote Desktop Connection                  |
-| ncpa.cpl                                        | Network Connections                        |
-| netplwiz                                        | User Accounts                              |
-| osk                                             | On-Screen Keyboard                         |
-| perfmon.msc                                     | Performance Monitor                        |
-| powercfg.cpl                                    | Power Options                              |
-| powershell                                      | Windows PowerShell Console                 |
-| psr                                             | Steps Recorder                             |
-| pwsh                                            | PowerShell Core Console (if installed)     |
-| regedit                                         | Registry Editor                            |
-| resmon                                          | Resource Monitor                           |
-| secpol.msc                                      | Local Security Policy                      |
-| services.msc                                    | Services                                   |
-| shell:appsFolder                                | Applications folder (see installed apps)   |
-| shell:desktop                                   | Desktop folder                             |
-| shell:downloads                                 | Downloads folder                           |
-| shell:sendto                                    | SendTo folder of the current user          |
-| shell:common sendto                             | SendTo folder for all users                |
-| shell:startup                                   | Startup folder of the current user         |
-| shell:common startup                            | Startup folder for all users               |
-| shutdown /r /t 0                                | Restart Windows without confirmation       |
-| shutdown /s /t 0                                | Shut down Windows without confirmation     |
-| snippingtool                                    | Screenshot Snipping Tool                   |
-| sysdm.cpl                                       | System Properties                          |
-| taskmgr                                         | Task Manager                               |
-| temp                                            | Temp folder of Windows (Run only)          |
-| %temp%                                          | Temp folder of the current user (Run only) |
-| winver                                          | About Windows                              |
-| wscui.cpl                                       | Security and Maintenance                   |
+| Command                                         | Description                                         |
+| ----------------------------------------------- | --------------------------------------------------- |
+| .                                               | Open current user folder (Run only)                 |
+| appwiz.cpl                                      | Programs and Features                               |
+| C: (or any file or directory path)              | Open the specified file or path (Run only)          |
+| certlm.msc                                      | Certificate Manager (Local Computer)                |
+| certmgr.msc                                     | Certificate Manager (Current User)                  |
+| charmap                                         | Character Map                                       |
+| cleanmgr                                        | Disk Cleanup                                        |
+| cmd                                             | Command Prompt                                      |
+| compmgmt.msc                                    | Computer Management                                 |
+| control                                         | Control Panel                                       |
+| control admintools                              | Administrative Tools                                |
+| control desktop                                 | Personalization                                     |
+| control folders                                 | File Explorer Options                               |
+| control keyboard                                | Keyboard Properties                                 |
+| control mouse                                   | Mouse Properties                                    |
+| control printers                                | Printers and Faxes                                  |
+| control schedtasks                              | Task Scheduler                                      |
+| control userpasswords2                          | User Accounts                                       |
+| control /name Microsoft.NetworkAndSharingCenter | Network and Sharing Center                          |
+| control /name Microsoft.PowerOptions            | Power Options                                       |
+| control /name Microsoft.System                  | System                                              |
+| control /name Microsoft.WindowsUpdate           | Windows Update                                      |
+| desk.cpl                                        | Display Properties                                  |
+| devmgmt.msc                                     | Device Manager                                      |
+| diskmgmt.msc                                    | Disk Management                                     |
+| dsa.msc                                         | Active Directory Users and Computers                |
+| dxdiag                                          | DirectX Diagnostic Tool                             |
+| eventvwr.msc                                    | Event Viewer                                        |
+| explorer                                        | Windows Explorer                                    |
+| firewall.cpl                                    | Windows Firewall                                    |
+| gpedit.msc                                      | Local Group Policy Editor                           |
+| inetcpl.cpl                                     | Internet Properties                                 |
+| inetmgr                                         | IIS Manager (if installed) (Run only)               |
+| logoff                                          | Log out of Windows without confirmation             |
+| lusrmgr.msc                                     | Local Users and Groups                              |
+| magnify                                         | Magnifier                                           |
+| main.cpl                                        | Mouse Settings                                      |
+| mdsched                                         | Windows Memory Diagnostic                           |
+| mmc                                             | Microsoft Management Console                        |
+| mmsys.cpl                                       | Sound Properties                                    |
+| mrt                                             | Malware Removal Tool                                |
+| msconfig                                        | System Configuration                                |
+| msinfo32                                        | System Information                                  |
+| mstsc                                           | Remote Desktop Connection                           |
+| ncpa.cpl                                        | Network Connections                                 |
+| netplwiz                                        | User Accounts                                       |
+| osk                                             | On-Screen Keyboard                                  |
+| perfmon.msc                                     | Performance Monitor                                 |
+| powercfg.cpl                                    | Power Options                                       |
+| powershell                                      | Windows PowerShell Console                          |
+| psr                                             | Steps Recorder                                      |
+| pwsh                                            | PowerShell Core Console (if installed)              |
+| regedit                                         | Registry Editor                                     |
+| resmon                                          | Resource Monitor                                    |
+| secpol.msc                                      | Local Security Policy                               |
+| services.msc                                    | Services                                            |
+| shell:appsFolder                                | Applications folder (see installed apps) (Run only) |
+| shell:desktop                                   | Desktop folder (Run only)                           |
+| shell:downloads                                 | Downloads folder (Run only)                         |
+| shell:sendto                                    | SendTo folder of the current user (Run only)        |
+| shell:common sendto                             | SendTo folder for all users (Run only)              |
+| shell:startup                                   | Startup folder of the current user (Run only)       |
+| shell:common startup                            | Startup folder for all users (Run only)             |
+| shutdown /r /t 0                                | Restart Windows without confirmation                |
+| shutdown /s /t 0                                | Shut down Windows without confirmation              |
+| snippingtool                                    | Screenshot Snipping Tool                            |
+| sysdm.cpl                                       | System Properties                                   |
+| taskmgr                                         | Task Manager                                        |
+| temp                                            | Temp folder of Windows (Run only)                   |
+| %temp%                                          | Temp folder of the current user (Run only)          |
+| winver                                          | About Windows                                       |
+| wscui.cpl                                       | Security and Maintenance                            |
 
 This blog article was inspired by [this LinkedIn post](https://www.linkedin.com/feed/update/urn:li:activity:7202019020282245120/) which shows how to define many of these in a PowerShell function that can be used to search for the command you want.
 
