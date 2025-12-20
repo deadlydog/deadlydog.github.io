@@ -46,13 +46,21 @@ layout: default
             </nav>
           </aside>
         {% endif %}
+
+				<!--========== Dan's Customizations START ==========-->
+				<div>
+					<!-- Show an advertisement in the blog post content. -->
+					{% include PostAdvertisementInArticle.html %}
+				</div>
+				<!--========== Dan's Customizations END ==========-->
+
         {{ content }}
         {% if page.link %}<div><a href="{{ page.link }}" class="btn btn--primary">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
 
 				<!--========== Dan's Customizations START ==========-->
 				<div>
 					<!-- Show an advertisement after the blog post content. -->
-					{% include PostAdvertisement.html %}
+					{% include PostAdvertisementFooter.html %}
 				</div>
 				<!--========== Dan's Customizations END ==========-->
       </section>
