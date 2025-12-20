@@ -10,7 +10,7 @@ RunGoogleAdsenseFooterAdvertisementJavaScript()
 RunMsClarityJavaScript()
 
 // Google Analytics are not included when running locally/debugging, so to avoid an error only call this function if it is defined.
-if (typeof (RunGoogleAdsensePostAdvertisementJavaScript) === typeof(Function))
+if (typeof (RunGoogleAnalyticsJavaScript) === typeof(Function))
 {
 	RunGoogleAnalyticsJavaScript()
 }
