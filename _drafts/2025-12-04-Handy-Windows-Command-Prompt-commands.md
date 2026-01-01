@@ -34,5 +34,6 @@ Another option is appending `| clip` when using PowerShell to copy the output di
 | `winget upgrade`          | Lists all installed applications that have available updates via Windows Package Manager.                                                                                                                                   |
 | `winget upgrade --all`    | Upgrades all installed applications that have available updates via Windows Package Manager.                                                                                                                                |
 | `wmic product get name`   | Lists all installed software on the system. Useful for inventory or troubleshooting purposes.                                                                                                                               |
+| `wmiobject win32_winsat`  | Displays the Windows System Assessment Tool (WinSAT) scores, which provides hardware performance scores to quickly see a PCs overall performance.                                                                           |
 
 ![Example image](/assets/Posts/2025-12-04-Handy-Windows-Command-Prompt-commands/image-name.png)
