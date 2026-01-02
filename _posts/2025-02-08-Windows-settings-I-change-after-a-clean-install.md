@@ -2,7 +2,7 @@
 title: "Windows settings I change after a clean install"
 permalink: /Windows-settings-I-change-after-a-clean-install/
 #date: 2099-01-15T00:00:00-06:00
-last_modified_at: 2025-03-29
+last_modified_at: 2026-01-02
 comments_locked: false
 toc: true
 categories:
@@ -191,6 +191,15 @@ And the same taskbar with the buttons not combined:
 In the taskbar settings window, in the `Taskbar behaviors` section, change the `Combine taskbar buttons and hide labels` to `Never`.
 
 ![Taskbar settings to never group taskbar icons](/assets/Posts/2025-02-08-Windows-settings-I-change-after-a-clean-install/taskbar-settings-never-combine-taskbar-buttons.png)
+
+### Enable End Task on right-clicking taskbar icons
+
+Typically when an application hangs, you need to open the Task Manager to kill the app.
+You can enable `End Task` in the right-click context menu of taskbar icons to make it easier to kill unresponsive apps.
+
+To enable `End Task` on right-clicking taskbar icons, go to `Settings` > `System` > `For developers` and enable `End Task`.
+
+![Enable End Task on right-clicking taskbar icons](/assets/Posts/2025-02-08-Windows-settings-I-change-after-a-clean-install/enable-end-task-in-taskbar.png)
 
 ## Desktop settings
 
