@@ -197,6 +197,8 @@ In the taskbar settings window, in the `Taskbar behaviors` section, change the `
 Typically when an application hangs, you need to open the Task Manager to kill the app.
 You can enable `End Task` in the right-click context menu of taskbar icons to make it easier to kill unresponsive apps.
 
+![Screenshot of right-clicking a taskbar icon to show the End Task option](/assets/Posts/2025-02-08-Windows-settings-I-change-after-a-clean-install/end-task-in-taskbar.png)
+
 To enable `End Task` on right-clicking taskbar icons, go to `Settings` > `System` > `For developers` and enable `End Task`.
 
 ![Enable End Task on right-clicking taskbar icons](/assets/Posts/2025-02-08-Windows-settings-I-change-after-a-clean-install/enable-end-task-in-taskbar.png)
