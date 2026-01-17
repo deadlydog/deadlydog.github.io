@@ -39,6 +39,13 @@ code.highlighter-rouge {
 	background-color: #eeeeee;
 	color: #7502ff;
 }
+html[data-theme="dark"] code.highlighter-rouge {
+	background-color: #2d3748;
+	color: #d8b5f5;
+}
+html[data-theme="light"] code.highlighter-rouge {
+	background-color: #eeeeee; // The background color gets overridden by the '.page__content' style in light-mode without this.
+}
 
 // Make <kbd> HTML elements look like nice keyboard keys.
 kbd {
@@ -58,6 +65,13 @@ kbd {
 	margin: 0 .1em;
 	padding: .1em .6em;
 	text-shadow: 0 1px 0 #fff;
+}
+html[data-theme="dark"] kbd {
+	background-color: #1f2937;
+	border-color: #4b5563;
+	box-shadow: 0 1px 0 rgba(0, 0, 0, 0.45), 0 0 0 2px rgba(255, 255, 255, 0.04) inset;
+	color: #e5e7eb;
+	text-shadow: none;
 }
 
 // Style for our dynamically generated Copy Code Snippet buttons.
@@ -103,6 +117,11 @@ kbd {
 	// Value taken from the $sans-serif variable value in '_sass/minimal-mistakes/_variables.scss' of the minimal-mistakes repo.
 	font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
 }
+html[data-theme="dark"] .CopyCodeSnippetToClipboardButton.Tooltip .TooltipText {
+	color: #e5e7eb;
+	background-color: #111827;
+	border: 1px solid #374151;
+}
 
 // The little arrow on the tooltip that points toward it's element that makes it look like a speech bubble.
 .CopyCodeSnippetToClipboardButton.Tooltip .TooltipText::after {
@@ -116,6 +135,9 @@ kbd {
 	height: 0.1em;
 	border-style: solid;
 	border-color: transparent transparent transparent #fff;
+}
+html[data-theme="dark"] .CopyCodeSnippetToClipboardButton.Tooltip .TooltipText::after {
+	border-color: transparent transparent transparent #111827;
 }
 
 // Show the TooltipText when the hovering over the Tooltip element.
@@ -191,28 +213,4 @@ html[data-theme="dark"] .theme-toggle {
 
 html[data-theme="dark"] .theme-toggle:hover {
 	background: rgba(255, 255, 255, 0.08);
-}
-
-// Dark theme specific tweaks for custom elements.
-html[data-theme="dark"] code.highlighter-rouge {
-	background-color: #2d3748;
-	color: #d8b5f5;
-}
-
-html[data-theme="dark"] kbd {
-	background-color: #1f2937;
-	border-color: #4b5563;
-	box-shadow: 0 1px 0 rgba(0, 0, 0, 0.45), 0 0 0 2px rgba(255, 255, 255, 0.04) inset;
-	color: #e5e7eb;
-	text-shadow: none;
-}
-
-html[data-theme="dark"] .CopyCodeSnippetToClipboardButton.Tooltip .TooltipText {
-	color: #e5e7eb;
-	background-color: #111827;
-	border: 1px solid #374151;
-}
-
-html[data-theme="dark"] .CopyCodeSnippetToClipboardButton.Tooltip .TooltipText::after {
-	border-color: transparent transparent transparent #111827;
 }
