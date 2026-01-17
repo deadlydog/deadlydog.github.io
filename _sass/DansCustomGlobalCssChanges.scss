@@ -1,0 +1,138 @@
+//==================================================
+// All changes in this file are custom and apply to the entire site.
+//==================================================
+
+// Reduce the size of regular text in our posts a bit.
+.page__content {
+	font-size: 0.8em;
+}
+
+// Reducing the Page Content font size also reduces the Table Of Contents size a bit too much, so make that bigger.
+.toc {
+	font-size: $type-size-4;
+}
+
+// Increase the subtitle font size a bit and remove the bold from it.
+.site-subtitle {
+	font-size: $type-size-6;
+	font-weight: normal;
+}
+
+// Reduce the size of the comments text in our posts a bit.
+.comment__content-wrapper {
+	font-size: $type-size-6
+}
+
+// Reduce the amount of whitespace above and below the 'Recent Posts' heading on the home page.
+#home-page-recent-posts {
+	margin-top: -1em;
+	margin-bottom: -2em;
+}
+
+// Use more prominent colors for inline code text.
+code.highlighter-rouge {
+	background-color: #dbe4e8;
+	color: #7502ff;
+}
+
+// Make <kbd> HTML elements look like nice keyboard keys.
+kbd {
+	-moz-border-radius: 3px;
+	-moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 0 0 2px #fff inset;
+	-webkit-border-radius: 3px;
+	-webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 0 0 2px #fff inset;
+	background-color: #f7f7f7;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 0 0 2px #fff inset;
+	color: #333;
+	display: inline-block;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 0.8em;
+	line-height: 1.4;
+	margin: 0 .1em;
+	padding: .1em .6em;
+	text-shadow: 0 1px 0 #fff;
+}
+
+// Style for our dynamically generated Copy Code Snippet buttons.
+// We use Font Awesome for the button icon.
+.CopyCodeSnippetToClipboardButton {
+	// Hover the button on the top-right of the parent element.
+	position: absolute;
+	right: 0.5em;
+
+	cursor: pointer;
+	font-size: 1.5em; // Make copy icon a bit larger.
+}
+
+.CopyCodeSnippetToClipboardButton:hover {
+	font-weight: bolder; // This changes the Font Awesome icon to a bolder version.
+}
+
+.CopyCodeSnippetToClipboardButton.Tooltip {
+	// Marker class to indicate the element that has a tooltip, so we can show and hide the TooltipText when hovered over.
+	visibility: visible; // Simply put this property here to avoid IDE empty CSS ruleset warnings.
+}
+
+.CopyCodeSnippetToClipboardButton.Tooltip .TooltipText {
+	color: #555;
+	background-color: #fff;
+	text-align: center;
+	border-radius: 6px;
+
+	font-size: 0.75em; // Have to shrink text a bit, as we increased the font-size of the parent Tooltip.
+	padding: 0.3em 0.5em;
+	z-index: 1; // Ensure the TooltipText shows up on top of any other elements.
+
+	position: absolute;
+	right: 100%; // Ensure text shows up to the left of the element with the Tooltip.
+	margin-right: 0.5em; // Give a bit more padding so the Tooltip doesn't touch the element with the Tooltip.
+	top: 50%; // Center the tooltip vertically with the Tooltip element.
+	transform: translateY(-50%);
+
+	visibility: hidden;
+	opacity: 0;
+	transition: opacity 0.3s;
+
+	// Value taken from the $sans-serif variable value in '_sass/minimal-mistakes/_variables.scss' of the minimal-mistakes repo.
+	font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
+}
+
+// The little arrow on the tooltip that points toward it's element that makes it look like a speech bubble.
+.CopyCodeSnippetToClipboardButton.Tooltip .TooltipText::after {
+	content: ""; // Doesn't show up if the content is not set.
+	position: absolute;
+
+	left: 100%; // Make sure the arrow shows up on the right side of the TooltipText.
+	top: 50%; // Center the arrow vertically with the TooltipText.
+	transform: translateY(-50%);
+
+	height: 0.1em;
+	border-style: solid;
+	border-color: transparent transparent transparent #fff;
+}
+
+// Show the TooltipText when the hovering over the Tooltip element.
+.CopyCodeSnippetToClipboardButton.Tooltip:hover .TooltipText {
+	visibility: visible;
+	opacity: 1;
+}
+
+// Styles for easily positioning html-defined images in posts.
+img.left {
+	float: left;
+	margin-right: 0.5em;
+}
+
+img.right {
+	float: right;
+	margin-left: 0.5em;
+}
+
+// Google Ads use the <ins> tag to insert ads, and minimal-mistakes alters <ins> to use a bottom border to underline it.
+// Remove the underline so we don't see it when the ad does not take up the full container width.
+// It is nice for styling when debugging since ads are not loaded, but looks bad in production when ads do load.
+ins.adsbygoogle {
+	border-bottom: none;
+}

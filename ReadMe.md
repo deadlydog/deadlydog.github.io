@@ -107,7 +107,8 @@ This typically meant copying the file from the forked minimal-mistakes repo and 
   - Adds advertisements.
 - `_layouts/home.html`: Added id to 'Recent Posts' heading so we can adjust whitespace around it.
 - `_config.yml` file.
-- `assets/css/main.scss`:
+- `assets/css/main.scss`: Imported new `DansCustomGlobalCssChanges.scss` file.
+- `assets/css/DansCustomGlobalCssChanges.scss`: New file with global CSS changes.
   - Adjusted font sizes a bit.
   - Added class used for the site description in the masthead.html.
   - Adjusted colors used for inline code text.
@@ -115,9 +116,9 @@ This typically meant copying the file from the forked minimal-mistakes repo and 
 
 Here's a list of files I've added:
 
-- Everything in the `_posts` and `_drafts` directories.
+- Everything in the `_drafts`, `_posts`, and `_sass` directories.
 - The `_pages\About.md`, `_pages\Feedback.md`, `_pages\Kudos.md`, and `_pages\Privacy.md` pages.
-- Everything in the `_assets\Posts`, `_assets\Site`, and `_assets\js` directories.
+- Everything in the `_assets` directory, except `_assets/css/main.scss`.
 - Everything in the `_data\comments` directory.
 - Everything in the `deploy` directory, for defining the deployment pipeline and infrastructure as code.
 - `_includes/CookieNotice.html`: Cookie notice banner.
