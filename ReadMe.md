@@ -120,7 +120,6 @@ Here's a list of files I've added:
 - The `_pages\About.md`, `_pages\Feedback.md`, `_pages\Kudos.md`, and `_pages\Privacy.md` pages.
 - Everything in the `_assets` directory, except `_assets/css/main.scss`.
 - Everything in the `_data\comments` directory.
-- Everything in the `deploy` directory, for defining the deployment pipeline and infrastructure as code.
 - `_includes/CookieNotice.html`: Cookie notice banner.
 - `_includes/CustomWebsiteLevelCode.html`: Code to include on every page of the site.
   - Includes MS Clarity analytics.
