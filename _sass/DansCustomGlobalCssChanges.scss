@@ -191,7 +191,6 @@ ins.adsbygoogle {
 	align-items: center;
 	gap: 0.35em;
 	padding: 0.35em 0.75em;
-	margin-left: 0.75em;
 	border: 1px solid rgba(0, 0, 0, 0.12);
 	border-radius: 999px;
 	background: rgba(0, 0, 0, 0.03);
@@ -223,13 +222,4 @@ html[data-theme="dark"] .theme-toggle:hover {
 
 .theme-toggle__icon {
 	font-size: 0.95em;
-}
-
-.theme-toggle__label {
-	font-size: 0.9em;
-	font-weight: 600;
-}
-
-.masthead .theme-toggle {
-	margin-left: 1em;
 }
