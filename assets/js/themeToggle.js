@@ -107,7 +107,7 @@
 
 	function buildToggle()
 	{
-		var nav = document.querySelector('.greedy-nav');
+		var nav = document.getElementById('site-nav');
 		if (!nav)
 		{
 			return null;
@@ -152,6 +152,7 @@
 	toggleButton = buildToggle();
 	updateToggle();
 
+	// Listen for system theme changes.
 	systemQuery.addEventListener('change', function (event)
 	{
 		if (mode === 'system')
