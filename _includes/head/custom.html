@@ -1,5 +1,5 @@
 <script>
-(function () {
+function InitializeLightOrDarkMode() {
 	var storageKey = 'theme-preference';
 	var darkHref = '{{ '/assets/css/dark.css' | relative_url }}';
 	var systemQuery = window.matchMedia('(prefers-color-scheme: dark)');
@@ -53,5 +53,6 @@
 	}
 
 	darkStylesheet.media = linkMedia;
-})();
+}
+InitializeLightOrDarkMode();
 </script>
