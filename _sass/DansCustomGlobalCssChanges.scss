@@ -228,6 +228,19 @@ html[data-theme="dark"] .theme-toggle__icon {
 	color: #f7e025;
 }
 
+.theme-toggle--spinning .theme-toggle__icon {
+	animation: theme-toggle-spin 1.00s ease-out;
+}
+@keyframes theme-toggle-spin {
+	from {
+		transform: rotate(0deg);
+	}
+
+	to {
+		transform: rotate(360deg);
+	}
+}
+
 // The masthead background color was showing up as the wrong color in dark mode, so explicitly set it.
 html[data-theme="dark"] #site-nav {
 	background-color: #0f172a; // Keep this color in sync with themeToggle.js and head/custom.html.
