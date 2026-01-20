@@ -202,3 +202,8 @@ html[data-theme="dark"] .theme-toggle:hover {
 .theme-toggle__icon {
 	font-size: 0.95em;
 }
+
+// The masthead background color was showing up as the wrong color in dark mode, so explicitly set it.
+html[data-theme="dark"] #site-nav {
+	background-color: #0f172a; // Keep this color in sync with themeToggle.js and head/custom.html.
+}
