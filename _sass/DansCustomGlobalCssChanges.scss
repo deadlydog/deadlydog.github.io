@@ -2,6 +2,19 @@
 // All changes in this file are custom and apply to the entire site.
 //==================================================
 
+// The masthead background color shows up as the wrong color in dark mode, so explicitly set it.
+html[data-theme="dark"] #site-nav {
+	background-color: #0f172a; // Keep this color in sync with themeToggle.js and head/custom.html.
+}
+
+// Change the site title's color in dark mode to "pop" more.
+html[data-theme="dark"] .site-title {
+	color: #f7e025;
+}
+html[data-theme="dark"] .site-subtitle {
+	color: #eaeaea; // Reset subtitle color in dark mode so it doesn't inherit the title color.
+}
+
 // Reduce the size of regular text in our posts a bit.
 .page__content {
 	font-size: 0.8em;
@@ -218,16 +231,4 @@ html[data-theme="dark"] .theme-toggle__icon {
 	to {
 		transform: rotate(360deg);
 	}
-}
-
-// The masthead background color was showing up as the wrong color in dark mode, so explicitly set it.
-html[data-theme="dark"] #site-nav {
-	background-color: #0f172a; // Keep this color in sync with themeToggle.js and head/custom.html.
-}
-
-html[data-theme="dark"] .site-title {
-	color: #f7e025;
-}
-html[data-theme="dark"] .site-subtitle {
-	color: #eaeaea; // Reset subtitle color in dark mode so it doesn't inherit the title color.
 }
