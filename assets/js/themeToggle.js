@@ -125,6 +125,9 @@
 				return;
 			}
 
+			// Animate the theme toggle button since it was clicked to change state.
+			button.classList.add('theme-toggle--spinning');
+
 			var nextMode = currentTheme() === 'dark' ? 'light' : 'dark';
 			setMode(nextMode, true);
 		});
