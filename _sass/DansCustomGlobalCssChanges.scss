@@ -232,3 +232,10 @@ html[data-theme="dark"] .theme-toggle__icon {
 html[data-theme="dark"] #site-nav {
 	background-color: #0f172a; // Keep this color in sync with themeToggle.js and head/custom.html.
 }
+
+html[data-theme="dark"] .site-title {
+	color: #f7e025;
+}
+html[data-theme="dark"] .site-subtitle {
+	color: #eaeaea; // Reset subtitle color in dark mode so it doesn't inherit the title color.
+}
