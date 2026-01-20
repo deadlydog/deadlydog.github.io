@@ -66,9 +66,8 @@
 		var theme = currentTheme();
 		var isDark = theme === 'dark';
 		var icon = isDark ? 'fa-sun' : 'fa-moon';
-		var iconColor = isDark ? '#f7e025' : '#1200e6';
 
-		toggleButton.innerHTML = '<i class="fas ' + icon + ' theme-toggle__icon" aria-hidden="true" style="color:' + iconColor + ';"></i>'
+		toggleButton.innerHTML = '<i class="fas ' + icon + ' theme-toggle__icon" aria-hidden="true"></i>'
 		toggleButton.setAttribute('aria-pressed', isDark ? 'true' : 'false');
 		toggleButton.setAttribute('aria-label', 'Toggle between light and dark mode');
 	}

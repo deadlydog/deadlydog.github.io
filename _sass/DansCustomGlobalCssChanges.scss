@@ -201,6 +201,10 @@ html[data-theme="dark"] .theme-toggle:hover {
 
 .theme-toggle__icon {
 	font-size: 0.95em;
+	color: #1200e6;
+}
+html[data-theme="dark"] .theme-toggle__icon {
+	color: #f7e025;
 }
 
 // The masthead background color was showing up as the wrong color in dark mode, so explicitly set it.
