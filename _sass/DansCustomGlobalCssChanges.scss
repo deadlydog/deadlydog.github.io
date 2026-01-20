@@ -26,7 +26,12 @@
 // Reduce the amount of whitespace above and below the 'Recent Posts' heading on the home page.
 #home-page-recent-posts {
 	margin-top: -1em;
-	margin-bottom: -2em;
+	margin-bottom: -1em;
+}
+
+// Reduce the amount of whitespace between post titles on the home page.
+h2.archive__item-title {
+	margin-top: 1.2em;
 }
 
 // Use more prominent colors for inline code text.
