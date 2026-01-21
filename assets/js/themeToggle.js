@@ -135,7 +135,7 @@ function CreateAndInjectLightDarkModeToggleButtonAndSetCurrentTheme() {
 			setMode(nextMode, true);
 		});
 
-		// Remove the spinning class after the animation ends.
+		// Remove the spinning class after the animation ends. Not required, but is good practice.
 		button.addEventListener('animationend', function ()
 		{
 			button.classList.remove('theme-toggle--spinning');
