@@ -1,10 +1,10 @@
 <script>
-function InitializeLightOrDarkMode() {
-	var storageKey = 'theme-preference';
-	var darkHref = '{{ '/assets/css/dark.css' | relative_url }}';
-	var systemQuery = window.matchMedia('(prefers-color-scheme: dark)');
-	var stored = null;
-	var mode = 'system';
+function InitializeLightOrDarkModeStylesheet() {
+	let storageKey = 'theme-preference';
+	let darkHref = '{{ '/assets/css/dark.css' | relative_url }}';
+	let systemQuery = window.matchMedia('(prefers-color-scheme: dark)');
+	let stored = null;
+	let mode = 'system';
 
 	try
 	{
@@ -16,12 +16,13 @@ function InitializeLightOrDarkMode() {
 	}
 	catch (error)
 	{
+		console.warn('Could not access localStorage to get theme preference:', error);
 		mode = 'system';
 	}
 
-	var theme = mode === 'system' ? (systemQuery.matches ? 'dark' : 'light') : mode;
-	var linkMedia = mode === 'system' ? '(prefers-color-scheme: dark)' : (theme === 'dark' ? 'all' : 'not all');
-	var docEl = document.documentElement;
+	let theme = mode === 'system' ? (systemQuery.matches ? 'dark' : 'light') : mode;
+	let linkMedia = mode === 'system' ? '(prefers-color-scheme: dark)' : (theme === 'dark' ? 'all' : 'not all');
+	let docEl = document.documentElement;
 
 	docEl.dataset.theme = theme;
 	docEl.dataset.themeMode = mode;
@@ -41,7 +42,7 @@ function InitializeLightOrDarkMode() {
 		docEl.style.colorScheme = 'light';
 	}
 
-	var darkStylesheet = document.getElementById('theme-dark');
+	let darkStylesheet = document.getElementById('theme-dark');
 
 	if (!darkStylesheet)
 	{
@@ -54,5 +55,5 @@ function InitializeLightOrDarkMode() {
 
 	darkStylesheet.media = linkMedia;
 }
-InitializeLightOrDarkMode();
+InitializeLightOrDarkModeStylesheet();
 </script>
