@@ -225,8 +225,9 @@ html[data-theme="dark"] .theme-toggle:hover {
 	background: rgba(255, 255, 255, 0.08);
 }
 
+// Make the button look like it's being pressed downward when clicked.
 .theme-toggle:active {
-	transform: translateY(1px);
+	transform: translateY(3px);
 }
 
 .theme-toggle:focus-visible {
@@ -234,6 +235,7 @@ html[data-theme="dark"] .theme-toggle:hover {
 	outline-offset: 2px;
 }
 
+// Set the icon colors for light and dark modes.
 .theme-toggle__icon {
 	font-size: 0.95em;
 	color: #4e91a5;
@@ -242,6 +244,7 @@ html[data-theme="dark"] .theme-toggle__icon {
 	color: #f7e025;
 }
 
+// Used to animate switching between light and dark modes.
 .theme-toggle--spinning .theme-toggle__icon {
 	animation: theme-toggle-spin 1.00s ease-out;
 }
