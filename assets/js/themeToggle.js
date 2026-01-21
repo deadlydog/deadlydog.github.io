@@ -168,7 +168,9 @@ function CreateAndInjectLightDarkModeToggleButtonAndSetCurrentTheme() {
 	{
 		if (mode === 'system')
 		{
-			document.documentElement.dataset.theme = event.matches ? 'dark' : 'light';
+			let theme = event.matches ? 'dark' : 'light';
+			document.documentElement.dataset.theme = theme;
+			applyBaseColors(theme);
 			updateToggle();
 		}
 	});
