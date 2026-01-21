@@ -105,24 +105,21 @@ This typically meant copying the file from the forked minimal-mistakes repo and 
 - `_includes/footer/custom.html`: Replaced empty file contents with my own code that:
   - Adds a Donate section.
   - Adds advertisements.
+- `_includes/head/custom.html`: Added JavaScript code to initialize dark/light theme stylesheets.
 - `_layouts/home.html`: Added id to 'Recent Posts' heading so we can adjust whitespace around it.
 - `_config.yml` file.
-- `assets/css/main.scss`: Imported new `DansCustomGlobalCssChanges.scss` file.
-- `assets/css/DansCustomGlobalCssChanges.scss`: New file with global CSS changes.
-  - Adjusted font sizes a bit.
-  - Added class used for the site description in the masthead.html.
-  - Adjusted colors used for inline code text.
-  - Added styling for <kbd> elements.
+- `assets/css/main.scss`: Imported new `DansCustomGlobalCssChanges.scss` file to apply custom global CSS changes.
 
 Here's a list of files I've added:
 
 - Everything in the `_drafts`, `_posts`, and `_sass` directories.
 - The `_pages\About.md`, `_pages\Feedback.md`, `_pages\Kudos.md`, and `_pages\Privacy.md` pages.
-- Everything in the `_assets` directory, except `_assets/css/main.scss`.
+- Everything in the `assets` directory, except `assets/css/main.scss`.
 - Everything in the `_data\comments` directory.
 - `_includes/CookieNotice.html`: Cookie notice banner.
-- `_includes/CustomWebsiteLevelCode.html`: Code to include on every page of the site.
+- `_includes/CustomCodeAtVeryBottomOfPage.html`: Code to include on every page of the site.
   - Includes MS Clarity analytics.
+  - Dynamically adds the light-dark mode toggle button to the site masthead.
   - Dynamically adds a "Copy to clipboard" button to all code blocks.
   - Add verification link for my Mastodon profile.
   - Includes the cookie notice prompt.
