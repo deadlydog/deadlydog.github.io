@@ -1,8 +1,8 @@
 function CreateAndInjectLightDarkModeToggleButtonAndSetCurrentTheme() {
-	var storageKey = 'theme-preference';
-	var darkStylesheet = document.getElementById('theme-dark');
-	var systemQuery = window.matchMedia('(prefers-color-scheme: dark)');
-	var storedThemeValue = null;
+	let storageKey = 'theme-preference';
+	let darkStylesheet = document.getElementById('theme-dark');
+	let systemQuery = globalThis.matchMedia('(prefers-color-scheme: dark)');
+	let storedThemeValue = null;
 
 	try
 	{
@@ -10,11 +10,14 @@ function CreateAndInjectLightDarkModeToggleButtonAndSetCurrentTheme() {
 	}
 	catch (error)
 	{
+		console.warn('Could not access localStorage to retrieve theme preference:', error);
+
+		// If we couldn't access localStorage, assume no stored value.
 		storedThemeValue = null;
 	}
 
-	var mode = storedThemeValue === 'dark' || storedThemeValue === 'light' ? storedThemeValue : 'system';
-	var toggleButton = null;
+	let mode = storedThemeValue === 'dark' || storedThemeValue === 'light' ? storedThemeValue : 'system';
+	let toggleButton = null;
 
 	function applyStylesheet(targetMode)
 	{
@@ -32,7 +35,7 @@ function CreateAndInjectLightDarkModeToggleButtonAndSetCurrentTheme() {
 		darkStylesheet.media = targetMode === 'dark' ? 'all' : 'not all';
 	}
 
-	function currentTheme()
+	function getCurrentTheme()
 	{
 		return mode === 'system' ? (systemQuery.matches ? 'dark' : 'light') : mode;
 	}
@@ -52,7 +55,7 @@ function CreateAndInjectLightDarkModeToggleButtonAndSetCurrentTheme() {
 		}
 		catch (error)
 		{
-			return;
+			console.warn('Could not persist theme preference to localStorage:', error);
 		}
 	}
 
@@ -63,9 +66,9 @@ function CreateAndInjectLightDarkModeToggleButtonAndSetCurrentTheme() {
 			return;
 		}
 
-		var theme = currentTheme();
-		var isDark = theme === 'dark';
-		var icon = isDark ? 'fa-sun' : 'fa-moon';
+		let theme = getCurrentTheme();
+		let isDark = theme === 'dark';
+		let icon = isDark ? 'fa-sun' : 'fa-moon';
 
 		toggleButton.innerHTML = '<i class="fas ' + icon + ' theme-toggle__icon" aria-hidden="true"></i>'
 		toggleButton.setAttribute('aria-pressed', isDark ? 'true' : 'false');
@@ -92,7 +95,7 @@ function CreateAndInjectLightDarkModeToggleButtonAndSetCurrentTheme() {
 	{
 		mode = targetMode;
 		applyStylesheet(targetMode);
-		var theme = currentTheme();
+		let theme = getCurrentTheme();
 		document.documentElement.dataset.theme = theme;
 		applyBaseColors(theme);
 
@@ -106,13 +109,13 @@ function CreateAndInjectLightDarkModeToggleButtonAndSetCurrentTheme() {
 
 	function buildToggle()
 	{
-		var nav = document.getElementById('site-nav');
+		let nav = document.getElementById('site-nav');
 		if (!nav)
 		{
 			return null;
 		}
 
-		var button = document.createElement('button');
+		let button = document.createElement('button');
 		button.type = 'button';
 		button.className = 'theme-toggle';
 		button.title = 'Toggle light and dark mode. Alt+Click to follow the system setting again.';
@@ -128,14 +131,14 @@ function CreateAndInjectLightDarkModeToggleButtonAndSetCurrentTheme() {
 			// Animate the theme toggle button since it was clicked to change state.
 			button.classList.add('theme-toggle--spinning');
 
-			var nextMode = currentTheme() === 'dark' ? 'light' : 'dark';
+			let nextMode = getCurrentTheme() === 'dark' ? 'light' : 'dark';
 			setMode(nextMode, true);
 		});
 
-		var insertBeforeNode = nav.querySelector('.search__toggle') || nav.querySelector('.greedy-nav__toggle');
-		if (insertBeforeNode && insertBeforeNode.parentNode === nav)
+		let insertBeforeNode = nav.querySelector('.search__toggle') || nav.querySelector('.greedy-nav__toggle');
+		if (insertBeforeNode?.parentNode === nav)
 		{
-			nav.insertBefore(button, insertBeforeNode);
+			insertBeforeNode.before(button);
 		}
 		else
 		{
@@ -147,7 +150,7 @@ function CreateAndInjectLightDarkModeToggleButtonAndSetCurrentTheme() {
 
 	// Initialize the current theme and apply styles.
 	applyStylesheet(mode);
-	var initialTheme = currentTheme();
+	let initialTheme = getCurrentTheme();
 	document.documentElement.dataset.theme = initialTheme;
 	applyBaseColors(initialTheme);
 
