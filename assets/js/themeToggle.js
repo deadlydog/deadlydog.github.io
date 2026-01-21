@@ -1,19 +1,19 @@
-(function () {
+function CreateAndInjectLightDarkModeToggleButtonAndSetCurrentTheme() {
 	var storageKey = 'theme-preference';
 	var darkStylesheet = document.getElementById('theme-dark');
 	var systemQuery = window.matchMedia('(prefers-color-scheme: dark)');
-	var stored = null;
+	var storedThemeValue = null;
 
 	try
 	{
-		stored = localStorage.getItem(storageKey);
+		storedThemeValue = localStorage.getItem(storageKey);
 	}
 	catch (error)
 	{
-		stored = null;
+		storedThemeValue = null;
 	}
 
-	var mode = stored === 'dark' || stored === 'light' ? stored : 'system';
+	var mode = storedThemeValue === 'dark' || storedThemeValue === 'light' ? storedThemeValue : 'system';
 	var toggleButton = null;
 
 	function applyStylesheet(targetMode)
@@ -163,4 +163,5 @@
 			updateToggle();
 		}
 	});
-})();
+}
+CreateAndInjectLightDarkModeToggleButtonAndSetCurrentTheme();
