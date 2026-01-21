@@ -246,7 +246,7 @@ html[data-theme="dark"] .theme-toggle__icon {
 
 // Used to animate switching between light and dark modes.
 .theme-toggle--spinning .theme-toggle__icon {
-	animation: theme-toggle-spin 1.00s ease-out;
+	animation: theme-toggle-spin 1s ease-out;
 }
 @keyframes theme-toggle-spin {
 	from {
