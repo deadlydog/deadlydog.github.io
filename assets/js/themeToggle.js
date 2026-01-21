@@ -135,6 +135,12 @@ function CreateAndInjectLightDarkModeToggleButtonAndSetCurrentTheme() {
 			setMode(nextMode, true);
 		});
 
+		// Remove the spinning class after the animation ends.
+		button.addEventListener('animationend', function ()
+		{
+			button.classList.remove('theme-toggle--spinning');
+		});
+
 		let insertBeforeNode = nav.querySelector('.search__toggle') || nav.querySelector('.greedy-nav__toggle');
 		if (insertBeforeNode?.parentNode === nav)
 		{
