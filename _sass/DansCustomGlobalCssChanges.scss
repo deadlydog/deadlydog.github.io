@@ -12,6 +12,7 @@ html[data-theme="dark"] .site-title {
 	color: #f7e025;
 }
 html[data-theme="dark"] .site-subtitle {
+	// This matches the minimal-mistakes default text color: https://github.com/mmistakes/minimal-mistakes/blob/master/_sass/minimal-mistakes/skins/_dark.scss
 	color: #eaeaea; // Reset subtitle color in dark mode so it doesn't inherit the title color.
 }
 
