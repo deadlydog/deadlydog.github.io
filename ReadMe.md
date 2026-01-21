@@ -113,9 +113,9 @@ This typically meant copying the file from the forked minimal-mistakes repo and 
 Here's a list of files I've added:
 
 - Everything in the `_drafts`, `_posts`, and `_sass` directories.
-- The `_pages\About.md`, `_pages\Feedback.md`, `_pages\Kudos.md`, and `_pages\Privacy.md` pages.
+- The `_pages/About.md`, `_pages/Feedback.md`, `_pages/Kudos.md`, and `_pages/Privacy.md` pages.
 - Everything in the `assets` directory, except `assets/css/main.scss`.
-- Everything in the `_data\comments` directory.
+- Everything in the `_data/comments` directory.
 - `_includes/CookieNotice.html`: Cookie notice banner.
 - `_includes/CustomCodeAtVeryBottomOfPage.html`: Code to include on every page of the site.
   - Includes MS Clarity analytics.
@@ -137,7 +137,7 @@ Here's a list of files I've added:
 ## Additional Info
 
 This site uses [Staticman](https://github.com/eduardoboucas/staticman) to handle comments.
-You can find the code and documentation for my Staticman instance [here](https://github.com/deadlydog/deadlydog.github.io-staticman).
+You can find [the code and documentation for my Staticman instance here](https://github.com/deadlydog/deadlydog.github.io-staticman).
 
 ### Supported code language highlighters
 
