@@ -2,6 +2,20 @@
 // All changes in this file are custom and apply to the entire site.
 //==================================================
 
+// The masthead background color shows up as the wrong color in dark mode, so explicitly set it.
+html[data-theme="dark"] #site-nav {
+	background-color: #0f172a; // Keep this color in sync with themeToggle.js and head/custom.html.
+}
+
+// Change the site title's color in dark mode to "pop" more.
+html[data-theme="dark"] .site-title {
+	color: #f7e025;
+}
+html[data-theme="dark"] .site-subtitle {
+	// This matches the minimal-mistakes default text color: https://github.com/mmistakes/minimal-mistakes/blob/master/_sass/minimal-mistakes/skins/_dark.scss
+	color: #eaeaea; // Reset subtitle color in dark mode so it doesn't inherit the title color.
+}
+
 // Reduce the size of regular text in our posts a bit.
 .page__content {
 	font-size: 0.8em;
@@ -36,29 +50,46 @@ h2.archive__item-title {
 
 // Specify fixed sidebar image height to avoid layout jumping when loading.
 .author__avatar {
-	min-width: 110px;
-	min-height: 85.5px; // May need to adjust this if I ever change the sidebar user image.
+	width: 110px;
+	height: 85.5px; // May need to adjust this if I ever change the sidebar user image.
 	vertical-align: middle;
 }
 // Prevent sidebar image from shrinking too small on slightly smaller screens.
 @media only screen and (max-width: 64em) {
 	.author__avatar {
-		min-width: 110px;
-		min-height: 85.5px; // May need to adjust this if I ever change the sidebar user image.
+		width: 110px;
+		height: 85.5px; // May need to adjust this if I ever change the sidebar user image.
 	}
 }
 // Shrink sidebar image on small screens to avoid it taking up too much space.
 @media only screen and (max-width: 32em) {
 	.author__avatar {
-		min-width: 50px;
-		min-height: 37.5px; // May need to adjust this if I ever change the sidebar user image.
+		width: 50px;
+		height: 37.5px; // May need to adjust this if I ever change the sidebar user image.
+	}
+}
+// Ensure the default image border stays applied for middle screen sizes.
+@media (min-width: 32em) {
+	.author__avatar img {
+		padding: 5px;
+		border: 1px solid #f2f3f3;
+	}
+	html[data-theme="dark"] .site-title {
+		border-color: #51555d;
 	}
 }
 
 // Use more prominent colors for inline code text.
 code.highlighter-rouge {
-	background-color: #dbe4e8;
+	background-color: #eeeeee;
 	color: #7502ff;
+}
+html[data-theme="dark"] code.highlighter-rouge {
+	background-color: #2d3748;
+	color: #d8b5f5;
+}
+html[data-theme="light"] code.highlighter-rouge {
+	background-color: #eeeeee; // The background color gets overridden by the '.page__content' style in light-mode without this.
 }
 
 // Make <kbd> HTML elements look like nice keyboard keys.
@@ -79,6 +110,13 @@ kbd {
 	margin: 0 .1em;
 	padding: .1em .6em;
 	text-shadow: 0 1px 0 #fff;
+}
+html[data-theme="dark"] kbd {
+	background-color: #1f2937;
+	border-color: #4b5563;
+	box-shadow: 0 1px 0 rgba(0, 0, 0, 0.45), 0 0 0 2px rgba(255, 255, 255, 0.04) inset;
+	color: #e5e7eb;
+	text-shadow: none;
 }
 
 // Style for our dynamically generated Copy Code Snippet buttons.
@@ -124,6 +162,11 @@ kbd {
 	// Value taken from the $sans-serif variable value in '_sass/minimal-mistakes/_variables.scss' of the minimal-mistakes repo.
 	font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
 }
+html[data-theme="dark"] .CopyCodeSnippetToClipboardButton.Tooltip .TooltipText {
+	color: #e5e7eb;
+	background-color: #111827;
+	border: 1px solid #374151;
+}
 
 // The little arrow on the tooltip that points toward it's element that makes it look like a speech bubble.
 .CopyCodeSnippetToClipboardButton.Tooltip .TooltipText::after {
@@ -137,6 +180,9 @@ kbd {
 	height: 0.1em;
 	border-style: solid;
 	border-color: transparent transparent transparent #fff;
+}
+html[data-theme="dark"] .CopyCodeSnippetToClipboardButton.Tooltip .TooltipText::after {
+	border-color: transparent transparent transparent #111827;
 }
 
 // Show the TooltipText when the hovering over the Tooltip element.
@@ -161,4 +207,71 @@ img.right {
 // It is nice for styling when debugging since ads are not loaded, but looks bad in production when ads do load.
 ins.adsbygoogle {
 	border-bottom: none;
+}
+
+// Theme toggle button styling.
+.theme-toggle {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.35em;
+	padding: 0.35em 0.35em;
+	border: 1px solid rgba(0, 0, 0, 0.12);
+	border-radius: 999px;
+	background: rgba(0, 0, 0, 0.03);
+	color: inherit;
+	cursor: pointer;
+	font-size: 0.95em;
+	transition: background-color 150ms ease, border-color 150ms ease, transform 150ms ease;
+}
+html[data-theme="dark"] .theme-toggle {
+	border-color: rgba(255, 255, 255, 0.2);
+	background: rgba(255, 255, 255, 0.04);
+}
+
+.theme-toggle:hover {
+	background: rgba(0, 0, 0, 0.06);
+}
+html[data-theme="dark"] .theme-toggle:hover {
+	background: rgba(255, 255, 255, 0.08);
+}
+
+// Make the button look like it's being pressed downward when clicked.
+.theme-toggle:active {
+	transform: translateY(3px);
+}
+
+.theme-toggle:focus-visible {
+	outline: 2px solid #2563eb;
+	outline-offset: 2px;
+}
+
+// Set the icon colors for light and dark modes.
+.theme-toggle__icon {
+	font-size: 0.95em;
+	color: #4e91a5;
+}
+html[data-theme="dark"] .theme-toggle__icon {
+	color: #f7e025;
+}
+
+// Switch Font Awesome icons for light and dark modes.
+.theme-toggle__icon::before {
+	content: "\f186"; // Unicode for Font Awesome fa-moon.
+}
+html[data-theme="dark"] .theme-toggle__icon::before {
+	content: "\f185"; // Unicode for Font Awesome fa-sun.
+}
+
+// Used to animate switching between light and dark modes.
+.theme-toggle--spinning .theme-toggle__icon {
+	animation: theme-toggle-spin 1s ease-out;
+}
+@keyframes theme-toggle-spin {
+	from {
+		transform: rotate(0deg);
+	}
+
+	to {
+		transform: rotate(360deg);
+	}
 }
