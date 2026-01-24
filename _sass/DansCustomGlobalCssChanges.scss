@@ -34,6 +34,27 @@ h2.archive__item-title {
 	margin-top: 1.2em;
 }
 
+// Specify fixed sidebar image height to avoid layout jumping when loading.
+.author__avatar {
+	min-width: 110px;
+	min-height: 85.5px; // May need to adjust this if I ever change the sidebar user image.
+	vertical-align: middle;
+}
+// Prevent sidebar image from shrinking too small on slightly smaller screens.
+@media only screen and (max-width: 64em) {
+	.author__avatar {
+		min-width: 110px;
+		min-height: 85.5px; // May need to adjust this if I ever change the sidebar user image.
+	}
+}
+// Shrink sidebar image on small screens to avoid it taking up too much space.
+@media only screen and (max-width: 32em) {
+	.author__avatar {
+		min-width: 50px;
+		min-height: 37.5px; // May need to adjust this if I ever change the sidebar user image.
+	}
+}
+
 // Use more prominent colors for inline code text.
 code.highlighter-rouge {
 	background-color: #dbe4e8;
