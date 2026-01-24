@@ -50,22 +50,32 @@ h2.archive__item-title {
 
 // Specify fixed sidebar image height to avoid layout jumping when loading.
 .author__avatar {
-	min-width: 110px;
-	min-height: 85.5px; // May need to adjust this if I ever change the sidebar user image.
+	width: 110px;
+	height: 85.5px; // May need to adjust this if I ever change the sidebar user image.
 	vertical-align: middle;
 }
 // Prevent sidebar image from shrinking too small on slightly smaller screens.
 @media only screen and (max-width: 64em) {
 	.author__avatar {
-		min-width: 110px;
-		min-height: 85.5px; // May need to adjust this if I ever change the sidebar user image.
+		width: 110px;
+		height: 85.5px; // May need to adjust this if I ever change the sidebar user image.
 	}
 }
 // Shrink sidebar image on small screens to avoid it taking up too much space.
 @media only screen and (max-width: 32em) {
 	.author__avatar {
-		min-width: 50px;
-		min-height: 37.5px; // May need to adjust this if I ever change the sidebar user image.
+		width: 50px;
+		height: 37.5px; // May need to adjust this if I ever change the sidebar user image.
+	}
+}
+// Ensure the default image border stays applied for middle screen sizes.
+@media (min-width: 32em) {
+	.author__avatar img {
+		padding: 5px;
+		border: 1px solid #f2f3f3;
+	}
+	html[data-theme="dark"] .site-title {
+		border-color: #51555d;
 	}
 }
 
