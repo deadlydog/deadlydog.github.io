@@ -68,11 +68,8 @@ function CreateAndInjectLightDarkModeToggleButtonAndSetCurrentTheme() {
 
 		let theme = getCurrentTheme();
 		let isDark = theme === 'dark';
-		let icon = isDark ? 'fa-sun' : 'fa-moon';
 
-		toggleButton.innerHTML = '<i class="fas ' + icon + ' theme-toggle__icon" aria-hidden="true"></i>'
 		toggleButton.setAttribute('aria-pressed', isDark ? 'true' : 'false');
-		toggleButton.setAttribute('aria-label', 'Toggle between light and dark mode');
 	}
 
 	function applyBaseColors(theme)
@@ -109,16 +106,7 @@ function CreateAndInjectLightDarkModeToggleButtonAndSetCurrentTheme() {
 
 	function buildToggle()
 	{
-		let nav = document.getElementById('site-nav');
-		if (!nav)
-		{
-			return null;
-		}
-
-		let button = document.createElement('button');
-		button.type = 'button';
-		button.className = 'theme-toggle';
-		button.title = 'Toggle light and dark mode. Alt+Click to follow the system setting again.';
+		let button = document.getElementById('ThemeToggleButton');
 
 		button.addEventListener('click', function (event)
 		{
@@ -140,16 +128,6 @@ function CreateAndInjectLightDarkModeToggleButtonAndSetCurrentTheme() {
 		{
 			button.classList.remove('theme-toggle--spinning');
 		});
-
-		let insertBeforeNode = nav.querySelector('.search__toggle') || nav.querySelector('.greedy-nav__toggle');
-		if (insertBeforeNode?.parentNode === nav)
-		{
-			insertBeforeNode.before(button);
-		}
-		else
-		{
-			nav.appendChild(button);
-		}
 
 		return button;
 	}

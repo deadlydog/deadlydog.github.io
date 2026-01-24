@@ -254,6 +254,14 @@ html[data-theme="dark"] .theme-toggle__icon {
 	color: #f7e025;
 }
 
+// Switch Font Awesome icons for light and dark modes.
+.theme-toggle__icon::before {
+	content: "\f186"; // Unicode for Font Awesome fa-moon.
+}
+html[data-theme="dark"] .theme-toggle__icon::before {
+	content: "\f185"; // Unicode for Font Awesome fa-sun.
+}
+
 // Used to animate switching between light and dark modes.
 .theme-toggle--spinning .theme-toggle__icon {
 	animation: theme-toggle-spin 1s ease-out;

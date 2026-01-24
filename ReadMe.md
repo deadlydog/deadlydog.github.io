@@ -98,15 +98,16 @@ This typically meant copying the file from the forked minimal-mistakes repo and 
 - `_includes/analytics-providers/google-gtag.html`:
   - Replaced contents with updated Google Analytics tags added in 2023.
   - Wrapped the Google Analytics code in a function so we can control if it runs or not based on our cookie consent requirements.
-- `_includes/comments.html`: Added logic to sort comments by date.
-- `_layouts/default.html`: Added code to the bottom of the file that:
-  - Includes cookie notice prompt.
-  - Includes website-level scripts that need to be ran.
 - `_includes/footer/custom.html`: Replaced empty file contents with my own code that:
   - Adds a Donate section.
   - Adds advertisements.
 - `_includes/head/custom.html`: Added JavaScript code to initialize dark/light theme stylesheets.
+- `_includes/masthead.html`: Added code to add the light-dark mode toggle button to the site masthead.
+- `_layouts/default.html`: Added code to the bottom of the file that:
+  - Includes cookie notice prompt.
+  - Includes website-level scripts that need to be ran.
 - `_layouts/home.html`: Added id to 'Recent Posts' heading so we can adjust whitespace around it.
+- `_layouts/single.html`: Added code for advertisements above and below post content.
 - `_config.yml` file.
 - `assets/css/main.scss`: Imported new `DansCustomGlobalCssChanges.scss` file to apply custom global CSS changes.
 
