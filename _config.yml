@@ -17,7 +17,7 @@
 # Review documentation to determine if you should use `theme` or `remote_theme`
 # https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#installing-the-theme
 
-remote_theme: mmistakes/minimal-mistakes@bc0c83c # Specify the branch, tag, or commit so that if they break the theme with updates, it won't affect our site (e.g. mmistakes/minimal-mistakes@2513357). Remove the '@' and everything after it to use the tip of the master branch (be careful as breaking changes to the theme will also be applied).
+remote_theme: mmistakes/minimal-mistakes@4.27.3 # Specify the branch, tag, or commit so that if they break the theme with updates, it won't affect our site (e.g. mmistakes/minimal-mistakes@2513357). Remove the '@' and everything after it to use the tip of the master branch (be careful as breaking changes to the theme will also be applied).
 minimal_mistakes_skin: "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
