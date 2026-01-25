@@ -117,16 +117,17 @@ Here's a list of files I've added:
 - The `_pages/About.md`, `_pages/Feedback.md`, `_pages/Kudos.md`, and `_pages/Privacy.md` pages.
 - Everything in the `assets` directory, except `assets/css/main.scss`.
 - Everything in the `_data/comments` directory.
-- `_includes/CookieNotice.html`: Cookie notice banner.
-- `_includes/CustomCodeAtVeryBottomOfPage.html`: Code to include on every page of the site.
-  - Includes MS Clarity analytics.
-  - Dynamically adds the light-dark mode toggle button to the site masthead.
-  - Dynamically adds a "Copy to clipboard" button to all code blocks.
-  - Add verification link for my Mastodon profile.
-  - Includes the cookie notice prompt.
-- `_includes/DonationButtonAndModal.html`: All code for the Donation button and modal components.
-- `_includes/MicrosoftClarityAnalytics.html`: Microsoft Clarity analytics code.
-- `_includes/RunThirdPartyCodeThatUsesCookies.js`: Calls third-party code that uses cookies (e.g. analytics, ads).
+- Everything in the `_includes/_DansCustomFiles` directory.
+  - `_includes/_DansCustomFiles/CookieNotice.html`: Cookie notice banner.
+  - `_includes/_DansCustomFiles/CustomCodeAtVeryBottomOfPage.html`: Code to include on every page of the site.
+    - Includes MS Clarity analytics.
+    - Dynamically adds the light-dark mode toggle button to the site masthead.
+    - Dynamically adds a "Copy to clipboard" button to all code blocks.
+    - Add verification link for my Mastodon profile.
+    - Includes the cookie notice prompt.
+  - `_includes/_DansCustomFiles/DonationButtonAndModal.html`: All code for the Donation button and modal components.
+  - `_includes/_DansCustomFiles/MicrosoftClarityAnalytics.html`: Microsoft Clarity analytics code.
+  - `_includes/_DansCustomFiles/RunThirdPartyCodeThatUsesCookies.js`: Calls third-party code that uses cookies (e.g. analytics, ads).
 - The `favicon.ico` image.
 - The `.vscode` directory.
 - The `ReadMe.md` file.
