@@ -128,5 +128,8 @@ This blog article was inspired by [this LinkedIn post](https://www.linkedin.com/
 
 I hope you find this list of commands useful.
 If you have any other commands that you find valuable, please share them in the comments below and I might add them to this list.
+I intend to keep this list updated as I discover more useful commands.
+
+If you liked this post, you might also like my [Handy Windows Command Prompt commands post](https://blog.danskingdom.com/Handy-Windows-Command-Prompt-commands/).
 
 Happy running!

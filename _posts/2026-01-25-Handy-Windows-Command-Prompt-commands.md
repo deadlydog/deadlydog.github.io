@@ -36,6 +36,11 @@ Another option is appending `| clip` when using PowerShell to copy the output di
 | `wmic product get name`   | Lists all installed software on the system. Useful for inventory or troubleshooting purposes.                                                                                                                               |
 | `wmiobject win32_winsat`  | Displays the Windows System Assessment Tool (WinSAT) scores, which provides hardware performance scores to quickly see a PCs overall performance.                                                                           |
 
+I intend to keep updating this list as I discover more useful commands.
+If you know of others, please let me know in the comments.
+
+If you like these, you might also like my [Common Run commands to access various Windows settings and apps post](https://blog.danskingdom.com/Common-Run-commands-to-access-various-Windows-settings-and-apps/).
+
 I hope you find these helpful.
 Happy computing!
 
