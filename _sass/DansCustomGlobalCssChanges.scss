@@ -43,6 +43,11 @@ html[data-theme="dark"] .site-subtitle {
 	font-size: $type-size-6
 }
 
+// Increase the size of the text for tables in posts a bit.
+.page__content table {
+	font-size: 0.85em;
+}
+
 // Reduce the amount of whitespace above and below the 'Recent Posts' heading on the home page.
 #home-page-recent-posts {
 	margin-top: -1em;
