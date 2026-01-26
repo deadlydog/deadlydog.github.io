@@ -4,7 +4,7 @@
 
 // The masthead background color shows up as the wrong color in dark mode, so explicitly set it.
 html[data-theme="dark"] #site-nav {
-	background-color: #0f172a; // Keep this color in sync with themeToggle.js and head/custom.html.
+	background-color: #0f172a; // Keep this color in sync with ThemeToggle.js and head/custom.html.
 }
 
 // Change the site title's color in dark mode to "pop" more.
