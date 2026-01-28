@@ -69,12 +69,15 @@ Infrastructure teams may think they need to purchase additional hardware sooner 
   - Take offline before deleting it (for how long? A few days, a week, a month, several months? It depends on the app/service). Essentially a scream test
   - Take a backup before deleting it
 
+Ideally you have everything defined in a central place as infrastructure as code; this makes deleting it easy.
+The next best thing is to have all of the infrastructure components documented somewhere, such as docs in the app's git repo.
+
 ## Decommissioning checklist
 
 - Decommission checklist to make sure everything gets deleted
   - Database and caches
   - DNS records
-  - Load balancer rule
+  - Load balancer rules
   - File storage
   - CDN
   - Service Bus Topic subscriptions
