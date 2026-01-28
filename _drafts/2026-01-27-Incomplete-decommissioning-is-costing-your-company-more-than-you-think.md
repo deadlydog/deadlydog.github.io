@@ -35,17 +35,25 @@ Many companies don't though.
 
 Often times cloud costs are lumped together into one single number.
 It's not always easy for a dev team to identify which costs are theirs, especially if they are not organizing their resources properly or using tags/labels.
-Sometimes, the only people who even see the costs are the finance team whe paying the bill.
-They won't have the context to know if the amount is reasonable, or if there are wasteful costs in there.
+Sometimes the only people who even see the costs are the finance team when paying the bill.
+They won't have the context to know if the amount is reasonable; they'll just pay it.
 
-If teams are diligent, they will remember to remove all of the resources their application used.
+If teams are diligent, they'll remember to remove all of the resources their application used.
 However, it's common for teams to clean up some resources, but forget others.
 For example, they may delete the app service, but forget to delete the database, or the backups.
-They might remove their application from a Virtual Machine (VM), but leave the VM running.
+They might remove their application from a Virtual Machine (VM), but leave the VM running, incurring costs.
+
+Even if the workloads are all on-premises, there are still potential monetary costs associated with keeping unused services around.
+They take up compute and storage resources that could be used for other things.
+Infrastructure teams may think they need to purchase additional hardware sooner than they actually do.
+
+## Hidden costs of not decommissioning properly
+
 
 
 - Need to pay for the higher tier of your monitoring software because it's monitoring a bunch of unused nodes
 
+- Forget to delete DNS and have dangling DNS (add link)
 
 
 - Costs of keeping old services around (hosting/operational costs, migrating platform costs, mental/knowledge costs)
@@ -54,6 +62,7 @@ They might remove their application from a Virtual Machine (VM), but leave the V
   - Extra things to be migrated when changing platforms
   - If people don't know what a service is for they are scared/hesitant to remove it
   - People asking questions about it when they discover it (have same conversations again year after year)
+  - Jobs take longer to run (e.g. managing on-prem things with scripts)
 
 - How to decommission safely
   - Check logs for activity
