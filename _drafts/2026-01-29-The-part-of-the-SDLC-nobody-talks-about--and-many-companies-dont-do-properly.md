@@ -1,6 +1,6 @@
 ---
-title: "Incomplete decommissioning is costing your company more than you think"
-permalink: /Incomplete-decommissioning-is-costing-your-company-more-than-you-think/
+title: "The part of the SDLC nobody talks about, and many companies don't do properly"
+permalink: /The-part-of-the-SDLC-nobody-talks-about--and-many-companies-dont-do-properly/
 #date: 2099-01-15T00:00:00-06:00
 #last_modified_at: 2099-01-22
 comments_locked: false
@@ -13,6 +13,7 @@ tags:
 
 The most neglected phase of the software development lifecycle (SDLC) is often the decommissioning phase.
 The app has reached end-of-life, users are no longer using it, and everything should be shut down and deleted.
+It seems straightforward enough, but many companies neglect this phase, or do it poorly.
 
 It's easy to understand why people neglect or rush through the decommissioning phase.
 Product and development teams want to focus on creating new features and fixing bugs; things that add value and bring in more revenue.
@@ -20,7 +21,7 @@ However, failing to properly decommission services can lead to significant costs
 
 ## Obvious costs of not decommissioning properly
 
-![Forgotten cloud service makes man poor](/assets/Posts/2026-01-27-Incomplete-decommissioning-is-costing-your-company-more-than-you-think/cloud-service-makes-man-poor.jpeg)
+![Forgotten cloud service makes man poor](/assets/Posts/2026-01-29-The-part-of-the-SDLC-nobody-talks-about--and-many-companies-dont-do-properly/cloud-service-makes-man-poor.jpeg)
 
 If you have a cloud service that is no longer in use, but still running, you are likely paying monthly for:
 
