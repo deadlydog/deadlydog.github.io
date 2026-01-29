@@ -53,8 +53,6 @@ Infrastructure teams may think they need to purchase additional hardware sooner 
 
 - Need to pay for the higher tier of your monitoring software because it's monitoring a bunch of unused nodes
 
-- Forget to delete DNS and have dangling DNS (add link)
-
 
 - Costs of keeping old services around (hosting/operational costs, migrating platform costs, mental/knowledge costs)
   - Pay to host it
@@ -68,6 +66,11 @@ Infrastructure teams may think they need to purchase additional hardware sooner 
   - Check logs for activity
   - Take offline before deleting it (for how long? A few days, a week, a month, several months? It depends on the app/service). Essentially a scream test
   - Take a backup before deleting it
+
+- Security costs
+  - Dangling DNS (add link)
+  - Paying for security scanning and monitoring of unused services
+  - Forgotten services that are unpatched and vulnerable to attack
 
 Ideally you have everything defined in a central place as infrastructure as code; this makes deleting it easy.
 The next best thing is to have all of the infrastructure components documented somewhere, such as docs in the app's git repo.
