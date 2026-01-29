@@ -19,6 +19,10 @@ It's easy to understand why people neglect or rush through the decommissioning p
 Product and development teams want to focus on creating new features and fixing bugs; things that add value and bring in more revenue.
 However, failing to properly decommission services can lead to significant costs, both obvious and hidden.
 
+## TL;DR
+
+
+
 ## Obvious costs of not decommissioning properly
 
 ![Forgotten cloud service makes man poor](/assets/Posts/2026-01-29-The-part-of-the-SDLC-nobody-talks-about--and-many-companies-dont-do-properly/cloud-service-makes-man-poor.jpeg)
