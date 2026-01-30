@@ -77,6 +77,12 @@ Infrastructure teams may think they need to purchase additional hardware sooner 
   - Paying for security scanning and monitoring of unused services
   - Forgotten services that are unpatched and vulnerable to attack
 
+- People time costs
+  - Creates confusion about what is in use and what is not
+  - People have to spend time investigating what a service is for, which may involve meetings with several other people or teams, wasting all their time
+  - Leads to inaccurate reports about what is in their current infrastructure, which may impact planning and decision making for things like capacity planning, budgeting, migrations, etc.
+  - Makes it harder to find the services that are actually in use, leading to wasted time and effort
+
 Ideally you have everything defined in a central place as infrastructure as code; this makes deleting it easy.
 The next best thing is to have all of the infrastructure components documented somewhere, such as docs in the app's git repo.
 
