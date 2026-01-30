@@ -65,7 +65,7 @@ Infrastructure teams may think they need to purchase additional hardware sooner 
   - Extra things to be migrated when changing platforms
   - If people don't know what a service is for they are scared/hesitant to remove it
   - People asking questions about it when they discover it (have same conversations again year after year)
-  - Jobs take longer to run (e.g. managing on-prem things with scripts)
+  - Jobs take longer to run (e.g. managing on-prem things with scripts, IaC deployments, etc)
 
 - How to decommission safely
   - Check logs for activity
