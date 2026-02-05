@@ -123,3 +123,5 @@ You also get to type less by using the `k` alias, and improve discoverability wi
 I hope you found this useful.
 
 Happy Kuberneting!
+
+If you enjoyed this post, you might also like [this post on using Oh My Posh and updating your terminal to use different fonts](https://blog.danskingdom.com/Update-your-terminal-prompt-and-font-in-Windows-Terminal-and-VS-Code-and-Visual-Studio/).
