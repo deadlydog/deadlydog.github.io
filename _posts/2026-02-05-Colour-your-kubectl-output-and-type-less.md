@@ -37,7 +37,7 @@ For example, installing it on Windows is as easy as running:
 winget install --id Kubecolor.kubecolor
 ```
 
-## Use kubecolor by default
+## Setup to use kubecolor by default
 
 The Kubecolor documentation also has [great setup instructions](https://kubecolor.github.io/setup/shells/powershell/) for many shells, including PowerShell.
 
@@ -53,7 +53,7 @@ Set-Alias -Name k -Value kubectl
 
 Now you can run `k get pods` and see colourful output by default.
 
-## kubectl command and parameter completions
+## Setup kubectl command and parameter completions
 
 The documentation also has instructions for setting up [kubectl completions](https://kubecolor.github.io/setup/shells/powershell/) in many shells, which is super handy.
 
@@ -77,7 +77,7 @@ Note the trailing space at the end of each:
 
 ## Add the code to your PowerShell profile
 
-You don't want to have to run those commands every time you open PowerShell though.
+You don't want to have to run the setup commands every time you open PowerShell though.
 You can use your PowerShell profile to run the code automatically every time PowerShell starts.
 
 To find the file path of your PowerShell profile, in PowerShell run:
