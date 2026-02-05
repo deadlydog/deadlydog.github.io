@@ -72,7 +72,7 @@ Continue hitting <kbd>Tab</kbd> to cycle through the available options, or use <
 You don't want to have to run those commands every time you open PowerShell though.
 You can use your PowerShell profile to run the code automatically every time PowerShell starts.
 
-To find the file path of your PowerShell profile, run:
+To find the file path of your PowerShell profile, in PowerShell run:
 
 ```powershell
 $PROFILE
