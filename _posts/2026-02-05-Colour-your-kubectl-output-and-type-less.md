@@ -25,7 +25,7 @@ With kubecolor, you get informative, colourful output like this:
 
 ![Kubecolor sample output 2](/assets/Posts/2026-02-05-Colour-your-kubectl-output-and-type-less/kubecolor-sample-output-2.png)
 
-I especially appreciate how warnings and errors are highlighted in yellow and red respectively, making them easy to spot.
+I especially appreciate how errors are highlighted red, making them easy to spot.
 
 ## Kubecolor installation
 
