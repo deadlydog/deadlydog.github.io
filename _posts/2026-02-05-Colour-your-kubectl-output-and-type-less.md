@@ -78,7 +78,7 @@ To find the file path of your PowerShell profile, run:
 $PROFILE
 ```
 
-Open that file in your text editor and add the following code to it:
+Open that file (or create it if it doesn't exist) in your text editor and add the following code to it:
 
 ```powershell
 # If kubecolor is installed, alias kubectl to use it.
