@@ -1,6 +1,6 @@
 ---
-title: "Colour your kubectl output"
-permalink: /Colour-your-kubectl-output/
+title: "Colour your kubectl output and type less"
+permalink: /Colour-your-kubectl-output-and-type-less/
 #date: 2099-01-15T00:00:00-06:00
 #last_modified_at: 2099-01-22
 comments_locked: false
@@ -21,9 +21,9 @@ Kubecolor is a small utility that adds colour to your `kubectl` output, making i
 Normally when you run a `kubectl` command, you get back a wall of boring grey text.
 With kubecolor, you get informative, colourful output like this:
 
-![Kubecolor sample output 1](/assets/Posts/2026-02-04-Colour-your-kubectl-output/kubecolor-sample-output-1.png)
+![Kubecolor sample output 1](/assets/Posts/2026-02-05-Colour-your-kubectl-output-and-type-less-and-type-less/kubecolor-sample-output-1.png)
 
-![Kubecolor sample output 2](/assets/Posts/2026-02-04-Colour-your-kubectl-output/kubecolor-sample-output-2.png)
+![Kubecolor sample output 2](/assets/Posts/2026-02-05-Colour-your-kubectl-output-and-type-less-and-type-less/kubecolor-sample-output-2.png)
 
 I especially appreciate how warnings and errors are highlighted in yellow and red respectively, making them easy to spot.
 
