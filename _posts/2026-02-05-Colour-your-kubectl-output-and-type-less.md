@@ -53,9 +53,9 @@ Set-Alias -Name k -Value kubectl
 
 Now you can run `k get pods` and see colourful output by default.
 
-## kubectl parameter completions
+## kubectl command and parameter completions
 
-The documentation also has instructions for setting up [kubectl parameter completions](https://kubecolor.github.io/setup/shells/powershell/) in many shells, which is super handy.
+The documentation also has instructions for setting up [kubectl completions](https://kubecolor.github.io/setup/shells/powershell/) in many shells, which is super handy.
 
 This is how it can be done in PowerShell:
 
@@ -64,8 +64,16 @@ kubectl completion powershell | Out-String | Invoke-Expression
 Register-ArgumentCompleter -CommandName 'k','kubectl','kubecolor' -ScriptBlock $__kubectlCompleterBlock
 ```
 
-Now you can type `k get po` and hit <kbd>Tab</kbd> and it will auto-complete.
+Now you can type `k get p` and hit <kbd>Tab</kbd> and it will auto-complete.
 Continue hitting <kbd>Tab</kbd> to cycle through the available options, or use <kbd>Ctrl</kbd> + <kbd>Space</kbd> to see all available options.
+
+This works for both command names and parameter values, making it easier to discover `kubectl` commands and custom resources in your cluster.
+Try typing each of the following and hitting <kbd>Ctrl</kbd> + <kbd>Space</kbd>.
+Note the trailing space at the end of each:
+
+- `k `
+- `k get `
+- `k get pods -n `
 
 ## Add the code to your PowerShell profile
 
@@ -110,7 +118,7 @@ See [the documentation](https://kubecolor.github.io/customizing/themes/) for mor
 ## Conclusion
 
 So now you get beautiful, colourful `kubectl` output that is easier to read and understand at a glance.
-You also get to type less by using the `k` alias and parameter completions.
+You also get to type less by using the `k` alias, and improve discoverability with command and parameter completions.
 
 I hope you found this useful.
 
