@@ -75,18 +75,24 @@ Note the trailing space at the end of each:
 - `k get `
 - `k get pods -n `
 
-## Add the code to your PowerShell profile
+## Automatic setup with PowerShell profile
 
 You don't want to have to run the setup commands every time you open PowerShell though.
 You can use your PowerShell profile to run the code automatically every time PowerShell starts.
 
-To find the file path of your PowerShell profile, in PowerShell run:
+In PowerShell, you can find the path to your PowerShell profile by running:
 
 ```powershell
 $PROFILE
 ```
 
-Open that file (or create it if it doesn't exist) in your text editor and add the following code to it:
+To open the file in Notepad, run:
+
+```powershell
+notepad $PROFILE
+```
+
+Create the file if it doesn't exist, and add the following code to it:
 
 ```powershell
 # If kubecolor is installed, alias kubectl to use it.
