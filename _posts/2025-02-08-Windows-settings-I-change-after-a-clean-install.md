@@ -2,7 +2,7 @@
 title: "Windows settings I change after a clean install"
 permalink: /Windows-settings-I-change-after-a-clean-install/
 #date: 2099-01-15T00:00:00-06:00
-last_modified_at: 2026-01-02
+last_modified_at: 2026-02-11
 comments_locked: false
 toc: true
 categories:
@@ -374,7 +374,21 @@ reg.exe delete "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a
 
 ### Speed up the right-click context menu
 
-When you right-click on a file or folder, the `Send to` menu discovers all of the apps and connected devices you can send the file to, before it actually shows the menu.
+When you right-click a file or folder, Windows has an artificial delay of 400 milliseconds before showing the context menu.
+
+Run the following command to change the delay to 50 milliseconds:
+
+```powershell
+reg.exe add "HKCU\Control Panel\Desktop" /v MenuShowDelay /t REG_SZ /d 50 /f
+```
+
+To revert back to the default behavior, run:
+
+```powershell
+reg.exe add "HKCU\Control Panel\Desktop" /v MenuShowDelay /t REG_SZ /d 400 /f
+```
+
+Also, before the context menu is shown, the `Send to` menu discovers all of the apps and connected devices you can send the file to before it actually shows the menu.
 We can change this so that it does not enumerate devices until you hover over the `Send to` menu.
 
 Run the following command to delay Send To from looking for devices right away:
@@ -389,7 +403,7 @@ To revert back to the default behavior, run:
 reg.exe delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer" /v DelaySendToMenuBuild /f
 ```
 
-[Source and more info](https://www.winhelponline.com/blog/hidden-registry-settings-sendto-menu-windows-7/)
+[Source](https://www.makeuseof.com/windows-11-menus-felt-sluggish-until-i-tweaked-this-one-registry/) and [more info](https://www.winhelponline.com/blog/hidden-registry-settings-sendto-menu-windows-7/)
 
 ### Disable delay of startup apps
 
