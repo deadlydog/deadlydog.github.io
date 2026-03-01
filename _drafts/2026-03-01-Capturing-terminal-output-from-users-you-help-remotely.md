@@ -82,7 +82,11 @@ Get-Process >> C:\temp\output.txt
 ```
 
 In PowerShell, the `>>` operator is an alias for `Out-File`, which is a built-in PowerShell cmdlet that writes output to a text file.
-e.g. `Get-Process | Out-File -FilePath C:\temp\output.txt -Append`
+e.g.
+
+```powershell
+Get-Process | Out-File -FilePath C:\temp\output.txt -Append
+```
 
 The `>>` operator works in other shells too, like Command Prompt and Bash, so it's a good one to know.
 
@@ -142,7 +146,7 @@ This method only works for PowerShell.
 
 ## Conclusion
 
-While screen sharing is often the best way to interact with and help someone to see the output of commands in real time, sometimes it's not possible.
+While screen sharing is often the best way to interactively help someone and see the output of commands in real time, it's not always possible.
 Taking screenshots is easy and effective, except in the case of long outputs that don't fit on a single screen, or when you want to be able to copy and paste the output yourself.
 
 Luckily, there are several easy options for capturing terminal output to a file or the clipboard, which can then be shared via Slack, Teams, email, etc.
