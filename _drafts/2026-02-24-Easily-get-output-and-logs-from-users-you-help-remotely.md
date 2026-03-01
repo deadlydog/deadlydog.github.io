@@ -20,17 +20,19 @@ You have a few options.
 
 ## Video call
 
-If you have the ability to do a video call, this is often the easiest way to help someone remotely.
-You can see their screen and guide them through the process of running the command and getting the output.
+If you have the ability to do a synchronous video call, this is often the easiest way to help someone remotely.
+You can see their screen and guide them through the process of running commands and seeing the output.
 
 You can use the screen sharing feature in a video conferencing tool like Zoom, Microsoft Teams, Slack, or Discord.
 
 If the user will need to reboot their PC as part of the process, you may prefer to have them video call you from their phone instead of their PC, using an app like FaceTime, WhatsApp, Google Meet, or Zoom.
 
+We often help others asynchronously though, such as through chat or email, so screen sharing and video calls aren't always an option.
+
 ## Screenshot
 
 Use the <kbd>PrtSc</kbd> (or <kbd>Print Screen</kbd>) key to capture the whole screen, or <kbd>Alt</kbd> + <kbd>PrtSc</kbd> to capture just the active window.
-This will copy the screenshot to the clipboard, which they can then paste into a Slack or Teams message.
+This will copy the screenshot to the clipboard, which they can then paste into a Slack or Teams message or email.
 
 ## Video
 
@@ -58,23 +60,8 @@ When in the PowerShell terminal:
 
 
 
-Start with a brief description of the post to entice readers to continue.
 
-Use headers to organize your post, if it's long enough.
-Include a TL;DR if appropriate.
-
-End with a brief conclusion.
-
-Prefer small paragraphs over long ones for readability.
-It's much easier to read and to find your place if the reader gets distracted.
-4 or 5 sentences max.
-
-Your regular markdown goes here. It also supports HTML :)
 
 Try to include at least one image, as it makes preview links more appealing since the first image often gets used as the preview image:
 
 ![Example image](/assets/Posts/2026-02-24-Easily-get-output-and-logs-from-users-you-help-remotely/image-name.png)
-
-Posts in this _drafts directory will not show up on the website unless you build using `--draft` when compiling:
-
-> bundle exec jekyll serve --incremental --draft
