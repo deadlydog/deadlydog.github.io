@@ -68,7 +68,7 @@ e.g.
 ps | clip.exe
 ```
 
-`clip.exe` will even work in PowerShell and Command Prompt, so you can use just always use in place of `clip` if you want.
+`clip.exe` will even work in PowerShell and Command Prompt, so you can always use it in place of `clip` if you want.
 
 A downside to this method is that the output is not visible in the terminal; it is only copied to the clipboard.
 
