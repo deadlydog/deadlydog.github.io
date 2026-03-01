@@ -1,6 +1,6 @@
 ---
-title: "Easily get output and logs from users you help remotely"
-permalink: /Easily-get-output-and-logs-from-users-you-help-remotely/
+title: "Capturing terminal output from users you help remotely"
+permalink: /Capturing-terminal-output-from-users-you-help-remotely/
 #date: 2099-01-15T00:00:00-06:00
 #last_modified_at: 2099-01-22
 comments_locked: false
@@ -151,4 +151,4 @@ I hope you've found this post informative and it helps you when working with oth
 
 Happy helping and troubleshooting! 😊
 
-![Post thumbnail image](/assets/Posts/2026-02-24-Easily-get-output-and-logs-from-users-you-help-remotely/generate-file-for-email-post-thumbnail.png)
+![Post thumbnail image](/assets/Posts/2026-03-01-Capturing-terminal-output-from-users-you-help-remotely/generate-file-for-email-post-thumbnail.png)
