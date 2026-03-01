@@ -6,62 +6,149 @@ permalink: /Easily-get-output-and-logs-from-users-you-help-remotely/
 comments_locked: false
 toc: false
 categories:
-  - Blog
+  - PowerShell
+  - Productivity
 tags:
-  - Should all
-  - Start with
-  - Capitals
+  - PowerShell
+  - Productivity
 ---
 
-There are many times when you need to help someone with a technical issue remotely.
-Maybe it's a coworker or friend, and you're helping them over the phone, Slack, or email.
-You ask them to run a command and send you the output, but they're not sure how.
-You have a few options.
+When helping others troubleshoot issues with their PC, you often need to see the output of commands they run.
+The easiest way to do this is to synchronously video call and screen share, but that's not always possible.
 
-## Video call
+Below are some alternative asynchronous options for seeing the output of commands they run.
 
-If you have the ability to do a synchronous video call, this is often the easiest way to help someone remotely.
-You can see their screen and guide them through the process of running commands and seeing the output.
+## Print Screen
 
-You can use the screen sharing feature in a video conferencing tool like Zoom, Microsoft Teams, Slack, or Discord.
+An easy option is to use the <kbd>PrtSc</kbd> (or <kbd>Print Screen</kbd>) key to capture the whole screen, or <kbd>Alt</kbd> + <kbd>PrtSc</kbd> to capture just the active window.
 
-If the user will need to reboot their PC as part of the process, you may prefer to have them video call you from their phone instead of their PC, using an app like FaceTime, WhatsApp, Google Meet, or Zoom.
+This will copy the screenshot to their clipboard, which they can then paste into a Slack or Teams message or email.
 
-We often help others asynchronously though, such as through chat or email, so screen sharing and video calls aren't always an option.
+A screenshot is nice and easy, unless the entire output does not fit nicely in a single image, or if you want to be able to copy and paste the output yourself.
 
-## Screenshot
+## Terminal command options
 
-Use the <kbd>PrtSc</kbd> (or <kbd>Print Screen</kbd>) key to capture the whole screen, or <kbd>Alt</kbd> + <kbd>PrtSc</kbd> to capture just the active window.
-This will copy the screenshot to the clipboard, which they can then paste into a Slack or Teams message or email.
+To get the output of a command, you can ask them to run the command and copy the output to the clipboard.
 
-## Video
+Manually copying the output is not always easy though, as many terminals use block selection which is unintuitive and makes it hard to copy the entire output, especially if the output is long and requires scrolling.
 
-If the issue is more complex, you might want to ask them to record a video of their screen while they reproduce the issue.
+Instead, we can simply adjust the command they are running to automatically copy the output to the clipboard or save it to a file, which they can then send to you via Slack, Teams, email, etc.
 
-## Terminal commands
+### Write the output to the clipboard
 
-If you just need the output of a command, you can ask them to run the command and copy the output to the clipboard or save it to a file.
+Simply append `| clip` to the end of the command to copy the output to the clipboard, preserving the formatting.
 
-When in the PowerShell terminal:
+For example, instead of just running:
 
-- Append `| clip` to the end of the command to copy the output to the clipboard, which they can then paste into a message to you.
-  - e.g. `Get-Process | clip` or `dsregcmd /status | clip`
-  - `clip` is the alias for `Set-Clipboard`, which is a built-in PowerShell cmdlet that copies input to the clipboard.
-- Use `Out-File` to save the output to a text file, which they can then send to you.
-  - e.g. `Get-Process | Out-File -FilePath C:\temp\output.txt`
-  - This is especially useful if the output is very long and would be difficult to read in a message or screenshot.
-  - The shorthand for `Out-File` is `>`, so you can also do `Get-Process > C:\temp\output.txt`
-    - This alias works in other shells too, like Command Prompt and Bash, so it's a good one to know.
-  - One downside is that the output is not written to the terminal; it is only written to the file.
-- Use `Tee-Object` to see the output in the terminal and save it to a file.
-  - e.g. `Get-Process | Tee-Object -FilePath C:\temp\output.txt`
-  - This will write the output to both the terminal and the file.
-  - The shorthand for `Tee-Object` is `Tee`, so you can also do `Get-Process | Tee C:\temp\output.txt`
+```powershell
+Get-Process
+```
 
+They can run:
 
+```powershell
+Get-Process | clip
+```
 
+This works for the output of any command or executable, not just PowerShell commands.
+For example:
 
+```powershell
+dsregcmd /status | clip
+```
 
-Try to include at least one image, as it makes preview links more appealing since the first image often gets used as the preview image:
+This works in both PowerShell and the old-school Command Prompt.
 
-![Example image](/assets/Posts/2026-02-24-Easily-get-output-and-logs-from-users-you-help-remotely/image-name.png)
+In PowerShell, `clip` is the alias for `Set-Clipboard`, which is a built-in PowerShell cmdlet that copies input to the clipboard.
+
+There is also a `clip.exe` executable too, so if you are in WSL or Git Bash, you can use `clip.exe` to copy the output to the Windows clipboard.
+e.g.
+
+```bash
+ps | clip.exe
+```
+
+`clip.exe` will even work in PowerShell and Command Prompt, so you can use just always use in place of `clip` if you want.
+
+A downside to this method is that the output is not visible in the terminal; it is only copied to the clipboard.
+
+### Write the output to a file
+
+You can use the `>>` operator to redirect the output of a command to a file.
+e.g.
+
+```powershell
+Get-Process >> C:\temp\output.txt
+```
+
+In PowerShell, the `>>` operator is an alias for `Out-File`, which is a built-in PowerShell cmdlet that writes output to a text file.
+e.g. `Get-Process | Out-File -FilePath C:\temp\output.txt -Append`
+
+The `>>` operator works in other shells too, like Command Prompt and Bash, so it's a good one to know.
+
+The `>>` operator will append the output to the file if it already exists, while using just `>` will overwrite the file if it already exists.
+Using `>>` allows you to run multiple commands and capture all of the output to the same file.
+
+A downside of this approach is the output is not written to the terminal; it is only written to the file.
+
+### Write the output to both the terminal and a file
+
+We can use `Tee` to see the output in the terminal and save it to a file.
+e.g.
+
+```powershell
+Get-Process | Tee C:\temp\output.txt
+```
+
+This will write the output to both the terminal and the file.
+
+In PowerShell, `Tee` is an alias for `Tee-Object`.
+The full command syntax could look like this:
+
+```powershell
+Get-Process | Tee-Object -FilePath C:\temp\output.txt
+```
+
+`tee` exists in other shells as well like Bash, so using the shorthand syntax will work pretty much everywhere.
+e.g.
+
+```bash
+ps | tee output.txt
+```
+
+### Start a transcript to capture all output from the terminal session
+
+PowerShell has a built-in transcript feature that can capture all output from a terminal session and save it to a file.
+This is great if you want to capture the output of multiple commands.
+
+To start a transcript, simply run the `Start-Transcript` cmdlet and specify the path to the file where you want to save the transcript.
+Then run the various commands you want to capture the output of.
+When you're done, run the `Stop-Transcript` cmdlet to stop the transcript and save the file.
+
+```powershell
+Start-Transcript -Path C:\temp\transcript.txt
+
+# Run various commands here
+Get-Process
+Get-Service
+dsregcmd /status
+
+Stop-Transcript
+```
+
+The transcript text file can then be sent to you via Slack, Teams, email, etc.
+
+This method only works for PowerShell.
+
+## Conclusion
+
+While screen sharing is often the best way to interact with and help someone to see the output of commands in real time, sometimes it's not possible.
+Taking screenshots is easy and effective, except in the case of long outputs that don't fit on a single screen, or when you want to be able to copy and paste the output yourself.
+
+Luckily, there are several easy options for capturing terminal output to a file or the clipboard, which can then be shared via Slack, Teams, email, etc.
+
+I hope you've found this post informative and it helps you when working with others remotely!
+
+Happy helping and troubleshooting! 😊
+
+![Post thumbnail image](/assets/Posts/2026-02-24-Easily-get-output-and-logs-from-users-you-help-remotely/generate-file-for-email-post-thumbnail.png)
