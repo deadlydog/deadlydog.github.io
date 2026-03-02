@@ -34,7 +34,7 @@ Manually copying the output is not always easy though, as many terminals use blo
 
 Instead, we can simply adjust the command they are running to automatically copy the output to the clipboard or save it to a file, which they can then send to you via Slack, Teams, email, etc.
 
-### Write the output to the clipboard
+### Capture command output to the clipboard
 
 Simply append `| clip` to the end of the command to copy the output to the clipboard, preserving the formatting.
 
@@ -68,11 +68,11 @@ e.g.
 ps | clip.exe
 ```
 
-`clip.exe` will even work in PowerShell and Command Prompt, so you can always use it in place of `clip` if you want.
+`clip.exe` will even work in PowerShell and Command Prompt, so you can always use it in place of `clip` if you like.
 
 A downside to this method is that the output is not visible in the terminal; it is only copied to the clipboard.
 
-### Write the output to a file
+### Capture command output to a file
 
 You can use the `>>` operator to redirect the output of a command to a file.
 e.g.
@@ -95,7 +95,7 @@ Using `>>` allows you to run multiple commands and capture all of the output to 
 
 A downside of this approach is the output is not written to the terminal; it is only written to the file.
 
-### Write the output to both the terminal and a file
+### Capture command output to both the terminal and a file
 
 We can use `Tee` to see the output in the terminal and save it to a file.
 e.g.
