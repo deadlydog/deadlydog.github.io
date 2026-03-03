@@ -32,6 +32,8 @@ To get the output of a command, you can ask them to run the command and copy the
 
 Manually copying the output is not always easy though, as many terminals use block selection which is unintuitive and makes it hard to copy the entire output, especially if the output is long and requires scrolling.
 
+![Example of block selection](/assets/Posts/2026-03-01-Easily-capture-terminal-output-from-users-you-help-remotely/block-selection-screenshot.png)
+
 Instead, we can simply adjust the command they are running to automatically copy the output to the clipboard or save it to a file, which they can then send to you via Slack, Teams, email, etc.
 
 ### Capture command output to the clipboard
