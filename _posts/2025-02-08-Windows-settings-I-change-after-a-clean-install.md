@@ -230,7 +230,7 @@ I don't like transparency in my windows and menus, and you get a small performan
 To disable transparency effects:
 
 1. Right-click on the desktop and choose `Personalize`.
-1. Choose `Colors`.
+1. In the Personalization settings window, click on `Colors`.
 1. Toggle the `Transparency effects` switch to `Off`.
 
 ![Windows transparency effects disabled](/assets/Posts/2025-02-08-Windows-settings-I-change-after-a-clean-install/transparency-effects-disabled.png)
