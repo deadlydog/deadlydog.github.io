@@ -223,6 +223,18 @@ To change the desktop background image:
 
 ![Windows background image settings](/assets/Posts/2025-02-08-Windows-settings-I-change-after-a-clean-install/personalize-background-image-settings.png)
 
+### Turn transparency effects off
+
+I don't like transparency in my windows and menus, and you get a small performance boost by disabling it.
+
+To disable transparency effects:
+
+1. Right-click on the desktop and choose `Personalize`.
+1. Choose `Colors`.
+1. Toggle the `Transparency effects` switch to `Off`.
+
+![Windows transparency effects disabled](/assets/Posts/2025-02-08-Windows-settings-I-change-after-a-clean-install/transparency-effects-disabled.png)
+
 ## Power settings
 
 ### Don't turn off the screen and go to sleep so fast
