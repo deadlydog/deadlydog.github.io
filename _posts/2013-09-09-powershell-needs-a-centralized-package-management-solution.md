@@ -38,4 +38,4 @@ While PowerShell does not provide a native module management solution, Joel "Jay
 
 ## Update 2
 
-PowerShell does not provide a native module management solution using the `PowerShellGet` module with modules hosted on [the PowerShell Gallery](https://www.powershellgallery.com/) :-)
+PowerShell does now provide a native module management solution using the `PowerShellGet` module with modules hosted on [the PowerShell Gallery](https://www.powershellgallery.com/) :-)
