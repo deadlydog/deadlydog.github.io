@@ -17,13 +17,13 @@ If you want to run on your local machine without using the DevContainer, follow 
 
 ### Prerequisites
 
-1. Install [Ruby + Devkit][RubyInstallerDownloadPageUrl] v3.3 (or whichever is recommended on the site), as well as have it install MSYS2 after installation.
+1. Install [Ruby + Devkit (x64)][RubyInstallerDownloadPageUrl] v3.4 (or whichever is recommended on the site), as well as have it install MSYS2 and MINGW after installation.
    - Use `ruby -v` to see which version is installed.
    - You may need to restart your computer before the VS Code terminal recognizes Ruby.
 1. Ensure everything is up-to-date by running `gem update --system`.
    - If you get the error `You must add /O=Cisco/CN=Cisco Umbrella Root CA to your local trusted store`, then follow the instructions at <https://bundler.io/guides/rubygems_tls_ssl_troubleshooting_guide.html#updating-ca-certificates> to fix it.
      - Basically download the .pem certificate file and drop it in the `ssl_certs` directory, then restart your PC.
-       - e.g. C:\Ruby33-x64\lib\ruby\3.3.0\rubygems\ssl_certs
+       - e.g. C:\Ruby34-x64\lib\ruby\3.4.0\rubygems\ssl_certs
    - If that does not work, manually install the Cisco Umbrella Root CA certificate by following the instructions at <https://docs.umbrella.com/deployment-msp/docs/install-the-cisco-umbrella-root-certificate>, then restart your PC.
    - If that still does not work, run the following command to have Ruby ignore using SSL for this repo:
      - `bundle config ssl_verify_mode 0 && echo ":ssl_verify_mode: 0" > ~/.gemrc`
