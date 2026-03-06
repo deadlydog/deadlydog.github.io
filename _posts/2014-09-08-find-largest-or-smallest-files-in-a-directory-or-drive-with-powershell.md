@@ -18,14 +18,21 @@ One of our SQL servers was running low on disk space and I needed to quickly fin
 
 ```powershell
 # Get all files sorted by size.
-Get-ChildItem -Path 'C:\SomeFolder' -Recurse -Force -File | Select-Object -Property FullName,@{Name='SizeGB';Expression={$_.Length / 1GB}},@{Name='SizeMB';Expression={$_.Length / 1MB}},@{Name='SizeKB';Expression={$_.Length / 1KB}} | Sort-Object { $_.SizeKB } -Descending | Out-GridView
+Get-ChildItem -Path 'C:\SomeFolder' -Recurse -Force -File |
+  Select-Object -Property FullName,@{Name='SizeGB';Expression={$_.Length / 1GB}},@{Name='SizeMB';Expression={$_.Length / 1MB}},@{Name='SizeKB';Expression={$_.Length / 1KB}} |
+  Sort-Object { $_.SizeKB } -Descending |
+  Out-GridView
 ```
 
 If you are still only running PowerShell 2.0, it will complain that it doesn't know what the -File switch is, so here's the PowerShell 2.0 compatible version (which is a bit slower):
 
 ```powershell
 # Get all files sorted by size.
-Get-ChildItem -Path 'C:\SomeFolder' -Recurse -Force | Where-Object { !$_.PSIsContainer } | Select-Object -Property FullName,@{Name='SizeGB';Expression={$_.Length / 1GB}},@{Name='SizeMB';Expression={$_.Length / 1MB}},@{Name='SizeKB';Expression={$_.Length / 1KB}} | Sort-Object { $_.SizeKB } -Descending | Out-GridView
+Get-ChildItem -Path 'C:\SomeFolder' -Recurse -Force |
+  Where-Object { !$_.PSIsContainer } |
+  Select-Object -Property FullName,@{Name='SizeGB';Expression={$_.Length / 1GB}},@{Name='SizeMB';Expression={$_.Length / 1MB}},@{Name='SizeKB';Expression={$_.Length / 1KB}} |
+  Sort-Object { $_.SizeKB } -Descending |
+  Out-GridView
 ```
 
 Just change 'C:\SomeFolder' to the folder/drive that you want scanned, and it will show you all of the files in the directory and subdirectories in a GridView sorted by size, along with their size in GB, MB, and KB. The nice thing about using a GridView is that it has built in filtering, so you can quickly do things like filter for certain file types, child directories, etc.
