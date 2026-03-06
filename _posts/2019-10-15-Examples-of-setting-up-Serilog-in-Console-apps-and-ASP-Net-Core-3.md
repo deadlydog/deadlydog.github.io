@@ -7,11 +7,11 @@ comments_locked: false
 categories:
   - CSharp
   - Serilog
-  - .Net Core
+  - DotNet
 tags:
   - CSharp
   - Serilog
-  - .Net Core
+  - DotNet
   - Logging
   - Examples
 ---

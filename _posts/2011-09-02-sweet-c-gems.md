@@ -3,10 +3,10 @@ title: Sweet C# Gems
 date: 2011-09-02T23:38:00-06:00
 permalink: /sweet-c-gems/
 categories:
-  - .NET
+  - DotNet
   - CSharp
 tags:
-  - .NET
+  - DotNet
   - CSharp
 ---
 

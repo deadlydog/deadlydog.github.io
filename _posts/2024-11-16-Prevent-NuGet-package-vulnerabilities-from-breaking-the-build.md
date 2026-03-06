@@ -6,7 +6,7 @@ permalink: /Prevent-NuGet-package-vulnerabilities-from-breaking-the-build/
 comments_locked: false
 toc: false
 categories:
-  - .NET
+  - DotNet
   - NuGet
   - Visual Studio
 tags:

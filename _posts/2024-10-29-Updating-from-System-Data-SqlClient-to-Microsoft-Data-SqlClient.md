@@ -6,11 +6,11 @@ last_modified_at: 2024-11-04
 comments_locked: false
 toc: false
 categories:
-  - .NET
+  - DotNet
   - CSharp
   - SQL
 tags:
-  - .NET
+  - DotNet
   - CSharp
   - SQL
 ---

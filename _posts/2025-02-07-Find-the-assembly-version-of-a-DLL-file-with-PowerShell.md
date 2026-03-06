@@ -6,10 +6,10 @@ permalink: /Find-the-assembly-version-of-a-DLL-file-with-PowerShell/
 comments_locked: false
 toc: false
 categories:
-  - .NET
+  - DotNet
   - PowerShell
 tags:
-  - .NET
+  - DotNet
   - PowerShell
 ---
 

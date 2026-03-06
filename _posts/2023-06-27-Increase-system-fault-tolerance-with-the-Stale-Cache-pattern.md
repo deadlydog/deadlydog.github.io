@@ -6,13 +6,13 @@ last_modified_at: 2023-12-15
 comments_locked: false
 toc: false
 categories:
-  - .NET
+  - DotNet
   - CSharp
   - Cache
   - Design patterns
   - Software Development
 tags:
-  - .NET
+  - DotNet
   - CSharp
   - Cache
   - Design patterns

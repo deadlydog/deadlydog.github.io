@@ -6,10 +6,10 @@ permalink: /First-Single-and-SingleOrDefault-in-dotnet-are-harmful/
 comments_locked: false
 toc: false
 categories:
-  - .NET
+  - DotNet
   - CSharp
 tags:
-  - .NET
+  - DotNet
   - CSharp
 ---
 
