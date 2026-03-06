@@ -136,5 +136,7 @@ See [my YouTube video on File Explorer shortcuts](https://youtu.be/-ixXAB2Gc0M?s
 Learning and using keyboard shortcuts can significantly improve your productivity.
 Try to incorporate a few of these shortcuts into your daily routine.
 
+As I discover move great shortcuts I'll update this post, so be sure to check back for updates!
+
 Know of a great shortcut that I missed?
 Please let me know in the comments!
