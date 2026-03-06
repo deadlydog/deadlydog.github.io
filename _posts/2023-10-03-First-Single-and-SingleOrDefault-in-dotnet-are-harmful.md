@@ -6,11 +6,11 @@ permalink: /First-Single-and-SingleOrDefault-in-dotnet-are-harmful/
 comments_locked: false
 toc: false
 categories:
-  - .NET
-  - C#
+  - DotNet
+  - CSharp
 tags:
-  - .NET
-  - C#
+  - DotNet
+  - CSharp
 ---
 
 I've wasted countless hours troubleshooting exceptions thrown by the .NET `First`, `Single`, and `SingleOrDefault` methods.

@@ -3,7 +3,7 @@ title: Saving And Loading A C# Object's Data To An Xml, Json, Or Binary File
 date: 2014-03-14T15:53:35-06:00
 permalink: /saving-and-loading-a-c-objects-data-to-an-xml-json-or-binary-file/
 categories:
-  - C#
+  - CSharp
   - Json
   - XML
 tags:

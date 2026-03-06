@@ -6,10 +6,10 @@ permalink: /Great-Xamarin-Forms-workshop-from-Ignite-2019/
 comments_locked: false
 categories:
   - Xamarin
-  - C#
+  - CSharp
 tags:
   - Xamarin
-  - C#
+  - CSharp
   - Ignite
 ---
 

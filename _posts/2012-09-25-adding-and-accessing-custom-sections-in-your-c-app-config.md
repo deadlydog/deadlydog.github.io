@@ -3,11 +3,11 @@ title: Adding and accessing custom sections in your C# App.config
 date: 2012-09-25T14:04:00-06:00
 permalink: /adding-and-accessing-custom-sections-in-your-c-app-config/
 categories:
-  - .NET
-  - C#
+  - DotNet
+  - CSharp
 tags:
   - app.config
-  - C#
+  - CSharp
   - configuration
   - CSharp
   - section
