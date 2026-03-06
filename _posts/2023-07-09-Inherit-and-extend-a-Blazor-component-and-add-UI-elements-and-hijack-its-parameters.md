@@ -7,10 +7,10 @@ comments_locked: false
 toc: true
 categories:
   - Blazor
-  - C#
+  - CSharp
 tags:
   - Blazor
-  - C#
+  - CSharp
 ---
 
 In this post we see how to extend a Blazor component to show additional UI elements around it, how to override some of the default property settings, and how to hijack an EventCallback property and specify a new one for component consumers to use.

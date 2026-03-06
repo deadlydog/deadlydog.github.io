@@ -6,10 +6,10 @@ permalink: /Catch-and-display-unhandled-exceptions-in-your-WPF-app/
 comments_locked: false
 categories:
   - WPF
-  - C#
+  - CSharp
 tags:
   - WPF
-  - C#
+  - CSharp
   - Exception
   - Error
 ---

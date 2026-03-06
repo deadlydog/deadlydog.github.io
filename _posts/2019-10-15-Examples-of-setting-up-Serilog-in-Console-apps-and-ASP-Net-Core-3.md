@@ -5,11 +5,11 @@ permalink: /Examples-of-setting-up-Serilog-in-Console-apps-and-ASP-Net-Core-3/
 last_modified_at: 2019-10-19
 comments_locked: false
 categories:
-  - C#
+  - CSharp
   - Serilog
   - .Net Core
 tags:
-  - C#
+  - CSharp
   - Serilog
   - .Net Core
   - Logging

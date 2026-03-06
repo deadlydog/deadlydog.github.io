@@ -7,7 +7,7 @@ categories:
   - WPF
 tags:
   - Binding
-  - C#
+  - CSharp
   - WPF
   - XAML
 ---

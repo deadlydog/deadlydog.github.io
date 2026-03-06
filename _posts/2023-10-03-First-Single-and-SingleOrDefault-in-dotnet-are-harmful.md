@@ -7,10 +7,10 @@ comments_locked: false
 toc: false
 categories:
   - .NET
-  - C#
+  - CSharp
 tags:
   - .NET
-  - C#
+  - CSharp
 ---
 
 I've wasted countless hours troubleshooting exceptions thrown by the .NET `First`, `Single`, and `SingleOrDefault` methods.

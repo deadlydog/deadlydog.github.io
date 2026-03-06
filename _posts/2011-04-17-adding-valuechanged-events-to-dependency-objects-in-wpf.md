@@ -5,7 +5,7 @@ permalink: /adding-valuechanged-events-to-dependency-objects-in-wpf/
 categories:
   - WPF
 tags:
-  - C#
+  - CSharp
   - Dependency Object
   - memory leak
   - Value Changed

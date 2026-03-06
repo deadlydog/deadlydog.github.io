@@ -4,10 +4,10 @@ date: 2012-09-25T14:04:00-06:00
 permalink: /adding-and-accessing-custom-sections-in-your-c-app-config/
 categories:
   - .NET
-  - C#
+  - CSharp
 tags:
   - app.config
-  - C#
+  - CSharp
   - configuration
   - CSharp
   - section

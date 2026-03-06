@@ -7,13 +7,13 @@ comments_locked: false
 toc: false
 categories:
   - .NET
-  - C#
+  - CSharp
   - Cache
   - Design patterns
   - Software Development
 tags:
   - .NET
-  - C#
+  - CSharp
   - Cache
   - Design patterns
   - Software Development

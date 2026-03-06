@@ -5,12 +5,12 @@ permalink: /Create-and-test-PowerShell-Core-cmdlets-in-CSharp/
 last_modified_at: 2020-04-09T00:00:00-06:00
 comments_locked: false
 categories:
-  - C#
+  - CSharp
   - PowerShell
   - Testing
   - xUnit
 tags:
-  - C#
+  - CSharp
   - PowerShell
   - Testing
   - xUnit

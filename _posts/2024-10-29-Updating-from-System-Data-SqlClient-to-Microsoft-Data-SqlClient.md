@@ -7,11 +7,11 @@ comments_locked: false
 toc: false
 categories:
   - .NET
-  - C#
+  - CSharp
   - SQL
 tags:
   - .NET
-  - C#
+  - CSharp
   - SQL
 ---
 

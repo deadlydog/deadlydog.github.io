@@ -5,7 +5,7 @@ permalink: /setting-focus-to-an-element-in-wpf/
 categories:
   - WPF
 tags:
-  - C#
+  - CSharp
   - focus
   - setting focus
   - snoop

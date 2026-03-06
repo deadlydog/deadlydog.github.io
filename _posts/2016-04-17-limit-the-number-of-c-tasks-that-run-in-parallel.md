@@ -4,9 +4,9 @@ date: 2016-04-17T02:46:32-06:00
 last_modified_at: 2016-04-29T00:00:00-00:00
 permalink: /limit-the-number-of-c-tasks-that-run-in-parallel/
 categories:
-  - C#
+  - CSharp
 tags:
-  - C#
+  - CSharp
   - Task
   - Thread
   - Throttle
